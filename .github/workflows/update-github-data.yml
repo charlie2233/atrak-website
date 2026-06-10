@@ -1,5 +1,5 @@
 # This workflow fetches your GitHub data and caches it as a JSON file
-# Runs daily at midnight UTC, or manually via workflow_dispatch
+# Runs daily, after site pushes, or manually via workflow_dispatch
 # Uses GH_PAT secret for authenticated requests (higher rate limits)
 
 name: Update GitHub Data
@@ -17,8 +17,13 @@ on:
         type: boolean
   push:
     branches: [main]
-    paths:
-      - '.github/workflows/update-github-data.yml'  # Re-run if workflow changes
+    paths-ignore:
+      - 'data/github-events.json'
+      - 'data/github-meta.json'
+      - 'data/github-releases.json'
+      - 'data/github-repos.json'
+      - 'data/github-weekly.json'
+      - 'data/last-updated.txt'
 
 permissions:
   contents: write

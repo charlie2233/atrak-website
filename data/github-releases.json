@@ -1,5 +1,18 @@
 [
   {
+    "repo": "charlie2233/atrak-website",
+    "tag": "2026.04-project-hub",
+    "name": "Atrak project hub refresh — cards, blog, release cache",
+    "url": "https://atrak.dev/index.html#projects",
+    "published_at": "2026-06-10T21:24:27Z",
+    "prerelease": false,
+    "draft": false,
+    "source": "atrak-download",
+    "zipball_url": "https://github.com/charlie2233/atrak-website/archive/refs/heads/main.zip",
+    "tarball_url": "https://github.com/charlie2233/atrak-website/archive/refs/heads/main.tar.gz",
+    "assets": []
+  },
+  {
     "repo": "charlie2233/lifepage",
     "tag": "2026.04-lifepage-sync",
     "name": "LifePage launch/readiness updates",
@@ -10,19 +23,6 @@
     "source": "atrak-download",
     "zipball_url": "https://github.com/charlie2233/lifepage/archive/refs/heads/main.zip",
     "tarball_url": "https://github.com/charlie2233/lifepage/archive/refs/heads/main.tar.gz",
-    "assets": []
-  },
-  {
-    "repo": "charlie2233/atrak-website",
-    "tag": "2026.04-project-hub",
-    "name": "Atrak project hub refresh — cards, blog, release cache",
-    "url": "https://atrak.dev/index.html#projects",
-    "published_at": "2026-04-28T02:18:45Z",
-    "prerelease": false,
-    "draft": false,
-    "source": "atrak-download",
-    "zipball_url": "https://github.com/charlie2233/atrak-website/archive/refs/heads/main.zip",
-    "tarball_url": "https://github.com/charlie2233/atrak-website/archive/refs/heads/main.tar.gz",
     "assets": []
   },
   {

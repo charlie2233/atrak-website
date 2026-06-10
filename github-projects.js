@@ -21,7 +21,7 @@ const SITE_BASE_URL = (() => {
     return '';
 })();
 
-const GITHUB_CACHE_VERSION = '20260610';
+const GITHUB_CACHE_VERSION = '20260610b';
 const withCacheVersion = (url) => `${url}${url.includes('?') ? '&' : '?'}v=${GITHUB_CACHE_VERSION}`;
 const CACHED_REPOS_BASE_PATH = SITE_BASE_URL ? `${SITE_BASE_URL}data/github-repos.json` : 'data/github-repos.json'; // Updated by GitHub Actions
 const CACHED_DATA_PATH = withCacheVersion(CACHED_REPOS_BASE_PATH);
@@ -35,6 +35,9 @@ const PROJECTS_PER_SLIDER_PAGE = 6;
 
 // Known featured/pinned projects to exclude from "More Projects" section
 const FEATURED_PROJECT_REPOS = [
+    'atrak-website',
+    'AtrakWebpage',
+    'LunarWeb',
     'rork-guide-pup--vision-assistant',
     'Basketball_action_recoginition_sever',
     'AI-predator-simulation',
