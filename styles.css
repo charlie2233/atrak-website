@@ -9944,6 +9944,16 @@ a:not(.btn):not(.nav-cta):hover::after {
     .link-btn {
         flex-shrink: 0;
     }
+
+    .coursebinder-links {
+        flex-wrap: wrap;
+        overflow-x: visible;
+    }
+
+    .coursebinder-links .link-btn {
+        flex: 1 1 150px;
+        justify-content: center;
+    }
     
     .release-header {
         flex-direction: column;
