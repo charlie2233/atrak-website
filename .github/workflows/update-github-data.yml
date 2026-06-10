@@ -392,7 +392,16 @@ jobs:
               except Exception as e:
                   print(f"Failed to fetch weekly GraphQL stats: {e}")
 
-          Path("data/github-weekly.json").write_text(json.dumps(weekly_stats, indent=2) + "\n", encoding="utf-8")
+          weekly_path = Path("data/github-weekly.json")
+          try:
+              existing_weekly = json.loads(weekly_path.read_text(encoding="utf-8"))
+          except Exception:
+              existing_weekly = {}
+          if isinstance(existing_weekly, dict) and existing_weekly.get("source") == "local-git-refresh":
+              print("Preserving local weekly stats; GitHub Actions cannot observe checked-out local repos.")
+              weekly_stats = existing_weekly
+
+          weekly_path.write_text(json.dumps(weekly_stats, indent=2) + "\n", encoding="utf-8")
 
           # Fetch recent releases across repos (for the website "Latest releases" UI)
           candidates = [
