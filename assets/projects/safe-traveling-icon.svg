@@ -1,0 +1,21 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 128 128" role="img" aria-labelledby="title desc">
+  <title id="title">Safe Traveling icon</title>
+  <desc id="desc">Map pin and shield mark for Safe Traveling.</desc>
+  <defs>
+    <linearGradient id="safeTravelingBg" x1="18" y1="110" x2="110" y2="18" gradientUnits="userSpaceOnUse">
+      <stop stop-color="#0f766e"/>
+      <stop offset="0.52" stop-color="#0ea5e9"/>
+      <stop offset="1" stop-color="#1d4ed8"/>
+    </linearGradient>
+    <linearGradient id="safeTravelingShield" x1="40" y1="30" x2="88" y2="100" gradientUnits="userSpaceOnUse">
+      <stop stop-color="#ecfeff"/>
+      <stop offset="1" stop-color="#a7f3d0"/>
+    </linearGradient>
+  </defs>
+  <rect x="8" y="8" width="112" height="112" rx="28" fill="url(#safeTravelingBg)"/>
+  <path d="M64 22c20 0 36 16 36 36 0 26-36 52-36 52S28 84 28 58c0-20 16-36 36-36Z" fill="#082f49" opacity="0.38"/>
+  <path d="M64 30c16 0 28 12 28 28 0 21-28 42-28 42S36 79 36 58c0-16 12-28 28-28Z" fill="#ffffff" opacity="0.18"/>
+  <path d="M64 40 86 49v15c0 16-9 28-22 34-13-6-22-18-22-34V49l22-9Z" fill="url(#safeTravelingShield)"/>
+  <path d="m55 66 7 7 14-18" fill="none" stroke="#0f766e" stroke-width="7" stroke-linecap="round" stroke-linejoin="round"/>
+  <circle cx="92" cy="34" r="5" fill="#facc15"/>
+</svg>
