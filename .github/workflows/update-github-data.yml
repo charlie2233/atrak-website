@@ -1,6 +1,6 @@
 # This workflow fetches your GitHub data and caches it as a JSON file
 # Runs daily, after site pushes, or manually via workflow_dispatch
-# Uses GH_PAT secret for authenticated requests (higher rate limits)
+# Uses optional GH_PAT for higher read limits, then falls back to public data
 
 name: Update GitHub Data
 
@@ -43,7 +43,7 @@ jobs:
       
       - name: Fetch GitHub data
         env:
-          GH_TOKEN: ${{ secrets.GH_PAT || github.token }}
+          GH_TOKEN: ${{ secrets.GH_PAT }}
         run: |
           set -euo pipefail
 
@@ -52,18 +52,24 @@ jobs:
 
           AUTH_HEADER=()
           if [ -n "${GH_TOKEN:-}" ]; then
-            AUTH_HEADER=(-H "Authorization: token $GH_TOKEN")
-            echo "Using authenticated GitHub API requests."
+            if curl -fsSL \
+              -H "Authorization: token $GH_TOKEN" \
+              -H "Accept: application/vnd.github+json" \
+              -H "X-GitHub-Api-Version: 2022-11-28" \
+              "${API_BASE}/user" >/dev/null 2>&1; then
+              AUTH_HEADER=(-H "Authorization: token $GH_TOKEN")
+              export GH_TOKEN
+              echo "Using authenticated GitHub API requests."
+            else
+              unset GH_TOKEN
+              echo "Configured GH token was rejected; using public GitHub API requests."
+            fi
           else
             echo "No GH token configured; using unauthenticated GitHub API requests (lower rate limit)."
           fi
 
-          # Fetch repositories. When authenticated, prefer /user/repos so private
-          # repos owned by the account (including this site repo) are included.
+          # Fetch public repositories for the public site cache.
           REPO_URL="${API_BASE}/users/${USERNAME}/repos?sort=updated&per_page=100&type=owner"
-          if [ -n "${GH_TOKEN:-}" ]; then
-            REPO_URL="${API_BASE}/user/repos?affiliation=owner&sort=updated&per_page=100"
-          fi
 
           page=1
           while [ "$page" -le 10 ]; do
@@ -331,7 +337,7 @@ jobs:
       
       - name: Commit and push changes
         env:
-          GITHUB_TOKEN: ${{ secrets.GH_PAT || github.token }}
+          GITHUB_TOKEN: ${{ github.token }}
         run: |
           set -euo pipefail
           did_push=false
