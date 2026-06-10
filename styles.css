@@ -8475,6 +8475,13 @@ a.leader-card:hover {
     color: var(--text-tertiary);
 }
 
+.project-analytics-note {
+    color: var(--text-tertiary);
+    font-size: 12px;
+    line-height: 1.35;
+    margin-top: 6px;
+}
+
 .project-analytics-loading {
     padding: 16px;
     border-radius: 12px;
@@ -11112,6 +11119,13 @@ a:not(.btn):not(.nav-cta):hover::after {
     color: var(--text-secondary);
 }
 
+.impact-stat-note {
+    color: var(--text-muted);
+    font-size: 12px;
+    line-height: 1.35;
+    margin-top: 4px;
+}
+
 /* Project Analytics Simplified */
 .project-analytics-simple {
     padding: 32px;
@@ -11144,6 +11158,13 @@ a:not(.btn):not(.nav-cta):hover::after {
     color: var(--text-secondary);
     text-transform: uppercase;
     letter-spacing: 0.5px;
+}
+
+.analytics-note {
+    color: var(--text-muted);
+    font-size: 12px;
+    line-height: 1.35;
+    margin-top: 6px;
 }
 
 .analytics-footer {

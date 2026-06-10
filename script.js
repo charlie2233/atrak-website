@@ -519,6 +519,39 @@ const fetchTextSafe = async (path) => {
     }
 };
 
+const getImpactWeeklyStatsSource = (stats) => {
+    if (!stats || typeof stats !== 'object') return 'unknown';
+    return String(stats.source || '').trim().toLowerCase();
+};
+
+const getImpactWeeklyStatsSourceLabel = (stats) => {
+    const source = getImpactWeeklyStatsSource(stats);
+    if (source === 'local-git-refresh') return 'Local checked-out repos';
+    if (source === 'github-graphql') return 'GitHub contribution graph';
+    if (source === 'github-public-events') return 'Public GitHub fallback';
+    if (source === 'github-live-cache') return 'GitHub live cache';
+    return 'Weekly cache';
+};
+
+const getWeeklyCommitDescription = (stats) => {
+    const source = getImpactWeeklyStatsSource(stats);
+    const repoCount = stats && typeof stats.totalRepositoryContributions === 'number'
+        ? Math.max(0, Math.round(Number(stats.totalRepositoryContributions) || 0))
+        : 0;
+    const repoLabel = repoCount ? `${repoCount} repo${repoCount === 1 ? '' : 's'}` : 'tracked repos';
+
+    if (source === 'local-git-refresh') {
+        return `Last 7 days from ${repoLabel} checked out locally.`;
+    }
+    if (source === 'github-graphql') {
+        return 'Last 7 days from the GitHub contribution graph.';
+    }
+    if (source === 'github-public-events') {
+        return 'Last 7 days from public GitHub activity.';
+    }
+    return 'Latest weekly activity window.';
+};
+
 const parseMetricValue = (metrics, label) => {
     if (!Array.isArray(metrics)) return null;
     const regex = new RegExp(`${label}\\s*:?\\s*(\\d+)`, 'i');
@@ -718,7 +751,8 @@ async function loadImpactAnalytics() {
             metrics.push({
                 value: String(githubWeekly.totalCommitContributions > 0 ? githubWeekly.totalCommitContributions : showcaseMetricFallbacks.weeklyCommits),
                 label: 'Weekly commits',
-                description: 'Latest GitHub activity window.'
+                description: getWeeklyCommitDescription(githubWeekly),
+                note: getImpactWeeklyStatsSourceLabel(githubWeekly)
             });
         }
         if (Array.isArray(weeklyHistory)) {
@@ -740,10 +774,12 @@ async function loadImpactAnalytics() {
                 .map(metric => {
                     const value = metric.value === null || metric.value === undefined ? '' : String(metric.value);
                     const label = String(metric.label);
+                    const note = metric.note ? String(metric.note) : '';
                     return `
                         <div class="impact-stat-item">
                             <div class="impact-stat-value">${escapeHtml(value)}</div>
                             <div class="impact-stat-label">${escapeHtml(label)}</div>
+                            ${note ? `<div class="impact-stat-note">${escapeHtml(note)}</div>` : ''}
                         </div>
                     `;
                 })
@@ -758,10 +794,12 @@ async function loadImpactAnalytics() {
                 .map(metric => {
                     const value = metric.value === null || metric.value === undefined ? '' : String(metric.value);
                     const label = String(metric.label);
+                    const note = metric.note ? String(metric.note) : '';
                     return `
                         <div class="analytics-item">
                             <div class="analytics-value">${escapeHtml(value)}</div>
                             <div class="analytics-label">${escapeHtml(label)}</div>
+                            ${note ? `<div class="analytics-note">${escapeHtml(note)}</div>` : ''}
                         </div>
                     `;
                 })
@@ -1764,7 +1802,7 @@ window.addEventListener('load', () => {
 // Performance: Honor user motion preferences only (avoid disabling effects unexpectedly).
 
 // Lazy-load heavy GitHub homepage features so first paint is not blocked by github-projects.js
-const GITHUB_PROJECTS_SCRIPT_URL = 'github-projects.js?v=36';
+const GITHUB_PROJECTS_SCRIPT_URL = 'github-projects.js?v=37';
 let githubProjectsLoadPromise = null;
 
 const hasGitHubHomepageTargets = () => {

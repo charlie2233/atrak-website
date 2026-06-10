@@ -13,8 +13,7 @@ const META_PATH = path.join(DATA_DIR, "github-meta.json");
 const WEEKLY_PATH = path.join(DATA_DIR, "github-weekly.json");
 const LAST_UPDATED_PATH = path.join(DATA_DIR, "last-updated.txt");
 const REPOS_PATH = path.join(DATA_DIR, "github-repos.json");
-const EVENTS_PATH = path.join(DATA_DIR, "github-events.json");
-const RELEASES_PATH = path.join(DATA_DIR, "github-releases.json");
+const WEEKLY_ONLY = process.argv.includes("--weekly-only");
 const EXTRA_SCAN_ROOTS = [
   path.join(HOME_DIR, ".codex", "worktrees"),
   path.join(HOME_DIR, ".tmp"),
@@ -80,8 +79,9 @@ function getLocalRepoInfo(repoPath) {
   try {
     const pushedAtRaw = runGit(repoPath, ["log", "-1", "--date=iso-strict", "--format=%cI"]);
     const pushedAt = new Date(pushedAtRaw).toISOString().replace(/\.\d{3}Z$/, "Z");
-    const since = runGit(repoPath, ["log", '--since=7 days ago', "--format=%H"]);
+    const since = runGit(repoPath, ["log", "--all", "--since=7 days ago", "--format=%H"]);
     const recentCommits = since ? since.split("\n").filter(Boolean) : [];
+    const recentCommitCount = new Set(recentCommits).size;
     const defaultBranch = runGit(repoPath, ["symbolic-ref", "--short", "HEAD"]);
 
     return {
@@ -91,7 +91,7 @@ function getLocalRepoInfo(repoPath) {
       updated_at: pushedAt,
       pushed_at: pushedAt,
       default_branch: defaultBranch || "main",
-      recentCommitCount: recentCommits.length,
+      recentCommitCount,
     };
   } catch {
     return null;
@@ -195,11 +195,15 @@ function main() {
     return bTime - aTime;
   });
 
-  writeJson(REPOS_PATH, trackedRepos);
+  if (!WEEKLY_ONLY) {
+    writeJson(REPOS_PATH, trackedRepos);
+  }
 
-  const trackedLocalRepos = trackedRepos
-    .map((repo) => localRepoMap.get(String(repo?.full_name || "").toLowerCase()))
-    .filter(Boolean);
+  const trackedLocalRepos = WEEKLY_ONLY
+    ? localRepos
+    : trackedRepos
+        .map((repo) => localRepoMap.get(String(repo?.full_name || "").toLowerCase()))
+        .filter(Boolean);
 
   const now = new Date().toISOString().replace(/\.\d{3}Z$/, "Z");
   const mostRecentPush = trackedLocalRepos
@@ -236,16 +240,19 @@ function main() {
     totalPullRequestContributions: 0,
     totalIssueContributions: 0,
     totalRepositoryContributions,
+    source: "local-git-refresh",
   };
 
-  writeJson(META_PATH, meta);
+  if (!WEEKLY_ONLY) {
+    writeJson(META_PATH, meta);
+  }
   writeJson(WEEKLY_PATH, weekly);
-  // Local refreshes can only observe checked-out git repos, not GitHub public
-  // events or release metadata. Clear those caches so the site does not
-  // publish mixed freshness states from older API snapshots.
-  writeJson(EVENTS_PATH, []);
-  writeJson(RELEASES_PATH, []);
-  fs.writeFileSync(LAST_UPDATED_PATH, `${now}\n`, "utf8");
+  // Local refreshes can only observe checked-out git repos. Keep the public
+  // GitHub event and release caches intact so shareable feeds stay populated
+  // until the GitHub Actions refresh updates them again.
+  if (!WEEKLY_ONLY) {
+    fs.writeFileSync(LAST_UPDATED_PATH, `${now}\n`, "utf8");
+  }
 }
 
 main();

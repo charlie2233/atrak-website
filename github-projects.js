@@ -146,6 +146,20 @@ function getGitHubCacheSourceText(meta) {
     return 'GitHub cache';
 }
 
+function getWeeklyStatsSource(stats) {
+    if (!stats || typeof stats !== 'object') return 'unknown';
+    return String(stats.source || '').trim().toLowerCase();
+}
+
+function getWeeklyStatsSourceText(stats) {
+    const source = getWeeklyStatsSource(stats);
+    if (source === 'local-git-refresh') return 'Local checked-out repos';
+    if (source === 'github-graphql') return 'GitHub contribution graph';
+    if (source === 'github-public-events') return 'Public GitHub fallback';
+    if (source === 'github-live-cache') return 'GitHub live cache';
+    return 'Weekly cache';
+}
+
 function escapeHtml(value) {
     const str = value == null ? '' : String(value);
     return str
@@ -1336,6 +1350,8 @@ async function renderWeeklyHighlights() {
         ]);
         const cacheSourceText = getGitHubCacheSourceText(cachedMeta);
         const isLocalCacheSource = getGitHubCacheSource(cachedMeta) === 'local-git-refresh';
+        const weeklyStatsSourceText = getWeeklyStatsSourceText(cachedWeeklyStats);
+        const isLocalWeeklySource = getWeeklyStatsSource(cachedWeeklyStats) === 'local-git-refresh';
 
         const weeklyStatsSyncDate = (() => {
             const raw = cachedWeeklyStats && typeof cachedWeeklyStats.updatedAt === 'string'
@@ -1356,8 +1372,8 @@ async function renderWeeklyHighlights() {
         }
         if (sourceNoteEl) {
             sourceNoteEl.textContent = isLocalCacheSource
-                ? 'Local repo snapshot + weekly archive'
-                : 'GitHub cache + weekly archive';
+                ? `${weeklyStatsSourceText} + public releases + weekly archive`
+                : `${weeklyStatsSourceText} + weekly archive`;
         }
 
         const weeklyStatsCommits = (() => {
@@ -1367,16 +1383,24 @@ async function renderWeeklyHighlights() {
         })();
 
         const commitTotalForKpi = weeklyStatsCommits != null ? weeklyStatsCommits : totalCommits;
+        const weeklyRepoTotalForKpi = cachedWeeklyStats && typeof cachedWeeklyStats.totalRepositoryContributions === 'number'
+            ? Math.max(0, Number(cachedWeeklyStats.totalRepositoryContributions) || 0)
+            : activeRepos.size;
+        const weeklyRepoLabel = `${weeklyRepoTotalForKpi} repo${weeklyRepoTotalForKpi === 1 ? '' : 's'}`;
 
         kickoff = commitTotalForKpi
-            ? (weeklyStatsCommits != null
-                ? `We clocked <strong>${escapeHtml(commitTotalForKpi)}</strong> commit contributions (7d). Public repos in the spotlight: <strong>${escapeHtml(activeRepos.size)}</strong>.`
-                : `We clocked <strong>${escapeHtml(commitTotalForKpi)}</strong> commits across <strong>${escapeHtml(activeRepos.size)}</strong> active repos.`)
+            ? (isLocalWeeklySource
+                ? `We clocked <strong>${escapeHtml(commitTotalForKpi)}</strong> local commits across <strong>${escapeHtml(weeklyRepoLabel)}</strong> in the last 7 days.`
+                : (weeklyStatsCommits != null
+                    ? `We clocked <strong>${escapeHtml(commitTotalForKpi)}</strong> commit contributions (7d). Public repos in the spotlight: <strong>${escapeHtml(activeRepos.size)}</strong>.`
+                    : `We clocked <strong>${escapeHtml(commitTotalForKpi)}</strong> commits across <strong>${escapeHtml(activeRepos.size)}</strong> active repos.`))
             : `Quiet week on public repos — but we might have been building in private 👀`;
 
         if (highlights.length) {
             highlights[0] = weeklyStatsCommits != null
-                ? `${escapeHtml(commitTotalForKpi)} commit contributions (7d)`
+                ? (isLocalWeeklySource
+                    ? `${escapeHtml(commitTotalForKpi)} local commits (7d)`
+                    : `${escapeHtml(commitTotalForKpi)} commit contributions (7d)`)
                 : `${escapeHtml(commitTotalForKpi)} commits across ${escapeHtml(activeRepos.size)} repos`;
         }
 
@@ -2152,8 +2176,8 @@ async function renderWeeklyHighlights() {
                 const topHeaderDateRange = weekLabel;
 
                 const cacheStamp = weeklyStatsSyncDate
-                    ? `GitHub cache • ${formatUTCDateTime(weeklyStatsSyncDate.toISOString())}`
-                    : 'GitHub cache';
+                    ? `${weeklyStatsSourceText} • ${formatUTCDateTime(weeklyStatsSyncDate.toISOString())}`
+                    : weeklyStatsSourceText;
                 let topHeaderSourceNote = `${cacheStamp} • Use arrows to browse week history`;
                 if (diaryEntries.length && diaryArchiveShouldBeLegacy) {
                     topHeaderSourceNote += ' • legacy diary merged into week history';
@@ -2170,7 +2194,7 @@ async function renderWeeklyHighlights() {
                     : (hasGitHub ? 'Week Log (Archive)' : 'Legacy Week Diary');
 
                 const panelMetaParts = [];
-                if (hasGitHub) panelMetaParts.push(isCurrentGitHubWeek ? 'GitHub • Last 7d' : 'GitHub • Archived Week');
+                if (hasGitHub) panelMetaParts.push(isCurrentGitHubWeek ? `${weeklyStatsSourceText} • Last 7d` : 'GitHub • Archived Week');
                 if (hasDiary) panelMetaParts.push(hasGitHub ? 'Legacy diary attached' : 'Legacy diary archive');
                 panelMetaParts.push(`${index + 1}/${total}`);
                 const panelMeta = panelMetaParts.join(' • ');
@@ -2187,9 +2211,11 @@ async function renderWeeklyHighlights() {
                     const releaseCount = Math.max(0, Number(githubWeek.releases) || 0);
                     const starCount = Math.max(0, Number(githubWeek.stars) || 0);
 
-                    const summaryLine = isCurrentGitHubWeek
-                        ? `${commitCount} commits (7d) • ${pushCount} pushes • ${activeRepoCount} repo${activeRepoCount === 1 ? '' : 's'} active • ${releaseCount} release${releaseCount === 1 ? '' : 's'}`
-                        : `${commitCount} commits • ${pushCount} pushes • ${activeRepoCount} repos • ${releaseCount} releases${starCount ? ` • +${starCount} stars` : ''}`;
+                    const summaryLine = isCurrentGitHubWeek && isLocalWeeklySource
+                        ? `${commitCount} local commits (7d) • ${weeklyRepoLabel} active • public feed has ${pushCount} pushes • ${releaseCount} release${releaseCount === 1 ? '' : 's'}`
+                        : (isCurrentGitHubWeek
+                            ? `${commitCount} commits (7d) • ${pushCount} pushes • ${activeRepoCount} repo${activeRepoCount === 1 ? '' : 's'} active • ${releaseCount} release${releaseCount === 1 ? '' : 's'}`
+                            : `${commitCount} commits • ${pushCount} pushes • ${activeRepoCount} repos • ${releaseCount} releases${starCount ? ` • +${starCount} stars` : ''}`);
 
                     const chips = [
                         isCurrentGitHubWeek && weeklyStatsSyncDate ? `Synced ${getTimeAgo(weeklyStatsSyncDate)}` : 'Archived week',
@@ -2226,9 +2252,11 @@ async function renderWeeklyHighlights() {
                         return rows.join('');
                     })();
 
-                    panelNote = isCurrentGitHubWeek
-                        ? 'Built from GitHub events/cache (real activity). Use the top arrows to move through older GitHub and legacy weeks.'
-                        : 'Archived GitHub week snapshot from cache. Use the top arrows to move across all weeks.';
+                    panelNote = isCurrentGitHubWeek && isLocalWeeklySource
+                        ? 'Weekly commits are counted from checked-out local repos; releases and repo links stay on the public GitHub cache.'
+                        : (isCurrentGitHubWeek
+                            ? 'Built from GitHub events/cache (real activity). Use the top arrows to move through older GitHub and legacy weeks.'
+                            : 'Archived GitHub week snapshot from cache. Use the top arrows to move across all weeks.');
 
                     panelMainHtml = `
                         <p class="weekly-briefing-text weekly-live-log-note">${escapeHtml(panelNote)}</p>
@@ -2636,12 +2664,13 @@ async function renderProjectAnalytics() {
         const weeklyCommits = weekly && typeof weekly.totalCommitContributions === 'number'
             ? weekly.totalCommitContributions
             : null;
+        const weeklySourceText = weeklyCommits != null ? getWeeklyStatsSourceText(weekly) : '';
 
         const cards = [
             { label: 'Repos tracked', value: repoCount },
             { label: 'Total stars', value: totalStars },
             { label: 'Total forks', value: totalForks },
-            { label: 'Commits (7d)', value: weeklyCommits != null ? weeklyCommits : '—' },
+            { label: 'Commits (7d)', value: weeklyCommits != null ? weeklyCommits : '—', note: weeklySourceText },
             { label: 'Top language', value: topLang ? topLang[0] : '—' },
             { label: 'Last push', value: mostRecentPush ? getTimeAgo(mostRecentPush) : '—' }
         ];
@@ -2650,12 +2679,13 @@ async function renderProjectAnalytics() {
             <div class="project-analytics-card">
                 <div class="project-analytics-value">${escapeHtml(card.value)}</div>
                 <div class="project-analytics-label">${escapeHtml(card.label)}</div>
+                ${card.note ? `<div class="project-analytics-note">${escapeHtml(card.note)}</div>` : ''}
             </div>
         `).join('');
 
         if (metaEl) {
             metaEl.textContent = meta && meta.updatedAt
-                ? `Synced ${getTimeAgo(new Date(meta.updatedAt))} • ${repoCount} repos`
+                ? `Synced ${getTimeAgo(new Date(meta.updatedAt))} • ${repoCount} repos${weeklySourceText ? ` • Weekly: ${weeklySourceText}` : ''}`
                 : 'Tracking GitHub activity and repos.';
         }
     } catch (error) {
