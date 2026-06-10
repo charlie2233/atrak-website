@@ -21,7 +21,7 @@ const SITE_BASE_URL = (() => {
     return '';
 })();
 
-const GITHUB_CACHE_VERSION = '20260427';
+const GITHUB_CACHE_VERSION = '20260610';
 const withCacheVersion = (url) => `${url}${url.includes('?') ? '&' : '?'}v=${GITHUB_CACHE_VERSION}`;
 const CACHED_REPOS_BASE_PATH = SITE_BASE_URL ? `${SITE_BASE_URL}data/github-repos.json` : 'data/github-repos.json'; // Updated by GitHub Actions
 const CACHED_DATA_PATH = withCacheVersion(CACHED_REPOS_BASE_PATH);
@@ -348,12 +348,40 @@ const REPO_CARD_ENHANCEMENTS = {
         iconSub: 'ZIP',
         description: 'Chrome extension-only exporter that captures visible Formative practices into local ZIPs with text, answers, media, screenshots, and AI indexes.'
     },
+    'GBC_HuskiesWeb': {
+        displayName: 'GBC Huskies Basketball Website',
+        iconLabel: 'GBC',
+        iconVariant: 'hoops',
+        iconSub: 'WEB',
+        description: 'Official GBC Huskies Basketball site with fundraiser paths, parent-facing navigation, sponsor CTAs, and coach content shaped for a live community launch.'
+    },
+    'SafeTraveling': {
+        displayName: 'SafeTraveling Risk Map',
+        iconLabel: 'ST',
+        iconVariant: 'travel',
+        iconSub: 'MAP',
+        description: 'Global safety-map product for helping travelers and locals understand regional risk, backend launch planning, and admin review workflows.'
+    },
+    'HoopsClips_MacOS': {
+        displayName: 'Hoops Clips macOS App',
+        iconLabel: 'HC',
+        iconVariant: 'swift',
+        iconSub: 'MAC',
+        description: 'macOS control surface for Hoops Clips that syncs backend analysis, launch-gate review flows, exports, and installer-ready desktop delivery.'
+    },
+    'hoopclips-website': {
+        displayName: 'HoopClips Official Website',
+        iconLabel: 'HC',
+        iconVariant: 'hoops',
+        iconSub: 'SITE',
+        description: 'Official product website for Hoops Clips with launch copy, coach/player positioning, and handoff into the active highlight workflow.'
+    },
     'rork-hoopshighlights-ai_Final': {
         displayName: 'Hoops Highlights AI Final',
         iconLabel: 'HC',
         iconVariant: 'hoops',
         iconSub: 'AI',
-        description: 'Basketball highlights prototype for upload, clip review, and AI-generated highlight flow testing before production hardening.'
+        description: 'Active Hoops Clips launch repo for upload, cloud analysis, human review gates, TestFlight proof, and production-ready highlight workflows.'
     },
     'RestaurantCommentValidation_Analysis': {
         displayName: 'Restaurant Comment Validation Analysis',

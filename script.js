@@ -1764,7 +1764,7 @@ window.addEventListener('load', () => {
 // Performance: Honor user motion preferences only (avoid disabling effects unexpectedly).
 
 // Lazy-load heavy GitHub homepage features so first paint is not blocked by github-projects.js
-const GITHUB_PROJECTS_SCRIPT_URL = 'github-projects.js?v=33';
+const GITHUB_PROJECTS_SCRIPT_URL = 'github-projects.js?v=34';
 let githubProjectsLoadPromise = null;
 
 const hasGitHubHomepageTargets = () => {
@@ -1850,6 +1850,46 @@ scheduleGitHubProjectsIdleLoad();
 // Project Slider Functionality
 // ================================
 // Replaces the old Featured/More Projects tabs with a single paged slider.
+const PRIORITY_PROJECTS_PER_SLIDE = 6;
+
+const getPriorityProjectRank = (card) => {
+    const rawRank = card && card.dataset ? Number.parseInt(card.dataset.projectRank || '', 10) : Number.NaN;
+    return Number.isFinite(rawRank) ? rawRank : Number.MAX_SAFE_INTEGER;
+};
+
+const arrangePriorityProjectCards = (track) => {
+    if (!track || track.dataset.priorityProjectsArranged === 'true') return;
+
+    const rankedCards = Array.from(track.querySelectorAll('.project-card[data-project-rank]'));
+    if (!rankedCards.length) return;
+
+    const priorityPages = Array.from(track.querySelectorAll('[data-project-slide-page]'))
+        .filter(page => page.querySelector('.project-card[data-project-rank]'));
+    if (!priorityPages.length) return;
+
+    const sortedCards = rankedCards.sort((a, b) => {
+        const rankDiff = getPriorityProjectRank(a) - getPriorityProjectRank(b);
+        if (rankDiff !== 0) return rankDiff;
+        return (a.querySelector('.project-title')?.textContent || '')
+            .localeCompare(b.querySelector('.project-title')?.textContent || '');
+    });
+
+    priorityPages.forEach(page => {
+        Array.from(page.querySelectorAll('.project-card[data-project-rank]')).forEach(card => card.remove());
+    });
+
+    sortedCards.forEach((card, index) => {
+        const pageIndex = Math.floor(index / PRIORITY_PROJECTS_PER_SLIDE);
+        const page = priorityPages[pageIndex] || priorityPages[priorityPages.length - 1];
+        page.appendChild(card);
+    });
+
+    priorityPages.forEach((page, index) => {
+        page.setAttribute('aria-label', `Priority projects page ${index + 1}`);
+    });
+    track.dataset.priorityProjectsArranged = 'true';
+};
+
 const initProjectSlider = () => {
     const sliders = Array.from(document.querySelectorAll('[data-project-slider]'));
     if (!sliders.length) return;
@@ -1879,6 +1919,8 @@ const initProjectSlider = () => {
         const dots = slider.querySelector('[data-project-slider-dots]');
 
         if (!viewport || !track) return;
+
+        arrangePriorityProjectCards(track);
 
         const getPages = () => Array.from(track.querySelectorAll('[data-project-slide-page]'));
         let userRequestedPageChange = false;

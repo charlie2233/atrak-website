@@ -31,7 +31,7 @@
     <link rel="apple-touch-icon" sizes="152x152" href="assets/logo.png?v=20260202">
     <link rel="apple-touch-icon" sizes="120x120" href="assets/logo.png?v=20260202">
     <link rel="apple-touch-icon" sizes="76x76" href="assets/logo.png?v=20260202">
-	    <link rel="stylesheet" href="styles.css?v=34">
+	    <link rel="stylesheet" href="styles.css?v=35">
     
     <!-- Structured Data -->
     <script type="application/ld+json">
@@ -293,7 +293,7 @@
                 <span class="section-tag">Notable Work</span>
                 <h2 class="section-title">Technical Projects</h2>
                 <p class="section-description">
-                    Priority projects first, then live public GitHub builds, downloads, docs, and release drops.
+                    Launch goals first, then current public GitHub builds, downloads, docs, and release drops.
                 </p>
             </div>
             
@@ -301,11 +301,11 @@
                 <div class="project-slider-toolbar">
                     <div class="project-slider-copy">
                         <span class="project-slider-kicker">Live project launch bay</span>
-                        <p class="project-slider-hint">Most important builds stay up front. Swipe or use arrows to browse the full GitHub-backed team hub.</p>
+                        <p class="project-slider-hint">Ranked by launch importance, live usefulness, and current GitHub/local repo momentum. Swipe or use arrows to browse the full team hub.</p>
                         <div class="project-slider-pills" aria-label="Project slider highlights">
-                            <span class="project-slider-pill">Priority-first</span>
-                            <span class="project-slider-pill">GitHub live cache</span>
-                            <span class="project-slider-pill">Downloads ready</span>
+                            <span class="project-slider-pill">Goal-ranked</span>
+                            <span class="project-slider-pill">GitHub refreshed</span>
+                            <span class="project-slider-pill">Local scan informed</span>
                         </div>
                     </div>
                     <div class="project-slider-controls" aria-label="Project slider controls">
@@ -324,7 +324,7 @@
                 <div class="project-slider-viewport" data-project-slider-viewport tabindex="0" aria-label="Project carousel">
                     <div class="project-slider-track" id="project-slider-track" data-project-slider-track>
                         <div class="project-slide-page" data-project-slide-page aria-label="Priority projects page 1">
-                <div class="project-card reveal glass-card">
+                <div class="project-card reveal glass-card" data-project-rank="3" data-project-focus="Live platform">
                     <div class="project-image project-image-preview">
                         <img class="project-preview-img" src="assets/Demo/Demo_Img_LifePage/01-hero.png" alt="" loading="lazy" decoding="async" aria-hidden="true">
                         <div class="project-icon">
@@ -360,7 +360,7 @@
                     </div>
                 </div>
 
-                <div class="project-card reveal glass-card">
+                <div class="project-card reveal glass-card" data-project-rank="2" data-project-focus="App Store proof">
                     <div class="project-image project-image-preview">
                         <img class="project-preview-img" src="assets/Demo/Demo_Img_GuidePup/01.png" alt="" loading="lazy" decoding="async" aria-hidden="true">
                         <div class="project-icon">
@@ -392,7 +392,7 @@
                         </div>
                     </div>
 
-                <div class="project-card reveal glass-card">
+                <div class="project-card reveal glass-card" data-project-rank="1" data-project-focus="Launch focus">
                     <div class="project-image project-image-preview">
                         <img class="project-preview-img" src="assets/Demo/DemoHoopsClips/01.png" alt="" loading="lazy" decoding="async" aria-hidden="true">
                         <div class="project-icon">
@@ -428,7 +428,7 @@
                     </div>
                 </div>
 
-                <div class="project-card reveal glass-card">
+                <div class="project-card reveal glass-card" data-project-rank="6" data-project-focus="Live demo">
                     <div class="project-image project-image-iconic project-image-court">
                         <div class="project-icon">
                             <img src="assets/ai-hoops-board-icon.png" alt="AI Hoops Board Icon" loading="lazy">
@@ -459,7 +459,7 @@
                     </div>
                 </div>
 
-                <div class="project-card reveal glass-card">
+                <div class="project-card reveal glass-card" data-project-rank="4" data-project-focus="Public download">
                     <div class="project-image project-image-preview">
                         <img class="project-preview-img" src="assets/Demo/Demo_Img_ClassroomExporter/01-classroom-exporter.svg" alt="" loading="lazy" decoding="async" aria-hidden="true">
                         <div class="project-icon">
@@ -490,7 +490,7 @@
                     </div>
                 </div>
 
-                <div class="project-card reveal glass-card">
+                <div class="project-card reveal glass-card" data-project-rank="9" data-project-focus="Production app">
                     <div class="project-image project-image-preview">
                         <img class="project-preview-img" src="assets/Demo/Demo_Img_TenSeconds/01.png" alt="" loading="lazy" decoding="async" aria-hidden="true">
                         <div class="project-icon">
@@ -521,7 +521,7 @@
                         </div>
                         <div class="project-slide-page" data-project-slide-page aria-label="Priority projects page 2">
 
-                <div class="project-card reveal glass-card">
+                <div class="project-card reveal glass-card" data-project-rank="8" data-project-focus="Live site">
                     <div class="project-image project-image-preview">
                         <img class="project-preview-img" src="assets/Demo/Demo_Img_DestinyBasketball/01-hero.png" alt="" loading="lazy" decoding="async" aria-hidden="true">
                         <div class="project-icon">
@@ -552,7 +552,7 @@
                     </div>
                 </div>
 
-                <div class="project-card reveal glass-card">
+                <div class="project-card reveal glass-card" data-project-rank="12" data-project-focus="Research build">
                     <div class="project-image project-image-iconic project-image-predator">
                         <div class="project-icon">
                             <img src="assets/ai-predator-icon.svg" alt="AI Predator Simulation icon" loading="lazy" decoding="async">
@@ -584,7 +584,7 @@
                 </div>
 
                     <!-- Pinned Project: CompIDE -->
-                    <div class="project-card glass-card" data-pinned-project="true">
+                    <div class="project-card glass-card" data-pinned-project="true" data-project-rank="10" data-project-focus="Contest tool">
                         <div class="project-image project-image-preview">
                             <img class="project-preview-img" src="assets/Demo/Demo_Img_CompIDE/01.png" alt="" loading="lazy" decoding="async" aria-hidden="true">
                             <div class="project-icon"><img src="assets/compide-logo.png" alt="CompIDE logo" loading="lazy" decoding="async"></div>
@@ -615,7 +615,7 @@
                         </div>
                     </div>
                     <!-- Pinned Project: Custom Safe MCP -->
-                    <div class="project-card glass-card" data-pinned-project="true">
+                    <div class="project-card glass-card" data-pinned-project="true" data-project-rank="11" data-project-focus="Local safety">
                         <div class="project-image project-image-iconic project-image-mcp">
                             <div class="project-icon"><img src="assets/safe-mcp-icon.svg" alt="Custom Safe MCP icon" loading="lazy" decoding="async"></div>
                         </div>
@@ -641,7 +641,7 @@
                             </div>
                         </div>
                     </div>
-                    <div class="project-card reveal glass-card">
+                    <div class="project-card reveal glass-card" data-project-rank="7" data-project-focus="Agent platform">
                         <div class="project-image project-image-iconic project-image-agent">
                             <div class="project-icon">
                                 <img src="assets/logo.png?v=20260202" alt="Atrak Agent Icon" loading="lazy">
@@ -667,7 +667,7 @@
                             </div>
                         </div>
                     </div>
-                    <div class="project-card reveal glass-card">
+                    <div class="project-card reveal glass-card" data-project-rank="5" data-project-focus="Public download">
                         <div class="project-image project-image-preview">
                             <img class="project-preview-img" src="assets/Demo/Demo_Img_FormativeExporter/01-formative-exporter.svg" alt="" loading="lazy" decoding="async" aria-hidden="true">
                             <div class="project-icon">
@@ -1380,7 +1380,7 @@
     </main>
 
     <script src="config.js?v=21"></script>
-    <script src="script.js?v=33"></script>
+    <script src="script.js?v=34"></script>
     <script src="last-updated.js?v=2"></script>
 </body>
 </html>
