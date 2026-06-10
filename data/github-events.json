@@ -1,6 +1,31 @@
 [
   {
     "type": "PushEvent",
+    "created_at": "2026-06-10T21:35:26Z",
+    "repo": {
+      "name": "charlie2233/atrak-website"
+    },
+    "payload": {
+      "ref": "refs/heads/main",
+      "before": "c697fe430228ed968d75c9d3e59a6f8660ca523c",
+      "head": "580d620906115867eaeb0de5771cdeeb15c7d0c5",
+      "distinct_size": 2,
+      "commits": [
+        {
+          "sha": "580d620906115867eaeb0de5771cdeeb15c7d0c5",
+          "message": "fix: keep project cache fresh after site pushes",
+          "url": "https://github.com/charlie2233/atrak-website/commit/580d620906115867eaeb0de5771cdeeb15c7d0c5"
+        },
+        {
+          "sha": "c697fe430228ed968d75c9d3e59a6f8660ca523c",
+          "message": "feat: refresh project hub priority order",
+          "url": "https://github.com/charlie2233/atrak-website/commit/c697fe430228ed968d75c9d3e59a6f8660ca523c"
+        }
+      ]
+    }
+  },
+  {
+    "type": "PushEvent",
     "created_at": "2026-06-10T21:24:27Z",
     "repo": {
       "name": "charlie2233/atrak-website"
@@ -9,14 +34,8 @@
       "ref": "refs/heads/main",
       "before": "22f06b3d2752fedf0856365d036443b246815115",
       "head": "c697fe430228ed968d75c9d3e59a6f8660ca523c",
-      "distinct_size": 1,
-      "commits": [
-        {
-          "sha": "c697fe430228ed968d75c9d3e59a6f8660ca523c",
-          "message": "feat: refresh project hub priority order",
-          "url": "https://github.com/charlie2233/atrak-website/commit/c697fe430228ed968d75c9d3e59a6f8660ca523c"
-        }
-      ]
+      "distinct_size": 0,
+      "commits": []
     }
   },
   {
