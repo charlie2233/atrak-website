@@ -75,15 +75,15 @@ jobs:
               "${url}" \
               > "${output}"
             count=$(python3 - <<'PY' "${output}"
-import json
-import sys
-from pathlib import Path
+          import json
+          import sys
+          from pathlib import Path
 
-path = Path(sys.argv[1])
-data = json.loads(path.read_text(encoding="utf-8"))
-print(len(data) if isinstance(data, list) else 0)
-PY
-)
+          path = Path(sys.argv[1])
+          data = json.loads(path.read_text(encoding="utf-8"))
+          print(len(data) if isinstance(data, list) else 0)
+          PY
+          )
             if [ "${count}" -lt 100 ]; then
               break
             fi
@@ -132,15 +132,15 @@ PY
               "${API_BASE}/users/${USERNAME}/events/public?per_page=100&page=${page}" \
               > "data/_events_${page}.json" || echo "[]" > "data/_events_${page}.json"
             count=$(python3 - <<'PY' "data/_events_${page}.json"
-import json
-import sys
-from pathlib import Path
+          import json
+          import sys
+          from pathlib import Path
 
-path = Path(sys.argv[1])
-data = json.loads(path.read_text(encoding="utf-8"))
-print(len(data) if isinstance(data, list) else 0)
-PY
-)
+          path = Path(sys.argv[1])
+          data = json.loads(path.read_text(encoding="utf-8"))
+          print(len(data) if isinstance(data, list) else 0)
+          PY
+          )
             if [ "${count}" -lt 100 ]; then
               break
             fi
