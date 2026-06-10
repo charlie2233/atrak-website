@@ -179,6 +179,7 @@ jobs:
           import json
           import os
           import time
+          import urllib.parse
           import urllib.request
           from pathlib import Path
 
@@ -211,14 +212,140 @@ jobs:
           Path("data/github-meta.json").write_text(json.dumps(meta, indent=2) + "\n", encoding="utf-8")
           Path("data/last-updated.txt").write_text(meta["updatedAt"] + "\n", encoding="utf-8")
 
-          # Weekly stats (commit contributions, PRs, etc.) via GitHub GraphQL.
-          weekly_stats = {}
+          api_base = "https://api.github.com"
           token = os.environ.get("GH_TOKEN") or ""
+          headers = {
+              "Accept": "application/vnd.github+json",
+              "X-GitHub-Api-Version": "2022-11-28",
+              "User-Agent": "atrak-dev-site",
+          }
+          if token:
+              headers["Authorization"] = f"token {token}"
+
+          def fetch_json(url: str):
+              req = urllib.request.Request(url, headers=headers)
+              with urllib.request.urlopen(req, timeout=30) as resp:
+                  return json.load(resp)
+
+          # Weekly stats (commit contributions, PRs, etc.). Prefer GraphQL when a
+          # valid optional PAT exists; otherwise keep the weekly log alive from
+          # public events plus public commits.
+          events_path = Path("data/github-events.json")
+          try:
+              events = json.loads(events_path.read_text(encoding="utf-8"))
+          except Exception:
+              events = []
+          if not isinstance(events, list):
+              events = []
+
+          now = datetime.datetime.utcnow().replace(microsecond=0)
+          week_ago = now - datetime.timedelta(days=7)
+
+          def parse_dt(value):
+              if not value:
+                  return None
+              try:
+                  return datetime.datetime.fromisoformat(str(value).replace("Z", "+00:00")).replace(tzinfo=None)
+              except Exception:
+                  return None
+
+          recent_public_repos = []
+          for repo in repos:
+              if not isinstance(repo, dict) or repo.get("fork") or repo.get("archived"):
+                  continue
+              pushed = parse_dt(repo.get("pushed_at") or repo.get("updated_at"))
+              if pushed and pushed >= week_ago:
+                  recent_public_repos.append(repo)
+
+          for repo in recent_public_repos:
+              full_name = repo.get("full_name")
+              if not full_name:
+                  continue
+              since = urllib.parse.quote(week_ago.isoformat() + "Z", safe="")
+              until = urllib.parse.quote(now.isoformat() + "Z", safe="")
+              try:
+                  commits_response = fetch_json(f"{api_base}/repos/{full_name}/commits?since={since}&until={until}&per_page=100")
+              except Exception as e:
+                  print(f"Failed to enrich commits for {full_name}: {e}")
+                  continue
+              if not isinstance(commits_response, list):
+                  continue
+              commit_summaries = []
+              for commit in commits_response[:20]:
+                  if not isinstance(commit, dict):
+                      continue
+                  commit_summaries.append({
+                      "sha": commit.get("sha") or "",
+                      "message": ((commit.get("commit") or {}).get("message") or ""),
+                      "url": commit.get("html_url") or "",
+                  })
+              count = len(commits_response)
+              matching_push = None
+              for event in events:
+                  if not isinstance(event, dict) or event.get("type") != "PushEvent":
+                      continue
+                  event_repo = (event.get("repo") or {}).get("name")
+                  event_date = parse_dt(event.get("created_at"))
+                  if event_repo == full_name and event_date and event_date >= week_ago:
+                      matching_push = event
+                      break
+              if matching_push is None and count:
+                  matching_push = {
+                      "type": "PushEvent",
+                      "created_at": repo.get("pushed_at") or now.isoformat() + "Z",
+                      "repo": {"name": full_name},
+                      "payload": {
+                          "ref": f"refs/heads/{repo.get('default_branch') or 'main'}",
+                          "before": "",
+                          "head": commit_summaries[0]["sha"] if commit_summaries else "",
+                      },
+                  }
+                  events.insert(0, matching_push)
+              if matching_push is not None:
+                  payload = matching_push.setdefault("payload", {})
+                  payload["distinct_size"] = count
+                  payload["commits"] = commit_summaries
+
+          events_path.write_text(json.dumps(events, indent=2) + "\n", encoding="utf-8")
+
+          weekly_events = []
+          for event in events:
+              if not isinstance(event, dict):
+                  continue
+              event_date = parse_dt(event.get("created_at"))
+              if event_date and week_ago <= event_date <= now:
+                  weekly_events.append(event)
+
+          active_repos = set()
+          event_commits = 0
+          event_prs = 0
+          event_issues = 0
+          for event in weekly_events:
+              repo_name = (event.get("repo") or {}).get("name")
+              if repo_name:
+                  active_repos.add(repo_name)
+              event_type = event.get("type")
+              if event_type == "PushEvent":
+                  payload = event.get("payload") or {}
+                  event_commits += int(payload.get("distinct_size") or len(payload.get("commits") or []) or 0)
+              elif event_type == "PullRequestEvent":
+                  event_prs += 1
+              elif event_type == "IssuesEvent":
+                  event_issues += 1
+
+          weekly_stats = {
+              "updatedAt": meta["updatedAt"],
+              "from": week_ago.isoformat() + "Z",
+              "to": now.isoformat() + "Z",
+              "totalCommitContributions": event_commits,
+              "totalPullRequestContributions": event_prs,
+              "totalIssueContributions": event_issues,
+              "totalRepositoryContributions": len(active_repos),
+              "source": "github-public-events",
+          }
+
           if token:
               try:
-                  now = datetime.datetime.utcnow().replace(microsecond=0)
-                  week_ago = now - datetime.timedelta(days=7)
-
                   query = """
                   query($login: String!, $from: DateTime!, $to: DateTime!) {
                     user(login: $login) {
@@ -260,6 +387,7 @@ jobs:
                       "totalPullRequestContributions": int(cc.get("totalPullRequestContributions") or 0),
                       "totalIssueContributions": int(cc.get("totalIssueContributions") or 0),
                       "totalRepositoryContributions": int(cc.get("totalRepositoryContributions") or 0),
+                      "source": "github-graphql",
                   }
               except Exception as e:
                   print(f"Failed to fetch weekly GraphQL stats: {e}")
@@ -267,20 +395,6 @@ jobs:
           Path("data/github-weekly.json").write_text(json.dumps(weekly_stats, indent=2) + "\n", encoding="utf-8")
 
           # Fetch recent releases across repos (for the website "Latest releases" UI)
-          api_base = "https://api.github.com"
-          headers = {
-              "Accept": "application/vnd.github+json",
-              "X-GitHub-Api-Version": "2022-11-28",
-              "User-Agent": "atrak-dev-site",
-          }
-          if token:
-              headers["Authorization"] = f"token {token}"
-
-          def fetch_json(url: str):
-              req = urllib.request.Request(url, headers=headers)
-              with urllib.request.urlopen(req, timeout=30) as resp:
-                  return json.load(resp)
-
           candidates = [
               r for r in repos
               if isinstance(r, dict) and r.get("full_name") and not r.get("fork")
