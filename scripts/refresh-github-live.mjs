@@ -31,6 +31,14 @@ function writeJson(filePath, value) {
   fs.writeFileSync(filePath, `${JSON.stringify(value, null, 2)}\n`, "utf8");
 }
 
+function readJson(filePath) {
+  try {
+    return JSON.parse(fs.readFileSync(filePath, "utf8"));
+  } catch {
+    return null;
+  }
+}
+
 function repoUrl(name) {
   return `https://github.com/${OWNER}/${name}`;
 }
@@ -282,6 +290,21 @@ function weeklyStats(events, now) {
   };
 }
 
+function weeklyStatsForWrite(events, now) {
+  const liveWeeklyStats = weeklyStats(events, now);
+  const existingWeeklyStats = readJson(paths.weekly);
+
+  if (
+    existingWeeklyStats?.source === "local-git-refresh" &&
+    Number(existingWeeklyStats.totalCommitContributions || 0) >=
+      Number(liveWeeklyStats.totalCommitContributions || 0)
+  ) {
+    return existingWeeklyStats;
+  }
+
+  return liveWeeklyStats;
+}
+
 function main() {
   const now = new Date();
   const weekStart = new Date(now.getTime() - 7 * 24 * 60 * 60 * 1000);
@@ -381,7 +404,7 @@ function main() {
     mostRecentPush,
     source: "github-live-cache",
   });
-  writeJson(paths.weekly, weeklyStats(events, now));
+  writeJson(paths.weekly, weeklyStatsForWrite(events, now));
   fs.writeFileSync(paths.lastUpdated, `${now.toISOString().replace(/\.\d{3}Z$/, "Z")}\n`, "utf8");
 }
 

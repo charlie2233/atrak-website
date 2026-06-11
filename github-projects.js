@@ -21,7 +21,7 @@ const SITE_BASE_URL = (() => {
     return '';
 })();
 
-const GITHUB_CACHE_VERSION = '20260610c';
+const GITHUB_CACHE_VERSION = '20260611a';
 const withCacheVersion = (url) => `${url}${url.includes('?') ? '&' : '?'}v=${GITHUB_CACHE_VERSION}`;
 const CACHED_REPOS_BASE_PATH = SITE_BASE_URL ? `${SITE_BASE_URL}data/github-repos.json` : 'data/github-repos.json'; // Updated by GitHub Actions
 const CACHED_DATA_PATH = withCacheVersion(CACHED_REPOS_BASE_PATH);
