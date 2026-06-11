@@ -1,80 +1,33 @@
 [
   {
-    "type": "ReleaseEvent",
-    "created_at": "2026-06-11T22:24:25Z",
-    "repo": {
-      "name": "charlie2233/atrak-website"
-    },
-    "payload": {
-      "action": "published",
-      "release": {
-        "tag_name": "v2026.06.11",
-        "name": "Atrak Website v2026.06.11",
-        "html_url": "https://github.com/charlie2233/atrak-website/releases/tag/v2026.06.11",
-        "published_at": "2026-06-11T22:24:25Z"
-      }
-    }
-  },
-  {
-    "type": "ReleaseEvent",
-    "created_at": "2026-06-11T22:24:21Z",
-    "repo": {
-      "name": "charlie2233/Basketball_action_recoginition_sever"
-    },
-    "payload": {
-      "action": "published",
-      "release": {
-        "tag_name": "hoops-clips-mac-v1.0",
-        "name": "Hoops Clips Mac Installer v1.0",
-        "html_url": "https://github.com/charlie2233/Basketball_action_recoginition_sever/releases/tag/hoops-clips-mac-v1.0",
-        "published_at": "2026-06-11T22:24:21Z"
-      }
-    }
-  },
-  {
-    "type": "ReleaseEvent",
-    "created_at": "2026-06-11T22:24:18Z",
-    "repo": {
-      "name": "charlie2233/formative-ai-exporter"
-    },
-    "payload": {
-      "action": "published",
-      "release": {
-        "tag_name": "v0.1.0",
-        "name": "Practice Snapshot for Formative v0.1.0",
-        "html_url": "https://github.com/charlie2233/formative-ai-exporter/releases/tag/v0.1.0",
-        "published_at": "2026-06-11T22:24:18Z"
-      }
-    }
-  },
-  {
-    "type": "ReleaseEvent",
-    "created_at": "2026-06-11T22:24:15Z",
-    "repo": {
-      "name": "charlie2233/coursebinder-ai-ready-google-classroom-exporter"
-    },
-    "payload": {
-      "action": "published",
-      "release": {
-        "tag_name": "v0.1.0",
-        "name": "CourseBinder Classroom AI Exporter v0.1.0",
-        "html_url": "https://github.com/charlie2233/coursebinder-ai-ready-google-classroom-exporter/releases/tag/v0.1.0",
-        "published_at": "2026-06-11T22:24:15Z"
-      }
-    }
-  },
-  {
+    "id": "13195033941",
     "type": "PushEvent",
-    "created_at": "2026-06-11T22:23:42Z",
+    "actor": {
+      "id": 117957000,
+      "login": "charlie2233",
+      "display_login": "charlie2233",
+      "gravatar_id": "",
+      "url": "https://api.github.com/users/charlie2233",
+      "avatar_url": "https://avatars.githubusercontent.com/u/117957000?"
+    },
     "repo": {
-      "name": "charlie2233/atrak-website"
+      "id": 1140388078,
+      "name": "charlie2233/atrak-website",
+      "url": "https://api.github.com/repos/charlie2233/atrak-website"
     },
     "payload": {
+      "repository_id": 1140388078,
+      "push_id": 35483303154,
       "ref": "refs/heads/main",
-      "before": "745445cc93b0ea33748ebe85bb1b0f5d0003ecf4",
-      "head": "a412a2174f66b17f7aa6488f30c225bc650ab383",
-      "distinct_size": 26,
+      "head": "5d4cd9aa85b32e00b1f4fc6bb1625e710318d431",
+      "before": "a45ecbfe9137792f3efd7b5277e75e6c83fc85e4",
+      "distinct_size": 27,
       "commits": [
+        {
+          "sha": "5d4cd9aa85b32e00b1f4fc6bb1625e710318d431",
+          "message": "chore: refresh github releases and preserve weekly stats",
+          "url": "https://github.com/charlie2233/atrak-website/commit/5d4cd9aa85b32e00b1f4fc6bb1625e710318d431"
+        },
         {
           "sha": "a45ecbfe9137792f3efd7b5277e75e6c83fc85e4",
           "message": "chore: update GitHub data [skip ci]",
@@ -169,207 +122,810 @@
           "sha": "5f69510e89408aeb92cedea0b3fdd585ca5823a9",
           "message": "chore: update GitHub data [skip ci]",
           "url": "https://github.com/charlie2233/atrak-website/commit/5f69510e89408aeb92cedea0b3fdd585ca5823a9"
-        },
-        {
-          "sha": "475ba241cdf6eafb8c48c5f477c4dddb264f9da1",
-          "message": "feat: add CourseBinder Chrome Web Store link",
-          "url": "https://github.com/charlie2233/atrak-website/commit/475ba241cdf6eafb8c48c5f477c4dddb264f9da1"
         }
       ]
-    }
+    },
+    "public": true,
+    "created_at": "2026-06-11T22:42:34Z"
   },
   {
-    "type": "PushEvent",
-    "created_at": "2026-06-11T21:38:44Z",
+    "id": "10589346759",
+    "type": "ReleaseEvent",
+    "actor": {
+      "id": 117957000,
+      "login": "charlie2233",
+      "display_login": "charlie2233",
+      "gravatar_id": "",
+      "url": "https://api.github.com/users/charlie2233",
+      "avatar_url": "https://avatars.githubusercontent.com/u/117957000?"
+    },
     "repo": {
-      "name": "charlie2233/atrak-website"
+      "id": 1140388078,
+      "name": "charlie2233/atrak-website",
+      "url": "https://api.github.com/repos/charlie2233/atrak-website"
     },
     "payload": {
+      "action": "published",
+      "release": {
+        "url": "https://api.github.com/repos/charlie2233/atrak-website/releases/338280651",
+        "assets_url": "https://api.github.com/repos/charlie2233/atrak-website/releases/338280651/assets",
+        "upload_url": "https://uploads.github.com/repos/charlie2233/atrak-website/releases/338280651/assets{?name,label}",
+        "html_url": "https://github.com/charlie2233/atrak-website/releases/tag/v2026.06.11",
+        "id": 338280651,
+        "author": {
+          "login": "charlie2233",
+          "id": 117957000,
+          "node_id": "U_kgDOBwfhiA",
+          "avatar_url": "https://avatars.githubusercontent.com/u/117957000?v=4",
+          "gravatar_id": "",
+          "url": "https://api.github.com/users/charlie2233",
+          "html_url": "https://github.com/charlie2233",
+          "followers_url": "https://api.github.com/users/charlie2233/followers",
+          "following_url": "https://api.github.com/users/charlie2233/following{/other_user}",
+          "gists_url": "https://api.github.com/users/charlie2233/gists{/gist_id}",
+          "starred_url": "https://api.github.com/users/charlie2233/starred{/owner}{/repo}",
+          "subscriptions_url": "https://api.github.com/users/charlie2233/subscriptions",
+          "organizations_url": "https://api.github.com/users/charlie2233/orgs",
+          "repos_url": "https://api.github.com/users/charlie2233/repos",
+          "events_url": "https://api.github.com/users/charlie2233/events{/privacy}",
+          "received_events_url": "https://api.github.com/users/charlie2233/received_events",
+          "type": "User",
+          "user_view_type": "public",
+          "site_admin": false
+        },
+        "node_id": "RE_kwDOQ_jw7s4UKcDL",
+        "tag_name": "v2026.06.11",
+        "target_commitish": "main",
+        "name": "Atrak Website v2026.06.11",
+        "draft": false,
+        "immutable": false,
+        "prerelease": false,
+        "created_at": "2026-06-11T22:23:54Z",
+        "updated_at": "2026-06-11T22:24:25Z",
+        "published_at": "2026-06-11T22:24:25Z",
+        "assets": [
+          {
+            "url": "https://api.github.com/repos/charlie2233/atrak-website/releases/assets/445097279",
+            "id": 445097279,
+            "node_id": "RA_kwDOQ_jw7s4ah6U_",
+            "name": "atrak-website-source-2026-06-11.zip",
+            "label": "",
+            "uploader": {
+              "login": "charlie2233",
+              "id": 117957000,
+              "node_id": "U_kgDOBwfhiA",
+              "avatar_url": "https://avatars.githubusercontent.com/u/117957000?v=4",
+              "gravatar_id": "",
+              "url": "https://api.github.com/users/charlie2233",
+              "html_url": "https://github.com/charlie2233",
+              "followers_url": "https://api.github.com/users/charlie2233/followers",
+              "following_url": "https://api.github.com/users/charlie2233/following{/other_user}",
+              "gists_url": "https://api.github.com/users/charlie2233/gists{/gist_id}",
+              "starred_url": "https://api.github.com/users/charlie2233/starred{/owner}{/repo}",
+              "subscriptions_url": "https://api.github.com/users/charlie2233/subscriptions",
+              "organizations_url": "https://api.github.com/users/charlie2233/orgs",
+              "repos_url": "https://api.github.com/users/charlie2233/repos",
+              "events_url": "https://api.github.com/users/charlie2233/events{/privacy}",
+              "received_events_url": "https://api.github.com/users/charlie2233/received_events",
+              "type": "User",
+              "user_view_type": "public",
+              "site_admin": false
+            },
+            "content_type": "application/zip",
+            "state": "uploaded",
+            "size": 25148537,
+            "digest": "sha256:c7b28761dff4263da1b9041f126882db259a82d0fe0c1e95b29d48ba147379ba",
+            "download_count": 0,
+            "created_at": "2026-06-11T22:24:22Z",
+            "updated_at": "2026-06-11T22:24:25Z",
+            "browser_download_url": "https://github.com/charlie2233/atrak-website/releases/download/v2026.06.11/atrak-website-source-2026-06-11.zip"
+          }
+        ],
+        "tarball_url": "https://api.github.com/repos/charlie2233/atrak-website/tarball/v2026.06.11",
+        "zipball_url": "https://api.github.com/repos/charlie2233/atrak-website/zipball/v2026.06.11",
+        "body": "Source snapshot for the Atrak website project hub, release asset links, QA map, and media preview upgrade. Commit: a412a21.",
+        "short_description_html": "<p>Source snapshot for the Atrak website project hub, release asset links, QA map, and media preview upgrade. Commit: <a class=\"commit-link\" data-hovercard-type=\"commit\" data-hovercard-url=\"https://github.com/charlie2233/atrak-website/commit/a412a2174f66b17f7aa6488f30c225bc650ab383/hovercard\" href=\"https://github.com/charlie2233/atrak-website/commit/a412a2174f66b17f7aa6488f30c225bc650ab383\"><tt>a412a21</tt></a>.</p>",
+        "is_short_description_html_truncated": false
+      }
+    },
+    "public": true,
+    "created_at": "2026-06-11T22:24:25Z"
+  },
+  {
+    "id": "10589343751",
+    "type": "ReleaseEvent",
+    "actor": {
+      "id": 117957000,
+      "login": "charlie2233",
+      "display_login": "charlie2233",
+      "gravatar_id": "",
+      "url": "https://api.github.com/users/charlie2233",
+      "avatar_url": "https://avatars.githubusercontent.com/u/117957000?"
+    },
+    "repo": {
+      "id": 1132028291,
+      "name": "charlie2233/Basketball_action_recoginition_sever",
+      "url": "https://api.github.com/repos/charlie2233/Basketball_action_recoginition_sever"
+    },
+    "payload": {
+      "action": "published",
+      "release": {
+        "url": "https://api.github.com/repos/charlie2233/Basketball_action_recoginition_sever/releases/338280634",
+        "assets_url": "https://api.github.com/repos/charlie2233/Basketball_action_recoginition_sever/releases/338280634/assets",
+        "upload_url": "https://uploads.github.com/repos/charlie2233/Basketball_action_recoginition_sever/releases/338280634/assets{?name,label}",
+        "html_url": "https://github.com/charlie2233/Basketball_action_recoginition_sever/releases/tag/hoops-clips-mac-v1.0",
+        "id": 338280634,
+        "author": {
+          "login": "charlie2233",
+          "id": 117957000,
+          "node_id": "U_kgDOBwfhiA",
+          "avatar_url": "https://avatars.githubusercontent.com/u/117957000?v=4",
+          "gravatar_id": "",
+          "url": "https://api.github.com/users/charlie2233",
+          "html_url": "https://github.com/charlie2233",
+          "followers_url": "https://api.github.com/users/charlie2233/followers",
+          "following_url": "https://api.github.com/users/charlie2233/following{/other_user}",
+          "gists_url": "https://api.github.com/users/charlie2233/gists{/gist_id}",
+          "starred_url": "https://api.github.com/users/charlie2233/starred{/owner}{/repo}",
+          "subscriptions_url": "https://api.github.com/users/charlie2233/subscriptions",
+          "organizations_url": "https://api.github.com/users/charlie2233/orgs",
+          "repos_url": "https://api.github.com/users/charlie2233/repos",
+          "events_url": "https://api.github.com/users/charlie2233/events{/privacy}",
+          "received_events_url": "https://api.github.com/users/charlie2233/received_events",
+          "type": "User",
+          "user_view_type": "public",
+          "site_admin": false
+        },
+        "node_id": "RE_kwDOQ3lhg84UKcC6",
+        "tag_name": "hoops-clips-mac-v1.0",
+        "target_commitish": "main",
+        "name": "Hoops Clips Mac Installer v1.0",
+        "draft": false,
+        "immutable": false,
+        "prerelease": false,
+        "created_at": "2026-02-05T08:22:15Z",
+        "updated_at": "2026-06-11T22:24:21Z",
+        "published_at": "2026-06-11T22:24:21Z",
+        "assets": [
+          {
+            "url": "https://api.github.com/repos/charlie2233/Basketball_action_recoginition_sever/releases/assets/445097252",
+            "id": 445097252,
+            "node_id": "RA_kwDOQ3lhg84ah6Uk",
+            "name": "hoops-clips-mac-installer-v1.0.zip",
+            "label": "",
+            "uploader": {
+              "login": "charlie2233",
+              "id": 117957000,
+              "node_id": "U_kgDOBwfhiA",
+              "avatar_url": "https://avatars.githubusercontent.com/u/117957000?v=4",
+              "gravatar_id": "",
+              "url": "https://api.github.com/users/charlie2233",
+              "html_url": "https://github.com/charlie2233",
+              "followers_url": "https://api.github.com/users/charlie2233/followers",
+              "following_url": "https://api.github.com/users/charlie2233/following{/other_user}",
+              "gists_url": "https://api.github.com/users/charlie2233/gists{/gist_id}",
+              "starred_url": "https://api.github.com/users/charlie2233/starred{/owner}{/repo}",
+              "subscriptions_url": "https://api.github.com/users/charlie2233/subscriptions",
+              "organizations_url": "https://api.github.com/users/charlie2233/orgs",
+              "repos_url": "https://api.github.com/users/charlie2233/repos",
+              "events_url": "https://api.github.com/users/charlie2233/events{/privacy}",
+              "received_events_url": "https://api.github.com/users/charlie2233/received_events",
+              "type": "User",
+              "user_view_type": "public",
+              "site_admin": false
+            },
+            "content_type": "application/zip",
+            "state": "uploaded",
+            "size": 460044,
+            "digest": "sha256:680374c742871c3ab87eb03a6adba0543a921050e467899905c410a7d0c52d2d",
+            "download_count": 1,
+            "created_at": "2026-06-11T22:24:19Z",
+            "updated_at": "2026-06-11T22:24:20Z",
+            "browser_download_url": "https://github.com/charlie2233/Basketball_action_recoginition_sever/releases/download/hoops-clips-mac-v1.0/hoops-clips-mac-installer-v1.0.zip"
+          }
+        ],
+        "tarball_url": "https://api.github.com/repos/charlie2233/Basketball_action_recoginition_sever/tarball/hoops-clips-mac-v1.0",
+        "zipball_url": "https://api.github.com/repos/charlie2233/Basketball_action_recoginition_sever/zipball/hoops-clips-mac-v1.0",
+        "body": "Official Hoops Clips macOS installer bundle linked from Atrak and hoopclips.com project materials. This complements the existing model checkpoint release with a user-facing installer download.",
+        "short_description_html": "<p>Official Hoops Clips macOS installer bundle linked from Atrak and hoopclips.com project materials. This complements the existing model checkpoint release with a user-facing installer download.</p>",
+        "is_short_description_html_truncated": false
+      }
+    },
+    "public": true,
+    "created_at": "2026-06-11T22:24:21Z"
+  },
+  {
+    "id": "10589342308",
+    "type": "ReleaseEvent",
+    "actor": {
+      "id": 117957000,
+      "login": "charlie2233",
+      "display_login": "charlie2233",
+      "gravatar_id": "",
+      "url": "https://api.github.com/users/charlie2233",
+      "avatar_url": "https://avatars.githubusercontent.com/u/117957000?"
+    },
+    "repo": {
+      "id": 1220281364,
+      "name": "charlie2233/formative-ai-exporter",
+      "url": "https://api.github.com/repos/charlie2233/formative-ai-exporter"
+    },
+    "payload": {
+      "action": "published",
+      "release": {
+        "url": "https://api.github.com/repos/charlie2233/formative-ai-exporter/releases/338280629",
+        "assets_url": "https://api.github.com/repos/charlie2233/formative-ai-exporter/releases/338280629/assets",
+        "upload_url": "https://uploads.github.com/repos/charlie2233/formative-ai-exporter/releases/338280629/assets{?name,label}",
+        "html_url": "https://github.com/charlie2233/formative-ai-exporter/releases/tag/v0.1.0",
+        "id": 338280629,
+        "author": {
+          "login": "charlie2233",
+          "id": 117957000,
+          "node_id": "U_kgDOBwfhiA",
+          "avatar_url": "https://avatars.githubusercontent.com/u/117957000?v=4",
+          "gravatar_id": "",
+          "url": "https://api.github.com/users/charlie2233",
+          "html_url": "https://github.com/charlie2233",
+          "followers_url": "https://api.github.com/users/charlie2233/followers",
+          "following_url": "https://api.github.com/users/charlie2233/following{/other_user}",
+          "gists_url": "https://api.github.com/users/charlie2233/gists{/gist_id}",
+          "starred_url": "https://api.github.com/users/charlie2233/starred{/owner}{/repo}",
+          "subscriptions_url": "https://api.github.com/users/charlie2233/subscriptions",
+          "organizations_url": "https://api.github.com/users/charlie2233/orgs",
+          "repos_url": "https://api.github.com/users/charlie2233/repos",
+          "events_url": "https://api.github.com/users/charlie2233/events{/privacy}",
+          "received_events_url": "https://api.github.com/users/charlie2233/received_events",
+          "type": "User",
+          "user_view_type": "public",
+          "site_admin": false
+        },
+        "node_id": "RE_kwDOSLwEFM4UKcC1",
+        "tag_name": "v0.1.0",
+        "target_commitish": "main",
+        "name": "Practice Snapshot for Formative v0.1.0",
+        "draft": false,
+        "immutable": false,
+        "prerelease": false,
+        "created_at": "2026-04-27T01:54:09Z",
+        "updated_at": "2026-06-11T22:24:18Z",
+        "published_at": "2026-06-11T22:24:18Z",
+        "assets": [
+          {
+            "url": "https://api.github.com/repos/charlie2233/formative-ai-exporter/releases/assets/445097239",
+            "id": 445097239,
+            "node_id": "RA_kwDOSLwEFM4ah6UX",
+            "name": "formative-ai-exporter-extension-0.1.0-chrome.zip",
+            "label": "",
+            "uploader": {
+              "login": "charlie2233",
+              "id": 117957000,
+              "node_id": "U_kgDOBwfhiA",
+              "avatar_url": "https://avatars.githubusercontent.com/u/117957000?v=4",
+              "gravatar_id": "",
+              "url": "https://api.github.com/users/charlie2233",
+              "html_url": "https://github.com/charlie2233",
+              "followers_url": "https://api.github.com/users/charlie2233/followers",
+              "following_url": "https://api.github.com/users/charlie2233/following{/other_user}",
+              "gists_url": "https://api.github.com/users/charlie2233/gists{/gist_id}",
+              "starred_url": "https://api.github.com/users/charlie2233/starred{/owner}{/repo}",
+              "subscriptions_url": "https://api.github.com/users/charlie2233/subscriptions",
+              "organizations_url": "https://api.github.com/users/charlie2233/orgs",
+              "repos_url": "https://api.github.com/users/charlie2233/repos",
+              "events_url": "https://api.github.com/users/charlie2233/events{/privacy}",
+              "received_events_url": "https://api.github.com/users/charlie2233/received_events",
+              "type": "User",
+              "user_view_type": "public",
+              "site_admin": false
+            },
+            "content_type": "application/zip",
+            "state": "uploaded",
+            "size": 101008,
+            "digest": "sha256:0413a965bfb1462fb566d8b3d62d04d13847cd47ab190cb3a8e7e27555820b2f",
+            "download_count": 0,
+            "created_at": "2026-06-11T22:24:17Z",
+            "updated_at": "2026-06-11T22:24:17Z",
+            "browser_download_url": "https://github.com/charlie2233/formative-ai-exporter/releases/download/v0.1.0/formative-ai-exporter-extension-0.1.0-chrome.zip"
+          }
+        ],
+        "tarball_url": "https://api.github.com/repos/charlie2233/formative-ai-exporter/tarball/v0.1.0",
+        "zipball_url": "https://api.github.com/repos/charlie2233/formative-ai-exporter/zipball/v0.1.0",
+        "body": "Official v0.1.0 Chrome extension ZIP for exporting visible Formative practice pages into local AI-readable archives. The project is MIT licensed and the Atrak site links to this release asset.",
+        "short_description_html": "<p>Official v0.1.0 Chrome extension ZIP for exporting visible Formative practice pages into local AI-readable archives. The project is MIT licensed and the Atrak site links to this release asset.</p>",
+        "is_short_description_html_truncated": false
+      }
+    },
+    "public": true,
+    "created_at": "2026-06-11T22:24:18Z"
+  },
+  {
+    "id": "10589341023",
+    "type": "ReleaseEvent",
+    "actor": {
+      "id": 117957000,
+      "login": "charlie2233",
+      "display_login": "charlie2233",
+      "gravatar_id": "",
+      "url": "https://api.github.com/users/charlie2233",
+      "avatar_url": "https://avatars.githubusercontent.com/u/117957000?"
+    },
+    "repo": {
+      "id": 1220099958,
+      "name": "charlie2233/coursebinder-ai-ready-google-classroom-exporter",
+      "url": "https://api.github.com/repos/charlie2233/coursebinder-ai-ready-google-classroom-exporter"
+    },
+    "payload": {
+      "action": "published",
+      "release": {
+        "url": "https://api.github.com/repos/charlie2233/coursebinder-ai-ready-google-classroom-exporter/releases/338280620",
+        "assets_url": "https://api.github.com/repos/charlie2233/coursebinder-ai-ready-google-classroom-exporter/releases/338280620/assets",
+        "upload_url": "https://uploads.github.com/repos/charlie2233/coursebinder-ai-ready-google-classroom-exporter/releases/338280620/assets{?name,label}",
+        "html_url": "https://github.com/charlie2233/coursebinder-ai-ready-google-classroom-exporter/releases/tag/v0.1.0",
+        "id": 338280620,
+        "author": {
+          "login": "charlie2233",
+          "id": 117957000,
+          "node_id": "U_kgDOBwfhiA",
+          "avatar_url": "https://avatars.githubusercontent.com/u/117957000?v=4",
+          "gravatar_id": "",
+          "url": "https://api.github.com/users/charlie2233",
+          "html_url": "https://github.com/charlie2233",
+          "followers_url": "https://api.github.com/users/charlie2233/followers",
+          "following_url": "https://api.github.com/users/charlie2233/following{/other_user}",
+          "gists_url": "https://api.github.com/users/charlie2233/gists{/gist_id}",
+          "starred_url": "https://api.github.com/users/charlie2233/starred{/owner}{/repo}",
+          "subscriptions_url": "https://api.github.com/users/charlie2233/subscriptions",
+          "organizations_url": "https://api.github.com/users/charlie2233/orgs",
+          "repos_url": "https://api.github.com/users/charlie2233/repos",
+          "events_url": "https://api.github.com/users/charlie2233/events{/privacy}",
+          "received_events_url": "https://api.github.com/users/charlie2233/received_events",
+          "type": "User",
+          "user_view_type": "public",
+          "site_admin": false
+        },
+        "node_id": "RE_kwDOSLk_ds4UKcCs",
+        "tag_name": "v0.1.0",
+        "target_commitish": "main",
+        "name": "CourseBinder Classroom AI Exporter v0.1.0",
+        "draft": false,
+        "immutable": false,
+        "prerelease": false,
+        "created_at": "2026-04-25T07:46:16Z",
+        "updated_at": "2026-06-11T22:24:15Z",
+        "published_at": "2026-06-11T22:24:15Z",
+        "assets": [
+          {
+            "url": "https://api.github.com/repos/charlie2233/coursebinder-ai-ready-google-classroom-exporter/releases/assets/445097226",
+            "id": 445097226,
+            "node_id": "RA_kwDOSLk_ds4ah6UK",
+            "name": "classroom-ai-exporter-extension-0.1.0-chrome.zip",
+            "label": "",
+            "uploader": {
+              "login": "charlie2233",
+              "id": 117957000,
+              "node_id": "U_kgDOBwfhiA",
+              "avatar_url": "https://avatars.githubusercontent.com/u/117957000?v=4",
+              "gravatar_id": "",
+              "url": "https://api.github.com/users/charlie2233",
+              "html_url": "https://github.com/charlie2233",
+              "followers_url": "https://api.github.com/users/charlie2233/followers",
+              "following_url": "https://api.github.com/users/charlie2233/following{/other_user}",
+              "gists_url": "https://api.github.com/users/charlie2233/gists{/gist_id}",
+              "starred_url": "https://api.github.com/users/charlie2233/starred{/owner}{/repo}",
+              "subscriptions_url": "https://api.github.com/users/charlie2233/subscriptions",
+              "organizations_url": "https://api.github.com/users/charlie2233/orgs",
+              "repos_url": "https://api.github.com/users/charlie2233/repos",
+              "events_url": "https://api.github.com/users/charlie2233/events{/privacy}",
+              "received_events_url": "https://api.github.com/users/charlie2233/received_events",
+              "type": "User",
+              "user_view_type": "public",
+              "site_admin": false
+            },
+            "content_type": "application/zip",
+            "state": "uploaded",
+            "size": 61577,
+            "digest": "sha256:412773947a4ef1e93502df75e144962f7c8e9c6b9d9bb3dc26989af46ed63d2c",
+            "download_count": 0,
+            "created_at": "2026-06-11T22:24:14Z",
+            "updated_at": "2026-06-11T22:24:14Z",
+            "browser_download_url": "https://github.com/charlie2233/coursebinder-ai-ready-google-classroom-exporter/releases/download/v0.1.0/classroom-ai-exporter-extension-0.1.0-chrome.zip"
+          }
+        ],
+        "tarball_url": "https://api.github.com/repos/charlie2233/coursebinder-ai-ready-google-classroom-exporter/tarball/v0.1.0",
+        "zipball_url": "https://api.github.com/repos/charlie2233/coursebinder-ai-ready-google-classroom-exporter/zipball/v0.1.0",
+        "body": "Official v0.1.0 Chrome extension ZIP for local developer testing. The project is MIT licensed and the Atrak site links to this release asset for download provenance.",
+        "short_description_html": "<p>Official v0.1.0 Chrome extension ZIP for local developer testing. The project is MIT licensed and the Atrak site links to this release asset for download provenance.</p>",
+        "is_short_description_html_truncated": false
+      }
+    },
+    "public": true,
+    "created_at": "2026-06-11T22:24:15Z"
+  },
+  {
+    "id": "13194414936",
+    "type": "PushEvent",
+    "actor": {
+      "id": 117957000,
+      "login": "charlie2233",
+      "display_login": "charlie2233",
+      "gravatar_id": "",
+      "url": "https://api.github.com/users/charlie2233",
+      "avatar_url": "https://avatars.githubusercontent.com/u/117957000?"
+    },
+    "repo": {
+      "id": 1140388078,
+      "name": "charlie2233/atrak-website",
+      "url": "https://api.github.com/repos/charlie2233/atrak-website"
+    },
+    "payload": {
+      "repository_id": 1140388078,
+      "push_id": 35482684658,
       "ref": "refs/heads/main",
-      "before": "02a3c5220815674d5f0634e56bc305bc6c10abf1",
+      "head": "a412a2174f66b17f7aa6488f30c225bc650ab383",
+      "before": "745445cc93b0ea33748ebe85bb1b0f5d0003ecf4"
+    },
+    "public": true,
+    "created_at": "2026-06-11T22:23:42Z"
+  },
+  {
+    "id": "13192780844",
+    "type": "PushEvent",
+    "actor": {
+      "id": 117957000,
+      "login": "charlie2233",
+      "display_login": "charlie2233",
+      "gravatar_id": "",
+      "url": "https://api.github.com/users/charlie2233",
+      "avatar_url": "https://avatars.githubusercontent.com/u/117957000?"
+    },
+    "repo": {
+      "id": 1140388078,
+      "name": "charlie2233/atrak-website",
+      "url": "https://api.github.com/repos/charlie2233/atrak-website"
+    },
+    "payload": {
+      "repository_id": 1140388078,
+      "push_id": 35481059157,
+      "ref": "refs/heads/main",
       "head": "1abb2f7a64a6307d64c5fe3c8a5dc39d409a38c0",
-      "distinct_size": 0,
-      "commits": []
-    }
+      "before": "02a3c5220815674d5f0634e56bc305bc6c10abf1"
+    },
+    "public": true,
+    "created_at": "2026-06-11T21:38:44Z"
   },
   {
+    "id": "13192707913",
     "type": "PushEvent",
-    "created_at": "2026-06-11T21:36:48Z",
+    "actor": {
+      "id": 117957000,
+      "login": "charlie2233",
+      "display_login": "charlie2233",
+      "gravatar_id": "",
+      "url": "https://api.github.com/users/charlie2233",
+      "avatar_url": "https://avatars.githubusercontent.com/u/117957000?"
+    },
     "repo": {
-      "name": "charlie2233/atrak-website"
+      "id": 1140388078,
+      "name": "charlie2233/atrak-website",
+      "url": "https://api.github.com/repos/charlie2233/atrak-website"
     },
     "payload": {
+      "repository_id": 1140388078,
+      "push_id": 35480986203,
       "ref": "refs/heads/main",
-      "before": "892951ae0cd396a59f1fc69579cc215889cd3101",
       "head": "0a5e4f6e93212f994bda01208bc5ac10653a0bd2",
-      "distinct_size": 0,
-      "commits": []
-    }
+      "before": "892951ae0cd396a59f1fc69579cc215889cd3101"
+    },
+    "public": true,
+    "created_at": "2026-06-11T21:36:48Z"
   },
   {
+    "id": "13192444645",
     "type": "PushEvent",
-    "created_at": "2026-06-11T21:30:04Z",
+    "actor": {
+      "id": 117957000,
+      "login": "charlie2233",
+      "display_login": "charlie2233",
+      "gravatar_id": "",
+      "url": "https://api.github.com/users/charlie2233",
+      "avatar_url": "https://avatars.githubusercontent.com/u/117957000?"
+    },
     "repo": {
-      "name": "charlie2233/atrak-website"
+      "id": 1140388078,
+      "name": "charlie2233/atrak-website",
+      "url": "https://api.github.com/repos/charlie2233/atrak-website"
     },
     "payload": {
+      "repository_id": 1140388078,
+      "push_id": 35480723100,
       "ref": "refs/heads/main",
-      "before": "f6b7051ace4e40e8d9681c499fbfeab7a6ef9baf",
       "head": "e99fd6ffaf50e65ce0008d5cda529989ceac5424",
-      "distinct_size": 0,
-      "commits": []
-    }
+      "before": "f6b7051ace4e40e8d9681c499fbfeab7a6ef9baf"
+    },
+    "public": true,
+    "created_at": "2026-06-11T21:30:04Z"
   },
   {
+    "id": "13134180758",
     "type": "PushEvent",
-    "created_at": "2026-06-10T22:27:30Z",
+    "actor": {
+      "id": 117957000,
+      "login": "charlie2233",
+      "display_login": "charlie2233",
+      "gravatar_id": "",
+      "url": "https://api.github.com/users/charlie2233",
+      "avatar_url": "https://avatars.githubusercontent.com/u/117957000?"
+    },
     "repo": {
-      "name": "charlie2233/atrak-website"
+      "id": 1140388078,
+      "name": "charlie2233/atrak-website",
+      "url": "https://api.github.com/repos/charlie2233/atrak-website"
     },
     "payload": {
+      "repository_id": 1140388078,
+      "push_id": 35422940440,
       "ref": "refs/heads/main",
-      "before": "7fa5326fb75621d17a73b5219984e040676d3c3c",
       "head": "e411527574c0fb17e5d4f245557ddbdf436c2293",
-      "distinct_size": 0,
-      "commits": []
-    }
+      "before": "7fa5326fb75621d17a73b5219984e040676d3c3c"
+    },
+    "public": true,
+    "created_at": "2026-06-10T22:27:30Z"
   },
   {
+    "id": "13134118539",
     "type": "PushEvent",
-    "created_at": "2026-06-10T22:25:33Z",
+    "actor": {
+      "id": 117957000,
+      "login": "charlie2233",
+      "display_login": "charlie2233",
+      "gravatar_id": "",
+      "url": "https://api.github.com/users/charlie2233",
+      "avatar_url": "https://avatars.githubusercontent.com/u/117957000?"
+    },
     "repo": {
-      "name": "charlie2233/atrak-website"
+      "id": 1140388078,
+      "name": "charlie2233/atrak-website",
+      "url": "https://api.github.com/repos/charlie2233/atrak-website"
     },
     "payload": {
+      "repository_id": 1140388078,
+      "push_id": 35422878489,
       "ref": "refs/heads/main",
-      "before": "ff32a824700f79644dc455a0415f4c18d287c7b7",
       "head": "5030b69847a86b18b4e76a0d4a5f9b98dd1c4393",
-      "distinct_size": 0,
-      "commits": []
-    }
+      "before": "ff32a824700f79644dc455a0415f4c18d287c7b7"
+    },
+    "public": true,
+    "created_at": "2026-06-10T22:25:33Z"
   },
   {
+    "id": "13133652167",
     "type": "PushEvent",
-    "created_at": "2026-06-10T22:11:47Z",
+    "actor": {
+      "id": 117957000,
+      "login": "charlie2233",
+      "display_login": "charlie2233",
+      "gravatar_id": "",
+      "url": "https://api.github.com/users/charlie2233",
+      "avatar_url": "https://avatars.githubusercontent.com/u/117957000?"
+    },
     "repo": {
-      "name": "charlie2233/atrak-website"
+      "id": 1140388078,
+      "name": "charlie2233/atrak-website",
+      "url": "https://api.github.com/repos/charlie2233/atrak-website"
     },
     "payload": {
+      "repository_id": 1140388078,
+      "push_id": 35422413267,
       "ref": "refs/heads/main",
-      "before": "6664250a667659c6075f47f81f4d19ec4fea2bd1",
       "head": "3f05fa2c14ad911fedaf4b82a1fc5908eb06467a",
-      "distinct_size": 0,
-      "commits": []
-    }
+      "before": "6664250a667659c6075f47f81f4d19ec4fea2bd1"
+    },
+    "public": true,
+    "created_at": "2026-06-10T22:11:47Z"
   },
   {
+    "id": "13133145357",
     "type": "PushEvent",
-    "created_at": "2026-06-10T21:58:32Z",
+    "actor": {
+      "id": 117957000,
+      "login": "charlie2233",
+      "display_login": "charlie2233",
+      "gravatar_id": "",
+      "url": "https://api.github.com/users/charlie2233",
+      "avatar_url": "https://avatars.githubusercontent.com/u/117957000?"
+    },
     "repo": {
-      "name": "charlie2233/atrak-website"
+      "id": 1140388078,
+      "name": "charlie2233/atrak-website",
+      "url": "https://api.github.com/repos/charlie2233/atrak-website"
     },
     "payload": {
+      "repository_id": 1140388078,
+      "push_id": 35421907148,
       "ref": "refs/heads/main",
-      "before": "5f69510e89408aeb92cedea0b3fdd585ca5823a9",
       "head": "b82851dfb38af7547e1fe214f7486677ac2c96e0",
-      "distinct_size": 0,
-      "commits": []
-    }
+      "before": "5f69510e89408aeb92cedea0b3fdd585ca5823a9"
+    },
+    "public": true,
+    "created_at": "2026-06-10T21:58:32Z"
   },
   {
+    "id": "13132846982",
     "type": "PushEvent",
-    "created_at": "2026-06-10T21:50:46Z",
+    "actor": {
+      "id": 117957000,
+      "login": "charlie2233",
+      "display_login": "charlie2233",
+      "gravatar_id": "",
+      "url": "https://api.github.com/users/charlie2233",
+      "avatar_url": "https://avatars.githubusercontent.com/u/117957000?"
+    },
     "repo": {
-      "name": "charlie2233/atrak-website"
+      "id": 1140388078,
+      "name": "charlie2233/atrak-website",
+      "url": "https://api.github.com/repos/charlie2233/atrak-website"
     },
     "payload": {
+      "repository_id": 1140388078,
+      "push_id": 35421623417,
       "ref": "refs/heads/main",
-      "before": "b424c0f0a6112c627ef8586460aa831bef9046f2",
       "head": "475ba241cdf6eafb8c48c5f477c4dddb264f9da1",
-      "distinct_size": 0,
-      "commits": []
-    }
+      "before": "b424c0f0a6112c627ef8586460aa831bef9046f2"
+    },
+    "public": true,
+    "created_at": "2026-06-10T21:50:46Z"
   },
   {
+    "id": "13132576253",
     "type": "PushEvent",
-    "created_at": "2026-06-10T21:43:26Z",
+    "actor": {
+      "id": 117957000,
+      "login": "charlie2233",
+      "display_login": "charlie2233",
+      "gravatar_id": "",
+      "url": "https://api.github.com/users/charlie2233",
+      "avatar_url": "https://avatars.githubusercontent.com/u/117957000?"
+    },
     "repo": {
-      "name": "charlie2233/atrak-website"
+      "id": 1140388078,
+      "name": "charlie2233/atrak-website",
+      "url": "https://api.github.com/repos/charlie2233/atrak-website"
     },
     "payload": {
+      "repository_id": 1140388078,
+      "push_id": 35421352670,
       "ref": "refs/heads/main",
-      "before": "d92b12e11965bbb2a2428fa3a2713366e88274f3",
       "head": "0f8a4a63392a4f92582a8b544113967aa720311a",
-      "distinct_size": 0,
-      "commits": []
-    }
+      "before": "d92b12e11965bbb2a2428fa3a2713366e88274f3"
+    },
+    "public": true,
+    "created_at": "2026-06-10T21:43:26Z"
   },
   {
+    "id": "13132471141",
     "type": "PushEvent",
-    "created_at": "2026-06-10T21:40:34Z",
+    "actor": {
+      "id": 117957000,
+      "login": "charlie2233",
+      "display_login": "charlie2233",
+      "gravatar_id": "",
+      "url": "https://api.github.com/users/charlie2233",
+      "avatar_url": "https://avatars.githubusercontent.com/u/117957000?"
+    },
     "repo": {
-      "name": "charlie2233/atrak-website"
+      "id": 1140388078,
+      "name": "charlie2233/atrak-website",
+      "url": "https://api.github.com/repos/charlie2233/atrak-website"
     },
     "payload": {
+      "repository_id": 1140388078,
+      "push_id": 35421247829,
       "ref": "refs/heads/main",
-      "before": "8f5907b2cd06aa16284be6cc86e5ef3a7d98f594",
       "head": "d92b12e11965bbb2a2428fa3a2713366e88274f3",
-      "distinct_size": 0,
-      "commits": []
-    }
+      "before": "8f5907b2cd06aa16284be6cc86e5ef3a7d98f594"
+    },
+    "public": true,
+    "created_at": "2026-06-10T21:40:34Z"
   },
   {
+    "id": "13132389120",
     "type": "PushEvent",
-    "created_at": "2026-06-10T21:38:25Z",
+    "actor": {
+      "id": 117957000,
+      "login": "charlie2233",
+      "display_login": "charlie2233",
+      "gravatar_id": "",
+      "url": "https://api.github.com/users/charlie2233",
+      "avatar_url": "https://avatars.githubusercontent.com/u/117957000?"
+    },
     "repo": {
-      "name": "charlie2233/atrak-website"
+      "id": 1140388078,
+      "name": "charlie2233/atrak-website",
+      "url": "https://api.github.com/repos/charlie2233/atrak-website"
     },
     "payload": {
+      "repository_id": 1140388078,
+      "push_id": 35421165986,
       "ref": "refs/heads/main",
-      "before": "580d620906115867eaeb0de5771cdeeb15c7d0c5",
       "head": "8f5907b2cd06aa16284be6cc86e5ef3a7d98f594",
-      "distinct_size": 0,
-      "commits": []
-    }
+      "before": "580d620906115867eaeb0de5771cdeeb15c7d0c5"
+    },
+    "public": true,
+    "created_at": "2026-06-10T21:38:25Z"
   },
   {
+    "id": "13132275367",
     "type": "PushEvent",
-    "created_at": "2026-06-10T21:35:26Z",
+    "actor": {
+      "id": 117957000,
+      "login": "charlie2233",
+      "display_login": "charlie2233",
+      "gravatar_id": "",
+      "url": "https://api.github.com/users/charlie2233",
+      "avatar_url": "https://avatars.githubusercontent.com/u/117957000?"
+    },
     "repo": {
-      "name": "charlie2233/atrak-website"
+      "id": 1140388078,
+      "name": "charlie2233/atrak-website",
+      "url": "https://api.github.com/repos/charlie2233/atrak-website"
     },
     "payload": {
+      "repository_id": 1140388078,
+      "push_id": 35421052644,
       "ref": "refs/heads/main",
-      "before": "c697fe430228ed968d75c9d3e59a6f8660ca523c",
       "head": "580d620906115867eaeb0de5771cdeeb15c7d0c5",
-      "distinct_size": 0,
-      "commits": []
-    }
+      "before": "c697fe430228ed968d75c9d3e59a6f8660ca523c"
+    },
+    "public": true,
+    "created_at": "2026-06-10T21:35:26Z"
   },
   {
+    "id": "13131847496",
     "type": "PushEvent",
-    "created_at": "2026-06-10T21:24:27Z",
+    "actor": {
+      "id": 117957000,
+      "login": "charlie2233",
+      "display_login": "charlie2233",
+      "gravatar_id": "",
+      "url": "https://api.github.com/users/charlie2233",
+      "avatar_url": "https://avatars.githubusercontent.com/u/117957000?"
+    },
     "repo": {
-      "name": "charlie2233/atrak-website"
+      "id": 1140388078,
+      "name": "charlie2233/atrak-website",
+      "url": "https://api.github.com/repos/charlie2233/atrak-website"
     },
     "payload": {
+      "repository_id": 1140388078,
+      "push_id": 35420625667,
       "ref": "refs/heads/main",
-      "before": "22f06b3d2752fedf0856365d036443b246815115",
       "head": "c697fe430228ed968d75c9d3e59a6f8660ca523c",
-      "distinct_size": 0,
-      "commits": []
-    }
+      "before": "22f06b3d2752fedf0856365d036443b246815115"
+    },
+    "public": true,
+    "created_at": "2026-06-10T21:24:27Z"
   },
   {
+    "id": "13034331156",
     "type": "PushEvent",
-    "created_at": "2026-06-09T07:54:11Z",
+    "actor": {
+      "id": 117957000,
+      "login": "charlie2233",
+      "display_login": "charlie2233",
+      "gravatar_id": "",
+      "url": "https://api.github.com/users/charlie2233",
+      "avatar_url": "https://avatars.githubusercontent.com/u/117957000?"
+    },
     "repo": {
-      "name": "charlie2233/GBC_HuskiesWeb"
+      "id": 1231252582,
+      "name": "charlie2233/GBC_HuskiesWeb",
+      "url": "https://api.github.com/repos/charlie2233/GBC_HuskiesWeb"
     },
     "payload": {
+      "repository_id": 1231252582,
+      "push_id": 35323842697,
       "ref": "refs/heads/main",
-      "before": "538dedbeba6b001aa9bc7bd52b1c99bba79ffa8a",
       "head": "b3119529e34fea5635c349e005e7f09d32344bda",
+      "before": "538dedbeba6b001aa9bc7bd52b1c99bba79ffa8a",
       "distinct_size": 3,
       "commits": [
         {
@@ -388,34 +944,60 @@
           "url": "https://github.com/charlie2233/GBC_HuskiesWeb/commit/c2c984cc47ab053cf1ea3a80976476702270350a"
         }
       ]
-    }
+    },
+    "public": true,
+    "created_at": "2026-06-09T07:54:11Z"
   },
   {
+    "id": "12907552510",
     "type": "PushEvent",
-    "created_at": "2026-06-06T05:27:39Z",
+    "actor": {
+      "id": 117957000,
+      "login": "charlie2233",
+      "display_login": "charlie2233",
+      "gravatar_id": "",
+      "url": "https://api.github.com/users/charlie2233",
+      "avatar_url": "https://avatars.githubusercontent.com/u/117957000?"
+    },
     "repo": {
-      "name": "charlie2233/GBC_HuskiesWeb"
+      "id": 1231252582,
+      "name": "charlie2233/GBC_HuskiesWeb",
+      "url": "https://api.github.com/repos/charlie2233/GBC_HuskiesWeb"
     },
     "payload": {
+      "repository_id": 1231252582,
+      "push_id": 35197216064,
       "ref": "refs/heads/main",
-      "before": "c2c984cc47ab053cf1ea3a80976476702270350a",
       "head": "538dedbeba6b001aa9bc7bd52b1c99bba79ffa8a",
-      "distinct_size": 0,
-      "commits": []
-    }
+      "before": "c2c984cc47ab053cf1ea3a80976476702270350a"
+    },
+    "public": true,
+    "created_at": "2026-06-06T05:27:39Z"
   },
   {
+    "id": "12907488719",
     "type": "PushEvent",
-    "created_at": "2026-06-06T05:24:30Z",
+    "actor": {
+      "id": 117957000,
+      "login": "charlie2233",
+      "display_login": "charlie2233",
+      "gravatar_id": "",
+      "url": "https://api.github.com/users/charlie2233",
+      "avatar_url": "https://avatars.githubusercontent.com/u/117957000?"
+    },
     "repo": {
-      "name": "charlie2233/GBC_HuskiesWeb"
+      "id": 1231252582,
+      "name": "charlie2233/GBC_HuskiesWeb",
+      "url": "https://api.github.com/repos/charlie2233/GBC_HuskiesWeb"
     },
     "payload": {
+      "repository_id": 1231252582,
+      "push_id": 35197152256,
       "ref": "refs/heads/main",
-      "before": "93160aaf7b871aedaa7f7c5fbe263cc152764ee2",
       "head": "c2c984cc47ab053cf1ea3a80976476702270350a",
-      "distinct_size": 0,
-      "commits": []
-    }
+      "before": "93160aaf7b871aedaa7f7c5fbe263cc152764ee2"
+    },
+    "public": true,
+    "created_at": "2026-06-06T05:24:30Z"
   }
 ]
