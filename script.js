@@ -1802,7 +1802,7 @@ window.addEventListener('load', () => {
 // Performance: Honor user motion preferences only (avoid disabling effects unexpectedly).
 
 // Lazy-load heavy GitHub homepage features so first paint is not blocked by github-projects.js
-const GITHUB_PROJECTS_SCRIPT_URL = 'github-projects.js?v=37';
+const GITHUB_PROJECTS_SCRIPT_URL = 'github-projects.js?v=38';
 let githubProjectsLoadPromise = null;
 
 const hasGitHubHomepageTargets = () => {

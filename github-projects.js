@@ -967,7 +967,8 @@ async function getProjectDetails(fullRepoName) {
                 createdAt: new Date(cachedRepo.created_at),
                 updatedAt: new Date(cachedRepo.updated_at),
                 pushedAt: cachedRepo.pushed_at ? new Date(cachedRepo.pushed_at) : null,
-                license: cachedRepo.license ? cachedRepo.license.name : null
+                license: cachedRepo.license ? cachedRepo.license.name : null,
+                defaultBranch: cachedRepo.default_branch || 'main'
             };
         }
     }
@@ -999,7 +1000,8 @@ async function getProjectDetails(fullRepoName) {
             createdAt: new Date(repo.created_at),
             updatedAt: new Date(repo.updated_at),
             pushedAt: repo.pushed_at ? new Date(repo.pushed_at) : null,
-            license: repo.license ? repo.license.name : null
+            license: repo.license ? repo.license.name : null,
+            defaultBranch: repo.default_branch || 'main'
         };
     } catch (error) {
         console.error('Failed to fetch project details:', error);

@@ -10,7 +10,7 @@
     <link rel="apple-touch-icon" sizes="152x152" href="../assets/logo.png?v=20260202">
     <link rel="apple-touch-icon" sizes="120x120" href="../assets/logo.png?v=20260202">
     <link rel="apple-touch-icon" sizes="76x76" href="../assets/logo.png?v=20260202">
-    <link rel="stylesheet" href="../styles.css?v=37">
+    <link rel="stylesheet" href="../styles.css?v=38">
 </head>
 <body>
     <nav class="navbar">
@@ -117,7 +117,7 @@
         </div>
     </footer>
 
-    <script src="../github-projects.js?v=33"></script>
+    <script src="../github-projects.js?v=38"></script>
     <script src="../script.js?v=33"></script>
     <script src="../last-updated.js?v=2"></script>
     <script>
@@ -155,11 +155,18 @@
                 document.getElementById('project-description').textContent = project.description;
 
                 // Build details grid
-                const tagsHTML = techStack.length > 0
-                    ? techStack.map(tech => `<span class="tag">${tech}</span>`).join('')
-                    : '<span class="tag">General</span>';
+	                const tagsHTML = techStack.length > 0
+	                    ? techStack.map(tech => `<span class="tag">${tech}</span>`).join('')
+	                    : '<span class="tag">General</span>';
+	                const defaultBranch = project.defaultBranch || 'main';
+	                const archiveZipUrl = `${project.url}/archive/refs/heads/${defaultBranch}.zip`;
+	                const architectureTags = [
+	                    project.language || 'Source code',
+	                    project.homepage ? 'Live/demo endpoint' : 'Repository-first project',
+	                    project.license || 'License pending'
+	                ];
 
-	                document.getElementById('project-details').innerHTML = `
+		                document.getElementById('project-details').innerHTML = `
 	                    <div class="glass-card project-detail-card">
 	                        <h3>📋 Overview</h3>
 	                        <p><strong>Description:</strong> ${project.description}</p>
@@ -191,22 +198,45 @@
                         ${project.license ? `<p><strong>License:</strong> ${project.license}</p>` : ''}
                     </div>
 
-	                    <div class="glass-card project-detail-card project-actions-card">
-	                        <h3>🔗 Links</h3>
-	                        <div class="project-actions">
-	                            <a href="${project.url}" class="btn btn-primary" target="_blank" rel="noopener noreferrer">Repo</a>
-	                            <a href="${project.url}#readme" class="btn btn-secondary" target="_blank" rel="noopener noreferrer">Docs</a>
-	                            <a href="${project.url}/releases" class="btn btn-secondary" target="_blank" rel="noopener noreferrer">Releases</a>
+		                    <div class="glass-card project-detail-card project-actions-card">
+		                        <h3>⬇️ Access / Download</h3>
+		                        <div class="project-actions">
+		                            <a href="${project.url}" class="btn btn-primary" target="_blank" rel="noopener noreferrer">Repo</a>
+		                            <a href="${archiveZipUrl}" class="btn btn-secondary" target="_blank" rel="noopener noreferrer">Download ZIP</a>
+		                            <a href="${project.url}#readme" class="btn btn-secondary" target="_blank" rel="noopener noreferrer">Docs</a>
+		                            <a href="${project.url}/releases" class="btn btn-secondary" target="_blank" rel="noopener noreferrer">Releases</a>
 	                            ${project.homepage
 	                                ? `<a href="${project.homepage}" class="btn btn-secondary" target="_blank" rel="noopener noreferrer">Demo</a>`
 	                                : `<button class="btn btn-secondary" type="button" disabled aria-disabled="true">Demo</button>`
 	                            }
 	                        </div>
-	                        <p class="project-note">Full repository: <a href="${project.url}" target="_blank" rel="noopener noreferrer">${project.fullName}</a></p>
-	                    </div>
+		                        <p class="project-note">Full repository: <a href="${project.url}" target="_blank" rel="noopener noreferrer">${project.fullName}</a></p>
+		                    </div>
 
-	                    <div class="glass-card project-detail-card">
-	                        <h3>🖼️ Screenshots</h3>
+		                    <div class="glass-card project-detail-card">
+		                        <h3>🚀 How to Run</h3>
+		                        <pre class="code-block"><code>git clone ${project.url}.git
+cd ${project.name}
+# Follow the README for project-specific setup.
+# Start with the default branch: ${defaultBranch}</code></pre>
+		                        <p class="project-note">For smaller utilities, downloading the ZIP is enough to inspect the source. Apps may require dependencies listed in the repo README.</p>
+		                    </div>
+
+		                    <div class="glass-card project-detail-card">
+		                        <h3>🏗️ Architecture</h3>
+		                        <p>This archive page summarizes the repository from live GitHub metadata until a fully custom project page is written.</p>
+		                        <div class="project-tags">
+		                            ${architectureTags.map(tag => `<span class="tag">${tag}</span>`).join('')}
+		                        </div>
+		                        <pre class="code-block"><code>Visitor
+  → Atrak project hub
+  → GitHub repo metadata cache
+  → README / Releases / Download ZIP
+  → Future custom project detail page</code></pre>
+		                    </div>
+
+		                    <div class="glass-card project-detail-card">
+		                        <h3>🖼️ Screenshots</h3>
 	                        <div class="media-placeholder" role="img" aria-label="Screenshots placeholder">
 	                            <div class="media-icon">IMG</div>
 	                            <div class="media-title">Screenshots coming soon</div>
@@ -219,10 +249,26 @@
 	                        <div class="media-placeholder" role="img" aria-label="Demo video placeholder">
 	                            <div class="media-icon">VID</div>
 	                            <div class="media-title">Demo video coming soon</div>
-	                            <div class="media-meta">Add a clip or a link to a live demo.</div>
-	                        </div>
-	                    </div>
-	                `;
+		                            <div class="media-meta">Add a clip or a link to a live demo.</div>
+		                        </div>
+		                    </div>
+
+		                    <div class="glass-card project-detail-card">
+		                        <h3>🗺️ Roadmap</h3>
+		                        <ul class="release-list">
+		                            <li><strong>Short term:</strong> keep README, release links, and download paths accurate.</li>
+		                            <li><strong>Next:</strong> add screenshots/video once the project has stable visuals.</li>
+		                            <li><strong>Later:</strong> promote this repo to a custom Atrak project page if it becomes a primary product.</li>
+		                        </ul>
+		                    </div>
+
+		                    <div class="glass-card project-detail-card">
+		                        <h3>🙏 Credits</h3>
+		                        <p><strong>Project Manager:</strong> <a class="meta-person-link" href="../team/charlie-han.html">Charlie Han</a></p>
+		                        <p><strong>Source:</strong> GitHub repository metadata from <a href="${project.url}" target="_blank" rel="noopener noreferrer">${project.fullName}</a>.</p>
+		                        <p><strong>Atrak role:</strong> project indexing, documentation, and public access/download surface.</p>
+		                    </div>
+		                `;
 
             } catch (error) {
                 console.error('Failed to load project details:', error);
