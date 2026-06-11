@@ -1,6 +1,6 @@
 [
   {
-    "id": "13192707913",
+    "id": "13192780844",
     "type": "PushEvent",
     "actor": {
       "id": 117957000,
@@ -17,12 +17,22 @@
     },
     "payload": {
       "repository_id": 1140388078,
-      "push_id": 35480986203,
+      "push_id": 35481059157,
       "ref": "refs/heads/main",
-      "head": "0a5e4f6e93212f994bda01208bc5ac10653a0bd2",
-      "before": "892951ae0cd396a59f1fc69579cc215889cd3101",
-      "distinct_size": 21,
+      "head": "1abb2f7a64a6307d64c5fe3c8a5dc39d409a38c0",
+      "before": "02a3c5220815674d5f0634e56bc305bc6c10abf1",
+      "distinct_size": 23,
       "commits": [
+        {
+          "sha": "1abb2f7a64a6307d64c5fe3c8a5dc39d409a38c0",
+          "message": "fix: complete project detail sections",
+          "url": "https://github.com/charlie2233/atrak-website/commit/1abb2f7a64a6307d64c5fe3c8a5dc39d409a38c0"
+        },
+        {
+          "sha": "02a3c5220815674d5f0634e56bc305bc6c10abf1",
+          "message": "chore: update GitHub data [skip ci]",
+          "url": "https://github.com/charlie2233/atrak-website/commit/02a3c5220815674d5f0634e56bc305bc6c10abf1"
+        },
         {
           "sha": "0a5e4f6e93212f994bda01208bc5ac10653a0bd2",
           "message": "feat: improve project details archive and link icons",
@@ -112,18 +122,34 @@
           "sha": "d92b12e11965bbb2a2428fa3a2713366e88274f3",
           "message": "fix: repair github data workflow yaml",
           "url": "https://github.com/charlie2233/atrak-website/commit/d92b12e11965bbb2a2428fa3a2713366e88274f3"
-        },
-        {
-          "sha": "8f5907b2cd06aa16284be6cc86e5ef3a7d98f594",
-          "message": "fix: simplify github data workflow token",
-          "url": "https://github.com/charlie2233/atrak-website/commit/8f5907b2cd06aa16284be6cc86e5ef3a7d98f594"
-        },
-        {
-          "sha": "580d620906115867eaeb0de5771cdeeb15c7d0c5",
-          "message": "fix: keep project cache fresh after site pushes",
-          "url": "https://github.com/charlie2233/atrak-website/commit/580d620906115867eaeb0de5771cdeeb15c7d0c5"
         }
       ]
+    },
+    "public": true,
+    "created_at": "2026-06-11T21:38:44Z"
+  },
+  {
+    "id": "13192707913",
+    "type": "PushEvent",
+    "actor": {
+      "id": 117957000,
+      "login": "charlie2233",
+      "display_login": "charlie2233",
+      "gravatar_id": "",
+      "url": "https://api.github.com/users/charlie2233",
+      "avatar_url": "https://avatars.githubusercontent.com/u/117957000?"
+    },
+    "repo": {
+      "id": 1140388078,
+      "name": "charlie2233/atrak-website",
+      "url": "https://api.github.com/repos/charlie2233/atrak-website"
+    },
+    "payload": {
+      "repository_id": 1140388078,
+      "push_id": 35480986203,
+      "ref": "refs/heads/main",
+      "head": "0a5e4f6e93212f994bda01208bc5ac10653a0bd2",
+      "before": "892951ae0cd396a59f1fc69579cc215889cd3101"
     },
     "public": true,
     "created_at": "2026-06-11T21:36:48Z"
@@ -509,31 +535,5 @@
     },
     "public": true,
     "created_at": "2026-06-06T05:24:30Z"
-  },
-  {
-    "id": "12803820907",
-    "type": "PushEvent",
-    "actor": {
-      "id": 117957000,
-      "login": "charlie2233",
-      "display_login": "charlie2233",
-      "gravatar_id": "",
-      "url": "https://api.github.com/users/charlie2233",
-      "avatar_url": "https://avatars.githubusercontent.com/u/117957000?"
-    },
-    "repo": {
-      "id": 1231252582,
-      "name": "charlie2233/GBC_HuskiesWeb",
-      "url": "https://api.github.com/repos/charlie2233/GBC_HuskiesWeb"
-    },
-    "payload": {
-      "repository_id": 1231252582,
-      "push_id": 35093432576,
-      "ref": "refs/heads/main",
-      "head": "93160aaf7b871aedaa7f7c5fbe263cc152764ee2",
-      "before": "2fb21933f880455e86048ad716a80204a6ac99c9"
-    },
-    "public": true,
-    "created_at": "2026-06-04T05:27:35Z"
   }
 ]
