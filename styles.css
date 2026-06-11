@@ -9135,6 +9135,22 @@ a.leader-card:hover {
     outline-offset: 2px;
 }
 
+/* Link icon treatment for regular content links. Buttons, nav, cards, logos, and icon-only social links stay clean. */
+:where(main, footer) a[href]:not(.btn):not(.logo):not(.nav-cta):not(.project-card):not(.leader-card):not(.team-roster-item):not(.about-purpose-link):not(.stat):not(.link-btn):not(.leader-social-link):not(.profile-social-link):not(.project-person-link):not([aria-label]) {
+    display: inline-flex;
+    align-items: center;
+    gap: 0.35em;
+}
+
+:where(main, footer) a[href]:not(.btn):not(.logo):not(.nav-cta):not(.project-card):not(.leader-card):not(.team-roster-item):not(.about-purpose-link):not(.stat):not(.link-btn):not(.leader-social-link):not(.profile-social-link):not(.project-person-link):not([aria-label])::before {
+    content: "🔗";
+    display: inline-block;
+    font-size: 0.85em;
+    line-height: 1;
+    opacity: 0.72;
+    transform: translateY(-0.02em);
+}
+
 /* Enhanced focus indicators */
 *:focus-visible {
     outline: 2px solid var(--accent-primary);
