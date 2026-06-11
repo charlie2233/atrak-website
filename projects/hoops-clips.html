@@ -24,7 +24,7 @@
     
     <link rel="icon" type="image/png" href="../assets/logo.png?v=20260202">
     <link rel="apple-touch-icon" sizes="180x180" href="../assets/logo.png?v=20260202">
-    <link rel="stylesheet" href="../styles.css?v=38">
+    <link rel="stylesheet" href="../styles.css?v=39">
     
     <!-- Structured Data -->
     <script type="application/ld+json">
@@ -39,7 +39,7 @@
       "operatingSystem": "Linux, macOS, Windows",
       "softwareVersion": "1.0",
       "keywords": "Hoops Clips, basketball highlights, AI video analysis, student tech team, Atrak, computer vision, sports automation",
-      "downloadUrl": "https://atrak.dev/downloads/hoops-clips/hoops-clips-mac-installer-v1.0.zip",
+      "downloadUrl": "https://github.com/charlie2233/Basketball_action_recoginition_sever/releases/download/hoops-clips-mac-v1.0/hoops-clips-mac-installer-v1.0.zip",
       "offers": {
         "@type": "Offer",
         "price": "0",
@@ -156,7 +156,7 @@
                     <a href="../apps/hoopsclips/" class="link-btn" style="background: linear-gradient(135deg, #7C5CFF 0%, #3b82f6 100%); color: white; border: none;">
                         <span class="link-icon">🏀</span> Try Web App
                     </a>
-                    <a href="../downloads/hoops-clips/hoops-clips-mac-installer-v1.0.zip" class="link-btn" download>
+                    <a href="https://github.com/charlie2233/Basketball_action_recoginition_sever/releases/download/hoops-clips-mac-v1.0/hoops-clips-mac-installer-v1.0.zip" class="link-btn" target="_blank" rel="noopener noreferrer">
                         <span class="link-icon">⬇</span> Mac Installer v1.0
                     </a>
                     <a href="../index.html?tab=apply#contact" class="link-btn">
@@ -289,14 +289,14 @@
                     <h2 class="project-section-title">🎬 Demo</h2>
                     <div class="demo-grid">
                         <div class="glass-card">
-                            <h3>Video Walkthrough</h3>
-                            <div class="video-placeholder" data-video-url="">
+                            <h3>Pipeline Preview</h3>
+                            <div class="video-placeholder media-preview-card">
                                 <div class="placeholder-content">
-                                    <span class="placeholder-icon">▶️</span>
-                                    <p>Demo video coming soon</p>
-                                    <span class="placeholder-note">Full pipeline demonstration</span>
+                                    <span class="placeholder-icon">🏀</span>
+                                    <p>Upload → detect → tag → export</p>
+                                    <span class="placeholder-note">The screenshots show the current highlight-analysis workflow from frame input to output clip.</span>
                                 </div>
-                                <div class="video-play-button" aria-label="Play video"></div>
+                                <img src="../assets/Demo/DemoHoopsClips/01.png" alt="Hoops Clips pipeline preview" loading="lazy" decoding="async">
                             </div>
                         </div>
                         <div class="glass-card">
@@ -392,7 +392,7 @@ curl -X POST http://localhost:8787/api/ai/analyze \
                                 </div>
                             </div>
                             <div class="backend-actions" style="margin-top: 1rem;">
-                                <a class="btn btn-primary btn-sm" href="../downloads/hoops-clips/hoops-clips-mac-installer-v1.0.zip" download>Download Mac Installer v1.0</a>
+                                <a class="btn btn-primary btn-sm" href="https://github.com/charlie2233/Basketball_action_recoginition_sever/releases/download/hoops-clips-mac-v1.0/hoops-clips-mac-installer-v1.0.zip" target="_blank" rel="noopener noreferrer">Download Mac Installer v1.0</a>
                                 <a class="btn btn-secondary btn-sm" href="../index.html?tab=apply#contact">Request Access / Support</a>
                             </div>
                             <p class="note">Packaging note: the current installer bundle still shows the internal label “Rork Companion” during install. The Hoops Clips branding on the site and project page remains the product name.</p>

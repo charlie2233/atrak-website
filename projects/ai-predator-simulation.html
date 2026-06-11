@@ -24,7 +24,7 @@
     
     <link rel="icon" type="image/png" href="../assets/logo.png?v=20260202">
     <link rel="apple-touch-icon" sizes="180x180" href="../assets/logo.png?v=20260202">
-    <link rel="stylesheet" href="../styles.css?v=38">
+    <link rel="stylesheet" href="../styles.css?v=39">
     
     <!-- Structured Data -->
     <script type="application/ld+json">
@@ -186,36 +186,34 @@
                     <div class="demo-coming-soon-banner glass-card" style="margin-bottom: 24px; padding: 20px 24px; display: flex; align-items: center; gap: 16px; flex-wrap: wrap;">
                         <span style="font-size: 28px;">🌐</span>
                         <div>
-                            <strong style="color: var(--text-primary);">Web demo coming soon</strong>
-                            <p style="margin: 4px 0 0; font-size: 14px; color: var(--text-tertiary);">Run the AI Predator simulation in your browser — no install required. We're building it.</p>
+                            <strong style="color: var(--text-primary);">Simulation preview available</strong>
+                            <p style="margin: 4px 0 0; font-size: 14px; color: var(--text-tertiary);">The visual preview below summarizes predator paths, prey positions, and live behavior metrics.</p>
                         </div>
                     </div>
                     <div class="demo-grid">
                         <div class="glass-card">
-                            <h3>Video Walkthrough</h3>
-                            <div class="video-placeholder" data-video-url="">
+                            <h3>Simulation Preview</h3>
+                            <div class="video-placeholder media-preview-card">
                                 <div class="placeholder-content">
-                                    <span class="placeholder-icon">▶️</span>
-                                    <p>Demo video coming soon</p>
-                                    <span class="placeholder-note">Emergent hunting behaviors in action</span>
+                                    <span class="placeholder-icon">🧠</span>
+                                    <p>Emergent hunting behavior map</p>
+                                    <span class="placeholder-note">Predator routes, prey clusters, and generation metrics in one view.</span>
                                 </div>
-                                <div class="video-play-button" aria-label="Play video"></div>
+                                <img src="../assets/Demo/Demo_Img_AIPredator/01-simulation-preview.svg" alt="AI Predator simulation preview" loading="lazy" decoding="async">
                             </div>
                         </div>
                         <div class="glass-card">
-                            <h3>Screenshots</h3>
-                            <div class="screenshots-grid">
-                                <div class="screenshot-placeholder">
-                                    <span>Ecosystem</span>
-                                </div>
-                                <div class="screenshot-placeholder">
-                                    <span>Hunt</span>
-                                </div>
-                                <div class="screenshot-placeholder">
-                                    <span>Stats Panel</span>
-                                </div>
-                                <div class="screenshot-placeholder">
-                                    <span>Evolution</span>
+                            <h3>Preview Panels</h3>
+                            <div class="media-carousel" data-carousel>
+                                <button class="carousel-btn prev" type="button" data-carousel-prev aria-label="Previous preview">‹</button>
+                                <button class="carousel-btn next" type="button" data-carousel-next aria-label="Next preview">›</button>
+                                <div class="carousel-track" data-carousel-track aria-label="AI Predator previews">
+                                    <figure class="carousel-slide">
+                                        <a href="../assets/Demo/Demo_Img_AIPredator/01-simulation-preview.svg" target="_blank" rel="noopener noreferrer">
+                                            <div class="carousel-media"><img src="../assets/Demo/Demo_Img_AIPredator/01-simulation-preview.svg" alt="AI Predator ecosystem preview" loading="lazy" decoding="async"></div>
+                                            <figcaption class="carousel-caption">Ecosystem + metrics</figcaption>
+                                        </a>
+                                    </figure>
                                 </div>
                             </div>
                         </div>

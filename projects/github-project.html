@@ -10,7 +10,7 @@
     <link rel="apple-touch-icon" sizes="152x152" href="../assets/logo.png?v=20260202">
     <link rel="apple-touch-icon" sizes="120x120" href="../assets/logo.png?v=20260202">
     <link rel="apple-touch-icon" sizes="76x76" href="../assets/logo.png?v=20260202">
-    <link rel="stylesheet" href="../styles.css?v=38">
+    <link rel="stylesheet" href="../styles.css?v=39">
 </head>
 <body>
     <nav class="navbar">
@@ -159,7 +159,13 @@
 	                    ? techStack.map(tech => `<span class="tag">${tech}</span>`).join('')
 	                    : '<span class="tag">General</span>';
 	                const defaultBranch = project.defaultBranch || 'main';
-	                const archiveZipUrl = `${project.url}/archive/refs/heads/${defaultBranch}.zip`;
+                    const officialReleaseAssets = {
+                        'charlie2233/atrak-website': 'https://github.com/charlie2233/atrak-website/releases/download/v2026.06.11/atrak-website-source-2026-06-11.zip',
+                        'charlie2233/basketball_action_recoginition_sever': 'https://github.com/charlie2233/Basketball_action_recoginition_sever/releases/download/hoops-clips-mac-v1.0/hoops-clips-mac-installer-v1.0.zip',
+                        'charlie2233/coursebinder-ai-ready-google-classroom-exporter': 'https://github.com/charlie2233/coursebinder-ai-ready-google-classroom-exporter/releases/download/v0.1.0/classroom-ai-exporter-extension-0.1.0-chrome.zip',
+                        'charlie2233/formative-ai-exporter': 'https://github.com/charlie2233/formative-ai-exporter/releases/download/v0.1.0/formative-ai-exporter-extension-0.1.0-chrome.zip'
+                    };
+	                const archiveZipUrl = officialReleaseAssets[String(project.fullName || '').toLowerCase()] || `${project.url}/archive/refs/heads/${defaultBranch}.zip`;
 	                const architectureTags = [
 	                    project.language || 'Source code',
 	                    project.homepage ? 'Live/demo endpoint' : 'Repository-first project',
@@ -235,23 +241,23 @@ cd ${project.name}
   → Future custom project detail page</code></pre>
 		                    </div>
 
-		                    <div class="glass-card project-detail-card">
-		                        <h3>🖼️ Screenshots</h3>
-	                        <div class="media-placeholder" role="img" aria-label="Screenshots placeholder">
-	                            <div class="media-icon">IMG</div>
-	                            <div class="media-title">Screenshots coming soon</div>
-	                            <div class="media-meta">Add images later to show key features.</div>
-	                        </div>
-	                    </div>
-
-	                    <div class="glass-card project-detail-card">
-	                        <h3>🎬 Demo Video</h3>
-	                        <div class="media-placeholder" role="img" aria-label="Demo video placeholder">
-	                            <div class="media-icon">VID</div>
-	                            <div class="media-title">Demo video coming soon</div>
-		                            <div class="media-meta">Add a clip or a link to a live demo.</div>
+			                    <div class="glass-card project-detail-card">
+			                        <h3>🖼️ Screenshots</h3>
+		                        <div class="media-placeholder" role="img" aria-label="Screenshots placeholder">
+		                            <div class="media-icon">IMG</div>
+		                            <div class="media-title">GitHub metadata preview</div>
+		                            <div class="media-meta">Use README, releases, topics, and repository activity as the first project snapshot.</div>
 		                        </div>
 		                    </div>
+
+		                    <div class="glass-card project-detail-card">
+		                        <h3>🎬 Demo Video</h3>
+		                        <div class="media-placeholder" role="img" aria-label="Demo video placeholder">
+		                            <div class="media-icon">VID</div>
+		                            <div class="media-title">Demo source links</div>
+			                            <div class="media-meta">Open the repository homepage or release downloads when a live demo is attached.</div>
+			                        </div>
+			                    </div>
 
 		                    <div class="glass-card project-detail-card">
 		                        <h3>🗺️ Roadmap</h3>

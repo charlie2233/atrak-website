@@ -1,0 +1,142 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="robots" content="noindex,follow">
+    <meta name="description" content="Internal visual QA map for Atrak pages, project cards, buttons, and responsive checks.">
+    <title>Atrak — Visual QA Map</title>
+    <link rel="stylesheet" href="styles.css?v=39">
+</head>
+<body>
+    <nav class="navbar">
+        <div class="nav-container">
+            <a href="index.html" class="logo" aria-label="Atrak home">
+                <img src="assets/logo.png?v=20260202" alt="Atrak logo" class="logo-image">
+                <span class="logo-text">Atrak</span>
+            </a>
+            <ul class="nav-links">
+                <li><a href="index.html#projects">Projects</a></li>
+                <li><a href="releases.html">Releases</a></li>
+                <li><a href="blog.html">Blog</a></li>
+                <li><a href="index.html#contact" class="nav-cta">Forms</a></li>
+            </ul>
+            <button class="mobile-menu-btn" aria-label="Toggle menu">
+                <span></span>
+                <span></span>
+                <span></span>
+            </button>
+        </div>
+    </nav>
+
+    <main class="qa-page">
+        <div class="container">
+            <section class="qa-hero reveal">
+                <h1>Visual QA Map</h1>
+                <p>
+                    Hidden checklist for testing Atrak on desktop and phone: every key page, project card,
+                    button group, release asset, media preview, form, and GitHub-powered feed in one place.
+                </p>
+                <div class="qa-chip-row" aria-label="QA focus areas">
+                    <span class="qa-chip">🖥 Desktop layout</span>
+                    <span class="qa-chip">📱 Phone layout</span>
+                    <span class="qa-chip">↔ Project slider</span>
+                    <span class="qa-chip">⬇ Release downloads</span>
+                    <span class="qa-chip">🖼 Media previews</span>
+                    <span class="qa-chip">🧪 Forms and fallbacks</span>
+                </div>
+            </section>
+
+            <section class="qa-grid">
+                <article class="glass-card qa-card reveal">
+                    <h2>Core Pages</h2>
+                    <ul class="qa-link-list">
+                        <li><a href="index.html"><span>Home / project slider</span><span>main</span></a></li>
+                        <li><a href="index.html#updates"><span>Weekly news feed</span><span>section</span></a></li>
+                        <li><a href="releases.html"><span>Latest releases feed</span><span>GitHub</span></a></li>
+                        <li><a href="blog.html"><span>Blog archive</span><span>posts</span></a></li>
+                        <li><a href="demos.html"><span>Demo hub</span><span>media</span></a></li>
+                        <li><a href="share.html"><span>Share page</span><span>CTA</span></a></li>
+                        <li><a href="press-kit.html"><span>Press kit</span><span>brand</span></a></li>
+                        <li><a href="purpose.html"><span>Purpose page</span><span>mission</span></a></li>
+                        <li><a href="handbook.html"><span>Team handbook</span><span>ops</span></a></li>
+                    </ul>
+                </article>
+
+                <article class="glass-card qa-card reveal">
+                    <h2>Forms & Team</h2>
+                    <ul class="qa-link-list">
+                        <li><a href="index.html#contact"><span>Integrated contact hub</span><span>tabs</span></a></li>
+                        <li><a href="join.html"><span>Join page fallback</span><span>legacy</span></a></li>
+                        <li><a href="security.html"><span>Security report form</span><span>private</span></a></li>
+                        <li><a href="team/charlie-han.html"><span>Charlie Han profile</span><span>lead</span></a></li>
+                        <li><a href="team/yannon-chang.html"><span>Yannon Chang profile</span><span>backend</span></a></li>
+                        <li><a href="team/caleb-zeng.html"><span>Caleb Zeng profile</span><span>team</span></a></li>
+                        <li><a href="team-archive.html"><span>Archived members</span><span>history</span></a></li>
+                        <li><a href="team/profile.html?name=Charlie%20Han"><span>Generic profile route</span><span>params</span></a></li>
+                    </ul>
+                </article>
+
+                <article class="glass-card qa-card reveal">
+                    <h2>Project Detail Pages</h2>
+                    <ul class="qa-link-list">
+                        <li><a href="projects/lifepage.html"><span>LifePage</span><span>page 1</span></a></li>
+                        <li><a href="projects/guidepup.html"><span>GuidePup</span><span>mobile preview</span></a></li>
+                        <li><a href="projects/hoops-clips.html"><span>Hoops Clips</span><span>download asset</span></a></li>
+                        <li><a href="projects/classroom-ai-exporter.html"><span>CourseBinder Classroom AI Exporter</span><span>release ZIP</span></a></li>
+                        <li><a href="projects/formative-ai-exporter.html"><span>Practice Snapshot for Formative</span><span>release ZIP</span></a></li>
+                        <li><a href="projects/atrak-agent.html"><span>Atrak Agent</span><span>desktop app</span></a></li>
+                        <li><a href="projects/ten-seconds-vip-manager.html"><span>Ten Seconds VIP Manager</span><span>private ops</span></a></li>
+                        <li><a href="projects/destiny-basketball.html"><span>Destiny Basketball</span><span>live site</span></a></li>
+                        <li><a href="projects/ai-predator-simulation.html"><span>AI Predator Simulation</span><span>preview</span></a></li>
+                        <li><a href="projects/compide.html"><span>CompIDE</span><span>video demos</span></a></li>
+                        <li><a href="projects/github-project.html?repo=charlie2233/atrak-website"><span>Dynamic GitHub project template</span><span>repo</span></a></li>
+                    </ul>
+                </article>
+
+                <article class="glass-card qa-card reveal">
+                    <h2>Legal & Community</h2>
+                    <ul class="qa-link-list">
+                        <li><a href="contributing.html"><span>Contributing guide</span><span>community</span></a></li>
+                        <li><a href="code-of-conduct.html"><span>Code of Conduct</span><span>community</span></a></li>
+                        <li><a href="privacy.html"><span>Privacy policy</span><span>forms</span></a></li>
+                        <li><a href="terms.html"><span>Terms</span><span>site</span></a></li>
+                        <li><a href="license.html"><span>License</span><span>site</span></a></li>
+                        <li><a href="404.html"><span>404 page</span><span>fallback</span></a></li>
+                    </ul>
+                </article>
+
+                <article class="glass-card qa-card reveal">
+                    <h2>Button Groups To Click</h2>
+                    <ul class="qa-button-list">
+                        <li><span><strong>Project cards</strong><em>Learn More, Repo, Demo, Download, Request Access</em></span></li>
+                        <li><span><strong>Project slider</strong><em>left/right arrows, swipe, keyboard tab order</em></span></li>
+                        <li><span><strong>Weekly news</strong><em>previous/next week, permalink, share link</em></span></li>
+                        <li><span><strong>Releases feed</strong><em>month filter, project filter, asset downloads</em></span></li>
+                        <li><span><strong>Forms</strong><em>suggestion, apply, contact, security fallback states</em></span></li>
+                        <li><span><strong>Mobile nav</strong><em>hamburger open/close, section active state</em></span></li>
+                    </ul>
+                </article>
+
+                <article class="glass-card qa-card reveal">
+                    <h2>Responsive Checks</h2>
+                    <div class="qa-check-row">
+                        <span class="qa-check">No horizontal body overflow</span>
+                        <span class="qa-check">44px+ tap targets</span>
+                        <span class="qa-check">No text/button overlap</span>
+                        <span class="qa-check">Carousel buttons reachable</span>
+                        <span class="qa-check">Media previews not clipped</span>
+                        <span class="qa-check">Forms readable at 360px width</span>
+                    </div>
+                    <p class="qa-note">
+                        This page is intentionally hidden from navigation and marked noindex. Use it as the
+                        standing checklist before pushing visible UI changes.
+                    </p>
+                </article>
+            </section>
+        </div>
+    </main>
+
+    <script src="script.js?v=37"></script>
+</body>
+</html>

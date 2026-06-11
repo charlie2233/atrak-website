@@ -206,26 +206,6 @@ function normalizeRelease(repoName, release) {
 function projectDrops(repoMap) {
   const dropSpecs = [
     {
-      repo: "formative-ai-exporter",
-      tag: "v0.1.0-site-download",
-      name: "Practice Snapshot for Formative — Chrome extension ZIP",
-      project: "projects/formative-ai-exporter.html",
-      asset: "downloads/formative-ai-exporter/formative-ai-exporter-extension-0.1.0-chrome.zip",
-    },
-    {
-      repo: "coursebinder-ai-ready-google-classroom-exporter",
-      tag: "v0.1.0-site-download",
-      name: "CourseBinder Classroom AI Exporter — Chrome extension ZIP",
-      project: "projects/classroom-ai-exporter.html",
-      asset: "downloads/classroom-ai-exporter/classroom-ai-exporter-extension-0.1.0-chrome.zip",
-    },
-    {
-      repo: "atrak-website",
-      tag: "2026.04-project-hub",
-      name: "Atrak project hub refresh — cards, blog, release cache",
-      project: "index.html#projects",
-    },
-    {
       repo: "lifepage",
       tag: "2026.04-lifepage-sync",
       name: "LifePage launch/readiness updates",
