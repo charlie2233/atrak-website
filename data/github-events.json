@@ -21,8 +21,13 @@
       "ref": "refs/heads/main",
       "head": "e411527574c0fb17e5d4f245557ddbdf436c2293",
       "before": "7fa5326fb75621d17a73b5219984e040676d3c3c",
-      "distinct_size": 16,
+      "distinct_size": 17,
       "commits": [
+        {
+          "sha": "d9d561b2d057bf51b79bf053354f1b815c1047fc",
+          "message": "chore: update GitHub data [skip ci]",
+          "url": "https://github.com/charlie2233/atrak-website/commit/d9d561b2d057bf51b79bf053354f1b815c1047fc"
+        },
         {
           "sha": "b9ad971fe2562b70197754bb63cbc5bb62510985",
           "message": "chore: update GitHub data [skip ci]",
@@ -364,7 +369,7 @@
       "ref": "refs/heads/main",
       "head": "b3119529e34fea5635c349e005e7f09d32344bda",
       "before": "538dedbeba6b001aa9bc7bd52b1c99bba79ffa8a",
-      "distinct_size": 9,
+      "distinct_size": 3,
       "commits": [
         {
           "sha": "b3119529e34fea5635c349e005e7f09d32344bda",
@@ -380,36 +385,6 @@
           "sha": "c2c984cc47ab053cf1ea3a80976476702270350a",
           "message": "fix: route sponsor cta to gofundme",
           "url": "https://github.com/charlie2233/GBC_HuskiesWeb/commit/c2c984cc47ab053cf1ea3a80976476702270350a"
-        },
-        {
-          "sha": "93160aaf7b871aedaa7f7c5fbe263cc152764ee2",
-          "message": "docs: update homepage hero deployment status",
-          "url": "https://github.com/charlie2233/GBC_HuskiesWeb/commit/93160aaf7b871aedaa7f7c5fbe263cc152764ee2"
-        },
-        {
-          "sha": "2fb21933f880455e86048ad716a80204a6ac99c9",
-          "message": "fix: tighten homepage hero layout",
-          "url": "https://github.com/charlie2233/GBC_HuskiesWeb/commit/2fb21933f880455e86048ad716a80204a6ac99c9"
-        },
-        {
-          "sha": "ae940f9ad257b4956420f48b37ce101959276f3d",
-          "message": "docs: update homepage contact deployment status",
-          "url": "https://github.com/charlie2233/GBC_HuskiesWeb/commit/ae940f9ad257b4956420f48b37ce101959276f3d"
-        },
-        {
-          "sha": "9efad6f99a4b876fc7942d455f9cc7bdef9f44c1",
-          "message": "feat: restore homepage contact form",
-          "url": "https://github.com/charlie2233/GBC_HuskiesWeb/commit/9efad6f99a4b876fc7942d455f9cc7bdef9f44c1"
-        },
-        {
-          "sha": "636feca1d484a8816c951763c1cba213d939d2f8",
-          "message": "docs: update coach content deployment status",
-          "url": "https://github.com/charlie2233/GBC_HuskiesWeb/commit/636feca1d484a8816c951763c1cba213d939d2f8"
-        },
-        {
-          "sha": "8200cf0caee87902bd37065d20b3d6b4a6ea4bf7",
-          "message": "feat: apply coach content updates",
-          "url": "https://github.com/charlie2233/GBC_HuskiesWeb/commit/8200cf0caee87902bd37065d20b3d6b4a6ea4bf7"
         }
       ]
     },
