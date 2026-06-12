@@ -21,8 +21,13 @@
       "ref": "refs/heads/main",
       "head": "5d4cd9aa85b32e00b1f4fc6bb1625e710318d431",
       "before": "a45ecbfe9137792f3efd7b5277e75e6c83fc85e4",
-      "distinct_size": 27,
+      "distinct_size": 28,
       "commits": [
+        {
+          "sha": "72784d51877251faeb369e8553b64b6ca8b399dd",
+          "message": "chore: update GitHub data [skip ci]",
+          "url": "https://github.com/charlie2233/atrak-website/commit/72784d51877251faeb369e8553b64b6ca8b399dd"
+        },
         {
           "sha": "5d4cd9aa85b32e00b1f4fc6bb1625e710318d431",
           "message": "chore: refresh github releases and preserve weekly stats",
@@ -117,11 +122,6 @@
           "sha": "b82851dfb38af7547e1fe214f7486677ac2c96e0",
           "message": "feat: feature GBC and Safe Traveling projects",
           "url": "https://github.com/charlie2233/atrak-website/commit/b82851dfb38af7547e1fe214f7486677ac2c96e0"
-        },
-        {
-          "sha": "5f69510e89408aeb92cedea0b3fdd585ca5823a9",
-          "message": "chore: update GitHub data [skip ci]",
-          "url": "https://github.com/charlie2233/atrak-website/commit/5f69510e89408aeb92cedea0b3fdd585ca5823a9"
         }
       ]
     },
