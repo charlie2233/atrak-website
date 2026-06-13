@@ -21,7 +21,7 @@
       "ref": "refs/heads/main",
       "head": "e20e62039b5008abe39f9a537ce86fbb319d716c",
       "before": "36a094fdcf42425127ac74583172cc0e95a0d5c1",
-      "distinct_size": 6,
+      "distinct_size": 4,
       "commits": [
         {
           "sha": "e20e62039b5008abe39f9a537ce86fbb319d716c",
@@ -42,16 +42,6 @@
           "sha": "b3119529e34fea5635c349e005e7f09d32344bda",
           "message": "feat: add homepage fundraiser and parent paths",
           "url": "https://github.com/charlie2233/GBC_HuskiesWeb/commit/b3119529e34fea5635c349e005e7f09d32344bda"
-        },
-        {
-          "sha": "538dedbeba6b001aa9bc7bd52b1c99bba79ffa8a",
-          "message": "docs: update sponsor cta deployment status",
-          "url": "https://github.com/charlie2233/GBC_HuskiesWeb/commit/538dedbeba6b001aa9bc7bd52b1c99bba79ffa8a"
-        },
-        {
-          "sha": "c2c984cc47ab053cf1ea3a80976476702270350a",
-          "message": "fix: route sponsor cta to gofundme",
-          "url": "https://github.com/charlie2233/GBC_HuskiesWeb/commit/c2c984cc47ab053cf1ea3a80976476702270350a"
         }
       ]
     },
@@ -132,8 +122,13 @@
       "ref": "refs/heads/main",
       "head": "5d4cd9aa85b32e00b1f4fc6bb1625e710318d431",
       "before": "a45ecbfe9137792f3efd7b5277e75e6c83fc85e4",
-      "distinct_size": 30,
+      "distinct_size": 31,
       "commits": [
+        {
+          "sha": "0ec2d070d471d05a5632825e6fd7ade15fc8ab1b",
+          "message": "chore: update GitHub data [skip ci]",
+          "url": "https://github.com/charlie2233/atrak-website/commit/0ec2d070d471d05a5632825e6fd7ade15fc8ab1b"
+        },
         {
           "sha": "c93da35ecb59f319b34fb5bf24b16e6c88b7851a",
           "message": "chore: update GitHub data [skip ci]",
@@ -228,11 +223,6 @@
           "sha": "ff32a824700f79644dc455a0415f4c18d287c7b7",
           "message": "chore: update GitHub data [skip ci]",
           "url": "https://github.com/charlie2233/atrak-website/commit/ff32a824700f79644dc455a0415f4c18d287c7b7"
-        },
-        {
-          "sha": "3f05fa2c14ad911fedaf4b82a1fc5908eb06467a",
-          "message": "fix: restore weekly GitHub stats fallback",
-          "url": "https://github.com/charlie2233/atrak-website/commit/3f05fa2c14ad911fedaf4b82a1fc5908eb06467a"
         }
       ]
     },
