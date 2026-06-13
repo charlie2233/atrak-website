@@ -1,5 +1,116 @@
 [
   {
+    "id": "13250284217",
+    "type": "PushEvent",
+    "actor": {
+      "id": 117957000,
+      "login": "charlie2233",
+      "display_login": "charlie2233",
+      "gravatar_id": "",
+      "url": "https://api.github.com/users/charlie2233",
+      "avatar_url": "https://avatars.githubusercontent.com/u/117957000?"
+    },
+    "repo": {
+      "id": 1231252582,
+      "name": "charlie2233/GBC_HuskiesWeb",
+      "url": "https://api.github.com/repos/charlie2233/GBC_HuskiesWeb"
+    },
+    "payload": {
+      "repository_id": 1231252582,
+      "push_id": 35538115230,
+      "ref": "refs/heads/main",
+      "head": "e20e62039b5008abe39f9a537ce86fbb319d716c",
+      "before": "36a094fdcf42425127ac74583172cc0e95a0d5c1",
+      "distinct_size": 6,
+      "commits": [
+        {
+          "sha": "e20e62039b5008abe39f9a537ce86fbb319d716c",
+          "message": "docs: update five-improvement deployment status",
+          "url": "https://github.com/charlie2233/GBC_HuskiesWeb/commit/e20e62039b5008abe39f9a537ce86fbb319d716c"
+        },
+        {
+          "sha": "36a094fdcf42425127ac74583172cc0e95a0d5c1",
+          "message": "feat: improve mobile fundraising and tournament trust",
+          "url": "https://github.com/charlie2233/GBC_HuskiesWeb/commit/36a094fdcf42425127ac74583172cc0e95a0d5c1"
+        },
+        {
+          "sha": "66e803d5d5c9d1aa390a28a1e9d5ae0337016cfa",
+          "message": "docs: update fundraiser deployment status",
+          "url": "https://github.com/charlie2233/GBC_HuskiesWeb/commit/66e803d5d5c9d1aa390a28a1e9d5ae0337016cfa"
+        },
+        {
+          "sha": "b3119529e34fea5635c349e005e7f09d32344bda",
+          "message": "feat: add homepage fundraiser and parent paths",
+          "url": "https://github.com/charlie2233/GBC_HuskiesWeb/commit/b3119529e34fea5635c349e005e7f09d32344bda"
+        },
+        {
+          "sha": "538dedbeba6b001aa9bc7bd52b1c99bba79ffa8a",
+          "message": "docs: update sponsor cta deployment status",
+          "url": "https://github.com/charlie2233/GBC_HuskiesWeb/commit/538dedbeba6b001aa9bc7bd52b1c99bba79ffa8a"
+        },
+        {
+          "sha": "c2c984cc47ab053cf1ea3a80976476702270350a",
+          "message": "fix: route sponsor cta to gofundme",
+          "url": "https://github.com/charlie2233/GBC_HuskiesWeb/commit/c2c984cc47ab053cf1ea3a80976476702270350a"
+        }
+      ]
+    },
+    "public": true,
+    "created_at": "2026-06-12T22:17:16Z"
+  },
+  {
+    "id": "13250209799",
+    "type": "PushEvent",
+    "actor": {
+      "id": 117957000,
+      "login": "charlie2233",
+      "display_login": "charlie2233",
+      "gravatar_id": "",
+      "url": "https://api.github.com/users/charlie2233",
+      "avatar_url": "https://avatars.githubusercontent.com/u/117957000?"
+    },
+    "repo": {
+      "id": 1231252582,
+      "name": "charlie2233/GBC_HuskiesWeb",
+      "url": "https://api.github.com/repos/charlie2233/GBC_HuskiesWeb"
+    },
+    "payload": {
+      "repository_id": 1231252582,
+      "push_id": 35538041244,
+      "ref": "refs/heads/main",
+      "head": "36a094fdcf42425127ac74583172cc0e95a0d5c1",
+      "before": "66e803d5d5c9d1aa390a28a1e9d5ae0337016cfa"
+    },
+    "public": true,
+    "created_at": "2026-06-12T22:14:53Z"
+  },
+  {
+    "id": "13249707046",
+    "type": "PushEvent",
+    "actor": {
+      "id": 117957000,
+      "login": "charlie2233",
+      "display_login": "charlie2233",
+      "gravatar_id": "",
+      "url": "https://api.github.com/users/charlie2233",
+      "avatar_url": "https://avatars.githubusercontent.com/u/117957000?"
+    },
+    "repo": {
+      "id": 1231252582,
+      "name": "charlie2233/GBC_HuskiesWeb",
+      "url": "https://api.github.com/repos/charlie2233/GBC_HuskiesWeb"
+    },
+    "payload": {
+      "repository_id": 1231252582,
+      "push_id": 35537542185,
+      "ref": "refs/heads/main",
+      "head": "66e803d5d5c9d1aa390a28a1e9d5ae0337016cfa",
+      "before": "b3119529e34fea5635c349e005e7f09d32344bda"
+    },
+    "public": true,
+    "created_at": "2026-06-12T22:00:09Z"
+  },
+  {
     "id": "13195033941",
     "type": "PushEvent",
     "actor": {
@@ -21,8 +132,13 @@
       "ref": "refs/heads/main",
       "head": "5d4cd9aa85b32e00b1f4fc6bb1625e710318d431",
       "before": "a45ecbfe9137792f3efd7b5277e75e6c83fc85e4",
-      "distinct_size": 29,
+      "distinct_size": 30,
       "commits": [
+        {
+          "sha": "c93da35ecb59f319b34fb5bf24b16e6c88b7851a",
+          "message": "chore: update GitHub data [skip ci]",
+          "url": "https://github.com/charlie2233/atrak-website/commit/c93da35ecb59f319b34fb5bf24b16e6c88b7851a"
+        },
         {
           "sha": "9755859eaa0c3c9f1ec7b6a0a78ded6ae2cc8f8d",
           "message": "chore: update GitHub data [skip ci]",
@@ -117,11 +233,6 @@
           "sha": "3f05fa2c14ad911fedaf4b82a1fc5908eb06467a",
           "message": "fix: restore weekly GitHub stats fallback",
           "url": "https://github.com/charlie2233/atrak-website/commit/3f05fa2c14ad911fedaf4b82a1fc5908eb06467a"
-        },
-        {
-          "sha": "6664250a667659c6075f47f81f4d19ec4fea2bd1",
-          "message": "chore: update GitHub data [skip ci]",
-          "url": "https://github.com/charlie2233/atrak-website/commit/6664250a667659c6075f47f81f4d19ec4fea2bd1"
         }
       ]
     },
@@ -925,25 +1036,7 @@
       "push_id": 35323842697,
       "ref": "refs/heads/main",
       "head": "b3119529e34fea5635c349e005e7f09d32344bda",
-      "before": "538dedbeba6b001aa9bc7bd52b1c99bba79ffa8a",
-      "distinct_size": 3,
-      "commits": [
-        {
-          "sha": "b3119529e34fea5635c349e005e7f09d32344bda",
-          "message": "feat: add homepage fundraiser and parent paths",
-          "url": "https://github.com/charlie2233/GBC_HuskiesWeb/commit/b3119529e34fea5635c349e005e7f09d32344bda"
-        },
-        {
-          "sha": "538dedbeba6b001aa9bc7bd52b1c99bba79ffa8a",
-          "message": "docs: update sponsor cta deployment status",
-          "url": "https://github.com/charlie2233/GBC_HuskiesWeb/commit/538dedbeba6b001aa9bc7bd52b1c99bba79ffa8a"
-        },
-        {
-          "sha": "c2c984cc47ab053cf1ea3a80976476702270350a",
-          "message": "fix: route sponsor cta to gofundme",
-          "url": "https://github.com/charlie2233/GBC_HuskiesWeb/commit/c2c984cc47ab053cf1ea3a80976476702270350a"
-        }
-      ]
+      "before": "538dedbeba6b001aa9bc7bd52b1c99bba79ffa8a"
     },
     "public": true,
     "created_at": "2026-06-09T07:54:11Z"
