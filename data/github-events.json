@@ -122,8 +122,13 @@
       "ref": "refs/heads/main",
       "head": "5d4cd9aa85b32e00b1f4fc6bb1625e710318d431",
       "before": "a45ecbfe9137792f3efd7b5277e75e6c83fc85e4",
-      "distinct_size": 34,
+      "distinct_size": 35,
       "commits": [
+        {
+          "sha": "fe7942b5a68b617346a25d549fe6489808e2cb41",
+          "message": "chore: update GitHub data [skip ci]",
+          "url": "https://github.com/charlie2233/atrak-website/commit/fe7942b5a68b617346a25d549fe6489808e2cb41"
+        },
         {
           "sha": "d976316a68d78dc7feb381ee42eacb09b5305635",
           "message": "chore: update GitHub data [skip ci]",
@@ -218,11 +223,6 @@
           "sha": "b9ad971fe2562b70197754bb63cbc5bb62510985",
           "message": "chore: update GitHub data [skip ci]",
           "url": "https://github.com/charlie2233/atrak-website/commit/b9ad971fe2562b70197754bb63cbc5bb62510985"
-        },
-        {
-          "sha": "e411527574c0fb17e5d4f245557ddbdf436c2293",
-          "message": "fix: preserve local weekly commit stats",
-          "url": "https://github.com/charlie2233/atrak-website/commit/e411527574c0fb17e5d4f245557ddbdf436c2293"
         }
       ]
     },
