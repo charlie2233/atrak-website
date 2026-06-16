@@ -21,7 +21,7 @@
       "ref": "refs/heads/main",
       "head": "e20e62039b5008abe39f9a537ce86fbb319d716c",
       "before": "36a094fdcf42425127ac74583172cc0e95a0d5c1",
-      "distinct_size": 4,
+      "distinct_size": 3,
       "commits": [
         {
           "sha": "e20e62039b5008abe39f9a537ce86fbb319d716c",
@@ -37,11 +37,6 @@
           "sha": "66e803d5d5c9d1aa390a28a1e9d5ae0337016cfa",
           "message": "docs: update fundraiser deployment status",
           "url": "https://github.com/charlie2233/GBC_HuskiesWeb/commit/66e803d5d5c9d1aa390a28a1e9d5ae0337016cfa"
-        },
-        {
-          "sha": "b3119529e34fea5635c349e005e7f09d32344bda",
-          "message": "feat: add homepage fundraiser and parent paths",
-          "url": "https://github.com/charlie2233/GBC_HuskiesWeb/commit/b3119529e34fea5635c349e005e7f09d32344bda"
         }
       ]
     },
@@ -122,8 +117,13 @@
       "ref": "refs/heads/main",
       "head": "5d4cd9aa85b32e00b1f4fc6bb1625e710318d431",
       "before": "a45ecbfe9137792f3efd7b5277e75e6c83fc85e4",
-      "distinct_size": 36,
+      "distinct_size": 37,
       "commits": [
+        {
+          "sha": "82ce8331d4da8976477b9aa67748caa03a498d8b",
+          "message": "chore: update GitHub data [skip ci]",
+          "url": "https://github.com/charlie2233/atrak-website/commit/82ce8331d4da8976477b9aa67748caa03a498d8b"
+        },
         {
           "sha": "0d56e9d15a69f0d75c9731e84aa261e09b0cf726",
           "message": "chore: update GitHub data [skip ci]",
@@ -218,11 +218,6 @@
           "sha": "f6b7051ace4e40e8d9681c499fbfeab7a6ef9baf",
           "message": "chore: update GitHub data [skip ci]",
           "url": "https://github.com/charlie2233/atrak-website/commit/f6b7051ace4e40e8d9681c499fbfeab7a6ef9baf"
-        },
-        {
-          "sha": "d9d561b2d057bf51b79bf053354f1b815c1047fc",
-          "message": "chore: update GitHub data [skip ci]",
-          "url": "https://github.com/charlie2233/atrak-website/commit/d9d561b2d057bf51b79bf053354f1b815c1047fc"
         }
       ]
     },
