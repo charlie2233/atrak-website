@@ -122,8 +122,13 @@
       "ref": "refs/heads/main",
       "head": "5d4cd9aa85b32e00b1f4fc6bb1625e710318d431",
       "before": "a45ecbfe9137792f3efd7b5277e75e6c83fc85e4",
-      "distinct_size": 35,
+      "distinct_size": 36,
       "commits": [
+        {
+          "sha": "0d56e9d15a69f0d75c9731e84aa261e09b0cf726",
+          "message": "chore: update GitHub data [skip ci]",
+          "url": "https://github.com/charlie2233/atrak-website/commit/0d56e9d15a69f0d75c9731e84aa261e09b0cf726"
+        },
         {
           "sha": "fe7942b5a68b617346a25d549fe6489808e2cb41",
           "message": "chore: update GitHub data [skip ci]",
@@ -218,11 +223,6 @@
           "sha": "d9d561b2d057bf51b79bf053354f1b815c1047fc",
           "message": "chore: update GitHub data [skip ci]",
           "url": "https://github.com/charlie2233/atrak-website/commit/d9d561b2d057bf51b79bf053354f1b815c1047fc"
-        },
-        {
-          "sha": "b9ad971fe2562b70197754bb63cbc5bb62510985",
-          "message": "chore: update GitHub data [skip ci]",
-          "url": "https://github.com/charlie2233/atrak-website/commit/b9ad971fe2562b70197754bb63cbc5bb62510985"
         }
       ]
     },
@@ -419,7 +419,7 @@
             "state": "uploaded",
             "size": 460044,
             "digest": "sha256:680374c742871c3ab87eb03a6adba0543a921050e467899905c410a7d0c52d2d",
-            "download_count": 1,
+            "download_count": 2,
             "created_at": "2026-06-11T22:24:19Z",
             "updated_at": "2026-06-11T22:24:20Z",
             "browser_download_url": "https://github.com/charlie2233/Basketball_action_recoginition_sever/releases/download/hoops-clips-mac-v1.0/hoops-clips-mac-installer-v1.0.zip"
@@ -522,7 +522,7 @@
             "state": "uploaded",
             "size": 101008,
             "digest": "sha256:0413a965bfb1462fb566d8b3d62d04d13847cd47ab190cb3a8e7e27555820b2f",
-            "download_count": 0,
+            "download_count": 1,
             "created_at": "2026-06-11T22:24:17Z",
             "updated_at": "2026-06-11T22:24:17Z",
             "browser_download_url": "https://github.com/charlie2233/formative-ai-exporter/releases/download/v0.1.0/formative-ai-exporter-extension-0.1.0-chrome.zip"
@@ -625,7 +625,7 @@
             "state": "uploaded",
             "size": 61577,
             "digest": "sha256:412773947a4ef1e93502df75e144962f7c8e9c6b9d9bb3dc26989af46ed63d2c",
-            "download_count": 0,
+            "download_count": 1,
             "created_at": "2026-06-11T22:24:14Z",
             "updated_at": "2026-06-11T22:24:14Z",
             "browser_download_url": "https://github.com/charlie2233/coursebinder-ai-ready-google-classroom-exporter/releases/download/v0.1.0/classroom-ai-exporter-extension-0.1.0-chrome.zip"
