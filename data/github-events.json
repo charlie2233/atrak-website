@@ -117,8 +117,13 @@
       "ref": "refs/heads/main",
       "head": "5d4cd9aa85b32e00b1f4fc6bb1625e710318d431",
       "before": "a45ecbfe9137792f3efd7b5277e75e6c83fc85e4",
-      "distinct_size": 39,
+      "distinct_size": 23,
       "commits": [
+        {
+          "sha": "87f63f190e07f1c4c50d1c23ced83aff24789d0a",
+          "message": "chore: update GitHub data [skip ci]",
+          "url": "https://github.com/charlie2233/atrak-website/commit/87f63f190e07f1c4c50d1c23ced83aff24789d0a"
+        },
         {
           "sha": "9fff4c0a14fa8e6fe50617d98bf78ce24bbc4d09",
           "message": "chore: update GitHub data [skip ci]",
@@ -213,11 +218,6 @@
           "sha": "0a5e4f6e93212f994bda01208bc5ac10653a0bd2",
           "message": "feat: improve project details archive and link icons",
           "url": "https://github.com/charlie2233/atrak-website/commit/0a5e4f6e93212f994bda01208bc5ac10653a0bd2"
-        },
-        {
-          "sha": "892951ae0cd396a59f1fc69579cc215889cd3101",
-          "message": "chore: update GitHub data [skip ci]",
-          "url": "https://github.com/charlie2233/atrak-website/commit/892951ae0cd396a59f1fc69579cc215889cd3101"
         }
       ]
     },
