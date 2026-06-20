@@ -1,16 +1,21 @@
 [
   {
     "type": "PushEvent",
-    "created_at": "2026-06-19T13:13:52Z",
+    "created_at": "2026-06-20T01:01:06Z",
     "repo": {
       "name": "charlie2233/atrak-website"
     },
     "payload": {
       "ref": "refs/heads/main",
       "before": "",
-      "head": "2593a3b99c1fb9caa742187820fb5c6272d49b9f",
-      "distinct_size": 14,
+      "head": "0d6a8a6112d4e0fb414b123265e0e37b11a2e6da",
+      "distinct_size": 13,
       "commits": [
+        {
+          "sha": "0d6a8a6112d4e0fb414b123265e0e37b11a2e6da",
+          "message": "chore: update GitHub data [skip ci]",
+          "url": "https://github.com/charlie2233/atrak-website/commit/0d6a8a6112d4e0fb414b123265e0e37b11a2e6da"
+        },
         {
           "sha": "2593a3b99c1fb9caa742187820fb5c6272d49b9f",
           "message": "chore: update GitHub data [skip ci]",
@@ -70,19 +75,3261 @@
           "sha": "f812f6c226827e9459c42b34eacd265344561854",
           "message": "chore: update GitHub data [skip ci]",
           "url": "https://github.com/charlie2233/atrak-website/commit/f812f6c226827e9459c42b34eacd265344561854"
-        },
-        {
-          "sha": "55740e1a5973954f4fa5860b008b42556fc397f8",
-          "message": "chore: update GitHub data [skip ci]",
-          "url": "https://github.com/charlie2233/atrak-website/commit/55740e1a5973954f4fa5860b008b42556fc397f8"
-        },
-        {
-          "sha": "0ec2d070d471d05a5632825e6fd7ade15fc8ab1b",
-          "message": "chore: update GitHub data [skip ci]",
-          "url": "https://github.com/charlie2233/atrak-website/commit/0ec2d070d471d05a5632825e6fd7ade15fc8ab1b"
         }
       ]
     }
+  },
+  {
+    "id": "13618785412",
+    "type": "PushEvent",
+    "actor": {
+      "id": 117957000,
+      "login": "charlie2233",
+      "display_login": "charlie2233",
+      "gravatar_id": "",
+      "url": "https://api.github.com/users/charlie2233",
+      "avatar_url": "https://avatars.githubusercontent.com/u/117957000?"
+    },
+    "repo": {
+      "id": 1220099958,
+      "name": "charlie2233/coursebinder-ai-ready-google-classroom-exporter",
+      "url": "https://api.github.com/repos/charlie2233/coursebinder-ai-ready-google-classroom-exporter"
+    },
+    "payload": {
+      "repository_id": 1220099958,
+      "push_id": 35906895391,
+      "ref": "refs/heads/main",
+      "head": "ff902beb20f773a32d90a4ea782b0bcdd0e0ae1d",
+      "before": "add3d50dd0df8f4a6776d63b70afc0a62e7225aa",
+      "distinct_size": 28,
+      "commits": [
+        {
+          "sha": "ff902beb20f773a32d90a4ea782b0bcdd0e0ae1d",
+          "message": "Wait for CourseBinder fallback files to finish",
+          "url": "https://github.com/charlie2233/coursebinder-ai-ready-google-classroom-exporter/commit/ff902beb20f773a32d90a4ea782b0bcdd0e0ae1d"
+        },
+        {
+          "sha": "add3d50dd0df8f4a6776d63b70afc0a62e7225aa",
+          "message": "Smoke test CourseBinder export download flow",
+          "url": "https://github.com/charlie2233/coursebinder-ai-ready-google-classroom-exporter/commit/add3d50dd0df8f4a6776d63b70afc0a62e7225aa"
+        },
+        {
+          "sha": "d1151e188d271ff4b22f1702dcf02e9426dc7089",
+          "message": "Use repo-relative CourseBinder handoff path",
+          "url": "https://github.com/charlie2233/coursebinder-ai-ready-google-classroom-exporter/commit/d1151e188d271ff4b22f1702dcf02e9426dc7089"
+        },
+        {
+          "sha": "59d6c907631080c85ced5a8341b7ef20ab116e91",
+          "message": "Clarify CourseBinder upload handoff path",
+          "url": "https://github.com/charlie2233/coursebinder-ai-ready-google-classroom-exporter/commit/59d6c907631080c85ced5a8341b7ef20ab116e91"
+        },
+        {
+          "sha": "54a1de75f4ba8a2cb02cc4b99522dcb16a65d1a3",
+          "message": "Keep CourseBinder downloads in export folder",
+          "url": "https://github.com/charlie2233/coursebinder-ai-ready-google-classroom-exporter/commit/54a1de75f4ba8a2cb02cc4b99522dcb16a65d1a3"
+        },
+        {
+          "sha": "f41da076fa37194d0c11a5e2cce6be3b1034d229",
+          "message": "Handle slow CourseBinder attachment downloads gracefully",
+          "url": "https://github.com/charlie2233/coursebinder-ai-ready-google-classroom-exporter/commit/f41da076fa37194d0c11a5e2cce6be3b1034d229"
+        },
+        {
+          "sha": "2ee229ba0b544a9b570ae5993ce98f4d6e08d168",
+          "message": "Document CourseBinder release handoff upload",
+          "url": "https://github.com/charlie2233/coursebinder-ai-ready-google-classroom-exporter/commit/2ee229ba0b544a9b570ae5993ce98f4d6e08d168"
+        },
+        {
+          "sha": "dc212acc0da3766a2944ff33543d1169e4324313",
+          "message": "Skip native messaging in default CourseBinder build",
+          "url": "https://github.com/charlie2233/coursebinder-ai-ready-google-classroom-exporter/commit/dc212acc0da3766a2944ff33543d1169e4324313"
+        },
+        {
+          "sha": "1537c8b7d3925751cfcc176d26cc71f91659eb0e",
+          "message": "Upload CourseBinder release handoff artifact",
+          "url": "https://github.com/charlie2233/coursebinder-ai-ready-google-classroom-exporter/commit/1537c8b7d3925751cfcc176d26cc71f91659eb0e"
+        },
+        {
+          "sha": "387dd2011dfdf5947f2871a1310bfe318fc36692",
+          "message": "Add CourseBinder release handoff generator",
+          "url": "https://github.com/charlie2233/coursebinder-ai-ready-google-classroom-exporter/commit/387dd2011dfdf5947f2871a1310bfe318fc36692"
+        },
+        {
+          "sha": "24234d50ab3abaada645898f3cf656439471c24c",
+          "message": "Smoke test exact CourseBinder zip version",
+          "url": "https://github.com/charlie2233/coursebinder-ai-ready-google-classroom-exporter/commit/24234d50ab3abaada645898f3cf656439471c24c"
+        },
+        {
+          "sha": "5de235703703b15ab13f5de09148044421ea5670",
+          "message": "Smoke test packaged CourseBinder zip",
+          "url": "https://github.com/charlie2233/coursebinder-ai-ready-google-classroom-exporter/commit/5de235703703b15ab13f5de09148044421ea5670"
+        },
+        {
+          "sha": "4da2ebf33cbdb1428cdfc7650b6520ab2f48e138",
+          "message": "Verify fallback export files in smoke",
+          "url": "https://github.com/charlie2233/coursebinder-ai-ready-google-classroom-exporter/commit/4da2ebf33cbdb1428cdfc7650b6520ab2f48e138"
+        },
+        {
+          "sha": "2039f3eaa03a35c431aa992c5164d79aa6b614a0",
+          "message": "Add manual smoke checklist",
+          "url": "https://github.com/charlie2233/coursebinder-ai-ready-google-classroom-exporter/commit/2039f3eaa03a35c431aa992c5164d79aa6b614a0"
+        },
+        {
+          "sha": "496c62d78af4d259dfd92403e2bf3d72246cac30",
+          "message": "Add Web Store rejection response notes",
+          "url": "https://github.com/charlie2233/coursebinder-ai-ready-google-classroom-exporter/commit/496c62d78af4d259dfd92403e2bf3d72246cac30"
+        },
+        {
+          "sha": "5ca072d79698df03d3bd4b1788ee806c15476761",
+          "message": "Release CourseBinder 0.1.11 markdown frontmatter fix",
+          "url": "https://github.com/charlie2233/coursebinder-ai-ready-google-classroom-exporter/commit/5ca072d79698df03d3bd4b1788ee806c15476761"
+        },
+        {
+          "sha": "c1d71e4b51d70dfced60f5fb885c3ac25b2179b0",
+          "message": "Release CourseBinder 0.1.10 lean editor downloads",
+          "url": "https://github.com/charlie2233/coursebinder-ai-ready-google-classroom-exporter/commit/c1d71e4b51d70dfced60f5fb885c3ac25b2179b0"
+        },
+        {
+          "sha": "7c9c7b597c3321b255bf54867c56e1c04905472d",
+          "message": "Release CourseBinder 0.1.9 no-download summary",
+          "url": "https://github.com/charlie2233/coursebinder-ai-ready-google-classroom-exporter/commit/7c9c7b597c3321b255bf54867c56e1c04905472d"
+        },
+        {
+          "sha": "6c433749564e88606178b68801b0cada2c58b782",
+          "message": "Release CourseBinder 0.1.8 browser export copy",
+          "url": "https://github.com/charlie2233/coursebinder-ai-ready-google-classroom-exporter/commit/6c433749564e88606178b68801b0cada2c58b782"
+        },
+        {
+          "sha": "9279b95ea860f7b50bafe16d2246a3c32de03abf",
+          "message": "Assert Classroom tab access in CourseBinder smoke",
+          "url": "https://github.com/charlie2233/coursebinder-ai-ready-google-classroom-exporter/commit/9279b95ea860f7b50bafe16d2246a3c32de03abf"
+        }
+      ]
+    },
+    "public": true,
+    "created_at": "2026-06-20T10:18:08Z"
+  },
+  {
+    "id": "13618783608",
+    "type": "PushEvent",
+    "actor": {
+      "id": 117957000,
+      "login": "charlie2233",
+      "display_login": "charlie2233",
+      "gravatar_id": "",
+      "url": "https://api.github.com/users/charlie2233",
+      "avatar_url": "https://avatars.githubusercontent.com/u/117957000?"
+    },
+    "repo": {
+      "id": 1201134638,
+      "name": "charlie2233/RestaurantCommentValidation_Analysis",
+      "url": "https://api.github.com/repos/charlie2233/RestaurantCommentValidation_Analysis"
+    },
+    "payload": {
+      "repository_id": 1201134638,
+      "push_id": 35906893664,
+      "ref": "refs/heads/main",
+      "head": "e8e89298d1078180e1b125bc8548affa9a821fb4",
+      "before": "bb6e882d935a180ebe1a92870c45ae882afa1729",
+      "distinct_size": 32,
+      "commits": [
+        {
+          "sha": "e8e89298d1078180e1b125bc8548affa9a821fb4",
+          "message": "Add config target listing",
+          "url": "https://github.com/charlie2233/RestaurantCommentValidation_Analysis/commit/e8e89298d1078180e1b125bc8548affa9a821fb4"
+        },
+        {
+          "sha": "bb6e882d935a180ebe1a92870c45ae882afa1729",
+          "message": "Add credibility target listing",
+          "url": "https://github.com/charlie2233/RestaurantCommentValidation_Analysis/commit/bb6e882d935a180ebe1a92870c45ae882afa1729"
+        },
+        {
+          "sha": "ae6082ad1a34db9a14a7fa2613540d33d0dedb62",
+          "message": "Add history target listing",
+          "url": "https://github.com/charlie2233/RestaurantCommentValidation_Analysis/commit/ae6082ad1a34db9a14a7fa2613540d33d0dedb62"
+        },
+        {
+          "sha": "1878f746020383106a4b543dd8fcc2d4915c1143",
+          "message": "Add release target listing",
+          "url": "https://github.com/charlie2233/RestaurantCommentValidation_Analysis/commit/1878f746020383106a4b543dd8fcc2d4915c1143"
+        },
+        {
+          "sha": "56b11b94522ef04ad02558fe538e1d22518ef583",
+          "message": "Add demo target listing",
+          "url": "https://github.com/charlie2233/RestaurantCommentValidation_Analysis/commit/56b11b94522ef04ad02558fe538e1d22518ef583"
+        },
+        {
+          "sha": "42cdc24d518b8e76ea5c767289f7f87a4aff4e93",
+          "message": "Add strategy target listing",
+          "url": "https://github.com/charlie2233/RestaurantCommentValidation_Analysis/commit/42cdc24d518b8e76ea5c767289f7f87a4aff4e93"
+        },
+        {
+          "sha": "5d1e29a3006501d538d75b2bd22ff65620dc2072",
+          "message": "Add reference target listing",
+          "url": "https://github.com/charlie2233/RestaurantCommentValidation_Analysis/commit/5d1e29a3006501d538d75b2bd22ff65620dc2072"
+        },
+        {
+          "sha": "f0f51b265e76798066b4f24fe3b21fcf48f14f25",
+          "message": "Add forecasting target listing",
+          "url": "https://github.com/charlie2233/RestaurantCommentValidation_Analysis/commit/f0f51b265e76798066b4f24fe3b21fcf48f14f25"
+        },
+        {
+          "sha": "a0f88e355e22aa92ac2d673304acd785c25c0480",
+          "message": "Add rag target listing",
+          "url": "https://github.com/charlie2233/RestaurantCommentValidation_Analysis/commit/a0f88e355e22aa92ac2d673304acd785c25c0480"
+        },
+        {
+          "sha": "cf299f7cfa1e858e3e17de19112919d1aa169ce1",
+          "message": "Add governance target listing",
+          "url": "https://github.com/charlie2233/RestaurantCommentValidation_Analysis/commit/cf299f7cfa1e858e3e17de19112919d1aa169ce1"
+        },
+        {
+          "sha": "3224870d5c81ccf7924b6025878129ec49e7f0a7",
+          "message": "Add data target listing",
+          "url": "https://github.com/charlie2233/RestaurantCommentValidation_Analysis/commit/3224870d5c81ccf7924b6025878129ec49e7f0a7"
+        },
+        {
+          "sha": "f29c3dbfc322d8f4ced278e3cf6ff80f9e7b15e0",
+          "message": "Add report target listing",
+          "url": "https://github.com/charlie2233/RestaurantCommentValidation_Analysis/commit/f29c3dbfc322d8f4ced278e3cf6ff80f9e7b15e0"
+        },
+        {
+          "sha": "e7b4a75ec08400fe383735afb9f1c216051816ba",
+          "message": "Add workflow target listing",
+          "url": "https://github.com/charlie2233/RestaurantCommentValidation_Analysis/commit/e7b4a75ec08400fe383735afb9f1c216051816ba"
+        },
+        {
+          "sha": "59dc245f14906ce4d0c155cc9c6bdc099b10cc9f",
+          "message": "Add verification target listing",
+          "url": "https://github.com/charlie2233/RestaurantCommentValidation_Analysis/commit/59dc245f14906ce4d0c155cc9c6bdc099b10cc9f"
+        },
+        {
+          "sha": "c0b01f7a886d7af7dfbce402422f033fab1576ca",
+          "message": "Add diagnostic target listing",
+          "url": "https://github.com/charlie2233/RestaurantCommentValidation_Analysis/commit/c0b01f7a886d7af7dfbce402422f033fab1576ca"
+        },
+        {
+          "sha": "07d11280983503e5ef5222f9a29dc8910ee4b6c2",
+          "message": "Add pipeline target listing",
+          "url": "https://github.com/charlie2233/RestaurantCommentValidation_Analysis/commit/07d11280983503e5ef5222f9a29dc8910ee4b6c2"
+        },
+        {
+          "sha": "de97dfe228fdf59a5739ac621d2b8759e5cb5d56",
+          "message": "Add cleanup target listing",
+          "url": "https://github.com/charlie2233/RestaurantCommentValidation_Analysis/commit/de97dfe228fdf59a5739ac621d2b8759e5cb5d56"
+        },
+        {
+          "sha": "2990b9fa58b8d115cf72fb252abeb1c8f5dbfc96",
+          "message": "Add explicit all local cleanup target",
+          "url": "https://github.com/charlie2233/RestaurantCommentValidation_Analysis/commit/2990b9fa58b8d115cf72fb252abeb1c8f5dbfc96"
+        },
+        {
+          "sha": "938b1689be08ba3354ebc12b2b849e55fd819a22",
+          "message": "Compose broad cache cleanup target",
+          "url": "https://github.com/charlie2233/RestaurantCommentValidation_Analysis/commit/938b1689be08ba3354ebc12b2b849e55fd819a22"
+        },
+        {
+          "sha": "792d3f6cbdb4c8439ede2758c4a3958b1c1eb851",
+          "message": "Add clean test make target",
+          "url": "https://github.com/charlie2233/RestaurantCommentValidation_Analysis/commit/792d3f6cbdb4c8439ede2758c4a3958b1c1eb851"
+        }
+      ]
+    },
+    "public": true,
+    "created_at": "2026-06-20T10:18:04Z"
+  },
+  {
+    "id": "13618781936",
+    "type": "PushEvent",
+    "actor": {
+      "id": 117957000,
+      "login": "charlie2233",
+      "display_login": "charlie2233",
+      "gravatar_id": "",
+      "url": "https://api.github.com/users/charlie2233",
+      "avatar_url": "https://avatars.githubusercontent.com/u/117957000?"
+    },
+    "repo": {
+      "id": 1061040738,
+      "name": "charlie2233/ai-hoops-board",
+      "url": "https://api.github.com/repos/charlie2233/ai-hoops-board"
+    },
+    "payload": {
+      "repository_id": 1061040738,
+      "push_id": 35906891976,
+      "ref": "refs/heads/codex/build-formative-practice-exporter",
+      "head": "96f7462b67e188d6cf5144b6638aea5ffe2b6355",
+      "before": "94e492559768ef97fc3cb4df3f9897a79874fa48",
+      "distinct_size": 0,
+      "commits": []
+    },
+    "public": true,
+    "created_at": "2026-06-20T10:17:59Z"
+  },
+  {
+    "id": "13618704395",
+    "type": "PushEvent",
+    "actor": {
+      "id": 117957000,
+      "login": "charlie2233",
+      "display_login": "charlie2233",
+      "gravatar_id": "",
+      "url": "https://api.github.com/users/charlie2233",
+      "avatar_url": "https://avatars.githubusercontent.com/u/117957000?"
+    },
+    "repo": {
+      "id": 1220099958,
+      "name": "charlie2233/coursebinder-ai-ready-google-classroom-exporter",
+      "url": "https://api.github.com/repos/charlie2233/coursebinder-ai-ready-google-classroom-exporter"
+    },
+    "payload": {
+      "repository_id": 1220099958,
+      "push_id": 35906814240,
+      "ref": "refs/heads/main",
+      "head": "add3d50dd0df8f4a6776d63b70afc0a62e7225aa",
+      "before": "d1151e188d271ff4b22f1702dcf02e9426dc7089"
+    },
+    "public": true,
+    "created_at": "2026-06-20T10:14:30Z"
+  },
+  {
+    "id": "13618699031",
+    "type": "PushEvent",
+    "actor": {
+      "id": 117957000,
+      "login": "charlie2233",
+      "display_login": "charlie2233",
+      "gravatar_id": "",
+      "url": "https://api.github.com/users/charlie2233",
+      "avatar_url": "https://avatars.githubusercontent.com/u/117957000?"
+    },
+    "repo": {
+      "id": 1061040738,
+      "name": "charlie2233/ai-hoops-board",
+      "url": "https://api.github.com/repos/charlie2233/ai-hoops-board"
+    },
+    "payload": {
+      "repository_id": 1061040738,
+      "push_id": 35906808911,
+      "ref": "refs/heads/codex/build-formative-practice-exporter",
+      "head": "94e492559768ef97fc3cb4df3f9897a79874fa48",
+      "before": "77961f86d6ecc06d605d2df1f2000aa7a5ff3a86"
+    },
+    "public": true,
+    "created_at": "2026-06-20T10:14:16Z"
+  },
+  {
+    "id": "13618696835",
+    "type": "PushEvent",
+    "actor": {
+      "id": 117957000,
+      "login": "charlie2233",
+      "display_login": "charlie2233",
+      "gravatar_id": "",
+      "url": "https://api.github.com/users/charlie2233",
+      "avatar_url": "https://avatars.githubusercontent.com/u/117957000?"
+    },
+    "repo": {
+      "id": 1201134638,
+      "name": "charlie2233/RestaurantCommentValidation_Analysis",
+      "url": "https://api.github.com/repos/charlie2233/RestaurantCommentValidation_Analysis"
+    },
+    "payload": {
+      "repository_id": 1201134638,
+      "push_id": 35906806716,
+      "ref": "refs/heads/main",
+      "head": "bb6e882d935a180ebe1a92870c45ae882afa1729",
+      "before": "ae6082ad1a34db9a14a7fa2613540d33d0dedb62"
+    },
+    "public": true,
+    "created_at": "2026-06-20T10:14:10Z"
+  },
+  {
+    "id": "13618591018",
+    "type": "PushEvent",
+    "actor": {
+      "id": 117957000,
+      "login": "charlie2233",
+      "display_login": "charlie2233",
+      "gravatar_id": "",
+      "url": "https://api.github.com/users/charlie2233",
+      "avatar_url": "https://avatars.githubusercontent.com/u/117957000?"
+    },
+    "repo": {
+      "id": 1201134638,
+      "name": "charlie2233/RestaurantCommentValidation_Analysis",
+      "url": "https://api.github.com/repos/charlie2233/RestaurantCommentValidation_Analysis"
+    },
+    "payload": {
+      "repository_id": 1201134638,
+      "push_id": 35906700753,
+      "ref": "refs/heads/main",
+      "head": "ae6082ad1a34db9a14a7fa2613540d33d0dedb62",
+      "before": "1878f746020383106a4b543dd8fcc2d4915c1143"
+    },
+    "public": true,
+    "created_at": "2026-06-20T10:09:25Z"
+  },
+  {
+    "id": "13618565496",
+    "type": "PushEvent",
+    "actor": {
+      "id": 117957000,
+      "login": "charlie2233",
+      "display_login": "charlie2233",
+      "gravatar_id": "",
+      "url": "https://api.github.com/users/charlie2233",
+      "avatar_url": "https://avatars.githubusercontent.com/u/117957000?"
+    },
+    "repo": {
+      "id": 1220099958,
+      "name": "charlie2233/coursebinder-ai-ready-google-classroom-exporter",
+      "url": "https://api.github.com/repos/charlie2233/coursebinder-ai-ready-google-classroom-exporter"
+    },
+    "payload": {
+      "repository_id": 1220099958,
+      "push_id": 35906675228,
+      "ref": "refs/heads/main",
+      "head": "d1151e188d271ff4b22f1702dcf02e9426dc7089",
+      "before": "59d6c907631080c85ced5a8341b7ef20ab116e91"
+    },
+    "public": true,
+    "created_at": "2026-06-20T10:08:16Z"
+  },
+  {
+    "id": "13618561289",
+    "type": "PushEvent",
+    "actor": {
+      "id": 117957000,
+      "login": "charlie2233",
+      "display_login": "charlie2233",
+      "gravatar_id": "",
+      "url": "https://api.github.com/users/charlie2233",
+      "avatar_url": "https://avatars.githubusercontent.com/u/117957000?"
+    },
+    "repo": {
+      "id": 1061040738,
+      "name": "charlie2233/ai-hoops-board",
+      "url": "https://api.github.com/repos/charlie2233/ai-hoops-board"
+    },
+    "payload": {
+      "repository_id": 1061040738,
+      "push_id": 35906670934,
+      "ref": "refs/heads/codex/build-formative-practice-exporter",
+      "head": "77961f86d6ecc06d605d2df1f2000aa7a5ff3a86",
+      "before": "33dd7916159369e68c39d37a99959eb79e8f9025"
+    },
+    "public": true,
+    "created_at": "2026-06-20T10:08:05Z"
+  },
+  {
+    "id": "13618524303",
+    "type": "PushEvent",
+    "actor": {
+      "id": 117957000,
+      "login": "charlie2233",
+      "display_login": "charlie2233",
+      "gravatar_id": "",
+      "url": "https://api.github.com/users/charlie2233",
+      "avatar_url": "https://avatars.githubusercontent.com/u/117957000?"
+    },
+    "repo": {
+      "id": 1220099958,
+      "name": "charlie2233/coursebinder-ai-ready-google-classroom-exporter",
+      "url": "https://api.github.com/repos/charlie2233/coursebinder-ai-ready-google-classroom-exporter"
+    },
+    "payload": {
+      "repository_id": 1220099958,
+      "push_id": 35906633941,
+      "ref": "refs/heads/main",
+      "head": "59d6c907631080c85ced5a8341b7ef20ab116e91",
+      "before": "54a1de75f4ba8a2cb02cc4b99522dcb16a65d1a3"
+    },
+    "public": true,
+    "created_at": "2026-06-20T10:06:27Z"
+  },
+  {
+    "id": "13618520674",
+    "type": "PushEvent",
+    "actor": {
+      "id": 117957000,
+      "login": "charlie2233",
+      "display_login": "charlie2233",
+      "gravatar_id": "",
+      "url": "https://api.github.com/users/charlie2233",
+      "avatar_url": "https://avatars.githubusercontent.com/u/117957000?"
+    },
+    "repo": {
+      "id": 1061040738,
+      "name": "charlie2233/ai-hoops-board",
+      "url": "https://api.github.com/repos/charlie2233/ai-hoops-board"
+    },
+    "payload": {
+      "repository_id": 1061040738,
+      "push_id": 35906630346,
+      "ref": "refs/heads/codex/build-formative-practice-exporter",
+      "head": "33dd7916159369e68c39d37a99959eb79e8f9025",
+      "before": "986b4a679c92582e200a1d2ee3a902d8286d3917"
+    },
+    "public": true,
+    "created_at": "2026-06-20T10:06:18Z"
+  },
+  {
+    "id": "13618500719",
+    "type": "PushEvent",
+    "actor": {
+      "id": 117957000,
+      "login": "charlie2233",
+      "display_login": "charlie2233",
+      "gravatar_id": "",
+      "url": "https://api.github.com/users/charlie2233",
+      "avatar_url": "https://avatars.githubusercontent.com/u/117957000?"
+    },
+    "repo": {
+      "id": 1201134638,
+      "name": "charlie2233/RestaurantCommentValidation_Analysis",
+      "url": "https://api.github.com/repos/charlie2233/RestaurantCommentValidation_Analysis"
+    },
+    "payload": {
+      "repository_id": 1201134638,
+      "push_id": 35906610353,
+      "ref": "refs/heads/main",
+      "head": "1878f746020383106a4b543dd8fcc2d4915c1143",
+      "before": "56b11b94522ef04ad02558fe538e1d22518ef583"
+    },
+    "public": true,
+    "created_at": "2026-06-20T10:05:28Z"
+  },
+  {
+    "id": "13618436440",
+    "type": "PushEvent",
+    "actor": {
+      "id": 117957000,
+      "login": "charlie2233",
+      "display_login": "charlie2233",
+      "gravatar_id": "",
+      "url": "https://api.github.com/users/charlie2233",
+      "avatar_url": "https://avatars.githubusercontent.com/u/117957000?"
+    },
+    "repo": {
+      "id": 1220099958,
+      "name": "charlie2233/coursebinder-ai-ready-google-classroom-exporter",
+      "url": "https://api.github.com/repos/charlie2233/coursebinder-ai-ready-google-classroom-exporter"
+    },
+    "payload": {
+      "repository_id": 1220099958,
+      "push_id": 35906546002,
+      "ref": "refs/heads/main",
+      "head": "54a1de75f4ba8a2cb02cc4b99522dcb16a65d1a3",
+      "before": "f41da076fa37194d0c11a5e2cce6be3b1034d229"
+    },
+    "public": true,
+    "created_at": "2026-06-20T10:02:48Z"
+  },
+  {
+    "id": "13618430596",
+    "type": "PushEvent",
+    "actor": {
+      "id": 117957000,
+      "login": "charlie2233",
+      "display_login": "charlie2233",
+      "gravatar_id": "",
+      "url": "https://api.github.com/users/charlie2233",
+      "avatar_url": "https://avatars.githubusercontent.com/u/117957000?"
+    },
+    "repo": {
+      "id": 1061040738,
+      "name": "charlie2233/ai-hoops-board",
+      "url": "https://api.github.com/repos/charlie2233/ai-hoops-board"
+    },
+    "payload": {
+      "repository_id": 1061040738,
+      "push_id": 35906540225,
+      "ref": "refs/heads/codex/build-formative-practice-exporter",
+      "head": "986b4a679c92582e200a1d2ee3a902d8286d3917",
+      "before": "79ed0f0ab6950ef7ae4b6eac5e4bbcb98a4dee39"
+    },
+    "public": true,
+    "created_at": "2026-06-20T10:02:34Z"
+  },
+  {
+    "id": "13618405754",
+    "type": "PushEvent",
+    "actor": {
+      "id": 117957000,
+      "login": "charlie2233",
+      "display_login": "charlie2233",
+      "gravatar_id": "",
+      "url": "https://api.github.com/users/charlie2233",
+      "avatar_url": "https://avatars.githubusercontent.com/u/117957000?"
+    },
+    "repo": {
+      "id": 1201134638,
+      "name": "charlie2233/RestaurantCommentValidation_Analysis",
+      "url": "https://api.github.com/repos/charlie2233/RestaurantCommentValidation_Analysis"
+    },
+    "payload": {
+      "repository_id": 1201134638,
+      "push_id": 35906515265,
+      "ref": "refs/heads/main",
+      "head": "56b11b94522ef04ad02558fe538e1d22518ef583",
+      "before": "42cdc24d518b8e76ea5c767289f7f87a4aff4e93"
+    },
+    "public": true,
+    "created_at": "2026-06-20T10:01:36Z"
+  },
+  {
+    "id": "13618309824",
+    "type": "PushEvent",
+    "actor": {
+      "id": 117957000,
+      "login": "charlie2233",
+      "display_login": "charlie2233",
+      "gravatar_id": "",
+      "url": "https://api.github.com/users/charlie2233",
+      "avatar_url": "https://avatars.githubusercontent.com/u/117957000?"
+    },
+    "repo": {
+      "id": 1201134638,
+      "name": "charlie2233/RestaurantCommentValidation_Analysis",
+      "url": "https://api.github.com/repos/charlie2233/RestaurantCommentValidation_Analysis"
+    },
+    "payload": {
+      "repository_id": 1201134638,
+      "push_id": 35906419192,
+      "ref": "refs/heads/main",
+      "head": "42cdc24d518b8e76ea5c767289f7f87a4aff4e93",
+      "before": "5d1e29a3006501d538d75b2bd22ff65620dc2072"
+    },
+    "public": true,
+    "created_at": "2026-06-20T09:57:52Z"
+  },
+  {
+    "id": "13618296879",
+    "type": "PushEvent",
+    "actor": {
+      "id": 117957000,
+      "login": "charlie2233",
+      "display_login": "charlie2233",
+      "gravatar_id": "",
+      "url": "https://api.github.com/users/charlie2233",
+      "avatar_url": "https://avatars.githubusercontent.com/u/117957000?"
+    },
+    "repo": {
+      "id": 1220099958,
+      "name": "charlie2233/coursebinder-ai-ready-google-classroom-exporter",
+      "url": "https://api.github.com/repos/charlie2233/coursebinder-ai-ready-google-classroom-exporter"
+    },
+    "payload": {
+      "repository_id": 1220099958,
+      "push_id": 35906406222,
+      "ref": "refs/heads/main",
+      "head": "f41da076fa37194d0c11a5e2cce6be3b1034d229",
+      "before": "2ee229ba0b544a9b570ae5993ce98f4d6e08d168"
+    },
+    "public": true,
+    "created_at": "2026-06-20T09:57:17Z"
+  },
+  {
+    "id": "13618289448",
+    "type": "PushEvent",
+    "actor": {
+      "id": 117957000,
+      "login": "charlie2233",
+      "display_login": "charlie2233",
+      "gravatar_id": "",
+      "url": "https://api.github.com/users/charlie2233",
+      "avatar_url": "https://avatars.githubusercontent.com/u/117957000?"
+    },
+    "repo": {
+      "id": 1061040738,
+      "name": "charlie2233/ai-hoops-board",
+      "url": "https://api.github.com/repos/charlie2233/ai-hoops-board"
+    },
+    "payload": {
+      "repository_id": 1061040738,
+      "push_id": 35906398785,
+      "ref": "refs/heads/codex/build-formative-practice-exporter",
+      "head": "79ed0f0ab6950ef7ae4b6eac5e4bbcb98a4dee39",
+      "before": "035e4899c08c188ab4aed04b7e05b7f030715c0a"
+    },
+    "public": true,
+    "created_at": "2026-06-20T09:56:57Z"
+  },
+  {
+    "id": "13618225381",
+    "type": "PushEvent",
+    "actor": {
+      "id": 117957000,
+      "login": "charlie2233",
+      "display_login": "charlie2233",
+      "gravatar_id": "",
+      "url": "https://api.github.com/users/charlie2233",
+      "avatar_url": "https://avatars.githubusercontent.com/u/117957000?"
+    },
+    "repo": {
+      "id": 1201134638,
+      "name": "charlie2233/RestaurantCommentValidation_Analysis",
+      "url": "https://api.github.com/repos/charlie2233/RestaurantCommentValidation_Analysis"
+    },
+    "payload": {
+      "repository_id": 1201134638,
+      "push_id": 35906334725,
+      "ref": "refs/heads/main",
+      "head": "5d1e29a3006501d538d75b2bd22ff65620dc2072",
+      "before": "f0f51b265e76798066b4f24fe3b21fcf48f14f25"
+    },
+    "public": true,
+    "created_at": "2026-06-20T09:54:06Z"
+  },
+  {
+    "id": "13618192405",
+    "type": "PushEvent",
+    "actor": {
+      "id": 117957000,
+      "login": "charlie2233",
+      "display_login": "charlie2233",
+      "gravatar_id": "",
+      "url": "https://api.github.com/users/charlie2233",
+      "avatar_url": "https://avatars.githubusercontent.com/u/117957000?"
+    },
+    "repo": {
+      "id": 1220099958,
+      "name": "charlie2233/coursebinder-ai-ready-google-classroom-exporter",
+      "url": "https://api.github.com/repos/charlie2233/coursebinder-ai-ready-google-classroom-exporter"
+    },
+    "payload": {
+      "repository_id": 1220099958,
+      "push_id": 35906301624,
+      "ref": "refs/heads/main",
+      "head": "2ee229ba0b544a9b570ae5993ce98f4d6e08d168",
+      "before": "dc212acc0da3766a2944ff33543d1169e4324313"
+    },
+    "public": true,
+    "created_at": "2026-06-20T09:52:34Z"
+  },
+  {
+    "id": "13618185848",
+    "type": "PushEvent",
+    "actor": {
+      "id": 117957000,
+      "login": "charlie2233",
+      "display_login": "charlie2233",
+      "gravatar_id": "",
+      "url": "https://api.github.com/users/charlie2233",
+      "avatar_url": "https://avatars.githubusercontent.com/u/117957000?"
+    },
+    "repo": {
+      "id": 1061040738,
+      "name": "charlie2233/ai-hoops-board",
+      "url": "https://api.github.com/repos/charlie2233/ai-hoops-board"
+    },
+    "payload": {
+      "repository_id": 1061040738,
+      "push_id": 35906295100,
+      "ref": "refs/heads/codex/build-formative-practice-exporter",
+      "head": "035e4899c08c188ab4aed04b7e05b7f030715c0a",
+      "before": "06aa2a6eeee44f1612fabe084ba0976a940c869e"
+    },
+    "public": true,
+    "created_at": "2026-06-20T09:52:17Z"
+  },
+  {
+    "id": "13618108787",
+    "type": "PushEvent",
+    "actor": {
+      "id": 117957000,
+      "login": "charlie2233",
+      "display_login": "charlie2233",
+      "gravatar_id": "",
+      "url": "https://api.github.com/users/charlie2233",
+      "avatar_url": "https://avatars.githubusercontent.com/u/117957000?"
+    },
+    "repo": {
+      "id": 1220099958,
+      "name": "charlie2233/coursebinder-ai-ready-google-classroom-exporter",
+      "url": "https://api.github.com/repos/charlie2233/coursebinder-ai-ready-google-classroom-exporter"
+    },
+    "payload": {
+      "repository_id": 1220099958,
+      "push_id": 35906217972,
+      "ref": "refs/heads/main",
+      "head": "dc212acc0da3766a2944ff33543d1169e4324313",
+      "before": "1537c8b7d3925751cfcc176d26cc71f91659eb0e"
+    },
+    "public": true,
+    "created_at": "2026-06-20T09:48:55Z"
+  },
+  {
+    "id": "13618102123",
+    "type": "PushEvent",
+    "actor": {
+      "id": 117957000,
+      "login": "charlie2233",
+      "display_login": "charlie2233",
+      "gravatar_id": "",
+      "url": "https://api.github.com/users/charlie2233",
+      "avatar_url": "https://avatars.githubusercontent.com/u/117957000?"
+    },
+    "repo": {
+      "id": 1061040738,
+      "name": "charlie2233/ai-hoops-board",
+      "url": "https://api.github.com/repos/charlie2233/ai-hoops-board"
+    },
+    "payload": {
+      "repository_id": 1061040738,
+      "push_id": 35906211302,
+      "ref": "refs/heads/codex/build-formative-practice-exporter",
+      "head": "06aa2a6eeee44f1612fabe084ba0976a940c869e",
+      "before": "b73aebe532b6facc92df73ba9cbcf10f7e976125"
+    },
+    "public": true,
+    "created_at": "2026-06-20T09:48:37Z"
+  },
+  {
+    "id": "13618100827",
+    "type": "PushEvent",
+    "actor": {
+      "id": 117957000,
+      "login": "charlie2233",
+      "display_login": "charlie2233",
+      "gravatar_id": "",
+      "url": "https://api.github.com/users/charlie2233",
+      "avatar_url": "https://avatars.githubusercontent.com/u/117957000?"
+    },
+    "repo": {
+      "id": 1201134638,
+      "name": "charlie2233/RestaurantCommentValidation_Analysis",
+      "url": "https://api.github.com/repos/charlie2233/RestaurantCommentValidation_Analysis"
+    },
+    "payload": {
+      "repository_id": 1201134638,
+      "push_id": 35906209956,
+      "ref": "refs/heads/main",
+      "head": "f0f51b265e76798066b4f24fe3b21fcf48f14f25",
+      "before": "a0f88e355e22aa92ac2d673304acd785c25c0480"
+    },
+    "public": true,
+    "created_at": "2026-06-20T09:48:33Z"
+  },
+  {
+    "id": "13618024909",
+    "type": "PushEvent",
+    "actor": {
+      "id": 117957000,
+      "login": "charlie2233",
+      "display_login": "charlie2233",
+      "gravatar_id": "",
+      "url": "https://api.github.com/users/charlie2233",
+      "avatar_url": "https://avatars.githubusercontent.com/u/117957000?"
+    },
+    "repo": {
+      "id": 1220099958,
+      "name": "charlie2233/coursebinder-ai-ready-google-classroom-exporter",
+      "url": "https://api.github.com/repos/charlie2233/coursebinder-ai-ready-google-classroom-exporter"
+    },
+    "payload": {
+      "repository_id": 1220099958,
+      "push_id": 35906133889,
+      "ref": "refs/heads/main",
+      "head": "1537c8b7d3925751cfcc176d26cc71f91659eb0e",
+      "before": "387dd2011dfdf5947f2871a1310bfe318fc36692"
+    },
+    "public": true,
+    "created_at": "2026-06-20T09:45:10Z"
+  },
+  {
+    "id": "13618018174",
+    "type": "PushEvent",
+    "actor": {
+      "id": 117957000,
+      "login": "charlie2233",
+      "display_login": "charlie2233",
+      "gravatar_id": "",
+      "url": "https://api.github.com/users/charlie2233",
+      "avatar_url": "https://avatars.githubusercontent.com/u/117957000?"
+    },
+    "repo": {
+      "id": 1061040738,
+      "name": "charlie2233/ai-hoops-board",
+      "url": "https://api.github.com/repos/charlie2233/ai-hoops-board"
+    },
+    "payload": {
+      "repository_id": 1061040738,
+      "push_id": 35906127125,
+      "ref": "refs/heads/codex/build-formative-practice-exporter",
+      "head": "b73aebe532b6facc92df73ba9cbcf10f7e976125",
+      "before": "6ab37d76e95b6f4f5c8f638eed5e653a3bc47aaa"
+    },
+    "public": true,
+    "created_at": "2026-06-20T09:44:54Z"
+  },
+  {
+    "id": "13618000325",
+    "type": "PushEvent",
+    "actor": {
+      "id": 117957000,
+      "login": "charlie2233",
+      "display_login": "charlie2233",
+      "gravatar_id": "",
+      "url": "https://api.github.com/users/charlie2233",
+      "avatar_url": "https://avatars.githubusercontent.com/u/117957000?"
+    },
+    "repo": {
+      "id": 1201134638,
+      "name": "charlie2233/RestaurantCommentValidation_Analysis",
+      "url": "https://api.github.com/repos/charlie2233/RestaurantCommentValidation_Analysis"
+    },
+    "payload": {
+      "repository_id": 1201134638,
+      "push_id": 35906109317,
+      "ref": "refs/heads/main",
+      "head": "a0f88e355e22aa92ac2d673304acd785c25c0480",
+      "before": "cf299f7cfa1e858e3e17de19112919d1aa169ce1"
+    },
+    "public": true,
+    "created_at": "2026-06-20T09:44:04Z"
+  },
+  {
+    "id": "13617956411",
+    "type": "PushEvent",
+    "actor": {
+      "id": 117957000,
+      "login": "charlie2233",
+      "display_login": "charlie2233",
+      "gravatar_id": "",
+      "url": "https://api.github.com/users/charlie2233",
+      "avatar_url": "https://avatars.githubusercontent.com/u/117957000?"
+    },
+    "repo": {
+      "id": 1220099958,
+      "name": "charlie2233/coursebinder-ai-ready-google-classroom-exporter",
+      "url": "https://api.github.com/repos/charlie2233/coursebinder-ai-ready-google-classroom-exporter"
+    },
+    "payload": {
+      "repository_id": 1220099958,
+      "push_id": 35906065302,
+      "ref": "refs/heads/main",
+      "head": "387dd2011dfdf5947f2871a1310bfe318fc36692",
+      "before": "24234d50ab3abaada645898f3cf656439471c24c"
+    },
+    "public": true,
+    "created_at": "2026-06-20T09:42:06Z"
+  },
+  {
+    "id": "13617950424",
+    "type": "PushEvent",
+    "actor": {
+      "id": 117957000,
+      "login": "charlie2233",
+      "display_login": "charlie2233",
+      "gravatar_id": "",
+      "url": "https://api.github.com/users/charlie2233",
+      "avatar_url": "https://avatars.githubusercontent.com/u/117957000?"
+    },
+    "repo": {
+      "id": 1061040738,
+      "name": "charlie2233/ai-hoops-board",
+      "url": "https://api.github.com/repos/charlie2233/ai-hoops-board"
+    },
+    "payload": {
+      "repository_id": 1061040738,
+      "push_id": 35906059300,
+      "ref": "refs/heads/codex/build-formative-practice-exporter",
+      "head": "6ab37d76e95b6f4f5c8f638eed5e653a3bc47aaa",
+      "before": "8a9d9eaeec877d1b4e29204c20496e5d3b9922b8"
+    },
+    "public": true,
+    "created_at": "2026-06-20T09:41:50Z"
+  },
+  {
+    "id": "13617908111",
+    "type": "PushEvent",
+    "actor": {
+      "id": 117957000,
+      "login": "charlie2233",
+      "display_login": "charlie2233",
+      "gravatar_id": "",
+      "url": "https://api.github.com/users/charlie2233",
+      "avatar_url": "https://avatars.githubusercontent.com/u/117957000?"
+    },
+    "repo": {
+      "id": 1201134638,
+      "name": "charlie2233/RestaurantCommentValidation_Analysis",
+      "url": "https://api.github.com/repos/charlie2233/RestaurantCommentValidation_Analysis"
+    },
+    "payload": {
+      "repository_id": 1201134638,
+      "push_id": 35906016926,
+      "ref": "refs/heads/main",
+      "head": "cf299f7cfa1e858e3e17de19112919d1aa169ce1",
+      "before": "3224870d5c81ccf7924b6025878129ec49e7f0a7"
+    },
+    "public": true,
+    "created_at": "2026-06-20T09:39:59Z"
+  },
+  {
+    "id": "13617873962",
+    "type": "PushEvent",
+    "actor": {
+      "id": 117957000,
+      "login": "charlie2233",
+      "display_login": "charlie2233",
+      "gravatar_id": "",
+      "url": "https://api.github.com/users/charlie2233",
+      "avatar_url": "https://avatars.githubusercontent.com/u/117957000?"
+    },
+    "repo": {
+      "id": 1220099958,
+      "name": "charlie2233/coursebinder-ai-ready-google-classroom-exporter",
+      "url": "https://api.github.com/repos/charlie2233/coursebinder-ai-ready-google-classroom-exporter"
+    },
+    "payload": {
+      "repository_id": 1220099958,
+      "push_id": 35905982741,
+      "ref": "refs/heads/main",
+      "head": "24234d50ab3abaada645898f3cf656439471c24c",
+      "before": "5de235703703b15ab13f5de09148044421ea5670"
+    },
+    "public": true,
+    "created_at": "2026-06-20T09:38:25Z"
+  },
+  {
+    "id": "13617867980",
+    "type": "PushEvent",
+    "actor": {
+      "id": 117957000,
+      "login": "charlie2233",
+      "display_login": "charlie2233",
+      "gravatar_id": "",
+      "url": "https://api.github.com/users/charlie2233",
+      "avatar_url": "https://avatars.githubusercontent.com/u/117957000?"
+    },
+    "repo": {
+      "id": 1061040738,
+      "name": "charlie2233/ai-hoops-board",
+      "url": "https://api.github.com/repos/charlie2233/ai-hoops-board"
+    },
+    "payload": {
+      "repository_id": 1061040738,
+      "push_id": 35905976739,
+      "ref": "refs/heads/codex/build-formative-practice-exporter",
+      "head": "8a9d9eaeec877d1b4e29204c20496e5d3b9922b8",
+      "before": "e14ec8b887b76e4c86f788c142fc67329b7a8a57"
+    },
+    "public": true,
+    "created_at": "2026-06-20T09:38:09Z"
+  },
+  {
+    "id": "13617817451",
+    "type": "PushEvent",
+    "actor": {
+      "id": 117957000,
+      "login": "charlie2233",
+      "display_login": "charlie2233",
+      "gravatar_id": "",
+      "url": "https://api.github.com/users/charlie2233",
+      "avatar_url": "https://avatars.githubusercontent.com/u/117957000?"
+    },
+    "repo": {
+      "id": 1220099958,
+      "name": "charlie2233/coursebinder-ai-ready-google-classroom-exporter",
+      "url": "https://api.github.com/repos/charlie2233/coursebinder-ai-ready-google-classroom-exporter"
+    },
+    "payload": {
+      "repository_id": 1220099958,
+      "push_id": 35905926098,
+      "ref": "refs/heads/main",
+      "head": "5de235703703b15ab13f5de09148044421ea5670",
+      "before": "4da2ebf33cbdb1428cdfc7650b6520ab2f48e138"
+    },
+    "public": true,
+    "created_at": "2026-06-20T09:35:54Z"
+  },
+  {
+    "id": "13617814015",
+    "type": "PushEvent",
+    "actor": {
+      "id": 117957000,
+      "login": "charlie2233",
+      "display_login": "charlie2233",
+      "gravatar_id": "",
+      "url": "https://api.github.com/users/charlie2233",
+      "avatar_url": "https://avatars.githubusercontent.com/u/117957000?"
+    },
+    "repo": {
+      "id": 1201134638,
+      "name": "charlie2233/RestaurantCommentValidation_Analysis",
+      "url": "https://api.github.com/repos/charlie2233/RestaurantCommentValidation_Analysis"
+    },
+    "payload": {
+      "repository_id": 1201134638,
+      "push_id": 35905922749,
+      "ref": "refs/heads/main",
+      "head": "3224870d5c81ccf7924b6025878129ec49e7f0a7",
+      "before": "f29c3dbfc322d8f4ced278e3cf6ff80f9e7b15e0"
+    },
+    "public": true,
+    "created_at": "2026-06-20T09:35:45Z"
+  },
+  {
+    "id": "13617810847",
+    "type": "PushEvent",
+    "actor": {
+      "id": 117957000,
+      "login": "charlie2233",
+      "display_login": "charlie2233",
+      "gravatar_id": "",
+      "url": "https://api.github.com/users/charlie2233",
+      "avatar_url": "https://avatars.githubusercontent.com/u/117957000?"
+    },
+    "repo": {
+      "id": 1061040738,
+      "name": "charlie2233/ai-hoops-board",
+      "url": "https://api.github.com/repos/charlie2233/ai-hoops-board"
+    },
+    "payload": {
+      "repository_id": 1061040738,
+      "push_id": 35905919555,
+      "ref": "refs/heads/codex/build-formative-practice-exporter",
+      "head": "e14ec8b887b76e4c86f788c142fc67329b7a8a57",
+      "before": "0f4c587ec21510128289294460b2c46c7db41ff8"
+    },
+    "public": true,
+    "created_at": "2026-06-20T09:35:36Z"
+  },
+  {
+    "id": "13617737761",
+    "type": "PushEvent",
+    "actor": {
+      "id": 117957000,
+      "login": "charlie2233",
+      "display_login": "charlie2233",
+      "gravatar_id": "",
+      "url": "https://api.github.com/users/charlie2233",
+      "avatar_url": "https://avatars.githubusercontent.com/u/117957000?"
+    },
+    "repo": {
+      "id": 1220099958,
+      "name": "charlie2233/coursebinder-ai-ready-google-classroom-exporter",
+      "url": "https://api.github.com/repos/charlie2233/coursebinder-ai-ready-google-classroom-exporter"
+    },
+    "payload": {
+      "repository_id": 1220099958,
+      "push_id": 35905846379,
+      "ref": "refs/heads/main",
+      "head": "4da2ebf33cbdb1428cdfc7650b6520ab2f48e138",
+      "before": "2039f3eaa03a35c431aa992c5164d79aa6b614a0"
+    },
+    "public": true,
+    "created_at": "2026-06-20T09:32:20Z"
+  },
+  {
+    "id": "13617734115",
+    "type": "PushEvent",
+    "actor": {
+      "id": 117957000,
+      "login": "charlie2233",
+      "display_login": "charlie2233",
+      "gravatar_id": "",
+      "url": "https://api.github.com/users/charlie2233",
+      "avatar_url": "https://avatars.githubusercontent.com/u/117957000?"
+    },
+    "repo": {
+      "id": 1061040738,
+      "name": "charlie2233/ai-hoops-board",
+      "url": "https://api.github.com/repos/charlie2233/ai-hoops-board"
+    },
+    "payload": {
+      "repository_id": 1061040738,
+      "push_id": 35905842737,
+      "ref": "refs/heads/codex/build-formative-practice-exporter",
+      "head": "0f4c587ec21510128289294460b2c46c7db41ff8",
+      "before": "b4c4a83daba2a6ee4046b4e2ac32da82d55bec1b"
+    },
+    "public": true,
+    "created_at": "2026-06-20T09:32:11Z"
+  },
+  {
+    "id": "13617719062",
+    "type": "PushEvent",
+    "actor": {
+      "id": 117957000,
+      "login": "charlie2233",
+      "display_login": "charlie2233",
+      "gravatar_id": "",
+      "url": "https://api.github.com/users/charlie2233",
+      "avatar_url": "https://avatars.githubusercontent.com/u/117957000?"
+    },
+    "repo": {
+      "id": 1201134638,
+      "name": "charlie2233/RestaurantCommentValidation_Analysis",
+      "url": "https://api.github.com/repos/charlie2233/RestaurantCommentValidation_Analysis"
+    },
+    "payload": {
+      "repository_id": 1201134638,
+      "push_id": 35905827688,
+      "ref": "refs/heads/main",
+      "head": "f29c3dbfc322d8f4ced278e3cf6ff80f9e7b15e0",
+      "before": "e7b4a75ec08400fe383735afb9f1c216051816ba"
+    },
+    "public": true,
+    "created_at": "2026-06-20T09:31:31Z"
+  },
+  {
+    "id": "13617643038",
+    "type": "PushEvent",
+    "actor": {
+      "id": 117957000,
+      "login": "charlie2233",
+      "display_login": "charlie2233",
+      "gravatar_id": "",
+      "url": "https://api.github.com/users/charlie2233",
+      "avatar_url": "https://avatars.githubusercontent.com/u/117957000?"
+    },
+    "repo": {
+      "id": 1220099958,
+      "name": "charlie2233/coursebinder-ai-ready-google-classroom-exporter",
+      "url": "https://api.github.com/repos/charlie2233/coursebinder-ai-ready-google-classroom-exporter"
+    },
+    "payload": {
+      "repository_id": 1220099958,
+      "push_id": 35905751407,
+      "ref": "refs/heads/main",
+      "head": "2039f3eaa03a35c431aa992c5164d79aa6b614a0",
+      "before": "496c62d78af4d259dfd92403e2bf3d72246cac30"
+    },
+    "public": true,
+    "created_at": "2026-06-20T09:28:17Z"
+  },
+  {
+    "id": "13617639639",
+    "type": "PushEvent",
+    "actor": {
+      "id": 117957000,
+      "login": "charlie2233",
+      "display_login": "charlie2233",
+      "gravatar_id": "",
+      "url": "https://api.github.com/users/charlie2233",
+      "avatar_url": "https://avatars.githubusercontent.com/u/117957000?"
+    },
+    "repo": {
+      "id": 1061040738,
+      "name": "charlie2233/ai-hoops-board",
+      "url": "https://api.github.com/repos/charlie2233/ai-hoops-board"
+    },
+    "payload": {
+      "repository_id": 1061040738,
+      "push_id": 35905747938,
+      "ref": "refs/heads/codex/build-formative-practice-exporter",
+      "head": "b4c4a83daba2a6ee4046b4e2ac32da82d55bec1b",
+      "before": "bab7bcdb8301681c5d5bf32af824a84ac8c0c2c9"
+    },
+    "public": true,
+    "created_at": "2026-06-20T09:28:07Z"
+  },
+  {
+    "id": "13617616809",
+    "type": "PushEvent",
+    "actor": {
+      "id": 117957000,
+      "login": "charlie2233",
+      "display_login": "charlie2233",
+      "gravatar_id": "",
+      "url": "https://api.github.com/users/charlie2233",
+      "avatar_url": "https://avatars.githubusercontent.com/u/117957000?"
+    },
+    "repo": {
+      "id": 1201134638,
+      "name": "charlie2233/RestaurantCommentValidation_Analysis",
+      "url": "https://api.github.com/repos/charlie2233/RestaurantCommentValidation_Analysis"
+    },
+    "payload": {
+      "repository_id": 1201134638,
+      "push_id": 35905725160,
+      "ref": "refs/heads/main",
+      "head": "e7b4a75ec08400fe383735afb9f1c216051816ba",
+      "before": "59dc245f14906ce4d0c155cc9c6bdc099b10cc9f"
+    },
+    "public": true,
+    "created_at": "2026-06-20T09:27:05Z"
+  },
+  {
+    "id": "13617590519",
+    "type": "PushEvent",
+    "actor": {
+      "id": 117957000,
+      "login": "charlie2233",
+      "display_login": "charlie2233",
+      "gravatar_id": "",
+      "url": "https://api.github.com/users/charlie2233",
+      "avatar_url": "https://avatars.githubusercontent.com/u/117957000?"
+    },
+    "repo": {
+      "id": 1220099958,
+      "name": "charlie2233/coursebinder-ai-ready-google-classroom-exporter",
+      "url": "https://api.github.com/repos/charlie2233/coursebinder-ai-ready-google-classroom-exporter"
+    },
+    "payload": {
+      "repository_id": 1220099958,
+      "push_id": 35905698808,
+      "ref": "refs/heads/main",
+      "head": "496c62d78af4d259dfd92403e2bf3d72246cac30",
+      "before": "5ca072d79698df03d3bd4b1788ee806c15476761"
+    },
+    "public": true,
+    "created_at": "2026-06-20T09:25:54Z"
+  },
+  {
+    "id": "13617584652",
+    "type": "PushEvent",
+    "actor": {
+      "id": 117957000,
+      "login": "charlie2233",
+      "display_login": "charlie2233",
+      "gravatar_id": "",
+      "url": "https://api.github.com/users/charlie2233",
+      "avatar_url": "https://avatars.githubusercontent.com/u/117957000?"
+    },
+    "repo": {
+      "id": 1061040738,
+      "name": "charlie2233/ai-hoops-board",
+      "url": "https://api.github.com/repos/charlie2233/ai-hoops-board"
+    },
+    "payload": {
+      "repository_id": 1061040738,
+      "push_id": 35905692824,
+      "ref": "refs/heads/codex/build-formative-practice-exporter",
+      "head": "bab7bcdb8301681c5d5bf32af824a84ac8c0c2c9",
+      "before": "e081d7f2a19c5863d861db6a31b285c3798b04df"
+    },
+    "public": true,
+    "created_at": "2026-06-20T09:25:38Z"
+  },
+  {
+    "id": "13617540670",
+    "type": "PushEvent",
+    "actor": {
+      "id": 117957000,
+      "login": "charlie2233",
+      "display_login": "charlie2233",
+      "gravatar_id": "",
+      "url": "https://api.github.com/users/charlie2233",
+      "avatar_url": "https://avatars.githubusercontent.com/u/117957000?"
+    },
+    "repo": {
+      "id": 1201134638,
+      "name": "charlie2233/RestaurantCommentValidation_Analysis",
+      "url": "https://api.github.com/repos/charlie2233/RestaurantCommentValidation_Analysis"
+    },
+    "payload": {
+      "repository_id": 1201134638,
+      "push_id": 35905648945,
+      "ref": "refs/heads/main",
+      "head": "59dc245f14906ce4d0c155cc9c6bdc099b10cc9f",
+      "before": "c0b01f7a886d7af7dfbce402422f033fab1576ca"
+    },
+    "public": true,
+    "created_at": "2026-06-20T09:23:40Z"
+  },
+  {
+    "id": "13617482463",
+    "type": "PushEvent",
+    "actor": {
+      "id": 117957000,
+      "login": "charlie2233",
+      "display_login": "charlie2233",
+      "gravatar_id": "",
+      "url": "https://api.github.com/users/charlie2233",
+      "avatar_url": "https://avatars.githubusercontent.com/u/117957000?"
+    },
+    "repo": {
+      "id": 1220099958,
+      "name": "charlie2233/coursebinder-ai-ready-google-classroom-exporter",
+      "url": "https://api.github.com/repos/charlie2233/coursebinder-ai-ready-google-classroom-exporter"
+    },
+    "payload": {
+      "repository_id": 1220099958,
+      "push_id": 35905590635,
+      "ref": "refs/heads/main",
+      "head": "5ca072d79698df03d3bd4b1788ee806c15476761",
+      "before": "c1d71e4b51d70dfced60f5fb885c3ac25b2179b0"
+    },
+    "public": true,
+    "created_at": "2026-06-20T09:21:00Z"
+  },
+  {
+    "id": "13617479454",
+    "type": "PushEvent",
+    "actor": {
+      "id": 117957000,
+      "login": "charlie2233",
+      "display_login": "charlie2233",
+      "gravatar_id": "",
+      "url": "https://api.github.com/users/charlie2233",
+      "avatar_url": "https://avatars.githubusercontent.com/u/117957000?"
+    },
+    "repo": {
+      "id": 1061040738,
+      "name": "charlie2233/ai-hoops-board",
+      "url": "https://api.github.com/repos/charlie2233/ai-hoops-board"
+    },
+    "payload": {
+      "repository_id": 1061040738,
+      "push_id": 35905587677,
+      "ref": "refs/heads/codex/build-formative-practice-exporter",
+      "head": "e081d7f2a19c5863d861db6a31b285c3798b04df",
+      "before": "5076609934b66e41c5afb82f0264c9180e948f2f"
+    },
+    "public": true,
+    "created_at": "2026-06-20T09:20:52Z"
+  },
+  {
+    "id": "13617458298",
+    "type": "PushEvent",
+    "actor": {
+      "id": 117957000,
+      "login": "charlie2233",
+      "display_login": "charlie2233",
+      "gravatar_id": "",
+      "url": "https://api.github.com/users/charlie2233",
+      "avatar_url": "https://avatars.githubusercontent.com/u/117957000?"
+    },
+    "repo": {
+      "id": 1201134638,
+      "name": "charlie2233/RestaurantCommentValidation_Analysis",
+      "url": "https://api.github.com/repos/charlie2233/RestaurantCommentValidation_Analysis"
+    },
+    "payload": {
+      "repository_id": 1201134638,
+      "push_id": 35905566409,
+      "ref": "refs/heads/main",
+      "head": "c0b01f7a886d7af7dfbce402422f033fab1576ca",
+      "before": "07d11280983503e5ef5222f9a29dc8910ee4b6c2"
+    },
+    "public": true,
+    "created_at": "2026-06-20T09:19:56Z"
+  },
+  {
+    "id": "13617419717",
+    "type": "PushEvent",
+    "actor": {
+      "id": 117957000,
+      "login": "charlie2233",
+      "display_login": "charlie2233",
+      "gravatar_id": "",
+      "url": "https://api.github.com/users/charlie2233",
+      "avatar_url": "https://avatars.githubusercontent.com/u/117957000?"
+    },
+    "repo": {
+      "id": 1220099958,
+      "name": "charlie2233/coursebinder-ai-ready-google-classroom-exporter",
+      "url": "https://api.github.com/repos/charlie2233/coursebinder-ai-ready-google-classroom-exporter"
+    },
+    "payload": {
+      "repository_id": 1220099958,
+      "push_id": 35905527711,
+      "ref": "refs/heads/main",
+      "head": "c1d71e4b51d70dfced60f5fb885c3ac25b2179b0",
+      "before": "7c9c7b597c3321b255bf54867c56e1c04905472d"
+    },
+    "public": true,
+    "created_at": "2026-06-20T09:18:11Z"
+  },
+  {
+    "id": "13617415469",
+    "type": "PushEvent",
+    "actor": {
+      "id": 117957000,
+      "login": "charlie2233",
+      "display_login": "charlie2233",
+      "gravatar_id": "",
+      "url": "https://api.github.com/users/charlie2233",
+      "avatar_url": "https://avatars.githubusercontent.com/u/117957000?"
+    },
+    "repo": {
+      "id": 1061040738,
+      "name": "charlie2233/ai-hoops-board",
+      "url": "https://api.github.com/repos/charlie2233/ai-hoops-board"
+    },
+    "payload": {
+      "repository_id": 1061040738,
+      "push_id": 35905523608,
+      "ref": "refs/heads/codex/build-formative-practice-exporter",
+      "head": "5076609934b66e41c5afb82f0264c9180e948f2f",
+      "before": "48413f7591f604e2c49dbde38410e6eef71f67dc"
+    },
+    "public": true,
+    "created_at": "2026-06-20T09:18:01Z"
+  },
+  {
+    "id": "13617377749",
+    "type": "PushEvent",
+    "actor": {
+      "id": 117957000,
+      "login": "charlie2233",
+      "display_login": "charlie2233",
+      "gravatar_id": "",
+      "url": "https://api.github.com/users/charlie2233",
+      "avatar_url": "https://avatars.githubusercontent.com/u/117957000?"
+    },
+    "repo": {
+      "id": 1201134638,
+      "name": "charlie2233/RestaurantCommentValidation_Analysis",
+      "url": "https://api.github.com/repos/charlie2233/RestaurantCommentValidation_Analysis"
+    },
+    "payload": {
+      "repository_id": 1201134638,
+      "push_id": 35905485854,
+      "ref": "refs/heads/main",
+      "head": "07d11280983503e5ef5222f9a29dc8910ee4b6c2",
+      "before": "de97dfe228fdf59a5739ac621d2b8759e5cb5d56"
+    },
+    "public": true,
+    "created_at": "2026-06-20T09:16:16Z"
+  },
+  {
+    "id": "13617359068",
+    "type": "PushEvent",
+    "actor": {
+      "id": 117957000,
+      "login": "charlie2233",
+      "display_login": "charlie2233",
+      "gravatar_id": "",
+      "url": "https://api.github.com/users/charlie2233",
+      "avatar_url": "https://avatars.githubusercontent.com/u/117957000?"
+    },
+    "repo": {
+      "id": 1220099958,
+      "name": "charlie2233/coursebinder-ai-ready-google-classroom-exporter",
+      "url": "https://api.github.com/repos/charlie2233/coursebinder-ai-ready-google-classroom-exporter"
+    },
+    "payload": {
+      "repository_id": 1220099958,
+      "push_id": 35905467185,
+      "ref": "refs/heads/main",
+      "head": "7c9c7b597c3321b255bf54867c56e1c04905472d",
+      "before": "6c433749564e88606178b68801b0cada2c58b782"
+    },
+    "public": true,
+    "created_at": "2026-06-20T09:15:27Z"
+  },
+  {
+    "id": "13617355885",
+    "type": "PushEvent",
+    "actor": {
+      "id": 117957000,
+      "login": "charlie2233",
+      "display_login": "charlie2233",
+      "gravatar_id": "",
+      "url": "https://api.github.com/users/charlie2233",
+      "avatar_url": "https://avatars.githubusercontent.com/u/117957000?"
+    },
+    "repo": {
+      "id": 1061040738,
+      "name": "charlie2233/ai-hoops-board",
+      "url": "https://api.github.com/repos/charlie2233/ai-hoops-board"
+    },
+    "payload": {
+      "repository_id": 1061040738,
+      "push_id": 35905463929,
+      "ref": "refs/heads/codex/build-formative-practice-exporter",
+      "head": "48413f7591f604e2c49dbde38410e6eef71f67dc",
+      "before": "478d0e9dc9bf4de71649042b704ce9ef81a04b4e"
+    },
+    "public": true,
+    "created_at": "2026-06-20T09:15:18Z"
+  },
+  {
+    "id": "13617318966",
+    "type": "PushEvent",
+    "actor": {
+      "id": 117957000,
+      "login": "charlie2233",
+      "display_login": "charlie2233",
+      "gravatar_id": "",
+      "url": "https://api.github.com/users/charlie2233",
+      "avatar_url": "https://avatars.githubusercontent.com/u/117957000?"
+    },
+    "repo": {
+      "id": 1201134638,
+      "name": "charlie2233/RestaurantCommentValidation_Analysis",
+      "url": "https://api.github.com/repos/charlie2233/RestaurantCommentValidation_Analysis"
+    },
+    "payload": {
+      "repository_id": 1201134638,
+      "push_id": 35905426969,
+      "ref": "refs/heads/main",
+      "head": "de97dfe228fdf59a5739ac621d2b8759e5cb5d56",
+      "before": "2990b9fa58b8d115cf72fb252abeb1c8f5dbfc96"
+    },
+    "public": true,
+    "created_at": "2026-06-20T09:13:35Z"
+  },
+  {
+    "id": "13617305122",
+    "type": "PushEvent",
+    "actor": {
+      "id": 117957000,
+      "login": "charlie2233",
+      "display_login": "charlie2233",
+      "gravatar_id": "",
+      "url": "https://api.github.com/users/charlie2233",
+      "avatar_url": "https://avatars.githubusercontent.com/u/117957000?"
+    },
+    "repo": {
+      "id": 1220099958,
+      "name": "charlie2233/coursebinder-ai-ready-google-classroom-exporter",
+      "url": "https://api.github.com/repos/charlie2233/coursebinder-ai-ready-google-classroom-exporter"
+    },
+    "payload": {
+      "repository_id": 1220099958,
+      "push_id": 35905413097,
+      "ref": "refs/heads/main",
+      "head": "6c433749564e88606178b68801b0cada2c58b782",
+      "before": "9279b95ea860f7b50bafe16d2246a3c32de03abf"
+    },
+    "public": true,
+    "created_at": "2026-06-20T09:12:55Z"
+  },
+  {
+    "id": "13617302282",
+    "type": "PushEvent",
+    "actor": {
+      "id": 117957000,
+      "login": "charlie2233",
+      "display_login": "charlie2233",
+      "gravatar_id": "",
+      "url": "https://api.github.com/users/charlie2233",
+      "avatar_url": "https://avatars.githubusercontent.com/u/117957000?"
+    },
+    "repo": {
+      "id": 1061040738,
+      "name": "charlie2233/ai-hoops-board",
+      "url": "https://api.github.com/repos/charlie2233/ai-hoops-board"
+    },
+    "payload": {
+      "repository_id": 1061040738,
+      "push_id": 35905410222,
+      "ref": "refs/heads/codex/build-formative-practice-exporter",
+      "head": "478d0e9dc9bf4de71649042b704ce9ef81a04b4e",
+      "before": "97049455944acbb0d27d2f2b62dc2feee879d711"
+    },
+    "public": true,
+    "created_at": "2026-06-20T09:12:46Z"
+  },
+  {
+    "id": "13617250968",
+    "type": "PushEvent",
+    "actor": {
+      "id": 117957000,
+      "login": "charlie2233",
+      "display_login": "charlie2233",
+      "gravatar_id": "",
+      "url": "https://api.github.com/users/charlie2233",
+      "avatar_url": "https://avatars.githubusercontent.com/u/117957000?"
+    },
+    "repo": {
+      "id": 1220099958,
+      "name": "charlie2233/coursebinder-ai-ready-google-classroom-exporter",
+      "url": "https://api.github.com/repos/charlie2233/coursebinder-ai-ready-google-classroom-exporter"
+    },
+    "payload": {
+      "repository_id": 1220099958,
+      "push_id": 35905358881,
+      "ref": "refs/heads/main",
+      "head": "9279b95ea860f7b50bafe16d2246a3c32de03abf",
+      "before": "7f449390199229bd9d8c07317846297c67449fe0"
+    },
+    "public": true,
+    "created_at": "2026-06-20T09:10:26Z"
+  },
+  {
+    "id": "13617247186",
+    "type": "PushEvent",
+    "actor": {
+      "id": 117957000,
+      "login": "charlie2233",
+      "display_login": "charlie2233",
+      "gravatar_id": "",
+      "url": "https://api.github.com/users/charlie2233",
+      "avatar_url": "https://avatars.githubusercontent.com/u/117957000?"
+    },
+    "repo": {
+      "id": 1061040738,
+      "name": "charlie2233/ai-hoops-board",
+      "url": "https://api.github.com/repos/charlie2233/ai-hoops-board"
+    },
+    "payload": {
+      "repository_id": 1061040738,
+      "push_id": 35905355084,
+      "ref": "refs/heads/codex/build-formative-practice-exporter",
+      "head": "97049455944acbb0d27d2f2b62dc2feee879d711",
+      "before": "f92612ba38fef20fbf03cbcca45f4db3434e70b8"
+    },
+    "public": true,
+    "created_at": "2026-06-20T09:10:15Z"
+  },
+  {
+    "id": "13617243017",
+    "type": "PushEvent",
+    "actor": {
+      "id": 117957000,
+      "login": "charlie2233",
+      "display_login": "charlie2233",
+      "gravatar_id": "",
+      "url": "https://api.github.com/users/charlie2233",
+      "avatar_url": "https://avatars.githubusercontent.com/u/117957000?"
+    },
+    "repo": {
+      "id": 1201134638,
+      "name": "charlie2233/RestaurantCommentValidation_Analysis",
+      "url": "https://api.github.com/repos/charlie2233/RestaurantCommentValidation_Analysis"
+    },
+    "payload": {
+      "repository_id": 1201134638,
+      "push_id": 35905350935,
+      "ref": "refs/heads/main",
+      "head": "2990b9fa58b8d115cf72fb252abeb1c8f5dbfc96",
+      "before": "938b1689be08ba3354ebc12b2b849e55fd819a22"
+    },
+    "public": true,
+    "created_at": "2026-06-20T09:10:05Z"
+  },
+  {
+    "id": "13617195602",
+    "type": "PushEvent",
+    "actor": {
+      "id": 117957000,
+      "login": "charlie2233",
+      "display_login": "charlie2233",
+      "gravatar_id": "",
+      "url": "https://api.github.com/users/charlie2233",
+      "avatar_url": "https://avatars.githubusercontent.com/u/117957000?"
+    },
+    "repo": {
+      "id": 1201134638,
+      "name": "charlie2233/RestaurantCommentValidation_Analysis",
+      "url": "https://api.github.com/repos/charlie2233/RestaurantCommentValidation_Analysis"
+    },
+    "payload": {
+      "repository_id": 1201134638,
+      "push_id": 35905303443,
+      "ref": "refs/heads/main",
+      "head": "938b1689be08ba3354ebc12b2b849e55fd819a22",
+      "before": "792d3f6cbdb4c8439ede2758c4a3958b1c1eb851"
+    },
+    "public": true,
+    "created_at": "2026-06-20T09:07:49Z"
+  },
+  {
+    "id": "13617194851",
+    "type": "PushEvent",
+    "actor": {
+      "id": 117957000,
+      "login": "charlie2233",
+      "display_login": "charlie2233",
+      "gravatar_id": "",
+      "url": "https://api.github.com/users/charlie2233",
+      "avatar_url": "https://avatars.githubusercontent.com/u/117957000?"
+    },
+    "repo": {
+      "id": 1220099958,
+      "name": "charlie2233/coursebinder-ai-ready-google-classroom-exporter",
+      "url": "https://api.github.com/repos/charlie2233/coursebinder-ai-ready-google-classroom-exporter"
+    },
+    "payload": {
+      "repository_id": 1220099958,
+      "push_id": 35905302705,
+      "ref": "refs/heads/main",
+      "head": "7f449390199229bd9d8c07317846297c67449fe0",
+      "before": "8fa5962238f0d73dbd07d098e424fbe31fbcb641"
+    },
+    "public": true,
+    "created_at": "2026-06-20T09:07:47Z"
+  },
+  {
+    "id": "13617191204",
+    "type": "PushEvent",
+    "actor": {
+      "id": 117957000,
+      "login": "charlie2233",
+      "display_login": "charlie2233",
+      "gravatar_id": "",
+      "url": "https://api.github.com/users/charlie2233",
+      "avatar_url": "https://avatars.githubusercontent.com/u/117957000?"
+    },
+    "repo": {
+      "id": 1061040738,
+      "name": "charlie2233/ai-hoops-board",
+      "url": "https://api.github.com/repos/charlie2233/ai-hoops-board"
+    },
+    "payload": {
+      "repository_id": 1061040738,
+      "push_id": 35905299045,
+      "ref": "refs/heads/codex/build-formative-practice-exporter",
+      "head": "f92612ba38fef20fbf03cbcca45f4db3434e70b8",
+      "before": "34ab5bba4f34beddcb7aa03346d0dfb06d0654f3"
+    },
+    "public": true,
+    "created_at": "2026-06-20T09:07:37Z"
+  },
+  {
+    "id": "13617138290",
+    "type": "PushEvent",
+    "actor": {
+      "id": 117957000,
+      "login": "charlie2233",
+      "display_login": "charlie2233",
+      "gravatar_id": "",
+      "url": "https://api.github.com/users/charlie2233",
+      "avatar_url": "https://avatars.githubusercontent.com/u/117957000?"
+    },
+    "repo": {
+      "id": 1201134638,
+      "name": "charlie2233/RestaurantCommentValidation_Analysis",
+      "url": "https://api.github.com/repos/charlie2233/RestaurantCommentValidation_Analysis"
+    },
+    "payload": {
+      "repository_id": 1201134638,
+      "push_id": 35905246049,
+      "ref": "refs/heads/main",
+      "head": "792d3f6cbdb4c8439ede2758c4a3958b1c1eb851",
+      "before": "db997695bbc3425d1646e60528e1e48ebd79ab6a"
+    },
+    "public": true,
+    "created_at": "2026-06-20T09:05:14Z"
+  },
+  {
+    "id": "13616133861",
+    "type": "PushEvent",
+    "actor": {
+      "id": 117957000,
+      "login": "charlie2233",
+      "display_login": "charlie2233",
+      "gravatar_id": "",
+      "url": "https://api.github.com/users/charlie2233",
+      "avatar_url": "https://avatars.githubusercontent.com/u/117957000?"
+    },
+    "repo": {
+      "id": 1220099958,
+      "name": "charlie2233/coursebinder-ai-ready-google-classroom-exporter",
+      "url": "https://api.github.com/repos/charlie2233/coursebinder-ai-ready-google-classroom-exporter"
+    },
+    "payload": {
+      "repository_id": 1220099958,
+      "push_id": 35904239401,
+      "ref": "refs/heads/main",
+      "head": "8fa5962238f0d73dbd07d098e424fbe31fbcb641",
+      "before": "24138dca9bf022a4ba9983238953971c18d2f7ac"
+    },
+    "public": true,
+    "created_at": "2026-06-20T08:20:13Z"
+  },
+  {
+    "id": "13616129682",
+    "type": "PushEvent",
+    "actor": {
+      "id": 117957000,
+      "login": "charlie2233",
+      "display_login": "charlie2233",
+      "gravatar_id": "",
+      "url": "https://api.github.com/users/charlie2233",
+      "avatar_url": "https://avatars.githubusercontent.com/u/117957000?"
+    },
+    "repo": {
+      "id": 1061040738,
+      "name": "charlie2233/ai-hoops-board",
+      "url": "https://api.github.com/repos/charlie2233/ai-hoops-board"
+    },
+    "payload": {
+      "repository_id": 1061040738,
+      "push_id": 35904235365,
+      "ref": "refs/heads/codex/build-formative-practice-exporter",
+      "head": "34ab5bba4f34beddcb7aa03346d0dfb06d0654f3",
+      "before": "e41b29abe3226f09169aff041e3e34a8037817b6"
+    },
+    "public": true,
+    "created_at": "2026-06-20T08:20:03Z"
+  },
+  {
+    "id": "13616120749",
+    "type": "PushEvent",
+    "actor": {
+      "id": 117957000,
+      "login": "charlie2233",
+      "display_login": "charlie2233",
+      "gravatar_id": "",
+      "url": "https://api.github.com/users/charlie2233",
+      "avatar_url": "https://avatars.githubusercontent.com/u/117957000?"
+    },
+    "repo": {
+      "id": 1201134638,
+      "name": "charlie2233/RestaurantCommentValidation_Analysis",
+      "url": "https://api.github.com/repos/charlie2233/RestaurantCommentValidation_Analysis"
+    },
+    "payload": {
+      "repository_id": 1201134638,
+      "push_id": 35904226436,
+      "ref": "refs/heads/main",
+      "head": "db997695bbc3425d1646e60528e1e48ebd79ab6a",
+      "before": "6410e38ca206e7944fc13ba5334ef6393ca9e5a9"
+    },
+    "public": true,
+    "created_at": "2026-06-20T08:19:39Z"
+  },
+  {
+    "id": "13616069720",
+    "type": "PushEvent",
+    "actor": {
+      "id": 117957000,
+      "login": "charlie2233",
+      "display_login": "charlie2233",
+      "gravatar_id": "",
+      "url": "https://api.github.com/users/charlie2233",
+      "avatar_url": "https://avatars.githubusercontent.com/u/117957000?"
+    },
+    "repo": {
+      "id": 1201134638,
+      "name": "charlie2233/RestaurantCommentValidation_Analysis",
+      "url": "https://api.github.com/repos/charlie2233/RestaurantCommentValidation_Analysis"
+    },
+    "payload": {
+      "repository_id": 1201134638,
+      "push_id": 35904175428,
+      "ref": "refs/heads/main",
+      "head": "6410e38ca206e7944fc13ba5334ef6393ca9e5a9",
+      "before": "1c660a8c3a81326854fac299fa623e3d25d62b45"
+    },
+    "public": true,
+    "created_at": "2026-06-20T08:17:23Z"
+  },
+  {
+    "id": "13616023311",
+    "type": "PushEvent",
+    "actor": {
+      "id": 117957000,
+      "login": "charlie2233",
+      "display_login": "charlie2233",
+      "gravatar_id": "",
+      "url": "https://api.github.com/users/charlie2233",
+      "avatar_url": "https://avatars.githubusercontent.com/u/117957000?"
+    },
+    "repo": {
+      "id": 1201134638,
+      "name": "charlie2233/RestaurantCommentValidation_Analysis",
+      "url": "https://api.github.com/repos/charlie2233/RestaurantCommentValidation_Analysis"
+    },
+    "payload": {
+      "repository_id": 1201134638,
+      "push_id": 35904128779,
+      "ref": "refs/heads/main",
+      "head": "1c660a8c3a81326854fac299fa623e3d25d62b45",
+      "before": "1ea0127709c171cf1d611494a058ab8b448c86d5"
+    },
+    "public": true,
+    "created_at": "2026-06-20T08:15:18Z"
+  },
+  {
+    "id": "13615621049",
+    "type": "PushEvent",
+    "actor": {
+      "id": 117957000,
+      "login": "charlie2233",
+      "display_login": "charlie2233",
+      "gravatar_id": "",
+      "url": "https://api.github.com/users/charlie2233",
+      "avatar_url": "https://avatars.githubusercontent.com/u/117957000?"
+    },
+    "repo": {
+      "id": 1201134638,
+      "name": "charlie2233/RestaurantCommentValidation_Analysis",
+      "url": "https://api.github.com/repos/charlie2233/RestaurantCommentValidation_Analysis"
+    },
+    "payload": {
+      "repository_id": 1201134638,
+      "push_id": 35903725658,
+      "ref": "refs/heads/main",
+      "head": "1ea0127709c171cf1d611494a058ab8b448c86d5",
+      "before": "3a5799400875243785f1c8a389771e073cd302db"
+    },
+    "public": true,
+    "created_at": "2026-06-20T07:57:44Z"
+  },
+  {
+    "id": "13615575227",
+    "type": "PushEvent",
+    "actor": {
+      "id": 117957000,
+      "login": "charlie2233",
+      "display_login": "charlie2233",
+      "gravatar_id": "",
+      "url": "https://api.github.com/users/charlie2233",
+      "avatar_url": "https://avatars.githubusercontent.com/u/117957000?"
+    },
+    "repo": {
+      "id": 1220099958,
+      "name": "charlie2233/coursebinder-ai-ready-google-classroom-exporter",
+      "url": "https://api.github.com/repos/charlie2233/coursebinder-ai-ready-google-classroom-exporter"
+    },
+    "payload": {
+      "repository_id": 1220099958,
+      "push_id": 35903679809,
+      "ref": "refs/heads/main",
+      "head": "24138dca9bf022a4ba9983238953971c18d2f7ac",
+      "before": "b02f72f8670c1370926a6dca32f34a241e4dfe75"
+    },
+    "public": true,
+    "created_at": "2026-06-20T07:55:37Z"
+  },
+  {
+    "id": "13615570492",
+    "type": "PushEvent",
+    "actor": {
+      "id": 117957000,
+      "login": "charlie2233",
+      "display_login": "charlie2233",
+      "gravatar_id": "",
+      "url": "https://api.github.com/users/charlie2233",
+      "avatar_url": "https://avatars.githubusercontent.com/u/117957000?"
+    },
+    "repo": {
+      "id": 1061040738,
+      "name": "charlie2233/ai-hoops-board",
+      "url": "https://api.github.com/repos/charlie2233/ai-hoops-board"
+    },
+    "payload": {
+      "repository_id": 1061040738,
+      "push_id": 35903675026,
+      "ref": "refs/heads/codex/build-formative-practice-exporter",
+      "head": "e41b29abe3226f09169aff041e3e34a8037817b6",
+      "before": "c06828b03dbacd6a35907cf4941298b9fa0839b8"
+    },
+    "public": true,
+    "created_at": "2026-06-20T07:55:24Z"
+  },
+  {
+    "id": "13615329239",
+    "type": "PushEvent",
+    "actor": {
+      "id": 117957000,
+      "login": "charlie2233",
+      "display_login": "charlie2233",
+      "gravatar_id": "",
+      "url": "https://api.github.com/users/charlie2233",
+      "avatar_url": "https://avatars.githubusercontent.com/u/117957000?"
+    },
+    "repo": {
+      "id": 1201134638,
+      "name": "charlie2233/RestaurantCommentValidation_Analysis",
+      "url": "https://api.github.com/repos/charlie2233/RestaurantCommentValidation_Analysis"
+    },
+    "payload": {
+      "repository_id": 1201134638,
+      "push_id": 35903433301,
+      "ref": "refs/heads/main",
+      "head": "3a5799400875243785f1c8a389771e073cd302db",
+      "before": "7c79a09629db5f5e98b7bd3dda87e584270ec471"
+    },
+    "public": true,
+    "created_at": "2026-06-20T07:44:14Z"
+  },
+  {
+    "id": "13615268613",
+    "type": "PushEvent",
+    "actor": {
+      "id": 117957000,
+      "login": "charlie2233",
+      "display_login": "charlie2233",
+      "gravatar_id": "",
+      "url": "https://api.github.com/users/charlie2233",
+      "avatar_url": "https://avatars.githubusercontent.com/u/117957000?"
+    },
+    "repo": {
+      "id": 1201134638,
+      "name": "charlie2233/RestaurantCommentValidation_Analysis",
+      "url": "https://api.github.com/repos/charlie2233/RestaurantCommentValidation_Analysis"
+    },
+    "payload": {
+      "repository_id": 1201134638,
+      "push_id": 35903372659,
+      "ref": "refs/heads/main",
+      "head": "7c79a09629db5f5e98b7bd3dda87e584270ec471",
+      "before": "65af39374a01903879d783e60853140e3992d29e"
+    },
+    "public": true,
+    "created_at": "2026-06-20T07:41:20Z"
+  },
+  {
+    "id": "13615262748",
+    "type": "PushEvent",
+    "actor": {
+      "id": 117957000,
+      "login": "charlie2233",
+      "display_login": "charlie2233",
+      "gravatar_id": "",
+      "url": "https://api.github.com/users/charlie2233",
+      "avatar_url": "https://avatars.githubusercontent.com/u/117957000?"
+    },
+    "repo": {
+      "id": 1220099958,
+      "name": "charlie2233/coursebinder-ai-ready-google-classroom-exporter",
+      "url": "https://api.github.com/repos/charlie2233/coursebinder-ai-ready-google-classroom-exporter"
+    },
+    "payload": {
+      "repository_id": 1220099958,
+      "push_id": 35903366836,
+      "ref": "refs/heads/main",
+      "head": "b02f72f8670c1370926a6dca32f34a241e4dfe75",
+      "before": "7d392cee5bf99af5cb350bef40a2f1d4d96ced8c"
+    },
+    "public": true,
+    "created_at": "2026-06-20T07:41:05Z"
+  },
+  {
+    "id": "13615258930",
+    "type": "PushEvent",
+    "actor": {
+      "id": 117957000,
+      "login": "charlie2233",
+      "display_login": "charlie2233",
+      "gravatar_id": "",
+      "url": "https://api.github.com/users/charlie2233",
+      "avatar_url": "https://avatars.githubusercontent.com/u/117957000?"
+    },
+    "repo": {
+      "id": 1061040738,
+      "name": "charlie2233/ai-hoops-board",
+      "url": "https://api.github.com/repos/charlie2233/ai-hoops-board"
+    },
+    "payload": {
+      "repository_id": 1061040738,
+      "push_id": 35903363042,
+      "ref": "refs/heads/codex/build-formative-practice-exporter",
+      "head": "c06828b03dbacd6a35907cf4941298b9fa0839b8",
+      "before": "3d1b55955c89ec1a9273c4739d79e0d6a4886c54"
+    },
+    "public": true,
+    "created_at": "2026-06-20T07:40:54Z"
+  },
+  {
+    "id": "13615196809",
+    "type": "PushEvent",
+    "actor": {
+      "id": 117957000,
+      "login": "charlie2233",
+      "display_login": "charlie2233",
+      "gravatar_id": "",
+      "url": "https://api.github.com/users/charlie2233",
+      "avatar_url": "https://avatars.githubusercontent.com/u/117957000?"
+    },
+    "repo": {
+      "id": 1201134638,
+      "name": "charlie2233/RestaurantCommentValidation_Analysis",
+      "url": "https://api.github.com/repos/charlie2233/RestaurantCommentValidation_Analysis"
+    },
+    "payload": {
+      "repository_id": 1201134638,
+      "push_id": 35903300839,
+      "ref": "refs/heads/main",
+      "head": "65af39374a01903879d783e60853140e3992d29e",
+      "before": "adb643ec9613ea2b86c6fe80b81a041883fc1687"
+    },
+    "public": true,
+    "created_at": "2026-06-20T07:37:59Z"
+  },
+  {
+    "id": "13615179461",
+    "type": "PushEvent",
+    "actor": {
+      "id": 117957000,
+      "login": "charlie2233",
+      "display_login": "charlie2233",
+      "gravatar_id": "",
+      "url": "https://api.github.com/users/charlie2233",
+      "avatar_url": "https://avatars.githubusercontent.com/u/117957000?"
+    },
+    "repo": {
+      "id": 1220099958,
+      "name": "charlie2233/coursebinder-ai-ready-google-classroom-exporter",
+      "url": "https://api.github.com/repos/charlie2233/coursebinder-ai-ready-google-classroom-exporter"
+    },
+    "payload": {
+      "repository_id": 1220099958,
+      "push_id": 35903283402,
+      "ref": "refs/heads/main",
+      "head": "7d392cee5bf99af5cb350bef40a2f1d4d96ced8c",
+      "before": "7936b8cafa73b60d3a31e131ca7e028ad5a29b12"
+    },
+    "public": true,
+    "created_at": "2026-06-20T07:37:09Z"
+  },
+  {
+    "id": "13615176052",
+    "type": "PushEvent",
+    "actor": {
+      "id": 117957000,
+      "login": "charlie2233",
+      "display_login": "charlie2233",
+      "gravatar_id": "",
+      "url": "https://api.github.com/users/charlie2233",
+      "avatar_url": "https://avatars.githubusercontent.com/u/117957000?"
+    },
+    "repo": {
+      "id": 1061040738,
+      "name": "charlie2233/ai-hoops-board",
+      "url": "https://api.github.com/repos/charlie2233/ai-hoops-board"
+    },
+    "payload": {
+      "repository_id": 1061040738,
+      "push_id": 35903280060,
+      "ref": "refs/heads/codex/build-formative-practice-exporter",
+      "head": "3d1b55955c89ec1a9273c4739d79e0d6a4886c54",
+      "before": "b1ff29fb0525b182c23b35e3eb2f6b490c85e91d"
+    },
+    "public": true,
+    "created_at": "2026-06-20T07:37:00Z"
+  },
+  {
+    "id": "13615147703",
+    "type": "PushEvent",
+    "actor": {
+      "id": 117957000,
+      "login": "charlie2233",
+      "display_login": "charlie2233",
+      "gravatar_id": "",
+      "url": "https://api.github.com/users/charlie2233",
+      "avatar_url": "https://avatars.githubusercontent.com/u/117957000?"
+    },
+    "repo": {
+      "id": 1220099958,
+      "name": "charlie2233/coursebinder-ai-ready-google-classroom-exporter",
+      "url": "https://api.github.com/repos/charlie2233/coursebinder-ai-ready-google-classroom-exporter"
+    },
+    "payload": {
+      "repository_id": 1220099958,
+      "push_id": 35903251676,
+      "ref": "refs/heads/main",
+      "head": "7936b8cafa73b60d3a31e131ca7e028ad5a29b12",
+      "before": "16d0548bbb329b5f859f818ed51b48348379363e"
+    },
+    "public": true,
+    "created_at": "2026-06-20T07:35:41Z"
+  },
+  {
+    "id": "13615143443",
+    "type": "PushEvent",
+    "actor": {
+      "id": 117957000,
+      "login": "charlie2233",
+      "display_login": "charlie2233",
+      "gravatar_id": "",
+      "url": "https://api.github.com/users/charlie2233",
+      "avatar_url": "https://avatars.githubusercontent.com/u/117957000?"
+    },
+    "repo": {
+      "id": 1061040738,
+      "name": "charlie2233/ai-hoops-board",
+      "url": "https://api.github.com/repos/charlie2233/ai-hoops-board"
+    },
+    "payload": {
+      "repository_id": 1061040738,
+      "push_id": 35903247434,
+      "ref": "refs/heads/codex/build-formative-practice-exporter",
+      "head": "b1ff29fb0525b182c23b35e3eb2f6b490c85e91d",
+      "before": "0080c9200aca897b6a108af3559638b2ade98d1e"
+    },
+    "public": true,
+    "created_at": "2026-06-20T07:35:28Z"
+  },
+  {
+    "id": "13615136532",
+    "type": "PushEvent",
+    "actor": {
+      "id": 117957000,
+      "login": "charlie2233",
+      "display_login": "charlie2233",
+      "gravatar_id": "",
+      "url": "https://api.github.com/users/charlie2233",
+      "avatar_url": "https://avatars.githubusercontent.com/u/117957000?"
+    },
+    "repo": {
+      "id": 1201134638,
+      "name": "charlie2233/RestaurantCommentValidation_Analysis",
+      "url": "https://api.github.com/repos/charlie2233/RestaurantCommentValidation_Analysis"
+    },
+    "payload": {
+      "repository_id": 1201134638,
+      "push_id": 35903240513,
+      "ref": "refs/heads/main",
+      "head": "adb643ec9613ea2b86c6fe80b81a041883fc1687",
+      "before": "fb4616ad470e7a3b9d55482e43960d9c7355463c"
+    },
+    "public": true,
+    "created_at": "2026-06-20T07:35:09Z"
+  },
+  {
+    "id": "13615097589",
+    "type": "PushEvent",
+    "actor": {
+      "id": 117957000,
+      "login": "charlie2233",
+      "display_login": "charlie2233",
+      "gravatar_id": "",
+      "url": "https://api.github.com/users/charlie2233",
+      "avatar_url": "https://avatars.githubusercontent.com/u/117957000?"
+    },
+    "repo": {
+      "id": 1220099958,
+      "name": "charlie2233/coursebinder-ai-ready-google-classroom-exporter",
+      "url": "https://api.github.com/repos/charlie2233/coursebinder-ai-ready-google-classroom-exporter"
+    },
+    "payload": {
+      "repository_id": 1220099958,
+      "push_id": 35903201558,
+      "ref": "refs/heads/main",
+      "head": "16d0548bbb329b5f859f818ed51b48348379363e",
+      "before": "140377587845558832f9ca815e51e0f4cf50af80"
+    },
+    "public": true,
+    "created_at": "2026-06-20T07:33:17Z"
+  },
+  {
+    "id": "13615093879",
+    "type": "PushEvent",
+    "actor": {
+      "id": 117957000,
+      "login": "charlie2233",
+      "display_login": "charlie2233",
+      "gravatar_id": "",
+      "url": "https://api.github.com/users/charlie2233",
+      "avatar_url": "https://avatars.githubusercontent.com/u/117957000?"
+    },
+    "repo": {
+      "id": 1061040738,
+      "name": "charlie2233/ai-hoops-board",
+      "url": "https://api.github.com/repos/charlie2233/ai-hoops-board"
+    },
+    "payload": {
+      "repository_id": 1061040738,
+      "push_id": 35903197756,
+      "ref": "refs/heads/codex/build-formative-practice-exporter",
+      "head": "0080c9200aca897b6a108af3559638b2ade98d1e",
+      "before": "ab246a633f51a5fd272c2c1df1a0ca5f90b3371c"
+    },
+    "public": true,
+    "created_at": "2026-06-20T07:33:06Z"
+  },
+  {
+    "id": "13615076790",
+    "type": "PushEvent",
+    "actor": {
+      "id": 117957000,
+      "login": "charlie2233",
+      "display_login": "charlie2233",
+      "gravatar_id": "",
+      "url": "https://api.github.com/users/charlie2233",
+      "avatar_url": "https://avatars.githubusercontent.com/u/117957000?"
+    },
+    "repo": {
+      "id": 1201134638,
+      "name": "charlie2233/RestaurantCommentValidation_Analysis",
+      "url": "https://api.github.com/repos/charlie2233/RestaurantCommentValidation_Analysis"
+    },
+    "payload": {
+      "repository_id": 1201134638,
+      "push_id": 35903180636,
+      "ref": "refs/heads/main",
+      "head": "fb4616ad470e7a3b9d55482e43960d9c7355463c",
+      "before": "e752418164f90fb4935e8d39b8057fda15ce9b4a"
+    },
+    "public": true,
+    "created_at": "2026-06-20T07:32:19Z"
+  },
+  {
+    "id": "13615011155",
+    "type": "PushEvent",
+    "actor": {
+      "id": 117957000,
+      "login": "charlie2233",
+      "display_login": "charlie2233",
+      "gravatar_id": "",
+      "url": "https://api.github.com/users/charlie2233",
+      "avatar_url": "https://avatars.githubusercontent.com/u/117957000?"
+    },
+    "repo": {
+      "id": 1220099958,
+      "name": "charlie2233/coursebinder-ai-ready-google-classroom-exporter",
+      "url": "https://api.github.com/repos/charlie2233/coursebinder-ai-ready-google-classroom-exporter"
+    },
+    "payload": {
+      "repository_id": 1220099958,
+      "push_id": 35903114476,
+      "ref": "refs/heads/main",
+      "head": "140377587845558832f9ca815e51e0f4cf50af80",
+      "before": "8d3b87fd1f7cc8e64d128ca4af116a6b7bbfd1da"
+    },
+    "public": true,
+    "created_at": "2026-06-20T07:29:27Z"
+  },
+  {
+    "id": "13615003524",
+    "type": "PushEvent",
+    "actor": {
+      "id": 117957000,
+      "login": "charlie2233",
+      "display_login": "charlie2233",
+      "gravatar_id": "",
+      "url": "https://api.github.com/users/charlie2233",
+      "avatar_url": "https://avatars.githubusercontent.com/u/117957000?"
+    },
+    "repo": {
+      "id": 1061040738,
+      "name": "charlie2233/ai-hoops-board",
+      "url": "https://api.github.com/repos/charlie2233/ai-hoops-board"
+    },
+    "payload": {
+      "repository_id": 1061040738,
+      "push_id": 35903106848,
+      "ref": "refs/heads/codex/build-formative-practice-exporter",
+      "head": "ab246a633f51a5fd272c2c1df1a0ca5f90b3371c",
+      "before": "c1904a21fde95de34b8582e609d0e072009306b2"
+    },
+    "public": true,
+    "created_at": "2026-06-20T07:29:05Z"
+  },
+  {
+    "id": "13615000684",
+    "type": "PushEvent",
+    "actor": {
+      "id": 117957000,
+      "login": "charlie2233",
+      "display_login": "charlie2233",
+      "gravatar_id": "",
+      "url": "https://api.github.com/users/charlie2233",
+      "avatar_url": "https://avatars.githubusercontent.com/u/117957000?"
+    },
+    "repo": {
+      "id": 1201134638,
+      "name": "charlie2233/RestaurantCommentValidation_Analysis",
+      "url": "https://api.github.com/repos/charlie2233/RestaurantCommentValidation_Analysis"
+    },
+    "payload": {
+      "repository_id": 1201134638,
+      "push_id": 35903104019,
+      "ref": "refs/heads/main",
+      "head": "e752418164f90fb4935e8d39b8057fda15ce9b4a",
+      "before": "b6b3adfb408286215e9142c191a86124ba182606"
+    },
+    "public": true,
+    "created_at": "2026-06-20T07:28:57Z"
+  },
+  {
+    "id": "13614939838",
+    "type": "PushEvent",
+    "actor": {
+      "id": 117957000,
+      "login": "charlie2233",
+      "display_login": "charlie2233",
+      "gravatar_id": "",
+      "url": "https://api.github.com/users/charlie2233",
+      "avatar_url": "https://avatars.githubusercontent.com/u/117957000?"
+    },
+    "repo": {
+      "id": 1061040738,
+      "name": "charlie2233/ai-hoops-board",
+      "url": "https://api.github.com/repos/charlie2233/ai-hoops-board"
+    },
+    "payload": {
+      "repository_id": 1061040738,
+      "push_id": 35903043103,
+      "ref": "refs/heads/codex/build-formative-practice-exporter",
+      "head": "c1904a21fde95de34b8582e609d0e072009306b2",
+      "before": "23d5f10c34cd661e183b1666c7507fa0663845f1"
+    },
+    "public": true,
+    "created_at": "2026-06-20T07:26:07Z"
+  },
+  {
+    "id": "13614883078",
+    "type": "PushEvent",
+    "actor": {
+      "id": 117957000,
+      "login": "charlie2233",
+      "display_login": "charlie2233",
+      "gravatar_id": "",
+      "url": "https://api.github.com/users/charlie2233",
+      "avatar_url": "https://avatars.githubusercontent.com/u/117957000?"
+    },
+    "repo": {
+      "id": 1201134638,
+      "name": "charlie2233/RestaurantCommentValidation_Analysis",
+      "url": "https://api.github.com/repos/charlie2233/RestaurantCommentValidation_Analysis"
+    },
+    "payload": {
+      "repository_id": 1201134638,
+      "push_id": 35902986308,
+      "ref": "refs/heads/main",
+      "head": "b6b3adfb408286215e9142c191a86124ba182606",
+      "before": "3a140b64d7afad6664e8213c7f0f660932b3ae14"
+    },
+    "public": true,
+    "created_at": "2026-06-20T07:23:26Z"
+  },
+  {
+    "id": "13614801787",
+    "type": "PushEvent",
+    "actor": {
+      "id": 117957000,
+      "login": "charlie2233",
+      "display_login": "charlie2233",
+      "gravatar_id": "",
+      "url": "https://api.github.com/users/charlie2233",
+      "avatar_url": "https://avatars.githubusercontent.com/u/117957000?"
+    },
+    "repo": {
+      "id": 1061040738,
+      "name": "charlie2233/ai-hoops-board",
+      "url": "https://api.github.com/repos/charlie2233/ai-hoops-board"
+    },
+    "payload": {
+      "repository_id": 1061040738,
+      "push_id": 35902904912,
+      "ref": "refs/heads/codex/build-formative-practice-exporter",
+      "head": "23d5f10c34cd661e183b1666c7507fa0663845f1",
+      "before": "adaa985e89a71f92d715465a869460ee10850e3d"
+    },
+    "public": true,
+    "created_at": "2026-06-20T07:19:46Z"
+  },
+  {
+    "id": "13614773832",
+    "type": "DeleteEvent",
+    "actor": {
+      "id": 117957000,
+      "login": "charlie2233",
+      "display_login": "charlie2233",
+      "gravatar_id": "",
+      "url": "https://api.github.com/users/charlie2233",
+      "avatar_url": "https://avatars.githubusercontent.com/u/117957000?"
+    },
+    "repo": {
+      "id": 1201134638,
+      "name": "charlie2233/RestaurantCommentValidation_Analysis",
+      "url": "https://api.github.com/repos/charlie2233/RestaurantCommentValidation_Analysis"
+    },
+    "payload": {
+      "ref": "copilot/setup-repository-skeleton",
+      "ref_type": "branch",
+      "full_ref": "refs/heads/copilot/setup-repository-skeleton",
+      "pusher_type": "user"
+    },
+    "public": true,
+    "created_at": "2026-06-20T07:18:41Z"
+  },
+  {
+    "id": "13614773830",
+    "type": "DeleteEvent",
+    "actor": {
+      "id": 117957000,
+      "login": "charlie2233",
+      "display_login": "charlie2233",
+      "gravatar_id": "",
+      "url": "https://api.github.com/users/charlie2233",
+      "avatar_url": "https://avatars.githubusercontent.com/u/117957000?"
+    },
+    "repo": {
+      "id": 1201134638,
+      "name": "charlie2233/RestaurantCommentValidation_Analysis",
+      "url": "https://api.github.com/repos/charlie2233/RestaurantCommentValidation_Analysis"
+    },
+    "payload": {
+      "ref": "codex/validate-workbook",
+      "ref_type": "branch",
+      "full_ref": "refs/heads/codex/validate-workbook",
+      "pusher_type": "user"
+    },
+    "public": true,
+    "created_at": "2026-06-20T07:18:41Z"
+  },
+  {
+    "id": "13614773780",
+    "type": "DeleteEvent",
+    "actor": {
+      "id": 117957000,
+      "login": "charlie2233",
+      "display_login": "charlie2233",
+      "gravatar_id": "",
+      "url": "https://api.github.com/users/charlie2233",
+      "avatar_url": "https://avatars.githubusercontent.com/u/117957000?"
+    },
+    "repo": {
+      "id": 1201134638,
+      "name": "charlie2233/RestaurantCommentValidation_Analysis",
+      "url": "https://api.github.com/repos/charlie2233/RestaurantCommentValidation_Analysis"
+    },
+    "payload": {
+      "ref": "codex/reference-coverage-audit",
+      "ref_type": "branch",
+      "full_ref": "refs/heads/codex/reference-coverage-audit",
+      "pusher_type": "user"
+    },
+    "public": true,
+    "created_at": "2026-06-20T07:18:41Z"
+  },
+  {
+    "id": "13614773759",
+    "type": "DeleteEvent",
+    "actor": {
+      "id": 117957000,
+      "login": "charlie2233",
+      "display_login": "charlie2233",
+      "gravatar_id": "",
+      "url": "https://api.github.com/users/charlie2233",
+      "avatar_url": "https://avatars.githubusercontent.com/u/117957000?"
+    },
+    "repo": {
+      "id": 1201134638,
+      "name": "charlie2233/RestaurantCommentValidation_Analysis",
+      "url": "https://api.github.com/repos/charlie2233/RestaurantCommentValidation_Analysis"
+    },
+    "payload": {
+      "ref": "codex/syntheticness-signals",
+      "ref_type": "branch",
+      "full_ref": "refs/heads/codex/syntheticness-signals",
+      "pusher_type": "user"
+    },
+    "public": true,
+    "created_at": "2026-06-20T07:18:41Z"
+  },
+  {
+    "id": "13614773758",
+    "type": "DeleteEvent",
+    "actor": {
+      "id": 117957000,
+      "login": "charlie2233",
+      "display_login": "charlie2233",
+      "gravatar_id": "",
+      "url": "https://api.github.com/users/charlie2233",
+      "avatar_url": "https://avatars.githubusercontent.com/u/117957000?"
+    },
+    "repo": {
+      "id": 1201134638,
+      "name": "charlie2233/RestaurantCommentValidation_Analysis",
+      "url": "https://api.github.com/repos/charlie2233/RestaurantCommentValidation_Analysis"
+    },
+    "payload": {
+      "ref": "codex/release-hardening",
+      "ref_type": "branch",
+      "full_ref": "refs/heads/codex/release-hardening",
+      "pusher_type": "user"
+    },
+    "public": true,
+    "created_at": "2026-06-20T07:18:41Z"
+  },
+  {
+    "id": "13614773712",
+    "type": "DeleteEvent",
+    "actor": {
+      "id": 117957000,
+      "login": "charlie2233",
+      "display_login": "charlie2233",
+      "gravatar_id": "",
+      "url": "https://api.github.com/users/charlie2233",
+      "avatar_url": "https://avatars.githubusercontent.com/u/117957000?"
+    },
+    "repo": {
+      "id": 1201134638,
+      "name": "charlie2233/RestaurantCommentValidation_Analysis",
+      "url": "https://api.github.com/repos/charlie2233/RestaurantCommentValidation_Analysis"
+    },
+    "payload": {
+      "ref": "codex/reconciliation-provenance",
+      "ref_type": "branch",
+      "full_ref": "refs/heads/codex/reconciliation-provenance",
+      "pusher_type": "user"
+    },
+    "public": true,
+    "created_at": "2026-06-20T07:18:41Z"
+  },
+  {
+    "id": "13614773627",
+    "type": "DeleteEvent",
+    "actor": {
+      "id": 117957000,
+      "login": "charlie2233",
+      "display_login": "charlie2233",
+      "gravatar_id": "",
+      "url": "https://api.github.com/users/charlie2233",
+      "avatar_url": "https://avatars.githubusercontent.com/u/117957000?"
+    },
+    "repo": {
+      "id": 1201134638,
+      "name": "charlie2233/RestaurantCommentValidation_Analysis",
+      "url": "https://api.github.com/repos/charlie2233/RestaurantCommentValidation_Analysis"
+    },
+    "payload": {
+      "ref": "codex/rag-retrieval-experiment",
+      "ref_type": "branch",
+      "full_ref": "refs/heads/codex/rag-retrieval-experiment",
+      "pusher_type": "user"
+    },
+    "public": true,
+    "created_at": "2026-06-20T07:18:40Z"
+  },
+  {
+    "id": "13614773606",
+    "type": "DeleteEvent",
+    "actor": {
+      "id": 117957000,
+      "login": "charlie2233",
+      "display_login": "charlie2233",
+      "gravatar_id": "",
+      "url": "https://api.github.com/users/charlie2233",
+      "avatar_url": "https://avatars.githubusercontent.com/u/117957000?"
+    },
+    "repo": {
+      "id": 1201134638,
+      "name": "charlie2233/RestaurantCommentValidation_Analysis",
+      "url": "https://api.github.com/repos/charlie2233/RestaurantCommentValidation_Analysis"
+    },
+    "payload": {
+      "ref": "codex/rag-benchmark-seeding-triage",
+      "ref_type": "branch",
+      "full_ref": "refs/heads/codex/rag-benchmark-seeding-triage",
+      "pusher_type": "user"
+    },
+    "public": true,
+    "created_at": "2026-06-20T07:18:40Z"
+  },
+  {
+    "id": "13614773584",
+    "type": "DeleteEvent",
+    "actor": {
+      "id": 117957000,
+      "login": "charlie2233",
+      "display_login": "charlie2233",
+      "gravatar_id": "",
+      "url": "https://api.github.com/users/charlie2233",
+      "avatar_url": "https://avatars.githubusercontent.com/u/117957000?"
+    },
+    "repo": {
+      "id": 1201134638,
+      "name": "charlie2233/RestaurantCommentValidation_Analysis",
+      "url": "https://api.github.com/repos/charlie2233/RestaurantCommentValidation_Analysis"
+    },
+    "payload": {
+      "ref": "codex/qsr50-coverage-scaleup",
+      "ref_type": "branch",
+      "full_ref": "refs/heads/codex/qsr50-coverage-scaleup",
+      "pusher_type": "user"
+    },
+    "public": true,
+    "created_at": "2026-06-20T07:18:40Z"
+  },
+  {
+    "id": "13614773581",
+    "type": "DeleteEvent",
+    "actor": {
+      "id": 117957000,
+      "login": "charlie2233",
+      "display_login": "charlie2233",
+      "gravatar_id": "",
+      "url": "https://api.github.com/users/charlie2233",
+      "avatar_url": "https://avatars.githubusercontent.com/u/117957000?"
+    },
+    "repo": {
+      "id": 1201134638,
+      "name": "charlie2233/RestaurantCommentValidation_Analysis",
+      "url": "https://api.github.com/repos/charlie2233/RestaurantCommentValidation_Analysis"
+    },
+    "payload": {
+      "ref": "codex/rag-benchmark-authoring",
+      "ref_type": "branch",
+      "full_ref": "refs/heads/codex/rag-benchmark-authoring",
+      "pusher_type": "user"
+    },
+    "public": true,
+    "created_at": "2026-06-20T07:18:40Z"
+  },
+  {
+    "id": "13614773575",
+    "type": "DeleteEvent",
+    "actor": {
+      "id": 117957000,
+      "login": "charlie2233",
+      "display_login": "charlie2233",
+      "gravatar_id": "",
+      "url": "https://api.github.com/users/charlie2233",
+      "avatar_url": "https://avatars.githubusercontent.com/u/117957000?"
+    },
+    "repo": {
+      "id": 1201134638,
+      "name": "charlie2233/RestaurantCommentValidation_Analysis",
+      "url": "https://api.github.com/repos/charlie2233/RestaurantCommentValidation_Analysis"
+    },
+    "payload": {
+      "ref": "codex/rag-benchmark-hardening",
+      "ref_type": "branch",
+      "full_ref": "refs/heads/codex/rag-benchmark-hardening",
+      "pusher_type": "user"
+    },
+    "public": true,
+    "created_at": "2026-06-20T07:18:40Z"
+  },
+  {
+    "id": "13614773539",
+    "type": "DeleteEvent",
+    "actor": {
+      "id": 117957000,
+      "login": "charlie2233",
+      "display_login": "charlie2233",
+      "gravatar_id": "",
+      "url": "https://api.github.com/users/charlie2233",
+      "avatar_url": "https://avatars.githubusercontent.com/u/117957000?"
+    },
+    "repo": {
+      "id": 1201134638,
+      "name": "charlie2233/RestaurantCommentValidation_Analysis",
+      "url": "https://api.github.com/repos/charlie2233/RestaurantCommentValidation_Analysis"
+    },
+    "payload": {
+      "ref": "codex/primary-source-reconciliation",
+      "ref_type": "branch",
+      "full_ref": "refs/heads/codex/primary-source-reconciliation",
+      "pusher_type": "user"
+    },
+    "public": true,
+    "created_at": "2026-06-20T07:18:40Z"
+  },
+  {
+    "id": "13614773509",
+    "type": "DeleteEvent",
+    "actor": {
+      "id": 117957000,
+      "login": "charlie2233",
+      "display_login": "charlie2233",
+      "gravatar_id": "",
+      "url": "https://api.github.com/users/charlie2233",
+      "avatar_url": "https://avatars.githubusercontent.com/u/117957000?"
+    },
+    "repo": {
+      "id": 1201134638,
+      "name": "charlie2233/RestaurantCommentValidation_Analysis",
+      "url": "https://api.github.com/repos/charlie2233/RestaurantCommentValidation_Analysis"
+    },
+    "payload": {
+      "ref": "codex/ingest-workbook",
+      "ref_type": "branch",
+      "full_ref": "refs/heads/codex/ingest-workbook",
+      "pusher_type": "user"
+    },
+    "public": true,
+    "created_at": "2026-06-20T07:18:40Z"
+  },
+  {
+    "id": "13614773438",
+    "type": "DeleteEvent",
+    "actor": {
+      "id": 117957000,
+      "login": "charlie2233",
+      "display_login": "charlie2233",
+      "gravatar_id": "",
+      "url": "https://api.github.com/users/charlie2233",
+      "avatar_url": "https://avatars.githubusercontent.com/u/117957000?"
+    },
+    "repo": {
+      "id": 1201134638,
+      "name": "charlie2233/RestaurantCommentValidation_Analysis",
+      "url": "https://api.github.com/repos/charlie2233/RestaurantCommentValidation_Analysis"
+    },
+    "payload": {
+      "ref": "codex/gold-publishing-gates",
+      "ref_type": "branch",
+      "full_ref": "refs/heads/codex/gold-publishing-gates",
+      "pusher_type": "user"
+    },
+    "public": true,
+    "created_at": "2026-06-20T07:18:40Z"
+  },
+  {
+    "id": "13614773400",
+    "type": "DeleteEvent",
+    "actor": {
+      "id": 117957000,
+      "login": "charlie2233",
+      "display_login": "charlie2233",
+      "gravatar_id": "",
+      "url": "https://api.github.com/users/charlie2233",
+      "avatar_url": "https://avatars.githubusercontent.com/u/117957000?"
+    },
+    "repo": {
+      "id": 1201134638,
+      "name": "charlie2233/RestaurantCommentValidation_Analysis",
+      "url": "https://api.github.com/repos/charlie2233/RestaurantCommentValidation_Analysis"
+    },
+    "payload": {
+      "ref": "codex/forecast-readiness-scaffold",
+      "ref_type": "branch",
+      "full_ref": "refs/heads/codex/forecast-readiness-scaffold",
+      "pusher_type": "user"
+    },
+    "public": true,
+    "created_at": "2026-06-20T07:18:40Z"
+  },
+  {
+    "id": "13614773379",
+    "type": "DeleteEvent",
+    "actor": {
+      "id": 117957000,
+      "login": "charlie2233",
+      "display_login": "charlie2233",
+      "gravatar_id": "",
+      "url": "https://api.github.com/users/charlie2233",
+      "avatar_url": "https://avatars.githubusercontent.com/u/117957000?"
+    },
+    "repo": {
+      "id": 1201134638,
+      "name": "charlie2233/RestaurantCommentValidation_Analysis",
+      "url": "https://api.github.com/repos/charlie2233/RestaurantCommentValidation_Analysis"
+    },
+    "payload": {
+      "ref": "codex/followup-doc-guardrails",
+      "ref_type": "branch",
+      "full_ref": "refs/heads/codex/followup-doc-guardrails",
+      "pusher_type": "user"
+    },
+    "public": true,
+    "created_at": "2026-06-20T07:18:40Z"
+  },
+  {
+    "id": "13614773329",
+    "type": "DeleteEvent",
+    "actor": {
+      "id": 117957000,
+      "login": "charlie2233",
+      "display_login": "charlie2233",
+      "gravatar_id": "",
+      "url": "https://api.github.com/users/charlie2233",
+      "avatar_url": "https://avatars.githubusercontent.com/u/117957000?"
+    },
+    "repo": {
+      "id": 1201134638,
+      "name": "charlie2233/RestaurantCommentValidation_Analysis",
+      "url": "https://api.github.com/repos/charlie2233/RestaurantCommentValidation_Analysis"
+    },
+    "payload": {
+      "ref": "codex/demo-showcase-polish",
+      "ref_type": "branch",
+      "full_ref": "refs/heads/codex/demo-showcase-polish",
+      "pusher_type": "user"
+    },
+    "public": true,
+    "created_at": "2026-06-20T07:18:40Z"
+  },
+  {
+    "id": "13614773314",
+    "type": "DeleteEvent",
+    "actor": {
+      "id": 117957000,
+      "login": "charlie2233",
+      "display_login": "charlie2233",
+      "gravatar_id": "",
+      "url": "https://api.github.com/users/charlie2233",
+      "avatar_url": "https://avatars.githubusercontent.com/u/117957000?"
+    },
+    "repo": {
+      "id": 1201134638,
+      "name": "charlie2233/RestaurantCommentValidation_Analysis",
+      "url": "https://api.github.com/repos/charlie2233/RestaurantCommentValidation_Analysis"
+    },
+    "payload": {
+      "ref": "codex/first-analyst-cycle",
+      "ref_type": "branch",
+      "full_ref": "refs/heads/codex/first-analyst-cycle",
+      "pusher_type": "user"
+    },
+    "public": true,
+    "created_at": "2026-06-20T07:18:40Z"
+  },
+  {
+    "id": "13614773296",
+    "type": "DeleteEvent",
+    "actor": {
+      "id": 117957000,
+      "login": "charlie2233",
+      "display_login": "charlie2233",
+      "gravatar_id": "",
+      "url": "https://api.github.com/users/charlie2233",
+      "avatar_url": "https://avatars.githubusercontent.com/u/117957000?"
+    },
+    "repo": {
+      "id": 1201134638,
+      "name": "charlie2233/RestaurantCommentValidation_Analysis",
+      "url": "https://api.github.com/repos/charlie2233/RestaurantCommentValidation_Analysis"
+    },
+    "payload": {
+      "ref": "codex/credibility-engine",
+      "ref_type": "branch",
+      "full_ref": "refs/heads/codex/credibility-engine",
+      "pusher_type": "user"
+    },
+    "public": true,
+    "created_at": "2026-06-20T07:18:40Z"
+  },
+  {
+    "id": "13614773292",
+    "type": "DeleteEvent",
+    "actor": {
+      "id": 117957000,
+      "login": "charlie2233",
+      "display_login": "charlie2233",
+      "gravatar_id": "",
+      "url": "https://api.github.com/users/charlie2233",
+      "avatar_url": "https://avatars.githubusercontent.com/u/117957000?"
+    },
+    "repo": {
+      "id": 1201134638,
+      "name": "charlie2233/RestaurantCommentValidation_Analysis",
+      "url": "https://api.github.com/repos/charlie2233/RestaurantCommentValidation_Analysis"
+    },
+    "payload": {
+      "ref": "codex/first-rag-benchmark-cycle",
+      "ref_type": "branch",
+      "full_ref": "refs/heads/codex/first-rag-benchmark-cycle",
+      "pusher_type": "user"
+    },
+    "public": true,
+    "created_at": "2026-06-20T07:18:40Z"
+  },
+  {
+    "id": "13614773230",
+    "type": "DeleteEvent",
+    "actor": {
+      "id": 117957000,
+      "login": "charlie2233",
+      "display_login": "charlie2233",
+      "gravatar_id": "",
+      "url": "https://api.github.com/users/charlie2233",
+      "avatar_url": "https://avatars.githubusercontent.com/u/117957000?"
+    },
+    "repo": {
+      "id": 1201134638,
+      "name": "charlie2233/RestaurantCommentValidation_Analysis",
+      "url": "https://api.github.com/repos/charlie2233/RestaurantCommentValidation_Analysis"
+    },
+    "payload": {
+      "ref": "codex/analyst-reporting",
+      "ref_type": "branch",
+      "full_ref": "refs/heads/codex/analyst-reporting",
+      "pusher_type": "user"
+    },
+    "public": true,
+    "created_at": "2026-06-20T07:18:40Z"
+  },
+  {
+    "id": "13614773153",
+    "type": "DeleteEvent",
+    "actor": {
+      "id": 117957000,
+      "login": "charlie2233",
+      "display_login": "charlie2233",
+      "gravatar_id": "",
+      "url": "https://api.github.com/users/charlie2233",
+      "avatar_url": "https://avatars.githubusercontent.com/u/117957000?"
+    },
+    "repo": {
+      "id": 1201134638,
+      "name": "charlie2233/RestaurantCommentValidation_Analysis",
+      "url": "https://api.github.com/repos/charlie2233/RestaurantCommentValidation_Analysis"
+    },
+    "payload": {
+      "ref": "codex/analyst-cycle-starter",
+      "ref_type": "branch",
+      "full_ref": "refs/heads/codex/analyst-cycle-starter",
+      "pusher_type": "user"
+    },
+    "public": true,
+    "created_at": "2026-06-20T07:18:39Z"
+  },
+  {
+    "id": "13614773140",
+    "type": "DeleteEvent",
+    "actor": {
+      "id": 117957000,
+      "login": "charlie2233",
+      "display_login": "charlie2233",
+      "gravatar_id": "",
+      "url": "https://api.github.com/users/charlie2233",
+      "avatar_url": "https://avatars.githubusercontent.com/u/117957000?"
+    },
+    "repo": {
+      "id": 1201134638,
+      "name": "charlie2233/RestaurantCommentValidation_Analysis",
+      "url": "https://api.github.com/repos/charlie2233/RestaurantCommentValidation_Analysis"
+    },
+    "payload": {
+      "ref": "codex/5-brand-happy-path-demo",
+      "ref_type": "branch",
+      "full_ref": "refs/heads/codex/5-brand-happy-path-demo",
+      "pusher_type": "user"
+    },
+    "public": true,
+    "created_at": "2026-06-20T07:18:39Z"
+  },
+  {
+    "id": "13614751517",
+    "type": "PushEvent",
+    "actor": {
+      "id": 117957000,
+      "login": "charlie2233",
+      "display_login": "charlie2233",
+      "gravatar_id": "",
+      "url": "https://api.github.com/users/charlie2233",
+      "avatar_url": "https://avatars.githubusercontent.com/u/117957000?"
+    },
+    "repo": {
+      "id": 1061040738,
+      "name": "charlie2233/ai-hoops-board",
+      "url": "https://api.github.com/repos/charlie2233/ai-hoops-board"
+    },
+    "payload": {
+      "repository_id": 1061040738,
+      "push_id": 35902854603,
+      "ref": "refs/heads/codex/build-formative-practice-exporter",
+      "head": "adaa985e89a71f92d715465a869460ee10850e3d",
+      "before": "503b018fa2c2a636140a7a2020c6e08db3f49bcd"
+    },
+    "public": true,
+    "created_at": "2026-06-20T07:17:50Z"
+  },
+  {
+    "id": "13614702701",
+    "type": "PushEvent",
+    "actor": {
+      "id": 117957000,
+      "login": "charlie2233",
+      "display_login": "charlie2233",
+      "gravatar_id": "",
+      "url": "https://api.github.com/users/charlie2233",
+      "avatar_url": "https://avatars.githubusercontent.com/u/117957000?"
+    },
+    "repo": {
+      "id": 1201134638,
+      "name": "charlie2233/RestaurantCommentValidation_Analysis",
+      "url": "https://api.github.com/repos/charlie2233/RestaurantCommentValidation_Analysis"
+    },
+    "payload": {
+      "repository_id": 1201134638,
+      "push_id": 35902805703,
+      "ref": "refs/heads/main",
+      "head": "3a140b64d7afad6664e8213c7f0f660932b3ae14",
+      "before": "1e2bbb45b005dc0bff19fe3baf03d4b77b374848"
+    },
+    "public": true,
+    "created_at": "2026-06-20T07:15:33Z"
+  },
+  {
+    "id": "13614649914",
+    "type": "DeleteEvent",
+    "actor": {
+      "id": 117957000,
+      "login": "charlie2233",
+      "display_login": "charlie2233",
+      "gravatar_id": "",
+      "url": "https://api.github.com/users/charlie2233",
+      "avatar_url": "https://avatars.githubusercontent.com/u/117957000?"
+    },
+    "repo": {
+      "id": 1201134638,
+      "name": "charlie2233/RestaurantCommentValidation_Analysis",
+      "url": "https://api.github.com/repos/charlie2233/RestaurantCommentValidation_Analysis"
+    },
+    "payload": {
+      "ref": "codex/demo-showcase-layer",
+      "ref_type": "branch",
+      "full_ref": "refs/heads/codex/demo-showcase-layer",
+      "pusher_type": "user"
+    },
+    "public": true,
+    "created_at": "2026-06-20T07:13:08Z"
+  },
+  {
+    "id": "13614625636",
+    "type": "PushEvent",
+    "actor": {
+      "id": 117957000,
+      "login": "charlie2233",
+      "display_login": "charlie2233",
+      "gravatar_id": "",
+      "url": "https://api.github.com/users/charlie2233",
+      "avatar_url": "https://avatars.githubusercontent.com/u/117957000?"
+    },
+    "repo": {
+      "id": 1061040738,
+      "name": "charlie2233/ai-hoops-board",
+      "url": "https://api.github.com/repos/charlie2233/ai-hoops-board"
+    },
+    "payload": {
+      "repository_id": 1061040738,
+      "push_id": 35902728446,
+      "ref": "refs/heads/codex/build-formative-practice-exporter",
+      "head": "503b018fa2c2a636140a7a2020c6e08db3f49bcd",
+      "before": "4ea6cbcbb3dca9ff37ef4768ad2c0ebc63947fed"
+    },
+    "public": true,
+    "created_at": "2026-06-20T07:11:59Z"
+  },
+  {
+    "id": "13614589009",
+    "type": "PushEvent",
+    "actor": {
+      "id": 117957000,
+      "login": "charlie2233",
+      "display_login": "charlie2233",
+      "gravatar_id": "",
+      "url": "https://api.github.com/users/charlie2233",
+      "avatar_url": "https://avatars.githubusercontent.com/u/117957000?"
+    },
+    "repo": {
+      "id": 1061040738,
+      "name": "charlie2233/ai-hoops-board",
+      "url": "https://api.github.com/repos/charlie2233/ai-hoops-board"
+    },
+    "payload": {
+      "repository_id": 1061040738,
+      "push_id": 35902691761,
+      "ref": "refs/heads/codex/build-formative-practice-exporter",
+      "head": "4ea6cbcbb3dca9ff37ef4768ad2c0ebc63947fed",
+      "before": "e2139c51405769fa4b436141d0cb4a30ef91cf40"
+    },
+    "public": true,
+    "created_at": "2026-06-20T07:10:15Z"
+  },
+  {
+    "id": "13614536201",
+    "type": "PushEvent",
+    "actor": {
+      "id": 117957000,
+      "login": "charlie2233",
+      "display_login": "charlie2233",
+      "gravatar_id": "",
+      "url": "https://api.github.com/users/charlie2233",
+      "avatar_url": "https://avatars.githubusercontent.com/u/117957000?"
+    },
+    "repo": {
+      "id": 1061040738,
+      "name": "charlie2233/ai-hoops-board",
+      "url": "https://api.github.com/repos/charlie2233/ai-hoops-board"
+    },
+    "payload": {
+      "repository_id": 1061040738,
+      "push_id": 35902638812,
+      "ref": "refs/heads/codex/build-formative-practice-exporter",
+      "head": "e2139c51405769fa4b436141d0cb4a30ef91cf40",
+      "before": "2d7f76a8e69a9593f371058b28edc75e53a16fa8"
+    },
+    "public": true,
+    "created_at": "2026-06-20T07:07:41Z"
   },
   {
     "id": "13250284217",
@@ -989,57 +4236,5 @@
     },
     "public": true,
     "created_at": "2026-06-09T07:54:11Z"
-  },
-  {
-    "id": "12907552510",
-    "type": "PushEvent",
-    "actor": {
-      "id": 117957000,
-      "login": "charlie2233",
-      "display_login": "charlie2233",
-      "gravatar_id": "",
-      "url": "https://api.github.com/users/charlie2233",
-      "avatar_url": "https://avatars.githubusercontent.com/u/117957000?"
-    },
-    "repo": {
-      "id": 1231252582,
-      "name": "charlie2233/GBC_HuskiesWeb",
-      "url": "https://api.github.com/repos/charlie2233/GBC_HuskiesWeb"
-    },
-    "payload": {
-      "repository_id": 1231252582,
-      "push_id": 35197216064,
-      "ref": "refs/heads/main",
-      "head": "538dedbeba6b001aa9bc7bd52b1c99bba79ffa8a",
-      "before": "c2c984cc47ab053cf1ea3a80976476702270350a"
-    },
-    "public": true,
-    "created_at": "2026-06-06T05:27:39Z"
-  },
-  {
-    "id": "12907488719",
-    "type": "PushEvent",
-    "actor": {
-      "id": 117957000,
-      "login": "charlie2233",
-      "display_login": "charlie2233",
-      "gravatar_id": "",
-      "url": "https://api.github.com/users/charlie2233",
-      "avatar_url": "https://avatars.githubusercontent.com/u/117957000?"
-    },
-    "repo": {
-      "id": 1231252582,
-      "name": "charlie2233/GBC_HuskiesWeb",
-      "url": "https://api.github.com/repos/charlie2233/GBC_HuskiesWeb"
-    },
-    "payload": {
-      "repository_id": 1231252582,
-      "push_id": 35197152256,
-      "ref": "refs/heads/main",
-      "head": "c2c984cc47ab053cf1ea3a80976476702270350a",
-      "before": "93160aaf7b871aedaa7f7c5fbe263cc152764ee2"
-    },
-    "public": true,
-    "created_at": "2026-06-06T05:24:30Z"
   }
 ]
