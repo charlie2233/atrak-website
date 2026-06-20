@@ -1,16 +1,21 @@
 [
   {
     "type": "PushEvent",
-    "created_at": "2026-06-19T01:11:31Z",
+    "created_at": "2026-06-19T13:13:52Z",
     "repo": {
       "name": "charlie2233/atrak-website"
     },
     "payload": {
       "ref": "refs/heads/main",
       "before": "",
-      "head": "724a9938042b1713a4c58424729ce900f78a9122",
-      "distinct_size": 13,
+      "head": "2593a3b99c1fb9caa742187820fb5c6272d49b9f",
+      "distinct_size": 14,
       "commits": [
+        {
+          "sha": "2593a3b99c1fb9caa742187820fb5c6272d49b9f",
+          "message": "chore: update GitHub data [skip ci]",
+          "url": "https://github.com/charlie2233/atrak-website/commit/2593a3b99c1fb9caa742187820fb5c6272d49b9f"
+        },
         {
           "sha": "724a9938042b1713a4c58424729ce900f78a9122",
           "message": "chore: update GitHub data [skip ci]",
@@ -100,25 +105,7 @@
       "push_id": 35538115230,
       "ref": "refs/heads/main",
       "head": "e20e62039b5008abe39f9a537ce86fbb319d716c",
-      "before": "36a094fdcf42425127ac74583172cc0e95a0d5c1",
-      "distinct_size": 3,
-      "commits": [
-        {
-          "sha": "e20e62039b5008abe39f9a537ce86fbb319d716c",
-          "message": "docs: update five-improvement deployment status",
-          "url": "https://github.com/charlie2233/GBC_HuskiesWeb/commit/e20e62039b5008abe39f9a537ce86fbb319d716c"
-        },
-        {
-          "sha": "36a094fdcf42425127ac74583172cc0e95a0d5c1",
-          "message": "feat: improve mobile fundraising and tournament trust",
-          "url": "https://github.com/charlie2233/GBC_HuskiesWeb/commit/36a094fdcf42425127ac74583172cc0e95a0d5c1"
-        },
-        {
-          "sha": "66e803d5d5c9d1aa390a28a1e9d5ae0337016cfa",
-          "message": "docs: update fundraiser deployment status",
-          "url": "https://github.com/charlie2233/GBC_HuskiesWeb/commit/66e803d5d5c9d1aa390a28a1e9d5ae0337016cfa"
-        }
-      ]
+      "before": "36a094fdcf42425127ac74583172cc0e95a0d5c1"
     },
     "public": true,
     "created_at": "2026-06-12T22:17:16Z"
