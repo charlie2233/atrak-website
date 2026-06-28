@@ -1,66 +1,21 @@
 [
   {
     "type": "PushEvent",
-    "created_at": "2026-06-21T00:22:23Z",
-    "repo": {
-      "name": "charlie2233/coursebinder-ai-ready-google-classroom-exporter"
-    },
-    "payload": {
-      "ref": "refs/heads/main",
-      "before": "",
-      "head": "54e1eccaf943cc8972b756483623381eebe17b90",
-      "distinct_size": 7,
-      "commits": [
-        {
-          "sha": "54e1eccaf943cc8972b756483623381eebe17b90",
-          "message": "Clarify fixture attachment smoke behavior",
-          "url": "https://github.com/charlie2233/coursebinder-ai-ready-google-classroom-exporter/commit/54e1eccaf943cc8972b756483623381eebe17b90"
-        },
-        {
-          "sha": "58cf295b8cb54a38696536dd279005cfa35ccdf8",
-          "message": "Explain CourseBinder attachment download statuses",
-          "url": "https://github.com/charlie2233/coursebinder-ai-ready-google-classroom-exporter/commit/58cf295b8cb54a38696536dd279005cfa35ccdf8"
-        },
-        {
-          "sha": "7848c1e504822b69d0ac89ddd6d8a344cf659f26",
-          "message": "Show full CourseBinder fallback export path",
-          "url": "https://github.com/charlie2233/coursebinder-ai-ready-google-classroom-exporter/commit/7848c1e504822b69d0ac89ddd6d8a344cf659f26"
-        },
-        {
-          "sha": "4e426d36efc2ada5d124fb98a1d1e4997cab47af",
-          "message": "Persist CourseBinder attachment download results",
-          "url": "https://github.com/charlie2233/coursebinder-ai-ready-google-classroom-exporter/commit/4e426d36efc2ada5d124fb98a1d1e4997cab47af"
-        },
-        {
-          "sha": "be4b94adebb526a5a2c8d3b0b24bdf6dceda0a67",
-          "message": "Overwrite stable CourseBinder fallback files",
-          "url": "https://github.com/charlie2233/coursebinder-ai-ready-google-classroom-exporter/commit/be4b94adebb526a5a2c8d3b0b24bdf6dceda0a67"
-        },
-        {
-          "sha": "fb1f0d532970d57a3b8f5725c4d1a8aa0595bce5",
-          "message": "Stabilize CourseBinder fallback session folders",
-          "url": "https://github.com/charlie2233/coursebinder-ai-ready-google-classroom-exporter/commit/fb1f0d532970d57a3b8f5725c4d1a8aa0595bce5"
-        },
-        {
-          "sha": "e3b3c626e8169fe569e7cc0583d1c2c58d32345c",
-          "message": "Stabilize CourseBinder item IDs",
-          "url": "https://github.com/charlie2233/coursebinder-ai-ready-google-classroom-exporter/commit/e3b3c626e8169fe569e7cc0583d1c2c58d32345c"
-        }
-      ]
-    }
-  },
-  {
-    "type": "PushEvent",
-    "created_at": "2026-06-27T00:57:18Z",
+    "created_at": "2026-06-27T12:30:12Z",
     "repo": {
       "name": "charlie2233/atrak-website"
     },
     "payload": {
       "ref": "refs/heads/main",
       "before": "",
-      "head": "73ea661c8d23a05ac5cb060c31b208fa78c634ce",
+      "head": "7af5991c11f051498704a7e327a44ccbb618b552",
       "distinct_size": 14,
       "commits": [
+        {
+          "sha": "7af5991c11f051498704a7e327a44ccbb618b552",
+          "message": "chore: update GitHub data [skip ci]",
+          "url": "https://github.com/charlie2233/atrak-website/commit/7af5991c11f051498704a7e327a44ccbb618b552"
+        },
         {
           "sha": "73ea661c8d23a05ac5cb060c31b208fa78c634ce",
           "message": "chore: update GitHub data [skip ci]",
@@ -125,11 +80,6 @@
           "sha": "3181b803c215c0fe57fd09802e86bb908d520bef",
           "message": "chore: update GitHub data [skip ci]",
           "url": "https://github.com/charlie2233/atrak-website/commit/3181b803c215c0fe57fd09802e86bb908d520bef"
-        },
-        {
-          "sha": "e60f70cbcb11b837b59e23368777804c646064f5",
-          "message": "chore: update GitHub data [skip ci]",
-          "url": "https://github.com/charlie2233/atrak-website/commit/e60f70cbcb11b837b59e23368777804c646064f5"
         }
       ]
     }
