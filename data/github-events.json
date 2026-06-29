@@ -1,16 +1,21 @@
 [
   {
     "type": "PushEvent",
-    "created_at": "2026-06-28T01:01:13Z",
+    "created_at": "2026-06-28T12:31:08Z",
     "repo": {
       "name": "charlie2233/atrak-website"
     },
     "payload": {
       "ref": "refs/heads/main",
       "before": "",
-      "head": "30c26b6729603db61ae90eefd0084a2c393bd3b2",
+      "head": "d15cabd02883ae3112163eba6b3eab19a68345aa",
       "distinct_size": 14,
       "commits": [
+        {
+          "sha": "d15cabd02883ae3112163eba6b3eab19a68345aa",
+          "message": "chore: update GitHub data [skip ci]",
+          "url": "https://github.com/charlie2233/atrak-website/commit/d15cabd02883ae3112163eba6b3eab19a68345aa"
+        },
         {
           "sha": "30c26b6729603db61ae90eefd0084a2c393bd3b2",
           "message": "chore: update GitHub data [skip ci]",
@@ -75,17 +80,12 @@
           "sha": "df7804b7190923d27a088c7ccc3668704e5d63b2",
           "message": "chore: update GitHub data [skip ci]",
           "url": "https://github.com/charlie2233/atrak-website/commit/df7804b7190923d27a088c7ccc3668704e5d63b2"
-        },
-        {
-          "sha": "4a9a9ec9f062816abf60538e0b96fe042ea00e22",
-          "message": "chore: update GitHub data [skip ci]",
-          "url": "https://github.com/charlie2233/atrak-website/commit/4a9a9ec9f062816abf60538e0b96fe042ea00e22"
         }
       ]
     }
   },
   {
-    "id": "11080654744",
+    "id": "11091200626",
     "type": "PullRequestEvent",
     "actor": {
       "id": 117957000,
@@ -102,14 +102,14 @@
     },
     "payload": {
       "action": "merged",
-      "number": 43,
+      "number": 44,
       "pull_request": {
-        "url": "https://api.github.com/repos/charlie2233/rork-hoopshighlights-ai_Final/pulls/43",
-        "id": 3934120215,
-        "number": 43,
+        "url": "https://api.github.com/repos/charlie2233/rork-hoopshighlights-ai_Final/pulls/44",
+        "id": 3951869608,
+        "number": 44,
         "head": {
-          "ref": "codex/hc-enhancement-integration-20260623",
-          "sha": "eae49de726c85e52e780f2d3f20feab168290112",
+          "ref": "codex/beta-launch-gates-20260628",
+          "sha": "7858002358485a22e970b4bc4f3aa2bf86911af3",
           "repo": {
             "id": 1166891851,
             "url": "https://api.github.com/repos/charlie2233/rork-hoopshighlights-ai_Final",
@@ -118,7 +118,7 @@
         },
         "base": {
           "ref": "main",
-          "sha": "1fecafc44be30ca02852e8226ed996b29a3e4105",
+          "sha": "449cd0907f62dd728741fb43a81e4f9e3815a4ff",
           "repo": {
             "id": 1166891851,
             "url": "https://api.github.com/repos/charlie2233/rork-hoopshighlights-ai_Final",
@@ -128,10 +128,10 @@
       }
     },
     "public": true,
-    "created_at": "2026-06-28T09:00:46Z"
+    "created_at": "2026-06-28T21:36:43Z"
   },
   {
-    "id": "14001197562",
+    "id": "14021163347",
     "type": "PushEvent",
     "actor": {
       "id": 117957000,
@@ -148,12 +148,22 @@
     },
     "payload": {
       "repository_id": 1166891851,
-      "push_id": 36289372499,
+      "push_id": 36309393567,
       "ref": "refs/heads/main",
-      "head": "449cd0907f62dd728741fb43a81e4f9e3815a4ff",
-      "before": "1fecafc44be30ca02852e8226ed996b29a3e4105",
-      "distinct_size": 100,
+      "head": "c13f50a2e08d563084cdd5fc7ba1cd03c8d42824",
+      "before": "449cd0907f62dd728741fb43a81e4f9e3815a4ff",
+      "distinct_size": 54,
       "commits": [
+        {
+          "sha": "c13f50a2e08d563084cdd5fc7ba1cd03c8d42824",
+          "message": "Merge pull request #44 from charlie2233/codex/beta-launch-gates-20260628\n\nDocument beta launch blockers after PR43",
+          "url": "https://github.com/charlie2233/rork-hoopshighlights-ai_Final/commit/c13f50a2e08d563084cdd5fc7ba1cd03c8d42824"
+        },
+        {
+          "sha": "7858002358485a22e970b4bc4f3aa2bf86911af3",
+          "message": "Document beta launch blockers after PR43",
+          "url": "https://github.com/charlie2233/rork-hoopshighlights-ai_Final/commit/7858002358485a22e970b4bc4f3aa2bf86911af3"
+        },
         {
           "sha": "449cd0907f62dd728741fb43a81e4f9e3815a4ff",
           "message": "Merge PR #43: Integrate HoopClips enhancement workstream\n\nMerge the CI-green HoopClips enhancement integration branch after backend regression correction eae49de7. Public launch remains gated by staging deploy/runtime proof and real-device TestFlight validation.",
@@ -243,18 +253,153 @@
           "sha": "2fc329652f8b7cd4aeeade17897cf0d4417a0524",
           "message": "Add iOS asset upload queue contracts",
           "url": "https://github.com/charlie2233/rork-hoopshighlights-ai_Final/commit/2fc329652f8b7cd4aeeade17897cf0d4417a0524"
-        },
-        {
-          "sha": "89e5dd96624e63805cc7d9baa395802d00e7d473",
-          "message": "Upgrade AI edit engine contracts",
-          "url": "https://github.com/charlie2233/rork-hoopshighlights-ai_Final/commit/89e5dd96624e63805cc7d9baa395802d00e7d473"
-        },
-        {
-          "sha": "bddd9a46dd87ec470e042fd29d451f33ccb843aa",
-          "message": "Merge branch 'feat/upload-pipeline' into codex/workflow-first-ui-20260623",
-          "url": "https://github.com/charlie2233/rork-hoopshighlights-ai_Final/commit/bddd9a46dd87ec470e042fd29d451f33ccb843aa"
         }
       ]
+    },
+    "public": true,
+    "created_at": "2026-06-28T21:36:44Z"
+  },
+  {
+    "id": "11090899593",
+    "type": "PullRequestEvent",
+    "actor": {
+      "id": 117957000,
+      "login": "charlie2233",
+      "display_login": "charlie2233",
+      "gravatar_id": "",
+      "url": "https://api.github.com/users/charlie2233",
+      "avatar_url": "https://avatars.githubusercontent.com/u/117957000?"
+    },
+    "repo": {
+      "id": 1166891851,
+      "name": "charlie2233/rork-hoopshighlights-ai_Final",
+      "url": "https://api.github.com/repos/charlie2233/rork-hoopshighlights-ai_Final"
+    },
+    "payload": {
+      "action": "opened",
+      "number": 44,
+      "pull_request": {
+        "url": "https://api.github.com/repos/charlie2233/rork-hoopshighlights-ai_Final/pulls/44",
+        "id": 3951869608,
+        "number": 44,
+        "head": {
+          "ref": "codex/beta-launch-gates-20260628",
+          "sha": "7858002358485a22e970b4bc4f3aa2bf86911af3",
+          "repo": {
+            "id": 1166891851,
+            "url": "https://api.github.com/repos/charlie2233/rork-hoopshighlights-ai_Final",
+            "name": "rork-hoopshighlights-ai_Final"
+          }
+        },
+        "base": {
+          "ref": "main",
+          "sha": "449cd0907f62dd728741fb43a81e4f9e3815a4ff",
+          "repo": {
+            "id": 1166891851,
+            "url": "https://api.github.com/repos/charlie2233/rork-hoopshighlights-ai_Final",
+            "name": "rork-hoopshighlights-ai_Final"
+          }
+        }
+      }
+    },
+    "public": true,
+    "created_at": "2026-06-28T21:13:07Z"
+  },
+  {
+    "id": "14020571088",
+    "type": "CreateEvent",
+    "actor": {
+      "id": 117957000,
+      "login": "charlie2233",
+      "display_login": "charlie2233",
+      "gravatar_id": "",
+      "url": "https://api.github.com/users/charlie2233",
+      "avatar_url": "https://avatars.githubusercontent.com/u/117957000?"
+    },
+    "repo": {
+      "id": 1166891851,
+      "name": "charlie2233/rork-hoopshighlights-ai_Final",
+      "url": "https://api.github.com/repos/charlie2233/rork-hoopshighlights-ai_Final"
+    },
+    "payload": {
+      "ref": "codex/beta-launch-gates-20260628",
+      "ref_type": "branch",
+      "full_ref": "refs/heads/codex/beta-launch-gates-20260628",
+      "master_branch": "main",
+      "description": "Created by Rork",
+      "pusher_type": "user"
+    },
+    "public": true,
+    "created_at": "2026-06-28T21:12:53Z"
+  },
+  {
+    "id": "11080654744",
+    "type": "PullRequestEvent",
+    "actor": {
+      "id": 117957000,
+      "login": "charlie2233",
+      "display_login": "charlie2233",
+      "gravatar_id": "",
+      "url": "https://api.github.com/users/charlie2233",
+      "avatar_url": "https://avatars.githubusercontent.com/u/117957000?"
+    },
+    "repo": {
+      "id": 1166891851,
+      "name": "charlie2233/rork-hoopshighlights-ai_Final",
+      "url": "https://api.github.com/repos/charlie2233/rork-hoopshighlights-ai_Final"
+    },
+    "payload": {
+      "action": "merged",
+      "number": 43,
+      "pull_request": {
+        "url": "https://api.github.com/repos/charlie2233/rork-hoopshighlights-ai_Final/pulls/43",
+        "id": 3934120215,
+        "number": 43,
+        "head": {
+          "ref": "codex/hc-enhancement-integration-20260623",
+          "sha": "eae49de726c85e52e780f2d3f20feab168290112",
+          "repo": {
+            "id": 1166891851,
+            "url": "https://api.github.com/repos/charlie2233/rork-hoopshighlights-ai_Final",
+            "name": "rork-hoopshighlights-ai_Final"
+          }
+        },
+        "base": {
+          "ref": "main",
+          "sha": "1fecafc44be30ca02852e8226ed996b29a3e4105",
+          "repo": {
+            "id": 1166891851,
+            "url": "https://api.github.com/repos/charlie2233/rork-hoopshighlights-ai_Final",
+            "name": "rork-hoopshighlights-ai_Final"
+          }
+        }
+      }
+    },
+    "public": true,
+    "created_at": "2026-06-28T09:00:46Z"
+  },
+  {
+    "id": "14001197562",
+    "type": "PushEvent",
+    "actor": {
+      "id": 117957000,
+      "login": "charlie2233",
+      "display_login": "charlie2233",
+      "gravatar_id": "",
+      "url": "https://api.github.com/users/charlie2233",
+      "avatar_url": "https://avatars.githubusercontent.com/u/117957000?"
+    },
+    "repo": {
+      "id": 1166891851,
+      "name": "charlie2233/rork-hoopshighlights-ai_Final",
+      "url": "https://api.github.com/repos/charlie2233/rork-hoopshighlights-ai_Final"
+    },
+    "payload": {
+      "repository_id": 1166891851,
+      "push_id": 36289372499,
+      "ref": "refs/heads/main",
+      "head": "449cd0907f62dd728741fb43a81e4f9e3815a4ff",
+      "before": "1fecafc44be30ca02852e8226ed996b29a3e4105"
     },
     "public": true,
     "created_at": "2026-06-28T09:00:47Z"
