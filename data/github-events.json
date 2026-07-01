@@ -1,16 +1,21 @@
 [
   {
     "type": "PushEvent",
-    "created_at": "2026-06-30T00:58:35Z",
+    "created_at": "2026-06-30T12:43:53Z",
     "repo": {
       "name": "charlie2233/atrak-website"
     },
     "payload": {
       "ref": "refs/heads/main",
       "before": "",
-      "head": "ac4106a03a6279d494129871ad339d377d27ec90",
-      "distinct_size": 14,
+      "head": "f949c8e7317099f712164688c6cb2ac4d8c5edd1",
+      "distinct_size": 13,
       "commits": [
+        {
+          "sha": "f949c8e7317099f712164688c6cb2ac4d8c5edd1",
+          "message": "chore: update GitHub data [skip ci]",
+          "url": "https://github.com/charlie2233/atrak-website/commit/f949c8e7317099f712164688c6cb2ac4d8c5edd1"
+        },
         {
           "sha": "ac4106a03a6279d494129871ad339d377d27ec90",
           "message": "chore: update GitHub data [skip ci]",
@@ -70,19 +75,82 @@
           "sha": "9a79d13e88992719ff74c3d951bb8b76a9018680",
           "message": "chore: update GitHub data [skip ci]",
           "url": "https://github.com/charlie2233/atrak-website/commit/9a79d13e88992719ff74c3d951bb8b76a9018680"
-        },
-        {
-          "sha": "936d244416d53a6ee0edddaf6afa80f0610efeb2",
-          "message": "chore: update GitHub data [skip ci]",
-          "url": "https://github.com/charlie2233/atrak-website/commit/936d244416d53a6ee0edddaf6afa80f0610efeb2"
-        },
-        {
-          "sha": "07d2f767f8f5a8311af9ea0524920256f40fc942",
-          "message": "chore: update GitHub data [skip ci]",
-          "url": "https://github.com/charlie2233/atrak-website/commit/07d2f767f8f5a8311af9ea0524920256f40fc942"
         }
       ]
     }
+  },
+  {
+    "id": "11191397365",
+    "type": "PullRequestEvent",
+    "actor": {
+      "id": 117957000,
+      "login": "charlie2233",
+      "display_login": "charlie2233",
+      "gravatar_id": "",
+      "url": "https://api.github.com/users/charlie2233",
+      "avatar_url": "https://avatars.githubusercontent.com/u/117957000?"
+    },
+    "repo": {
+      "id": 1166891851,
+      "name": "charlie2233/rork-hoopshighlights-ai_Final",
+      "url": "https://api.github.com/repos/charlie2233/rork-hoopshighlights-ai_Final"
+    },
+    "payload": {
+      "action": "opened",
+      "number": 45,
+      "pull_request": {
+        "url": "https://api.github.com/repos/charlie2233/rork-hoopshighlights-ai_Final/pulls/45",
+        "id": 3966440621,
+        "number": 45,
+        "head": {
+          "ref": "codex/testflight-ux-polish-20260630",
+          "sha": "bdeb9b17060dd89e5e8838e6031af20e39295715",
+          "repo": {
+            "id": 1166891851,
+            "url": "https://api.github.com/repos/charlie2233/rork-hoopshighlights-ai_Final",
+            "name": "rork-hoopshighlights-ai_Final"
+          }
+        },
+        "base": {
+          "ref": "main",
+          "sha": "c13f50a2e08d563084cdd5fc7ba1cd03c8d42824",
+          "repo": {
+            "id": 1166891851,
+            "url": "https://api.github.com/repos/charlie2233/rork-hoopshighlights-ai_Final",
+            "name": "rork-hoopshighlights-ai_Final"
+          }
+        }
+      }
+    },
+    "public": true,
+    "created_at": "2026-06-30T21:36:09Z"
+  },
+  {
+    "id": "14135719301",
+    "type": "CreateEvent",
+    "actor": {
+      "id": 117957000,
+      "login": "charlie2233",
+      "display_login": "charlie2233",
+      "gravatar_id": "",
+      "url": "https://api.github.com/users/charlie2233",
+      "avatar_url": "https://avatars.githubusercontent.com/u/117957000?"
+    },
+    "repo": {
+      "id": 1166891851,
+      "name": "charlie2233/rork-hoopshighlights-ai_Final",
+      "url": "https://api.github.com/repos/charlie2233/rork-hoopshighlights-ai_Final"
+    },
+    "payload": {
+      "ref": "codex/testflight-ux-polish-20260630",
+      "ref_type": "branch",
+      "full_ref": "refs/heads/codex/testflight-ux-polish-20260630",
+      "master_branch": "main",
+      "description": "Created by Rork",
+      "pusher_type": "user"
+    },
+    "public": true,
+    "created_at": "2026-06-30T21:36:02Z"
   },
   {
     "id": "11091200626",
@@ -152,7 +220,7 @@
       "ref": "refs/heads/main",
       "head": "c13f50a2e08d563084cdd5fc7ba1cd03c8d42824",
       "before": "449cd0907f62dd728741fb43a81e4f9e3815a4ff",
-      "distinct_size": 24,
+      "distinct_size": 12,
       "commits": [
         {
           "sha": "c13f50a2e08d563084cdd5fc7ba1cd03c8d42824",
@@ -213,46 +281,6 @@
           "sha": "9df35e3b3a98bd7a8c3ca3a93583800a4c941d8a",
           "message": "Reset AI edit state when inputs change",
           "url": "https://github.com/charlie2233/rork-hoopshighlights-ai_Final/commit/9df35e3b3a98bd7a8c3ca3a93583800a4c941d8a"
-        },
-        {
-          "sha": "1478b6922ea7bd89744746b90340b5aedc1c6715",
-          "message": "Finish enhancement integration follow-through",
-          "url": "https://github.com/charlie2233/rork-hoopshighlights-ai_Final/commit/1478b6922ea7bd89744746b90340b5aedc1c6715"
-        },
-        {
-          "sha": "261c11e3f2a25c5eda0a0e994469bfac8b0d39ec",
-          "message": "Finish HoopClips enhancement integration",
-          "url": "https://github.com/charlie2233/rork-hoopshighlights-ai_Final/commit/261c11e3f2a25c5eda0a0e994469bfac8b0d39ec"
-        },
-        {
-          "sha": "29db65d7695d87bd62c7290f285671b1e1b8fc6a",
-          "message": "Merge branch 'codex/ai-edit-engine-contracts' into codex/hc-enhancement-integration-20260623\n\n# Conflicts:\n#\tCONTRACT.md\n#\tTODO_INTEGRATION.md\n#\tios/HoopsClips/HoopsClips/Models/CloudEditTypes.swift\n#\tios/HoopsClips/HoopsClips/ViewModels/HighlightsViewModel.swift\n#\tios/HoopsClipsTests/HoopsClipsTests.swift\n#\tios/backend/app/editing.py",
-          "url": "https://github.com/charlie2233/rork-hoopshighlights-ai_Final/commit/29db65d7695d87bd62c7290f285671b1e1b8fc6a"
-        },
-        {
-          "sha": "cfe4df46eaea91553107c03c18d278bac6cf5be7",
-          "message": "Merge branch 'codex/agent-a-asset-accuracy-20260623' into codex/hc-enhancement-integration-20260623\n\n# Conflicts:\n#\tCONTRACT.md\n#\tTODO_INTEGRATION.md\n#\tios/HoopsClips/HoopsClips/ContentView.swift\n#\tios/HoopsClips/HoopsClips/Models/CloudAnalysisTypes.swift\n#\tios/HoopsClips/HoopsClips/Models/ReviewEmptyStateCopy.swift\n#\tios/HoopsClips/HoopsClips/Services/CloudAnalysisService.swift\n#\tios/HoopsClips/HoopsClips/Views/ExportView.swift\n#\tios/HoopsClips/HoopsClips/Views/ReviewView.swift\n#\tios/HoopsClipsTests/HoopsClipsTests.swift\n#\tios/HoopsClipsTests/WorkflowStateTests.swift\n#\tios/backend/app/api.py",
-          "url": "https://github.com/charlie2233/rork-hoopshighlights-ai_Final/commit/cfe4df46eaea91553107c03c18d278bac6cf5be7"
-        },
-        {
-          "sha": "32803e184d3d7e0ac0bb5f4a990775d865a2ade6",
-          "message": "Integrate workflow-first UI",
-          "url": "https://github.com/charlie2233/rork-hoopshighlights-ai_Final/commit/32803e184d3d7e0ac0bb5f4a990775d865a2ade6"
-        },
-        {
-          "sha": "9d80e9e517c12ae49cc2add15987a46be4fef222",
-          "message": "Add clip accuracy calibration metrics",
-          "url": "https://github.com/charlie2233/rork-hoopshighlights-ai_Final/commit/9d80e9e517c12ae49cc2add15987a46be4fef222"
-        },
-        {
-          "sha": "01cd0ee8843fefc56c2db43ada9330ed6cec0031",
-          "message": "Add asset-first backend and worker compatibility",
-          "url": "https://github.com/charlie2233/rork-hoopshighlights-ai_Final/commit/01cd0ee8843fefc56c2db43ada9330ed6cec0031"
-        },
-        {
-          "sha": "2fc329652f8b7cd4aeeade17897cf0d4417a0524",
-          "message": "Add iOS asset upload queue contracts",
-          "url": "https://github.com/charlie2233/rork-hoopshighlights-ai_Final/commit/2fc329652f8b7cd4aeeade17897cf0d4417a0524"
         }
       ]
     },
