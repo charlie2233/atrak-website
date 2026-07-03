@@ -1,16 +1,21 @@
 [
   {
     "type": "PushEvent",
-    "created_at": "2026-07-02T00:58:18Z",
+    "created_at": "2026-07-02T12:41:29Z",
     "repo": {
       "name": "charlie2233/atrak-website"
     },
     "payload": {
       "ref": "refs/heads/main",
       "before": "",
-      "head": "bd878002992aebafe168744be8319d683cf5e3a9",
+      "head": "adfebe9f572597b793fa1d380bdff4dd5e4a6dfa",
       "distinct_size": 14,
       "commits": [
+        {
+          "sha": "adfebe9f572597b793fa1d380bdff4dd5e4a6dfa",
+          "message": "chore: update GitHub data [skip ci]",
+          "url": "https://github.com/charlie2233/atrak-website/commit/adfebe9f572597b793fa1d380bdff4dd5e4a6dfa"
+        },
         {
           "sha": "bd878002992aebafe168744be8319d683cf5e3a9",
           "message": "chore: update GitHub data [skip ci]",
@@ -75,14 +80,105 @@
           "sha": "6d25531126e5317b68183947dbbffd4e5c5e52ca",
           "message": "chore: update GitHub data [skip ci]",
           "url": "https://github.com/charlie2233/atrak-website/commit/6d25531126e5317b68183947dbbffd4e5c5e52ca"
-        },
-        {
-          "sha": "8f5507ff237172c50a09d2c6cff0686c5e3e50eb",
-          "message": "chore: update GitHub data [skip ci]",
-          "url": "https://github.com/charlie2233/atrak-website/commit/8f5507ff237172c50a09d2c6cff0686c5e3e50eb"
         }
       ]
     }
+  },
+  {
+    "id": "14261899754",
+    "type": "PushEvent",
+    "actor": {
+      "id": 117957000,
+      "login": "charlie2233",
+      "display_login": "charlie2233",
+      "gravatar_id": "",
+      "url": "https://api.github.com/users/charlie2233",
+      "avatar_url": "https://avatars.githubusercontent.com/u/117957000?"
+    },
+    "repo": {
+      "id": 1231252582,
+      "name": "charlie2233/GBC_HuskiesWeb",
+      "url": "https://api.github.com/repos/charlie2233/GBC_HuskiesWeb"
+    },
+    "payload": {
+      "repository_id": 1231252582,
+      "push_id": 36550837663,
+      "ref": "refs/heads/main",
+      "head": "47e58f6e2dd45136c95cc74c4f93b2389f871773",
+      "before": "99468b48b4c2c99c872b7bcd880b9da9c8a904cd",
+      "distinct_size": 3,
+      "commits": [
+        {
+          "sha": "47e58f6e2dd45136c95cc74c4f93b2389f871773",
+          "message": "feat: add threejs hero motion layer",
+          "url": "https://github.com/charlie2233/GBC_HuskiesWeb/commit/47e58f6e2dd45136c95cc74c4f93b2389f871773"
+        },
+        {
+          "sha": "99468b48b4c2c99c872b7bcd880b9da9c8a904cd",
+          "message": "docs: update hero schedule deployment status",
+          "url": "https://github.com/charlie2233/GBC_HuskiesWeb/commit/99468b48b4c2c99c872b7bcd880b9da9c8a904cd"
+        },
+        {
+          "sha": "3889e6713108b67fd573f326bbe056d85f031253",
+          "message": "fix: update hero schedule",
+          "url": "https://github.com/charlie2233/GBC_HuskiesWeb/commit/3889e6713108b67fd573f326bbe056d85f031253"
+        }
+      ]
+    },
+    "public": true,
+    "created_at": "2026-07-03T00:20:28Z"
+  },
+  {
+    "id": "14244183339",
+    "type": "PushEvent",
+    "actor": {
+      "id": 117957000,
+      "login": "charlie2233",
+      "display_login": "charlie2233",
+      "gravatar_id": "",
+      "url": "https://api.github.com/users/charlie2233",
+      "avatar_url": "https://avatars.githubusercontent.com/u/117957000?"
+    },
+    "repo": {
+      "id": 1231252582,
+      "name": "charlie2233/GBC_HuskiesWeb",
+      "url": "https://api.github.com/repos/charlie2233/GBC_HuskiesWeb"
+    },
+    "payload": {
+      "repository_id": 1231252582,
+      "push_id": 36533101469,
+      "ref": "refs/heads/main",
+      "head": "99468b48b4c2c99c872b7bcd880b9da9c8a904cd",
+      "before": "3889e6713108b67fd573f326bbe056d85f031253"
+    },
+    "public": true,
+    "created_at": "2026-07-02T17:06:43Z"
+  },
+  {
+    "id": "14240429750",
+    "type": "PushEvent",
+    "actor": {
+      "id": 117957000,
+      "login": "charlie2233",
+      "display_login": "charlie2233",
+      "gravatar_id": "",
+      "url": "https://api.github.com/users/charlie2233",
+      "avatar_url": "https://avatars.githubusercontent.com/u/117957000?"
+    },
+    "repo": {
+      "id": 1231252582,
+      "name": "charlie2233/GBC_HuskiesWeb",
+      "url": "https://api.github.com/repos/charlie2233/GBC_HuskiesWeb"
+    },
+    "payload": {
+      "repository_id": 1231252582,
+      "push_id": 36529342142,
+      "ref": "refs/heads/main",
+      "head": "3889e6713108b67fd573f326bbe056d85f031253",
+      "before": "e20e62039b5008abe39f9a537ce86fbb319d716c"
+    },
+    "public": true,
+    "created_at": "2026-07-02T15:52:51Z"
   },
   {
     "id": "11191397365",
