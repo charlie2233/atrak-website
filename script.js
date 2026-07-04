@@ -159,7 +159,18 @@ if (hero) {
         const cards = hero.querySelectorAll('.floating-card');
         cards.forEach((card, index) => {
             const depth = (index + 1) * 0.5;
-            card.style.transform = `translate(${moveX * depth}px, ${moveY * depth}px) rotate(${moveX * 0.5}px)`;
+            card.style.setProperty('--pointer-x', `${moveX * depth}px`);
+            card.style.setProperty('--pointer-y', `${moveY * depth}px`);
+            card.style.setProperty('--pointer-rotate', `${moveX * 0.5}deg`);
+        });
+    }, { passive: true });
+
+    hero.addEventListener('mouseleave', () => {
+        const cards = hero.querySelectorAll('.floating-card');
+        cards.forEach(card => {
+            card.style.setProperty('--pointer-x', '0px');
+            card.style.setProperty('--pointer-y', '0px');
+            card.style.setProperty('--pointer-rotate', '0deg');
         });
     }, { passive: true });
 }
