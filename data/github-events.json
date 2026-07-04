@@ -1,6 +1,6 @@
 [
   {
-    "id": "14347168390",
+    "id": "14347645033",
     "type": "PushEvent",
     "actor": {
       "id": 117957000,
@@ -17,12 +17,22 @@
     },
     "payload": {
       "repository_id": 1140388078,
-      "push_id": 36636371116,
+      "push_id": 36636848450,
       "ref": "refs/heads/main",
-      "head": "a1d9a1f43af1d5c3848dae57b4cbca6e2596aa66",
-      "before": "9b3025ce055db619d1e133d169e1e3787602c77c",
-      "distinct_size": 17,
+      "head": "5110501e1e40de06a712c55bf14825cd7f661152",
+      "before": "7a185eb059abfcd9374a29d799c815d3bc1ecd25",
+      "distinct_size": 19,
       "commits": [
+        {
+          "sha": "5110501e1e40de06a712c55bf14825cd7f661152",
+          "message": "feat: refine three js hero sigil",
+          "url": "https://github.com/charlie2233/atrak-website/commit/5110501e1e40de06a712c55bf14825cd7f661152"
+        },
+        {
+          "sha": "7a185eb059abfcd9374a29d799c815d3bc1ecd25",
+          "message": "chore: update GitHub data [skip ci]",
+          "url": "https://github.com/charlie2233/atrak-website/commit/7a185eb059abfcd9374a29d799c815d3bc1ecd25"
+        },
         {
           "sha": "a1d9a1f43af1d5c3848dae57b4cbca6e2596aa66",
           "message": "feat: add anime three js imagination hero",
@@ -109,6 +119,32 @@
           "url": "https://github.com/charlie2233/atrak-website/commit/30c26b6729603db61ae90eefd0084a2c393bd3b2"
         }
       ]
+    },
+    "public": true,
+    "created_at": "2026-07-04T20:25:03Z"
+  },
+  {
+    "id": "14347168390",
+    "type": "PushEvent",
+    "actor": {
+      "id": 117957000,
+      "login": "charlie2233",
+      "display_login": "charlie2233",
+      "gravatar_id": "",
+      "url": "https://api.github.com/users/charlie2233",
+      "avatar_url": "https://avatars.githubusercontent.com/u/117957000?"
+    },
+    "repo": {
+      "id": 1140388078,
+      "name": "charlie2233/atrak-website",
+      "url": "https://api.github.com/repos/charlie2233/atrak-website"
+    },
+    "payload": {
+      "repository_id": 1140388078,
+      "push_id": 36636371116,
+      "ref": "refs/heads/main",
+      "head": "a1d9a1f43af1d5c3848dae57b4cbca6e2596aa66",
+      "before": "9b3025ce055db619d1e133d169e1e3787602c77c"
     },
     "public": true,
     "created_at": "2026-07-04T20:06:08Z"
