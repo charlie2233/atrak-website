@@ -1,16 +1,38 @@
 [
   {
+    "id": "14322917391",
     "type": "PushEvent",
-    "created_at": "2026-07-03T12:40:22Z",
+    "actor": {
+      "id": 117957000,
+      "login": "charlie2233",
+      "display_login": "charlie2233",
+      "gravatar_id": "",
+      "url": "https://api.github.com/users/charlie2233",
+      "avatar_url": "https://avatars.githubusercontent.com/u/117957000?"
+    },
     "repo": {
-      "name": "charlie2233/atrak-website"
+      "id": 1140388078,
+      "name": "charlie2233/atrak-website",
+      "url": "https://api.github.com/repos/charlie2233/atrak-website"
     },
     "payload": {
+      "repository_id": 1140388078,
+      "push_id": 36612045271,
       "ref": "refs/heads/main",
-      "before": "",
-      "head": "541661f73926caee20e8e0e5a6dbb9d0f85ba9a7",
-      "distinct_size": 14,
+      "head": "9c1fcbe31731bcf56c8f1711550438fa628289ef",
+      "before": "38584773ddae4854435e668ecca6f34d1eba98fd",
+      "distinct_size": 15,
       "commits": [
+        {
+          "sha": "9c1fcbe31731bcf56c8f1711550438fa628289ef",
+          "message": "feat: add three js hero visual",
+          "url": "https://github.com/charlie2233/atrak-website/commit/9c1fcbe31731bcf56c8f1711550438fa628289ef"
+        },
+        {
+          "sha": "38584773ddae4854435e668ecca6f34d1eba98fd",
+          "message": "chore: update GitHub data [skip ci]",
+          "url": "https://github.com/charlie2233/atrak-website/commit/38584773ddae4854435e668ecca6f34d1eba98fd"
+        },
         {
           "sha": "541661f73926caee20e8e0e5a6dbb9d0f85ba9a7",
           "message": "chore: update GitHub data [skip ci]",
@@ -75,14 +97,60 @@
           "sha": "7af5991c11f051498704a7e327a44ccbb618b552",
           "message": "chore: update GitHub data [skip ci]",
           "url": "https://github.com/charlie2233/atrak-website/commit/7af5991c11f051498704a7e327a44ccbb618b552"
-        },
-        {
-          "sha": "73ea661c8d23a05ac5cb060c31b208fa78c634ce",
-          "message": "chore: update GitHub data [skip ci]",
-          "url": "https://github.com/charlie2233/atrak-website/commit/73ea661c8d23a05ac5cb060c31b208fa78c634ce"
         }
       ]
-    }
+    },
+    "public": true,
+    "created_at": "2026-07-04T05:13:52Z"
+  },
+  {
+    "id": "14318110936",
+    "type": "PushEvent",
+    "actor": {
+      "id": 117957000,
+      "login": "charlie2233",
+      "display_login": "charlie2233",
+      "gravatar_id": "",
+      "url": "https://api.github.com/users/charlie2233",
+      "avatar_url": "https://avatars.githubusercontent.com/u/117957000?"
+    },
+    "repo": {
+      "id": 1231252582,
+      "name": "charlie2233/GBC_HuskiesWeb",
+      "url": "https://api.github.com/repos/charlie2233/GBC_HuskiesWeb"
+    },
+    "payload": {
+      "repository_id": 1231252582,
+      "push_id": 36607220822,
+      "ref": "refs/heads/main",
+      "head": "11f63193898e15f0c7ac21bcd0747a0dcb7e03e5",
+      "before": "47e58f6e2dd45136c95cc74c4f93b2389f871773",
+      "distinct_size": 4,
+      "commits": [
+        {
+          "sha": "11f63193898e15f0c7ac21bcd0747a0dcb7e03e5",
+          "message": "docs: update threejs hero deployment status",
+          "url": "https://github.com/charlie2233/GBC_HuskiesWeb/commit/11f63193898e15f0c7ac21bcd0747a0dcb7e03e5"
+        },
+        {
+          "sha": "47e58f6e2dd45136c95cc74c4f93b2389f871773",
+          "message": "feat: add threejs hero motion layer",
+          "url": "https://github.com/charlie2233/GBC_HuskiesWeb/commit/47e58f6e2dd45136c95cc74c4f93b2389f871773"
+        },
+        {
+          "sha": "99468b48b4c2c99c872b7bcd880b9da9c8a904cd",
+          "message": "docs: update hero schedule deployment status",
+          "url": "https://github.com/charlie2233/GBC_HuskiesWeb/commit/99468b48b4c2c99c872b7bcd880b9da9c8a904cd"
+        },
+        {
+          "sha": "3889e6713108b67fd573f326bbe056d85f031253",
+          "message": "fix: update hero schedule",
+          "url": "https://github.com/charlie2233/GBC_HuskiesWeb/commit/3889e6713108b67fd573f326bbe056d85f031253"
+        }
+      ]
+    },
+    "public": true,
+    "created_at": "2026-07-04T01:42:11Z"
   },
   {
     "id": "14261899754",
@@ -105,25 +173,7 @@
       "push_id": 36550837663,
       "ref": "refs/heads/main",
       "head": "47e58f6e2dd45136c95cc74c4f93b2389f871773",
-      "before": "99468b48b4c2c99c872b7bcd880b9da9c8a904cd",
-      "distinct_size": 3,
-      "commits": [
-        {
-          "sha": "47e58f6e2dd45136c95cc74c4f93b2389f871773",
-          "message": "feat: add threejs hero motion layer",
-          "url": "https://github.com/charlie2233/GBC_HuskiesWeb/commit/47e58f6e2dd45136c95cc74c4f93b2389f871773"
-        },
-        {
-          "sha": "99468b48b4c2c99c872b7bcd880b9da9c8a904cd",
-          "message": "docs: update hero schedule deployment status",
-          "url": "https://github.com/charlie2233/GBC_HuskiesWeb/commit/99468b48b4c2c99c872b7bcd880b9da9c8a904cd"
-        },
-        {
-          "sha": "3889e6713108b67fd573f326bbe056d85f031253",
-          "message": "fix: update hero schedule",
-          "url": "https://github.com/charlie2233/GBC_HuskiesWeb/commit/3889e6713108b67fd573f326bbe056d85f031253"
-        }
-      ]
+      "before": "99468b48b4c2c99c872b7bcd880b9da9c8a904cd"
     },
     "public": true,
     "created_at": "2026-07-03T00:20:28Z"
