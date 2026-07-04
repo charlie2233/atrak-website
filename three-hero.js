@@ -51,8 +51,8 @@
 
         const random = createSeededRandom();
         const scene = new THREE.Scene();
-        const camera = new THREE.PerspectiveCamera(38, 1, 0.1, 100);
-        camera.position.set(0, 0.08, 7.65);
+        const camera = new THREE.PerspectiveCamera(36, 1, 0.1, 100);
+        camera.position.set(0, 0.12, 7.35);
 
         const renderer = new THREE.WebGLRenderer({
             canvas,
@@ -106,7 +106,7 @@
             };
 
             const portal = new THREE.Mesh(
-                new THREE.PlaneGeometry(5.6, 4.0, 1, 1),
+                new THREE.PlaneGeometry(6.2, 4.5, 1, 1),
                 new THREE.ShaderMaterial({
                     uniforms: portalUniforms,
                     transparent: true,
@@ -173,6 +173,68 @@
             return portal;
         };
 
+        const createPlatformRings = () => {
+            const platformGroup = new THREE.Group();
+            platformGroup.position.set(0, -1.26, -0.14);
+
+            const ringMaterial = new THREE.MeshBasicMaterial({
+                color: neonColors.cyan,
+                transparent: true,
+                opacity: 0.34,
+                blending: THREE.AdditiveBlending,
+                depthWrite: false,
+                side: THREE.DoubleSide
+            });
+
+            const floorRings = [0.62, 0.98, 1.36, 1.82].map((ringRadius, ringIndex) => {
+                const ring = new THREE.Mesh(
+                    new THREE.RingGeometry(ringRadius, ringRadius + 0.016, 128),
+                    ringMaterial.clone()
+                );
+                ring.rotation.x = -Math.PI / 2;
+                ring.material.opacity = 0.46 - ringIndex * 0.07;
+                ring.userData = { baseOpacity: ring.material.opacity, spinSpeed: 0.12 + ringIndex * 0.045 };
+                platformGroup.add(ring);
+                return ring;
+            });
+
+            const beam = new THREE.Mesh(
+                new THREE.CylinderGeometry(0.045, 0.22, 3.3, 48, 1, true),
+                new THREE.MeshBasicMaterial({
+                    color: neonColors.cyan,
+                    transparent: true,
+                    opacity: 0.18,
+                    blending: THREE.AdditiveBlending,
+                    depthWrite: false,
+                    side: THREE.DoubleSide
+                })
+            );
+            beam.position.y = 1.38;
+            platformGroup.add(beam);
+
+            const topRings = [0.72, 1.16, 1.62].map((ringRadius, ringIndex) => {
+                const ring = new THREE.Mesh(
+                    new THREE.TorusGeometry(ringRadius, 0.008, 8, 132),
+                    new THREE.MeshBasicMaterial({
+                        color: ringIndex === 1 ? neonColors.violet : neonColors.cyan,
+                        transparent: true,
+                        opacity: 0.22 - ringIndex * 0.04,
+                        blending: THREE.AdditiveBlending,
+                        depthWrite: false
+                    })
+                );
+                ring.position.y = 2.8 + ringIndex * 0.08;
+                ring.rotation.x = Math.PI / 2.45;
+                ring.userData = { spinSpeed: 0.16 + ringIndex * 0.055 };
+                platformGroup.add(ring);
+                return ring;
+            });
+
+            platformGroup.userData = { floorRings, topRings, beam };
+            sigilRig.add(platformGroup);
+            return platformGroup;
+        };
+
         const createAtrakSigil = () => {
             const sigilGroup = new THREE.Group();
 
@@ -210,9 +272,22 @@
                 emissiveIntensity: 0.88
             });
             const sigil = new THREE.Mesh(sigilGeometry, sigilMaterial);
-            sigil.scale.set(0.95, 0.95, 0.95);
+            sigil.scale.set(1.1, 1.16, 1.1);
             sigil.rotation.set(0.06, -0.17, 0.01);
             makeOutline(sigil, 1.032, neonColors.cyan, 0.34);
+
+            const sigilBackplate = new THREE.Mesh(
+                sigilGeometry,
+                new THREE.MeshBasicMaterial({
+                    color: 0x020617,
+                    transparent: true,
+                    opacity: 0.34,
+                    depthWrite: false
+                })
+            );
+            sigilBackplate.position.set(0.09, -0.04, -0.14);
+            sigilBackplate.scale.set(1.2, 1.26, 1.02);
+            sigil.add(sigilBackplate);
 
             const sigilEdges = new THREE.LineSegments(
                 new THREE.EdgesGeometry(sigilGeometry, 26),
@@ -425,6 +500,7 @@
         };
 
         const portal = createPortal();
+        const platformRig = createPlatformRings();
         const sigil = createAtrakSigil();
         sigilRig.add(sigil);
 
@@ -606,8 +682,8 @@
             renderer.setPixelRatio(Math.min(window.devicePixelRatio || 1, compact ? 1.35 : 1.6));
             renderer.setSize(width, height, false);
             camera.aspect = width / height;
-            camera.position.z = compact ? 8.28 : 7.65;
-            stageGroup.scale.setScalar(compact ? 0.86 : 1);
+            camera.position.z = compact ? 8.18 : 7.35;
+            stageGroup.scale.setScalar(compact ? 0.84 : 1);
             camera.updateProjectionMatrix();
         };
 
@@ -663,6 +739,16 @@
             sigilRig.rotation.y = elapsed * 0.1 + pointer.x;
             sigilRig.rotation.x = elapsed * 0.038 - pointer.y;
             sigilRig.rotation.z = Math.sin(elapsed * 0.18) * 0.035;
+
+            platformRig.userData.floorRings.forEach((ring) => {
+                ring.rotation.z = elapsed * ring.userData.spinSpeed;
+                ring.material.opacity = ring.userData.baseOpacity + Math.sin(elapsed * 1.4) * 0.035;
+            });
+            platformRig.userData.topRings.forEach((ring, ringIndex) => {
+                ring.rotation.z = elapsed * (ring.userData.spinSpeed + ringIndex * 0.02);
+                ring.rotation.y = Math.sin(elapsed * 0.24 + ringIndex) * 0.1;
+            });
+            platformRig.userData.beam.material.opacity = 0.14 + Math.sin(elapsed * 2.1) * 0.035;
 
             const sigilCore = sigil.userData.core;
             const sigilAura = sigil.userData.aura;

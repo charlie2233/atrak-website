@@ -425,21 +425,23 @@ body.reduce-motion .project-preview-img {
 .hero::before {
     content: '';
     position: absolute;
-    top: 0;
-    left: 50%;
-    transform: translateX(-50%);
-    width: 1000px;
-    height: 1000px;
-    background: var(--gradient-glow);
+    inset: -18% -10% auto;
+    width: auto;
+    height: 860px;
+    background:
+        radial-gradient(circle at 30% 52%, rgba(20, 241, 255, 0.1), transparent 34%),
+        radial-gradient(circle at 72% 42%, rgba(59, 130, 246, 0.18), transparent 36%),
+        radial-gradient(circle at 84% 58%, rgba(139, 92, 246, 0.16), transparent 32%);
     pointer-events: none;
 }
 
 .hero-container {
     display: grid;
-    grid-template-columns: 1fr 1fr;
-    gap: 80px;
+    grid-template-columns: minmax(420px, 0.82fr) minmax(560px, 1.18fr);
+    gap: 44px;
     align-items: center;
-    max-width: var(--container-width);
+    width: min(100%, 1440px);
+    max-width: none;
     padding: 0 24px;
     position: relative;
     z-index: 1;
@@ -463,10 +465,12 @@ body.reduce-motion .project-preview-img {
 }
 
 .hero-title {
-    font-size: 64px;
-    font-weight: 700;
-    line-height: 1.1;
+    font-size: clamp(58px, 5.9vw, 86px);
+    font-weight: 750;
+    line-height: 1.02;
+    letter-spacing: -0.055em;
     margin-bottom: 24px;
+    text-shadow: 0 0 26px rgba(255, 255, 255, 0.06);
     animation: fadeInUp 0.6s ease-out 0.1s backwards;
 }
 
@@ -481,51 +485,103 @@ body.reduce-motion .project-preview-img {
     font-size: 18px;
     color: var(--text-secondary);
     line-height: 1.7;
-    margin-bottom: 18px;
-    animation: fadeInUp 0.6s ease-out 0.2s backwards;
+    max-width: 620px;
+    margin-bottom: 28px;
+    animation: fadeInUp 0.6s ease-out 0.26s backwards;
 }
 
 .hero-mantra {
     display: inline-flex;
     align-items: center;
-    gap: 10px;
-    margin: 0 0 32px;
-    padding: 10px 14px;
-    border: 1px solid rgba(20, 241, 255, 0.18);
-    border-radius: 999px;
-    background:
-        linear-gradient(135deg, rgba(20, 241, 255, 0.08), rgba(255, 45, 199, 0.08)),
-        rgba(8, 13, 28, 0.34);
-    color: rgba(244, 247, 251, 0.9);
-    font-family: var(--font-mono);
-    font-size: 12px;
-    font-weight: 700;
-    letter-spacing: 0.09em;
+    gap: 12px;
+    margin: 0 0 22px;
+    padding-left: 18px;
+    border-left: 2px solid #14f1ff;
+    color: rgba(244, 247, 251, 0.94);
+    font-size: 18px;
+    font-weight: 600;
+    letter-spacing: -0.01em;
     line-height: 1.4;
-    text-transform: uppercase;
+    text-transform: none;
     box-shadow:
-        inset 0 1px 0 rgba(255, 255, 255, 0.08),
-        0 0 36px rgba(20, 241, 255, 0.08),
-        0 0 58px rgba(255, 45, 199, 0.06);
-    animation: fadeInUp 0.6s ease-out 0.26s backwards;
+        -14px 0 34px rgba(20, 241, 255, 0.12),
+        -4px 0 16px rgba(20, 241, 255, 0.1);
+    animation: fadeInUp 0.6s ease-out 0.2s backwards;
 }
 
 .hero-mantra::before {
-    content: '';
-    width: 9px;
-    height: 9px;
-    flex: 0 0 auto;
-    border-radius: 999px;
-    background: #14f1ff;
-    box-shadow:
-        0 0 12px rgba(20, 241, 255, 0.9),
-        0 0 28px rgba(255, 45, 199, 0.38);
+    content: none;
 }
 
 .hero-buttons {
     display: flex;
     gap: 16px;
     animation: fadeInUp 0.6s ease-out 0.34s backwards;
+}
+
+.hero-stats-panel {
+    display: grid;
+    grid-template-columns: repeat(4, minmax(0, 1fr));
+    gap: 12px;
+    width: min(100%, 640px);
+    margin-top: 34px;
+    padding: 16px;
+    border: 1px solid rgba(20, 241, 255, 0.16);
+    border-radius: 18px;
+    background:
+        linear-gradient(135deg, rgba(20, 241, 255, 0.08), rgba(139, 92, 246, 0.08)),
+        rgba(2, 6, 23, 0.46);
+    box-shadow:
+        inset 0 1px 0 rgba(255, 255, 255, 0.08),
+        0 22px 70px rgba(20, 241, 255, 0.08);
+    backdrop-filter: blur(16px);
+    animation: fadeInUp 0.6s ease-out 0.42s backwards;
+}
+
+.hero-stat {
+    display: grid;
+    grid-template-columns: auto 1fr;
+    grid-template-areas:
+        "icon number"
+        "icon label";
+    column-gap: 10px;
+    align-items: center;
+    min-width: 0;
+}
+
+.hero-stat-icon {
+    grid-area: icon;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    width: 38px;
+    height: 38px;
+    border: 1px solid rgba(20, 241, 255, 0.2);
+    border-radius: 12px;
+    background:
+        radial-gradient(circle at 35% 25%, rgba(20, 241, 255, 0.2), transparent 54%),
+        rgba(7, 16, 38, 0.72);
+    color: #14f1ff;
+    font-family: var(--font-mono);
+    font-size: 14px;
+    font-weight: 800;
+    box-shadow: 0 0 26px rgba(20, 241, 255, 0.08);
+}
+
+.hero-stat strong {
+    grid-area: number;
+    color: rgba(255, 255, 255, 0.96);
+    font-size: 22px;
+    line-height: 1;
+    letter-spacing: -0.04em;
+}
+
+.hero-stat span:last-child {
+    grid-area: label;
+    min-width: 0;
+    color: rgba(244, 247, 251, 0.62);
+    font-size: 12px;
+    line-height: 1.2;
 }
 
 .btn {
@@ -606,35 +662,35 @@ body.reduce-motion .project-preview-img {
 /* Hero Visual */
 .hero-visual {
     position: relative;
-    height: 500px;
+    height: 620px;
     display: flex;
     align-items: center;
     justify-content: center;
     isolation: isolate;
-    perspective: 1200px;
+    perspective: 1400px;
 }
 
 .hero-three-shell {
     position: absolute;
-    inset: 2%;
+    inset: 0;
     display: grid;
     place-items: center;
-    border-radius: 38px;
+    border-radius: 42px;
     overflow: hidden;
     background:
-        radial-gradient(ellipse at 50% 46%, rgba(20, 241, 255, 0.34), transparent 28%),
-        radial-gradient(circle at 72% 20%, rgba(255, 45, 199, 0.2), transparent 34%),
-        radial-gradient(circle at 20% 78%, rgba(124, 92, 255, 0.24), transparent 35%),
+        radial-gradient(ellipse at 52% 54%, rgba(20, 241, 255, 0.36), transparent 26%),
+        radial-gradient(circle at 67% 17%, rgba(59, 130, 246, 0.2), transparent 31%),
+        radial-gradient(circle at 27% 76%, rgba(255, 45, 199, 0.2), transparent 30%),
         conic-gradient(from 210deg at 50% 48%, rgba(20, 241, 255, 0.06), rgba(255, 45, 199, 0.1), rgba(124, 92, 255, 0.08), rgba(20, 241, 255, 0.06)),
         linear-gradient(135deg, rgba(8, 13, 28, 0.84), rgba(2, 6, 23, 0.3));
-    border: 1px solid rgba(20, 241, 255, 0.14);
+    border: 1px solid rgba(20, 241, 255, 0.16);
     box-shadow:
         inset 0 1px 0 rgba(255, 255, 255, 0.08),
         inset 0 0 72px rgba(20, 241, 255, 0.08),
         0 28px 90px rgba(20, 241, 255, 0.12),
         0 34px 130px rgba(124, 92, 255, 0.18),
         0 0 0 1px rgba(255, 45, 199, 0.08);
-    transform: rotateX(5deg) rotateY(-8deg);
+    transform: rotateX(5deg) rotateY(-7deg);
     z-index: 0;
 }
 
@@ -665,6 +721,23 @@ body.reduce-motion .project-preview-img {
         radial-gradient(circle at 50% 50%, transparent 36%, rgba(0, 0, 0, 0.56) 100%);
     opacity: 0.62;
     mix-blend-mode: screen;
+}
+
+.hero-visual::before {
+    content: '';
+    position: absolute;
+    left: 5%;
+    right: 5%;
+    bottom: 4%;
+    height: 92px;
+    border-radius: 50%;
+    background:
+        radial-gradient(ellipse at 50% 50%, rgba(20, 241, 255, 0.2), transparent 58%),
+        radial-gradient(ellipse at 50% 100%, rgba(59, 130, 246, 0.22), transparent 70%);
+    filter: blur(18px);
+    opacity: 0.86;
+    z-index: 1;
+    pointer-events: none;
 }
 
 .hero-three-canvas {
@@ -776,12 +849,12 @@ body.reduce-motion .project-preview-img {
 
 .floating-card {
     position: absolute;
-    width: 176px;
-    height: 176px;
+    width: 190px;
+    min-height: 74px;
     background:
-        radial-gradient(circle at 35% 20%, rgba(20, 241, 255, 0.16), transparent 42%),
-        linear-gradient(135deg, rgba(59, 130, 246, 0.11), rgba(139, 92, 246, 0.12));
-    border: 1px solid var(--border-color);
+        radial-gradient(circle at 18% 16%, rgba(20, 241, 255, 0.18), transparent 34%),
+        linear-gradient(135deg, rgba(8, 19, 45, 0.78), rgba(7, 11, 28, 0.62));
+    border: 1px solid rgba(20, 241, 255, 0.2);
     border-radius: 16px;
     backdrop-filter: blur(10px);
     --parallax-y: 0px;
@@ -790,14 +863,17 @@ body.reduce-motion .project-preview-img {
     --pointer-rotate: 0deg;
     transform: translate(var(--pointer-x, 0px), calc(var(--parallax-y, 0px) + var(--pointer-y, 0px))) rotate(var(--pointer-rotate, 0deg));
     will-change: transform;
-    display: flex;
+    display: grid;
+    grid-template-columns: 42px 1fr;
+    gap: 10px;
     align-items: center;
-    justify-content: center;
+    padding: 12px;
     overflow: hidden;
     z-index: 2;
     box-shadow:
         inset 0 1px 0 rgba(255, 255, 255, 0.08),
-        0 18px 48px rgba(0, 0, 0, 0.32);
+        0 18px 48px rgba(0, 0, 0, 0.34),
+        0 0 42px rgba(20, 241, 255, 0.08);
 }
 
 body.three-hero-ready .floating-card {
@@ -809,27 +885,70 @@ body.three-hero-ready .floating-card {
 }
 
 .floating-card img {
-    width: 68%;
-    height: 68%;
+    width: 42px;
+    height: 42px;
     object-fit: contain;
-    border-radius: 12px;
+    border-radius: 10px;
     filter: drop-shadow(0 10px 18px rgba(0, 0, 0, 0.35));
 }
 
-.card-1 {
-    top: 18px;
-    left: 72%;
-    transform: translateX(-50%) translate(var(--pointer-x, 0px), calc(var(--parallax-y, 0px) + var(--pointer-y, 0px))) rotate(var(--pointer-rotate, 0deg));
+.hero-orbit-card::before {
+    content: '';
+    position: absolute;
+    inset: 0;
+    background: linear-gradient(120deg, rgba(255, 255, 255, 0.12), transparent 46%);
+    opacity: 0.32;
+    pointer-events: none;
 }
 
-.card-2 {
-    bottom: 12px;
-    left: 8px;
+.hero-orbit-card strong,
+.hero-orbit-card small {
+    display: block;
+    position: relative;
+    z-index: 1;
 }
 
-.card-3 {
-    bottom: 12px;
-    right: 8px;
+.hero-orbit-card strong {
+    color: rgba(255, 255, 255, 0.94);
+    font-size: 13px;
+    line-height: 1.15;
+}
+
+.hero-orbit-card small {
+    margin-top: 4px;
+    color: rgba(244, 247, 251, 0.58);
+    font-size: 10px;
+    line-height: 1.2;
+}
+
+.card-guide {
+    top: 92px;
+    left: 7%;
+}
+
+.card-hoops {
+    top: 252px;
+    left: -1%;
+}
+
+.card-agent {
+    bottom: 86px;
+    left: 9%;
+}
+
+.card-board {
+    top: 128px;
+    right: 1%;
+}
+
+.card-ten {
+    top: 298px;
+    right: -1%;
+}
+
+.card-predator {
+    bottom: 78px;
+    right: 7%;
 }
 
 @keyframes fadeInUp {
@@ -6654,10 +6773,11 @@ a.leader-card:hover {
     .hero-container {
         grid-template-columns: 1fr;
         gap: 40px;
+        max-width: 900px;
     }
     
     .hero-visual {
-        height: 300px;
+        height: 520px;
     }
 
     .hero-three-shell {
@@ -6673,20 +6793,37 @@ a.leader-card:hover {
     }
 
     .floating-card {
-        width: 136px;
-        height: 136px;
+        width: 168px;
+        min-height: 68px;
     }
 
-    .card-1 {
-        top: 12px;
-        left: 76%;
-    }
-
-    .card-2 {
+    .card-guide {
+        top: 78px;
         left: 8%;
     }
 
-    .card-3 {
+    .card-hoops {
+        top: 220px;
+        left: 2%;
+    }
+
+    .card-agent {
+        bottom: 74px;
+        left: 9%;
+    }
+
+    .card-board {
+        top: 100px;
+        right: 4%;
+    }
+
+    .card-ten {
+        top: 250px;
+        right: 2%;
+    }
+
+    .card-predator {
+        bottom: 70px;
         right: 8%;
     }
 
@@ -6740,29 +6877,65 @@ a.leader-card:hover {
         padding: 0 16px;
     }
 
+    .hero-stats-panel {
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+        width: 100%;
+    }
+
     .hero-visual {
-        height: 280px;
+        height: 410px;
     }
 
     .floating-card {
-        width: 112px;
-        height: 112px;
+        width: 148px;
+        min-height: 62px;
+        grid-template-columns: 34px 1fr;
+        gap: 8px;
+        padding: 9px;
         border-radius: 14px;
     }
 
-    .card-1 {
-        top: 18px;
-        left: 76%;
+    .floating-card img {
+        width: 34px;
+        height: 34px;
     }
 
-    .card-2 {
-        bottom: 14px;
-        left: 4%;
+    .hero-orbit-card strong {
+        font-size: 11px;
     }
 
-    .card-3 {
+    .hero-orbit-card small {
+        font-size: 9px;
+    }
+
+    .card-guide {
+        top: 42px;
+        left: 2%;
+    }
+
+    .card-hoops {
+        top: 156px;
+        left: 0;
+    }
+
+    .card-agent {
+        bottom: 44px;
+        left: 5%;
+    }
+
+    .card-board {
+        top: 54px;
+        right: 0;
+    }
+
+    .card-ten {
+        top: 180px;
+        right: 0;
+    }
+
+    .card-predator {
+        bottom: 38px;
         right: 4%;
-        bottom: 14px;
     }
     
     .nav-links {
@@ -6835,8 +7008,8 @@ a.leader-card:hover {
 
     .hero-mantra {
         max-width: 100%;
-        font-size: 10px;
-        letter-spacing: 0.07em;
+        font-size: 15px;
+        letter-spacing: -0.01em;
         white-space: normal;
     }
     
@@ -7026,9 +7199,25 @@ a.leader-card:hover {
     }
 
     .hero-mantra {
-        margin-bottom: 24px;
-        padding: 9px 12px;
-        font-size: 10px;
+        margin-bottom: 18px;
+        padding-left: 14px;
+        font-size: 14px;
+    }
+
+    .hero-stats-panel {
+        grid-template-columns: 1fr 1fr;
+        gap: 10px;
+        margin-top: 24px;
+        padding: 12px;
+    }
+
+    .hero-stat-icon {
+        width: 34px;
+        height: 34px;
+    }
+
+    .hero-stat strong {
+        font-size: 18px;
     }
 
     .hero-visual,
