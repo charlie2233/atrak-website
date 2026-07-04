@@ -1,6 +1,6 @@
 [
   {
-    "id": "14347645033",
+    "id": "14349315952",
     "type": "PushEvent",
     "actor": {
       "id": 117957000,
@@ -17,12 +17,22 @@
     },
     "payload": {
       "repository_id": 1140388078,
-      "push_id": 36636848450,
+      "push_id": 36638522168,
       "ref": "refs/heads/main",
-      "head": "5110501e1e40de06a712c55bf14825cd7f661152",
-      "before": "7a185eb059abfcd9374a29d799c815d3bc1ecd25",
-      "distinct_size": 19,
+      "head": "3788992170e31514135124f42be79b10fd0e2416",
+      "before": "d90ab6282b72f9cd33e4812d1d0216cc782ab057",
+      "distinct_size": 21,
       "commits": [
+        {
+          "sha": "3788992170e31514135124f42be79b10fd0e2416",
+          "message": "feat: implement concept hero design",
+          "url": "https://github.com/charlie2233/atrak-website/commit/3788992170e31514135124f42be79b10fd0e2416"
+        },
+        {
+          "sha": "d90ab6282b72f9cd33e4812d1d0216cc782ab057",
+          "message": "chore: update GitHub data [skip ci]",
+          "url": "https://github.com/charlie2233/atrak-website/commit/d90ab6282b72f9cd33e4812d1d0216cc782ab057"
+        },
         {
           "sha": "5110501e1e40de06a712c55bf14825cd7f661152",
           "message": "feat: refine three js hero sigil",
@@ -112,13 +122,34 @@
           "sha": "d15cabd02883ae3112163eba6b3eab19a68345aa",
           "message": "chore: update GitHub data [skip ci]",
           "url": "https://github.com/charlie2233/atrak-website/commit/d15cabd02883ae3112163eba6b3eab19a68345aa"
-        },
-        {
-          "sha": "30c26b6729603db61ae90eefd0084a2c393bd3b2",
-          "message": "chore: update GitHub data [skip ci]",
-          "url": "https://github.com/charlie2233/atrak-website/commit/30c26b6729603db61ae90eefd0084a2c393bd3b2"
         }
       ]
+    },
+    "public": true,
+    "created_at": "2026-07-04T21:31:25Z"
+  },
+  {
+    "id": "14347645033",
+    "type": "PushEvent",
+    "actor": {
+      "id": 117957000,
+      "login": "charlie2233",
+      "display_login": "charlie2233",
+      "gravatar_id": "",
+      "url": "https://api.github.com/users/charlie2233",
+      "avatar_url": "https://avatars.githubusercontent.com/u/117957000?"
+    },
+    "repo": {
+      "id": 1140388078,
+      "name": "charlie2233/atrak-website",
+      "url": "https://api.github.com/repos/charlie2233/atrak-website"
+    },
+    "payload": {
+      "repository_id": 1140388078,
+      "push_id": 36636848450,
+      "ref": "refs/heads/main",
+      "head": "5110501e1e40de06a712c55bf14825cd7f661152",
+      "before": "7a185eb059abfcd9374a29d799c815d3bc1ecd25"
     },
     "public": true,
     "created_at": "2026-07-04T20:25:03Z"
