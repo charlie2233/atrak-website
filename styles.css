@@ -465,11 +465,11 @@ body.reduce-motion .project-preview-img {
 }
 
 .hero-title {
-    font-size: clamp(58px, 5.9vw, 86px);
+    font-size: clamp(48px, 5vw, 72px);
     font-weight: 750;
-    line-height: 1.02;
-    letter-spacing: -0.055em;
-    margin-bottom: 24px;
+    line-height: 1.04;
+    letter-spacing: -0.045em;
+    margin-bottom: 18px;
     text-shadow: 0 0 26px rgba(255, 255, 255, 0.06);
     animation: fadeInUp 0.6s ease-out 0.1s backwards;
 }
