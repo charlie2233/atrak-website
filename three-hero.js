@@ -4,7 +4,10 @@
     const motionQuery = window.matchMedia?.('(prefers-reduced-motion: reduce)');
     const coarsePointerQuery = window.matchMedia?.('(pointer: coarse)');
     const minWidth = 760;
-    const threeModuleUrl = 'https://unpkg.com/three@0.160.0/build/three.module.js';
+    const threeModuleUrls = [
+        'https://unpkg.com/three@0.160.0/build/three.module.js',
+        'https://cdn.jsdelivr.net/npm/three@0.160.0/build/three.module.js'
+    ];
 
     const hasWebGL = () => {
         try {
@@ -15,16 +18,15 @@
         }
     };
 
-    const shouldSkip = () => {
-        return (
-            !target ||
-            !canvas ||
-            motionQuery?.matches ||
-            window.innerWidth < minWidth ||
-            navigator.connection?.saveData ||
-            (coarsePointerQuery?.matches && window.innerWidth < 1024) ||
-            !hasWebGL()
-        );
+    const getSkipReason = () => {
+        if (!target) return 'missing hero target';
+        if (!canvas) return 'missing hero canvas';
+        if (motionQuery?.matches) return 'reduced motion is enabled';
+        if (window.innerWidth < minWidth) return 'viewport is too narrow';
+        if (navigator.connection?.saveData) return 'data saver is enabled';
+        if (coarsePointerQuery?.matches && window.innerWidth < 1024) return 'touch-first compact viewport';
+        if (!hasWebGL()) return 'WebGL is unavailable';
+        return '';
     };
 
     const createSeededRandom = () => {
@@ -36,15 +38,26 @@
     };
 
     const init = async () => {
-        if (shouldSkip()) {
+        const skipReason = getSkipReason();
+        if (skipReason) {
+            console.info(`Atrak 3D hero skipped: ${skipReason}.`);
             target?.classList.add('is-fallback');
             return;
         }
 
         let THREE;
-        try {
-            THREE = await import(threeModuleUrl);
-        } catch {
+        let importError;
+        for (const moduleUrl of threeModuleUrls) {
+            try {
+                THREE = await import(moduleUrl);
+                break;
+            } catch (error) {
+                importError = error;
+            }
+        }
+
+        if (!THREE) {
+            console.warn('Atrak 3D hero could not load Three.js.', importError);
             target.classList.add('is-fallback');
             return;
         }
@@ -54,12 +67,19 @@
         const camera = new THREE.PerspectiveCamera(36, 1, 0.1, 100);
         camera.position.set(0, 0.12, 7.35);
 
-        const renderer = new THREE.WebGLRenderer({
-            canvas,
-            alpha: true,
-            antialias: true,
-            powerPreference: 'low-power'
-        });
+        let renderer;
+        try {
+            renderer = new THREE.WebGLRenderer({
+                canvas,
+                alpha: true,
+                antialias: true,
+                powerPreference: 'high-performance'
+            });
+        } catch (error) {
+            console.warn('Atrak 3D hero could not create a WebGL renderer.', error);
+            target.classList.add('is-fallback');
+            return;
+        }
         renderer.setClearColor(0x000000, 0);
         renderer.outputColorSpace = THREE.SRGBColorSpace;
         renderer.toneMapping = THREE.ACESFilmicToneMapping;
