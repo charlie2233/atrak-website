@@ -256,7 +256,7 @@ body.reduce-motion .project-preview-img {
     }
 
     .hero-three-canvas {
-        display: none;
+        transition: none;
     }
 }
 
@@ -753,6 +753,10 @@ body.reduce-motion .project-preview-img {
 
 .hero-three-shell.is-ready .hero-three-canvas {
     opacity: 1;
+}
+
+.hero-three-shell.is-fallback .hero-three-canvas {
+    opacity: 0;
 }
 
 .hero-three-ring {

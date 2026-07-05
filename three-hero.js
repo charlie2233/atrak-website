@@ -5,14 +5,27 @@
     const coarsePointerQuery = window.matchMedia?.('(pointer: coarse)');
     const minWidth = 760;
     const threeModuleUrls = [
+        './vendor/three.module.js?v=160',
         'https://unpkg.com/three@0.160.0/build/three.module.js',
         'https://cdn.jsdelivr.net/npm/three@0.160.0/build/three.module.js'
     ];
+    const webglContextAttributes = {
+        alpha: true,
+        antialias: true,
+        powerPreference: 'high-performance',
+        failIfMajorPerformanceCaveat: false
+    };
 
     const hasWebGL = () => {
         try {
             const testCanvas = document.createElement('canvas');
-            return Boolean(testCanvas.getContext('webgl') || testCanvas.getContext('experimental-webgl'));
+            const context = (
+                testCanvas.getContext('webgl2', webglContextAttributes) ||
+                testCanvas.getContext('webgl', webglContextAttributes) ||
+                testCanvas.getContext('experimental-webgl', webglContextAttributes)
+            );
+            context?.getExtension('WEBGL_lose_context')?.loseContext();
+            return Boolean(context);
         } catch {
             return false;
         }
@@ -21,7 +34,6 @@
     const getSkipReason = () => {
         if (!target) return 'missing hero target';
         if (!canvas) return 'missing hero canvas';
-        if (motionQuery?.matches) return 'reduced motion is enabled';
         if (window.innerWidth < minWidth) return 'viewport is too narrow';
         if (navigator.connection?.saveData) return 'data saver is enabled';
         if (coarsePointerQuery?.matches && window.innerWidth < 1024) return 'touch-first compact viewport';
@@ -63,6 +75,7 @@
         }
 
         const random = createSeededRandom();
+        const reduceMotion = Boolean(motionQuery?.matches);
         const scene = new THREE.Scene();
         const camera = new THREE.PerspectiveCamera(36, 1, 0.1, 100);
         camera.position.set(0, 0.12, 7.35);
@@ -157,14 +170,14 @@
                             float distanceValue = length(centered);
                             float angle = atan(centered.y, centered.x);
                             float outerMask = 1.0 - smoothstep(0.44, 0.62, distanceValue);
-                            float coreGlow = smoothstep(0.42, 0.02, distanceValue) * 0.28;
+                            float coreGlow = (1.0 - smoothstep(0.02, 0.42, distanceValue)) * 0.28;
                             float rings = neonRing(distanceValue, 0.16, 0.012) * 0.72;
                             rings += neonRing(distanceValue, 0.29, 0.008) * 0.58;
                             rings += neonRing(distanceValue, 0.42, 0.006) * 0.42;
                             float radialTicks = smoothstep(0.985, 1.0, abs(sin((angle + uTime * 0.22) * 18.0)));
                             radialTicks *= smoothstep(0.08, 0.36, distanceValue) * outerMask * 0.18;
                             float sweep = pow(max(0.0, cos(angle - uTime * 0.78)), 10.0);
-                            sweep *= smoothstep(0.45, 0.08, distanceValue) * 0.42;
+                            sweep *= (1.0 - smoothstep(0.08, 0.45, distanceValue)) * 0.42;
                             float scan = smoothstep(0.965, 1.0, sin((centered.y - uTime * 0.08) * 46.0)) * 0.08;
                             vec3 colorValue = mix(uAccentB, uAccentA, smoothstep(-0.8, 0.8, centered.x + sin(uTime * 0.25) * 0.18));
                             float alphaValue = (coreGlow + rings + radialTicks + sweep + scan) * outerMask;
@@ -705,6 +718,9 @@
             camera.position.z = compact ? 8.18 : 7.35;
             stageGroup.scale.setScalar(compact ? 0.84 : 1);
             camera.updateProjectionMatrix();
+            if (reduceMotion) {
+                renderer.render(scene, camera);
+            }
         };
 
         const onPointerMove = (event) => {
@@ -833,23 +849,41 @@
                 window.cancelAnimationFrame(frameId);
                 frameId = 0;
             }
+            target.classList.remove('is-ready');
             target.classList.add('is-fallback');
             document.body.classList.remove('three-hero-ready');
         };
 
         resize();
         target.classList.add('is-ready');
+        if (reduceMotion) {
+            target.classList.add('is-static');
+        }
         document.body.classList.add('three-hero-ready');
         window.addEventListener('resize', resize, { passive: true });
-        target.addEventListener('pointermove', onPointerMove, { passive: true });
         canvas.addEventListener('webglcontextlost', onContextLost, false);
-        document.addEventListener('visibilitychange', onVisibilityChange);
-        frameId = window.requestAnimationFrame(animate);
+        if (reduceMotion) {
+            renderer.render(scene, camera);
+            console.info('Atrak 3D hero rendered as a static frame because reduced motion is enabled.');
+        } else {
+            target.addEventListener('pointermove', onPointerMove, { passive: true });
+            document.addEventListener('visibilitychange', onVisibilityChange);
+            frameId = window.requestAnimationFrame(animate);
+        }
+    };
+
+    const start = () => {
+        init().catch((error) => {
+            console.warn('Atrak 3D hero failed during startup.', error);
+            target?.classList.remove('is-ready', 'is-static');
+            target?.classList.add('is-fallback');
+            document.body.classList.remove('three-hero-ready');
+        });
     };
 
     if (document.readyState === 'loading') {
-        document.addEventListener('DOMContentLoaded', init, { once: true });
+        document.addEventListener('DOMContentLoaded', start, { once: true });
     } else {
-        init();
+        start();
     }
 })();
