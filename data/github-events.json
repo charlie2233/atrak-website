@@ -1,6 +1,6 @@
 [
   {
-    "id": "14349315952",
+    "id": "14361681306",
     "type": "PushEvent",
     "actor": {
       "id": 117957000,
@@ -17,12 +17,22 @@
     },
     "payload": {
       "repository_id": 1140388078,
-      "push_id": 36638522168,
+      "push_id": 36650909341,
       "ref": "refs/heads/main",
-      "head": "3788992170e31514135124f42be79b10fd0e2416",
-      "before": "d90ab6282b72f9cd33e4812d1d0216cc782ab057",
-      "distinct_size": 22,
+      "head": "19fbd160d31c489617d5c4e66ab8aeb1caeab596",
+      "before": "15b1baf89918acecd94f77a4f006517db0824bfc",
+      "distinct_size": 23,
       "commits": [
+        {
+          "sha": "19fbd160d31c489617d5c4e66ab8aeb1caeab596",
+          "message": "fix: tighten hero headline",
+          "url": "https://github.com/charlie2233/atrak-website/commit/19fbd160d31c489617d5c4e66ab8aeb1caeab596"
+        },
+        {
+          "sha": "15b1baf89918acecd94f77a4f006517db0824bfc",
+          "message": "chore: update GitHub data [skip ci]",
+          "url": "https://github.com/charlie2233/atrak-website/commit/15b1baf89918acecd94f77a4f006517db0824bfc"
+        },
         {
           "sha": "876119492e187cb8a93f2e98efec0435c50928cd",
           "message": "chore: update GitHub data [skip ci]",
@@ -112,18 +122,34 @@
           "sha": "ac4106a03a6279d494129871ad339d377d27ec90",
           "message": "chore: update GitHub data [skip ci]",
           "url": "https://github.com/charlie2233/atrak-website/commit/ac4106a03a6279d494129871ad339d377d27ec90"
-        },
-        {
-          "sha": "539aaea884b8f37ab0e495820e739126ec321377",
-          "message": "chore: update GitHub data [skip ci]",
-          "url": "https://github.com/charlie2233/atrak-website/commit/539aaea884b8f37ab0e495820e739126ec321377"
-        },
-        {
-          "sha": "78e543598ebcef12fae0aa5810d3cd34a3d69adf",
-          "message": "chore: update GitHub data [skip ci]",
-          "url": "https://github.com/charlie2233/atrak-website/commit/78e543598ebcef12fae0aa5810d3cd34a3d69adf"
         }
       ]
+    },
+    "public": true,
+    "created_at": "2026-07-05T07:07:43Z"
+  },
+  {
+    "id": "14349315952",
+    "type": "PushEvent",
+    "actor": {
+      "id": 117957000,
+      "login": "charlie2233",
+      "display_login": "charlie2233",
+      "gravatar_id": "",
+      "url": "https://api.github.com/users/charlie2233",
+      "avatar_url": "https://avatars.githubusercontent.com/u/117957000?"
+    },
+    "repo": {
+      "id": 1140388078,
+      "name": "charlie2233/atrak-website",
+      "url": "https://api.github.com/repos/charlie2233/atrak-website"
+    },
+    "payload": {
+      "repository_id": 1140388078,
+      "push_id": 36638522168,
+      "ref": "refs/heads/main",
+      "head": "3788992170e31514135124f42be79b10fd0e2416",
+      "before": "d90ab6282b72f9cd33e4812d1d0216cc782ab057"
     },
     "public": true,
     "created_at": "2026-07-04T21:31:25Z"
