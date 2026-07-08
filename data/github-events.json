@@ -1876,8 +1876,13 @@
       "ref": "refs/heads/main",
       "head": "530e1af737e3282d6ecab11f5d46455bab54c554",
       "before": "12aecf931681a6c7ce16b8ff23d38f0ad97989a1",
-      "distinct_size": 27,
+      "distinct_size": 28,
       "commits": [
+        {
+          "sha": "745f77930c3c618b210f44731f9d7dead0813e79",
+          "message": "chore: update GitHub data [skip ci]",
+          "url": "https://github.com/charlie2233/atrak-website/commit/745f77930c3c618b210f44731f9d7dead0813e79"
+        },
         {
           "sha": "4c643573164d6e776a527eef0ca49914c4476142",
           "message": "chore: update GitHub data [skip ci]",
@@ -1972,11 +1977,6 @@
           "sha": "37828b850cd90ba64158b89b5b46e5039d0f014f",
           "message": "chore: update GitHub data [skip ci]",
           "url": "https://github.com/charlie2233/atrak-website/commit/37828b850cd90ba64158b89b5b46e5039d0f014f"
-        },
-        {
-          "sha": "9c1fcbe31731bcf56c8f1711550438fa628289ef",
-          "message": "feat: add three js hero visual",
-          "url": "https://github.com/charlie2233/atrak-website/commit/9c1fcbe31731bcf56c8f1711550438fa628289ef"
         }
       ]
     },
