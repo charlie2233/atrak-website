@@ -2273,8 +2273,13 @@
       "ref": "refs/heads/main",
       "head": "530e1af737e3282d6ecab11f5d46455bab54c554",
       "before": "12aecf931681a6c7ce16b8ff23d38f0ad97989a1",
-      "distinct_size": 27,
+      "distinct_size": 28,
       "commits": [
+        {
+          "sha": "e4362c1dbab0dfbb203567a3257fd299c1286e85",
+          "message": "chore: update GitHub data [skip ci]",
+          "url": "https://github.com/charlie2233/atrak-website/commit/e4362c1dbab0dfbb203567a3257fd299c1286e85"
+        },
         {
           "sha": "6ba82643a0d641d1fbb6e66fe8173341e9a7df32",
           "message": "chore: update GitHub data [skip ci]",
@@ -2369,11 +2374,6 @@
           "sha": "5110501e1e40de06a712c55bf14825cd7f661152",
           "message": "feat: refine three js hero sigil",
           "url": "https://github.com/charlie2233/atrak-website/commit/5110501e1e40de06a712c55bf14825cd7f661152"
-        },
-        {
-          "sha": "7a185eb059abfcd9374a29d799c815d3bc1ecd25",
-          "message": "chore: update GitHub data [skip ci]",
-          "url": "https://github.com/charlie2233/atrak-website/commit/7a185eb059abfcd9374a29d799c815d3bc1ecd25"
         }
       ]
     },
@@ -2532,7 +2532,7 @@
       "ref": "refs/heads/main",
       "head": "bd4262c8b7b3e98395e2afae54efa250c64255f5",
       "before": "6088cc18834b35e5e7d7531cde7c5dc4f140631d",
-      "distinct_size": 6,
+      "distinct_size": 3,
       "commits": [
         {
           "sha": "bd4262c8b7b3e98395e2afae54efa250c64255f5",
@@ -2548,21 +2548,6 @@
           "sha": "11f63193898e15f0c7ac21bcd0747a0dcb7e03e5",
           "message": "docs: update threejs hero deployment status",
           "url": "https://github.com/charlie2233/GBC_HuskiesWeb/commit/11f63193898e15f0c7ac21bcd0747a0dcb7e03e5"
-        },
-        {
-          "sha": "47e58f6e2dd45136c95cc74c4f93b2389f871773",
-          "message": "feat: add threejs hero motion layer",
-          "url": "https://github.com/charlie2233/GBC_HuskiesWeb/commit/47e58f6e2dd45136c95cc74c4f93b2389f871773"
-        },
-        {
-          "sha": "99468b48b4c2c99c872b7bcd880b9da9c8a904cd",
-          "message": "docs: update hero schedule deployment status",
-          "url": "https://github.com/charlie2233/GBC_HuskiesWeb/commit/99468b48b4c2c99c872b7bcd880b9da9c8a904cd"
-        },
-        {
-          "sha": "3889e6713108b67fd573f326bbe056d85f031253",
-          "message": "fix: update hero schedule",
-          "url": "https://github.com/charlie2233/GBC_HuskiesWeb/commit/3889e6713108b67fd573f326bbe056d85f031253"
         }
       ]
     },
