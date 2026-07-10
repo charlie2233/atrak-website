@@ -2273,8 +2273,13 @@
       "ref": "refs/heads/main",
       "head": "530e1af737e3282d6ecab11f5d46455bab54c554",
       "before": "12aecf931681a6c7ce16b8ff23d38f0ad97989a1",
-      "distinct_size": 28,
+      "distinct_size": 27,
       "commits": [
+        {
+          "sha": "2cb5fff5673aed4b7ba4f23444efb17f0ebe563c",
+          "message": "chore: update GitHub data [skip ci]",
+          "url": "https://github.com/charlie2233/atrak-website/commit/2cb5fff5673aed4b7ba4f23444efb17f0ebe563c"
+        },
         {
           "sha": "e4362c1dbab0dfbb203567a3257fd299c1286e85",
           "message": "chore: update GitHub data [skip ci]",
@@ -2369,11 +2374,6 @@
           "sha": "d90ab6282b72f9cd33e4812d1d0216cc782ab057",
           "message": "chore: update GitHub data [skip ci]",
           "url": "https://github.com/charlie2233/atrak-website/commit/d90ab6282b72f9cd33e4812d1d0216cc782ab057"
-        },
-        {
-          "sha": "5110501e1e40de06a712c55bf14825cd7f661152",
-          "message": "feat: refine three js hero sigil",
-          "url": "https://github.com/charlie2233/atrak-website/commit/5110501e1e40de06a712c55bf14825cd7f661152"
         }
       ]
     },
