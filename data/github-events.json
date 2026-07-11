@@ -1,6 +1,6 @@
 [
   {
-    "id": "14747024398",
+    "id": "14747279197",
     "type": "PushEvent",
     "actor": {
       "id": 117957000,
@@ -17,12 +17,22 @@
     },
     "payload": {
       "repository_id": 1140388078,
-      "push_id": 37036813553,
+      "push_id": 37037068498,
       "ref": "refs/heads/main",
-      "head": "a5f8e4f459f8f8123395103410884aad692e06c2",
-      "before": "4463d9563f4b89febfe5fbdb86d6a4179f87cf8e",
-      "distinct_size": 29,
+      "head": "115bada15cdd7d6f94be5fce7896b1e2491fd857",
+      "before": "acefce6ec4cc2d469385990774bb41778c693d2d",
+      "distinct_size": 31,
       "commits": [
+        {
+          "sha": "115bada15cdd7d6f94be5fce7896b1e2491fd857",
+          "message": "refactor: streamline site interactions",
+          "url": "https://github.com/charlie2233/atrak-website/commit/115bada15cdd7d6f94be5fce7896b1e2491fd857"
+        },
+        {
+          "sha": "acefce6ec4cc2d469385990774bb41778c693d2d",
+          "message": "chore: update GitHub data [skip ci]",
+          "url": "https://github.com/charlie2233/atrak-website/commit/acefce6ec4cc2d469385990774bb41778c693d2d"
+        },
         {
           "sha": "a5f8e4f459f8f8123395103410884aad692e06c2",
           "message": "feat: redesign interactive site and harden 3d",
@@ -112,18 +122,34 @@
           "sha": "12aecf931681a6c7ce16b8ff23d38f0ad97989a1",
           "message": "chore: update GitHub data [skip ci]",
           "url": "https://github.com/charlie2233/atrak-website/commit/12aecf931681a6c7ce16b8ff23d38f0ad97989a1"
-        },
-        {
-          "sha": "6abc94a326daa39aa69a763e9a5da15c2f129f3f",
-          "message": "fix: harden three hero startup",
-          "url": "https://github.com/charlie2233/atrak-website/commit/6abc94a326daa39aa69a763e9a5da15c2f129f3f"
-        },
-        {
-          "sha": "d9c9dfb9023696799d7fe15bd0c960063e7f00ce",
-          "message": "chore: update GitHub data [skip ci]",
-          "url": "https://github.com/charlie2233/atrak-website/commit/d9c9dfb9023696799d7fe15bd0c960063e7f00ce"
         }
       ]
+    },
+    "public": true,
+    "created_at": "2026-07-11T06:51:04Z"
+  },
+  {
+    "id": "14747024398",
+    "type": "PushEvent",
+    "actor": {
+      "id": 117957000,
+      "login": "charlie2233",
+      "display_login": "charlie2233",
+      "gravatar_id": "",
+      "url": "https://api.github.com/users/charlie2233",
+      "avatar_url": "https://avatars.githubusercontent.com/u/117957000?"
+    },
+    "repo": {
+      "id": 1140388078,
+      "name": "charlie2233/atrak-website",
+      "url": "https://api.github.com/repos/charlie2233/atrak-website"
+    },
+    "payload": {
+      "repository_id": 1140388078,
+      "push_id": 37036813553,
+      "ref": "refs/heads/main",
+      "head": "a5f8e4f459f8f8123395103410884aad692e06c2",
+      "before": "4463d9563f4b89febfe5fbdb86d6a4179f87cf8e"
     },
     "public": true,
     "created_at": "2026-07-11T06:44:16Z"
