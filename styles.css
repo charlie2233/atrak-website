@@ -3142,8 +3142,18 @@ section {
 }
 
 .code-dot.close-btn {
+    appearance: none;
+    min-width: 12px;
+    min-height: 12px;
+    padding: 0;
+    border: 0;
     cursor: pointer;
     position: relative;
+}
+
+.code-dot.close-btn:focus-visible {
+    outline: 2px solid rgba(20, 241, 255, 0.82);
+    outline-offset: 3px;
 }
 
 .code-dot.close-btn::after {

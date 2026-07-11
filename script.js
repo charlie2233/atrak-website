@@ -310,29 +310,6 @@ const initSectionSignals = () => {
         document.body.classList.toggle('section-orbit-visible', window.scrollY > 320 && orbitLinks.size > 0);
     };
 
-    if (enableHoverEffects && supportsPointerEvents) {
-        let atmosphereFrameId = 0;
-        let pendingAtmosphere = null;
-        let pendingX = 0;
-        let pendingY = 0;
-
-        document.addEventListener('pointermove', (event) => {
-            const section = event.target.closest?.('main > section.interactive-section');
-            const atmosphere = section?.querySelector(':scope > .section-atmosphere');
-            if (!section || !atmosphere) return;
-            const rect = section.getBoundingClientRect();
-            pendingAtmosphere = atmosphere;
-            pendingX = event.clientX - rect.left;
-            pendingY = event.clientY - rect.top;
-            if (atmosphereFrameId) return;
-            atmosphereFrameId = window.requestAnimationFrame(() => {
-                pendingAtmosphere?.style.setProperty('--signal-x', `${pendingX}px`);
-                pendingAtmosphere?.style.setProperty('--signal-y', `${pendingY}px`);
-                atmosphereFrameId = 0;
-            });
-        }, { passive: true });
-    }
-
     updateSectionSignals();
 };
 
@@ -506,6 +483,14 @@ document.querySelectorAll('a[href^="#"]').forEach(anchor => {
                 top: offsetTop,
                 behavior: motionSafeScrollBehavior
             });
+
+            if (window.history && typeof window.history.pushState === 'function') {
+                window.history.pushState(null, '', href);
+            }
+
+            target.setAttribute('tabindex', '-1');
+            target.focus({ preventScroll: true });
+            window.setTimeout(() => target.removeAttribute('tabindex'), 1000);
             
             // Close mobile menu if open
             if (navLinks && mobileMenuBtn && navLinks.classList.contains('active')) {
@@ -2785,37 +2770,6 @@ function initScrollToTop() {
 // Enhanced smooth scroll for anchor links with offset
 document.addEventListener('DOMContentLoaded', () => {
     initScrollToTop();
-    
-    // Handle anchor links with smooth scroll and offset
-    document.querySelectorAll('a[href^="#"]').forEach(anchor => {
-        anchor.addEventListener('click', function(e) {
-            const href = this.getAttribute('href');
-            if (href === '#' || href === '#!') return;
-            
-            const targetId = href.substring(1);
-            const targetElement = document.getElementById(targetId);
-            
-            if (targetElement) {
-                e.preventDefault();
-                const navbar = document.querySelector('.navbar');
-                const navbarHeight = navbar ? navbar.offsetHeight : 100;
-                const targetPosition = targetElement.getBoundingClientRect().top + window.pageYOffset - navbarHeight;
-                
-                window.scrollTo({
-                    top: targetPosition,
-                    behavior: motionSafeScrollBehavior
-                });
-                
-                // Update URL without jumping
-                history.pushState(null, '', href);
-                
-                // Focus target for keyboard users
-                targetElement.setAttribute('tabindex', '-1');
-                targetElement.focus({ preventScroll: true });
-                setTimeout(() => targetElement.removeAttribute('tabindex'), 1000);
-            }
-        });
-    });
     
     // Apply stagger animations to list items
     if (!prefersReducedMotion) {
