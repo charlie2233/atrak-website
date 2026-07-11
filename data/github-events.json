@@ -21,8 +21,13 @@
       "ref": "refs/heads/main",
       "head": "115bada15cdd7d6f94be5fce7896b1e2491fd857",
       "before": "acefce6ec4cc2d469385990774bb41778c693d2d",
-      "distinct_size": 31,
+      "distinct_size": 32,
       "commits": [
+        {
+          "sha": "d4f8d055c9e8ac33cadef561beb875bc1422817c",
+          "message": "chore: update GitHub data [skip ci]",
+          "url": "https://github.com/charlie2233/atrak-website/commit/d4f8d055c9e8ac33cadef561beb875bc1422817c"
+        },
         {
           "sha": "115bada15cdd7d6f94be5fce7896b1e2491fd857",
           "message": "refactor: streamline site interactions",
@@ -117,11 +122,6 @@
           "sha": "530e1af737e3282d6ecab11f5d46455bab54c554",
           "message": "fix: make three hero reliable on desktop",
           "url": "https://github.com/charlie2233/atrak-website/commit/530e1af737e3282d6ecab11f5d46455bab54c554"
-        },
-        {
-          "sha": "12aecf931681a6c7ce16b8ff23d38f0ad97989a1",
-          "message": "chore: update GitHub data [skip ci]",
-          "url": "https://github.com/charlie2233/atrak-website/commit/12aecf931681a6c7ce16b8ff23d38f0ad97989a1"
         }
       ]
     },
