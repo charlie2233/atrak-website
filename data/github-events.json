@@ -2273,8 +2273,13 @@
       "ref": "refs/heads/main",
       "head": "530e1af737e3282d6ecab11f5d46455bab54c554",
       "before": "12aecf931681a6c7ce16b8ff23d38f0ad97989a1",
-      "distinct_size": 27,
+      "distinct_size": 28,
       "commits": [
+        {
+          "sha": "03b920524b1201894b3e98aca90cea629e704109",
+          "message": "chore: update GitHub data [skip ci]",
+          "url": "https://github.com/charlie2233/atrak-website/commit/03b920524b1201894b3e98aca90cea629e704109"
+        },
         {
           "sha": "2cb5fff5673aed4b7ba4f23444efb17f0ebe563c",
           "message": "chore: update GitHub data [skip ci]",
@@ -2369,11 +2374,6 @@
           "sha": "3788992170e31514135124f42be79b10fd0e2416",
           "message": "feat: implement concept hero design",
           "url": "https://github.com/charlie2233/atrak-website/commit/3788992170e31514135124f42be79b10fd0e2416"
-        },
-        {
-          "sha": "d90ab6282b72f9cd33e4812d1d0216cc782ab057",
-          "message": "chore: update GitHub data [skip ci]",
-          "url": "https://github.com/charlie2233/atrak-website/commit/d90ab6282b72f9cd33e4812d1d0216cc782ab057"
         }
       ]
     },
