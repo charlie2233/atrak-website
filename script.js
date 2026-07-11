@@ -175,6 +175,169 @@ if (hero) {
     }, { passive: true });
 }
 
+const signalNamespace = 'http://www.w3.org/2000/svg';
+const signalSectionConfig = [
+    { id: 'projects', label: 'Projects' },
+    { id: 'updates', label: 'Weekly' },
+    { id: 'impact', label: 'Impact' },
+    { id: 'about', label: 'About' },
+    { id: 'leadership', label: 'Team' },
+    { id: 'contact', label: 'Connect' }
+];
+let updateSectionSignals = () => {};
+
+const createSignalSvgElement = (tagName, attributes = {}) => {
+    const element = document.createElementNS(signalNamespace, tagName);
+    Object.entries(attributes).forEach(([name, value]) => element.setAttribute(name, value));
+    return element;
+};
+
+const initSectionSignals = () => {
+    const sections = Array.from(document.querySelectorAll('main > section:not(.hero)'));
+    if (!sections.length) return;
+
+    const signalStates = sections.map((section, sectionIndex) => {
+        section.classList.add('interactive-section');
+        const atmosphere = document.createElement('div');
+        atmosphere.className = 'section-atmosphere';
+        atmosphere.setAttribute('aria-hidden', 'true');
+
+        const svg = createSignalSvgElement('svg', {
+            class: 'section-signal-svg',
+            viewBox: '0 0 1200 96',
+            preserveAspectRatio: 'none'
+        });
+        const pathDefinition = sectionIndex % 2 === 0
+            ? 'M0 58 C118 58 132 20 254 20 S404 76 538 56 S738 16 856 40 S1032 82 1200 36'
+            : 'M0 34 C142 76 254 12 374 44 S580 82 704 42 S914 12 1200 62';
+        const basePath = createSignalSvgElement('path', {
+            class: 'section-signal-path section-signal-path-base',
+            d: pathDefinition,
+            pathLength: '1'
+        });
+        const livePath = createSignalSvgElement('path', {
+            class: 'section-signal-path section-signal-path-live',
+            d: pathDefinition,
+            pathLength: '1'
+        });
+        const sparkPath = createSignalSvgElement('path', {
+            class: 'section-signal-path section-signal-path-spark',
+            d: pathDefinition,
+            pathLength: '1'
+        });
+        const nodes = [0.22, 0.52, 0.81].map((offset, nodeIndex) => {
+            const node = createSignalSvgElement('circle', {
+                class: 'section-signal-node',
+                cx: String(1200 * offset),
+                cy: String(nodeIndex === 1 ? 48 : (sectionIndex % 2 === 0 ? 36 : 54)),
+                r: nodeIndex === 1 ? '3.5' : '2.5'
+            });
+            svg.appendChild(node);
+            return node;
+        });
+
+        svg.prepend(basePath, livePath, sparkPath);
+        atmosphere.appendChild(svg);
+        section.prepend(atmosphere);
+        return { section, atmosphere, livePath, nodes };
+    });
+
+    const configuredSections = signalSectionConfig
+        .map((item) => ({ ...item, section: document.getElementById(item.id) }))
+        .filter((item) => item.section);
+    const orbitLinks = new Map();
+
+    if (configuredSections.length >= 4) {
+        const orbitNav = document.createElement('nav');
+        orbitNav.className = 'section-orbit-nav';
+        orbitNav.setAttribute('aria-label', 'Homepage sections');
+
+        configuredSections.forEach((item) => {
+            const link = document.createElement('a');
+            link.className = 'section-orbit-link';
+            link.href = `#${item.id}`;
+            link.setAttribute('aria-label', `Jump to ${item.label}`);
+
+            const icon = createSignalSvgElement('svg', {
+                viewBox: '0 0 24 24',
+                'aria-hidden': 'true'
+            });
+            icon.append(
+                createSignalSvgElement('circle', { cx: '12', cy: '12', r: '7.5' }),
+                createSignalSvgElement('circle', { class: 'section-orbit-core', cx: '12', cy: '12', r: '2.2' })
+            );
+            const label = document.createElement('span');
+            label.textContent = item.label;
+            link.append(icon, label);
+            orbitNav.appendChild(link);
+            orbitLinks.set(item.id, link);
+        });
+
+        document.body.appendChild(orbitNav);
+    }
+
+    updateSectionSignals = () => {
+        const viewportHeight = window.innerHeight || 1;
+        const viewportFocus = viewportHeight * 0.46;
+        let activeSectionId = '';
+        let closestDistance = Number.POSITIVE_INFINITY;
+
+        signalStates.forEach((signalState) => {
+            const rect = signalState.section.getBoundingClientRect();
+            const progress = Math.min(1, Math.max(0, (viewportHeight - rect.top) / (viewportHeight + rect.height)));
+            signalState.atmosphere.style.setProperty('--section-progress', progress.toFixed(3));
+            signalState.livePath.style.strokeDashoffset = String(1 - progress);
+            signalState.nodes.forEach((node, nodeIndex) => {
+                const nodeProgress = Math.min(1, Math.max(0, progress * 1.5 - nodeIndex * 0.18));
+                node.style.opacity = String(0.16 + nodeProgress * 0.84);
+            });
+
+            if (signalState.section.id && rect.bottom > 100 && rect.top < viewportHeight) {
+                const distance = Math.abs(rect.top + Math.min(rect.height, viewportHeight) * 0.42 - viewportFocus);
+                if (distance < closestDistance) {
+                    closestDistance = distance;
+                    activeSectionId = signalState.section.id;
+                }
+            }
+        });
+
+        orbitLinks.forEach((link, id) => {
+            const isActive = id === activeSectionId;
+            link.classList.toggle('active', isActive);
+            if (isActive) link.setAttribute('aria-current', 'location');
+            else link.removeAttribute('aria-current');
+        });
+        document.body.classList.toggle('section-orbit-visible', window.scrollY > 320 && orbitLinks.size > 0);
+    };
+
+    if (enableHoverEffects && supportsPointerEvents) {
+        let atmosphereFrameId = 0;
+        let pendingAtmosphere = null;
+        let pendingX = 0;
+        let pendingY = 0;
+
+        document.addEventListener('pointermove', (event) => {
+            const section = event.target.closest?.('main > section.interactive-section');
+            const atmosphere = section?.querySelector(':scope > .section-atmosphere');
+            if (!section || !atmosphere) return;
+            const rect = section.getBoundingClientRect();
+            pendingAtmosphere = atmosphere;
+            pendingX = event.clientX - rect.left;
+            pendingY = event.clientY - rect.top;
+            if (atmosphereFrameId) return;
+            atmosphereFrameId = window.requestAnimationFrame(() => {
+                pendingAtmosphere?.style.setProperty('--signal-x', `${pendingX}px`);
+                pendingAtmosphere?.style.setProperty('--signal-y', `${pendingY}px`);
+                atmosphereFrameId = 0;
+            });
+        }, { passive: true });
+    }
+
+    updateSectionSignals();
+};
+
+initSectionSignals();
+
 // ================================
 // Infinite Card Rotation
 // ================================
@@ -403,6 +566,8 @@ function handleScroll() {
             item.classList.add('active');
         }
     });
+
+    updateSectionSignals();
     
     lastScroll = currentScroll;
     ticking = false;
@@ -2584,6 +2749,7 @@ function updateScrollProgress() {
     
     progressBar.style.width = `${Math.min(100, Math.max(0, progress))}%`;
     progressBar.setAttribute('aria-valuenow', Math.round(progress));
+    document.documentElement.style.setProperty('--page-progress', (Math.min(100, Math.max(0, progress)) / 100).toFixed(3));
 }
 
 // Scroll to top button
@@ -2613,6 +2779,7 @@ function initScrollToTop() {
     
     // Initial check
     toggleScrollToTop();
+    updateScrollProgress();
 }
 
 // Enhanced smooth scroll for anchor links with offset
@@ -2644,7 +2811,7 @@ document.addEventListener('DOMContentLoaded', () => {
                 
                 // Focus target for keyboard users
                 targetElement.setAttribute('tabindex', '-1');
-                targetElement.focus();
+                targetElement.focus({ preventScroll: true });
                 setTimeout(() => targetElement.removeAttribute('tabindex'), 1000);
             }
         });

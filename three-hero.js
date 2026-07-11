@@ -1,44 +1,36 @@
 (() => {
     const target = document.querySelector('[data-three-hero]');
-    const canvas = target?.querySelector('.hero-three-canvas');
+    const initialCanvas = target?.querySelector('.hero-three-canvas');
+    const status = target?.querySelector('.hero-three-status');
+
+    if (!target || !initialCanvas) return;
+    if (target.dataset.threeInitialized === 'true') return;
+    target.dataset.threeInitialized = 'true';
+
     const motionQuery = window.matchMedia?.('(prefers-reduced-motion: reduce)');
     const coarsePointerQuery = window.matchMedia?.('(pointer: coarse)');
-    const minWidth = 760;
-    const threeModuleUrls = [
-        './vendor/three.module.js?v=160',
+    const minWidth = 720;
+    const moduleUrls = [
+        new URL('./vendor/three.module.js?v=160.1', document.baseURI).href,
         'https://unpkg.com/three@0.160.0/build/three.module.js',
         'https://cdn.jsdelivr.net/npm/three@0.160.0/build/three.module.js'
     ];
-    const webglContextAttributes = {
-        alpha: true,
-        antialias: true,
-        powerPreference: 'high-performance',
-        failIfMajorPerformanceCaveat: false
-    };
-
-    const hasWebGL = () => {
-        try {
-            const testCanvas = document.createElement('canvas');
-            const context = (
-                testCanvas.getContext('webgl2', webglContextAttributes) ||
-                testCanvas.getContext('webgl', webglContextAttributes) ||
-                testCanvas.getContext('experimental-webgl', webglContextAttributes)
-            );
-            context?.getExtension('WEBGL_lose_context')?.loseContext();
-            return Boolean(context);
-        } catch {
-            return false;
-        }
-    };
-
-    const getSkipReason = () => {
-        if (!target) return 'missing hero target';
-        if (!canvas) return 'missing hero canvas';
-        if (window.innerWidth < minWidth) return 'viewport is too narrow';
-        if (navigator.connection?.saveData) return 'data saver is enabled';
-        if (coarsePointerQuery?.matches && window.innerWidth < 1024) return 'touch-first compact viewport';
-        if (!hasWebGL()) return 'WebGL is unavailable';
-        return '';
+    const state = {
+        canvas: initialCanvas,
+        runtime: null,
+        modulePromise: null,
+        bootPromise: null,
+        frameId: 0,
+        retryTimer: 0,
+        recoveryTimer: 0,
+        resizeFrameId: 0,
+        retryCount: 0,
+        contextLost: false,
+        inView: true,
+        resizeObserver: null,
+        intersectionObserver: null,
+        reduceMotion: Boolean(motionQuery?.matches),
+        pointer: { x: 0, y: 0, targetX: 0, targetY: 0 }
     };
 
     const createSeededRandom = () => {
@@ -49,597 +41,464 @@
         };
     };
 
-    const init = async () => {
-        const skipReason = getSkipReason();
-        if (skipReason) {
-            console.info(`Atrak 3D hero skipped: ${skipReason}.`);
-            target?.classList.add('is-fallback');
-            return;
+    const setMode = (mode, message) => {
+        target.classList.remove('is-loading', 'is-ready', 'is-static', 'is-recovering', 'is-fallback');
+
+        if (mode === 'static') {
+            target.classList.add('is-ready', 'is-static');
+        } else {
+            target.classList.add(`is-${mode}`);
         }
 
-        let THREE;
-        let importError;
-        for (const moduleUrl of threeModuleUrls) {
-            try {
-                THREE = await import(moduleUrl);
-                break;
-            } catch (error) {
-                importError = error;
+        if (status && message) status.textContent = message;
+
+        if (mode === 'ready' || mode === 'static') {
+            document.body.classList.add('three-hero-ready');
+        } else {
+            document.body.classList.remove('three-hero-ready');
+        }
+    };
+
+    const getSkipReason = () => {
+        if (window.innerWidth < minWidth) return 'viewport is too narrow';
+        if (coarsePointerQuery?.matches && window.innerWidth < 900) return 'compact touch viewport';
+        const rect = target.getBoundingClientRect();
+        if (rect.width < 2 || rect.height < 2) return 'hero is not visible';
+        return '';
+    };
+
+    const loadThree = async () => {
+        if (state.modulePromise) return state.modulePromise;
+
+        state.modulePromise = (async () => {
+            let lastError;
+            for (const moduleUrl of moduleUrls) {
+                try {
+                    return await new Promise((resolve, reject) => {
+                        const timeoutId = window.setTimeout(() => {
+                            reject(new Error(`Timed out loading Three.js from ${moduleUrl}`));
+                        }, 6000);
+                        import(moduleUrl).then((module) => {
+                            window.clearTimeout(timeoutId);
+                            resolve(module);
+                        }).catch((error) => {
+                            window.clearTimeout(timeoutId);
+                            reject(error);
+                        });
+                    });
+                } catch (error) {
+                    lastError = error;
+                }
             }
-        }
+            throw lastError || new Error('Three.js could not be loaded.');
+        })();
 
-        if (!THREE) {
-            console.warn('Atrak 3D hero could not load Three.js.', importError);
-            target.classList.add('is-fallback');
+        try {
+            return await state.modulePromise;
+        } catch (error) {
+            state.modulePromise = null;
+            throw error;
+        }
+    };
+
+    const stopAnimation = () => {
+        if (!state.frameId) return;
+        window.cancelAnimationFrame(state.frameId);
+        state.frameId = 0;
+    };
+
+    const shouldAnimate = () => (
+        state.runtime &&
+        !state.reduceMotion &&
+        !state.contextLost &&
+        state.inView &&
+        document.visibilityState === 'visible'
+    );
+
+    const animate = (timestamp) => {
+        if (!shouldAnimate()) {
+            state.frameId = 0;
             return;
         }
 
-        const random = createSeededRandom();
-        const reduceMotion = Boolean(motionQuery?.matches);
-        const scene = new THREE.Scene();
-        const camera = new THREE.PerspectiveCamera(36, 1, 0.1, 100);
-        camera.position.set(0, 0.12, 7.35);
+        const pointer = state.pointer;
+        pointer.x += (pointer.targetX - pointer.x) * 0.052;
+        pointer.y += (pointer.targetY - pointer.y) * 0.052;
+        state.runtime.renderFrame(timestamp * 0.001, pointer);
+        state.frameId = window.requestAnimationFrame(animate);
+    };
+
+    const startAnimation = () => {
+        if (!shouldAnimate() || state.frameId) return;
+        state.frameId = window.requestAnimationFrame(animate);
+    };
+
+    const createGlowTexture = (THREE) => {
+        const textureCanvas = document.createElement('canvas');
+        textureCanvas.width = 128;
+        textureCanvas.height = 128;
+        const context = textureCanvas.getContext('2d');
+        const gradient = context.createRadialGradient(64, 64, 0, 64, 64, 63);
+        gradient.addColorStop(0, 'rgba(255,255,255,1)');
+        gradient.addColorStop(0.12, 'rgba(111,245,255,0.98)');
+        gradient.addColorStop(0.38, 'rgba(20,241,255,0.38)');
+        gradient.addColorStop(0.72, 'rgba(124,92,255,0.12)');
+        gradient.addColorStop(1, 'rgba(124,92,255,0)');
+        context.fillStyle = gradient;
+        context.fillRect(0, 0, 128, 128);
+        const texture = new THREE.CanvasTexture(textureCanvas);
+        texture.colorSpace = THREE.SRGBColorSpace;
+        return texture;
+    };
+
+    const makeOutline = (THREE, mesh, color, opacity, scale = 1.025) => {
+        const outline = new THREE.Mesh(
+            mesh.geometry,
+            new THREE.MeshBasicMaterial({
+                color,
+                side: THREE.BackSide,
+                transparent: true,
+                opacity,
+                depthWrite: false
+            })
+        );
+        outline.scale.setScalar(scale);
+        mesh.add(outline);
+        return outline;
+    };
+
+    const createRenderer = (THREE) => {
+        const antialias = state.retryCount === 0 && (window.devicePixelRatio || 1) <= 1.75;
+        const contextAttributes = {
+            alpha: true,
+            antialias,
+            depth: true,
+            stencil: false,
+            premultipliedAlpha: true,
+            preserveDrawingBuffer: false,
+            powerPreference: state.retryCount >= 2 ? 'low-power' : 'default',
+            failIfMajorPerformanceCaveat: false
+        };
+        const context = state.retryCount >= 2
+            ? (
+                state.canvas.getContext('webgl', contextAttributes) ||
+                state.canvas.getContext('experimental-webgl', contextAttributes) ||
+                state.canvas.getContext('webgl2', contextAttributes)
+            )
+            : (
+                state.canvas.getContext('webgl2', contextAttributes) ||
+                state.canvas.getContext('webgl', contextAttributes) ||
+                state.canvas.getContext('experimental-webgl', contextAttributes)
+            );
+
+        if (!context) throw new Error('This browser did not provide a WebGL context.');
 
         let renderer;
         try {
             renderer = new THREE.WebGLRenderer({
-                canvas,
+                canvas: state.canvas,
+                context,
                 alpha: true,
-                antialias: true,
-                powerPreference: 'high-performance'
+                antialias
             });
         } catch (error) {
-            console.warn('Atrak 3D hero could not create a WebGL renderer.', error);
-            target.classList.add('is-fallback');
-            return;
+            context.getExtension('WEBGL_lose_context')?.loseContext();
+            throw error;
         }
         renderer.setClearColor(0x000000, 0);
         renderer.outputColorSpace = THREE.SRGBColorSpace;
         renderer.toneMapping = THREE.ACESFilmicToneMapping;
-        renderer.toneMappingExposure = 1.22;
+        renderer.toneMappingExposure = 1.08;
 
-        const stageGroup = new THREE.Group();
-        stageGroup.position.set(0.05, 0.02, 0);
-        scene.add(stageGroup);
+        const debugExtension = context.getExtension('WEBGL_debug_renderer_info');
+        const rendererName = debugExtension
+            ? context.getParameter(debugExtension.UNMASKED_RENDERER_WEBGL)
+            : context.getParameter(context.RENDERER);
+        target.dataset.threeRenderer = String(rendererName || 'WebGL renderer');
+        target.dataset.threeContext = renderer.capabilities.isWebGL2 ? 'webgl2' : 'webgl';
 
-        const portalGroup = new THREE.Group();
-        const sigilRig = new THREE.Group();
-        stageGroup.add(portalGroup, sigilRig);
+        return renderer;
+    };
 
-        const neonColors = {
+    const createSceneRuntime = (THREE, renderer) => {
+        const random = createSeededRandom();
+        const qualityTier = state.retryCount;
+        const scene = new THREE.Scene();
+        const camera = new THREE.PerspectiveCamera(34, 1, 0.1, 80);
+        camera.position.set(0, 0.06, 7.6);
+
+        const colors = {
             cyan: 0x14f1ff,
-            blue: 0x0f6bff,
+            blue: 0x2477ff,
             violet: 0x8b5cf6,
             magenta: 0xff2dc7,
-            dark: 0x030716,
-            white: 0xf8fbff
+            ice: 0xdffbff,
+            dark: 0x020617,
+            panel: 0x07142d
         };
+        const stage = new THREE.Group();
+        const coreRig = new THREE.Group();
+        const haloRig = new THREE.Group();
+        const debrisRig = new THREE.Group();
+        stage.add(haloRig, debrisRig, coreRig);
+        scene.add(stage);
 
-        const makeOutline = (mesh, scale, color, opacity) => {
-            const outline = new THREE.Mesh(
-                mesh.geometry,
+        const glowTexture = createGlowTexture(THREE);
+
+        const backdrop = new THREE.Mesh(
+            new THREE.CircleGeometry(2.48, 96),
+            new THREE.MeshBasicMaterial({
+                color: colors.blue,
+                transparent: true,
+                opacity: 0.035,
+                depthWrite: false,
+                blending: THREE.AdditiveBlending
+            })
+        );
+        backdrop.position.z = -1.22;
+        haloRig.add(backdrop);
+
+        const glow = new THREE.Sprite(new THREE.SpriteMaterial({
+            map: glowTexture,
+            color: colors.cyan,
+            transparent: true,
+            opacity: 0.42,
+            depthWrite: false,
+            blending: THREE.AdditiveBlending
+        }));
+        glow.scale.set(4.7, 4.7, 1);
+        glow.position.z = -0.82;
+        haloRig.add(glow);
+
+        const addArc = ({ radius, tube, color, opacity, arc, rotation, offset }) => {
+            const mesh = new THREE.Mesh(
+                new THREE.TorusGeometry(radius, tube, 6, 96, arc),
                 new THREE.MeshBasicMaterial({
                     color,
-                    side: THREE.BackSide,
                     transparent: true,
                     opacity,
-                    depthWrite: false
-                })
-            );
-            outline.scale.setScalar(scale);
-            mesh.add(outline);
-            return outline;
-        };
-
-        const createPortal = () => {
-            const portalUniforms = {
-                uTime: { value: 0 },
-                uAccentA: { value: new THREE.Color(neonColors.cyan) },
-                uAccentB: { value: new THREE.Color(neonColors.magenta) }
-            };
-
-            const portal = new THREE.Mesh(
-                new THREE.PlaneGeometry(6.2, 4.5, 1, 1),
-                new THREE.ShaderMaterial({
-                    uniforms: portalUniforms,
-                    transparent: true,
                     depthWrite: false,
-                    side: THREE.DoubleSide,
-                    blending: THREE.AdditiveBlending,
-                    vertexShader: `
-                        varying vec2 vUv;
-
-                        void main() {
-                            vUv = uv;
-                            gl_Position = projectionMatrix * modelViewMatrix * vec4(position, 1.0);
-                        }
-                    `,
-                    fragmentShader: `
-                        uniform float uTime;
-                        uniform vec3 uAccentA;
-                        uniform vec3 uAccentB;
-                        varying vec2 vUv;
-
-                        float neonRing(float distanceValue, float radius, float width) {
-                            return 1.0 - smoothstep(0.0, width, abs(distanceValue - radius));
-                        }
-
-                        void main() {
-                            vec2 centered = vUv - 0.5;
-                            centered.x *= 1.42;
-                            float distanceValue = length(centered);
-                            float angle = atan(centered.y, centered.x);
-                            float outerMask = 1.0 - smoothstep(0.44, 0.62, distanceValue);
-                            float coreGlow = (1.0 - smoothstep(0.02, 0.42, distanceValue)) * 0.28;
-                            float rings = neonRing(distanceValue, 0.16, 0.012) * 0.72;
-                            rings += neonRing(distanceValue, 0.29, 0.008) * 0.58;
-                            rings += neonRing(distanceValue, 0.42, 0.006) * 0.42;
-                            float radialTicks = smoothstep(0.985, 1.0, abs(sin((angle + uTime * 0.22) * 18.0)));
-                            radialTicks *= smoothstep(0.08, 0.36, distanceValue) * outerMask * 0.18;
-                            float sweep = pow(max(0.0, cos(angle - uTime * 0.78)), 10.0);
-                            sweep *= (1.0 - smoothstep(0.08, 0.45, distanceValue)) * 0.42;
-                            float scan = smoothstep(0.965, 1.0, sin((centered.y - uTime * 0.08) * 46.0)) * 0.08;
-                            vec3 colorValue = mix(uAccentB, uAccentA, smoothstep(-0.8, 0.8, centered.x + sin(uTime * 0.25) * 0.18));
-                            float alphaValue = (coreGlow + rings + radialTicks + sweep + scan) * outerMask;
-                            gl_FragColor = vec4(colorValue, alphaValue);
-                        }
-                    `
+                    blending: THREE.AdditiveBlending
                 })
             );
-            portal.position.set(0, 0, -1.08);
-            portal.userData.uniforms = portalUniforms;
-            portalGroup.add(portal);
-
-            const portalBackplate = new THREE.Mesh(
-                new THREE.CircleGeometry(2.08, 96),
-                new THREE.MeshBasicMaterial({
-                    color: neonColors.violet,
-                    transparent: true,
-                    opacity: 0.045,
-                    blending: THREE.AdditiveBlending,
-                    depthWrite: false
-                })
-            );
-            portalBackplate.position.set(0, 0, -1.1);
-            portalGroup.add(portalBackplate);
-
-            return portal;
+            mesh.rotation.set(rotation.x, rotation.y, rotation.z + offset);
+            mesh.userData.baseRotationZ = rotation.z + offset;
+            haloRig.add(mesh);
+            return mesh;
         };
 
-        const createPlatformRings = () => {
-            const platformGroup = new THREE.Group();
-            platformGroup.position.set(0, -1.26, -0.14);
+        const arcs = [
+            addArc({ radius: 1.62, tube: 0.014, color: colors.cyan, opacity: 0.82, arc: Math.PI * 1.46, rotation: { x: 1.03, y: 0.08, z: 0.12 }, offset: 0.2 }),
+            addArc({ radius: 1.62, tube: 0.007, color: colors.ice, opacity: 0.36, arc: Math.PI * 0.34, rotation: { x: 1.03, y: 0.08, z: 0.12 }, offset: 5.26 }),
+            addArc({ radius: 2.05, tube: 0.012, color: colors.violet, opacity: 0.58, arc: Math.PI * 1.22, rotation: { x: 0.48, y: 0.92, z: -0.34 }, offset: 1.08 }),
+            addArc({ radius: 2.05, tube: 0.006, color: colors.cyan, opacity: 0.3, arc: Math.PI * 0.44, rotation: { x: 0.48, y: 0.92, z: -0.34 }, offset: 5.12 }),
+            addArc({ radius: 2.46, tube: 0.01, color: colors.magenta, opacity: 0.42, arc: Math.PI * 1.12, rotation: { x: 1.46, y: -0.26, z: 0.62 }, offset: 2.14 }),
+            addArc({ radius: 2.46, tube: 0.006, color: colors.blue, opacity: 0.28, arc: Math.PI * 0.46, rotation: { x: 1.46, y: -0.26, z: 0.62 }, offset: 5.72 })
+        ];
 
-            const ringMaterial = new THREE.MeshBasicMaterial({
-                color: neonColors.cyan,
+        const sigilShape = new THREE.Shape();
+        sigilShape.moveTo(-1.02, -1.16);
+        sigilShape.lineTo(-0.52, -1.16);
+        sigilShape.lineTo(-0.25, -0.42);
+        sigilShape.lineTo(0.34, -0.42);
+        sigilShape.lineTo(0.62, -1.16);
+        sigilShape.lineTo(1.12, -1.16);
+        sigilShape.lineTo(0.25, 1.18);
+        sigilShape.lineTo(-0.18, 1.18);
+        sigilShape.lineTo(-1.02, -1.16);
+
+        const aperture = new THREE.Path();
+        aperture.moveTo(-0.04, 0.29);
+        aperture.lineTo(0.24, -0.25);
+        aperture.lineTo(-0.24, -0.25);
+        aperture.lineTo(-0.04, 0.29);
+        sigilShape.holes.push(aperture);
+
+        const sigilGeometry = new THREE.ExtrudeGeometry(sigilShape, {
+            depth: 0.3,
+            bevelEnabled: true,
+            bevelThickness: 0.045,
+            bevelSize: 0.04,
+            bevelSegments: 2,
+            curveSegments: 2
+        });
+        sigilGeometry.center();
+
+        const sigilMaterial = new THREE.MeshStandardMaterial({
+            color: colors.panel,
+            emissive: 0x064b71,
+            emissiveIntensity: 1.12,
+            metalness: 0.72,
+            roughness: 0.22
+        });
+        const sigil = new THREE.Mesh(sigilGeometry, sigilMaterial);
+        sigil.scale.set(1.12, 1.18, 1.12);
+        sigil.rotation.set(0.04, -0.14, 0.015);
+        makeOutline(THREE, sigil, colors.cyan, 0.32, 1.035);
+        coreRig.add(sigil);
+
+        const sigilEdges = new THREE.LineSegments(
+            new THREE.EdgesGeometry(sigilGeometry, 24),
+            new THREE.LineBasicMaterial({
+                color: colors.cyan,
                 transparent: true,
-                opacity: 0.34,
-                blending: THREE.AdditiveBlending,
+                opacity: 0.72,
                 depthWrite: false,
-                side: THREE.DoubleSide
-            });
-
-            const floorRings = [0.62, 0.98, 1.36, 1.82].map((ringRadius, ringIndex) => {
-                const ring = new THREE.Mesh(
-                    new THREE.RingGeometry(ringRadius, ringRadius + 0.016, 128),
-                    ringMaterial.clone()
-                );
-                ring.rotation.x = -Math.PI / 2;
-                ring.material.opacity = 0.46 - ringIndex * 0.07;
-                ring.userData = { baseOpacity: ring.material.opacity, spinSpeed: 0.12 + ringIndex * 0.045 };
-                platformGroup.add(ring);
-                return ring;
-            });
-
-            const beam = new THREE.Mesh(
-                new THREE.CylinderGeometry(0.045, 0.22, 3.3, 48, 1, true),
-                new THREE.MeshBasicMaterial({
-                    color: neonColors.cyan,
-                    transparent: true,
-                    opacity: 0.18,
-                    blending: THREE.AdditiveBlending,
-                    depthWrite: false,
-                    side: THREE.DoubleSide
-                })
-            );
-            beam.position.y = 1.38;
-            platformGroup.add(beam);
-
-            const topRings = [0.72, 1.16, 1.62].map((ringRadius, ringIndex) => {
-                const ring = new THREE.Mesh(
-                    new THREE.TorusGeometry(ringRadius, 0.008, 8, 132),
-                    new THREE.MeshBasicMaterial({
-                        color: ringIndex === 1 ? neonColors.violet : neonColors.cyan,
-                        transparent: true,
-                        opacity: 0.22 - ringIndex * 0.04,
-                        blending: THREE.AdditiveBlending,
-                        depthWrite: false
-                    })
-                );
-                ring.position.y = 2.8 + ringIndex * 0.08;
-                ring.rotation.x = Math.PI / 2.45;
-                ring.userData = { spinSpeed: 0.16 + ringIndex * 0.055 };
-                platformGroup.add(ring);
-                return ring;
-            });
-
-            platformGroup.userData = { floorRings, topRings, beam };
-            sigilRig.add(platformGroup);
-            return platformGroup;
-        };
-
-        const createAtrakSigil = () => {
-            const sigilGroup = new THREE.Group();
-
-            const sigilShape = new THREE.Shape();
-            sigilShape.moveTo(-1.02, -1.08);
-            sigilShape.lineTo(-0.53, -1.08);
-            sigilShape.lineTo(-0.29, -0.44);
-            sigilShape.lineTo(0.35, -0.44);
-            sigilShape.lineTo(0.6, -1.08);
-            sigilShape.lineTo(1.12, -1.08);
-            sigilShape.lineTo(0.24, 1.12);
-            sigilShape.lineTo(-0.12, 1.12);
-            sigilShape.lineTo(-1.02, -1.08);
-
-            const aperture = new THREE.Path();
-            aperture.moveTo(-0.04, 0.22);
-            aperture.lineTo(0.22, -0.24);
-            aperture.lineTo(-0.22, -0.24);
-            aperture.lineTo(-0.04, 0.22);
-            sigilShape.holes.push(aperture);
-
-            const sigilGeometry = new THREE.ExtrudeGeometry(sigilShape, {
-                depth: 0.2,
-                bevelEnabled: true,
-                bevelThickness: 0.036,
-                bevelSize: 0.032,
-                bevelSegments: 2,
-                curveSegments: 2
-            });
-            sigilGeometry.center();
-
-            const sigilMaterial = new THREE.MeshToonMaterial({
-                color: 0x07152d,
-                emissive: 0x063f68,
-                emissiveIntensity: 0.88
-            });
-            const sigil = new THREE.Mesh(sigilGeometry, sigilMaterial);
-            sigil.scale.set(1.1, 1.16, 1.1);
-            sigil.rotation.set(0.06, -0.17, 0.01);
-            makeOutline(sigil, 1.032, neonColors.cyan, 0.34);
-
-            const sigilBackplate = new THREE.Mesh(
-                sigilGeometry,
-                new THREE.MeshBasicMaterial({
-                    color: 0x020617,
-                    transparent: true,
-                    opacity: 0.34,
-                    depthWrite: false
-                })
-            );
-            sigilBackplate.position.set(0.09, -0.04, -0.14);
-            sigilBackplate.scale.set(1.2, 1.26, 1.02);
-            sigil.add(sigilBackplate);
-
-            const sigilEdges = new THREE.LineSegments(
-                new THREE.EdgesGeometry(sigilGeometry, 26),
-                new THREE.LineBasicMaterial({
-                    color: neonColors.cyan,
-                    transparent: true,
-                    opacity: 0.54,
-                    blending: THREE.AdditiveBlending,
-                    depthWrite: false
-                })
-            );
-            sigilEdges.scale.setScalar(1.003);
-            sigil.add(sigilEdges);
-            sigilGroup.add(sigil);
-
-            const core = new THREE.Mesh(
-                new THREE.IcosahedronGeometry(0.2, 1),
-                new THREE.MeshBasicMaterial({
-                    color: neonColors.cyan,
-                    transparent: true,
-                    opacity: 0.86,
-                    blending: THREE.AdditiveBlending,
-                    depthWrite: false
-                })
-            );
-            core.position.set(0.02, -0.08, 0.18);
-            core.userData.baseScale = 1;
-            sigilGroup.add(core);
-
-            const aura = new THREE.Mesh(
-                new THREE.IcosahedronGeometry(0.74, 2),
-                new THREE.MeshBasicMaterial({
-                    color: neonColors.magenta,
-                    transparent: true,
-                    opacity: 0.055,
-                    wireframe: true,
-                    blending: THREE.AdditiveBlending,
-                    depthWrite: false
-                })
-            );
-            aura.position.set(0.02, -0.02, -0.04);
-            sigilGroup.add(aura);
-
-            const bladeMaterial = new THREE.MeshToonMaterial({
-                color: neonColors.blue,
-                emissive: neonColors.cyan,
-                emissiveIntensity: 0.38
-            });
-            const bladeGeometry = new THREE.ConeGeometry(0.12, 0.82, 4);
-            const bladeData = [
-                { position: [-0.98, 0.45, -0.05], rotation: [0.18, 0.0, -0.72], scale: [0.8, 1.0, 0.62] },
-                { position: [0.98, 0.42, -0.06], rotation: [-0.18, 0.0, 0.72], scale: [0.8, 1.0, 0.62] },
-                { position: [0.06, 1.1, -0.08], rotation: [0.0, 0.0, -0.03], scale: [0.72, 0.78, 0.54] }
-            ];
-
-            bladeData.forEach((bladeItem) => {
-                const blade = new THREE.Mesh(bladeGeometry, bladeMaterial);
-                blade.position.set(...bladeItem.position);
-                blade.rotation.set(...bladeItem.rotation);
-                blade.scale.set(...bladeItem.scale);
-                makeOutline(blade, 1.16, neonColors.dark, 0.62);
-                sigilGroup.add(blade);
-            });
-
-            sigilGroup.userData = { sigil, core, aura };
-            return sigilGroup;
-        };
-
-        const createRibbon = ({ color, radius, depthScale, tubeRadius, rotation, phase, opacity, yOffset }) => {
-            const points = [];
-            const pointTotal = 136;
-            for (let pointIndex = 0; pointIndex <= pointTotal; pointIndex += 1) {
-                const progress = pointIndex / pointTotal;
-                const angle = progress * Math.PI * 2;
-                const wave = Math.sin(angle * 2 + phase) * 0.24 + Math.sin(angle * 5 + phase) * 0.045;
-                points.push(new THREE.Vector3(
-                    Math.cos(angle) * radius,
-                    wave + yOffset,
-                    Math.sin(angle) * radius * depthScale
-                ));
-            }
-
-            const curve = new THREE.CatmullRomCurve3(points, true);
-            const geometry = new THREE.TubeGeometry(curve, 190, tubeRadius, 8, true);
-            const material = new THREE.MeshBasicMaterial({
-                color,
-                transparent: true,
-                opacity,
-                blending: THREE.AdditiveBlending,
-                depthWrite: false
-            });
-            const ribbon = new THREE.Mesh(geometry, material);
-            ribbon.rotation.set(rotation.x, rotation.y, rotation.z);
-            ribbon.userData = {
-                baseRotation: rotation,
-                baseOpacity: opacity,
-                pulseOffset: phase
-            };
-            sigilRig.add(ribbon);
-            return ribbon;
-        };
-
-        const createSatelliteSystem = () => {
-            const satelliteGroup = new THREE.Group();
-            const beamPositions = new Float32Array(4 * 2 * 3);
-            const beamGeometry = new THREE.BufferGeometry();
-            beamGeometry.setAttribute('position', new THREE.BufferAttribute(beamPositions, 3));
-            const beams = new THREE.LineSegments(
-                beamGeometry,
-                new THREE.LineBasicMaterial({
-                    color: neonColors.cyan,
-                    transparent: true,
-                    opacity: 0.34,
-                    blending: THREE.AdditiveBlending,
-                    depthWrite: false
-                })
-            );
-            satelliteGroup.add(beams);
-
-            const nodeSpecs = [
-                { color: neonColors.cyan, baseAngle: 0.18, radius: 2.22, speed: 0.52, vertical: 0.28 },
-                { color: neonColors.magenta, baseAngle: 1.92, radius: 2.48, speed: 0.44, vertical: 0.36 },
-                { color: neonColors.violet, baseAngle: 3.34, radius: 2.36, speed: 0.48, vertical: 0.24 },
-                { color: neonColors.blue, baseAngle: 4.78, radius: 2.62, speed: 0.38, vertical: 0.32 }
-            ];
-
-            const satellites = nodeSpecs.map((nodeSpec, nodeIndex) => {
-                const node = new THREE.Group();
-                const core = new THREE.Mesh(
-                    new THREE.OctahedronGeometry(0.17, 0),
-                    new THREE.MeshToonMaterial({
-                        color: nodeSpec.color,
-                        emissive: nodeSpec.color,
-                        emissiveIntensity: 0.36
-                    })
-                );
-                makeOutline(core, 1.16, neonColors.dark, 0.64);
-                node.add(core);
-
-                const halo = new THREE.Mesh(
-                    new THREE.TorusGeometry(0.32, 0.01, 8, 48),
-                    new THREE.MeshBasicMaterial({
-                        color: nodeSpec.color,
-                        transparent: true,
-                        opacity: 0.52,
-                        blending: THREE.AdditiveBlending,
-                        depthWrite: false
-                    })
-                );
-                halo.rotation.x = Math.PI / 2;
-                node.add(halo);
-
-                const labelTick = new THREE.Mesh(
-                    new THREE.BoxGeometry(0.34, 0.018, 0.018),
-                    new THREE.MeshBasicMaterial({
-                        color: nodeSpec.color,
-                        transparent: true,
-                        opacity: 0.72,
-                        blending: THREE.AdditiveBlending,
-                        depthWrite: false
-                    })
-                );
-                labelTick.position.set(0.36, 0.02, 0);
-                node.add(labelTick);
-
-                node.userData = {
-                    baseAngle: nodeSpec.baseAngle,
-                    nodeIndex,
-                    radius: nodeSpec.radius,
-                    speed: nodeSpec.speed,
-                    vertical: nodeSpec.vertical,
-                    core,
-                    halo,
-                    labelTick
-                };
-                satelliteGroup.add(node);
-                return node;
-            });
-
-            satelliteGroup.userData = { satellites, beamPositions, beamGeometry };
-            sigilRig.add(satelliteGroup);
-            return satelliteGroup;
-        };
-
-        const createSparkTexture = () => {
-            const sparkCanvas = document.createElement('canvas');
-            sparkCanvas.width = 64;
-            sparkCanvas.height = 64;
-            const context = sparkCanvas.getContext('2d');
-            const gradient = context.createRadialGradient(32, 32, 0, 32, 32, 31);
-            gradient.addColorStop(0, 'rgba(255,255,255,1)');
-            gradient.addColorStop(0.18, 'rgba(20,241,255,0.95)');
-            gradient.addColorStop(0.5, 'rgba(255,45,199,0.36)');
-            gradient.addColorStop(1, 'rgba(255,45,199,0)');
-            context.fillStyle = gradient;
-            context.beginPath();
-            context.arc(32, 32, 31, 0, Math.PI * 2);
-            context.fill();
-            context.strokeStyle = 'rgba(255,255,255,0.78)';
-            context.lineWidth = 2;
-            context.beginPath();
-            context.moveTo(32, 7);
-            context.lineTo(32, 57);
-            context.moveTo(7, 32);
-            context.lineTo(57, 32);
-            context.stroke();
-            const texture = new THREE.CanvasTexture(sparkCanvas);
-            texture.colorSpace = THREE.SRGBColorSpace;
-            return texture;
-        };
-
-        const portal = createPortal();
-        const platformRig = createPlatformRings();
-        const sigil = createAtrakSigil();
-        sigilRig.add(sigil);
-
-        const ribbons = [
-            createRibbon({
-                color: neonColors.cyan,
-                radius: 1.86,
-                depthScale: 0.52,
-                tubeRadius: 0.016,
-                rotation: { x: 1.05, y: 0.02, z: 0.7 },
-                phase: 0.2,
-                opacity: 0.62,
-                yOffset: 0.02
-            }),
-            createRibbon({
-                color: neonColors.magenta,
-                radius: 2.16,
-                depthScale: 0.46,
-                tubeRadius: 0.012,
-                rotation: { x: 0.46, y: 1.02, z: -0.42 },
-                phase: 1.7,
-                opacity: 0.46,
-                yOffset: -0.02
-            }),
-            createRibbon({
-                color: neonColors.violet,
-                radius: 2.54,
-                depthScale: 0.38,
-                tubeRadius: 0.01,
-                rotation: { x: 0.82, y: -0.74, z: 0.24 },
-                phase: 3.2,
-                opacity: 0.34,
-                yOffset: 0.04
-            }),
-            createRibbon({
-                color: neonColors.white,
-                radius: 1.44,
-                depthScale: 0.5,
-                tubeRadius: 0.006,
-                rotation: { x: 1.32, y: -0.22, z: -0.18 },
-                phase: 4.7,
-                opacity: 0.2,
-                yOffset: -0.01
+                blending: THREE.AdditiveBlending
             })
+        );
+        sigilEdges.scale.set(1.125, 1.185, 1.125);
+        sigilEdges.rotation.copy(sigil.rotation);
+        coreRig.add(sigilEdges);
+
+        const shadowSigil = new THREE.Mesh(
+            sigilGeometry,
+            new THREE.MeshBasicMaterial({
+                color: colors.dark,
+                transparent: true,
+                opacity: 0.58,
+                depthWrite: false
+            })
+        );
+        shadowSigil.position.set(0.1, -0.05, -0.28);
+        shadowSigil.scale.set(1.2, 1.26, 1.08);
+        shadowSigil.rotation.copy(sigil.rotation);
+        coreRig.add(shadowSigil);
+
+        const core = new THREE.Mesh(
+            new THREE.OctahedronGeometry(0.22, 1),
+            new THREE.MeshBasicMaterial({
+                color: colors.ice,
+                transparent: true,
+                opacity: 0.94,
+                depthWrite: false,
+                blending: THREE.AdditiveBlending
+            })
+        );
+        core.position.set(0.02, -0.06, 0.34);
+        coreRig.add(core);
+
+        const coreHalo = new THREE.Sprite(new THREE.SpriteMaterial({
+            map: glowTexture,
+            color: colors.cyan,
+            transparent: true,
+            opacity: 0.72,
+            depthWrite: false,
+            blending: THREE.AdditiveBlending
+        }));
+        coreHalo.position.set(0.02, -0.06, 0.1);
+        coreHalo.scale.set(1.36, 1.36, 1);
+        coreRig.add(coreHalo);
+
+        const spine = new THREE.Mesh(
+            new THREE.CylinderGeometry(0.02, 0.12, 4.2, 20, 1, true),
+            new THREE.MeshBasicMaterial({
+                color: colors.cyan,
+                transparent: true,
+                opacity: 0.16,
+                side: THREE.DoubleSide,
+                depthWrite: false,
+                blending: THREE.AdditiveBlending
+            })
+        );
+        spine.position.set(0.02, 0, -0.62);
+        coreRig.add(spine);
+
+        const satelliteGroup = new THREE.Group();
+        const satelliteSpecs = [
+            { angle: 0.22, radius: 2.18, speed: 0.28, color: colors.cyan },
+            { angle: 2.34, radius: 2.42, speed: 0.22, color: colors.magenta },
+            { angle: 4.36, radius: 2.3, speed: 0.25, color: colors.violet }
         ];
-
-        const satellites = createSatelliteSystem();
-
-        const shardGeometries = [
-            new THREE.TetrahedronGeometry(0.19, 0),
-            new THREE.OctahedronGeometry(0.14, 0),
-            new THREE.ConeGeometry(0.11, 0.32, 5)
-        ];
-        const shardColors = [neonColors.cyan, neonColors.magenta, neonColors.violet, 0x67e8f9];
-        const shards = [];
-        const shardTotal = 20;
-
-        for (let shardIndex = 0; shardIndex < shardTotal; shardIndex += 1) {
-            const geometry = shardGeometries[shardIndex % shardGeometries.length];
-            const color = shardColors[shardIndex % shardColors.length];
-            const material = new THREE.MeshToonMaterial({
-                color,
-                emissive: color,
-                emissiveIntensity: 0.2
-            });
-            const shard = new THREE.Mesh(geometry, material);
-            makeOutline(shard, 1.12, neonColors.dark, 0.68);
-
-            const angle = (shardIndex / shardTotal) * Math.PI * 2 + random() * 0.35;
-            const radius = 2.16 + random() * 1.45;
-            const height = (random() - 0.5) * 1.92;
-            shard.position.set(
-                Math.cos(angle) * radius,
-                height,
-                Math.sin(angle) * radius * 0.56
+        const satellites = satelliteSpecs.map((spec) => {
+            const node = new THREE.Group();
+            const nodeCore = new THREE.Mesh(
+                new THREE.OctahedronGeometry(0.12, 0),
+                new THREE.MeshBasicMaterial({ color: spec.color })
             );
-            shard.rotation.set(random() * Math.PI, random() * Math.PI, random() * Math.PI);
-            shard.scale.setScalar(0.65 + random() * 0.72);
-            shard.userData = {
-                basePosition: shard.position.clone(),
-                floatOffset: random() * Math.PI * 2,
-                spinSpeed: 0.42 + random() * 0.86
-            };
-            shards.push(shard);
-            sigilRig.add(shard);
-        }
+            const nodeHalo = new THREE.Mesh(
+                new THREE.TorusGeometry(0.24, 0.009, 5, 36),
+                new THREE.MeshBasicMaterial({
+                    color: spec.color,
+                    transparent: true,
+                    opacity: 0.58,
+                    depthWrite: false,
+                    blending: THREE.AdditiveBlending
+                })
+            );
+            nodeHalo.rotation.x = Math.PI / 2;
+            node.add(nodeCore, nodeHalo);
+            node.userData = { ...spec, core: nodeCore, halo: nodeHalo };
+            satelliteGroup.add(node);
+            return node;
+        });
+        haloRig.add(satelliteGroup);
 
-        const particleCount = 380;
+        const beamPositions = new Float32Array(satellites.length * 6);
+        const beamGeometry = new THREE.BufferGeometry();
+        beamGeometry.setAttribute('position', new THREE.BufferAttribute(beamPositions, 3));
+        const beams = new THREE.LineSegments(
+            beamGeometry,
+            new THREE.LineBasicMaterial({
+                color: colors.cyan,
+                transparent: true,
+                opacity: 0.2,
+                depthWrite: false,
+                blending: THREE.AdditiveBlending
+            })
+        );
+        haloRig.add(beams);
+
+        const shardGeometry = new THREE.TetrahedronGeometry(0.12, 0);
+        const shardMaterial = new THREE.MeshBasicMaterial({
+            color: colors.cyan,
+            transparent: true,
+            opacity: 0.56,
+            depthWrite: false,
+            blending: THREE.AdditiveBlending
+        });
+        const shards = new THREE.InstancedMesh(shardGeometry, shardMaterial, 10);
+        const shardMatrix = new THREE.Matrix4();
+        const shardPosition = new THREE.Vector3();
+        const shardQuaternion = new THREE.Quaternion();
+        const shardScale = new THREE.Vector3();
+        const shardEuler = new THREE.Euler();
+        const shardPalette = [colors.cyan, colors.violet, colors.magenta, colors.blue];
+
+        for (let shardIndex = 0; shardIndex < 10; shardIndex += 1) {
+            const angle = (shardIndex / 10) * Math.PI * 2 + random() * 0.42;
+            const radius = 2.32 + random() * 0.82;
+            shardPosition.set(
+                Math.cos(angle) * radius,
+                (random() - 0.5) * 1.78,
+                Math.sin(angle) * radius * 0.44
+            );
+            shardEuler.set(random() * Math.PI, random() * Math.PI, random() * Math.PI);
+            shardQuaternion.setFromEuler(shardEuler);
+            shardScale.setScalar(0.58 + random() * 0.68);
+            shardMatrix.compose(shardPosition, shardQuaternion, shardScale);
+            shards.setMatrixAt(shardIndex, shardMatrix);
+            shards.setColorAt(shardIndex, new THREE.Color(shardPalette[shardIndex % shardPalette.length]));
+        }
+        debrisRig.add(shards);
+
+        const particleCount = 118;
         const particlePositions = new Float32Array(particleCount * 3);
         const particleColors = new Float32Array(particleCount * 3);
-        const colorOptions = [
-            new THREE.Color(neonColors.cyan),
-            new THREE.Color(neonColors.magenta),
-            new THREE.Color(neonColors.violet),
-            new THREE.Color(neonColors.white)
+        const particlePalette = [
+            new THREE.Color(colors.cyan),
+            new THREE.Color(colors.violet),
+            new THREE.Color(colors.magenta),
+            new THREE.Color(colors.ice)
         ];
 
         for (let particleIndex = 0; particleIndex < particleCount; particleIndex += 1) {
-            const radius = 1.9 + random() * 2.8;
+            const radius = 1.66 + random() * 2.15;
             const angle = random() * Math.PI * 2;
-            const verticalOffset = (random() - 0.5) * 3.1;
             particlePositions[particleIndex * 3] = Math.cos(angle) * radius;
-            particlePositions[(particleIndex * 3) + 1] = verticalOffset;
-            particlePositions[(particleIndex * 3) + 2] = Math.sin(angle) * radius * 0.62;
-
-            const color = colorOptions[Math.floor(random() * colorOptions.length)];
+            particlePositions[(particleIndex * 3) + 1] = (random() - 0.5) * 2.7;
+            particlePositions[(particleIndex * 3) + 2] = Math.sin(angle) * radius * 0.52;
+            const color = particlePalette[Math.floor(random() * particlePalette.length)];
             particleColors[particleIndex * 3] = color.r;
             particleColors[(particleIndex * 3) + 1] = color.g;
             particleColors[(particleIndex * 3) + 2] = color.b;
@@ -651,234 +510,389 @@
         const particles = new THREE.Points(
             particleGeometry,
             new THREE.PointsMaterial({
-                map: createSparkTexture(),
-                size: 0.075,
+                map: glowTexture,
+                size: 0.095,
                 transparent: true,
-                opacity: 0.84,
-                blending: THREE.AdditiveBlending,
+                opacity: 0.72,
                 depthWrite: false,
-                vertexColors: true
+                vertexColors: true,
+                blending: THREE.AdditiveBlending
             })
         );
-        sigilRig.add(particles);
+        debrisRig.add(particles);
 
-        const streakTotal = 58;
-        const streakPositions = new Float32Array(streakTotal * 2 * 3);
-        for (let streakIndex = 0; streakIndex < streakTotal; streakIndex += 1) {
-            const angle = random() * Math.PI * 2;
-            const radius = 2.7 + random() * 1.8;
-            const length = 0.26 + random() * 0.58;
-            const verticalOffset = (random() - 0.5) * 2.3;
-            const startOffset = streakIndex * 6;
-            const startX = Math.cos(angle) * radius;
-            const startY = verticalOffset;
-            const startZ = Math.sin(angle) * radius * 0.48;
-            streakPositions[startOffset] = startX;
-            streakPositions[startOffset + 1] = startY;
-            streakPositions[startOffset + 2] = startZ;
-            streakPositions[startOffset + 3] = startX + Math.cos(angle + 0.85) * length;
-            streakPositions[startOffset + 4] = startY + length * 0.18;
-            streakPositions[startOffset + 5] = startZ + Math.sin(angle + 0.85) * length;
-        }
-
-        const streakGeometry = new THREE.BufferGeometry();
-        streakGeometry.setAttribute('position', new THREE.BufferAttribute(streakPositions, 3));
-        const streaks = new THREE.LineSegments(
-            streakGeometry,
-            new THREE.LineBasicMaterial({
-                color: neonColors.white,
-                transparent: true,
-                opacity: 0.2,
-                blending: THREE.AdditiveBlending,
-                depthWrite: false
-            })
-        );
-        sigilRig.add(streaks);
-
-        scene.add(new THREE.AmbientLight(0x90c6ff, 0.76));
-        const keyLight = new THREE.PointLight(neonColors.cyan, 2.8, 12);
-        keyLight.position.set(-2.8, 2.5, 4.2);
-        scene.add(keyLight);
-        const rimLight = new THREE.PointLight(neonColors.magenta, 2.1, 12);
-        rimLight.position.set(3.0, -1.8, 3.4);
-        scene.add(rimLight);
-        const topLight = new THREE.DirectionalLight(0xffffff, 0.48);
-        topLight.position.set(0.4, 2.8, 1.8);
+        scene.add(new THREE.AmbientLight(0xa9d9ff, 0.82));
+        const cyanLight = new THREE.PointLight(colors.cyan, 2.8, 12);
+        cyanLight.position.set(-2.6, 2.3, 3.5);
+        scene.add(cyanLight);
+        const magentaLight = new THREE.PointLight(colors.magenta, 1.75, 10);
+        magentaLight.position.set(2.8, -1.8, 3.1);
+        scene.add(magentaLight);
+        const topLight = new THREE.DirectionalLight(0xffffff, 0.52);
+        topLight.position.set(0.2, 3.2, 2.1);
         scene.add(topLight);
 
-        const pointer = { x: 0, y: 0, targetX: 0, targetY: 0 };
+        let lastWidth = 0;
+        let lastHeight = 0;
+        let lastPixelRatio = 0;
         const resize = () => {
             const rect = target.getBoundingClientRect();
             const width = Math.max(1, Math.floor(rect.width));
             const height = Math.max(1, Math.floor(rect.height));
-            const compact = width < 900;
-            renderer.setPixelRatio(Math.min(window.devicePixelRatio || 1, compact ? 1.35 : 1.6));
-            renderer.setSize(width, height, false);
-            camera.aspect = width / height;
-            camera.position.z = compact ? 8.18 : 7.35;
-            stageGroup.scale.setScalar(compact ? 0.84 : 1);
-            camera.updateProjectionMatrix();
-            if (reduceMotion) {
-                renderer.render(scene, camera);
+            const pixelBudgetRatio = Math.sqrt(1500000 / (width * height));
+            const maxRatio = qualityTier > 0 ? 1 : (width < 900 ? 1.2 : 1.4);
+            const pixelRatio = Math.max(0.85, Math.min(window.devicePixelRatio || 1, maxRatio, pixelBudgetRatio));
+
+            if (width === lastWidth && height === lastHeight && Math.abs(pixelRatio - lastPixelRatio) < 0.01) {
+                return false;
             }
+
+            lastWidth = width;
+            lastHeight = height;
+            lastPixelRatio = pixelRatio;
+            renderer.setDrawingBufferSize(width, height, pixelRatio);
+            camera.aspect = width / height;
+            camera.position.z = width < 900 ? 8.25 : 7.6;
+            stage.scale.setScalar(width < 900 ? 0.86 : 1);
+            camera.updateProjectionMatrix();
+            return true;
         };
 
-        const onPointerMove = (event) => {
-            const rect = target.getBoundingClientRect();
-            pointer.targetX = ((event.clientX - rect.left) / rect.width - 0.5) * 0.68;
-            pointer.targetY = ((event.clientY - rect.top) / rect.height - 0.5) * 0.68;
-        };
+        const renderFrame = (elapsed, pointer) => {
+            const pulse = 1 + Math.sin(elapsed * 1.85) * 0.06;
+            stage.rotation.y = pointer.x * 0.52;
+            stage.rotation.x = -pointer.y * 0.34;
+            coreRig.rotation.y = Math.sin(elapsed * 0.26) * 0.12;
+            coreRig.rotation.z = Math.sin(elapsed * 0.17) * 0.025;
+            sigil.rotation.y = -0.14 + Math.sin(elapsed * 0.3) * 0.08;
+            sigilEdges.rotation.y = sigil.rotation.y;
+            shadowSigil.rotation.y = sigil.rotation.y;
+            core.rotation.x = elapsed * -0.48;
+            core.rotation.y = elapsed * 0.7;
+            core.scale.setScalar(pulse);
+            coreHalo.material.opacity = 0.62 + Math.sin(elapsed * 1.85) * 0.1;
+            coreHalo.scale.setScalar(1.3 + Math.sin(elapsed * 1.85) * 0.12);
+            glow.material.opacity = 0.36 + Math.sin(elapsed * 0.72) * 0.055;
+            spine.material.opacity = 0.13 + Math.sin(elapsed * 1.6) * 0.035;
 
-        let frameId = 0;
-        let visible = true;
-        const clock = new THREE.Clock();
+            arcs.forEach((arc, arcIndex) => {
+                const direction = arcIndex % 2 === 0 ? 1 : -1;
+                arc.rotation.z = arc.userData.baseRotationZ + elapsed * direction * (0.055 + arcIndex * 0.008);
+            });
 
-        const updateSatellites = (elapsed) => {
-            const nodeList = satellites.userData.satellites;
-            const beamPositions = satellites.userData.beamPositions;
-            nodeList.forEach((node, nodeIndex) => {
-                const nodeAngle = node.userData.baseAngle + elapsed * node.userData.speed + pointer.x * 0.12;
-                const orbitRadius = node.userData.radius;
-                const orbitY = Math.sin(elapsed * 1.08 + node.userData.baseAngle) * node.userData.vertical;
-                const orbitZ = Math.sin(nodeAngle) * orbitRadius * 0.36;
-                node.position.set(Math.cos(nodeAngle) * orbitRadius, orbitY, orbitZ);
-                node.rotation.x = elapsed * 0.42 + nodeIndex;
-                node.rotation.y = elapsed * 0.64 + nodeIndex * 0.5;
-                node.userData.halo.rotation.z = elapsed * (0.58 + nodeIndex * 0.08);
-                node.userData.labelTick.rotation.z = Math.sin(elapsed * 1.4 + nodeIndex) * 0.18;
-
+            satellites.forEach((node, nodeIndex) => {
+                const nodeAngle = node.userData.angle + elapsed * node.userData.speed;
+                const radius = node.userData.radius;
+                const y = Math.sin(elapsed * 0.7 + nodeIndex * 1.9) * 0.28;
+                node.position.set(Math.cos(nodeAngle) * radius, y, Math.sin(nodeAngle) * radius * 0.34);
+                node.userData.core.rotation.x = elapsed * 0.52 + nodeIndex;
+                node.userData.core.rotation.y = elapsed * 0.68 + nodeIndex;
+                node.userData.halo.rotation.z = elapsed * (0.42 + nodeIndex * 0.06);
                 const beamOffset = nodeIndex * 6;
-                beamPositions[beamOffset] = Math.cos(nodeAngle) * 0.34;
-                beamPositions[beamOffset + 1] = orbitY * 0.18;
-                beamPositions[beamOffset + 2] = 0.02;
+                beamPositions[beamOffset] = 0;
+                beamPositions[beamOffset + 1] = 0;
+                beamPositions[beamOffset + 2] = -0.02;
                 beamPositions[beamOffset + 3] = node.position.x;
                 beamPositions[beamOffset + 4] = node.position.y;
                 beamPositions[beamOffset + 5] = node.position.z;
             });
-            satellites.userData.beamGeometry.attributes.position.needsUpdate = true;
-        };
+            beamGeometry.attributes.position.needsUpdate = true;
 
-        const animate = () => {
-            if (!visible) {
-                frameId = 0;
-                return;
-            }
-
-            const elapsed = clock.getElapsedTime();
-            pointer.x += (pointer.targetX - pointer.x) * 0.055;
-            pointer.y += (pointer.targetY - pointer.y) * 0.055;
-
-            portal.userData.uniforms.uTime.value = elapsed;
-            portalGroup.rotation.z = Math.sin(elapsed * 0.12) * 0.08;
-            portalGroup.scale.setScalar(1 + Math.sin(elapsed * 0.72) * 0.018);
-
-            sigilRig.rotation.y = elapsed * 0.1 + pointer.x;
-            sigilRig.rotation.x = elapsed * 0.038 - pointer.y;
-            sigilRig.rotation.z = Math.sin(elapsed * 0.18) * 0.035;
-
-            platformRig.userData.floorRings.forEach((ring) => {
-                ring.rotation.z = elapsed * ring.userData.spinSpeed;
-                ring.material.opacity = ring.userData.baseOpacity + Math.sin(elapsed * 1.4) * 0.035;
-            });
-            platformRig.userData.topRings.forEach((ring, ringIndex) => {
-                ring.rotation.z = elapsed * (ring.userData.spinSpeed + ringIndex * 0.02);
-                ring.rotation.y = Math.sin(elapsed * 0.24 + ringIndex) * 0.1;
-            });
-            platformRig.userData.beam.material.opacity = 0.14 + Math.sin(elapsed * 2.1) * 0.035;
-
-            const sigilCore = sigil.userData.core;
-            const sigilAura = sigil.userData.aura;
-            const sigilMesh = sigil.userData.sigil;
-            sigilMesh.rotation.y = Math.sin(elapsed * 0.36) * 0.1;
-            sigilCore.rotation.x = elapsed * -0.6;
-            sigilCore.rotation.y = elapsed * 0.82;
-            sigilCore.scale.setScalar(1 + Math.sin(elapsed * 2.7) * 0.16);
-            sigilAura.rotation.x = elapsed * -0.22;
-            sigilAura.rotation.y = elapsed * 0.34;
-            sigilAura.material.opacity = 0.045 + Math.sin(elapsed * 1.9) * 0.012;
-
-            ribbons.forEach((ribbon, ribbonIndex) => {
-                const baseRotation = ribbon.userData.baseRotation;
-                const pulse = Math.sin(elapsed * 1.4 + ribbon.userData.pulseOffset) * 0.08;
-                ribbon.rotation.x = baseRotation.x + Math.sin(elapsed * 0.25 + ribbonIndex) * 0.05;
-                ribbon.rotation.y = baseRotation.y + elapsed * (0.1 + ribbonIndex * 0.025);
-                ribbon.rotation.z = baseRotation.z + elapsed * (0.16 - ribbonIndex * 0.035);
-                ribbon.material.opacity = Math.max(0.08, ribbon.userData.baseOpacity + pulse);
-            });
-
-            updateSatellites(elapsed);
-
-            shards.forEach((shard, shardIndex) => {
-                const basePosition = shard.userData.basePosition;
-                const floatOffset = shard.userData.floatOffset;
-                const bob = Math.sin(elapsed * 1.15 + floatOffset) * 0.13;
-                shard.position.set(
-                    basePosition.x + Math.sin(elapsed * 0.45 + shardIndex) * 0.06,
-                    basePosition.y + bob,
-                    basePosition.z + Math.cos(elapsed * 0.38 + shardIndex) * 0.05
-                );
-                shard.rotation.x += 0.004 * shard.userData.spinSpeed;
-                shard.rotation.y += 0.006 * shard.userData.spinSpeed;
-            });
-
-            particles.rotation.y = elapsed * 0.038;
-            particles.rotation.z = Math.sin(elapsed * 0.25) * 0.08;
-            streaks.rotation.y = elapsed * -0.048;
-            streaks.rotation.z = Math.sin(elapsed * 0.34) * 0.08;
-
+            debrisRig.rotation.y = elapsed * -0.045;
+            debrisRig.rotation.z = Math.sin(elapsed * 0.22) * 0.045;
+            particles.rotation.y = elapsed * 0.035;
+            shards.rotation.x = Math.sin(elapsed * 0.18) * 0.08;
             renderer.render(scene, camera);
-            frameId = window.requestAnimationFrame(animate);
         };
 
-        const onVisibilityChange = () => {
-            visible = document.visibilityState === 'visible';
-            if (!visible && frameId) {
-                window.cancelAnimationFrame(frameId);
-                frameId = 0;
-                return;
-            }
-            if (visible && !frameId) {
-                frameId = window.requestAnimationFrame(animate);
-            }
+        const dispose = () => {
+            const geometries = new Set();
+            const materials = new Set();
+            const textures = new Set([glowTexture]);
+            scene.traverse((object) => {
+                if (object.geometry) geometries.add(object.geometry);
+                const objectMaterials = Array.isArray(object.material) ? object.material : [object.material];
+                objectMaterials.filter(Boolean).forEach((material) => {
+                    materials.add(material);
+                    Object.values(material).forEach((value) => {
+                        if (value?.isTexture) textures.add(value);
+                    });
+                });
+            });
+            geometries.forEach((geometry) => geometry.dispose());
+            materials.forEach((material) => material.dispose());
+            textures.forEach((texture) => texture.dispose());
+            renderer.dispose();
         };
 
-        const onContextLost = (event) => {
-            event.preventDefault();
-            visible = false;
-            if (frameId) {
-                window.cancelAnimationFrame(frameId);
-                frameId = 0;
-            }
-            target.classList.remove('is-ready');
-            target.classList.add('is-fallback');
-            document.body.classList.remove('three-hero-ready');
-        };
+        return { renderer, resize, renderFrame, dispose };
+    };
 
-        resize();
-        target.classList.add('is-ready');
-        if (reduceMotion) {
-            target.classList.add('is-static');
+    const teardownRuntime = () => {
+        stopAnimation();
+        if (!state.runtime) return;
+        try {
+            state.runtime.dispose();
+        } catch (error) {
+            console.info('Atrak 3D cleanup completed with a recoverable warning.', error);
         }
-        document.body.classList.add('three-hero-ready');
-        window.addEventListener('resize', resize, { passive: true });
+        state.runtime = null;
+    };
+
+    const detachCanvasEvents = (canvas) => {
+        canvas.removeEventListener('webglcontextlost', onContextLost);
+        canvas.removeEventListener('webglcontextrestored', onContextRestored);
+        canvas.removeEventListener('webglcontextcreationerror', onContextCreationError);
+    };
+
+    const attachCanvasEvents = (canvas) => {
         canvas.addEventListener('webglcontextlost', onContextLost, false);
-        if (reduceMotion) {
-            renderer.render(scene, camera);
-            console.info('Atrak 3D hero rendered as a static frame because reduced motion is enabled.');
-        } else {
-            target.addEventListener('pointermove', onPointerMove, { passive: true });
-            document.addEventListener('visibilitychange', onVisibilityChange);
-            frameId = window.requestAnimationFrame(animate);
+        canvas.addEventListener('webglcontextrestored', onContextRestored, false);
+        canvas.addEventListener('webglcontextcreationerror', onContextCreationError, false);
+    };
+
+    const replaceCanvas = () => {
+        const oldCanvas = state.canvas;
+        detachCanvasEvents(oldCanvas);
+        const nextCanvas = oldCanvas.cloneNode(false);
+        oldCanvas.replaceWith(nextCanvas);
+        state.canvas = nextCanvas;
+        attachCanvasEvents(nextCanvas);
+    };
+
+    const clearRetryTimer = () => {
+        window.clearTimeout(state.retryTimer);
+        state.retryTimer = 0;
+    };
+
+    const clearRecoveryTimer = () => {
+        window.clearTimeout(state.recoveryTimer);
+        state.recoveryTimer = 0;
+    };
+
+    const scheduleRetry = () => {
+        if (state.retryCount >= 2 || getSkipReason()) {
+            setMode('fallback', 'Atrak visual · standby');
+            return;
+        }
+        const retryDelays = [900, 2800];
+        const delay = retryDelays[state.retryCount] || retryDelays[retryDelays.length - 1];
+        state.retryCount += 1;
+        state.retryTimer = window.setTimeout(() => {
+            state.retryTimer = 0;
+            boot(`retry-${state.retryCount}`);
+        }, delay);
+    };
+
+    const boot = (reason = 'initial') => {
+        if (state.bootPromise) return state.bootPromise;
+
+        const skipReason = getSkipReason();
+        if (skipReason) {
+            setMode('fallback', 'Atrak visual · standby');
+            console.info(`Atrak 3D hero skipped: ${skipReason}.`);
+            return Promise.resolve();
+        }
+
+        clearRetryTimer();
+        setMode('loading', 'Starting Atrak core');
+        state.bootPromise = (async () => {
+            try {
+                const THREE = await loadThree();
+                const latestSkipReason = getSkipReason();
+                if (latestSkipReason) throw new Error(latestSkipReason);
+
+                teardownRuntime();
+                const renderer = createRenderer(THREE);
+                try {
+                    state.runtime = createSceneRuntime(THREE, renderer);
+                } catch (error) {
+                    renderer.dispose();
+                    throw error;
+                }
+                state.contextLost = false;
+                state.runtime.resize();
+                state.runtime.renderFrame(state.reduceMotion ? 1.6 : performance.now() * 0.001, state.pointer);
+                state.retryCount = 0;
+                setMode(
+                    state.reduceMotion ? 'static' : 'ready',
+                    state.reduceMotion ? 'Atrak core · static' : 'Atrak core · online'
+                );
+                startAnimation();
+                console.info('Atrak 3D hero ready.', {
+                    context: target.dataset.threeContext,
+                    renderer: target.dataset.threeRenderer,
+                    reason
+                });
+            } catch (error) {
+                console.warn('Atrak 3D hero could not start.', error);
+                teardownRuntime();
+                replaceCanvas();
+                setMode('recovering', 'Restoring Atrak core');
+                scheduleRetry();
+            }
+        })().finally(() => {
+            state.bootPromise = null;
+        });
+
+        return state.bootPromise;
+    };
+
+    function onContextLost(event) {
+        event.preventDefault();
+        if (state.contextLost) return;
+        state.contextLost = true;
+        stopAnimation();
+        setMode('recovering', 'Restoring Atrak core');
+        console.warn('Atrak 3D hero lost its WebGL context. Recovery started.');
+        state.recoveryTimer = window.setTimeout(() => {
+            if (!state.contextLost) return;
+            teardownRuntime();
+            replaceCanvas();
+            state.contextLost = false;
+            state.retryCount = 0;
+            boot('context-loss-timeout');
+        }, 2400);
+    }
+
+    function onContextRestored() {
+        clearRecoveryTimer();
+        state.contextLost = false;
+        window.setTimeout(() => {
+            try {
+                if (!state.runtime) throw new Error('The previous renderer is unavailable.');
+                state.runtime.resize();
+                state.runtime.renderFrame(performance.now() * 0.001, state.pointer);
+                setMode(state.reduceMotion ? 'static' : 'ready', state.reduceMotion ? 'Atrak core · static' : 'Atrak core · online');
+                startAnimation();
+                console.info('Atrak 3D hero restored its WebGL context.');
+            } catch (error) {
+                console.warn('Atrak 3D hero is rebuilding after context restoration.', error);
+                teardownRuntime();
+                replaceCanvas();
+                boot('context-restored-rebuild');
+            }
+        }, 120);
+    }
+
+    function onContextCreationError(event) {
+        const detail = event.statusMessage || 'unknown WebGL creation error';
+        target.dataset.threeError = detail;
+        console.warn(`Atrak 3D context creation error: ${detail}`);
+    }
+
+    const onPointerMove = (event) => {
+        const rect = target.getBoundingClientRect();
+        if (!rect.width || !rect.height) return;
+        state.pointer.targetX = ((event.clientX - rect.left) / rect.width - 0.5) * 0.72;
+        state.pointer.targetY = ((event.clientY - rect.top) / rect.height - 0.5) * 0.58;
+    };
+
+    const onPointerLeave = () => {
+        state.pointer.targetX = 0;
+        state.pointer.targetY = 0;
+    };
+
+    const onVisibilityChange = () => {
+        if (document.visibilityState !== 'visible') {
+            stopAnimation();
+            return;
+        }
+        if (state.contextLost) return;
+        if (state.runtime && !state.contextLost) {
+            state.runtime.resize();
+            state.runtime.renderFrame(performance.now() * 0.001, state.pointer);
+            startAnimation();
+        } else if (!getSkipReason()) {
+            state.retryCount = 0;
+            boot('visibility-return');
         }
     };
 
+    const onMotionChange = (event) => {
+        state.reduceMotion = event.matches;
+        if (!state.runtime) return;
+        if (state.reduceMotion) {
+            stopAnimation();
+            state.runtime.renderFrame(1.6, state.pointer);
+            setMode('static', 'Atrak core · static');
+        } else {
+            setMode('ready', 'Atrak core · online');
+            startAnimation();
+        }
+    };
+
+    const performResize = () => {
+        state.resizeFrameId = 0;
+        if (state.runtime) {
+            const changed = state.runtime.resize();
+            if (changed && (state.reduceMotion || !state.frameId)) {
+                state.runtime.renderFrame(state.reduceMotion ? 1.6 : performance.now() * 0.001, state.pointer);
+            }
+        } else if (!getSkipReason()) {
+            boot('resize-visible');
+        }
+    };
+
+    const onResize = () => {
+        if (state.resizeFrameId) return;
+        state.resizeFrameId = window.requestAnimationFrame(performResize);
+    };
+
+    const destroy = () => {
+        stopAnimation();
+        clearRetryTimer();
+        clearRecoveryTimer();
+        if (state.resizeFrameId) {
+            window.cancelAnimationFrame(state.resizeFrameId);
+            state.resizeFrameId = 0;
+        }
+        state.resizeObserver?.disconnect();
+        state.intersectionObserver?.disconnect();
+        target.removeEventListener('pointermove', onPointerMove);
+        target.removeEventListener('pointerleave', onPointerLeave);
+        document.removeEventListener('visibilitychange', onVisibilityChange);
+        window.removeEventListener('pageshow', onVisibilityChange);
+        window.removeEventListener('online', onVisibilityChange);
+        window.removeEventListener('resize', onResize);
+        window.removeEventListener('pagehide', onPageHide);
+        motionQuery?.removeEventListener?.('change', onMotionChange);
+        detachCanvasEvents(state.canvas);
+        teardownRuntime();
+        target.dataset.threeInitialized = 'false';
+    };
+
+    function onPageHide(event) {
+        stopAnimation();
+        if (!event.persisted) destroy();
+    }
+
     const start = () => {
-        init().catch((error) => {
-            console.warn('Atrak 3D hero failed during startup.', error);
-            target?.classList.remove('is-ready', 'is-static');
-            target?.classList.add('is-fallback');
-            document.body.classList.remove('three-hero-ready');
-        });
+        attachCanvasEvents(state.canvas);
+        target.addEventListener('pointermove', onPointerMove, { passive: true });
+        target.addEventListener('pointerleave', onPointerLeave, { passive: true });
+        document.addEventListener('visibilitychange', onVisibilityChange);
+        window.addEventListener('pageshow', onVisibilityChange);
+        window.addEventListener('online', onVisibilityChange);
+        window.addEventListener('resize', onResize, { passive: true });
+        window.addEventListener('pagehide', onPageHide);
+        motionQuery?.addEventListener?.('change', onMotionChange);
+
+        if ('ResizeObserver' in window) {
+            state.resizeObserver = new ResizeObserver(onResize);
+            state.resizeObserver.observe(target);
+        }
+
+        if ('IntersectionObserver' in window) {
+            state.intersectionObserver = new IntersectionObserver((entries) => {
+                state.inView = entries.some((entry) => entry.isIntersecting);
+                if (state.inView) startAnimation();
+                else stopAnimation();
+            }, { rootMargin: '120px' });
+            state.intersectionObserver.observe(target);
+        }
+
+        boot();
     };
 
     if (document.readyState === 'loading') {
