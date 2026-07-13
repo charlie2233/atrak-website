@@ -92,7 +92,7 @@
       "ref": "refs/heads/main",
       "head": "7a0af43cc21acbe57fa7ba28b4efe9764c3e397e",
       "before": "725f6720407a2c295eed316e66437deb77442c3a",
-      "distinct_size": 13,
+      "distinct_size": 3,
       "commits": [
         {
           "sha": "7a0af43cc21acbe57fa7ba28b4efe9764c3e397e",
@@ -108,56 +108,6 @@
           "sha": "725f6720407a2c295eed316e66437deb77442c3a",
           "message": "Remove proof wording from AI edit preset (#57)",
           "url": "https://github.com/charlie2233/rork-hoopshighlights-ai_Final/commit/725f6720407a2c295eed316e66437deb77442c3a"
-        },
-        {
-          "sha": "158c6cf66004a762ebaecfd8d5f22f079315347e",
-          "message": "Merge pull request #55 from charlie2233/codex/latest-apple-signing-blocker-20260706\n\nRecord latest Apple signing blocker",
-          "url": "https://github.com/charlie2233/rork-hoopshighlights-ai_Final/commit/158c6cf66004a762ebaecfd8d5f22f079315347e"
-        },
-        {
-          "sha": "4e8d162495d3a283a77c8136917f6a09e037d525",
-          "message": "Record latest Apple signing blocker",
-          "url": "https://github.com/charlie2233/rork-hoopshighlights-ai_Final/commit/4e8d162495d3a283a77c8136917f6a09e037d525"
-        },
-        {
-          "sha": "0ba8c0d0b90fedaec07791d54ef3b769ba3ca775",
-          "message": "Merge pull request #54 from charlie2233/codex/revert-manual-testflight-signing-20260706\n\nRestore automatic TestFlight signing",
-          "url": "https://github.com/charlie2233/rork-hoopshighlights-ai_Final/commit/0ba8c0d0b90fedaec07791d54ef3b769ba3ca775"
-        },
-        {
-          "sha": "6a20f585c4e016c3bff96f0670678008556df34f",
-          "message": "Restore automatic TestFlight signing",
-          "url": "https://github.com/charlie2233/rork-hoopshighlights-ai_Final/commit/6a20f585c4e016c3bff96f0670678008556df34f"
-        },
-        {
-          "sha": "2a521249b16f7829ba3219f94a64961ef28b5159",
-          "message": "Merge pull request #53 from charlie2233/codex/testflight-app-target-signing-20260706\n\nScope TestFlight signing to app target",
-          "url": "https://github.com/charlie2233/rork-hoopshighlights-ai_Final/commit/2a521249b16f7829ba3219f94a64961ef28b5159"
-        },
-        {
-          "sha": "2b14444b2d8162eeb03349aaf6fa9b03d487a111",
-          "message": "Scope TestFlight signing to app target",
-          "url": "https://github.com/charlie2233/rork-hoopshighlights-ai_Final/commit/2b14444b2d8162eeb03349aaf6fa9b03d487a111"
-        },
-        {
-          "sha": "24102321ef7738b43f14fed8120a58bf3a6c921a",
-          "message": "Merge pull request #52 from charlie2233/codex/testflight-distribution-signing-20260706\n\nUse distribution signing for TestFlight archive",
-          "url": "https://github.com/charlie2233/rork-hoopshighlights-ai_Final/commit/24102321ef7738b43f14fed8120a58bf3a6c921a"
-        },
-        {
-          "sha": "7d9fc525cbd0d9e29d9dbde322bbfdb2aca6ebf6",
-          "message": "Use distribution signing for TestFlight archive",
-          "url": "https://github.com/charlie2233/rork-hoopshighlights-ai_Final/commit/7d9fc525cbd0d9e29d9dbde322bbfdb2aca6ebf6"
-        },
-        {
-          "sha": "f8c3c6166b809ab767c956080733825c0c91ea9d",
-          "message": "Merge pull request #51 from charlie2233/codex/latest-testflight-upload-blocker-20260706\n\nRecord latest TestFlight upload blocker",
-          "url": "https://github.com/charlie2233/rork-hoopshighlights-ai_Final/commit/f8c3c6166b809ab767c956080733825c0c91ea9d"
-        },
-        {
-          "sha": "e14ba532ec769c39644c0cae9462947e7ee3642f",
-          "message": "Record latest TestFlight upload blocker",
-          "url": "https://github.com/charlie2233/rork-hoopshighlights-ai_Final/commit/e14ba532ec769c39644c0cae9462947e7ee3642f"
         }
       ]
     },
@@ -262,6 +212,11 @@
       "distinct_size": 20,
       "commits": [
         {
+          "sha": "cd16dcbf828c4d499e1358e190ba78343abf7dd1",
+          "message": "chore: update GitHub data [skip ci]",
+          "url": "https://github.com/charlie2233/atrak-website/commit/cd16dcbf828c4d499e1358e190ba78343abf7dd1"
+        },
+        {
           "sha": "6e29b424772645cb19d5257830da00133a9db5f0",
           "message": "chore: update GitHub data [skip ci]",
           "url": "https://github.com/charlie2233/atrak-website/commit/6e29b424772645cb19d5257830da00133a9db5f0"
@@ -355,11 +310,6 @@
           "sha": "a0e3d7de8b8f798fc4a3acc66b226b93a17a8307",
           "message": "chore: update GitHub data [skip ci]",
           "url": "https://github.com/charlie2233/atrak-website/commit/a0e3d7de8b8f798fc4a3acc66b226b93a17a8307"
-        },
-        {
-          "sha": "abca0698f38d114e3356178e1c36ad2fe8b70275",
-          "message": "chore: update GitHub data [skip ci]",
-          "url": "https://github.com/charlie2233/atrak-website/commit/abca0698f38d114e3356178e1c36ad2fe8b70275"
         }
       ]
     },
