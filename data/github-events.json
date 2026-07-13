@@ -92,7 +92,7 @@
       "ref": "refs/heads/main",
       "head": "7a0af43cc21acbe57fa7ba28b4efe9764c3e397e",
       "before": "725f6720407a2c295eed316e66437deb77442c3a",
-      "distinct_size": 24,
+      "distinct_size": 13,
       "commits": [
         {
           "sha": "7a0af43cc21acbe57fa7ba28b4efe9764c3e397e",
@@ -158,41 +158,6 @@
           "sha": "e14ba532ec769c39644c0cae9462947e7ee3642f",
           "message": "Record latest TestFlight upload blocker",
           "url": "https://github.com/charlie2233/rork-hoopshighlights-ai_Final/commit/e14ba532ec769c39644c0cae9462947e7ee3642f"
-        },
-        {
-          "sha": "52ae8a08368b3a34df65a8221877bcd5bb77d80d",
-          "message": "Merge pull request #50 from charlie2233/codex/docs-launch-baseline-wording-20260705\n\nClarify build 44 launch proof baseline",
-          "url": "https://github.com/charlie2233/rork-hoopshighlights-ai_Final/commit/52ae8a08368b3a34df65a8221877bcd5bb77d80d"
-        },
-        {
-          "sha": "a17dfb20af5cdebf1c6f21e726ae97af778faf45",
-          "message": "Clarify build 44 launch proof baseline",
-          "url": "https://github.com/charlie2233/rork-hoopshighlights-ai_Final/commit/a17dfb20af5cdebf1c6f21e726ae97af778faf45"
-        },
-        {
-          "sha": "0ea148d0fd5fd26e8ded6ec79bbd5d5cea2f8689",
-          "message": "Merge pull request #49 from charlie2233/codex/testflight-build44-blocker-docs-20260705\n\nDocument build 44 TestFlight blocker",
-          "url": "https://github.com/charlie2233/rork-hoopshighlights-ai_Final/commit/0ea148d0fd5fd26e8ded6ec79bbd5d5cea2f8689"
-        },
-        {
-          "sha": "0fc7507203173eb8b6b16a94293a8f3c3d8791f0",
-          "message": "Document build 44 TestFlight blocker",
-          "url": "https://github.com/charlie2233/rork-hoopshighlights-ai_Final/commit/0fc7507203173eb8b6b16a94293a8f3c3d8791f0"
-        },
-        {
-          "sha": "4540381752db2eb5ac22442c8f49971e0d49f6cb",
-          "message": "Merge pull request #48 from charlie2233/codex/testflight-build-44-20260705\n\nBump iOS TestFlight build to 44",
-          "url": "https://github.com/charlie2233/rork-hoopshighlights-ai_Final/commit/4540381752db2eb5ac22442c8f49971e0d49f6cb"
-        },
-        {
-          "sha": "7ab8bb0c03ddaf6da3a6f78ba17def9f5a6a38d8",
-          "message": "Bump iOS TestFlight build to 44",
-          "url": "https://github.com/charlie2233/rork-hoopshighlights-ai_Final/commit/7ab8bb0c03ddaf6da3a6f78ba17def9f5a6a38d8"
-        },
-        {
-          "sha": "baebef867ca278b2ec463568fb9158f3c0f059e7",
-          "message": "Merge pull request #47 from charlie2233/codex/settings-feedback-autodismiss-20260705\n\nAuto-dismiss Settings feedback banners",
-          "url": "https://github.com/charlie2233/rork-hoopshighlights-ai_Final/commit/baebef867ca278b2ec463568fb9158f3c0f059e7"
         }
       ]
     },
@@ -297,6 +262,11 @@
       "distinct_size": 20,
       "commits": [
         {
+          "sha": "6e29b424772645cb19d5257830da00133a9db5f0",
+          "message": "chore: update GitHub data [skip ci]",
+          "url": "https://github.com/charlie2233/atrak-website/commit/6e29b424772645cb19d5257830da00133a9db5f0"
+        },
+        {
           "sha": "c012830cf1e548d2df73c0993661a4f6bbc66d72",
           "message": "chore: update GitHub data [skip ci]",
           "url": "https://github.com/charlie2233/atrak-website/commit/c012830cf1e548d2df73c0993661a4f6bbc66d72"
@@ -390,11 +360,6 @@
           "sha": "abca0698f38d114e3356178e1c36ad2fe8b70275",
           "message": "chore: update GitHub data [skip ci]",
           "url": "https://github.com/charlie2233/atrak-website/commit/abca0698f38d114e3356178e1c36ad2fe8b70275"
-        },
-        {
-          "sha": "23bb4b6154975a2cb5340f7cee054700de36c9ea",
-          "message": "chore: update GitHub data [skip ci]",
-          "url": "https://github.com/charlie2233/atrak-website/commit/23bb4b6154975a2cb5340f7cee054700de36c9ea"
         }
       ]
     },
