@@ -102,20 +102,25 @@ const pageSpecs = [
     selectors: [
       '#weekly-highlights',
       '#weekly-freshness-strip',
-      '#weekly-unified-history-shell',
+      '#weekly-content .wl-report',
+      '#weekly-week-strip [aria-current="true"]',
       '#prev-week-btn',
-      '#next-week-btn'
+      '#next-week-btn',
+      '#weekly-share-btn'
     ],
     async waitForReady(page) {
       await page.waitForFunction(() => {
-        const shell = document.querySelector('#weekly-unified-history-shell');
+        const card = document.querySelector('#weekly-highlights');
+        const report = document.querySelector('#weekly-content .wl-report');
         const freshness = document.querySelector('#weekly-freshness-strip');
         return Boolean(
-          shell &&
-          shell.textContent &&
-          shell.textContent.trim().length > 0 &&
+          card &&
+          card.getAttribute('aria-busy') === 'false' &&
+          report &&
+          report.textContent &&
+          report.textContent.trim().length > 0 &&
           freshness &&
-          !/checking weekly freshness/i.test(freshness.textContent || '')
+          !/checking data freshness/i.test(freshness.textContent || '')
         );
       }, { timeout: 15000 });
     }

@@ -32,6 +32,7 @@
     <link rel="apple-touch-icon" sizes="120x120" href="assets/logo.png?v=20260202">
     <link rel="apple-touch-icon" sizes="76x76" href="assets/logo.png?v=20260202">
     <link rel="stylesheet" href="styles.css?v=48">
+    <link rel="stylesheet" href="weekly-log.css?v=7">
     
     <!-- Structured Data -->
     <script type="application/ld+json">
@@ -824,87 +825,78 @@
         </div>
     </section>
 
-    <!-- Updates / Build Log Section -->
-    <section id="updates" class="updates reveal">
+    <!-- Weekly Log -->
+    <section id="updates" class="updates weekly-log-section reveal">
         <div class="container">
-            <div class="section-header">
-                <span class="section-tag">Progress Timeline</span>
-                <h2 class="section-title">Updates & Build Log</h2>
-                <p class="section-description">
-                    Recent milestones and development momentum — turning experiments into shipped tools.
-                </p>
+            <div class="section-header weekly-log-heading">
+                <span class="section-tag">Weekly Briefing</span>
+                <h2 class="section-title">Weekly Log</h2>
+                <p class="section-description">What shipped, what changed, and what we’re building next.</p>
             </div>
-            
-            <!-- Weekly Highlights -->
-            <div class="weekly-highlights-wrapper reveal">
-                <div class="glass-card weekly-card" id="weekly-highlights">
-                    <div class="weekly-header">
-                        <button class="nav-btn prev-week" id="prev-week-btn" aria-label="Previous Week" aria-controls="weekly-unified-history-shell">
-                            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M15 18l-6-6 6-6"/></svg>
-                        </button>
-                        
-                        <div class="weekly-title-group">
-                            <span class="weekly-icon" id="weekly-icon">📅</span>
-                            <div class="weekly-title-stack">
-                                <div class="weekly-kicker">Live Update Log</div>
-                                <h3 id="weekly-title">This Week</h3>
-                                <div class="weekly-title-meta">
-                                    <span class="weekly-date" id="weekly-date-range">Loading...</span>
-                                    <span class="weekly-sync-pill" id="weekly-sync-pill" aria-live="polite">Syncing…</span>
-                                </div>
-                                <div class="weekly-source-note" id="weekly-source-note">GitHub activity + weekly archive</div>
-                                <div class="content-freshness-strip content-freshness-strip-compact" id="weekly-freshness-strip" role="status" aria-live="polite">
-                                    <span class="content-freshness-badge" data-state="loading">Loading</span>
-                                    <span class="content-freshness-text">Checking weekly freshness…</span>
-                                </div>
-                            </div>
-                        </div>
 
-                        <button class="nav-btn next-week" id="next-week-btn" aria-label="Next Week" aria-controls="weekly-unified-history-shell" disabled>
-                            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M9 18l6-6-6-6"/></svg>
-                        </button>
-                    </div>
-                    
-                    <div class="weekly-content-wrapper">
-                        <div class="weekly-content" id="weekly-content">
-                            <div class="weekly-loading">
-                                <span class="loading-dot"></span>
-                                <span class="loading-dot"></span>
-                                <span class="loading-dot"></span>
+            <div class="weekly-briefing reveal" id="weekly-highlights" data-weekly-swipe-owned="true" aria-busy="true">
+                <svg class="weekly-briefing__orbit" viewBox="0 0 1100 520" aria-hidden="true" focusable="false">
+                    <path d="M-80 432C160 248 324 586 605 318S952 46 1180 158"/>
+                    <path d="M-52 478C184 312 348 612 632 354S974 88 1162 190"/>
+                    <circle cx="607" cy="316" r="5"/>
+                    <circle cx="960" cy="80" r="4"/>
+                    <circle cx="110" cy="356" r="3"/>
+                </svg>
+
+                <header class="weekly-briefing__bar">
+                    <div class="weekly-briefing__identity">
+                        <span class="weekly-briefing__calendar" aria-hidden="true">
+                            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><path d="M7 3v3M17 3v3M4 9h16M5 5h14a1 1 0 0 1 1 1v13a1 1 0 0 1-1 1H5a1 1 0 0 1-1-1V6a1 1 0 0 1 1-1Z"/><path d="M8 13h3M13 13h3M8 16h3M13 16h3"/></svg>
+                        </span>
+                        <div>
+                            <div class="weekly-briefing__date" id="weekly-date-range">Loading weekly log…</div>
+                            <div class="weekly-briefing__source-row">
+                                <span class="weekly-briefing__sync" id="weekly-sync-pill" data-state="loading">Syncing</span>
+                                <span class="weekly-briefing__source" id="weekly-source-note">GitHub activity + Atrak archive</span>
                             </div>
                         </div>
                     </div>
-                </div>
-            </div>
-            
-            <!-- Quick Timeline Summary -->
-            <div class="timeline-summary-grid">
-                <div class="timeline-summary-card glass-card">
-                    <div class="summary-date">Jan 2026</div>
-                    <h4 class="summary-title">Shipped atrak.dev</h4>
-                    <p class="summary-desc">Launched new team website</p>
-                </div>
-                <div class="timeline-summary-card glass-card">
-                    <div class="summary-date">Dec 2025</div>
-                    <h4 class="summary-title">Submitted GuidePup</h4>
-                    <p class="summary-desc">AI vision assistant to App Store</p>
-                </div>
-                <div class="timeline-summary-card glass-card">
-                    <div class="summary-date">Nov 2025</div>
-                    <h4 class="summary-title">Built Hoops Clips</h4>
-                    <p class="summary-desc">AI highlights pipeline shipped</p>
-                </div>
-                <div class="timeline-summary-card glass-card">
-                    <div class="summary-date">Sep 2025</div>
-                    <h4 class="summary-title">Deployed VIP Manager</h4>
-                    <p class="summary-desc">Live in production</p>
-                </div>
-            </div>
 
-            <div class="section-actions reveal" style="margin-top: 32px;">
-                <a href="releases.html" class="btn btn-secondary">
-                    View Full Timeline & Activity →
-                </a>
+                    <div class="weekly-briefing__actions" aria-label="Weekly log controls">
+                        <button class="weekly-control" id="prev-week-btn" type="button" aria-label="Previous week" aria-controls="weekly-content">
+                            <svg viewBox="0 0 24 24" aria-hidden="true"><path d="m15 18-6-6 6-6"/></svg>
+                            <span>Previous week</span>
+                        </button>
+                        <button class="weekly-control" id="next-week-btn" type="button" aria-label="Next week" aria-controls="weekly-content" disabled>
+                            <span>Next week</span>
+                            <svg viewBox="0 0 24 24" aria-hidden="true"><path d="m9 18 6-6-6-6"/></svg>
+                        </button>
+                        <button class="weekly-control weekly-control--share" id="weekly-share-btn" type="button" aria-label="Share this weekly log">
+                            <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 16V3m0 0L7.5 7.5M12 3l4.5 4.5M5 11v8a2 2 0 0 0 2 2h10a2 2 0 0 0 2-2v-8"/></svg>
+                            <span data-weekly-share-label>Share</span>
+                        </button>
+                    </div>
+                </header>
+
+                <nav class="weekly-week-nav" aria-label="Weekly log archive">
+                    <button class="weekly-week-nav__scroll" id="weekly-rail-prev-btn" type="button" aria-label="Scroll archive toward older weeks">
+                        <svg viewBox="0 0 24 24" aria-hidden="true"><path d="m15 18-6-6 6-6"/></svg>
+                    </button>
+                    <div class="weekly-week-strip" id="weekly-week-strip" role="listbox" aria-label="Choose a week"></div>
+                    <button class="weekly-week-nav__scroll" id="weekly-rail-next-btn" type="button" aria-label="Scroll archive toward newer weeks">
+                        <svg viewBox="0 0 24 24" aria-hidden="true"><path d="m9 18 6-6-6-6"/></svg>
+                    </button>
+                </nav>
+
+                <div class="weekly-content" id="weekly-content" aria-live="polite">
+                    <div class="weekly-briefing__loading" role="status">
+                        <span></span><span></span><span></span>
+                        <strong>Building the briefing</strong>
+                    </div>
+                </div>
+
+                <footer class="weekly-briefing__footer">
+                    <div class="weekly-freshness" id="weekly-freshness-strip" role="status" aria-live="polite">Checking data freshness…</div>
+                    <a class="weekly-footer-link" href="releases.html" aria-label="Open full timeline and releases">
+                        <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M10.5 13.5 13.5 10.5M8 16H6a4 4 0 0 1 0-8h3M16 8h2a4 4 0 1 1 0 8h-3"/></svg>
+                        Full timeline &amp; releases
+                    </a>
+                </footer>
             </div>
         </div>
     </section>
@@ -1493,7 +1485,8 @@
     </main>
 
     <script src="config.js?v=21"></script>
-    <script src="script.js?v=45"></script>
+    <script src="weekly-log.js?v=5"></script>
+    <script src="script.js?v=46"></script>
     <script src="three-hero.js?v=8"></script>
     <script src="last-updated.js?v=2"></script>
 </body>
