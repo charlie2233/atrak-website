@@ -555,44 +555,37 @@
   {
     "weekStart": "2026-07-05",
     "weekEnd": "2026-07-11",
-    "generatedAt": "2026-07-14T06:10:19.130Z",
+    "generatedAt": "2026-07-14T06:14:13.172Z",
     "source": "github-weekly-automation",
     "dateRange": "Jul 5 – 11",
-    "title": "Atrak Website and Hoops Highlights App moved the week forward.",
+    "title": "Hoops Highlights App and Atrak Website moved the week forward.",
     "highlights": [
-      "Atrak Website led public activity with 26 commits across 6 pushes.",
+      "Hoops Highlights App led public activity with 0 commits across 14 pushes.",
       "2 public repositories were active across 66 GitHub events.",
       "No formal GitHub release was published during this edition."
     ],
     "shipped": [
-      "streamline site interactions",
-      "redesign interactive site and harden 3d",
-      "redirect GuidePup project to immersive site",
-      "Remove proof wording from AI edit preset (#57)"
+      "Public project activity was captured and archived."
     ],
     "engineering": [
       "20 pushes and 24 pull request updates were condensed into this edition.",
-      "Active stacks included HTML, Python.",
+      "Active stacks included Python, HTML.",
       "The snapshot is stored permanently so the edition remains available after GitHub events expire."
     ],
-    "fixes": [
-      "make three hero reliable on desktop",
-      "harden three hero startup",
-      "tighten hero headline"
-    ],
+    "fixes": [],
     "metrics": [
-      "Commits: 48",
+      "Commits: 0",
       "Active repos: 2",
       "Pull requests: 24",
       "Issues: 1",
       "Releases: 0"
     ],
     "next": [
-      "Continue the Atrak Website build and publish the next visible milestone.",
+      "Continue the Hoops Highlights App build and publish the next visible milestone.",
       "Review the next automated edition after Sunday refresh."
     ],
     "stats": {
-      "commits": 48,
+      "commits": 0,
       "activeRepositories": 2,
       "pullRequests": 24,
       "issues": 1,
@@ -602,140 +595,31 @@
     },
     "repositories": [
       {
-        "name": "Atrak Website",
-        "fullName": "charlie2233/atrak-website",
-        "url": "https://github.com/charlie2233/atrak-website",
-        "language": "HTML",
-        "commits": 26,
-        "pushes": 6,
-        "events": 6,
-        "pullRequests": 0,
-        "issues": 0,
-        "lastAt": "2026-07-11T06:51:04.000Z"
-      },
-      {
         "name": "Hoops Highlights App",
         "fullName": "charlie2233/rork-hoopshighlights-ai_Final",
         "url": "https://github.com/charlie2233/rork-hoopshighlights-ai_Final",
         "language": "Python",
-        "commits": 22,
+        "commits": 0,
         "pushes": 14,
         "events": 60,
         "pullRequests": 24,
         "issues": 1,
         "lastAt": "2026-07-09T03:53:33.000Z"
+      },
+      {
+        "name": "Atrak Website",
+        "fullName": "charlie2233/atrak-website",
+        "url": "https://github.com/charlie2233/atrak-website",
+        "language": "HTML",
+        "commits": 0,
+        "pushes": 6,
+        "events": 6,
+        "pullRequests": 0,
+        "issues": 0,
+        "lastAt": "2026-07-11T06:51:04.000Z"
       }
     ],
     "releases": [],
-    "commitMessages": [
-      {
-        "repo": "charlie2233/atrak-website",
-        "text": "streamline site interactions",
-        "url": "https://github.com/charlie2233/atrak-website/commit/115bada15cdd7d6f94be5fce7896b1e2491fd857",
-        "at": "2026-07-11T06:51:01Z"
-      },
-      {
-        "repo": "charlie2233/atrak-website",
-        "text": "redesign interactive site and harden 3d",
-        "url": "https://github.com/charlie2233/atrak-website/commit/a5f8e4f459f8f8123395103410884aad692e06c2",
-        "at": "2026-07-11T06:44:00Z"
-      },
-      {
-        "repo": "charlie2233/atrak-website",
-        "text": "redirect GuidePup project to immersive site",
-        "url": "https://github.com/charlie2233/atrak-website/commit/9101f3b1090d40e2e3bf298a58b9124a2b61c7e5",
-        "at": "2026-07-11T06:41:32Z"
-      },
-      {
-        "repo": "charlie2233/rork-hoopshighlights-ai_Final",
-        "text": "Remove proof wording from AI edit preset (#57)",
-        "url": "https://github.com/charlie2233/rork-hoopshighlights-ai_Final/commit/725f6720407a2c295eed316e66437deb77442c3a",
-        "at": "2026-07-09T03:53:32Z"
-      },
-      {
-        "repo": "charlie2233/rork-hoopshighlights-ai_Final",
-        "text": "Record latest Apple signing blocker",
-        "url": "https://github.com/charlie2233/rork-hoopshighlights-ai_Final/commit/4e8d162495d3a283a77c8136917f6a09e037d525",
-        "at": "2026-07-06T03:33:49Z"
-      },
-      {
-        "repo": "charlie2233/rork-hoopshighlights-ai_Final",
-        "text": "Restore automatic TestFlight signing",
-        "url": "https://github.com/charlie2233/rork-hoopshighlights-ai_Final/commit/6a20f585c4e016c3bff96f0670678008556df34f",
-        "at": "2026-07-06T03:26:10Z"
-      },
-      {
-        "repo": "charlie2233/rork-hoopshighlights-ai_Final",
-        "text": "Scope TestFlight signing to app target",
-        "url": "https://github.com/charlie2233/rork-hoopshighlights-ai_Final/commit/2b14444b2d8162eeb03349aaf6fa9b03d487a111",
-        "at": "2026-07-06T03:17:24Z"
-      },
-      {
-        "repo": "charlie2233/rork-hoopshighlights-ai_Final",
-        "text": "Use distribution signing for TestFlight archive",
-        "url": "https://github.com/charlie2233/rork-hoopshighlights-ai_Final/commit/7d9fc525cbd0d9e29d9dbde322bbfdb2aca6ebf6",
-        "at": "2026-07-06T02:59:23Z"
-      },
-      {
-        "repo": "charlie2233/rork-hoopshighlights-ai_Final",
-        "text": "Record latest TestFlight upload blocker",
-        "url": "https://github.com/charlie2233/rork-hoopshighlights-ai_Final/commit/e14ba532ec769c39644c0cae9462947e7ee3642f",
-        "at": "2026-07-06T02:42:55Z"
-      },
-      {
-        "repo": "charlie2233/rork-hoopshighlights-ai_Final",
-        "text": "Clarify build 44 launch proof baseline",
-        "url": "https://github.com/charlie2233/rork-hoopshighlights-ai_Final/commit/a17dfb20af5cdebf1c6f21e726ae97af778faf45",
-        "at": "2026-07-05T22:25:27Z"
-      },
-      {
-        "repo": "charlie2233/rork-hoopshighlights-ai_Final",
-        "text": "Document build 44 TestFlight blocker",
-        "url": "https://github.com/charlie2233/rork-hoopshighlights-ai_Final/commit/0fc7507203173eb8b6b16a94293a8f3c3d8791f0",
-        "at": "2026-07-05T22:19:05Z"
-      },
-      {
-        "repo": "charlie2233/rork-hoopshighlights-ai_Final",
-        "text": "Bump iOS TestFlight build to 44",
-        "url": "https://github.com/charlie2233/rork-hoopshighlights-ai_Final/commit/7ab8bb0c03ddaf6da3a6f78ba17def9f5a6a38d8",
-        "at": "2026-07-05T22:03:18Z"
-      },
-      {
-        "repo": "charlie2233/rork-hoopshighlights-ai_Final",
-        "text": "Auto-dismiss Settings feedback banners",
-        "url": "https://github.com/charlie2233/rork-hoopshighlights-ai_Final/commit/d7667dc43c6c0bd580f3e95d3e0338d22390fbd3",
-        "at": "2026-07-05T21:44:47Z"
-      },
-      {
-        "repo": "charlie2233/rork-hoopshighlights-ai_Final",
-        "text": "Polish support copy for launch builds",
-        "url": "https://github.com/charlie2233/rork-hoopshighlights-ai_Final/commit/62ff66738da66e9598fc03f30196d579cbfe0fdb",
-        "at": "2026-07-05T21:19:05Z"
-      },
-      {
-        "repo": "charlie2233/rork-hoopshighlights-ai_Final",
-        "text": "Hide launch proof tools from app UI",
-        "url": "https://github.com/charlie2233/rork-hoopshighlights-ai_Final/commit/2a55512407b03c939ac23b1b091f1570083898a3",
-        "at": "2026-07-05T21:19:05Z"
-      },
-      {
-        "repo": "charlie2233/atrak-website",
-        "text": "make three hero reliable on desktop",
-        "url": "https://github.com/charlie2233/atrak-website/commit/530e1af737e3282d6ecab11f5d46455bab54c554",
-        "at": "2026-07-05T07:39:54Z"
-      },
-      {
-        "repo": "charlie2233/atrak-website",
-        "text": "harden three hero startup",
-        "url": "https://github.com/charlie2233/atrak-website/commit/6abc94a326daa39aa69a763e9a5da15c2f129f3f",
-        "at": "2026-07-05T07:15:02Z"
-      },
-      {
-        "repo": "charlie2233/atrak-website",
-        "text": "tighten hero headline",
-        "url": "https://github.com/charlie2233/atrak-website/commit/19fbd160d31c489617d5c4e66ab8aeb1caeab596",
-        "at": "2026-07-05T07:07:40Z"
-      }
-    ]
+    "commitMessages": []
   }
 ]
