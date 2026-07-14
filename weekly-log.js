@@ -1,7 +1,7 @@
 (() => {
     'use strict';
 
-    const CACHE_VERSION = '20260713a';
+    const CACHE_VERSION = '20260714a';
     const WEEK_MS = 7 * 24 * 60 * 60 * 1000;
     const BASE_URL = new URL('.', document.baseURI);
     const dataUrl = (path) => {
@@ -16,6 +16,7 @@
         repos: dataUrl('data/github-repos.json'),
         releases: dataUrl('data/github-releases.json'),
         meta: dataUrl('data/github-meta.json'),
+        history: dataUrl('data/weekly-history.json'),
         archive: dataUrl('WeeklyLog.txt')
     };
 
@@ -378,6 +379,62 @@
         }).filter(Boolean);
     };
 
+    const parseLocalDateKey = (value) => {
+        const match = String(value || '').match(/^(\d{4})-(\d{2})-(\d{2})$/);
+        if (!match) return null;
+        const date = new Date(Number(match[1]), Number(match[2]) - 1, Number(match[3]));
+        date.setHours(0, 0, 0, 0);
+        return Number.isNaN(date.getTime()) ? null : date;
+    };
+
+    const parseHistory = (history) => {
+        const entries = Array.isArray(history) ? history.filter((entry) => entry && typeof entry === 'object') : [];
+        const monthIndex = (name) => {
+            const date = new Date(`${name} 1, 2000`);
+            return Number.isNaN(date.getTime()) ? -1 : date.getMonth();
+        };
+        const firstMonthDay = (range) => {
+            const match = String(range || '').match(/([A-Za-z]{3,9})\s+(\d{1,2})/);
+            return match ? { month: monthIndex(match[1]), day: Number(match[2]) } : null;
+        };
+        const firstLegacy = entries.find((entry) => !entry.weekStart && firstMonthDay(entry.dateRange));
+        const first = firstLegacy ? firstMonthDay(firstLegacy.dateRange) : null;
+        let year = new Date().getFullYear();
+        if (first) {
+            const candidate = new Date(year, first.month, first.day);
+            if (candidate.getTime() > Date.now() + (30 * 24 * 60 * 60 * 1000)) year -= 1;
+        }
+        let previousMonth = first ? first.month : -1;
+
+        return entries.map((entry) => {
+            let date = parseLocalDateKey(entry.weekStart);
+            if (!date) {
+                const monthDay = firstMonthDay(entry.dateRange);
+                if (!monthDay) return null;
+                if (previousMonth >= 9 && monthDay.month < previousMonth) year += 1;
+                previousMonth = monthDay.month;
+                date = new Date(year, monthDay.month, monthDay.day);
+                date.setHours(0, 0, 0, 0);
+            }
+            return {
+                range: plainText(entry.dateRange || formatWeekRange(date)),
+                headline: plainText(entry.title || ''),
+                projectTitle: 'Atrak Team',
+                blocks: {
+                    Highlights: Array.isArray(entry.highlights) ? entry.highlights : [],
+                    Shipped: Array.isArray(entry.shipped) ? entry.shipped : [],
+                    Engineering: Array.isArray(entry.engineering) ? entry.engineering : [],
+                    Fixes: Array.isArray(entry.fixes) ? entry.fixes : [],
+                    Metrics: Array.isArray(entry.metrics) ? entry.metrics : [],
+                    Next: Array.isArray(entry.next) ? entry.next : []
+                },
+                date,
+                key: weekKey(date),
+                snapshot: entry
+            };
+        }).filter(Boolean);
+    };
+
     const blockEntries = (archive, names) => {
         if (!archive || !archive.blocks) return [];
         const normalizedNames = names.map((name) => name.toLowerCase());
@@ -413,6 +470,67 @@
             const issues = metricFromArchive(entry, ['issue']);
             if (!week.issues && Number.isFinite(issues)) week.issues = issues;
             if (!week.dataThrough) week.dataThrough = new Date(week.start.getTime() + (6 * 24 * 60 * 60 * 1000));
+        });
+    };
+
+    const mergeHistoryWeeks = (weeks, historyEntries) => {
+        mergeArchiveWeeks(weeks, historyEntries);
+        historyEntries.forEach((entry) => {
+            const snapshot = entry.snapshot;
+            if (!snapshot || snapshot.source !== 'github-weekly-automation' || !snapshot.stats) return;
+            const week = ensureWeek(weeks, entry.date);
+            if (!week) return;
+            const stats = snapshot.stats;
+            const weekEnd = parseLocalDateKey(snapshot.weekEnd);
+            const throughDate = weekEnd
+                ? new Date(weekEnd.getFullYear(), weekEnd.getMonth(), weekEnd.getDate(), 23, 59, 59, 999)
+                : new Date(week.start.getTime() + WEEK_MS - 1);
+            week.weeklyStats = {
+                updatedAt: snapshot.generatedAt,
+                from: `${snapshot.weekStart}T00:00:00Z`,
+                to: `${snapshot.weekEnd}T23:59:59Z`,
+                totalCommitContributions: Number(stats.commits || 0),
+                totalPullRequestContributions: Number(stats.pullRequests || 0),
+                totalIssueContributions: Number(stats.issues || 0),
+                totalRepositoryContributions: Number(stats.activeRepositories || 0),
+                source: 'weekly-automation'
+            };
+            week.commits = Number(stats.commits || 0);
+            week.hasCommitCount = true;
+            week.pullRequests = Number(stats.pullRequests || 0);
+            week.issues = Number(stats.issues || 0);
+            week.pushes = Number(stats.pushes || 0);
+            week.eventCount = Number(stats.events || 0);
+            week.dataThrough = throughDate;
+            week.latestEventAt = throughDate;
+
+            (Array.isArray(snapshot.repositories) ? snapshot.repositories : []).forEach((repo) => {
+                const fullName = String(repo.fullName || '');
+                const repoKey = fullName.split('/').pop();
+                if (!repoKey) return;
+                week.repoActivity.set(repoKey, {
+                    key: repoKey,
+                    name: plainText(repo.name || formatRepoName(repoKey)),
+                    fullName,
+                    url: safeUrl(repo.url || `https://github.com/${fullName}`),
+                    commits: Number(repo.commits || 0),
+                    pushes: Number(repo.pushes || 0),
+                    events: Number(repo.events || 0),
+                    language: plainText(repo.language || ''),
+                    lastAt: repo.lastAt ? new Date(repo.lastAt) : throughDate
+                });
+            });
+
+            normalizeReleases((Array.isArray(snapshot.releases) ? snapshot.releases : []).map((release) => ({
+                ...release,
+                published_at: release.publishedAt
+            }))).forEach((release) => {
+                if (week.releaseKeys.has(release.key)) return;
+                week.releaseKeys.add(release.key);
+                week.releases.push(release);
+            });
+            (Array.isArray(snapshot.commitMessages) ? snapshot.commitMessages : [])
+                .forEach((commit) => addMessage(week, commit.repo, commit.text));
         });
     };
 
@@ -509,11 +627,15 @@
     const sourceModel = (week) => {
         if (week.weeklyStats) {
             const source = String(week.weeklyStats.source || '').toLowerCase();
-            const label = source === 'local-git-refresh' ? 'Local checked-out repos' : 'GitHub contribution data';
+            const label = source === 'local-git-refresh'
+                ? 'Local checked-out repos'
+                : source === 'weekly-automation'
+                    ? 'Automated weekly snapshot'
+                    : 'GitHub contribution data';
             return {
                 label: `${label} • through ${formatFullDate(week.weeklyStats.to)}`,
                 sync: timeAgo(week.weeklyStats.updatedAt),
-                state: source === 'local-git-refresh' ? 'local' : 'fresh'
+                state: source === 'local-git-refresh' ? 'local' : (source === 'weekly-automation' ? 'archive' : 'fresh')
             };
         }
         if (week.eventCount || week.releases.length) {
@@ -931,17 +1053,19 @@
     };
 
     const loadAndRender = async () => {
-        const [events, weeklyStats, repos, releasesRaw, meta, archiveText] = await Promise.all([
+        const [events, weeklyStats, repos, releasesRaw, meta, history, archiveText] = await Promise.all([
             fetchJson(DATA_URLS.events, []),
             fetchJson(DATA_URLS.weekly, null),
             fetchJson(DATA_URLS.repos, []),
             fetchJson(DATA_URLS.releases, []),
             fetchJson(DATA_URLS.meta, null),
+            fetchJson(DATA_URLS.history, []),
             fetchText(DATA_URLS.archive)
         ]);
         state.releases = normalizeReleases(releasesRaw);
         state.meta = meta && typeof meta === 'object' ? meta : null;
         const weeks = buildGitHubWeeks(events, state.releases, repos);
+        mergeHistoryWeeks(weeks, parseHistory(history));
         mergeArchiveWeeks(weeks, parseArchive(archiveText));
         attachWeeklyStats(weeks, weeklyStats);
         state.weeks = Array.from(weeks.values())

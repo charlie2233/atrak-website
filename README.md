@@ -112,6 +112,19 @@ This avoids GitHub API rate limiting for visitors and keeps any token private (n
 
 The workflow also writes `data/github-meta.json` (timestamp + repo count) for UI display/debugging.
 
+## 🗓️ Weekly Log Automation
+
+The **Renew Weekly Log** workflow runs every Sunday at 09:15 UTC. It summarizes the completed Sunday–Saturday period, enriches active repositories with a small number of GitHub commit requests, and upserts a permanent edition in `data/weekly-history.json`. The homepage reads this archive alongside the live GitHub cache, so older editions remain available after GitHub events expire.
+
+Run the same renewal locally or from the Actions tab:
+
+```bash
+node scripts/renew-weekly-log.mjs --github-api
+node scripts/renew-weekly-log.mjs --github-api --week-start 2026-07-05
+```
+
+`--week-start` must be a Sunday. Add `--dry-run` to preview an edition without changing the archive. The optional `GH_PAT` Actions secret increases API limits; the workflow otherwise uses the repository token and only queries repositories active during the selected week.
+
 ## 📁 Project Structure
 
 ```
@@ -126,6 +139,8 @@ Atrak/
 ├── press-kit.html         # Press kit + partnerships
 ├── styles.css             # All styles with CSS variables
 ├── script.js              # Interactive functionality
+├── weekly-log.js          # Weekly archive renderer and sharing
+├── weekly-log.css         # Weekly briefing layout and responsive styles
 ├── blog.js                # Blog rendering and filtering
 ├── robots.txt             # Search engine crawler directives
 ├── sitemap.xml            # Site structure for search engines
@@ -137,7 +152,10 @@ Atrak/
 │   │   └── ...
 │   ├── team-members.json  # Team member data
 │   ├── impact-analytics.json
+│   ├── weekly-history.json # Durable weekly editions
 │   └── github-*.json      # GitHub cache files
+├── scripts/
+│   └── renew-weekly-log.mjs # Sunday snapshot generator
 ├── blog/                  # Blog pages
 │   ├── blog-post.html     # Dynamic blog post viewer
 │   └── create.html        # Blog post creation form

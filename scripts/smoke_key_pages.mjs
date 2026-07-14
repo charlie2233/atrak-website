@@ -123,6 +123,24 @@ const pageSpecs = [
           !/checking data freshness/i.test(freshness.textContent || '')
         );
       }, { timeout: 15000 });
+      await page.evaluate(() => window.AtrakWeeklyLog?.goToWeek('2026-04-19'));
+      await page.waitForFunction(() => {
+        const report = document.querySelector('#weekly-content .wl-report');
+        return (
+          window.location.hash === '#week=2026-04-19' &&
+          /project hub refresh \+ education exporter drop/i.test(report?.textContent || '')
+        );
+      }, { timeout: 5000 });
+      await page.evaluate(() => window.AtrakWeeklyLog?.goToWeek('2026-07-05'));
+      await page.waitForFunction(() => {
+        const source = document.querySelector('#weekly-source-note');
+        const commitMetric = document.querySelector('#weekly-content .wl-metric strong');
+        return (
+          window.location.hash === '#week=2026-07-05' &&
+          /automated weekly snapshot/i.test(source?.textContent || '') &&
+          commitMetric?.textContent?.trim() === '48'
+        );
+      }, { timeout: 5000 });
     }
   },
   {
