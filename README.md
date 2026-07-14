@@ -116,6 +116,8 @@ The workflow also writes `data/github-meta.json` (timestamp + repo count) for UI
 
 The **Renew Weekly Log** workflow runs every Sunday at 09:15 UTC. It summarizes the completed Sunday–Saturday period, enriches active repositories with a small number of GitHub commit requests, and upserts a permanent edition in `data/weekly-history.json`. The homepage reads this archive alongside the live GitHub cache, so older editions remain available after GitHub events expire.
 
+Each edition also renders compact per-project momentum charts from the latest six recorded weeks. If renewal fails, the workflow sends the selected week and GitHub Actions run link through the private Formspree inbox; no recipient email address is exposed in the site or workflow output.
+
 Run the same renewal locally or from the Actions tab:
 
 ```bash
@@ -124,6 +126,25 @@ node scripts/renew-weekly-log.mjs --github-api --week-start 2026-07-05
 ```
 
 `--week-start` must be a Sunday. Add `--dry-run` to preview an edition without changing the archive. The optional `GH_PAT` Actions secret increases API limits; the workflow otherwise uses the repository token and only queries repositories active during the selected week.
+
+### Team Editorial Overrides
+
+Automation owns metrics and repository activity. Team members can optionally rewrite the human-facing story in `data/weekly-editorial.json` without touching generated history. Add a Sunday key, set `published` to `true`, and provide only the sections you want to replace:
+
+```json
+{
+  "weeks": {
+    "2026-07-05": {
+      "published": true,
+      "title": "A team-written headline",
+      "highlights": ["What mattered this week"],
+      "next": ["What happens next"]
+    }
+  }
+}
+```
+
+Missing sections continue using the automated edition. Set `published` to `false` to keep a draft out of the public Weekly Log.
 
 ## 📁 Project Structure
 
@@ -152,6 +173,7 @@ Atrak/
 │   │   └── ...
 │   ├── team-members.json  # Team member data
 │   ├── impact-analytics.json
+│   ├── weekly-editorial.json # Optional team-written weekly copy
 │   ├── weekly-history.json # Durable weekly editions
 │   └── github-*.json      # GitHub cache files
 ├── scripts/

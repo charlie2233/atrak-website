@@ -1,7 +1,7 @@
 (() => {
     'use strict';
 
-    const CACHE_VERSION = '20260714a';
+    const CACHE_VERSION = '20260714b';
     const WEEK_MS = 7 * 24 * 60 * 60 * 1000;
     const BASE_URL = new URL('.', document.baseURI);
     const dataUrl = (path) => {
@@ -17,6 +17,7 @@
         releases: dataUrl('data/github-releases.json'),
         meta: dataUrl('data/github-meta.json'),
         history: dataUrl('data/weekly-history.json'),
+        editorial: dataUrl('data/weekly-editorial.json'),
         archive: dataUrl('WeeklyLog.txt')
     };
 
@@ -435,6 +436,31 @@
         }).filter(Boolean);
     };
 
+    const parseEditorial = (editorial) => {
+        const weeks = editorial && typeof editorial.weeks === 'object' ? editorial.weeks : {};
+        return Object.entries(weeks).map(([key, entry]) => {
+            if (!entry || typeof entry !== 'object' || entry.published === false) return null;
+            const date = parseLocalDateKey(key);
+            if (!date) return null;
+            return {
+                range: formatWeekRange(date),
+                headline: plainText(entry.title || ''),
+                projectTitle: plainText(entry.author || 'Atrak Team'),
+                blocks: {
+                    Highlights: Array.isArray(entry.highlights) ? entry.highlights : [],
+                    Shipped: Array.isArray(entry.shipped) ? entry.shipped : [],
+                    Engineering: Array.isArray(entry.engineering) ? entry.engineering : [],
+                    Fixes: Array.isArray(entry.fixes) ? entry.fixes : [],
+                    Next: Array.isArray(entry.next) ? entry.next : []
+                },
+                date,
+                key: weekKey(date),
+                editorial: true,
+                updatedAt: entry.updatedAt || ''
+            };
+        }).filter(Boolean);
+    };
+
     const blockEntries = (archive, names) => {
         if (!archive || !archive.blocks) return [];
         const normalizedNames = names.map((name) => name.toLowerCase());
@@ -534,6 +560,30 @@
         });
     };
 
+    const mergeEditorialWeeks = (weeks, editorialEntries) => {
+        editorialEntries.forEach((entry) => {
+            const week = ensureWeek(weeks, entry.date);
+            if (!week) return;
+            const existing = week.archive || {};
+            const blocks = { ...(existing.blocks || {}) };
+            Object.entries(entry.blocks).forEach(([name, values]) => {
+                if (Array.isArray(values) && values.length) blocks[name] = values;
+            });
+            week.archive = {
+                ...existing,
+                range: entry.range || existing.range,
+                headline: entry.headline || existing.headline,
+                projectTitle: entry.projectTitle || existing.projectTitle || 'Atrak Team',
+                blocks,
+                date: entry.date,
+                key: entry.key,
+                editorial: true,
+                updatedAt: entry.updatedAt
+            };
+            if (!week.dataThrough) week.dataThrough = new Date(week.start.getTime() + WEEK_MS - 1);
+        });
+    };
+
     const attachWeeklyStats = (weeks, weeklyStats) => {
         if (!weeklyStats || typeof weeklyStats !== 'object' || !weeklyStats.to) return;
         const throughDate = new Date(weeklyStats.to);
@@ -630,7 +680,7 @@
             const label = source === 'local-git-refresh'
                 ? 'Local checked-out repos'
                 : source === 'weekly-automation'
-                    ? 'Automated weekly snapshot'
+                    ? (week.archive && week.archive.editorial ? 'Team editorial + automated snapshot' : 'Automated weekly snapshot')
                     : 'GitHub contribution data';
             return {
                 label: `${label} • through ${formatFullDate(week.weeklyStats.to)}`,
@@ -682,6 +732,84 @@
         `;
     };
 
+    const buildProjectTrends = (week) => {
+        const selectedIndex = state.weeks.indexOf(week);
+        if (selectedIndex < 0) return { weeks: [], series: [] };
+        const weeks = state.weeks.slice(selectedIndex, selectedIndex + 6).reverse();
+        const candidates = new Map();
+        topReposFor(week).slice(0, 2).forEach((repo) => candidates.set(repo.key, repo));
+
+        if (candidates.size < 2) {
+            const totals = new Map();
+            weeks.forEach((recordedWeek) => {
+                recordedWeek.repoActivity.forEach((repo) => {
+                    const current = totals.get(repo.key) || { ...repo, total: 0 };
+                    current.total += Number(repo.commits || 0);
+                    if (!current.url && repo.url) current.url = repo.url;
+                    totals.set(repo.key, current);
+                });
+            });
+            Array.from(totals.values())
+                .sort((first, second) => second.total - first.total || first.name.localeCompare(second.name))
+                .forEach((repo) => {
+                    if (candidates.size < 2 && !candidates.has(repo.key)) candidates.set(repo.key, repo);
+                });
+        }
+
+        const series = Array.from(candidates.values()).map((repo, index) => {
+            const values = weeks.map((recordedWeek) => Number(recordedWeek.repoActivity.get(repo.key)?.commits || 0));
+            if (!values.some((value) => value > 0)) return null;
+            const peak = Math.max(1, ...values);
+            const points = values.map((value, pointIndex) => {
+                const x = values.length === 1 ? 88 : 6 + ((164 * pointIndex) / (values.length - 1));
+                const y = 31 - ((23 * value) / peak);
+                return { x, y, value };
+            });
+            return {
+                ...repo,
+                index,
+                values,
+                current: values[values.length - 1] || 0,
+                points
+            };
+        }).filter(Boolean);
+
+        return { weeks, series };
+    };
+
+    const renderProjectTrends = (week) => {
+        const trend = buildProjectTrends(week);
+        if (!trend.series.length) return '';
+        const firstWeek = trend.weeks[0];
+        const lastWeek = trend.weeks[trend.weeks.length - 1];
+        const range = firstWeek && lastWeek
+            ? `${formatChipDate(firstWeek.start)} → ${formatChipDate(lastWeek.start)}`
+            : 'Recorded weeks';
+        return `
+            <section class="wl-project-trends" data-series-count="${trend.series.length}" aria-labelledby="weekly-project-trends-title">
+                <div class="wl-project-trends__heading">
+                    <h4 id="weekly-project-trends-title">Project momentum</h4>
+                    <span>${escapeHtml(range)}</span>
+                </div>
+                <div class="wl-project-trends__rows">
+                    ${trend.series.map((series) => `
+                        <div class="wl-project-trend wl-project-trend--${series.index}">
+                            <a href="${escapeHtml(safeUrl(series.url))}" aria-label="Open ${escapeHtml(series.name)} activity" target="_blank" rel="noopener noreferrer">
+                                ${icons.link}<strong>${escapeHtml(series.name)}</strong>
+                            </a>
+                            <svg viewBox="0 0 176 38" role="img" aria-label="${escapeHtml(series.name)} commit trend: ${series.values.join(', ')}">
+                                <path class="wl-project-trend__baseline" d="M6 31H170" />
+                                <polyline points="${series.points.map((point) => `${point.x.toFixed(1)},${point.y.toFixed(1)}`).join(' ')}" />
+                                ${series.points.map((point) => `<circle cx="${point.x.toFixed(1)}" cy="${point.y.toFixed(1)}" r="2.4"><title>${point.value} commits</title></circle>`).join('')}
+                            </svg>
+                            <span class="wl-project-trend__value"><strong>${series.current}</strong><small>commits</small></span>
+                        </div>
+                    `).join('')}
+                </div>
+            </section>
+        `;
+    };
+
     const renderWeekBody = (week) => {
         const topRepos = topReposFor(week);
         const rows = buildStoryRows(week, topRepos);
@@ -691,6 +819,9 @@
         const commitValue = week.hasCommitCount ? week.commits.toLocaleString('en-US') : '—';
         const repoCount = activeRepoCount(week);
         const archive = week.archive;
+        const editorialBadge = archive && archive.editorial
+            ? '<span class="wl-editorial-badge">Team edited</span>'
+            : '';
         const detailBlocks = [
             detailSection('Highlights', blockEntries(archive, ['Highlights'])),
             detailSection('Engineering', blockEntries(archive, ['Engineering'])),
@@ -706,11 +837,12 @@
         const releaseRows = latestReleases.length
             ? latestReleases.map((release) => linkRow(release.url, release.name || release.tag, `${release.repo} • ${formatFullDate(release.publishedAt)}`)).join('')
             : linkRow('releases.html', 'Release archive', 'No release was published in this snapshot');
+        const projectTrends = renderProjectTrends(week);
 
         return `
             <article class="wl-report" data-week-key="${escapeHtml(week.key)}">
                 <section class="wl-report__editorial" aria-labelledby="weekly-report-headline">
-                    <div class="wl-eyebrow">${state.index === 0 ? 'This week at Atrak' : 'From the Atrak archive'}</div>
+                    <div class="wl-eyebrow">${state.index === 0 ? 'This week at Atrak' : 'From the Atrak archive'}${editorialBadge}</div>
                     <h3 id="weekly-report-headline">${escapeHtml(headline)}</h3>
                     <div class="wl-story-list">
                         ${rows.map((row) => `
@@ -747,6 +879,7 @@
                     </div>
                     <details class="wl-pulse__drawer" open>
                         <summary>Repositories &amp; releases ${icons.chevron}</summary>
+                        ${projectTrends}
                         <div class="wl-pulse__lists">
                             <section class="wl-pulse-list">
                                 <div class="wl-pulse-list__heading"><h4>Top repos this week</h4><span>${escapeHtml(repoCount || 0)} active</span></div>
@@ -1053,13 +1186,14 @@
     };
 
     const loadAndRender = async () => {
-        const [events, weeklyStats, repos, releasesRaw, meta, history, archiveText] = await Promise.all([
+        const [events, weeklyStats, repos, releasesRaw, meta, history, editorial, archiveText] = await Promise.all([
             fetchJson(DATA_URLS.events, []),
             fetchJson(DATA_URLS.weekly, null),
             fetchJson(DATA_URLS.repos, []),
             fetchJson(DATA_URLS.releases, []),
             fetchJson(DATA_URLS.meta, null),
             fetchJson(DATA_URLS.history, []),
+            fetchJson(DATA_URLS.editorial, { version: 1, weeks: {} }),
             fetchText(DATA_URLS.archive)
         ]);
         state.releases = normalizeReleases(releasesRaw);
@@ -1067,6 +1201,7 @@
         const weeks = buildGitHubWeeks(events, state.releases, repos);
         mergeHistoryWeeks(weeks, parseHistory(history));
         mergeArchiveWeeks(weeks, parseArchive(archiveText));
+        mergeEditorialWeeks(weeks, parseEditorial(editorial));
         attachWeeklyStats(weeks, weeklyStats);
         state.weeks = Array.from(weeks.values())
             .filter((week) => week && week.start)

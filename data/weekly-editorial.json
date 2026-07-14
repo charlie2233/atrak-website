@@ -1,0 +1,31 @@
+{
+  "version": 1,
+  "weeks": {
+    "2026-07-05": {
+      "published": true,
+      "author": "Atrak Team",
+      "updatedAt": "2026-07-13",
+      "title": "48 commits, two build fronts, one very busy week.",
+      "highlights": [
+        "Atrak Website and Hoops Highlights App moved in parallel instead of waiting on one another.",
+        "The website interaction pass landed while launch-readiness work continued across the highlights app."
+      ],
+      "shipped": [
+        "A more reliable interactive Atrak website experience",
+        "Visible launch-readiness progress across Hoops Highlights App"
+      ],
+      "engineering": [
+        "The week combined frontend interaction work, Three.js hardening, Python services, and iOS release preparation.",
+        "Automated GitHub snapshots now preserve the underlying activity after the public event window expires."
+      ],
+      "fixes": [
+        "Hardened desktop 3D startup and fallback behavior",
+        "Tightened launch and TestFlight readiness details"
+      ],
+      "next": [
+        "Keep the website fast while the visual system gets more ambitious.",
+        "Turn launch-readiness progress into a verifiable public milestone."
+      ]
+    }
+  }
+}

@@ -135,10 +135,18 @@ const pageSpecs = [
       await page.waitForFunction(() => {
         const source = document.querySelector('#weekly-source-note');
         const commitMetric = document.querySelector('#weekly-content .wl-metric strong');
+        const headline = document.querySelector('#weekly-report-headline');
+        const editorialBadge = document.querySelector('#weekly-content .wl-editorial-badge');
+        const trends = document.querySelector('#weekly-content .wl-project-trends');
         return (
           window.location.hash === '#week=2026-07-05' &&
-          /automated weekly snapshot/i.test(source?.textContent || '') &&
-          commitMetric?.textContent?.trim() === '48'
+          /team editorial \+ automated snapshot/i.test(source?.textContent || '') &&
+          /48 commits, two build fronts, one very busy week/i.test(headline?.textContent || '') &&
+          editorialBadge?.textContent?.trim() === 'Team edited' &&
+          commitMetric?.textContent?.trim() === '48' &&
+          trends?.dataset.seriesCount === '2' &&
+          trends.querySelectorAll('.wl-project-trend').length === 2 &&
+          trends.querySelectorAll('polyline').length === 2
         );
       }, { timeout: 5000 });
     }
