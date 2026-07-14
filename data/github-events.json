@@ -1,5 +1,332 @@
 [
   {
+    "id": "14941096692",
+    "type": "PushEvent",
+    "actor": {
+      "id": 117957000,
+      "login": "charlie2233",
+      "display_login": "charlie2233",
+      "gravatar_id": "",
+      "url": "https://api.github.com/users/charlie2233",
+      "avatar_url": "https://avatars.githubusercontent.com/u/117957000?"
+    },
+    "repo": {
+      "id": 1140388078,
+      "name": "charlie2233/atrak-website",
+      "url": "https://api.github.com/repos/charlie2233/atrak-website"
+    },
+    "payload": {
+      "repository_id": 1140388078,
+      "push_id": 37231120699,
+      "ref": "refs/heads/main",
+      "head": "65a87bd45b149fb5246c7be3d4f5623ffd6b8669",
+      "before": "4219c139f9e952a8d70e6b0275cb87bd54fdc7ec",
+      "distinct_size": 21,
+      "commits": [
+        {
+          "sha": "65a87bd45b149fb5246c7be3d4f5623ffd6b8669",
+          "message": "refactor: rebuild weekly log briefing",
+          "url": "https://github.com/charlie2233/atrak-website/commit/65a87bd45b149fb5246c7be3d4f5623ffd6b8669"
+        },
+        {
+          "sha": "4219c139f9e952a8d70e6b0275cb87bd54fdc7ec",
+          "message": "chore: update GitHub data [skip ci]",
+          "url": "https://github.com/charlie2233/atrak-website/commit/4219c139f9e952a8d70e6b0275cb87bd54fdc7ec"
+        },
+        {
+          "sha": "7f81282a02537818e712875e6dcdb30501d01809",
+          "message": "chore: update GitHub data [skip ci]",
+          "url": "https://github.com/charlie2233/atrak-website/commit/7f81282a02537818e712875e6dcdb30501d01809"
+        },
+        {
+          "sha": "cd16dcbf828c4d499e1358e190ba78343abf7dd1",
+          "message": "chore: update GitHub data [skip ci]",
+          "url": "https://github.com/charlie2233/atrak-website/commit/cd16dcbf828c4d499e1358e190ba78343abf7dd1"
+        },
+        {
+          "sha": "6e29b424772645cb19d5257830da00133a9db5f0",
+          "message": "chore: update GitHub data [skip ci]",
+          "url": "https://github.com/charlie2233/atrak-website/commit/6e29b424772645cb19d5257830da00133a9db5f0"
+        },
+        {
+          "sha": "c012830cf1e548d2df73c0993661a4f6bbc66d72",
+          "message": "chore: update GitHub data [skip ci]",
+          "url": "https://github.com/charlie2233/atrak-website/commit/c012830cf1e548d2df73c0993661a4f6bbc66d72"
+        },
+        {
+          "sha": "a07de9fc7389e9c23524d6518202c5e988bdc2d5",
+          "message": "chore: update GitHub data [skip ci]",
+          "url": "https://github.com/charlie2233/atrak-website/commit/a07de9fc7389e9c23524d6518202c5e988bdc2d5"
+        },
+        {
+          "sha": "d4f8d055c9e8ac33cadef561beb875bc1422817c",
+          "message": "chore: update GitHub data [skip ci]",
+          "url": "https://github.com/charlie2233/atrak-website/commit/d4f8d055c9e8ac33cadef561beb875bc1422817c"
+        },
+        {
+          "sha": "115bada15cdd7d6f94be5fce7896b1e2491fd857",
+          "message": "refactor: streamline site interactions",
+          "url": "https://github.com/charlie2233/atrak-website/commit/115bada15cdd7d6f94be5fce7896b1e2491fd857"
+        },
+        {
+          "sha": "acefce6ec4cc2d469385990774bb41778c693d2d",
+          "message": "chore: update GitHub data [skip ci]",
+          "url": "https://github.com/charlie2233/atrak-website/commit/acefce6ec4cc2d469385990774bb41778c693d2d"
+        },
+        {
+          "sha": "a5f8e4f459f8f8123395103410884aad692e06c2",
+          "message": "feat: redesign interactive site and harden 3d",
+          "url": "https://github.com/charlie2233/atrak-website/commit/a5f8e4f459f8f8123395103410884aad692e06c2"
+        },
+        {
+          "sha": "4463d9563f4b89febfe5fbdb86d6a4179f87cf8e",
+          "message": "chore: update GitHub data [skip ci]",
+          "url": "https://github.com/charlie2233/atrak-website/commit/4463d9563f4b89febfe5fbdb86d6a4179f87cf8e"
+        },
+        {
+          "sha": "9101f3b1090d40e2e3bf298a58b9124a2b61c7e5",
+          "message": "feat: redirect GuidePup project to immersive site",
+          "url": "https://github.com/charlie2233/atrak-website/commit/9101f3b1090d40e2e3bf298a58b9124a2b61c7e5"
+        },
+        {
+          "sha": "183d12068751a7823e706066f5d3a12ad4d206fd",
+          "message": "chore: update GitHub data [skip ci]",
+          "url": "https://github.com/charlie2233/atrak-website/commit/183d12068751a7823e706066f5d3a12ad4d206fd"
+        },
+        {
+          "sha": "03b920524b1201894b3e98aca90cea629e704109",
+          "message": "chore: update GitHub data [skip ci]",
+          "url": "https://github.com/charlie2233/atrak-website/commit/03b920524b1201894b3e98aca90cea629e704109"
+        },
+        {
+          "sha": "2cb5fff5673aed4b7ba4f23444efb17f0ebe563c",
+          "message": "chore: update GitHub data [skip ci]",
+          "url": "https://github.com/charlie2233/atrak-website/commit/2cb5fff5673aed4b7ba4f23444efb17f0ebe563c"
+        },
+        {
+          "sha": "e4362c1dbab0dfbb203567a3257fd299c1286e85",
+          "message": "chore: update GitHub data [skip ci]",
+          "url": "https://github.com/charlie2233/atrak-website/commit/e4362c1dbab0dfbb203567a3257fd299c1286e85"
+        },
+        {
+          "sha": "6ba82643a0d641d1fbb6e66fe8173341e9a7df32",
+          "message": "chore: update GitHub data [skip ci]",
+          "url": "https://github.com/charlie2233/atrak-website/commit/6ba82643a0d641d1fbb6e66fe8173341e9a7df32"
+        },
+        {
+          "sha": "dac8d83d0f39a3e6fbfe00ea31c2dde3865de9b3",
+          "message": "chore: update GitHub data [skip ci]",
+          "url": "https://github.com/charlie2233/atrak-website/commit/dac8d83d0f39a3e6fbfe00ea31c2dde3865de9b3"
+        },
+        {
+          "sha": "47ed28580c77dd2eef6eb951a727701e1ec65b6f",
+          "message": "chore: update GitHub data [skip ci]",
+          "url": "https://github.com/charlie2233/atrak-website/commit/47ed28580c77dd2eef6eb951a727701e1ec65b6f"
+        }
+      ]
+    },
+    "public": true,
+    "created_at": "2026-07-14T05:58:13Z"
+  },
+  {
+    "id": "14940601200",
+    "type": "DeleteEvent",
+    "actor": {
+      "id": 117957000,
+      "login": "charlie2233",
+      "display_login": "charlie2233",
+      "gravatar_id": "",
+      "url": "https://api.github.com/users/charlie2233",
+      "avatar_url": "https://avatars.githubusercontent.com/u/117957000?"
+    },
+    "repo": {
+      "id": 1166891851,
+      "name": "charlie2233/rork-hoopshighlights-ai_Final",
+      "url": "https://api.github.com/repos/charlie2233/rork-hoopshighlights-ai_Final"
+    },
+    "payload": {
+      "ref": "codex/testflight-ci-lifecycle-20260713",
+      "ref_type": "branch",
+      "full_ref": "refs/heads/codex/testflight-ci-lifecycle-20260713",
+      "pusher_type": "user"
+    },
+    "public": true,
+    "created_at": "2026-07-14T05:45:49Z"
+  },
+  {
+    "id": "11748572188",
+    "type": "PullRequestEvent",
+    "actor": {
+      "id": 117957000,
+      "login": "charlie2233",
+      "display_login": "charlie2233",
+      "gravatar_id": "",
+      "url": "https://api.github.com/users/charlie2233",
+      "avatar_url": "https://avatars.githubusercontent.com/u/117957000?"
+    },
+    "repo": {
+      "id": 1166891851,
+      "name": "charlie2233/rork-hoopshighlights-ai_Final",
+      "url": "https://api.github.com/repos/charlie2233/rork-hoopshighlights-ai_Final"
+    },
+    "payload": {
+      "action": "merged",
+      "number": 59,
+      "pull_request": {
+        "url": "https://api.github.com/repos/charlie2233/rork-hoopshighlights-ai_Final/pulls/59",
+        "id": 4049945647,
+        "number": 59,
+        "head": {
+          "ref": "codex/testflight-ci-lifecycle-20260713",
+          "sha": "57a2abeb00369e68a81c1ca32e1960161a732895",
+          "repo": {
+            "id": 1166891851,
+            "url": "https://api.github.com/repos/charlie2233/rork-hoopshighlights-ai_Final",
+            "name": "rork-hoopshighlights-ai_Final"
+          }
+        },
+        "base": {
+          "ref": "main",
+          "sha": "7a0af43cc21acbe57fa7ba28b4efe9764c3e397e",
+          "repo": {
+            "id": 1166891851,
+            "url": "https://api.github.com/repos/charlie2233/rork-hoopshighlights-ai_Final",
+            "name": "rork-hoopshighlights-ai_Final"
+          }
+        }
+      }
+    },
+    "public": true,
+    "created_at": "2026-07-14T05:45:47Z"
+  },
+  {
+    "id": "14940600029",
+    "type": "PushEvent",
+    "actor": {
+      "id": 117957000,
+      "login": "charlie2233",
+      "display_login": "charlie2233",
+      "gravatar_id": "",
+      "url": "https://api.github.com/users/charlie2233",
+      "avatar_url": "https://avatars.githubusercontent.com/u/117957000?"
+    },
+    "repo": {
+      "id": 1166891851,
+      "name": "charlie2233/rork-hoopshighlights-ai_Final",
+      "url": "https://api.github.com/repos/charlie2233/rork-hoopshighlights-ai_Final"
+    },
+    "payload": {
+      "repository_id": 1166891851,
+      "push_id": 37230623799,
+      "ref": "refs/heads/main",
+      "head": "45c383a91d6b8223a33032593a839e72e041b955",
+      "before": "7a0af43cc21acbe57fa7ba28b4efe9764c3e397e",
+      "distinct_size": 5,
+      "commits": [
+        {
+          "sha": "45c383a91d6b8223a33032593a839e72e041b955",
+          "message": "Merge pull request #59 from charlie2233/codex/testflight-ci-lifecycle-20260713\n\nHarden TestFlight signing lifecycle after build 44 upload",
+          "url": "https://github.com/charlie2233/rork-hoopshighlights-ai_Final/commit/45c383a91d6b8223a33032593a839e72e041b955"
+        },
+        {
+          "sha": "57a2abeb00369e68a81c1ca32e1960161a732895",
+          "message": "Harden TestFlight signing lifecycle\n\nRecord the successful build 44 upload, execute focused iOS tests in codecheck, and prevent ephemeral automatic-signing certificates from accumulating across hosted runners.",
+          "url": "https://github.com/charlie2233/rork-hoopshighlights-ai_Final/commit/57a2abeb00369e68a81c1ca32e1960161a732895"
+        },
+        {
+          "sha": "7a0af43cc21acbe57fa7ba28b4efe9764c3e397e",
+          "message": "Merge pull request #58 from charlie2233/codex/launch-hardening-rescan-20260711\n\nHarden beta launch privacy, auth, and Worker tooling",
+          "url": "https://github.com/charlie2233/rork-hoopshighlights-ai_Final/commit/7a0af43cc21acbe57fa7ba28b4efe9764c3e397e"
+        },
+        {
+          "sha": "74316eb5fd3220386a248a330aa7952632373337",
+          "message": "Harden beta launch auth privacy and Worker tooling",
+          "url": "https://github.com/charlie2233/rork-hoopshighlights-ai_Final/commit/74316eb5fd3220386a248a330aa7952632373337"
+        },
+        {
+          "sha": "725f6720407a2c295eed316e66437deb77442c3a",
+          "message": "Remove proof wording from AI edit preset (#57)",
+          "url": "https://github.com/charlie2233/rork-hoopshighlights-ai_Final/commit/725f6720407a2c295eed316e66437deb77442c3a"
+        }
+      ]
+    },
+    "public": true,
+    "created_at": "2026-07-14T05:45:48Z"
+  },
+  {
+    "id": "11748348730",
+    "type": "PullRequestEvent",
+    "actor": {
+      "id": 117957000,
+      "login": "charlie2233",
+      "display_login": "charlie2233",
+      "gravatar_id": "",
+      "url": "https://api.github.com/users/charlie2233",
+      "avatar_url": "https://avatars.githubusercontent.com/u/117957000?"
+    },
+    "repo": {
+      "id": 1166891851,
+      "name": "charlie2233/rork-hoopshighlights-ai_Final",
+      "url": "https://api.github.com/repos/charlie2233/rork-hoopshighlights-ai_Final"
+    },
+    "payload": {
+      "action": "opened",
+      "number": 59,
+      "pull_request": {
+        "url": "https://api.github.com/repos/charlie2233/rork-hoopshighlights-ai_Final/pulls/59",
+        "id": 4049945647,
+        "number": 59,
+        "head": {
+          "ref": "codex/testflight-ci-lifecycle-20260713",
+          "sha": "57a2abeb00369e68a81c1ca32e1960161a732895",
+          "repo": {
+            "id": 1166891851,
+            "url": "https://api.github.com/repos/charlie2233/rork-hoopshighlights-ai_Final",
+            "name": "rork-hoopshighlights-ai_Final"
+          }
+        },
+        "base": {
+          "ref": "main",
+          "sha": "7a0af43cc21acbe57fa7ba28b4efe9764c3e397e",
+          "repo": {
+            "id": 1166891851,
+            "url": "https://api.github.com/repos/charlie2233/rork-hoopshighlights-ai_Final",
+            "name": "rork-hoopshighlights-ai_Final"
+          }
+        }
+      }
+    },
+    "public": true,
+    "created_at": "2026-07-14T05:38:00Z"
+  },
+  {
+    "id": "14940279341",
+    "type": "CreateEvent",
+    "actor": {
+      "id": 117957000,
+      "login": "charlie2233",
+      "display_login": "charlie2233",
+      "gravatar_id": "",
+      "url": "https://api.github.com/users/charlie2233",
+      "avatar_url": "https://avatars.githubusercontent.com/u/117957000?"
+    },
+    "repo": {
+      "id": 1166891851,
+      "name": "charlie2233/rork-hoopshighlights-ai_Final",
+      "url": "https://api.github.com/repos/charlie2233/rork-hoopshighlights-ai_Final"
+    },
+    "payload": {
+      "ref": "codex/testflight-ci-lifecycle-20260713",
+      "ref_type": "branch",
+      "full_ref": "refs/heads/codex/testflight-ci-lifecycle-20260713",
+      "master_branch": "main",
+      "description": "Created by Rork",
+      "pusher_type": "user"
+    },
+    "public": true,
+    "created_at": "2026-07-14T05:37:45Z"
+  },
+  {
     "id": "14801147588",
     "type": "DeleteEvent",
     "actor": {
@@ -91,25 +418,7 @@
       "push_id": 37091098788,
       "ref": "refs/heads/main",
       "head": "7a0af43cc21acbe57fa7ba28b4efe9764c3e397e",
-      "before": "725f6720407a2c295eed316e66437deb77442c3a",
-      "distinct_size": 3,
-      "commits": [
-        {
-          "sha": "7a0af43cc21acbe57fa7ba28b4efe9764c3e397e",
-          "message": "Merge pull request #58 from charlie2233/codex/launch-hardening-rescan-20260711\n\nHarden beta launch privacy, auth, and Worker tooling",
-          "url": "https://github.com/charlie2233/rork-hoopshighlights-ai_Final/commit/7a0af43cc21acbe57fa7ba28b4efe9764c3e397e"
-        },
-        {
-          "sha": "74316eb5fd3220386a248a330aa7952632373337",
-          "message": "Harden beta launch auth privacy and Worker tooling",
-          "url": "https://github.com/charlie2233/rork-hoopshighlights-ai_Final/commit/74316eb5fd3220386a248a330aa7952632373337"
-        },
-        {
-          "sha": "725f6720407a2c295eed316e66437deb77442c3a",
-          "message": "Remove proof wording from AI edit preset (#57)",
-          "url": "https://github.com/charlie2233/rork-hoopshighlights-ai_Final/commit/725f6720407a2c295eed316e66437deb77442c3a"
-        }
-      ]
+      "before": "725f6720407a2c295eed316e66437deb77442c3a"
     },
     "public": true,
     "created_at": "2026-07-12T05:36:59Z"
@@ -208,110 +517,7 @@
       "push_id": 37037068498,
       "ref": "refs/heads/main",
       "head": "115bada15cdd7d6f94be5fce7896b1e2491fd857",
-      "before": "acefce6ec4cc2d469385990774bb41778c693d2d",
-      "distinct_size": 20,
-      "commits": [
-        {
-          "sha": "7f81282a02537818e712875e6dcdb30501d01809",
-          "message": "chore: update GitHub data [skip ci]",
-          "url": "https://github.com/charlie2233/atrak-website/commit/7f81282a02537818e712875e6dcdb30501d01809"
-        },
-        {
-          "sha": "cd16dcbf828c4d499e1358e190ba78343abf7dd1",
-          "message": "chore: update GitHub data [skip ci]",
-          "url": "https://github.com/charlie2233/atrak-website/commit/cd16dcbf828c4d499e1358e190ba78343abf7dd1"
-        },
-        {
-          "sha": "6e29b424772645cb19d5257830da00133a9db5f0",
-          "message": "chore: update GitHub data [skip ci]",
-          "url": "https://github.com/charlie2233/atrak-website/commit/6e29b424772645cb19d5257830da00133a9db5f0"
-        },
-        {
-          "sha": "c012830cf1e548d2df73c0993661a4f6bbc66d72",
-          "message": "chore: update GitHub data [skip ci]",
-          "url": "https://github.com/charlie2233/atrak-website/commit/c012830cf1e548d2df73c0993661a4f6bbc66d72"
-        },
-        {
-          "sha": "a07de9fc7389e9c23524d6518202c5e988bdc2d5",
-          "message": "chore: update GitHub data [skip ci]",
-          "url": "https://github.com/charlie2233/atrak-website/commit/a07de9fc7389e9c23524d6518202c5e988bdc2d5"
-        },
-        {
-          "sha": "d4f8d055c9e8ac33cadef561beb875bc1422817c",
-          "message": "chore: update GitHub data [skip ci]",
-          "url": "https://github.com/charlie2233/atrak-website/commit/d4f8d055c9e8ac33cadef561beb875bc1422817c"
-        },
-        {
-          "sha": "115bada15cdd7d6f94be5fce7896b1e2491fd857",
-          "message": "refactor: streamline site interactions",
-          "url": "https://github.com/charlie2233/atrak-website/commit/115bada15cdd7d6f94be5fce7896b1e2491fd857"
-        },
-        {
-          "sha": "acefce6ec4cc2d469385990774bb41778c693d2d",
-          "message": "chore: update GitHub data [skip ci]",
-          "url": "https://github.com/charlie2233/atrak-website/commit/acefce6ec4cc2d469385990774bb41778c693d2d"
-        },
-        {
-          "sha": "a5f8e4f459f8f8123395103410884aad692e06c2",
-          "message": "feat: redesign interactive site and harden 3d",
-          "url": "https://github.com/charlie2233/atrak-website/commit/a5f8e4f459f8f8123395103410884aad692e06c2"
-        },
-        {
-          "sha": "4463d9563f4b89febfe5fbdb86d6a4179f87cf8e",
-          "message": "chore: update GitHub data [skip ci]",
-          "url": "https://github.com/charlie2233/atrak-website/commit/4463d9563f4b89febfe5fbdb86d6a4179f87cf8e"
-        },
-        {
-          "sha": "9101f3b1090d40e2e3bf298a58b9124a2b61c7e5",
-          "message": "feat: redirect GuidePup project to immersive site",
-          "url": "https://github.com/charlie2233/atrak-website/commit/9101f3b1090d40e2e3bf298a58b9124a2b61c7e5"
-        },
-        {
-          "sha": "183d12068751a7823e706066f5d3a12ad4d206fd",
-          "message": "chore: update GitHub data [skip ci]",
-          "url": "https://github.com/charlie2233/atrak-website/commit/183d12068751a7823e706066f5d3a12ad4d206fd"
-        },
-        {
-          "sha": "03b920524b1201894b3e98aca90cea629e704109",
-          "message": "chore: update GitHub data [skip ci]",
-          "url": "https://github.com/charlie2233/atrak-website/commit/03b920524b1201894b3e98aca90cea629e704109"
-        },
-        {
-          "sha": "2cb5fff5673aed4b7ba4f23444efb17f0ebe563c",
-          "message": "chore: update GitHub data [skip ci]",
-          "url": "https://github.com/charlie2233/atrak-website/commit/2cb5fff5673aed4b7ba4f23444efb17f0ebe563c"
-        },
-        {
-          "sha": "e4362c1dbab0dfbb203567a3257fd299c1286e85",
-          "message": "chore: update GitHub data [skip ci]",
-          "url": "https://github.com/charlie2233/atrak-website/commit/e4362c1dbab0dfbb203567a3257fd299c1286e85"
-        },
-        {
-          "sha": "6ba82643a0d641d1fbb6e66fe8173341e9a7df32",
-          "message": "chore: update GitHub data [skip ci]",
-          "url": "https://github.com/charlie2233/atrak-website/commit/6ba82643a0d641d1fbb6e66fe8173341e9a7df32"
-        },
-        {
-          "sha": "dac8d83d0f39a3e6fbfe00ea31c2dde3865de9b3",
-          "message": "chore: update GitHub data [skip ci]",
-          "url": "https://github.com/charlie2233/atrak-website/commit/dac8d83d0f39a3e6fbfe00ea31c2dde3865de9b3"
-        },
-        {
-          "sha": "47ed28580c77dd2eef6eb951a727701e1ec65b6f",
-          "message": "chore: update GitHub data [skip ci]",
-          "url": "https://github.com/charlie2233/atrak-website/commit/47ed28580c77dd2eef6eb951a727701e1ec65b6f"
-        },
-        {
-          "sha": "745f77930c3c618b210f44731f9d7dead0813e79",
-          "message": "chore: update GitHub data [skip ci]",
-          "url": "https://github.com/charlie2233/atrak-website/commit/745f77930c3c618b210f44731f9d7dead0813e79"
-        },
-        {
-          "sha": "4c643573164d6e776a527eef0ca49914c4476142",
-          "message": "chore: update GitHub data [skip ci]",
-          "url": "https://github.com/charlie2233/atrak-website/commit/4c643573164d6e776a527eef0ca49914c4476142"
-        }
-      ]
+      "before": "acefce6ec4cc2d469385990774bb41778c693d2d"
     },
     "public": true,
     "created_at": "2026-07-11T06:51:04Z"
