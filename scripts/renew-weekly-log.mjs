@@ -114,7 +114,7 @@ function fetchCommits(fullName, start, endExclusive) {
         return Array.isArray(pages) ? pages.flat().filter((commit) => commit && typeof commit === 'object') : [];
     } catch (error) {
         process.stderr.write(`Could not enrich ${fullName}: ${error.message}\n`);
-        return [];
+        return null;
     }
 }
 
@@ -195,13 +195,21 @@ function buildEntry({ events, releases, repos, start, now, useGithubApi }) {
     });
 
     if (useGithubApi) {
+        const enrichmentFailures = [];
         activity.forEach((repoActivity) => {
             const commits = fetchCommits(repoActivity.fullName, start, endExclusive);
+            if (commits === null) {
+                enrichmentFailures.push(repoActivity.fullName);
+                return;
+            }
             if (!commits.length) return;
             repoActivity.commits.clear();
             commits.forEach((commit) => addCommit(repoActivity, commit, commit?.commit?.committer?.date));
             repoActivity.maxDistinctCommits = commits.length;
         });
+        if (enrichmentFailures.length) {
+            throw new Error(`GitHub commit enrichment failed for: ${enrichmentFailures.join(', ')}`);
+        }
     }
 
     const repositories = Array.from(activity.values()).map((repoActivity) => ({
