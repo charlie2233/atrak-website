@@ -717,6 +717,11 @@
     margin-bottom: 5px;
 }
 
+.wl-project-trends__copy {
+    display: grid;
+    gap: 2px;
+}
+
 .wl-project-trends__heading h4 {
     margin: 0;
     color: rgba(245, 249, 253, 0.9);
@@ -724,10 +729,45 @@
     font-weight: 730;
 }
 
-.wl-project-trends__heading span {
+.wl-project-trends__copy > span {
     color: rgba(174, 193, 214, 0.54);
     font-family: var(--font-mono, monospace);
     font-size: 0.55rem;
+}
+
+.wl-project-trends__controls {
+    display: inline-grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 3px;
+    padding: 3px;
+    border: 1px solid rgba(145, 181, 218, 0.13);
+    border-radius: 9px;
+    background: rgba(2, 8, 16, 0.56);
+}
+
+.wl-project-trends__controls button {
+    min-width: 38px;
+    min-height: 30px;
+    padding: 0 8px;
+    border: 0;
+    border-radius: 6px;
+    color: rgba(174, 193, 214, 0.6);
+    background: transparent;
+    font-family: var(--font-mono, monospace);
+    font-size: 0.56rem;
+    font-weight: 700;
+    cursor: pointer;
+}
+
+.wl-project-trends__controls button[aria-pressed='true'] {
+    color: #06101b;
+    background: var(--wl-cyan);
+    box-shadow: 0 0 12px rgba(36, 215, 244, 0.22);
+}
+
+.wl-project-trends__controls button:focus-visible {
+    outline: 2px solid #f8fbff;
+    outline-offset: 2px;
 }
 
 .wl-project-trends__rows {
@@ -799,10 +839,51 @@
     filter: drop-shadow(0 0 4px color-mix(in srgb, var(--wl-trend-color) 40%, transparent));
 }
 
-.wl-project-trend circle {
+.wl-project-trend__point {
     fill: var(--wl-trend-color);
     stroke: #07101d;
     stroke-width: 1.4;
+}
+
+.wl-project-trend__release path {
+    fill: #fbbf24;
+    stroke: #fff5c3;
+    stroke-width: 1.15;
+    filter: drop-shadow(0 0 5px rgba(251, 191, 36, 0.56));
+    transform-box: fill-box;
+    transform-origin: center;
+    transition: transform 150ms ease, filter 150ms ease;
+}
+
+.wl-project-trend__release-hit {
+    fill: transparent;
+    stroke: transparent;
+    pointer-events: all;
+}
+
+.wl-project-trend__release:hover path,
+.wl-project-trend__release:focus path {
+    filter: drop-shadow(0 0 7px rgba(251, 191, 36, 0.9));
+    transform: scale(1.25);
+}
+
+.wl-project-trends__legend {
+    display: flex;
+    align-items: center;
+    gap: 6px;
+    margin: 6px 0 0;
+    color: rgba(174, 193, 214, 0.5);
+    font-size: 0.53rem;
+}
+
+.wl-project-trends__legend svg {
+    width: 13px;
+    height: 13px;
+    fill: none;
+    stroke: #fbbf24;
+    stroke-linecap: round;
+    stroke-linejoin: round;
+    stroke-width: 1.8;
 }
 
 .wl-project-trend__value {
@@ -979,6 +1060,13 @@
     font-weight: 650;
     text-decoration: none;
     transition: color 160ms ease;
+}
+
+.weekly-footer-actions {
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+    gap: 18px;
 }
 
 .weekly-footer-link:hover,
@@ -1282,6 +1370,13 @@
         padding: 13px 18px;
     }
 
+    .weekly-footer-actions {
+        width: 100%;
+        flex-wrap: wrap;
+        justify-content: flex-start;
+        gap: 10px 18px;
+    }
+
     .weekly-freshness {
         line-height: 1.45;
     }
@@ -1354,9 +1449,31 @@
         padding-inline: 9px;
     }
 
+    .wl-project-trends__controls button {
+        min-width: 42px;
+        min-height: 44px;
+    }
+
     .wl-project-trend {
-        grid-template-columns: minmax(84px, 0.85fr) minmax(78px, 1fr) 38px;
+        grid-template-areas:
+            "name value"
+            "chart chart";
+        grid-template-columns: minmax(0, 1fr) auto;
         gap: 7px;
+        padding: 6px 0 9px;
+    }
+
+    .wl-project-trend > a {
+        grid-area: name;
+    }
+
+    .wl-project-trend > svg {
+        grid-area: chart;
+        height: 44px;
+    }
+
+    .wl-project-trend__value {
+        grid-area: value;
     }
 
     .wl-project-trend > a strong {

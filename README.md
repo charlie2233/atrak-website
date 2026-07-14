@@ -116,7 +116,7 @@ The workflow also writes `data/github-meta.json` (timestamp + repo count) for UI
 
 The **Renew Weekly Log** workflow runs every Sunday at 09:15 UTC. It summarizes the completed Sunday–Saturday period, enriches active repositories with a small number of GitHub commit requests, and upserts a permanent edition in `data/weekly-history.json`. The homepage reads this archive alongside the live GitHub cache, so older editions remain available after GitHub events expire.
 
-Each edition also renders compact per-project momentum charts from the latest six recorded weeks. If renewal fails, the workflow sends the selected week and GitHub Actions run link through the private Formspree inbox; no recipient email address is exposed in the site or workflow output.
+Each edition also renders compact per-project momentum charts with six- and twelve-calendar-week ranges, including zero-activity gaps. Gold diamonds link directly to releases published during a charted week. If renewal fails, the workflow sends the selected week and GitHub Actions run link through the private Formspree inbox; no recipient email address is exposed in the site or workflow output.
 
 Run the same renewal locally or from the Actions tab:
 
@@ -129,7 +129,9 @@ node scripts/renew-weekly-log.mjs --github-api --week-start 2026-07-05
 
 ### Team Editorial Overrides
 
-Automation owns metrics and repository activity. Team members can optionally rewrite the human-facing story in `data/weekly-editorial.json` without touching generated history. Add a Sunday key, set `published` to `true`, and provide only the sections you want to replace:
+Automation owns metrics and repository activity. Team members can optionally rewrite the human-facing story in `data/weekly-editorial.json` without touching generated history. Open `weekly-editor.html` to load an archived week, preview changes, keep a local browser draft, and copy or download the complete validated JSON file. The studio never requests or stores a GitHub token.
+
+You can also edit the file manually. Add a Sunday key, set `published` to `true`, and provide only the sections you want to replace:
 
 ```json
 {
@@ -162,6 +164,9 @@ Atrak/
 ├── script.js              # Interactive functionality
 ├── weekly-log.js          # Weekly archive renderer and sharing
 ├── weekly-log.css         # Weekly briefing layout and responsive styles
+├── weekly-editor.html     # Browser-based team editorial studio
+├── weekly-editor.js       # Editorial drafts, preview, and JSON export
+├── editorial-studio.css   # Responsive editorial studio design
 ├── blog.js                # Blog rendering and filtering
 ├── robots.txt             # Search engine crawler directives
 ├── sitemap.xml            # Site structure for search engines

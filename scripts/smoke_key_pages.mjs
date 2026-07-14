@@ -122,7 +122,7 @@ const pageSpecs = [
           freshness &&
           !/checking data freshness/i.test(freshness.textContent || '')
         );
-      }, { timeout: 15000 });
+      }, null, { timeout: 15000 });
       await page.evaluate(() => window.AtrakWeeklyLog?.goToWeek('2026-04-19'));
       await page.waitForFunction(() => {
         const report = document.querySelector('#weekly-content .wl-report');
@@ -130,7 +130,7 @@ const pageSpecs = [
           window.location.hash === '#week=2026-04-19' &&
           /project hub refresh \+ education exporter drop/i.test(report?.textContent || '')
         );
-      }, { timeout: 5000 });
+      }, null, { timeout: 5000 });
       await page.evaluate(() => window.AtrakWeeklyLog?.goToWeek('2026-07-05'));
       await page.waitForFunction(() => {
         const source = document.querySelector('#weekly-source-note');
@@ -148,7 +148,178 @@ const pageSpecs = [
           trends.querySelectorAll('.wl-project-trend').length === 2 &&
           trends.querySelectorAll('polyline').length === 2
         );
-      }, { timeout: 5000 });
+      }, null, { timeout: 5000 });
+      await page.click('[data-weekly-trend-range="12"]');
+      await page.waitForFunction(() => {
+        const trends = document.querySelector('#weekly-content .wl-project-trends');
+        const selectedRange = trends?.querySelector('[data-weekly-trend-range="12"]');
+        const releaseLinks = trends?.querySelectorAll('a.wl-project-trend__release') || [];
+        const pointCounts = Array.from(trends?.querySelectorAll('polyline') || []).map((line) => (
+          (line.getAttribute('points') || '').trim().split(/\s+/).filter(Boolean).length
+        ));
+        return (
+          trends?.dataset.range === '12' &&
+          trends.dataset.rangeStart === '2026-04-19' &&
+          trends.dataset.rangeEnd === '2026-07-05' &&
+          trends.dataset.pointCount === '12' &&
+          releaseLinks.length >= 1 &&
+          Number(trends.dataset.releaseMarkerCount || 0) === releaseLinks.length &&
+          selectedRange?.getAttribute('aria-pressed') === 'true' &&
+          document.activeElement === selectedRange &&
+          pointCounts.length === 2 && pointCounts.every((count) => count === 12) &&
+          Array.from(releaseLinks).every((link) => /\/releases\/tag\//i.test(link.getAttribute('href') || '')) &&
+          window.localStorage.getItem('atrak-weekly-trend-range') === '12'
+        );
+      }, null, { timeout: 5000 });
+    }
+  },
+  {
+    name: 'index-mobile-weekly',
+    path: '/#week=2026-07-05',
+    viewport: { width: 390, height: 844 },
+    selectors: [
+      '#weekly-content .wl-report',
+      '.wl-pulse__drawer',
+      '[data-weekly-trend-range="6"]',
+      '[data-weekly-trend-range="12"]'
+    ],
+    async waitForReady(page) {
+      await page.waitForFunction(() => document.querySelector('#weekly-highlights')?.getAttribute('aria-busy') === 'false', null, { timeout: 15000 });
+      await page.evaluate(() => {
+        window.AtrakWeeklyLog?.setTrendRange(6);
+        const drawer = document.querySelector('.wl-pulse__drawer');
+        if (drawer) drawer.open = true;
+      });
+      await page.click('[data-weekly-trend-range="12"]');
+      await page.waitForFunction(() => {
+        const trends = document.querySelector('.wl-project-trends');
+        const button = trends?.querySelector('[data-weekly-trend-range="12"]');
+        const release = trends?.querySelector('a.wl-project-trend__release');
+        const height = button?.getBoundingClientRect().height || 0;
+        const releaseBox = release?.getBoundingClientRect();
+        return (
+          trends?.dataset.range === '12' &&
+          trends.dataset.pointCount === '12' &&
+          Number(trends.dataset.releaseMarkerCount || 0) >= 1 &&
+          height >= 44 &&
+          Boolean(releaseBox && releaseBox.width >= 40 && releaseBox.height >= 40)
+        );
+      }, null, { timeout: 5000 });
+    }
+  },
+  {
+    name: 'weekly-editor',
+    path: '/weekly-editor.html',
+    selectors: [
+      '#editorial-form',
+      '#editorial-week',
+      '#editorial-title',
+      '#editorial-preview-title',
+      '#editorial-json-output',
+      '#editorial-copy-json',
+      '#editorial-download-json'
+    ],
+    async waitForReady(page) {
+      await page.waitForFunction(() => {
+        const status = document.querySelector('#editorial-status');
+        const week = document.querySelector('#editorial-week');
+        const options = document.querySelectorAll('#editorial-existing-week option');
+        return Boolean(status && !/loading/i.test(status.textContent || '') && week && !week.disabled && options.length >= 20 && window.AtrakEditorialStudio);
+      }, null, { timeout: 10000 });
+      await page.evaluate(() => {
+        window.localStorage.removeItem('atrak-weekly-editorial-draft:2026-07-05');
+        window.AtrakEditorialStudio?.selectWeek('2026-07-09');
+      });
+      await page.waitForFunction(() => (
+        document.querySelector('#editorial-week')?.value === '2026-07-05' &&
+        /48 commits, two build fronts/i.test(document.querySelector('#editorial-title')?.value || '')
+      ), null, { timeout: 5000 });
+      await page.fill('#editorial-title', 'Smoke-tested team headline');
+      await page.fill('#editorial-highlights', 'First verified highlight\nSecond verified highlight');
+      await page.evaluate(() => window.AtrakEditorialStudio?.selectWeek('2026-04-19'));
+      await page.waitForFunction(() => (
+        /project hub refresh \+ education exporter drop/i.test(document.querySelector('#editorial-title')?.value || '') &&
+        /archive copy loaded/i.test(document.querySelector('#editorial-status')?.textContent || '')
+      ), null, { timeout: 5000 });
+      await page.fill('#editorial-title', 'Smoke-tested archive headline');
+      await page.evaluate(() => window.AtrakEditorialStudio?.selectWeek('2026-07-05'));
+      await page.waitForFunction(() => {
+        const documentValue = window.AtrakEditorialStudio?.getDocument();
+        const entry = documentValue?.weeks?.['2026-07-05'];
+        const archiveEntry = documentValue?.weeks?.['2026-04-19'];
+        return (
+          document.querySelector('#editorial-preview-title')?.textContent === 'Smoke-tested team headline' &&
+          entry?.title === 'Smoke-tested team headline' &&
+          entry?.highlights?.length === 2 &&
+          archiveEntry?.title === 'Smoke-tested archive headline' &&
+          /Smoke-tested team headline/.test(document.querySelector('#editorial-json-output')?.textContent || '')
+        );
+      }, null, { timeout: 5000 });
+      await page.click('#editorial-reset-draft');
+      await page.waitForFunction(() => /48 commits, two build fronts/i.test(document.querySelector('#editorial-title')?.value || ''), null, { timeout: 5000 });
+      await page.evaluate(() => window.AtrakEditorialStudio?.selectWeek('2026-04-19'));
+      await page.click('#editorial-reset-draft');
+      await page.waitForFunction(() => /project hub refresh \+ education exporter drop/i.test(document.querySelector('#editorial-title')?.value || ''), null, { timeout: 5000 });
+      await page.evaluate(() => window.AtrakEditorialStudio?.selectWeek('2026-07-05'));
+      await page.click('#editorial-copy-json');
+      await page.waitForFunction(() => /full json copied|select json below/i.test(document.querySelector('#editorial-status')?.textContent || ''), null, { timeout: 5000 });
+      const downloadPromise = page.waitForEvent('download');
+      await page.click('#editorial-download-json');
+      const download = await downloadPromise;
+      if (download.suggestedFilename() !== 'weekly-editorial.json') throw new Error('Editorial download used an unexpected filename');
+    }
+  },
+  {
+    name: 'weekly-editor-mobile',
+    path: '/weekly-editor.html',
+    viewport: { width: 390, height: 844 },
+    selectors: [
+      '.editorial-studio-layout',
+      '.editorial-panel--form',
+      '.editorial-panel--preview',
+      '.editorial-actions'
+    ],
+    async waitForReady(page) {
+      await page.waitForFunction(() => !document.querySelector('#editorial-week')?.disabled, null, { timeout: 10000 });
+      await page.waitForFunction(() => {
+        const layout = document.querySelector('.editorial-studio-layout');
+        const actions = document.querySelector('.editorial-actions');
+        if (!layout || !actions) return false;
+        const columns = getComputedStyle(layout).gridTemplateColumns.split(' ').filter(Boolean).length;
+        const firstButton = actions.querySelector('button');
+        return columns === 1 && (firstButton?.getBoundingClientRect().height || 0) >= 44;
+      }, null, { timeout: 5000 });
+    }
+  },
+  {
+    name: 'weekly-editor-fail-closed',
+    path: '/weekly-editor.html',
+    selectors: [
+      '#editorial-form',
+      '#editorial-status',
+      '#editorial-copy-json',
+      '#editorial-download-json'
+    ],
+    async beforeNavigate(page) {
+      await page.route('**/data/weekly-editorial.json*', (route) => route.fulfill({
+        status: 200,
+        contentType: 'application/json',
+        body: JSON.stringify({ error: 'smoke-test invalid source' })
+      }));
+    },
+    async waitForReady(page) {
+      await page.waitForFunction(() => {
+        const status = document.querySelector('#editorial-status');
+        const week = document.querySelector('#editorial-week');
+        const copy = document.querySelector('#editorial-copy-json');
+        const download = document.querySelector('#editorial-download-json');
+        return (
+          /editorial source unavailable.*export disabled/i.test(status?.textContent || '') &&
+          week && !week.disabled &&
+          copy?.disabled === true &&
+          download?.disabled === true
+        );
+      }, null, { timeout: 10000 });
     }
   },
   {
@@ -183,7 +354,7 @@ const pageSpecs = [
         const freshnessReady = Boolean(freshness && !/checking release freshness/i.test(freshness.textContent || ''));
         const metaReady = Boolean(meta && !/loading/i.test(meta.textContent || ''));
         return listReady && freshnessReady && metaReady;
-      }, { timeout: 15000 });
+      }, null, { timeout: 15000 });
     }
   },
   {
@@ -203,7 +374,7 @@ const pageSpecs = [
         );
         const freshnessReady = Boolean(freshness && !/checking blog freshness/i.test(freshness.textContent || ''));
         return hasPosts && freshnessReady;
-      }, { timeout: 15000 });
+      }, null, { timeout: 15000 });
     }
   },
   {
@@ -223,7 +394,7 @@ const pageSpecs = [
 ];
 
 async function runPageCheck(browser, baseUrl, spec) {
-  const page = await browser.newPage({ viewport: { width: 1366, height: 900 } });
+  const page = await browser.newPage({ viewport: spec.viewport || { width: 1366, height: 900 } });
   const consoleErrors = [];
   const pageErrors = [];
   const requestFailures = [];
@@ -258,6 +429,7 @@ async function runPageCheck(browser, baseUrl, spec) {
   let navigationError = null;
 
   try {
+    if (spec.beforeNavigate) await spec.beforeNavigate(page);
     const response = await page.goto(`${baseUrl}${spec.path}`, { waitUntil: 'domcontentloaded', timeout: 15000 });
     httpStatus = response ? response.status() : null;
     await page.waitForLoadState('networkidle', { timeout: 3000 }).catch(() => {});
@@ -276,10 +448,18 @@ async function runPageCheck(browser, baseUrl, spec) {
     }
   }
 
-  const snapshot = await page.evaluate(() => ({
-    title: document.title,
-    url: window.location.href
-  })).catch(() => ({ title: '', url: '' }));
+  const snapshot = await page.evaluate(() => {
+    const root = document.documentElement;
+    const body = document.body;
+    const viewportWidth = root.clientWidth;
+    const documentWidth = Math.max(root.scrollWidth, body?.scrollWidth || 0);
+    return {
+      title: document.title,
+      url: window.location.href,
+      viewportWidth,
+      documentWidth
+    };
+  }).catch(() => ({ title: '', url: '', viewportWidth: 0, documentWidth: 0 }));
 
   await page.close();
 
@@ -291,6 +471,9 @@ async function runPageCheck(browser, baseUrl, spec) {
   if (consoleErrors.length) issues.push(`console errors: ${consoleErrors.length}`);
   if (requestFailures.length) issues.push(`request failures: ${requestFailures.length}`);
   if (badResponses.length) issues.push(`bad responses: ${badResponses.length}`);
+  if (snapshot.viewportWidth && snapshot.documentWidth > snapshot.viewportWidth + 1) {
+    issues.push(`horizontal overflow: ${snapshot.documentWidth}px document in ${snapshot.viewportWidth}px viewport`);
+  }
 
   return {
     name: spec.name,

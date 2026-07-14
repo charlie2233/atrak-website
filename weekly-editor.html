@@ -1,0 +1,178 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="robots" content="noindex, nofollow">
+    <meta name="description" content="Atrak Weekly Log editorial authoring studio">
+    <title>Weekly Editorial Studio — Atrak</title>
+    <link rel="icon" type="image/png" href="assets/logo.png?v=20260202">
+    <link rel="apple-touch-icon" href="assets/logo.png?v=20260202">
+    <link rel="stylesheet" href="styles.css?v=38">
+    <link rel="stylesheet" href="editorial-studio.css?v=2">
+</head>
+<body class="editorial-studio-page">
+    <div class="cursor-dot"></div>
+    <div class="cursor-outline"></div>
+    <div class="noise"></div>
+
+    <nav class="navbar">
+        <div class="nav-container">
+            <a class="logo" href="index.html">
+                <span class="logo-icon"><img src="assets/logo.png?v=20260202" alt="Atrak Logo"></span>
+                <span class="logo-text">Atrak</span>
+            </a>
+            <ul class="nav-links">
+                <li><a href="index.html#projects">Projects</a></li>
+                <li><a href="releases.html">Releases</a></li>
+                <li><a href="index.html#weekly-highlights">Weekly Log</a></li>
+                <li><a href="handbook.html">Handbook</a></li>
+                <li><a href="index.html#contact" class="nav-cta" data-open-contact-tab="suggestion">Suggestion Box</a></li>
+            </ul>
+            <button class="mobile-menu-btn" type="button" aria-label="Toggle menu">
+                <span></span><span></span><span></span>
+            </button>
+        </div>
+    </nav>
+
+    <main>
+        <header class="editorial-studio-hero">
+            <div class="container">
+                <a class="editorial-studio-back" href="index.html#weekly-highlights" aria-label="Open the Atrak Weekly Log">
+                    <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M10.5 13.5 13.5 10.5M8 16H6a4 4 0 0 1 0-8h3M16 8h2a4 4 0 1 1 0 8h-3"/></svg>
+                    Weekly Log
+                </a>
+                <h1>Weekly Editorial Studio</h1>
+                <p>Shape the human story around the automated GitHub snapshot, then export a valid editorial file without exposing credentials.</p>
+                <ol class="editorial-workflow" aria-label="Editorial workflow">
+                    <li><span>1</span>Choose a week</li>
+                    <li><span>2</span>Write the story</li>
+                    <li><span>3</span>Export JSON</li>
+                </ol>
+            </div>
+        </header>
+
+        <section class="editorial-studio" aria-labelledby="editorial-form-title">
+            <div class="container editorial-studio-layout">
+                <section class="editorial-panel editorial-panel--form">
+                    <div class="editorial-panel-header">
+                        <div>
+                            <p>Team workspace</p>
+                            <h2 id="editorial-form-title">Edit an edition</h2>
+                        </div>
+                        <span class="editorial-status" id="editorial-status" data-state="loading" role="status" aria-live="polite">Loading archive…</span>
+                    </div>
+
+                    <form id="editorial-form" novalidate>
+                        <div class="editorial-form-grid editorial-form-grid--setup">
+                            <label class="editorial-field">
+                                <span>Load an archived week</span>
+                                <select id="editorial-existing-week" disabled>
+                                    <option value="">Loading weeks…</option>
+                                </select>
+                            </label>
+                            <label class="editorial-field">
+                                <span>Week starts on Sunday</span>
+                                <input id="editorial-week" name="weekStart" type="date" required disabled>
+                            </label>
+                            <label class="editorial-field">
+                                <span>Byline</span>
+                                <input id="editorial-author" name="author" type="text" maxlength="60" value="Atrak Team" disabled>
+                            </label>
+                            <label class="editorial-publish-toggle">
+                                <input id="editorial-published" name="published" type="checkbox" checked disabled>
+                                <span aria-hidden="true"></span>
+                                Publish this override
+                            </label>
+                        </div>
+
+                        <label class="editorial-field editorial-field--headline">
+                            <span>Headline</span>
+                            <input id="editorial-title" name="title" type="text" maxlength="120" placeholder="What made this week matter?" disabled>
+                            <small><span id="editorial-title-count">0</span>/120</small>
+                        </label>
+
+                        <div class="editorial-form-grid editorial-form-grid--story">
+                            <label class="editorial-field">
+                                <span>Highlights <small>one per line</small></span>
+                                <textarea id="editorial-highlights" name="highlights" rows="5" placeholder="The biggest visible win&#10;The most important team moment" disabled></textarea>
+                            </label>
+                            <label class="editorial-field">
+                                <span>What shipped <small>one per line</small></span>
+                                <textarea id="editorial-shipped" name="shipped" rows="5" placeholder="A feature users can now access&#10;A release or deployment milestone" disabled></textarea>
+                            </label>
+                            <label class="editorial-field">
+                                <span>Engineering notes <small>one per line</small></span>
+                                <textarea id="editorial-engineering" name="engineering" rows="5" placeholder="Architecture, tooling, or technical progress" disabled></textarea>
+                            </label>
+                            <label class="editorial-field">
+                                <span>Fixes &amp; challenges <small>one per line</small></span>
+                                <textarea id="editorial-fixes" name="fixes" rows="5" placeholder="A bug fixed or blocker handled" disabled></textarea>
+                            </label>
+                            <label class="editorial-field editorial-field--wide">
+                                <span>What’s next <small>one per line</small></span>
+                                <textarea id="editorial-next" name="next" rows="4" placeholder="The next milestone the team is moving toward" disabled></textarea>
+                            </label>
+                        </div>
+
+                        <div class="editorial-actions">
+                            <button class="btn btn-primary" id="editorial-copy-json" type="button" disabled>
+                                <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M9 9h10v10H9zM5 15H4V5h10v1"/></svg>
+                                Copy full JSON
+                            </button>
+                            <button class="btn btn-secondary" id="editorial-download-json" type="button" disabled>
+                                <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 3v12m0 0 4-4m-4 4-4-4M5 20h14"/></svg>
+                                Download file
+                            </button>
+                            <button class="editorial-reset" id="editorial-reset-draft" type="button" disabled>Reset local draft</button>
+                        </div>
+                    </form>
+                </section>
+
+                <aside class="editorial-panel editorial-panel--preview" aria-labelledby="editorial-preview-heading">
+                    <div class="editorial-preview-heading">
+                        <div>
+                            <p>Live preview</p>
+                            <h2 id="editorial-preview-heading">This week at Atrak</h2>
+                        </div>
+                        <span id="editorial-preview-state">Draft</span>
+                    </div>
+                    <article class="editorial-preview-card">
+                        <div class="editorial-preview-orbit" aria-hidden="true"></div>
+                        <p class="editorial-preview-date" id="editorial-preview-date">Choose a week</p>
+                        <h3 id="editorial-preview-title">Your headline will appear here.</h3>
+                        <div class="editorial-preview-sections" id="editorial-preview-sections"></div>
+                    </article>
+
+                    <div class="editorial-preview-links">
+                        <a id="editorial-live-link" href="index.html#weekly-highlights" aria-label="Preview this week in the Atrak Weekly Log">
+                            <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M10.5 13.5 13.5 10.5M8 16H6a4 4 0 0 1 0-8h3M16 8h2a4 4 0 1 1 0 8h-3"/></svg>
+                            Preview live week
+                        </a>
+                        <a href="https://github.com/charlie2233/atrak-website/edit/main/data/weekly-editorial.json" target="_blank" rel="noopener noreferrer" aria-label="Open weekly editorial JSON in the GitHub editor">
+                            <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M10.5 13.5 13.5 10.5M8 16H6a4 4 0 0 1 0-8h3M16 8h2a4 4 0 1 1 0 8h-3"/></svg>
+                            Open GitHub editor
+                        </a>
+                    </div>
+
+                    <details class="editorial-json-panel">
+                        <summary>Inspect generated JSON <span aria-hidden="true">⌄</span></summary>
+                        <pre id="editorial-json-output" tabindex="0" aria-label="Generated editorial JSON">{}</pre>
+                    </details>
+                    <p class="editorial-safety-note">Drafts stay in this browser until you copy, download, or commit the file. No token is requested or stored.</p>
+                </aside>
+            </div>
+        </section>
+    </main>
+
+    <footer class="footer editorial-studio-footer">
+        <div class="container footer-bottom">
+            <p>&copy; 2026 Atrak. Editorial tools for the team that ships.</p>
+        </div>
+    </footer>
+
+    <script src="config.js?v=21"></script>
+    <script src="script.js?v=46"></script>
+    <script src="weekly-editor.js?v=3"></script>
+</body>
+</html>

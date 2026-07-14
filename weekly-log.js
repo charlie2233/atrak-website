@@ -29,7 +29,14 @@
         loaded: false,
         loading: null,
         refs: null,
-        resizeTimer: null
+        resizeTimer: null,
+        trendRange: (() => {
+            try {
+                return Number(window.localStorage.getItem('atrak-weekly-trend-range')) === 12 ? 12 : 6;
+            } catch (_) {
+                return 6;
+            }
+        })()
     };
 
     const displayNames = {
@@ -735,7 +742,12 @@
     const buildProjectTrends = (week) => {
         const selectedIndex = state.weeks.indexOf(week);
         if (selectedIndex < 0) return { weeks: [], series: [] };
-        const weeks = state.weeks.slice(selectedIndex, selectedIndex + 6).reverse();
+        const recordedWeeks = new Map(state.weeks.map((recordedWeek) => [recordedWeek.key, recordedWeek]));
+        const weeks = Array.from({ length: state.trendRange }, (_, index) => {
+            const offset = state.trendRange - index - 1;
+            const date = new Date(week.start.getTime() - (offset * WEEK_MS));
+            return recordedWeeks.get(weekKey(date)) || createWeek(date);
+        });
         const candidates = new Map();
         topReposFor(week).slice(0, 2).forEach((repo) => candidates.set(repo.key, repo));
 
@@ -763,7 +775,11 @@
             const points = values.map((value, pointIndex) => {
                 const x = values.length === 1 ? 88 : 6 + ((164 * pointIndex) / (values.length - 1));
                 const y = 31 - ((23 * value) / peak);
-                return { x, y, value };
+                const releases = weeks[pointIndex].releases.filter((release) => {
+                    const releaseKey = String(release.fullName || '').split('/').pop().toLowerCase();
+                    return releaseKey === String(repo.key || '').toLowerCase();
+                });
+                return { x, y, value, releases };
             });
             return {
                 ...repo,
@@ -777,6 +793,26 @@
         return { weeks, series };
     };
 
+    const renderReleaseMarkers = (series) => series.points.map((point) => point.releases.slice(0, 2).map((release, index) => {
+        const offset = point.releases.length > 1 ? (index === 0 ? -4.8 : 4.8) : 0;
+        const x = Math.max(5, Math.min(171, point.x + offset));
+        const y = point.y;
+        const size = 4.2;
+        const path = [
+            `M${x.toFixed(1)} ${(y - size).toFixed(1)}`,
+            `L${(x + size).toFixed(1)} ${y.toFixed(1)}`,
+            `L${x.toFixed(1)} ${(y + size).toFixed(1)}`,
+            `L${(x - size).toFixed(1)} ${y.toFixed(1)}Z`
+        ].join(' ');
+        const label = `${release.name || release.tag || 'Release'} — ${formatFullDate(release.publishedAt)}`;
+        return `
+            <a class="wl-project-trend__release" href="${escapeHtml(safeUrl(release.url))}" target="_blank" rel="noopener noreferrer" aria-label="Open release: ${escapeHtml(label)}">
+                <circle class="wl-project-trend__release-hit" cx="${x.toFixed(1)}" cy="${y.toFixed(1)}" r="19" />
+                <path d="${path}"><title>${escapeHtml(label)}</title></path>
+            </a>
+        `;
+    }).join('')).join('');
+
     const renderProjectTrends = (week) => {
         const trend = buildProjectTrends(week);
         if (!trend.series.length) return '';
@@ -785,11 +821,18 @@
         const range = firstWeek && lastWeek
             ? `${formatChipDate(firstWeek.start)} → ${formatChipDate(lastWeek.start)}`
             : 'Recorded weeks';
+        const markerCount = trend.series.reduce((total, series) => total + series.points.reduce((pointTotal, point) => pointTotal + Math.min(2, point.releases.length), 0), 0);
         return `
-            <section class="wl-project-trends" data-series-count="${trend.series.length}" aria-labelledby="weekly-project-trends-title">
+            <section class="wl-project-trends" data-series-count="${trend.series.length}" data-range="${state.trendRange}" data-range-start="${escapeHtml(firstWeek?.key || '')}" data-range-end="${escapeHtml(lastWeek?.key || '')}" data-point-count="${trend.weeks.length}" data-release-marker-count="${markerCount}" aria-labelledby="weekly-project-trends-title">
                 <div class="wl-project-trends__heading">
-                    <h4 id="weekly-project-trends-title">Project momentum</h4>
-                    <span>${escapeHtml(range)}</span>
+                    <div class="wl-project-trends__copy">
+                        <h4 id="weekly-project-trends-title">Project momentum</h4>
+                        <span>${escapeHtml(range)}</span>
+                    </div>
+                    <div class="wl-project-trends__controls" role="group" aria-label="Project momentum range">
+                        <button type="button" data-weekly-trend-range="6" aria-pressed="${state.trendRange === 6}">6W</button>
+                        <button type="button" data-weekly-trend-range="12" aria-pressed="${state.trendRange === 12}">12W</button>
+                    </div>
                 </div>
                 <div class="wl-project-trends__rows">
                     ${trend.series.map((series) => `
@@ -800,14 +843,36 @@
                             <svg viewBox="0 0 176 38" role="img" aria-label="${escapeHtml(series.name)} commit trend: ${series.values.join(', ')}">
                                 <path class="wl-project-trend__baseline" d="M6 31H170" />
                                 <polyline points="${series.points.map((point) => `${point.x.toFixed(1)},${point.y.toFixed(1)}`).join(' ')}" />
-                                ${series.points.map((point) => `<circle cx="${point.x.toFixed(1)}" cy="${point.y.toFixed(1)}" r="2.4"><title>${point.value} commits</title></circle>`).join('')}
+                                ${series.points.map((point) => `<circle class="wl-project-trend__point" cx="${point.x.toFixed(1)}" cy="${point.y.toFixed(1)}" r="2.4"><title>${point.value} commits</title></circle>`).join('')}
+                                ${renderReleaseMarkers(series)}
                             </svg>
                             <span class="wl-project-trend__value"><strong>${series.current}</strong><small>commits</small></span>
                         </div>
                     `).join('')}
                 </div>
+                ${markerCount ? `<p class="wl-project-trends__legend">${icons.releases}<span>Diamond markers open release notes</span></p>` : ''}
             </section>
         `;
+    };
+
+    const setTrendRange = (value, { restoreFocus = false } = {}) => {
+        const range = Number(value) === 12 ? 12 : 6;
+        if (range === state.trendRange) return;
+        state.trendRange = range;
+        try {
+            window.localStorage.setItem('atrak-weekly-trend-range', String(range));
+        } catch (_) {
+        }
+        const current = refs().content?.querySelector('.wl-project-trends');
+        const week = state.weeks[state.index];
+        if (!current || !week) return;
+        const template = document.createElement('template');
+        template.innerHTML = renderProjectTrends(week).trim();
+        const replacement = template.content.firstElementChild;
+        if (replacement) {
+            current.replaceWith(replacement);
+            if (restoreFocus) replacement.querySelector(`[data-weekly-trend-range="${range}"]`)?.focus({ preventScroll: true });
+        }
     };
 
     const renderWeekBody = (week) => {
@@ -1107,6 +1172,11 @@
         elements.previous.addEventListener('click', () => goToIndex(state.index + 1, 'older'));
         elements.next.addEventListener('click', () => goToIndex(state.index - 1, 'newer'));
         elements.share.addEventListener('click', shareSelectedWeek);
+        elements.content.addEventListener('click', (event) => {
+            const button = event.target.closest('[data-weekly-trend-range]');
+            if (!button) return;
+            setTrendRange(button.dataset.weeklyTrendRange, { restoreFocus: true });
+        });
         elements.strip.addEventListener('click', (event) => {
             const button = event.target.closest('[data-week-index]');
             if (!button) return;
@@ -1231,10 +1301,14 @@
         return state.loading;
     };
 
-    window.AtrakWeeklyLog = { render, goToWeek: (key) => {
-        const index = state.weeks.findIndex((week) => week.key === key);
-        if (index >= 0) goToIndex(index, index > state.index ? 'older' : 'newer');
-    } };
+    window.AtrakWeeklyLog = {
+        render,
+        goToWeek: (key) => {
+            const index = state.weeks.findIndex((week) => week.key === key);
+            if (index >= 0) goToIndex(index, index > state.index ? 'older' : 'newer');
+        },
+        setTrendRange
+    };
 
     if (document.readyState === 'loading') {
         document.addEventListener('DOMContentLoaded', () => render(), { once: true });
