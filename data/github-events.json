@@ -1,6 +1,6 @@
 [
   {
-    "id": "14941925840",
+    "id": "14943345467",
     "type": "PushEvent",
     "actor": {
       "id": 117957000,
@@ -17,12 +17,27 @@
     },
     "payload": {
       "repository_id": 1140388078,
-      "push_id": 37231950296,
+      "push_id": 37233371037,
       "ref": "refs/heads/main",
-      "head": "c999aecfe2b6da2fb0597c761e0661fc05be0a77",
-      "before": "43ed0262861b9e08da3b49ef21d13e53f4aea85b",
-      "distinct_size": 26,
+      "head": "e00a7b5419eb0bb598d27f8e5beef683e9ed9b00",
+      "before": "d97f17bf8d6024ef5f8ba3e7aa1073443972dd4a",
+      "distinct_size": 29,
       "commits": [
+        {
+          "sha": "e00a7b5419eb0bb598d27f8e5beef683e9ed9b00",
+          "message": "fix: authenticate GitHub data refresh fallback",
+          "url": "https://github.com/charlie2233/atrak-website/commit/e00a7b5419eb0bb598d27f8e5beef683e9ed9b00"
+        },
+        {
+          "sha": "d97f17bf8d6024ef5f8ba3e7aa1073443972dd4a",
+          "message": "feat: add weekly log insights and alerts",
+          "url": "https://github.com/charlie2233/atrak-website/commit/d97f17bf8d6024ef5f8ba3e7aa1073443972dd4a"
+        },
+        {
+          "sha": "ae4e969ef6016cb91ce2032c1308006c0f4f5de8",
+          "message": "chore: update GitHub data [skip ci]",
+          "url": "https://github.com/charlie2233/atrak-website/commit/ae4e969ef6016cb91ce2032c1308006c0f4f5de8"
+        },
         {
           "sha": "c999aecfe2b6da2fb0597c761e0661fc05be0a77",
           "message": "fix: fail closed on weekly data auth",
@@ -107,23 +122,195 @@
           "sha": "4463d9563f4b89febfe5fbdb86d6a4179f87cf8e",
           "message": "chore: update GitHub data [skip ci]",
           "url": "https://github.com/charlie2233/atrak-website/commit/4463d9563f4b89febfe5fbdb86d6a4179f87cf8e"
-        },
-        {
-          "sha": "9101f3b1090d40e2e3bf298a58b9124a2b61c7e5",
-          "message": "feat: redirect GuidePup project to immersive site",
-          "url": "https://github.com/charlie2233/atrak-website/commit/9101f3b1090d40e2e3bf298a58b9124a2b61c7e5"
-        },
-        {
-          "sha": "183d12068751a7823e706066f5d3a12ad4d206fd",
-          "message": "chore: update GitHub data [skip ci]",
-          "url": "https://github.com/charlie2233/atrak-website/commit/183d12068751a7823e706066f5d3a12ad4d206fd"
-        },
-        {
-          "sha": "03b920524b1201894b3e98aca90cea629e704109",
-          "message": "chore: update GitHub data [skip ci]",
-          "url": "https://github.com/charlie2233/atrak-website/commit/03b920524b1201894b3e98aca90cea629e704109"
         }
       ]
+    },
+    "public": true,
+    "created_at": "2026-07-14T06:48:29Z"
+  },
+  {
+    "id": "14943179185",
+    "type": "PushEvent",
+    "actor": {
+      "id": 117957000,
+      "login": "charlie2233",
+      "display_login": "charlie2233",
+      "gravatar_id": "",
+      "url": "https://api.github.com/users/charlie2233",
+      "avatar_url": "https://avatars.githubusercontent.com/u/117957000?"
+    },
+    "repo": {
+      "id": 1140388078,
+      "name": "charlie2233/atrak-website",
+      "url": "https://api.github.com/repos/charlie2233/atrak-website"
+    },
+    "payload": {
+      "repository_id": 1140388078,
+      "push_id": 37233204442,
+      "ref": "refs/heads/main",
+      "head": "d97f17bf8d6024ef5f8ba3e7aa1073443972dd4a",
+      "before": "ae4e969ef6016cb91ce2032c1308006c0f4f5de8"
+    },
+    "public": true,
+    "created_at": "2026-07-14T06:44:52Z"
+  },
+  {
+    "id": "14942167934",
+    "type": "DeleteEvent",
+    "actor": {
+      "id": 117957000,
+      "login": "charlie2233",
+      "display_login": "charlie2233",
+      "gravatar_id": "",
+      "url": "https://api.github.com/users/charlie2233",
+      "avatar_url": "https://avatars.githubusercontent.com/u/117957000?"
+    },
+    "repo": {
+      "id": 1166891851,
+      "name": "charlie2233/rork-hoopshighlights-ai_Final",
+      "url": "https://api.github.com/repos/charlie2233/rork-hoopshighlights-ai_Final"
+    },
+    "payload": {
+      "ref": "codex/analysis-job-ownership-20260713",
+      "ref_type": "branch",
+      "full_ref": "refs/heads/codex/analysis-job-ownership-20260713",
+      "pusher_type": "user"
+    },
+    "public": true,
+    "created_at": "2026-07-14T06:22:00Z"
+  },
+  {
+    "id": "11749757422",
+    "type": "PullRequestEvent",
+    "actor": {
+      "id": 117957000,
+      "login": "charlie2233",
+      "display_login": "charlie2233",
+      "gravatar_id": "",
+      "url": "https://api.github.com/users/charlie2233",
+      "avatar_url": "https://avatars.githubusercontent.com/u/117957000?"
+    },
+    "repo": {
+      "id": 1166891851,
+      "name": "charlie2233/rork-hoopshighlights-ai_Final",
+      "url": "https://api.github.com/repos/charlie2233/rork-hoopshighlights-ai_Final"
+    },
+    "payload": {
+      "action": "merged",
+      "number": 60,
+      "pull_request": {
+        "url": "https://api.github.com/repos/charlie2233/rork-hoopshighlights-ai_Final/pulls/60",
+        "id": 4050128251,
+        "number": 60,
+        "head": {
+          "ref": "codex/analysis-job-ownership-20260713",
+          "sha": "8d53a12ad723a2bdce20f5316b4ad638e4b70457",
+          "repo": {
+            "id": 1166891851,
+            "url": "https://api.github.com/repos/charlie2233/rork-hoopshighlights-ai_Final",
+            "name": "rork-hoopshighlights-ai_Final"
+          }
+        },
+        "base": {
+          "ref": "main",
+          "sha": "45c383a91d6b8223a33032593a839e72e041b955",
+          "repo": {
+            "id": 1166891851,
+            "url": "https://api.github.com/repos/charlie2233/rork-hoopshighlights-ai_Final",
+            "name": "rork-hoopshighlights-ai_Final"
+          }
+        }
+      }
+    },
+    "public": true,
+    "created_at": "2026-07-14T06:21:53Z"
+  },
+  {
+    "id": "14942164113",
+    "type": "PushEvent",
+    "actor": {
+      "id": 117957000,
+      "login": "charlie2233",
+      "display_login": "charlie2233",
+      "gravatar_id": "",
+      "url": "https://api.github.com/users/charlie2233",
+      "avatar_url": "https://avatars.githubusercontent.com/u/117957000?"
+    },
+    "repo": {
+      "id": 1166891851,
+      "name": "charlie2233/rork-hoopshighlights-ai_Final",
+      "url": "https://api.github.com/repos/charlie2233/rork-hoopshighlights-ai_Final"
+    },
+    "payload": {
+      "repository_id": 1166891851,
+      "push_id": 37232188957,
+      "ref": "refs/heads/main",
+      "head": "51df354cf945069ef55a13f5f0ec50a3065fc53c",
+      "before": "45c383a91d6b8223a33032593a839e72e041b955",
+      "distinct_size": 7,
+      "commits": [
+        {
+          "sha": "51df354cf945069ef55a13f5f0ec50a3065fc53c",
+          "message": "Merge pull request #60 from charlie2233/codex/analysis-job-ownership-20260713\n\nBind analysis jobs to install ownership",
+          "url": "https://github.com/charlie2233/rork-hoopshighlights-ai_Final/commit/51df354cf945069ef55a13f5f0ec50a3065fc53c"
+        },
+        {
+          "sha": "8d53a12ad723a2bdce20f5316b4ad638e4b70457",
+          "message": "Bind analysis jobs to install ownership",
+          "url": "https://github.com/charlie2233/rork-hoopshighlights-ai_Final/commit/8d53a12ad723a2bdce20f5316b4ad638e4b70457"
+        },
+        {
+          "sha": "45c383a91d6b8223a33032593a839e72e041b955",
+          "message": "Merge pull request #59 from charlie2233/codex/testflight-ci-lifecycle-20260713\n\nHarden TestFlight signing lifecycle after build 44 upload",
+          "url": "https://github.com/charlie2233/rork-hoopshighlights-ai_Final/commit/45c383a91d6b8223a33032593a839e72e041b955"
+        },
+        {
+          "sha": "57a2abeb00369e68a81c1ca32e1960161a732895",
+          "message": "Harden TestFlight signing lifecycle\n\nRecord the successful build 44 upload, execute focused iOS tests in codecheck, and prevent ephemeral automatic-signing certificates from accumulating across hosted runners.",
+          "url": "https://github.com/charlie2233/rork-hoopshighlights-ai_Final/commit/57a2abeb00369e68a81c1ca32e1960161a732895"
+        },
+        {
+          "sha": "7a0af43cc21acbe57fa7ba28b4efe9764c3e397e",
+          "message": "Merge pull request #58 from charlie2233/codex/launch-hardening-rescan-20260711\n\nHarden beta launch privacy, auth, and Worker tooling",
+          "url": "https://github.com/charlie2233/rork-hoopshighlights-ai_Final/commit/7a0af43cc21acbe57fa7ba28b4efe9764c3e397e"
+        },
+        {
+          "sha": "74316eb5fd3220386a248a330aa7952632373337",
+          "message": "Harden beta launch auth privacy and Worker tooling",
+          "url": "https://github.com/charlie2233/rork-hoopshighlights-ai_Final/commit/74316eb5fd3220386a248a330aa7952632373337"
+        },
+        {
+          "sha": "725f6720407a2c295eed316e66437deb77442c3a",
+          "message": "Remove proof wording from AI edit preset (#57)",
+          "url": "https://github.com/charlie2233/rork-hoopshighlights-ai_Final/commit/725f6720407a2c295eed316e66437deb77442c3a"
+        }
+      ]
+    },
+    "public": true,
+    "created_at": "2026-07-14T06:21:54Z"
+  },
+  {
+    "id": "14941925840",
+    "type": "PushEvent",
+    "actor": {
+      "id": 117957000,
+      "login": "charlie2233",
+      "display_login": "charlie2233",
+      "gravatar_id": "",
+      "url": "https://api.github.com/users/charlie2233",
+      "avatar_url": "https://avatars.githubusercontent.com/u/117957000?"
+    },
+    "repo": {
+      "id": 1140388078,
+      "name": "charlie2233/atrak-website",
+      "url": "https://api.github.com/repos/charlie2233/atrak-website"
+    },
+    "payload": {
+      "repository_id": 1140388078,
+      "push_id": 37231950296,
+      "ref": "refs/heads/main",
+      "head": "c999aecfe2b6da2fb0597c761e0661fc05be0a77",
+      "before": "43ed0262861b9e08da3b49ef21d13e53f4aea85b"
     },
     "public": true,
     "created_at": "2026-07-14T06:16:28Z"
@@ -345,35 +532,7 @@
       "push_id": 37230623799,
       "ref": "refs/heads/main",
       "head": "45c383a91d6b8223a33032593a839e72e041b955",
-      "before": "7a0af43cc21acbe57fa7ba28b4efe9764c3e397e",
-      "distinct_size": 5,
-      "commits": [
-        {
-          "sha": "45c383a91d6b8223a33032593a839e72e041b955",
-          "message": "Merge pull request #59 from charlie2233/codex/testflight-ci-lifecycle-20260713\n\nHarden TestFlight signing lifecycle after build 44 upload",
-          "url": "https://github.com/charlie2233/rork-hoopshighlights-ai_Final/commit/45c383a91d6b8223a33032593a839e72e041b955"
-        },
-        {
-          "sha": "57a2abeb00369e68a81c1ca32e1960161a732895",
-          "message": "Harden TestFlight signing lifecycle\n\nRecord the successful build 44 upload, execute focused iOS tests in codecheck, and prevent ephemeral automatic-signing certificates from accumulating across hosted runners.",
-          "url": "https://github.com/charlie2233/rork-hoopshighlights-ai_Final/commit/57a2abeb00369e68a81c1ca32e1960161a732895"
-        },
-        {
-          "sha": "7a0af43cc21acbe57fa7ba28b4efe9764c3e397e",
-          "message": "Merge pull request #58 from charlie2233/codex/launch-hardening-rescan-20260711\n\nHarden beta launch privacy, auth, and Worker tooling",
-          "url": "https://github.com/charlie2233/rork-hoopshighlights-ai_Final/commit/7a0af43cc21acbe57fa7ba28b4efe9764c3e397e"
-        },
-        {
-          "sha": "74316eb5fd3220386a248a330aa7952632373337",
-          "message": "Harden beta launch auth privacy and Worker tooling",
-          "url": "https://github.com/charlie2233/rork-hoopshighlights-ai_Final/commit/74316eb5fd3220386a248a330aa7952632373337"
-        },
-        {
-          "sha": "725f6720407a2c295eed316e66437deb77442c3a",
-          "message": "Remove proof wording from AI edit preset (#57)",
-          "url": "https://github.com/charlie2233/rork-hoopshighlights-ai_Final/commit/725f6720407a2c295eed316e66437deb77442c3a"
-        }
-      ]
+      "before": "7a0af43cc21acbe57fa7ba28b4efe9764c3e397e"
     },
     "public": true,
     "created_at": "2026-07-14T05:45:48Z"
