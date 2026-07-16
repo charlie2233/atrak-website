@@ -20,7 +20,7 @@ A modern, minimal tech team website + project hub (atrak.dev) featuring a clean 
 - 👥 **Leadership Team**: Team member profiles with social links and personal pages
 - 📘 **Team Handbook**: Public handbook covering roles, values, cadence, and quality bar
 - 🎯 **Purpose Page**: Mission, values, and what we build
-- 🏀 **AccessCourt Impact**: Pilot-stage adaptive basketball and accessible coaching microsite at `/accesscourt/`, with reciprocal Atrak navigation and a standalone-domain handoff
+- 🏀 **AccessCourt Impact**: Atrak's inclusive sports technology initiative at `/accesscourt/`, connecting supervised adaptive basketball with maturity-labeled adaptations of relevant Atrak projects
 - 📝 **Blog System**: Technical blog posts with views, comments, and content moderation
 - 🗓️ **Release Notes**: Monthly updates on what shipped, what broke, and what's next
 - 🧾 **Press Kit**: Logos, screenshots, one-pager, and sponsor contact funnel
