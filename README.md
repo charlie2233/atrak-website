@@ -20,6 +20,7 @@ A modern, minimal tech team website + project hub (atrak.dev) featuring a clean 
 - 👥 **Leadership Team**: Team member profiles with social links and personal pages
 - 📘 **Team Handbook**: Public handbook covering roles, values, cadence, and quality bar
 - 🎯 **Purpose Page**: Mission, values, and what we build
+- 🏀 **AccessCourt Impact**: Pilot-stage adaptive basketball and accessible coaching microsite at `/accesscourt/`
 - 📝 **Blog System**: Technical blog posts with views, comments, and content moderation
 - 🗓️ **Release Notes**: Monthly updates on what shipped, what broke, and what's next
 - 🧾 **Press Kit**: Logos, screenshots, one-pager, and sponsor contact funnel
@@ -154,6 +155,11 @@ Missing sections continue using the automated edition. Set `published` to `false
 Atrak/
 ├── config.js              # Runtime config (form endpoints)
 ├── index.html             # Main HTML structure
+├── accesscourt/           # Atrak Impact pilot microsite + Visual Drill Coach
+│   ├── index.html         # Program, safety, partnership, and status overview
+│   ├── coach.html         # No-login multilingual coaching MVP
+│   ├── privacy.html       # Pilot-stage privacy and data principles
+│   └── success.html       # Formspree confirmation return page
 ├── handbook.html          # Team handbook (how we work)
 ├── join.html              # Join/Contact page
 ├── releases.html          # Monthly release notes
