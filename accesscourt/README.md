@@ -1,6 +1,6 @@
-# AccessCourt pilot website
+# AccessCourt inclusive sports technology website
 
-This is a dependency-free static website and Visual Drill Coach MVP.
+This is a dependency-free website for Atrak's inclusive sports technology initiative and its working Visual Drill Coach MVP. Adaptive basketball is the community focus; relevant Atrak projects are connected through explicit `Live`, `Adapt next`, and `Research` labels.
 
 Public route after review and deployment: `https://atrak.dev/accesscourt/`.
 
@@ -20,7 +20,7 @@ The site intentionally states that AccessCourt is in pilot development, is not y
 
 ## Form
 
-The partnership form posts to the owner-provided Formspree endpoint. It is limited to adult partnership inquiries and warns users not to submit sensitive participant information.
+The partnership form posts to the same `https://formspree.io/f/mvzqdnov` endpoint used by Atrak's public forms. Its subject and source fields identify AccessCourt inquiries. It is limited to adult partnership inquiries and warns users not to submit sensitive participant information.
 The current form uses Formspree's default confirmation flow. `success.html` is included as an optional branded confirmation page, but it must not be described as the active redirect unless that redirect is configured and verified in the Formspree dashboard. Do not submit the form during automated or visual QA.
 
 ## Reciprocal navigation and future domain

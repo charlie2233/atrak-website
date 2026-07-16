@@ -11,8 +11,7 @@ import { chromium } from 'playwright';
 const __filename = fileURLToPath(import.meta.url);
 const __dirname = path.dirname(__filename);
 const repoRoot = path.resolve(__dirname, '..');
-const expectedFormEndpoint = 'https://formspree.io/f/mbdzrwbo';
-const expectedRootFormEndpoint = 'https://formspree.io/f/mvzqdnov';
+const expectedSharedFormEndpoint = 'https://formspree.io/f/mvzqdnov';
 const macChromeExecutable = '/Applications/Google Chrome.app/Contents/MacOS/Google Chrome';
 
 const MIME_TYPES = {
@@ -112,15 +111,22 @@ async function runHomeCheck(browser, baseUrl, viewport, label) {
   page.on('pageerror', error => errors.push(error.message));
   await page.goto(`${baseUrl}/accesscourt/`, { waitUntil: 'networkidle' });
 
-  assert(await page.title() === 'AccessCourt | Adaptive basketball and accessible coaching', `${label} title mismatch`);
+  assert(await page.title() === 'AccessCourt | Inclusive sports technology by Atrak', `${label} title mismatch`);
   assert(await page.locator('link[rel="canonical"]').getAttribute('href') === 'https://atrak.dev/accesscourt/', `${label} canonical mismatch`);
   assert(await page.locator('.status-rail').textContent().then(text => /not yet an independent 501\(c\)\(3\)/i.test(text)), `${label} status disclosure missing`);
-  assert(await page.locator('.contact-form').getAttribute('action') === expectedFormEndpoint, `${label} Formspree endpoint mismatch`);
-  assert(await page.locator('input[name="subject"]').getAttribute('value') === 'AccessCourt partnership inquiry', `${label} Formspree subject field mismatch`);
+  assert(await page.locator('.contact-form').getAttribute('action') === expectedSharedFormEndpoint, `${label} shared Atrak Formspree endpoint mismatch`);
+  assert(await page.locator('input[name="_subject"]').getAttribute('value') === 'AccessCourt partnership inquiry', `${label} Formspree _subject field mismatch`);
+  assert(await page.locator('input[name="source"]').getAttribute('value') === 'AccessCourt website', `${label} Formspree source field mismatch`);
+  assert(await page.locator('select[name="interest"] option').count() === 7, `${label} project-interest options mismatch`);
   assert(await page.locator('input[name="_next"]').count() === 0, `${label} should not rely on an unverified Formspree _next field`);
   assert(await page.locator('input[name="adult_confirmation"]').getAttribute('required') !== null, `${label} adult confirmation is not required`);
   assert(await page.locator('.site-nav a[href="https://atrak.dev/"]').count() === 1, `${label} Atrak return link missing from primary navigation`);
   assert(await page.locator('.site-footer a[href="https://atrak.dev/"]').count() === 1, `${label} Atrak return link missing from footer`);
+  assert(await page.locator('.project-bridge').count() === 7, `${label} Atrak project ecosystem should show seven connections`);
+  assert(await page.locator('.project-bridge[data-stage="live"]').count() === 2, `${label} live project-connection count mismatch`);
+  assert(await page.locator('.project-bridge[data-stage="adapt"]').count() === 3, `${label} adapt-next project-connection count mismatch`);
+  assert(await page.locator('.project-bridge[data-stage="research"]').count() === 2, `${label} research project-connection count mismatch`);
+  assert(await page.locator('.project-bridge a[href^="https://atrak.dev/projects/"]').count() === 4, `${label} absolute Atrak project links mismatch`);
   assert(await page.locator('.hero-media img').evaluate(image => image.complete && image.naturalWidth > 0), `${label} hero asset did not load`);
 
   if (viewport.width <= 980) {
@@ -172,6 +178,8 @@ async function runSupportingPageChecks(browser, baseUrl) {
   assert(await page.locator('link[rel="canonical"]').getAttribute('href') === 'https://atrak.dev/accesscourt/privacy.html', 'Privacy canonical mismatch');
   assert(await page.locator('header a[href="https://atrak.dev/"]').count() === 1, 'Privacy page Atrak return link missing');
   assert(await page.locator('main').textContent().then(text => /will not be transferred into Atrak commercial systems/i.test(text)), 'Atrak data-separation statement missing');
+  assert(await page.locator('main').textContent().then(text => /same endpoint and Atrak-managed inbox used by Atrak’s public forms/i.test(text)), 'Shared Atrak Formspree disclosure missing');
+  assert(await page.locator('main').textContent().then(text => /Identifiable participant or program data must remain with the host organization/i.test(text)), 'Participant-data host-retention boundary missing');
   await auditPage(page, 'privacy');
 
   await page.goto(`${baseUrl}/accesscourt/success.html`, { waitUntil: 'networkidle' });
@@ -183,13 +191,15 @@ async function runSupportingPageChecks(browser, baseUrl) {
   await page.goto(`${baseUrl}/`, { waitUntil: 'domcontentloaded' });
   assert(await page.locator('a[href="accesscourt/"]').count() >= 2, 'Atrak homepage is missing AccessCourt links');
   assert(await page.locator('.nav-links .nav-impact-link[href="/accesscourt/"]').count() === 1, 'Atrak primary navigation AccessCourt link missing');
-  assert(await page.locator('.project-title').filter({ hasText: 'AccessCourt' }).count() === 1, 'Atrak homepage AccessCourt project card missing');
+  assert(await page.locator('.project-title').filter({ hasText: 'AccessCourt — Atrak’s Inclusive Sports Initiative' }).count() === 1, 'Atrak homepage AccessCourt ecosystem card missing');
   const rootFormActions = await page.locator('form[action*="formspree.io"]').evaluateAll(forms => forms.map(form => form.getAttribute('action')));
-  assert(rootFormActions.length >= 2 && rootFormActions.every(action => action === expectedRootFormEndpoint), 'Atrak root Formspree endpoint changed unexpectedly');
+  assert(rootFormActions.length >= 2 && rootFormActions.every(action => action === expectedSharedFormEndpoint), 'Atrak and AccessCourt no longer share the public Formspree endpoint');
+  assert(await page.locator('#suggestion-form').getAttribute('data-endpoint-key') === 'suggestion', 'Atrak suggestion form endpoint key mismatch');
 
   await page.goto(`${baseUrl}/purpose.html`, { waitUntil: 'domcontentloaded' });
   assert(await page.locator('h2').filter({ hasText: 'Atrak Impact: AccessCourt' }).count() === 1, 'Purpose page AccessCourt relationship section missing');
   assert(await page.locator('.purpose-content').textContent().then(text => /not yet an independent 501\(c\)\(3\)/i.test(text)), 'Purpose page status disclosure missing');
+  assert(await page.locator('.purpose-content').textContent().then(text => /GuidePup accessibility patterns/i.test(text) && /AI Hoops Board/i.test(text)), 'Purpose page Atrak project bridge copy missing');
   await page.close();
 }
 
