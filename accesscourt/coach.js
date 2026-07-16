@@ -44,73 +44,134 @@ const drills = [
 ];
 
 const ui = {
-  en: { step: 'Step', of: 'of', previous: 'Previous', hear: 'Hear instruction', next: 'Next', seated: 'Seated version', seatedCue: 'Seated option', simpleControl: 'Simple instructions', simpleActive: 'Simple instructions active', detailedActive: 'Detailed instructions active', contrast: 'High contrast' },
-  zh: { step: '步骤', of: '/', previous: '上一步', hear: '听取指令', next: '下一步', seated: '坐姿版本', seatedCue: '坐姿选择', simpleControl: '简明指令', simpleActive: '已启用简明指令', detailedActive: '已启用详细指令', contrast: '高对比度' },
-  es: { step: 'Paso', of: 'de', previous: 'Anterior', hear: 'Escuchar instrucción', next: 'Siguiente', seated: 'Versión sentada', seatedCue: 'Opción sentada', simpleControl: 'Instrucciones simples', simpleActive: 'Instrucciones simples activas', detailedActive: 'Instrucciones detalladas activas', contrast: 'Alto contraste' }
+  en: { step: 'Step', of: 'of', previous: 'Previous', hear: 'Hear instruction', next: 'Next', seated: 'Seated version', seatedCue: 'Seated option', simpleControl: 'Simple instructions', simpleActive: 'Simple instructions active', detailedActive: 'Detailed instructions active', contrast: 'High contrast', settings: 'Settings', closeSettings: 'Close settings', speechUnavailable: 'Spoken instructions are not supported in this browser.', speaking: 'Speaking instruction.', speechFinished: 'Instruction finished.', speechError: 'The instruction could not be spoken.' },
+  zh: { step: '步骤', of: '/', previous: '上一步', hear: '听取指令', next: '下一步', seated: '坐姿版本', seatedCue: '坐姿选择', simpleControl: '简明指令', simpleActive: '已启用简明指令', detailedActive: '已启用详细指令', contrast: '高对比度', settings: '设置', closeSettings: '关闭设置', speechUnavailable: '此浏览器不支持语音指令。', speaking: '正在播放指令。', speechFinished: '指令播放完毕。', speechError: '无法播放指令。' },
+  es: { step: 'Paso', of: 'de', previous: 'Anterior', hear: 'Escuchar instrucción', next: 'Siguiente', seated: 'Versión sentada', seatedCue: 'Opción sentada', simpleControl: 'Instrucciones simples', simpleActive: 'Instrucciones simples activas', detailedActive: 'Instrucciones detalladas activas', contrast: 'Alto contraste', settings: 'Ajustes', closeSettings: 'Cerrar ajustes', speechUnavailable: 'Este navegador no admite instrucciones habladas.', speaking: 'Reproduciendo la instrucción.', speechFinished: 'La instrucción terminó.', speechError: 'No se pudo reproducir la instrucción.' }
 };
 
 let index = 0;
 let simple = true;
 let language = 'en';
+let activeUtterance = null;
+const speechSupported = 'speechSynthesis' in window && 'SpeechSynthesisUtterance' in window;
 
 const elements = {
   count: document.querySelector('#step-count'),
   title: document.querySelector('#step-title'),
   instruction: document.querySelector('#step-instruction'),
   previous: document.querySelector('#previous'),
+  previousLabel: document.querySelector('#previous [data-action-label]'),
   next: document.querySelector('#next'),
+  nextLabel: document.querySelector('#next [data-action-label]'),
   speak: document.querySelector('#speak'),
+  speakLabel: document.querySelector('#speak [data-action-label]'),
+  speechStatus: document.querySelector('#speech-status'),
   language: document.querySelector('#language'),
   complexity: document.querySelector('#complexity'),
   complexityStatus: document.querySelector('#complexity-status'),
   contrast: document.querySelector('#contrast'),
   seated: document.querySelector('#seated'),
   seatedLabel: document.querySelector('.seated-toggle > span:first-child'),
-  sequence: document.querySelector('#sequence-list')
+  sequence: document.querySelector('#sequence-list'),
+  settingsToggle: document.querySelector('[data-settings-toggle]'),
+  settingsPanel: document.querySelector('[data-settings-panel]')
 };
 
 function buildSequence() {
   elements.sequence.replaceChildren(...drills.map((drill, drillIndex) => {
     const item = document.createElement('li');
     const button = document.createElement('button');
+    const number = document.createElement('span');
+    const label = document.createElement('span');
     button.type = 'button';
     button.dataset.index = drillIndex;
-    button.innerHTML = `<span>${drillIndex + 1}</span>${drill.labels[language]}`;
-    button.addEventListener('click', () => { index = drillIndex; render(); });
+    number.className = 'sequence-number';
+    number.textContent = String(drillIndex + 1);
+    label.className = 'sequence-label';
+    label.textContent = drill.labels[language];
+    button.append(number, label);
+    button.addEventListener('click', () => {
+      cancelSpeech();
+      index = drillIndex;
+      render({ scrollSequence: true });
+    });
     item.append(button);
     return item;
   }));
 }
 
-function render() {
+function scrollActiveSequenceIntoView() {
+  const activeButton = elements.sequence.querySelector('button[aria-current="step"]');
+  if (!activeButton || elements.sequence.scrollWidth <= elements.sequence.clientWidth) return;
+  const padding = 8;
+  const buttonLeft = activeButton.offsetLeft;
+  const buttonRight = buttonLeft + activeButton.offsetWidth;
+  const visibleLeft = elements.sequence.scrollLeft;
+  const visibleRight = visibleLeft + elements.sequence.clientWidth;
+  let nextLeft = visibleLeft;
+  if (buttonLeft < visibleLeft + padding) nextLeft = buttonLeft - padding;
+  if (buttonRight > visibleRight - padding) nextLeft = buttonRight - elements.sequence.clientWidth + padding;
+  const maxLeft = elements.sequence.scrollWidth - elements.sequence.clientWidth;
+  elements.sequence.scrollTo({ left: Math.max(0, Math.min(nextLeft, maxLeft)), behavior: 'auto' });
+}
+
+function setSpeechStatus(message, busy = false) {
+  elements.speechStatus.textContent = message;
+  elements.speak.setAttribute('aria-busy', String(busy));
+}
+
+function cancelSpeech({ clearStatus = true } = {}) {
+  activeUtterance = null;
+  if (speechSupported) window.speechSynthesis.cancel();
+  elements.speak.setAttribute('aria-busy', 'false');
+  if (clearStatus) elements.speechStatus.textContent = '';
+}
+
+function setSettingsOpen(open, { restoreFocus = false } = {}) {
+  elements.settingsPanel.classList.toggle('is-open', open);
+  elements.settingsToggle.setAttribute('aria-expanded', String(open));
+  elements.settingsToggle.textContent = open ? ui[language].closeSettings : ui[language].settings;
+  if (restoreFocus) elements.settingsToggle.focus();
+}
+
+function render({ scrollSequence = false } = {}) {
   const drill = drills[index];
   const words = ui[language];
   elements.count.textContent = language === 'zh' ? `${words.step} ${index + 1} ${words.of} ${drills.length}` : `${words.step} ${index + 1} ${words.of} ${drills.length}`;
   elements.title.textContent = drill.title[language];
   const baseInstruction = drill[simple ? 'simple' : 'detailed'][language];
   elements.instruction.textContent = elements.seated.checked ? `${baseInstruction} ${words.seatedCue}: ${drill.seated[language]}` : baseInstruction;
-  elements.previous.lastChild.textContent = ` ${words.previous}`;
-  elements.next.firstChild.textContent = `${words.next} `;
-  elements.speak.lastChild.textContent = ` ${words.hear}`;
+  elements.previousLabel.textContent = words.previous;
+  elements.nextLabel.textContent = words.next;
+  elements.speakLabel.textContent = words.hear;
   elements.seatedLabel.textContent = words.seated;
   elements.complexity.textContent = words.simpleControl;
   elements.complexity.setAttribute('aria-pressed', String(simple));
   elements.complexityStatus.textContent = simple ? words.simpleActive : words.detailedActive;
   elements.contrast.textContent = words.contrast;
+  elements.settingsToggle.textContent = elements.settingsPanel.classList.contains('is-open') ? words.closeSettings : words.settings;
   document.documentElement.lang = language;
   elements.previous.disabled = index === 0;
   elements.next.disabled = index === drills.length - 1;
-  buildSequence();
   [...elements.sequence.querySelectorAll('button')].forEach((button, buttonIndex) => {
-    if (buttonIndex === index) button.setAttribute('aria-current', 'step');
+    const current = buttonIndex === index;
+    if (current) button.setAttribute('aria-current', 'step');
+    else button.removeAttribute('aria-current');
     button.dataset.complete = String(buttonIndex < index);
+    button.querySelector('.sequence-label').textContent = drills[buttonIndex].labels[language];
   });
+  if (!speechSupported) {
+    elements.speak.disabled = true;
+    setSpeechStatus(words.speechUnavailable);
+  }
+  if (scrollSequence) scrollActiveSequenceIntoView();
 }
 
-elements.previous.addEventListener('click', () => { if (index > 0) { index -= 1; render(); } });
-elements.next.addEventListener('click', () => { if (index < drills.length - 1) { index += 1; render(); } });
-elements.language.addEventListener('change', event => { language = event.target.value; render(); });
+elements.previous.addEventListener('click', () => { if (index > 0) { cancelSpeech(); index -= 1; render({ scrollSequence: true }); } });
+elements.next.addEventListener('click', () => { if (index < drills.length - 1) { cancelSpeech(); index += 1; render({ scrollSequence: true }); } });
+elements.language.addEventListener('change', event => { cancelSpeech(); language = event.target.value; render(); });
 elements.complexity.addEventListener('click', () => {
+  cancelSpeech();
   simple = !simple;
   elements.complexity.setAttribute('aria-pressed', String(simple));
   render();
@@ -120,13 +181,42 @@ elements.contrast.addEventListener('click', () => {
   elements.contrast.setAttribute('aria-pressed', String(active));
 });
 elements.speak.addEventListener('click', () => {
-  if (!('speechSynthesis' in window)) return;
-  speechSynthesis.cancel();
+  if (!speechSupported) {
+    setSpeechStatus(ui[language].speechUnavailable);
+    return;
+  }
+  cancelSpeech({ clearStatus: false });
   const text = `${elements.title.textContent}. ${elements.instruction.textContent}`;
   const utterance = new SpeechSynthesisUtterance(text);
   utterance.lang = language === 'zh' ? 'zh-CN' : language === 'es' ? 'es-US' : 'en-US';
-  speechSynthesis.speak(utterance);
+  activeUtterance = utterance;
+  setSpeechStatus(ui[language].speaking, true);
+  utterance.onend = () => {
+    if (activeUtterance !== utterance) return;
+    activeUtterance = null;
+    setSpeechStatus(ui[language].speechFinished);
+  };
+  utterance.onerror = () => {
+    if (activeUtterance !== utterance) return;
+    activeUtterance = null;
+    setSpeechStatus(ui[language].speechError);
+  };
+  window.speechSynthesis.speak(utterance);
 });
-elements.seated.addEventListener('change', render);
+elements.seated.addEventListener('change', () => { cancelSpeech(); render(); });
+elements.settingsToggle.addEventListener('click', () => {
+  setSettingsOpen(!elements.settingsPanel.classList.contains('is-open'));
+});
+document.addEventListener('keydown', event => {
+  if (event.key === 'Escape' && elements.settingsPanel.classList.contains('is-open')) {
+    event.preventDefault();
+    setSettingsOpen(false, { restoreFocus: true });
+  }
+});
+window.addEventListener('resize', () => {
+  if (window.innerWidth > 900) setSettingsOpen(false);
+});
+window.addEventListener('pagehide', () => cancelSpeech());
 
+buildSequence();
 render();

@@ -2,7 +2,7 @@
 <html lang="en">
 <head>
   <meta charset="utf-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
   <meta name="description" content="Visual Drill Coach is a no-login accessible basketball instruction tool built by Atrak for the AccessCourt pilot.">
   <meta name="robots" content="index,follow">
   <meta name="theme-color" content="#f05a28">
@@ -29,7 +29,8 @@
       <span>Access<span>Court</span></span>
     </a>
     <strong>Visual Drill Coach</strong>
-    <div class="coach-settings" aria-label="Coach settings">
+    <button class="coach-settings-toggle" type="button" aria-expanded="false" aria-controls="coach-settings" data-settings-toggle>Settings</button>
+    <div class="coach-settings" id="coach-settings" aria-label="Coach settings" data-settings-panel>
       <label><span class="sr-only">Language</span><select id="language"><option value="en">English</option><option value="zh">中文</option><option value="es">Español</option></select></label>
       <button type="button" id="complexity" aria-pressed="true" aria-describedby="complexity-status">Simple instructions</button>
       <span id="complexity-status" class="sr-only" aria-live="polite">Simple instructions active</span>
@@ -46,25 +47,25 @@
         <h1 id="step-title">Get ready</h1>
         <p class="step-instruction" id="step-instruction">Face forward. Keep your body balanced.</p>
       </div>
+      <div class="coach-actions" aria-label="Step controls">
+        <button type="button" class="secondary" id="previous">
+          <svg viewBox="0 0 24 24" aria-hidden="true"><path d="m15 18-6-6 6-6"/></svg>
+          <span data-action-label>Previous</span>
+        </button>
+        <button type="button" class="speak" id="speak" aria-describedby="speech-status">
+          <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M11 5 6.5 9H3v6h3.5L11 19V5Zm4 4a5 5 0 0 1 0 6m2.5-8.5a8 8 0 0 1 0 11"/></svg>
+          <span data-action-label>Hear instruction</span>
+        </button>
+        <button type="button" class="primary" id="next">
+          <span data-action-label>Next</span>
+          <svg viewBox="0 0 24 24" aria-hidden="true"><path d="m9 18 6-6-6-6"/></svg>
+        </button>
+      </div>
+      <span id="speech-status" class="sr-only" aria-live="polite"></span>
       <figure class="instruction-visual">
-        <img src="assets/dribble-illustration.png" width="971" height="1619" alt="Line illustration of an athlete bouncing a basketball." id="step-image">
+        <img src="assets/dribble-illustration.png" srcset="assets/dribble-illustration-480.png 480w, assets/dribble-illustration.png 971w" sizes="(max-width: 700px) 220px, 430px" width="971" height="1619" alt="Line illustration of an athlete bouncing a basketball." id="step-image" decoding="async" fetchpriority="high">
       </figure>
     </section>
-
-    <div class="coach-actions" aria-label="Step controls">
-      <button type="button" class="secondary" id="previous">
-        <svg viewBox="0 0 24 24" aria-hidden="true"><path d="m15 18-6-6 6-6"/></svg>
-        Previous
-      </button>
-      <button type="button" class="speak" id="speak">
-        <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M11 5 6.5 9H3v6h3.5L11 19V5Zm4 4a5 5 0 0 1 0 6m2.5-8.5a8 8 0 0 1 0 11"/></svg>
-        Hear instruction
-      </button>
-      <button type="button" class="primary" id="next">
-        Next
-        <svg viewBox="0 0 24 24" aria-hidden="true"><path d="m9 18 6-6-6-6"/></svg>
-      </button>
-    </div>
 
     <label class="seated-toggle">
       <span>Seated version</span>

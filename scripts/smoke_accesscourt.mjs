@@ -96,12 +96,30 @@ async function assertAtrakNavigationCoverage() {
   assert(missing.length === 0, `Atrak AccessCourt nav link missing or duplicated in: ${missing.join(', ')}`);
 }
 
+async function assertResponsiveCoachImage() {
+  const imagePath = path.join(repoRoot, 'accesscourt', 'assets', 'dribble-illustration-480.png');
+  const image = await readFile(imagePath);
+  assert(image.length >= 24 && image.toString('ascii', 1, 4) === 'PNG', 'Coach responsive image is not a PNG');
+  assert(image.readUInt32BE(16) === 480, `Coach responsive image must be 480px wide, found ${image.readUInt32BE(16)}px`);
+}
+
 async function auditPage(page, label) {
   const layout = await page.evaluate(() => ({
     viewportWidth: document.documentElement.clientWidth,
     documentWidth: Math.max(document.documentElement.scrollWidth, document.body.scrollWidth)
   }));
   assert(layout.documentWidth <= layout.viewportWidth + 1, `${label} has horizontal overflow (${layout.documentWidth}px in ${layout.viewportWidth}px)`);
+}
+
+async function assertMinimumTargets(page, selector, label, minimum = 44) {
+  const targets = await page.locator(selector).evaluateAll(nodes => nodes.map(node => {
+    const rect = node.getBoundingClientRect();
+    const style = getComputedStyle(node);
+    return { width: rect.width, height: rect.height, visible: style.display !== 'none' && style.visibility !== 'hidden' && rect.width > 0 && rect.height > 0 };
+  }).filter(target => target.visible));
+  const failing = targets.filter(target => target.width < minimum || target.height < minimum);
+  assert(targets.length > 0, `${label} found no visible targets for ${selector}`);
+  assert(failing.length === 0, `${label} has undersized targets for ${selector}: ${JSON.stringify(failing)}`);
 }
 
 async function runHomeCheck(browser, baseUrl, viewport, label) {
@@ -112,6 +130,7 @@ async function runHomeCheck(browser, baseUrl, viewport, label) {
   await page.goto(`${baseUrl}/accesscourt/`, { waitUntil: 'networkidle' });
 
   assert(await page.title() === 'AccessCourt | Inclusive sports technology by Atrak', `${label} title mismatch`);
+  assert(await page.locator('meta[name="viewport"]').getAttribute('content').then(content => /viewport-fit=cover/.test(content)), `${label} viewport is missing safe-area support`);
   assert(await page.locator('link[rel="canonical"]').getAttribute('href') === 'https://atrak.dev/accesscourt/', `${label} canonical mismatch`);
   assert(await page.locator('.status-rail').textContent().then(text => /not yet an independent 501\(c\)\(3\)/i.test(text)), `${label} status disclosure missing`);
   assert(await page.locator('.contact-form').getAttribute('action') === expectedSharedFormEndpoint, `${label} shared Atrak Formspree endpoint mismatch`);
@@ -128,12 +147,43 @@ async function runHomeCheck(browser, baseUrl, viewport, label) {
   assert(await page.locator('.project-bridge[data-stage="research"]').count() === 2, `${label} research project-connection count mismatch`);
   assert(await page.locator('.project-bridge a[href^="https://atrak.dev/projects/"]').count() === 4, `${label} absolute Atrak project links mismatch`);
   assert(await page.locator('.hero-media img').evaluate(image => image.complete && image.naturalWidth > 0), `${label} hero asset did not load`);
+  assert(await page.locator('.hero-actions .button').first().getAttribute('href') === 'coach.html', `${label} primary phone CTA should open Visual Drill Coach`);
 
-  if (viewport.width <= 980) {
+  if (viewport.width <= 1180) {
     await page.click('[data-menu-button]');
     assert(await page.locator('[data-menu-button]').getAttribute('aria-expanded') === 'true', `${label} mobile menu did not open`);
     assert(await page.locator('[data-nav]').evaluate(node => node.classList.contains('is-open')), `${label} mobile menu class missing`);
+    assert(await page.locator('[data-menu-label]').textContent() === 'Close navigation', `${label} mobile menu name did not change`);
     assert(await page.locator('.site-nav a[href="https://atrak.dev/"]').isVisible(), `${label} Atrak link is not visible in the open menu`);
+    const menuReachability = await page.locator('[data-nav]').evaluate(node => {
+      node.scrollTop = node.scrollHeight;
+      const menu = node.getBoundingClientRect();
+      const finalLink = node.lastElementChild?.getBoundingClientRect();
+      return { menuBottom: menu.bottom, finalLinkBottom: finalLink?.bottom || Infinity, viewportHeight: window.innerHeight };
+    });
+    assert(menuReachability.menuBottom <= menuReachability.viewportHeight + 1, `${label} menu exceeds the viewport (${menuReachability.menuBottom}px)`);
+    assert(menuReachability.finalLinkBottom <= menuReachability.viewportHeight + 1, `${label} final menu action is not reachable (${menuReachability.finalLinkBottom}px)`);
+    await assertMinimumTargets(page, '.brand, [data-menu-button], .site-nav a, .hero-actions a, .program-list article > .text-link, .bridge-detail > .text-link, .bridge-links .text-link, .site-footer a', `${label} phone`);
+    const fieldFonts = await page.locator('.contact-form input:not([type="hidden"]):not([type="checkbox"]):not([name="_gotcha"]), .contact-form select, .contact-form textarea').evaluateAll(nodes => nodes.map(node => parseFloat(getComputedStyle(node).fontSize)));
+    assert(fieldFonts.every(size => size >= 16), `${label} has form controls below 16px: ${fieldFonts.join(', ')}`);
+    await page.keyboard.press('Escape');
+    assert(await page.locator('[data-menu-button]').getAttribute('aria-expanded') === 'false', `${label} Escape did not close the menu`);
+    assert(await page.locator('[data-menu-label]').textContent() === 'Open navigation', `${label} menu name did not reset`);
+    assert(await page.evaluate(() => document.activeElement === document.querySelector('[data-menu-button]')), `${label} menu focus was not restored`);
+    await page.click('[data-menu-button]');
+    await page.click('.site-nav a[href="#ecosystem"]');
+    await page.waitForTimeout(350);
+    const anchorClearance = await page.evaluate(() => {
+      const header = document.querySelector('.site-header')?.getBoundingClientRect();
+      const heading = document.querySelector('#ecosystem-title')?.getBoundingClientRect();
+      return header && heading ? heading.top - header.bottom : -1;
+    });
+    assert(anchorClearance >= 15, `${label} ecosystem anchor is obscured by the sticky header (${anchorClearance}px clearance)`);
+    assert(!await page.locator('[data-nav]').evaluate(node => node.classList.contains('is-open')), `${label} menu did not close after anchor navigation`);
+    if (viewport.width <= 640) {
+      const heroHeight = await page.locator('.hero-media').evaluate(node => node.getBoundingClientRect().height);
+      assert(heroHeight <= 300, `${label} phone hero remains too tall (${heroHeight}px)`);
+    }
   }
 
   await auditPage(page, label);
@@ -144,30 +194,108 @@ async function runHomeCheck(browser, baseUrl, viewport, label) {
 async function runCoachCheck(browser, baseUrl, viewport, label) {
   const page = await browser.newPage({ viewport });
   const errors = [];
+  const postRequests = [];
   page.on('console', message => { if (message.type() === 'error') errors.push(message.text()); });
   page.on('pageerror', error => errors.push(error.message));
+  page.on('request', request => { if (request.method() === 'POST') postRequests.push(request.url()); });
+  await page.addInitScript(() => {
+    window.__speechCalls = [];
+    class MockSpeechSynthesisUtterance {
+      constructor(text) {
+        this.text = text;
+        this.lang = '';
+        this.onend = null;
+        this.onerror = null;
+      }
+    }
+    Object.defineProperty(window, 'SpeechSynthesisUtterance', { configurable: true, value: MockSpeechSynthesisUtterance });
+    Object.defineProperty(window, 'speechSynthesis', {
+      configurable: true,
+      value: {
+        cancel() { window.__speechCalls.push({ type: 'cancel' }); },
+        speak(utterance) { window.__speechCalls.push({ type: 'speak', lang: utterance.lang, text: utterance.text }); }
+      }
+    });
+  });
   await page.goto(`${baseUrl}/accesscourt/coach.html`, { waitUntil: 'networkidle' });
 
   assert(await page.locator('link[rel="canonical"]').getAttribute('href') === 'https://atrak.dev/accesscourt/coach.html', `${label} canonical mismatch`);
+  assert(await page.locator('meta[name="viewport"]').getAttribute('content').then(content => /viewport-fit=cover/.test(content)), `${label} coach viewport is missing safe-area support`);
   assert(await page.locator('#sequence-list li').count() === 6, `${label} should render six drill steps`);
   assert(await page.locator('.coach-settings a[href="https://atrak.dev/"]').count() === 1, `${label} Atrak return link missing`);
   assert(await page.locator('#step-title').textContent() === 'Get ready', `${label} initial step mismatch`);
+  assert(await page.locator('#previous').isDisabled(), `${label} previous should start disabled`);
+  assert(await page.locator('form').count() === 0, `${label} coach page should not contain a form`);
+  assert(await page.locator('#step-image').evaluate(image => image.complete && image.naturalWidth > 0), `${label} coach image did not load`);
+
+  if (viewport.width <= 900) {
+    assert(await page.locator('[data-settings-toggle]').isVisible(), `${label} compact settings toggle is not visible`);
+    assert(!await page.locator('[data-settings-panel]').isVisible(), `${label} phone settings should start collapsed`);
+    const compactLayout = await page.evaluate(() => {
+      const header = document.querySelector('.coach-header')?.getBoundingClientRect();
+      const actions = document.querySelector('.coach-actions')?.getBoundingClientRect();
+      return { headerHeight: header?.height || 0, actionBottom: actions ? actions.bottom : Infinity };
+    });
+    assert(compactLayout.headerHeight <= 160, `${label} compact header is too tall (${compactLayout.headerHeight}px)`);
+    assert(compactLayout.actionBottom <= viewport.height + 1, `${label} step controls are below the initial phone viewport (${compactLayout.actionBottom}px)`);
+    await assertMinimumTargets(page, '.coach-brand, [data-settings-toggle], .coach-actions button, .seated-toggle', `${label} primary phone controls`);
+    await page.click('[data-settings-toggle]');
+    assert(await page.locator('[data-settings-toggle]').getAttribute('aria-expanded') === 'true', `${label} settings did not open`);
+    assert(await page.locator('[data-settings-panel]').isVisible(), `${label} settings panel is not visible`);
+    await assertMinimumTargets(page, '.coach-settings select, .coach-settings button, .coach-settings a', `${label} phone settings`);
+    await page.keyboard.press('Escape');
+    assert(await page.locator('[data-settings-toggle]').getAttribute('aria-expanded') === 'false', `${label} Escape did not close settings`);
+    assert(await page.evaluate(() => document.activeElement === document.querySelector('[data-settings-toggle]')), `${label} settings focus was not restored`);
+    await page.click('[data-settings-toggle]');
+  }
+
+  await page.click('#speak');
+  const englishSpeech = await page.evaluate(() => window.__speechCalls.at(-1));
+  assert(englishSpeech?.type === 'speak' && englishSpeech.lang === 'en-US', `${label} English speech request mismatch`);
+  assert(await page.locator('#speak').getAttribute('aria-busy') === 'true', `${label} speaking state was not exposed`);
 
   await page.click('#next');
   assert(await page.locator('#step-title').textContent() === 'Hold the ball', `${label} next step did not update`);
-  await page.selectOption('#language', 'zh');
-  assert(await page.locator('#step-title').textContent() === '拿住篮球', `${label} Chinese translation did not update`);
-  assert(await page.locator('html').getAttribute('lang') === 'zh', `${label} document language did not update`);
+  const speechAfterStep = await page.evaluate(() => window.__speechCalls.at(-1));
+  assert(speechAfterStep?.type === 'cancel', `${label} changing steps did not cancel stale speech`);
+  assert(await page.locator('#speak').getAttribute('aria-busy') === 'false', `${label} speaking state did not clear`);
+  assert(await page.locator('#speech-status').textContent() === '', `${label} stale speech status remained after a step change`);
+
+  await page.click('#sequence-list button[data-index="2"]');
+  assert(await page.locator('#step-title').textContent() === 'Bounce the ball', `${label} direct sequence selection failed`);
+  assert(await page.evaluate(() => document.activeElement?.dataset?.index === '2'), `${label} sequence selection lost focus`);
+
+  await page.selectOption('#language', 'es');
+  assert(await page.locator('#step-title').textContent() === 'Bota el balón', `${label} Spanish translation did not update`);
+  assert(await page.locator('html').getAttribute('lang') === 'es', `${label} document language did not update`);
 
   await page.click('#complexity');
   assert(await page.locator('#complexity').getAttribute('aria-pressed') === 'false', `${label} detailed mode did not activate`);
   await page.check('#seated');
-  assert(await page.locator('#step-instruction').textContent().then(text => /坐姿选择/.test(text)), `${label} seated cue did not appear`);
+  assert(await page.locator('#step-instruction').textContent().then(text => /Opción sentada/.test(text)), `${label} seated cue did not appear`);
   await page.click('#contrast');
   assert(await page.locator('body').evaluate(node => node.classList.contains('high-contrast')), `${label} high contrast mode did not activate`);
   assert(await page.locator('#contrast').getAttribute('aria-pressed') === 'true', `${label} high contrast state is not announced`);
 
+  for (let remaining = 0; remaining < 6 && !await page.locator('#next').isDisabled(); remaining += 1) {
+    await page.click('#next');
+  }
+  assert(await page.locator('#next').isDisabled(), `${label} next should be disabled on the final step`);
+  assert(await page.locator('#step-title').textContent() === 'Terminen juntos', `${label} final Spanish step mismatch`);
+  const activeSequenceVisible = await page.evaluate(() => {
+    const list = document.querySelector('#sequence-list')?.getBoundingClientRect();
+    const active = document.querySelector('#sequence-list button[aria-current="step"]')?.getBoundingClientRect();
+    return Boolean(list && active && active.left >= list.left - 1 && active.right <= list.right + 1);
+  });
+  assert(activeSequenceVisible, `${label} active final sequence step is outside the phone scroller`);
+
+  if (viewport.width <= 700 || viewport.height <= 500) {
+    const imageHeight = await page.locator('.instruction-visual').evaluate(node => node.getBoundingClientRect().height);
+    assert(imageHeight <= 220, `${label} coach illustration is too tall on phone (${imageHeight}px)`);
+  }
+
   await auditPage(page, label);
+  assert(postRequests.length === 0, `${label} unexpectedly sent POST requests: ${postRequests.join(', ')}`);
   assert(errors.length === 0, `${label} emitted browser errors: ${errors.join(' | ')}`);
   await page.close();
 }
@@ -201,6 +329,15 @@ async function runSupportingPageChecks(browser, baseUrl) {
   assert(await page.locator('.purpose-content').textContent().then(text => /not yet an independent 501\(c\)\(3\)/i.test(text)), 'Purpose page status disclosure missing');
   assert(await page.locator('.purpose-content').textContent().then(text => /GuidePup accessibility patterns/i.test(text) && /AI Hoops Board/i.test(text)), 'Purpose page Atrak project bridge copy missing');
   await page.close();
+
+  const phone = await browser.newPage({ viewport: { width: 320, height: 568 } });
+  for (const pathName of ['privacy.html', 'success.html']) {
+    await phone.goto(`${baseUrl}/accesscourt/${pathName}`, { waitUntil: 'networkidle' });
+    assert(await phone.locator('meta[name="viewport"]').getAttribute('content').then(content => /viewport-fit=cover/.test(content)), `${pathName} viewport is missing safe-area support`);
+    await assertMinimumTargets(phone, '.brand, .header-actions a', `${pathName} phone header`);
+    await auditPage(phone, `${pathName} phone`);
+  }
+  await phone.close();
 }
 
 async function runAtrakResponsiveNavCheck(browser, baseUrl) {
@@ -236,6 +373,7 @@ async function main() {
   let browser;
   try {
     await assertAtrakNavigationCoverage();
+    await assertResponsiveCoachImage();
     serverInfo = await createStaticServer();
     const requestedExecutable = process.env.PLAYWRIGHT_CHROMIUM_EXECUTABLE;
     const executablePath = requestedExecutable || (existsSync(macChromeExecutable) ? macChromeExecutable : undefined);
@@ -243,16 +381,30 @@ async function main() {
 
     await runHomeCheck(browser, serverInfo.baseUrl, { width: 1366, height: 900 }, 'AccessCourt desktop');
     console.log('PASS AccessCourt desktop');
-    await runHomeCheck(browser, serverInfo.baseUrl, { width: 390, height: 844 }, 'AccessCourt mobile');
-    console.log('PASS AccessCourt mobile');
+    await runHomeCheck(browser, serverInfo.baseUrl, { width: 1024, height: 768 }, 'AccessCourt compact tablet');
+    console.log('PASS AccessCourt compact tablet');
+    const phoneViewports = [
+      { width: 320, height: 568, name: '320 portrait' },
+      { width: 360, height: 640, name: '360 portrait' },
+      { width: 390, height: 844, name: '390 portrait' },
+      { width: 430, height: 932, name: '430 portrait' },
+      { width: 667, height: 375, name: '667 landscape' },
+      { width: 844, height: 390, name: '844 landscape' }
+    ];
+    for (const viewport of phoneViewports) {
+      await runHomeCheck(browser, serverInfo.baseUrl, { width: viewport.width, height: viewport.height }, `AccessCourt phone ${viewport.name}`);
+    }
+    console.log('PASS AccessCourt phone matrix (6 viewports)');
     await runCoachCheck(browser, serverInfo.baseUrl, { width: 1366, height: 900 }, 'Coach desktop');
     console.log('PASS Coach desktop interactions');
-    await runCoachCheck(browser, serverInfo.baseUrl, { width: 390, height: 844 }, 'Coach mobile');
-    console.log('PASS Coach mobile interactions');
+    for (const viewport of phoneViewports) {
+      await runCoachCheck(browser, serverInfo.baseUrl, { width: viewport.width, height: viewport.height }, `Coach phone ${viewport.name}`);
+    }
+    console.log('PASS Coach phone matrix (6 viewports)');
     await runSupportingPageChecks(browser, serverInfo.baseUrl);
     await runAtrakResponsiveNavCheck(browser, serverInfo.baseUrl);
     console.log('PASS privacy, confirmation, homepage, and purpose integration');
-    console.log('AccessCourt smoke summary: 5/5 passed; no form was submitted.');
+    console.log('AccessCourt smoke summary: responsive, interaction, privacy, and integration checks passed; no form was submitted.');
   } catch (error) {
     console.error(`FAIL ${error?.message || error}`);
     process.exitCode = 1;

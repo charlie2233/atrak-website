@@ -2,7 +2,7 @@
 <html lang="en">
 <head>
   <meta charset="utf-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
   <meta name="description" content="AccessCourt is Atrak's inclusive sports technology initiative, connecting supervised adaptive basketball with carefully adapted accessibility, coaching, and student-builder tools.">
   <meta name="robots" content="index,follow">
   <meta name="theme-color" content="#f05a28">
@@ -31,17 +31,17 @@
       <span>Access<span>Court</span></span>
     </a>
     <button class="menu-button" type="button" aria-expanded="false" aria-controls="site-nav" data-menu-button>
-      <span class="sr-only">Open navigation</span>
+      <span class="sr-only" data-menu-label>Open navigation</span>
       <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M4 7h16M4 12h16M4 17h16"/></svg>
     </button>
     <nav id="site-nav" class="site-nav" aria-label="Primary navigation" data-nav>
-      <a href="#mission">Mission</a>
-      <a href="#programs">Programs</a>
+      <a href="#mission">What we do</a>
+      <a href="#programs">Play · Learn · Build</a>
+      <a href="#ecosystem">Project map</a>
       <a href="#safety">Safety</a>
-      <a href="#partner">Partner</a>
-      <a href="#contact">Contact</a>
+      <a href="#partner">Partnership</a>
       <a class="parent-brand-link" href="https://atrak.dev/" aria-label="Visit the Atrak student technology team">↗ Atrak</a>
-      <a class="button button-small" href="#contact">Partner with us</a>
+      <a class="button button-small" href="#contact">Partner on a pilot</a>
     </nav>
   </header>
 
@@ -50,10 +50,11 @@
       <div class="hero-copy">
         <p class="eyebrow">Atrak Impact · Inclusive sports technology</p>
         <h1 id="hero-title">More ways into the game.</h1>
-        <p>AccessCourt brings supervised adaptive basketball together with accessible, student-built technology. We start with tools that work today, carefully adapt relevant Atrak projects, and build every next step with athletes, educators, families, and host organizations.</p>
+        <p>AccessCourt combines supervised adaptive basketball with accessible, student-built tools. We start with a working coach and adapt other Atrak projects only after partner, safety, and privacy review.</p>
         <div class="hero-actions">
-          <a class="button" href="#ecosystem">Explore the ecosystem</a>
+          <a class="button" href="coach.html">Try Visual Drill Coach</a>
           <a class="button button-secondary" href="#contact">Partner on a pilot</a>
+          <a class="hero-tertiary" href="#ecosystem">See how Atrak projects connect <span aria-hidden="true">→</span></a>
         </div>
       </div>
       <figure class="hero-media">
@@ -87,120 +88,22 @@
       <div class="program-list">
         <article>
           <span class="program-number">01</span>
-          <p class="program-path">Planned pilot · Play</p>
+          <p class="program-path">Play · Planned</p>
           <h3>AccessCourt Clinics</h3>
           <p>The planned supervised adaptive basketball sessions will be designed around choice, clear instructions, seated and standing options, sensory breaks, and no elimination or ranking.</p>
         </article>
         <article>
           <span class="program-number">02</span>
-          <p class="program-path">Live tool + next adaptations · Learn</p>
+          <p class="program-path">Learn · Live tool</p>
           <h3>AccessCourt Toolkit</h3>
           <p>Use simpler visual and spoken coaching tools—from the working Visual Drill Coach to future partner-reviewed adaptations of Atrak's basketball technology.</p>
           <a class="text-link" href="coach.html">Try the working MVP <span aria-hidden="true">→</span></a>
         </article>
         <article>
           <span class="program-number">03</span>
-          <p class="program-path">Planned studio · Build</p>
+          <p class="program-path">Build · Planned</p>
           <h3>Atrak Project Studio</h3>
           <p>The planned studio will train student athletes and engineers to solve partner-defined accessibility problems, test alongside adults and host staff, and document improvements without accessing participant records.</p>
-        </article>
-      </div>
-    </section>
-
-    <section class="section ecosystem" id="ecosystem" aria-labelledby="ecosystem-title">
-      <div class="section-heading">
-        <div>
-          <p class="section-kicker">The Atrak → AccessCourt bridge</p>
-          <h2 id="ecosystem-title">Built from real projects. Adapted with care.</h2>
-        </div>
-        <p>AccessCourt does not present every Atrak project as ready for participants. Each connection has a clear maturity label and must pass partner, accessibility, safety, and privacy review before entering a program.</p>
-      </div>
-
-      <div class="stage-legend" aria-label="Project connection status legend">
-        <p><strong>Live</strong> Available now on AccessCourt or as an existing community platform.</p>
-        <p><strong>Adapt next</strong> A defined adaptation awaiting partner review, development, and testing.</p>
-        <p><strong>Research</strong> An early idea that is not approved for participant use.</p>
-      </div>
-
-      <div class="bridge-list">
-        <article class="project-bridge" data-stage="live">
-          <div class="bridge-title">
-            <span class="stage-label">Live</span>
-            <h3>Visual Drill Coach</h3>
-          </div>
-          <div class="bridge-detail">
-            <p>A working, no-login coaching MVP with one instruction at a time, large visuals, speech support, adjustable complexity, and multilingual guidance. It does not create participant profiles.</p>
-            <a class="text-link" href="coach.html">Try Visual Drill Coach <span aria-hidden="true">→</span></a>
-          </div>
-        </article>
-
-        <article class="project-bridge" data-stage="live">
-          <div class="bridge-title">
-            <span class="stage-label">Live platforms</span>
-            <h3>GBC Huskies + Team Destiny</h3>
-          </div>
-          <div class="bridge-detail">
-            <p>Atrak's live basketball-community sites contribute experience in clear team communication, family-facing information, and community web operations. These clubs are not represented as AccessCourt hosts, sponsors, or partners unless separately confirmed.</p>
-            <div class="bridge-links">
-              <a class="text-link" href="https://gbchuskies.com">↗ GBC Huskies</a>
-              <a class="text-link" href="https://destinybasketball.us">↗ Team Destiny</a>
-            </div>
-          </div>
-        </article>
-
-        <article class="project-bridge" data-stage="adapt">
-          <div class="bridge-title">
-            <span class="stage-label">Adapt next</span>
-            <h3>GuidePup accessibility patterns</h3>
-          </div>
-          <div class="bridge-detail">
-            <p>Review whether GuidePup's voice-first and low-friction interaction patterns can improve spoken cues, contrast, focus states, and hands-free navigation. AccessCourt will not import GuidePup camera features or user data.</p>
-            <a class="text-link" href="https://atrak.dev/projects/guidepup.html">↗ See GuidePup</a>
-          </div>
-        </article>
-
-        <article class="project-bridge" data-stage="adapt">
-          <div class="bridge-title">
-            <span class="stage-label">Adapt next</span>
-            <h3>Inclusive Hoops Board</h3>
-          </div>
-          <div class="bridge-detail">
-            <p>Adapt Atrak's existing tactics board into simpler play sequences with one step at a time, icons plus plain language, slower animation, adjustable player counts, and printable alternatives. It will not score ability or rank athletes.</p>
-            <a class="text-link" href="https://charlie2233.github.io/ai-hoops-board/">↗ Open AI Hoops Board</a>
-          </div>
-        </article>
-
-        <article class="project-bridge" data-stage="adapt">
-          <div class="bridge-title">
-            <span class="stage-label">Adapt next</span>
-            <h3>LifePage impact portfolios</h3>
-          </div>
-          <div class="bridge-detail">
-            <p>Offer free, optional portfolios for student coaches and builders to document training, tools shipped, reflections, and verified contributions. Participant names, diagnoses, photos, attendance, and program records stay out.</p>
-            <a class="text-link" href="https://atrak.dev/projects/lifepage.html">↗ See LifePage</a>
-          </div>
-        </article>
-
-        <article class="project-bridge" data-stage="research">
-          <div class="bridge-title">
-            <span class="stage-label">Research</span>
-            <h3>Hoops Clips instructor review</h3>
-          </div>
-          <div class="bridge-detail">
-            <p>Video will only be explored after a partner-approved, separate-consent process exists. Initial pilots remain camera-off. Any future prototype must avoid face recognition, participant ranking, and reuse of community footage for commercial model training.</p>
-            <a class="text-link" href="https://atrak.dev/projects/hoops-clips.html">↗ See Hoops Clips</a>
-          </div>
-        </article>
-
-        <article class="project-bridge" data-stage="research">
-          <div class="bridge-title">
-            <span class="stage-label">Research</span>
-            <h3>Atrak Agent for adult operations</h3>
-          </div>
-          <div class="bridge-detail">
-            <p>Explore an adult-facing assistant for drafting equipment lists, run-of-show documents, plain-language drill variations, and debrief templates. It may not receive participant records, make safeguarding decisions, or replace host-staff review.</p>
-            <a class="text-link" href="https://atrak.dev/projects/atrak-agent.html">↗ See Atrak Agent</a>
-          </div>
         </article>
       </div>
     </section>
@@ -216,6 +119,104 @@
         <li><span>3</span><h3>Adapt</h3><p>Build the smallest free, accessible version and complete adult safety and privacy review.</p></li>
         <li><span>4</span><h3>Return</h3><p>Test only in a supervised pilot, then share aggregate learning back with the community.</p></li>
       </ol>
+    </section>
+
+    <section class="section ecosystem" id="ecosystem" aria-labelledby="ecosystem-title">
+      <div class="section-heading">
+        <div>
+          <p class="section-kicker">The Atrak → AccessCourt bridge</p>
+          <h2 id="ecosystem-title">Built from real projects. Adapted with care.</h2>
+        </div>
+        <p>AccessCourt does not present every Atrak project as ready for participants. Each connection has a clear maturity label and must pass partner, accessibility, safety, and privacy review before entering a program.</p>
+      </div>
+
+      <div class="stage-legend" aria-label="Project connection status legend">
+        <p><strong>Live</strong> Available now.</p>
+        <p><strong>Adapt next</strong> Planned and under review.</p>
+        <p><strong>Research</strong> Not approved for participant use.</p>
+      </div>
+
+      <div class="bridge-list">
+        <article class="project-bridge" data-stage="live">
+          <div class="bridge-title">
+            <span class="stage-label">Live</span>
+            <h3>Visual Drill Coach</h3>
+          </div>
+          <div class="bridge-detail">
+            <p>Working no-login coaching tool with large visuals, speech, adjustable complexity, and multilingual guidance; no participant profiles.</p>
+            <a class="text-link" href="coach.html">Try Visual Drill Coach <span aria-hidden="true">→</span></a>
+          </div>
+        </article>
+
+        <article class="project-bridge" data-stage="live">
+          <div class="bridge-title">
+            <span class="stage-label">Live</span>
+            <h3>GBC Huskies + Team Destiny</h3>
+          </div>
+          <div class="bridge-detail">
+            <p>Live community sites showing Atrak's basketball-operations experience—not AccessCourt hosts, sponsors, or partners unless separately confirmed.</p>
+            <div class="bridge-links">
+              <a class="text-link" href="https://gbchuskies.com">Visit GBC Huskies <span aria-hidden="true">↗</span></a>
+              <a class="text-link" href="https://destinybasketball.us">Visit Team Destiny <span aria-hidden="true">↗</span></a>
+            </div>
+          </div>
+        </article>
+
+        <article class="project-bridge" data-stage="adapt">
+          <div class="bridge-title">
+            <span class="stage-label">Adapt next</span>
+            <h3>GuidePup accessibility patterns</h3>
+          </div>
+          <div class="bridge-detail">
+            <p>Voice-first patterns to evaluate for cues, contrast, focus, and navigation; no GuidePup camera features or user data move into AccessCourt.</p>
+            <a class="text-link" href="https://atrak.dev/projects/guidepup.html">View GuidePup on Atrak <span aria-hidden="true">↗</span></a>
+          </div>
+        </article>
+
+        <article class="project-bridge" data-stage="adapt">
+          <div class="bridge-title">
+            <span class="stage-label">Adapt next</span>
+            <h3>Inclusive Hoops Board</h3>
+          </div>
+          <div class="bridge-detail">
+            <p>Simpler step-by-step plays with icons, plain language, slower motion, and printable options; no ability scoring or athlete rankings.</p>
+            <a class="text-link" href="https://charlie2233.github.io/ai-hoops-board/">Open AI Hoops Board <span aria-hidden="true">↗</span></a>
+          </div>
+        </article>
+
+        <article class="project-bridge" data-stage="adapt">
+          <div class="bridge-title">
+            <span class="stage-label">Adapt next</span>
+            <h3>LifePage impact portfolios</h3>
+          </div>
+          <div class="bridge-detail">
+            <p>Optional, free portfolios for student coaches and builders to document their own work; no participant information.</p>
+            <a class="text-link" href="https://atrak.dev/projects/lifepage.html">View LifePage on Atrak <span aria-hidden="true">↗</span></a>
+          </div>
+        </article>
+
+        <article class="project-bridge" data-stage="research">
+          <div class="bridge-title">
+            <span class="stage-label">Research</span>
+            <h3>Hoops Clips instructor review</h3>
+          </div>
+          <div class="bridge-detail">
+            <p>Initial pilots remain camera-off; future video work requires separate consent and forbids face recognition, ranking, or commercial model training.</p>
+            <a class="text-link" href="https://atrak.dev/projects/hoops-clips.html">View Hoops Clips on Atrak <span aria-hidden="true">↗</span></a>
+          </div>
+        </article>
+
+        <article class="project-bridge" data-stage="research">
+          <div class="bridge-title">
+            <span class="stage-label">Research</span>
+            <h3>Atrak Agent for adult operations</h3>
+          </div>
+          <div class="bridge-detail">
+            <p>Adult-planning research for checklists and drill variations only; no participant records, automated safety decisions, or replacement of host review.</p>
+            <a class="text-link" href="https://atrak.dev/projects/atrak-agent.html">View Atrak Agent on Atrak <span aria-hidden="true">↗</span></a>
+          </div>
+        </article>
+      </div>
     </section>
 
     <section class="section safety" id="safety" aria-labelledby="safety-title">
@@ -264,8 +265,8 @@
 
     <section class="section contact" id="contact" aria-labelledby="contact-title">
       <div class="contact-copy">
-        <h2 id="contact-title">Help decide what deserves to move from “Adapt next” to “Live.”</h2>
-        <p>We are seeking adult educators, adaptive-PE staff, program leaders, parents or guardians, coaches, and accessibility reviewers who can identify useful adaptations—and tell us which ideas should not be built.</p>
+        <h2 id="contact-title">Help choose what we build next.</h2>
+        <p>Adult educators, adaptive-PE staff, program leaders, parents or guardians, coaches, and accessibility reviewers can help us evaluate the next adaptation.</p>
         <p class="contact-warning"><strong>Please do not submit medical, diagnostic, student-record, incident, emergency, or safeguarding information through this form.</strong> During pilot setup, the student project team monitors this inbox; an adult legal operator has not yet been appointed.</p>
       </div>
       <form class="contact-form" action="https://formspree.io/f/mvzqdnov" method="post">
