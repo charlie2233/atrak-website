@@ -54,6 +54,8 @@ button, a, input, textarea, select { -webkit-tap-highlight-color: transparent; }
 .site-nav { display: flex; align-items: center; gap: 1.7rem; font-size: .93rem; font-weight: 700; }
 .site-nav a { text-decoration: none; }
 .site-nav > a:not(.button):hover { color: var(--orange-dark); }
+.parent-brand-link { color: var(--blue); font-weight: 800; text-decoration-thickness: 2px; text-underline-offset: 4px; }
+.header-actions { display: flex; align-items: center; gap: 1rem; }
 .menu-button { display: none; width: 48px; height: 48px; border: 1px solid var(--line); background: #fff; color: var(--navy); }
 .menu-button svg { width: 24px; fill: none; stroke: currentColor; stroke-width: 2; }
 
@@ -156,6 +158,7 @@ blockquote p { margin: 0; }
   .site-nav { position: absolute; left: 0; right: 0; top: 78px; display: none; align-items: stretch; flex-direction: column; gap: 0; padding: 1rem 24px 1.5rem; background: #fff; border-bottom: 1px solid var(--line); box-shadow: var(--shadow); }
   .site-nav.is-open { display: flex; }
   .site-nav a { padding: .8rem 0; }
+  .site-nav .parent-brand-link { border-top: 1px solid var(--line); margin-top: .35rem; padding-top: 1rem; }
   .site-nav .button { margin-top: .5rem; padding: .7rem 1rem; }
   .hero { grid-template-columns: 1fr; }
   .hero-copy { padding: 5rem 24px 4rem; }
@@ -169,6 +172,8 @@ blockquote p { margin: 0; }
 
 @media (max-width: 640px) {
   .site-header { min-height: 68px; padding-inline: 18px; }
+  .header-actions { gap: .7rem; }
+  .header-actions .parent-brand-link { font-size: .9rem; }
   .brand { font-size: 1.25rem; }
   .brand-ball { width: 26px; height: 26px; flex-basis: 26px; }
   .site-nav { top: 68px; }

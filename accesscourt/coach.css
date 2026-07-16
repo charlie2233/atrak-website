@@ -1,4 +1,4 @@
-:root { --navy:#071a43; --orange:#ef4b0b; --orange-dark:#c93600; --blue:#1d4ed8; --line:#cbd5e1; --muted:#5a6780; --white:#fff; --focus:#2563eb; }
+:root { --navy:#071a43; --orange:#c93600; --orange-dark:#962800; --blue:#1d4ed8; --line:#cbd5e1; --muted:#5a6780; --white:#fff; --focus:#2563eb; }
 * { box-sizing: border-box; }
 body { margin:0; background:var(--white); color:var(--navy); font-family:Arial,Helvetica,sans-serif; line-height:1.45; }
 button, select { font:inherit; }
@@ -52,7 +52,8 @@ body.high-contrast .instruction-visual img { filter:contrast(1.25); }
   .coach-header { grid-template-columns:1fr auto; gap:1rem; }
   .coach-header > strong { grid-column:1/-1; grid-row:2; }
   .coach-settings { grid-column:1/-1; grid-row:3; justify-content:flex-start; flex-wrap:wrap; }
-  .coach-settings a { flex-basis:100%; margin:0; }
+  .coach-settings .coach-back-link { flex-basis:100%; margin:0; }
+  .coach-settings .coach-atrak-link { margin:0; }
   .instruction { grid-template-columns:1fr 300px; min-height:360px; }
   .instruction-visual { height:340px; }
 }

@@ -2,7 +2,7 @@
 
 import http from 'node:http';
 import { existsSync } from 'node:fs';
-import { readFile, stat } from 'node:fs/promises';
+import { readFile, readdir, stat } from 'node:fs/promises';
 import path from 'node:path';
 import process from 'node:process';
 import { fileURLToPath } from 'node:url';
@@ -72,6 +72,31 @@ function assert(condition, message) {
   if (!condition) throw new Error(message);
 }
 
+async function listHtmlFiles(directory) {
+  const entries = await readdir(directory, { withFileTypes: true });
+  const nested = await Promise.all(entries.map(async entry => {
+    const entryPath = path.join(directory, entry.name);
+    if (entry.isDirectory()) return listHtmlFiles(entryPath);
+    return entry.isFile() && entry.name.endsWith('.html') ? [entryPath] : [];
+  }));
+  return nested.flat();
+}
+
+async function assertAtrakNavigationCoverage() {
+  const htmlFiles = await listHtmlFiles(repoRoot);
+  const navFiles = [];
+  const missing = [];
+  for (const filePath of htmlFiles) {
+    const html = await readFile(filePath, 'utf8');
+    if (!html.includes('<ul class="nav-links">')) continue;
+    navFiles.push(path.relative(repoRoot, filePath));
+    const matches = html.match(/<a href="\/accesscourt\/" class="nav-impact-link">🏀 AccessCourt<\/a>/g) || [];
+    if (matches.length !== 1) missing.push(path.relative(repoRoot, filePath));
+  }
+  assert(navFiles.length > 0, 'No Atrak primary navigation files found');
+  assert(missing.length === 0, `Atrak AccessCourt nav link missing or duplicated in: ${missing.join(', ')}`);
+}
+
 async function auditPage(page, label) {
   const layout = await page.evaluate(() => ({
     viewportWidth: document.documentElement.clientWidth,
@@ -94,12 +119,15 @@ async function runHomeCheck(browser, baseUrl, viewport, label) {
   assert(await page.locator('input[name="subject"]').getAttribute('value') === 'AccessCourt partnership inquiry', `${label} Formspree subject field mismatch`);
   assert(await page.locator('input[name="_next"]').count() === 0, `${label} should not rely on an unverified Formspree _next field`);
   assert(await page.locator('input[name="adult_confirmation"]').getAttribute('required') !== null, `${label} adult confirmation is not required`);
+  assert(await page.locator('.site-nav a[href="https://atrak.dev/"]').count() === 1, `${label} Atrak return link missing from primary navigation`);
+  assert(await page.locator('.site-footer a[href="https://atrak.dev/"]').count() === 1, `${label} Atrak return link missing from footer`);
   assert(await page.locator('.hero-media img').evaluate(image => image.complete && image.naturalWidth > 0), `${label} hero asset did not load`);
 
   if (viewport.width <= 980) {
     await page.click('[data-menu-button]');
     assert(await page.locator('[data-menu-button]').getAttribute('aria-expanded') === 'true', `${label} mobile menu did not open`);
     assert(await page.locator('[data-nav]').evaluate(node => node.classList.contains('is-open')), `${label} mobile menu class missing`);
+    assert(await page.locator('.site-nav a[href="https://atrak.dev/"]').isVisible(), `${label} Atrak link is not visible in the open menu`);
   }
 
   await auditPage(page, label);
@@ -116,6 +144,7 @@ async function runCoachCheck(browser, baseUrl, viewport, label) {
 
   assert(await page.locator('link[rel="canonical"]').getAttribute('href') === 'https://atrak.dev/accesscourt/coach.html', `${label} canonical mismatch`);
   assert(await page.locator('#sequence-list li').count() === 6, `${label} should render six drill steps`);
+  assert(await page.locator('.coach-settings a[href="https://atrak.dev/"]').count() === 1, `${label} Atrak return link missing`);
   assert(await page.locator('#step-title').textContent() === 'Get ready', `${label} initial step mismatch`);
 
   await page.click('#next');
@@ -141,16 +170,19 @@ async function runSupportingPageChecks(browser, baseUrl) {
   const page = await browser.newPage({ viewport: { width: 1366, height: 900 } });
   await page.goto(`${baseUrl}/accesscourt/privacy.html`, { waitUntil: 'networkidle' });
   assert(await page.locator('link[rel="canonical"]').getAttribute('href') === 'https://atrak.dev/accesscourt/privacy.html', 'Privacy canonical mismatch');
+  assert(await page.locator('header a[href="https://atrak.dev/"]').count() === 1, 'Privacy page Atrak return link missing');
   assert(await page.locator('main').textContent().then(text => /will not be transferred into Atrak commercial systems/i.test(text)), 'Atrak data-separation statement missing');
   await auditPage(page, 'privacy');
 
   await page.goto(`${baseUrl}/accesscourt/success.html`, { waitUntil: 'networkidle' });
   assert(await page.locator('meta[name="robots"]').getAttribute('content') === 'noindex,follow', 'Success page should be noindex');
+  assert(await page.locator('header a[href="https://atrak.dev/"]').count() === 1, 'Success page Atrak return link missing');
   assert(await page.locator('h1').textContent().then(text => /Thank you for helping shape the pilot/i.test(text)), 'Success confirmation copy missing');
   await auditPage(page, 'success');
 
   await page.goto(`${baseUrl}/`, { waitUntil: 'domcontentloaded' });
   assert(await page.locator('a[href="accesscourt/"]').count() >= 2, 'Atrak homepage is missing AccessCourt links');
+  assert(await page.locator('.nav-links .nav-impact-link[href="/accesscourt/"]').count() === 1, 'Atrak primary navigation AccessCourt link missing');
   assert(await page.locator('.project-title').filter({ hasText: 'AccessCourt' }).count() === 1, 'Atrak homepage AccessCourt project card missing');
   const rootFormActions = await page.locator('form[action*="formspree.io"]').evaluateAll(forms => forms.map(form => form.getAttribute('action')));
   assert(rootFormActions.length >= 2 && rootFormActions.every(action => action === expectedRootFormEndpoint), 'Atrak root Formspree endpoint changed unexpectedly');
@@ -161,10 +193,39 @@ async function runSupportingPageChecks(browser, baseUrl) {
   await page.close();
 }
 
+async function runAtrakResponsiveNavCheck(browser, baseUrl) {
+  const desktop = await browser.newPage({ viewport: { width: 1280, height: 800 } });
+  await desktop.goto(`${baseUrl}/`, { waitUntil: 'domcontentloaded' });
+  const desktopLayout = await desktop.evaluate(() => {
+    const logo = document.querySelector('.navbar .logo')?.getBoundingClientRect();
+    const nav = document.querySelector('.nav-links')?.getBoundingClientRect();
+    return {
+      navDisplay: getComputedStyle(document.querySelector('.nav-links')).display,
+      separated: Boolean(logo && nav && logo.right + 12 <= nav.left),
+      overflow: document.documentElement.scrollWidth > document.documentElement.clientWidth
+    };
+  });
+  assert(desktopLayout.navDisplay === 'flex', 'Atrak desktop navigation should be visible at 1280px');
+  assert(desktopLayout.separated, 'Atrak desktop navigation overlaps the logo at 1280px');
+  assert(!desktopLayout.overflow, 'Atrak desktop navigation creates horizontal overflow at 1280px');
+  await desktop.close();
+
+  const compact = await browser.newPage({ viewport: { width: 1180, height: 800 } });
+  await compact.goto(`${baseUrl}/`, { waitUntil: 'domcontentloaded' });
+  assert(await compact.locator('.mobile-menu-btn').evaluate(node => getComputedStyle(node).display === 'flex'), 'Atrak compact menu button should appear at 1180px');
+  assert(await compact.locator('.nav-links').evaluate(node => getComputedStyle(node).display === 'none'), 'Atrak compact navigation should start closed');
+  await compact.click('.mobile-menu-btn');
+  assert(await compact.locator('.nav-links').evaluate(node => node.classList.contains('active')), 'Atrak compact navigation did not open');
+  assert(await compact.locator('.nav-impact-link').isVisible(), 'AccessCourt link is not visible in the open Atrak compact menu');
+  await auditPage(compact, 'Atrak compact navigation');
+  await compact.close();
+}
+
 async function main() {
   let serverInfo;
   let browser;
   try {
+    await assertAtrakNavigationCoverage();
     serverInfo = await createStaticServer();
     const requestedExecutable = process.env.PLAYWRIGHT_CHROMIUM_EXECUTABLE;
     const executablePath = requestedExecutable || (existsSync(macChromeExecutable) ? macChromeExecutable : undefined);
@@ -179,6 +240,7 @@ async function main() {
     await runCoachCheck(browser, serverInfo.baseUrl, { width: 390, height: 844 }, 'Coach mobile');
     console.log('PASS Coach mobile interactions');
     await runSupportingPageChecks(browser, serverInfo.baseUrl);
+    await runAtrakResponsiveNavCheck(browser, serverInfo.baseUrl);
     console.log('PASS privacy, confirmation, homepage, and purpose integration');
     console.log('AccessCourt smoke summary: 5/5 passed; no form was submitted.');
   } catch (error) {
