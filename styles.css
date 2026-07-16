@@ -369,6 +369,20 @@ body.reduce-motion .project-preview-img {
     width: 100%;
 }
 
+.nav-links .nav-impact-link {
+    color: #ff9a62;
+    font-weight: 700;
+}
+
+.nav-links .nav-impact-link:hover,
+.nav-links .nav-impact-link:focus-visible {
+    color: #ffc4a3;
+}
+
+.nav-links .nav-impact-link::after {
+    background: linear-gradient(90deg, #c93600, #ff8a4c);
+}
+
 .nav-links .nav-cta {
     padding: 8px 20px;
     background-color: var(--bg-tertiary);
@@ -12186,7 +12200,7 @@ body.section-orbit-visible .section-orbit-nav {
     }
 }
 
-@media (max-width: 1100px) {
+@media (max-width: 1240px) {
     .nav-links {
         position: absolute;
         top: calc(100% + 12px);
