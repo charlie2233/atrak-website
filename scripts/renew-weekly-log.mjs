@@ -14,6 +14,7 @@ function parseArgs(values) {
         dryRun: false,
         githubApi: false,
         historyPath: path.join(dataDir, 'weekly-history.json'),
+        compatibilityPath: path.join(dataDir, 'weekly-log.json'),
         now: new Date(),
         weekStart: ''
     };
@@ -365,6 +366,7 @@ function main() {
     const history = readJson(options.historyPath, []);
     const updatedHistory = upsertEntry(history, entry);
     writeJson(options.historyPath, updatedHistory);
+    writeJson(options.compatibilityPath, updatedHistory);
     process.stdout.write(`Renewed Weekly Log for ${entry.weekStart}: ${entry.stats.commits} commits across ${entry.stats.activeRepositories} repos.\n`);
 }
 

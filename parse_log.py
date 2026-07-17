@@ -80,9 +80,12 @@ if __name__ == '__main__':
         script_dir = Path(__file__).parent.absolute()
         log_path = script_dir / 'WeeklyLog.txt'
         output_path = script_dir / 'data' / 'weekly-history.json'
+        compatibility_path = script_dir / 'data' / 'weekly-log.json'
         
         data = parse_weekly_log(log_path)
-        output_path.write_text(json.dumps(data, indent=2), encoding='utf-8')
-        print(f"✅ Successfully parsed {len(data)} weeks to {output_path}")
+        payload = json.dumps(data, indent=2)
+        output_path.write_text(payload, encoding='utf-8')
+        compatibility_path.write_text(payload, encoding='utf-8')
+        print(f"✅ Successfully parsed {len(data)} weeks to {output_path} and {compatibility_path}")
     except Exception as e:
         print(f"❌ Error: {e}")

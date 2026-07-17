@@ -1,0 +1,741 @@
+[
+  {
+    "dateRange": "Aug 31 – Sep 6",
+    "title": "Idea → Repo → First pixel on screen",
+    "highlights": [
+      "Project officially created",
+      "Core vision locked: draw tactics fast + simulate like a game",
+      "Chose mobile-first + iPad-first strategy"
+    ],
+    "shipped": [
+      "GitHub repo setup",
+      "Project structure (`index.html`, `main.js`, `styles.css`)",
+      "Canvas renders first half-court background"
+    ],
+    "engineering": [
+      "Basic coordinate system",
+      "Static court lines drawn with canvas API",
+      "Manual refresh dev loop"
+    ],
+    "fixes": [],
+    "metrics": [
+      "Commits: 12",
+      "Files: 3",
+      "PRs: 0"
+    ],
+    "next": [
+      "Player objects",
+      "Drag interactions"
+    ]
+  },
+  {
+    "dateRange": "Sep 7 – Sep 13",
+    "title": "Players exist. Stuff moves. Brain happy.",
+    "highlights": [
+      "First draggable players working",
+      "Offense/defense color system decided",
+      "Felt like a real tactics board for the first time"
+    ],
+    "shipped": [
+      "Player circles",
+      "Drag & drop",
+      "Snap-to-court boundaries",
+      "Basic toolbar"
+    ],
+    "engineering": [
+      "Player object model `{x, y, team, id}`",
+      "Re-render loop on interaction",
+      "Hit detection math"
+    ],
+    "fixes": [
+      "Drag jitter",
+      "Z-index overlap bugs"
+    ],
+    "metrics": [
+      "Commits: 18",
+      "PRs: 1",
+      "Files changed: 6"
+    ],
+    "next": [
+      "Draw paths for movement",
+      "Save plays"
+    ]
+  },
+  {
+    "dateRange": "Sep 14 – Sep 20",
+    "title": "Lines = plays = actually useful",
+    "highlights": [
+      "Movement paths added",
+      "First time drawing real sets (Horns, 5-Out)",
+      "Coaches could understand it instantly"
+    ],
+    "shipped": [
+      "Path drawing tool",
+      "Multi-segment lines",
+      "Color-coded routes",
+      "Eraser"
+    ],
+    "engineering": [
+      "Stored paths as arrays of points",
+      "Event listeners for draw mode vs move mode",
+      "Separate state for editing vs drawing"
+    ],
+    "fixes": [
+      "Path flicker",
+      "Touch scrolling conflicts"
+    ],
+    "metrics": [
+      "Commits: 21",
+      "PRs: 2",
+      "Issues closed: 4"
+    ],
+    "next": [
+      "Presets",
+      "Export"
+    ]
+  },
+  {
+    "dateRange": "Sep 21 – Sep 27",
+    "title": "Export = real product energy",
+    "highlights": [
+      "PNG export works clean",
+      "Can share plays outside the app",
+      "First \"this could be used by teams\" moment"
+    ],
+    "shipped": [
+      "High-res export button",
+      "Auto-crop canvas",
+      "Filename formatting"
+    ],
+    "engineering": [
+      "Offscreen canvas render",
+      "Scaling logic for retina screens",
+      "Clean white background pass"
+    ],
+    "fixes": [
+      "Blurry exports",
+      "Cropped edges"
+    ],
+    "metrics": [
+      "Commits: 15",
+      "PRs: 1",
+      "Files changed: 5"
+    ],
+    "next": [
+      "Animation ideas",
+      "Playback research"
+    ]
+  },
+  {
+    "dateRange": "Sep 28 – Oct 4",
+    "title": "From drawing board → thinking like a game engine",
+    "highlights": [
+      "Decided plays shouldn't just be pictures — they should **run**",
+      "Invented the idea of timeline events (MOVE, PASS, etc.)",
+      "Architecture planning week (lots of whiteboard brain work)"
+    ],
+    "shipped": [
+      "Play data format draft",
+      "Saved plays as structured JSON",
+      "Internal \"timeline\" concept"
+    ],
+    "engineering": [
+      "Designed early `events[]` array",
+      "Each action becomes time-based instead of static",
+      "Began separating render vs logic layers"
+    ],
+    "fixes": [],
+    "metrics": [
+      "Commits: 10",
+      "PRs: 0",
+      "Mostly refactors"
+    ],
+    "next": [
+      "First animation prototype"
+    ]
+  },
+  {
+    "dateRange": "Oct 5 – Oct 11",
+    "title": "First movement animation (lowkey hype week)",
+    "highlights": [
+      "Players finally move automatically",
+      "First time hitting 60fps smooth motion",
+      "Looks like a mini basketball video game now"
+    ],
+    "shipped": [
+      "Basic playback loop",
+      "Linear interpolation between points",
+      "`tick()` frame engine",
+      "Start/stop functions"
+    ],
+    "engineering": [
+      "`requestAnimationFrame`",
+      "Delta-time updates",
+      "Position lerp math"
+    ],
+    "fixes": [
+      "Stutter on slower devices",
+      "Desync after long runs"
+    ],
+    "metrics": [
+      "Commits: 19",
+      "PRs: 2",
+      "Files changed: 7"
+    ],
+    "next": [
+      "Ball logic",
+      "Passing system"
+    ]
+  },
+  {
+    "dateRange": "Oct 12 – Oct 18",
+    "title": "Ball physics + possession brain",
+    "highlights": [
+      "Pass animations added",
+      "Ball now flies in arcs (not just teleport)",
+      "Possession switching works"
+    ],
+    "shipped": [
+      "Parabolic pass path",
+      "Ball object",
+      "Possession state",
+      "Delay timing between actions"
+    ],
+    "engineering": [
+      "Quadratic curve math for arc",
+      "`from → to` event structure",
+      "Locked user interaction during playback"
+    ],
+    "fixes": [
+      "Ball clipping through players",
+      "Double-pass bugs"
+    ],
+    "metrics": [
+      "Commits: 22",
+      "PRs: 2",
+      "Issues closed: 5"
+    ],
+    "next": [
+      "Clean UI",
+      "Better controls"
+    ]
+  },
+  {
+    "dateRange": "Oct 19 – Oct 25",
+    "title": "Refactor + adult engineering week",
+    "highlights": [
+      "Cleaned messy prototype code",
+      "Modularized playback system",
+      "Prepping for real feature scaling"
+    ],
+    "shipped": [
+      "Separated engine functions",
+      "Organized folders",
+      "Simplified state management"
+    ],
+    "engineering": [
+      "`startReplay() / stopReplay()`",
+      "Centralized timeline compiler",
+      "Removed duplicate render logic"
+    ],
+    "fixes": [],
+    "metrics": [
+      "Commits: 14",
+      "PRs: 1",
+      "Mostly refactor work"
+    ],
+    "next": [
+      "Official Playback MVP",
+      "UI controls"
+    ]
+  },
+  {
+    "dateRange": "Oct 26 – Nov 1",
+    "title": "Turning prototype into something launchable",
+    "highlights": [
+      "Playback stabilized enough to feel demo-ready",
+      "Timeline system cleaned up",
+      "Started thinking like: \"what would a coach actually click?\""
+    ],
+    "shipped": [
+      "Reset positions on stop",
+      "Better state restore",
+      "Cleaner initial layout"
+    ],
+    "engineering": [
+      "Snapshot system for starting positions",
+      "Replay rebuild on every run",
+      "Removed lingering ghost objects"
+    ],
+    "fixes": [
+      "Players stacking after stop",
+      "State not resetting correctly"
+    ],
+    "metrics": [
+      "Commits: 11",
+      "PRs: 1"
+    ],
+    "next": [
+      "Full Playback MVP push"
+    ]
+  },
+  {
+    "dateRange": "Nov 2 – Nov 8",
+    "title": "Playback Phase A — the BIG milestone",
+    "highlights": [
+      "Official first real **Run Play** feature",
+      "Players follow drawn routes automatically",
+      "Ball passes between teammates",
+      "This is when the app stopped being a drawing toy"
+    ],
+    "shipped": [
+      "RUN events",
+      "PASS events",
+      "Ball arc flight",
+      "60fps replay",
+      "Playback button"
+    ],
+    "engineering": [
+      "Compiled routes → animation segments",
+      "Nearest-player detection",
+      "Interaction disabled during playback"
+    ],
+    "fixes": [],
+    "metrics": [
+      "Commits: 27",
+      "PRs: 3",
+      "Files changed: 12"
+    ],
+    "next": [
+      "Pause / Resume",
+      "Controls bar"
+    ]
+  },
+  {
+    "dateRange": "Nov 9 – Nov 15",
+    "title": "Bug-fixing gauntlet",
+    "highlights": [
+      "Fixed 10+ weird edge cases",
+      "Timing bugs murdered",
+      "Stability massively improved"
+    ],
+    "shipped": [],
+    "engineering": [
+      "Defensive state guards",
+      "Clear ownership switching",
+      "Recompiled timeline on every run"
+    ],
+    "fixes": [
+      "Teleporting players",
+      "Double pass triggers",
+      "Playback freezing mid-run",
+      "Interaction during play"
+    ],
+    "metrics": [
+      "Commits: 20",
+      "Issues closed: 9"
+    ],
+    "next": [
+      "UX polish"
+    ]
+  },
+  {
+    "dateRange": "Nov 16 – Nov 22",
+    "title": "Make it feel smooth",
+    "highlights": [
+      "Movement looks cleaner",
+      "Less jitter",
+      "Less robotic"
+    ],
+    "shipped": [
+      "Path smoothing experiments",
+      "Speed normalization",
+      "Better frame timing"
+    ],
+    "engineering": [
+      "Segment sampling",
+      "Constant-speed approximation",
+      "Removed frame dependency"
+    ],
+    "fixes": [
+      "Fast/slow player drift",
+      "Path snapping"
+    ],
+    "metrics": [
+      "Commits: 16"
+    ],
+    "next": [
+      "Real playback controls"
+    ]
+  },
+  {
+    "dateRange": "Nov 23 – Nov 29",
+    "title": "Planning Phase B (Thanksgiving brain week)",
+    "highlights": [
+      "Designed proper replay bar UI",
+      "Planned seekbar + speed control",
+      "Thinking more like \"video player\""
+    ],
+    "shipped": [
+      "Control bar mockups",
+      "Timeline duration math",
+      "Playback architecture rewrite plan"
+    ],
+    "engineering": [
+      "`durationMs` calculations",
+      "Time-based replay (not frame-based)",
+      "Prep for seeking support"
+    ],
+    "fixes": [],
+    "metrics": [
+      "Commits: 9"
+    ],
+    "next": [
+      "Implement Phase B controls"
+    ]
+  },
+  {
+    "dateRange": "Jan 4 – Jan 10",
+    "title": "Back from break — tighten everything",
+    "highlights": [
+      "Stability-first week",
+      "Cleaned leftover weirdness from December",
+      "Playback now feels super consistent across devices"
+    ],
+    "shipped": [
+      "Minor UI polish",
+      "Reset logic improvements",
+      "Cleaner button behavior"
+    ],
+    "engineering": [
+      "Reduced redundant renders",
+      "Centralized replay state",
+      "Memory cleanup on stop"
+    ],
+    "fixes": [
+      "Rare freeze on multiple replays",
+      "Slight seekbar desync",
+      "Interaction leakage"
+    ],
+    "metrics": [
+      "Commits: 14",
+      "Issues closed: 6"
+    ],
+    "next": [
+      "Start adding intelligence, not just animation"
+    ]
+  },
+  {
+    "dateRange": "Jan 11 – Jan 17",
+    "title": "From animation → analysis (big brain week)",
+    "highlights": [
+      "Started designing scoring system",
+      "Thinking beyond visuals into **tactical intelligence**",
+      "First ideas for spacing/conflict metrics"
+    ],
+    "shipped": [
+      "Data model upgrades",
+      "Timeline compile improvements",
+      "Prep hooks for scoring"
+    ],
+    "engineering": [
+      "Structured PlayJSON more cleanly",
+      "Normalized coordinates (-1..1)",
+      "Easier math for evaluation",
+      "Added internal event tags"
+    ],
+    "fixes": [],
+    "metrics": [
+      "Commits: 17",
+      "PRs: 2"
+    ],
+    "next": [
+      "Rule-based scoring MVP"
+    ]
+  },
+  {
+    "dateRange": "Jan 18 – Jan 24",
+    "title": "Locked-in MVP energy (pre-Jan 25 Sunday)",
+    "highlights": [
+      "Playback fully stable",
+      "Timeline system battle-tested",
+      "Ready to build Phase C (Scoring + One-Click Run)"
+    ],
+    "shipped": [
+      "Performance tuning",
+      "Smoother playback at 2× speed",
+      "Final bug sweeps",
+      "Cleaner presets"
+    ],
+    "engineering": [
+      "Frame drop reduction",
+      "Seek accuracy improvements",
+      "State rebuild correctness",
+      "Small refactors to prep scoring engine"
+    ],
+    "fixes": [
+      "Rare possession glitch mid-seek",
+      "Speed switch hiccup",
+      "Stop → replay timing edge case"
+    ],
+    "metrics": [
+      "Commits: 22",
+      "PRs: 2",
+      "Files touched: a lot 😆"
+    ],
+    "next": []
+  },
+  {
+    "dateRange": "Apr 13 – Apr 19",
+    "title": "Cache freshness hardening + reliability cleanup",
+    "highlights": [
+      "Improved weekly GitHub cache freshness handling",
+      "Tightened fallback behavior for status/copy rendering",
+      "Focused on reliability and content freshness pipeline"
+    ],
+    "shipped": [
+      "Cache refresh workflow updates",
+      "Lifepage fallback status alignment fixes",
+      "Freshness window consistency fixes"
+    ],
+    "engineering": [
+      "Hardened local refresh logic for weekly windows",
+      "Reduced stale-state mismatch between cache timestamps and UI labels",
+      "Kept refresh outputs deterministic for automation runs"
+    ],
+    "fixes": [
+      "Fallback status copy mismatch",
+      "GitHub cache freshness alignment edge cases"
+    ],
+    "metrics": [
+      "Commits: 4",
+      "PRs: 0",
+      "Files changed: 9"
+    ],
+    "next": [
+      "Restore live GitHub API/connector access for non-local contribution counts",
+      "Continue weekly log + release automation with Sunday → Saturday windows"
+    ]
+  },
+  {
+    "dateRange": "Apr 20 – Apr 27",
+    "title": "Project hub refresh + education exporter drop",
+    "highlights": [
+      "Refreshed the project hub around current public GitHub data",
+      "Added CourseBinder Classroom AI Exporter and Practice Snapshot for Formative as first-class project cards",
+      "Rebuilt release/download cards so installable ZIPs are visible even before formal GitHub Releases exist"
+    ],
+    "shipped": [
+      "Live GitHub cache with 20 public repos, 3 stars, and 8 primary languages",
+      "Project slider ordering and repo links aligned with current renamed repos",
+      "Three new blog posts covering the GitHub refresh, education exporter drop, and April ship report"
+    ],
+    "engineering": [
+      "Added a GitHub live refresh script for repos, events, releases, meta, and weekly stats",
+      "Enriched public push events with commit messages from the commits API",
+      "Expanded dynamic More Projects pages beyond the first six cached repos"
+    ],
+    "fixes": [
+      "Old LifePage repo links pointing to My_portforlio",
+      "Old Destiny repo links pointing to the pre-rename repo",
+      "Release feed empty state when there were downloadable project drops but no formal GitHub Releases"
+    ],
+    "metrics": [
+      "Commits: 27",
+      "Active repos: 6",
+      "Repos tracked: 20",
+      "Release/download cards: 6"
+    ],
+    "next": [
+      "Publish real GitHub Releases for ZIP downloads",
+      "Add screenshots/videos to remaining GitHub archive project detail pages",
+      "Keep weekly news shorter while preserving shareable archive details"
+    ]
+  },
+  {
+    "weekStart": "2026-07-05",
+    "weekEnd": "2026-07-11",
+    "generatedAt": "2026-07-14T06:15:41.273Z",
+    "source": "github-weekly-automation",
+    "dateRange": "Jul 5 – 11",
+    "title": "Atrak Website and Hoops Highlights App moved the week forward.",
+    "highlights": [
+      "Atrak Website led public activity with 26 commits across 6 pushes.",
+      "2 public repositories were active across 66 GitHub events.",
+      "No formal GitHub release was published during this edition."
+    ],
+    "shipped": [
+      "streamline site interactions",
+      "redesign interactive site and harden 3d",
+      "redirect GuidePup project to immersive site",
+      "Remove proof wording from AI edit preset (#57)"
+    ],
+    "engineering": [
+      "20 pushes and 24 pull request updates were condensed into this edition.",
+      "Active stacks included HTML, Python.",
+      "The snapshot is stored permanently so the edition remains available after GitHub events expire."
+    ],
+    "fixes": [
+      "make three hero reliable on desktop",
+      "harden three hero startup",
+      "tighten hero headline"
+    ],
+    "metrics": [
+      "Commits: 48",
+      "Active repos: 2",
+      "Pull requests: 24",
+      "Issues: 1",
+      "Releases: 0"
+    ],
+    "next": [
+      "Continue the Atrak Website build and publish the next visible milestone.",
+      "Review the next automated edition after Sunday refresh."
+    ],
+    "stats": {
+      "commits": 48,
+      "activeRepositories": 2,
+      "pullRequests": 24,
+      "issues": 1,
+      "pushes": 20,
+      "releases": 0,
+      "events": 66
+    },
+    "repositories": [
+      {
+        "name": "Atrak Website",
+        "fullName": "charlie2233/atrak-website",
+        "url": "https://github.com/charlie2233/atrak-website",
+        "language": "HTML",
+        "commits": 26,
+        "pushes": 6,
+        "events": 6,
+        "pullRequests": 0,
+        "issues": 0,
+        "lastAt": "2026-07-11T06:51:04.000Z"
+      },
+      {
+        "name": "Hoops Highlights App",
+        "fullName": "charlie2233/rork-hoopshighlights-ai_Final",
+        "url": "https://github.com/charlie2233/rork-hoopshighlights-ai_Final",
+        "language": "Python",
+        "commits": 22,
+        "pushes": 14,
+        "events": 60,
+        "pullRequests": 24,
+        "issues": 1,
+        "lastAt": "2026-07-09T03:53:33.000Z"
+      }
+    ],
+    "releases": [],
+    "commitMessages": [
+      {
+        "repo": "charlie2233/atrak-website",
+        "text": "streamline site interactions",
+        "url": "https://github.com/charlie2233/atrak-website/commit/115bada15cdd7d6f94be5fce7896b1e2491fd857",
+        "at": "2026-07-11T06:51:01Z"
+      },
+      {
+        "repo": "charlie2233/atrak-website",
+        "text": "redesign interactive site and harden 3d",
+        "url": "https://github.com/charlie2233/atrak-website/commit/a5f8e4f459f8f8123395103410884aad692e06c2",
+        "at": "2026-07-11T06:44:00Z"
+      },
+      {
+        "repo": "charlie2233/atrak-website",
+        "text": "redirect GuidePup project to immersive site",
+        "url": "https://github.com/charlie2233/atrak-website/commit/9101f3b1090d40e2e3bf298a58b9124a2b61c7e5",
+        "at": "2026-07-11T06:41:32Z"
+      },
+      {
+        "repo": "charlie2233/rork-hoopshighlights-ai_Final",
+        "text": "Remove proof wording from AI edit preset (#57)",
+        "url": "https://github.com/charlie2233/rork-hoopshighlights-ai_Final/commit/725f6720407a2c295eed316e66437deb77442c3a",
+        "at": "2026-07-09T03:53:32Z"
+      },
+      {
+        "repo": "charlie2233/rork-hoopshighlights-ai_Final",
+        "text": "Record latest Apple signing blocker",
+        "url": "https://github.com/charlie2233/rork-hoopshighlights-ai_Final/commit/4e8d162495d3a283a77c8136917f6a09e037d525",
+        "at": "2026-07-06T03:33:49Z"
+      },
+      {
+        "repo": "charlie2233/rork-hoopshighlights-ai_Final",
+        "text": "Restore automatic TestFlight signing",
+        "url": "https://github.com/charlie2233/rork-hoopshighlights-ai_Final/commit/6a20f585c4e016c3bff96f0670678008556df34f",
+        "at": "2026-07-06T03:26:10Z"
+      },
+      {
+        "repo": "charlie2233/rork-hoopshighlights-ai_Final",
+        "text": "Scope TestFlight signing to app target",
+        "url": "https://github.com/charlie2233/rork-hoopshighlights-ai_Final/commit/2b14444b2d8162eeb03349aaf6fa9b03d487a111",
+        "at": "2026-07-06T03:17:24Z"
+      },
+      {
+        "repo": "charlie2233/rork-hoopshighlights-ai_Final",
+        "text": "Use distribution signing for TestFlight archive",
+        "url": "https://github.com/charlie2233/rork-hoopshighlights-ai_Final/commit/7d9fc525cbd0d9e29d9dbde322bbfdb2aca6ebf6",
+        "at": "2026-07-06T02:59:23Z"
+      },
+      {
+        "repo": "charlie2233/rork-hoopshighlights-ai_Final",
+        "text": "Record latest TestFlight upload blocker",
+        "url": "https://github.com/charlie2233/rork-hoopshighlights-ai_Final/commit/e14ba532ec769c39644c0cae9462947e7ee3642f",
+        "at": "2026-07-06T02:42:55Z"
+      },
+      {
+        "repo": "charlie2233/rork-hoopshighlights-ai_Final",
+        "text": "Clarify build 44 launch proof baseline",
+        "url": "https://github.com/charlie2233/rork-hoopshighlights-ai_Final/commit/a17dfb20af5cdebf1c6f21e726ae97af778faf45",
+        "at": "2026-07-05T22:25:27Z"
+      },
+      {
+        "repo": "charlie2233/rork-hoopshighlights-ai_Final",
+        "text": "Document build 44 TestFlight blocker",
+        "url": "https://github.com/charlie2233/rork-hoopshighlights-ai_Final/commit/0fc7507203173eb8b6b16a94293a8f3c3d8791f0",
+        "at": "2026-07-05T22:19:05Z"
+      },
+      {
+        "repo": "charlie2233/rork-hoopshighlights-ai_Final",
+        "text": "Bump iOS TestFlight build to 44",
+        "url": "https://github.com/charlie2233/rork-hoopshighlights-ai_Final/commit/7ab8bb0c03ddaf6da3a6f78ba17def9f5a6a38d8",
+        "at": "2026-07-05T22:03:18Z"
+      },
+      {
+        "repo": "charlie2233/rork-hoopshighlights-ai_Final",
+        "text": "Auto-dismiss Settings feedback banners",
+        "url": "https://github.com/charlie2233/rork-hoopshighlights-ai_Final/commit/d7667dc43c6c0bd580f3e95d3e0338d22390fbd3",
+        "at": "2026-07-05T21:44:47Z"
+      },
+      {
+        "repo": "charlie2233/rork-hoopshighlights-ai_Final",
+        "text": "Polish support copy for launch builds",
+        "url": "https://github.com/charlie2233/rork-hoopshighlights-ai_Final/commit/62ff66738da66e9598fc03f30196d579cbfe0fdb",
+        "at": "2026-07-05T21:19:05Z"
+      },
+      {
+        "repo": "charlie2233/rork-hoopshighlights-ai_Final",
+        "text": "Hide launch proof tools from app UI",
+        "url": "https://github.com/charlie2233/rork-hoopshighlights-ai_Final/commit/2a55512407b03c939ac23b1b091f1570083898a3",
+        "at": "2026-07-05T21:19:05Z"
+      },
+      {
+        "repo": "charlie2233/atrak-website",
+        "text": "make three hero reliable on desktop",
+        "url": "https://github.com/charlie2233/atrak-website/commit/530e1af737e3282d6ecab11f5d46455bab54c554",
+        "at": "2026-07-05T07:39:54Z"
+      },
+      {
+        "repo": "charlie2233/atrak-website",
+        "text": "harden three hero startup",
+        "url": "https://github.com/charlie2233/atrak-website/commit/6abc94a326daa39aa69a763e9a5da15c2f129f3f",
+        "at": "2026-07-05T07:15:02Z"
+      },
+      {
+        "repo": "charlie2233/atrak-website",
+        "text": "tighten hero headline",
+        "url": "https://github.com/charlie2233/atrak-website/commit/19fbd160d31c489617d5c4e66ab8aeb1caeab596",
+        "at": "2026-07-05T07:07:40Z"
+      }
+    ]
+  }
+]

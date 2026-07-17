@@ -28,6 +28,10 @@ Human-readable weekly development log organized chronologically.
 ### `data/weekly-history.json`
 Machine-readable JSON export of the weekly log, automatically generated from `WeeklyLog.txt`.
 
+### `data/weekly-log.json`
+Compatibility alias for the weekly history feed. It mirrors `data/weekly-history.json`
+so existing monitors and older links do not 404.
+
 **Schema:**
 ```json
 {
@@ -74,7 +78,7 @@ python3 parse_log.py
 2. Follow the consistent format of existing entries
 3. Add week separator `---` before and after
 4. Run `python3 parse_log.py` to regenerate JSON
-5. Verify output in `data/weekly-history.json`
+5. Verify output in `data/weekly-history.json` and `data/weekly-log.json`
 
 ### Best Practices
 
