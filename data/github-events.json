@@ -1,5 +1,70 @@
 [
   {
+    "id": "15128831491",
+    "type": "PushEvent",
+    "actor": {
+      "id": 117957000,
+      "login": "charlie2233",
+      "display_login": "charlie2233",
+      "gravatar_id": "",
+      "url": "https://api.github.com/users/charlie2233",
+      "avatar_url": "https://avatars.githubusercontent.com/u/117957000?"
+    },
+    "repo": {
+      "id": 1231252582,
+      "name": "charlie2233/GBC_HuskiesWeb",
+      "url": "https://api.github.com/repos/charlie2233/GBC_HuskiesWeb"
+    },
+    "payload": {
+      "repository_id": 1231252582,
+      "push_id": 37418811567,
+      "ref": "refs/heads/main",
+      "head": "0857c23a82af3cce135fb1a6ad74e83cfb08a48c",
+      "before": "0258676b333df330474c42bf230634cb2e6e11ca",
+      "distinct_size": 2,
+      "commits": [
+        {
+          "sha": "0857c23a82af3cce135fb1a6ad74e83cfb08a48c",
+          "message": "docs: record vegas championship deployment",
+          "url": "https://github.com/charlie2233/GBC_HuskiesWeb/commit/0857c23a82af3cce135fb1a6ad74e83cfb08a48c"
+        },
+        {
+          "sha": "0258676b333df330474c42bf230634cb2e6e11ca",
+          "message": "feat: celebrate vegas live s1 championship",
+          "url": "https://github.com/charlie2233/GBC_HuskiesWeb/commit/0258676b333df330474c42bf230634cb2e6e11ca"
+        }
+      ]
+    },
+    "public": true,
+    "created_at": "2026-07-16T18:43:35Z"
+  },
+  {
+    "id": "15128363352",
+    "type": "PushEvent",
+    "actor": {
+      "id": 117957000,
+      "login": "charlie2233",
+      "display_login": "charlie2233",
+      "gravatar_id": "",
+      "url": "https://api.github.com/users/charlie2233",
+      "avatar_url": "https://avatars.githubusercontent.com/u/117957000?"
+    },
+    "repo": {
+      "id": 1231252582,
+      "name": "charlie2233/GBC_HuskiesWeb",
+      "url": "https://api.github.com/repos/charlie2233/GBC_HuskiesWeb"
+    },
+    "payload": {
+      "repository_id": 1231252582,
+      "push_id": 37418339423,
+      "ref": "refs/heads/main",
+      "head": "0258676b333df330474c42bf230634cb2e6e11ca",
+      "before": "bd4262c8b7b3e98395e2afae54efa250c64255f5"
+    },
+    "public": true,
+    "created_at": "2026-07-16T18:35:33Z"
+  },
+  {
     "id": "15122895386",
     "type": "DeleteEvent",
     "actor": {
@@ -46,8 +111,13 @@
       "ref": "refs/heads/main",
       "head": "42b695baf69805247452fe8e33c803f96553c8a3",
       "before": "541304dffb9645918be844c0c57b057d1f9f74cd",
-      "distinct_size": 39,
+      "distinct_size": 40,
       "commits": [
+        {
+          "sha": "3bc68f22926935eb1243b005211b0c3d40757673",
+          "message": "chore: update GitHub data [skip ci]",
+          "url": "https://github.com/charlie2233/atrak-website/commit/3bc68f22926935eb1243b005211b0c3d40757673"
+        },
         {
           "sha": "42b695baf69805247452fe8e33c803f96553c8a3",
           "message": "feat: harden AccessCourt for phones (#13)",
@@ -142,11 +212,6 @@
           "sha": "c999aecfe2b6da2fb0597c761e0661fc05be0a77",
           "message": "fix: fail closed on weekly data auth",
           "url": "https://github.com/charlie2233/atrak-website/commit/c999aecfe2b6da2fb0597c761e0661fc05be0a77"
-        },
-        {
-          "sha": "43ed0262861b9e08da3b49ef21d13e53f4aea85b",
-          "message": "chore: renew weekly log [skip ci]",
-          "url": "https://github.com/charlie2233/atrak-website/commit/43ed0262861b9e08da3b49ef21d13e53f4aea85b"
         }
       ]
     },
@@ -273,31 +338,6 @@
     "created_at": "2026-07-16T17:05:43Z"
   },
   {
-    "id": "15084875954",
-    "type": "DeleteEvent",
-    "actor": {
-      "id": 117957000,
-      "login": "charlie2233",
-      "display_login": "charlie2233",
-      "gravatar_id": "",
-      "url": "https://api.github.com/users/charlie2233",
-      "avatar_url": "https://avatars.githubusercontent.com/u/117957000?"
-    },
-    "repo": {
-      "id": 1140388078,
-      "name": "charlie2233/atrak-website",
-      "url": "https://api.github.com/repos/charlie2233/atrak-website"
-    },
-    "payload": {
-      "ref": "agent/accesscourt-project-ecosystem",
-      "ref_type": "branch",
-      "full_ref": "refs/heads/agent/accesscourt-project-ecosystem",
-      "pusher_type": "user"
-    },
-    "public": true,
-    "created_at": "2026-07-16T07:22:24Z"
-  },
-  {
     "id": "15084875353",
     "type": "PushEvent",
     "actor": {
@@ -322,6 +362,31 @@
     },
     "public": true,
     "created_at": "2026-07-16T07:22:23Z"
+  },
+  {
+    "id": "15084875954",
+    "type": "DeleteEvent",
+    "actor": {
+      "id": 117957000,
+      "login": "charlie2233",
+      "display_login": "charlie2233",
+      "gravatar_id": "",
+      "url": "https://api.github.com/users/charlie2233",
+      "avatar_url": "https://avatars.githubusercontent.com/u/117957000?"
+    },
+    "repo": {
+      "id": 1140388078,
+      "name": "charlie2233/atrak-website",
+      "url": "https://api.github.com/repos/charlie2233/atrak-website"
+    },
+    "payload": {
+      "ref": "agent/accesscourt-project-ecosystem",
+      "ref_type": "branch",
+      "full_ref": "refs/heads/agent/accesscourt-project-ecosystem",
+      "pusher_type": "user"
+    },
+    "public": true,
+    "created_at": "2026-07-16T07:22:24Z"
   },
   {
     "id": "11861968635",
