@@ -1,5 +1,204 @@
 [
   {
+    "id": "15150434604",
+    "type": "PushEvent",
+    "actor": {
+      "id": 117957000,
+      "login": "charlie2233",
+      "display_login": "charlie2233",
+      "gravatar_id": "",
+      "url": "https://api.github.com/users/charlie2233",
+      "avatar_url": "https://avatars.githubusercontent.com/u/117957000?"
+    },
+    "repo": {
+      "id": 1231252582,
+      "name": "charlie2233/GBC_HuskiesWeb",
+      "url": "https://api.github.com/repos/charlie2233/GBC_HuskiesWeb"
+    },
+    "payload": {
+      "repository_id": 1231252582,
+      "push_id": 37440595234,
+      "ref": "refs/heads/main",
+      "head": "37336682bac58fecdb4625e3ae007af956995d7c",
+      "before": "928152e47e204613b31d50f4d041e81c99a5f0c5",
+      "distinct_size": 8,
+      "commits": [
+        {
+          "sha": "37336682bac58fecdb4625e3ae007af956995d7c",
+          "message": "docs: record team card deployment",
+          "url": "https://github.com/charlie2233/GBC_HuskiesWeb/commit/37336682bac58fecdb4625e3ae007af956995d7c"
+        },
+        {
+          "sha": "928152e47e204613b31d50f4d041e81c99a5f0c5",
+          "message": "feat: add homepage team opportunities card",
+          "url": "https://github.com/charlie2233/GBC_HuskiesWeb/commit/928152e47e204613b31d50f4d041e81c99a5f0c5"
+        },
+        {
+          "sha": "25b2900b0ad05068903ecde700c62c208c9c27e9",
+          "message": "docs: record calendar-free deployment",
+          "url": "https://github.com/charlie2233/GBC_HuskiesWeb/commit/25b2900b0ad05068903ecde700c62c208c9c27e9"
+        },
+        {
+          "sha": "8a10836c707e5ff5aeaea1cb94cae171c9a37f10",
+          "message": "fix: remove all calendar and schedule UI",
+          "url": "https://github.com/charlie2233/GBC_HuskiesWeb/commit/8a10836c707e5ff5aeaea1cb94cae171c9a37f10"
+        },
+        {
+          "sha": "ade7038b072856dddd576b4bc64d627dfb204aae",
+          "message": "docs: record homepage calendar deployment",
+          "url": "https://github.com/charlie2233/GBC_HuskiesWeb/commit/ade7038b072856dddd576b4bc64d627dfb204aae"
+        },
+        {
+          "sha": "03326521d3c878e63a017fcd8af6c33c28b44d49",
+          "message": "fix: remove homepage calendar overlay",
+          "url": "https://github.com/charlie2233/GBC_HuskiesWeb/commit/03326521d3c878e63a017fcd8af6c33c28b44d49"
+        },
+        {
+          "sha": "0857c23a82af3cce135fb1a6ad74e83cfb08a48c",
+          "message": "docs: record vegas championship deployment",
+          "url": "https://github.com/charlie2233/GBC_HuskiesWeb/commit/0857c23a82af3cce135fb1a6ad74e83cfb08a48c"
+        },
+        {
+          "sha": "0258676b333df330474c42bf230634cb2e6e11ca",
+          "message": "feat: celebrate vegas live s1 championship",
+          "url": "https://github.com/charlie2233/GBC_HuskiesWeb/commit/0258676b333df330474c42bf230634cb2e6e11ca"
+        }
+      ]
+    },
+    "public": true,
+    "created_at": "2026-07-17T03:13:54Z"
+  },
+  {
+    "id": "15150343105",
+    "type": "PushEvent",
+    "actor": {
+      "id": 117957000,
+      "login": "charlie2233",
+      "display_login": "charlie2233",
+      "gravatar_id": "",
+      "url": "https://api.github.com/users/charlie2233",
+      "avatar_url": "https://avatars.githubusercontent.com/u/117957000?"
+    },
+    "repo": {
+      "id": 1231252582,
+      "name": "charlie2233/GBC_HuskiesWeb",
+      "url": "https://api.github.com/repos/charlie2233/GBC_HuskiesWeb"
+    },
+    "payload": {
+      "repository_id": 1231252582,
+      "push_id": 37440503328,
+      "ref": "refs/heads/main",
+      "head": "928152e47e204613b31d50f4d041e81c99a5f0c5",
+      "before": "25b2900b0ad05068903ecde700c62c208c9c27e9"
+    },
+    "public": true,
+    "created_at": "2026-07-17T03:11:22Z"
+  },
+  {
+    "id": "15150081197",
+    "type": "PushEvent",
+    "actor": {
+      "id": 117957000,
+      "login": "charlie2233",
+      "display_login": "charlie2233",
+      "gravatar_id": "",
+      "url": "https://api.github.com/users/charlie2233",
+      "avatar_url": "https://avatars.githubusercontent.com/u/117957000?"
+    },
+    "repo": {
+      "id": 1231252582,
+      "name": "charlie2233/GBC_HuskiesWeb",
+      "url": "https://api.github.com/repos/charlie2233/GBC_HuskiesWeb"
+    },
+    "payload": {
+      "repository_id": 1231252582,
+      "push_id": 37440239984,
+      "ref": "refs/heads/main",
+      "head": "25b2900b0ad05068903ecde700c62c208c9c27e9",
+      "before": "8a10836c707e5ff5aeaea1cb94cae171c9a37f10"
+    },
+    "public": true,
+    "created_at": "2026-07-17T03:04:05Z"
+  },
+  {
+    "id": "15149962218",
+    "type": "PushEvent",
+    "actor": {
+      "id": 117957000,
+      "login": "charlie2233",
+      "display_login": "charlie2233",
+      "gravatar_id": "",
+      "url": "https://api.github.com/users/charlie2233",
+      "avatar_url": "https://avatars.githubusercontent.com/u/117957000?"
+    },
+    "repo": {
+      "id": 1231252582,
+      "name": "charlie2233/GBC_HuskiesWeb",
+      "url": "https://api.github.com/repos/charlie2233/GBC_HuskiesWeb"
+    },
+    "payload": {
+      "repository_id": 1231252582,
+      "push_id": 37440120117,
+      "ref": "refs/heads/main",
+      "head": "8a10836c707e5ff5aeaea1cb94cae171c9a37f10",
+      "before": "ade7038b072856dddd576b4bc64d627dfb204aae"
+    },
+    "public": true,
+    "created_at": "2026-07-17T03:01:09Z"
+  },
+  {
+    "id": "15149736555",
+    "type": "PushEvent",
+    "actor": {
+      "id": 117957000,
+      "login": "charlie2233",
+      "display_login": "charlie2233",
+      "gravatar_id": "",
+      "url": "https://api.github.com/users/charlie2233",
+      "avatar_url": "https://avatars.githubusercontent.com/u/117957000?"
+    },
+    "repo": {
+      "id": 1231252582,
+      "name": "charlie2233/GBC_HuskiesWeb",
+      "url": "https://api.github.com/repos/charlie2233/GBC_HuskiesWeb"
+    },
+    "payload": {
+      "repository_id": 1231252582,
+      "push_id": 37439892859,
+      "ref": "refs/heads/main",
+      "head": "ade7038b072856dddd576b4bc64d627dfb204aae",
+      "before": "03326521d3c878e63a017fcd8af6c33c28b44d49"
+    },
+    "public": true,
+    "created_at": "2026-07-17T02:55:07Z"
+  },
+  {
+    "id": "15149603267",
+    "type": "PushEvent",
+    "actor": {
+      "id": 117957000,
+      "login": "charlie2233",
+      "display_login": "charlie2233",
+      "gravatar_id": "",
+      "url": "https://api.github.com/users/charlie2233",
+      "avatar_url": "https://avatars.githubusercontent.com/u/117957000?"
+    },
+    "repo": {
+      "id": 1231252582,
+      "name": "charlie2233/GBC_HuskiesWeb",
+      "url": "https://api.github.com/repos/charlie2233/GBC_HuskiesWeb"
+    },
+    "payload": {
+      "repository_id": 1231252582,
+      "push_id": 37439759122,
+      "ref": "refs/heads/main",
+      "head": "03326521d3c878e63a017fcd8af6c33c28b44d49",
+      "before": "0857c23a82af3cce135fb1a6ad74e83cfb08a48c"
+    },
+    "public": true,
+    "created_at": "2026-07-17T02:51:22Z"
+  },
+  {
     "id": "15128831491",
     "type": "PushEvent",
     "actor": {
@@ -20,20 +219,7 @@
       "push_id": 37418811567,
       "ref": "refs/heads/main",
       "head": "0857c23a82af3cce135fb1a6ad74e83cfb08a48c",
-      "before": "0258676b333df330474c42bf230634cb2e6e11ca",
-      "distinct_size": 2,
-      "commits": [
-        {
-          "sha": "0857c23a82af3cce135fb1a6ad74e83cfb08a48c",
-          "message": "docs: record vegas championship deployment",
-          "url": "https://github.com/charlie2233/GBC_HuskiesWeb/commit/0857c23a82af3cce135fb1a6ad74e83cfb08a48c"
-        },
-        {
-          "sha": "0258676b333df330474c42bf230634cb2e6e11ca",
-          "message": "feat: celebrate vegas live s1 championship",
-          "url": "https://github.com/charlie2233/GBC_HuskiesWeb/commit/0258676b333df330474c42bf230634cb2e6e11ca"
-        }
-      ]
+      "before": "0258676b333df330474c42bf230634cb2e6e11ca"
     },
     "public": true,
     "created_at": "2026-07-16T18:43:35Z"
@@ -113,6 +299,11 @@
       "before": "541304dffb9645918be844c0c57b057d1f9f74cd",
       "distinct_size": 40,
       "commits": [
+        {
+          "sha": "334ee86c7e973b6652019cc85f5904408fd695ed",
+          "message": "chore: update GitHub data [skip ci]",
+          "url": "https://github.com/charlie2233/atrak-website/commit/334ee86c7e973b6652019cc85f5904408fd695ed"
+        },
         {
           "sha": "3bc68f22926935eb1243b005211b0c3d40757673",
           "message": "chore: update GitHub data [skip ci]",
@@ -207,11 +398,6 @@
           "sha": "ae4e969ef6016cb91ce2032c1308006c0f4f5de8",
           "message": "chore: update GitHub data [skip ci]",
           "url": "https://github.com/charlie2233/atrak-website/commit/ae4e969ef6016cb91ce2032c1308006c0f4f5de8"
-        },
-        {
-          "sha": "c999aecfe2b6da2fb0597c761e0661fc05be0a77",
-          "message": "fix: fail closed on weekly data auth",
-          "url": "https://github.com/charlie2233/atrak-website/commit/c999aecfe2b6da2fb0597c761e0661fc05be0a77"
         }
       ]
     },
