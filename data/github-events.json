@@ -1,6 +1,135 @@
 [
   {
-    "id": "15150434604",
+    "id": "15200058863",
+    "type": "PushEvent",
+    "actor": {
+      "id": 117957000,
+      "login": "charlie2233",
+      "display_login": "charlie2233",
+      "gravatar_id": "",
+      "url": "https://api.github.com/users/charlie2233",
+      "avatar_url": "https://avatars.githubusercontent.com/u/117957000?"
+    },
+    "repo": {
+      "id": 1140388078,
+      "name": "charlie2233/atrak-website",
+      "url": "https://api.github.com/repos/charlie2233/atrak-website"
+    },
+    "payload": {
+      "repository_id": 1140388078,
+      "push_id": 37490777089,
+      "ref": "refs/heads/main",
+      "head": "1024bdb9ac49f4bfbf8b0bd812c507a403fdd60a",
+      "before": "24e98dff35edc760e080491c1295e028bc520b22",
+      "distinct_size": 41,
+      "commits": [
+        {
+          "sha": "1024bdb9ac49f4bfbf8b0bd812c507a403fdd60a",
+          "message": "fix: refresh weekly cache and restore weekly log alias",
+          "url": "https://github.com/charlie2233/atrak-website/commit/1024bdb9ac49f4bfbf8b0bd812c507a403fdd60a"
+        },
+        {
+          "sha": "24e98dff35edc760e080491c1295e028bc520b22",
+          "message": "chore: update GitHub data [skip ci]",
+          "url": "https://github.com/charlie2233/atrak-website/commit/24e98dff35edc760e080491c1295e028bc520b22"
+        },
+        {
+          "sha": "334ee86c7e973b6652019cc85f5904408fd695ed",
+          "message": "chore: update GitHub data [skip ci]",
+          "url": "https://github.com/charlie2233/atrak-website/commit/334ee86c7e973b6652019cc85f5904408fd695ed"
+        },
+        {
+          "sha": "3bc68f22926935eb1243b005211b0c3d40757673",
+          "message": "chore: update GitHub data [skip ci]",
+          "url": "https://github.com/charlie2233/atrak-website/commit/3bc68f22926935eb1243b005211b0c3d40757673"
+        },
+        {
+          "sha": "42b695baf69805247452fe8e33c803f96553c8a3",
+          "message": "feat: harden AccessCourt for phones (#13)",
+          "url": "https://github.com/charlie2233/atrak-website/commit/42b695baf69805247452fe8e33c803f96553c8a3"
+        },
+        {
+          "sha": "541304dffb9645918be844c0c57b057d1f9f74cd",
+          "message": "chore: update GitHub data [skip ci]",
+          "url": "https://github.com/charlie2233/atrak-website/commit/541304dffb9645918be844c0c57b057d1f9f74cd"
+        },
+        {
+          "sha": "57f1a0c2efa9f9e253cf217a2cc7dd2f9a8006b6",
+          "message": "chore: update GitHub data [skip ci]",
+          "url": "https://github.com/charlie2233/atrak-website/commit/57f1a0c2efa9f9e253cf217a2cc7dd2f9a8006b6"
+        },
+        {
+          "sha": "1f6c1e878e0c522327843df3126eefaaceb6fcb5",
+          "message": "Connect AccessCourt to the Atrak project ecosystem (#12)",
+          "url": "https://github.com/charlie2233/atrak-website/commit/1f6c1e878e0c522327843df3126eefaaceb6fcb5"
+        },
+        {
+          "sha": "912c612701a64225727c08b1612707698b8e7ae9",
+          "message": "chore: update GitHub data [skip ci]",
+          "url": "https://github.com/charlie2233/atrak-website/commit/912c612701a64225727c08b1612707698b8e7ae9"
+        },
+        {
+          "sha": "2ae1cacec83ee07aab261f4986a7bdadc19c24fe",
+          "message": "Connect Atrak and AccessCourt navigation (#11)",
+          "url": "https://github.com/charlie2233/atrak-website/commit/2ae1cacec83ee07aab261f4986a7bdadc19c24fe"
+        },
+        {
+          "sha": "79ead1ea8df7713b65212a52f4e7df05f61142e2",
+          "message": "chore: update GitHub data [skip ci]",
+          "url": "https://github.com/charlie2233/atrak-website/commit/79ead1ea8df7713b65212a52f4e7df05f61142e2"
+        },
+        {
+          "sha": "8042bcd38e7a9d11e5ef042ca113a64e4ad39e38",
+          "message": "feat: launch AccessCourt impact microsite (#10)",
+          "url": "https://github.com/charlie2233/atrak-website/commit/8042bcd38e7a9d11e5ef042ca113a64e4ad39e38"
+        },
+        {
+          "sha": "99c17dc6e1d3a4d37e1e6985bead043c4ad0376c",
+          "message": "chore: update GitHub data [skip ci]",
+          "url": "https://github.com/charlie2233/atrak-website/commit/99c17dc6e1d3a4d37e1e6985bead043c4ad0376c"
+        },
+        {
+          "sha": "ffe3c4a61e3b325e043f54eedac2513742b0a3c9",
+          "message": "chore: update GitHub data [skip ci]",
+          "url": "https://github.com/charlie2233/atrak-website/commit/ffe3c4a61e3b325e043f54eedac2513742b0a3c9"
+        },
+        {
+          "sha": "551d2959db810d581943043c37c4142779393456",
+          "message": "chore: update GitHub data [skip ci]",
+          "url": "https://github.com/charlie2233/atrak-website/commit/551d2959db810d581943043c37c4142779393456"
+        },
+        {
+          "sha": "89dbb9e2cf3d26465a0aa257b7ac9aff2dc01025",
+          "message": "chore: update GitHub data [skip ci]",
+          "url": "https://github.com/charlie2233/atrak-website/commit/89dbb9e2cf3d26465a0aa257b7ac9aff2dc01025"
+        },
+        {
+          "sha": "c3da7d94305fce692aafd3909bd14364d3768d65",
+          "message": "feat: expand weekly editorial and trends",
+          "url": "https://github.com/charlie2233/atrak-website/commit/c3da7d94305fce692aafd3909bd14364d3768d65"
+        },
+        {
+          "sha": "98a5d60b5bcddcc5ea470a2a4dd104ee9bc594a1",
+          "message": "chore: update GitHub data [skip ci]",
+          "url": "https://github.com/charlie2233/atrak-website/commit/98a5d60b5bcddcc5ea470a2a4dd104ee9bc594a1"
+        },
+        {
+          "sha": "b8880e982465bde3d1d06741a42ca5a95186bc0c",
+          "message": "chore: update GitHub data [skip ci]",
+          "url": "https://github.com/charlie2233/atrak-website/commit/b8880e982465bde3d1d06741a42ca5a95186bc0c"
+        },
+        {
+          "sha": "e00a7b5419eb0bb598d27f8e5beef683e9ed9b00",
+          "message": "fix: authenticate GitHub data refresh fallback",
+          "url": "https://github.com/charlie2233/atrak-website/commit/e00a7b5419eb0bb598d27f8e5beef683e9ed9b00"
+        }
+      ]
+    },
+    "public": true,
+    "created_at": "2026-07-17T18:04:39Z"
+  },
+  {
+    "id": "15190393646",
     "type": "PushEvent",
     "actor": {
       "id": 117957000,
@@ -17,12 +146,32 @@
     },
     "payload": {
       "repository_id": 1231252582,
-      "push_id": 37440595234,
+      "push_id": 37481070439,
       "ref": "refs/heads/main",
-      "head": "37336682bac58fecdb4625e3ae007af956995d7c",
-      "before": "928152e47e204613b31d50f4d041e81c99a5f0c5",
-      "distinct_size": 8,
+      "head": "f060c72a62cf64c7603bf9ceb8ccf4e0fabdb65a",
+      "before": "b2394975fb2877db0db1adf11faeee35882ebd7f",
+      "distinct_size": 12,
       "commits": [
+        {
+          "sha": "f060c72a62cf64c7603bf9ceb8ccf4e0fabdb65a",
+          "message": "docs: record corrected Fresno expansion deploy",
+          "url": "https://github.com/charlie2233/GBC_HuskiesWeb/commit/f060c72a62cf64c7603bf9ceb8ccf4e0fabdb65a"
+        },
+        {
+          "sha": "b2394975fb2877db0db1adf11faeee35882ebd7f",
+          "message": "fix: clarify Fresno area expansion update",
+          "url": "https://github.com/charlie2233/GBC_HuskiesWeb/commit/b2394975fb2877db0db1adf11faeee35882ebd7f"
+        },
+        {
+          "sha": "12a068466309f17a1c1926b89d6afefe6c15f403",
+          "message": "docs: record Fresno announcement deployment",
+          "url": "https://github.com/charlie2233/GBC_HuskiesWeb/commit/12a068466309f17a1c1926b89d6afefe6c15f403"
+        },
+        {
+          "sha": "0c81e9fd8b95be3b7016216d94143ca249e994e0",
+          "message": "feat: add tentative Fresno expansion update",
+          "url": "https://github.com/charlie2233/GBC_HuskiesWeb/commit/0c81e9fd8b95be3b7016216d94143ca249e994e0"
+        },
         {
           "sha": "37336682bac58fecdb4625e3ae007af956995d7c",
           "message": "docs: record team card deployment",
@@ -64,6 +213,110 @@
           "url": "https://github.com/charlie2233/GBC_HuskiesWeb/commit/0258676b333df330474c42bf230634cb2e6e11ca"
         }
       ]
+    },
+    "public": true,
+    "created_at": "2026-07-17T15:16:52Z"
+  },
+  {
+    "id": "15190192483",
+    "type": "PushEvent",
+    "actor": {
+      "id": 117957000,
+      "login": "charlie2233",
+      "display_login": "charlie2233",
+      "gravatar_id": "",
+      "url": "https://api.github.com/users/charlie2233",
+      "avatar_url": "https://avatars.githubusercontent.com/u/117957000?"
+    },
+    "repo": {
+      "id": 1231252582,
+      "name": "charlie2233/GBC_HuskiesWeb",
+      "url": "https://api.github.com/repos/charlie2233/GBC_HuskiesWeb"
+    },
+    "payload": {
+      "repository_id": 1231252582,
+      "push_id": 37480867813,
+      "ref": "refs/heads/main",
+      "head": "b2394975fb2877db0db1adf11faeee35882ebd7f",
+      "before": "12a068466309f17a1c1926b89d6afefe6c15f403"
+    },
+    "public": true,
+    "created_at": "2026-07-17T15:13:38Z"
+  },
+  {
+    "id": "15189432920",
+    "type": "PushEvent",
+    "actor": {
+      "id": 117957000,
+      "login": "charlie2233",
+      "display_login": "charlie2233",
+      "gravatar_id": "",
+      "url": "https://api.github.com/users/charlie2233",
+      "avatar_url": "https://avatars.githubusercontent.com/u/117957000?"
+    },
+    "repo": {
+      "id": 1231252582,
+      "name": "charlie2233/GBC_HuskiesWeb",
+      "url": "https://api.github.com/repos/charlie2233/GBC_HuskiesWeb"
+    },
+    "payload": {
+      "repository_id": 1231252582,
+      "push_id": 37480104345,
+      "ref": "refs/heads/main",
+      "head": "12a068466309f17a1c1926b89d6afefe6c15f403",
+      "before": "0c81e9fd8b95be3b7016216d94143ca249e994e0"
+    },
+    "public": true,
+    "created_at": "2026-07-17T15:01:45Z"
+  },
+  {
+    "id": "15189175992",
+    "type": "PushEvent",
+    "actor": {
+      "id": 117957000,
+      "login": "charlie2233",
+      "display_login": "charlie2233",
+      "gravatar_id": "",
+      "url": "https://api.github.com/users/charlie2233",
+      "avatar_url": "https://avatars.githubusercontent.com/u/117957000?"
+    },
+    "repo": {
+      "id": 1231252582,
+      "name": "charlie2233/GBC_HuskiesWeb",
+      "url": "https://api.github.com/repos/charlie2233/GBC_HuskiesWeb"
+    },
+    "payload": {
+      "repository_id": 1231252582,
+      "push_id": 37479845282,
+      "ref": "refs/heads/main",
+      "head": "0c81e9fd8b95be3b7016216d94143ca249e994e0",
+      "before": "37336682bac58fecdb4625e3ae007af956995d7c"
+    },
+    "public": true,
+    "created_at": "2026-07-17T14:57:53Z"
+  },
+  {
+    "id": "15150434604",
+    "type": "PushEvent",
+    "actor": {
+      "id": 117957000,
+      "login": "charlie2233",
+      "display_login": "charlie2233",
+      "gravatar_id": "",
+      "url": "https://api.github.com/users/charlie2233",
+      "avatar_url": "https://avatars.githubusercontent.com/u/117957000?"
+    },
+    "repo": {
+      "id": 1231252582,
+      "name": "charlie2233/GBC_HuskiesWeb",
+      "url": "https://api.github.com/repos/charlie2233/GBC_HuskiesWeb"
+    },
+    "payload": {
+      "repository_id": 1231252582,
+      "push_id": 37440595234,
+      "ref": "refs/heads/main",
+      "head": "37336682bac58fecdb4625e3ae007af956995d7c",
+      "before": "928152e47e204613b31d50f4d041e81c99a5f0c5"
     },
     "public": true,
     "created_at": "2026-07-17T03:13:54Z"
@@ -296,110 +549,7 @@
       "push_id": 37412825532,
       "ref": "refs/heads/main",
       "head": "42b695baf69805247452fe8e33c803f96553c8a3",
-      "before": "541304dffb9645918be844c0c57b057d1f9f74cd",
-      "distinct_size": 40,
-      "commits": [
-        {
-          "sha": "334ee86c7e973b6652019cc85f5904408fd695ed",
-          "message": "chore: update GitHub data [skip ci]",
-          "url": "https://github.com/charlie2233/atrak-website/commit/334ee86c7e973b6652019cc85f5904408fd695ed"
-        },
-        {
-          "sha": "3bc68f22926935eb1243b005211b0c3d40757673",
-          "message": "chore: update GitHub data [skip ci]",
-          "url": "https://github.com/charlie2233/atrak-website/commit/3bc68f22926935eb1243b005211b0c3d40757673"
-        },
-        {
-          "sha": "42b695baf69805247452fe8e33c803f96553c8a3",
-          "message": "feat: harden AccessCourt for phones (#13)",
-          "url": "https://github.com/charlie2233/atrak-website/commit/42b695baf69805247452fe8e33c803f96553c8a3"
-        },
-        {
-          "sha": "541304dffb9645918be844c0c57b057d1f9f74cd",
-          "message": "chore: update GitHub data [skip ci]",
-          "url": "https://github.com/charlie2233/atrak-website/commit/541304dffb9645918be844c0c57b057d1f9f74cd"
-        },
-        {
-          "sha": "57f1a0c2efa9f9e253cf217a2cc7dd2f9a8006b6",
-          "message": "chore: update GitHub data [skip ci]",
-          "url": "https://github.com/charlie2233/atrak-website/commit/57f1a0c2efa9f9e253cf217a2cc7dd2f9a8006b6"
-        },
-        {
-          "sha": "1f6c1e878e0c522327843df3126eefaaceb6fcb5",
-          "message": "Connect AccessCourt to the Atrak project ecosystem (#12)",
-          "url": "https://github.com/charlie2233/atrak-website/commit/1f6c1e878e0c522327843df3126eefaaceb6fcb5"
-        },
-        {
-          "sha": "912c612701a64225727c08b1612707698b8e7ae9",
-          "message": "chore: update GitHub data [skip ci]",
-          "url": "https://github.com/charlie2233/atrak-website/commit/912c612701a64225727c08b1612707698b8e7ae9"
-        },
-        {
-          "sha": "2ae1cacec83ee07aab261f4986a7bdadc19c24fe",
-          "message": "Connect Atrak and AccessCourt navigation (#11)",
-          "url": "https://github.com/charlie2233/atrak-website/commit/2ae1cacec83ee07aab261f4986a7bdadc19c24fe"
-        },
-        {
-          "sha": "79ead1ea8df7713b65212a52f4e7df05f61142e2",
-          "message": "chore: update GitHub data [skip ci]",
-          "url": "https://github.com/charlie2233/atrak-website/commit/79ead1ea8df7713b65212a52f4e7df05f61142e2"
-        },
-        {
-          "sha": "8042bcd38e7a9d11e5ef042ca113a64e4ad39e38",
-          "message": "feat: launch AccessCourt impact microsite (#10)",
-          "url": "https://github.com/charlie2233/atrak-website/commit/8042bcd38e7a9d11e5ef042ca113a64e4ad39e38"
-        },
-        {
-          "sha": "99c17dc6e1d3a4d37e1e6985bead043c4ad0376c",
-          "message": "chore: update GitHub data [skip ci]",
-          "url": "https://github.com/charlie2233/atrak-website/commit/99c17dc6e1d3a4d37e1e6985bead043c4ad0376c"
-        },
-        {
-          "sha": "ffe3c4a61e3b325e043f54eedac2513742b0a3c9",
-          "message": "chore: update GitHub data [skip ci]",
-          "url": "https://github.com/charlie2233/atrak-website/commit/ffe3c4a61e3b325e043f54eedac2513742b0a3c9"
-        },
-        {
-          "sha": "551d2959db810d581943043c37c4142779393456",
-          "message": "chore: update GitHub data [skip ci]",
-          "url": "https://github.com/charlie2233/atrak-website/commit/551d2959db810d581943043c37c4142779393456"
-        },
-        {
-          "sha": "89dbb9e2cf3d26465a0aa257b7ac9aff2dc01025",
-          "message": "chore: update GitHub data [skip ci]",
-          "url": "https://github.com/charlie2233/atrak-website/commit/89dbb9e2cf3d26465a0aa257b7ac9aff2dc01025"
-        },
-        {
-          "sha": "c3da7d94305fce692aafd3909bd14364d3768d65",
-          "message": "feat: expand weekly editorial and trends",
-          "url": "https://github.com/charlie2233/atrak-website/commit/c3da7d94305fce692aafd3909bd14364d3768d65"
-        },
-        {
-          "sha": "98a5d60b5bcddcc5ea470a2a4dd104ee9bc594a1",
-          "message": "chore: update GitHub data [skip ci]",
-          "url": "https://github.com/charlie2233/atrak-website/commit/98a5d60b5bcddcc5ea470a2a4dd104ee9bc594a1"
-        },
-        {
-          "sha": "b8880e982465bde3d1d06741a42ca5a95186bc0c",
-          "message": "chore: update GitHub data [skip ci]",
-          "url": "https://github.com/charlie2233/atrak-website/commit/b8880e982465bde3d1d06741a42ca5a95186bc0c"
-        },
-        {
-          "sha": "e00a7b5419eb0bb598d27f8e5beef683e9ed9b00",
-          "message": "fix: authenticate GitHub data refresh fallback",
-          "url": "https://github.com/charlie2233/atrak-website/commit/e00a7b5419eb0bb598d27f8e5beef683e9ed9b00"
-        },
-        {
-          "sha": "d97f17bf8d6024ef5f8ba3e7aa1073443972dd4a",
-          "message": "feat: add weekly log insights and alerts",
-          "url": "https://github.com/charlie2233/atrak-website/commit/d97f17bf8d6024ef5f8ba3e7aa1073443972dd4a"
-        },
-        {
-          "sha": "ae4e969ef6016cb91ce2032c1308006c0f4f5de8",
-          "message": "chore: update GitHub data [skip ci]",
-          "url": "https://github.com/charlie2233/atrak-website/commit/ae4e969ef6016cb91ce2032c1308006c0f4f5de8"
-        }
-      ]
+      "before": "541304dffb9645918be844c0c57b057d1f9f74cd"
     },
     "public": true,
     "created_at": "2026-07-16T17:06:30Z"
@@ -524,6 +674,31 @@
     "created_at": "2026-07-16T17:05:43Z"
   },
   {
+    "id": "15084875954",
+    "type": "DeleteEvent",
+    "actor": {
+      "id": 117957000,
+      "login": "charlie2233",
+      "display_login": "charlie2233",
+      "gravatar_id": "",
+      "url": "https://api.github.com/users/charlie2233",
+      "avatar_url": "https://avatars.githubusercontent.com/u/117957000?"
+    },
+    "repo": {
+      "id": 1140388078,
+      "name": "charlie2233/atrak-website",
+      "url": "https://api.github.com/repos/charlie2233/atrak-website"
+    },
+    "payload": {
+      "ref": "agent/accesscourt-project-ecosystem",
+      "ref_type": "branch",
+      "full_ref": "refs/heads/agent/accesscourt-project-ecosystem",
+      "pusher_type": "user"
+    },
+    "public": true,
+    "created_at": "2026-07-16T07:22:24Z"
+  },
+  {
     "id": "15084875353",
     "type": "PushEvent",
     "actor": {
@@ -548,31 +723,6 @@
     },
     "public": true,
     "created_at": "2026-07-16T07:22:23Z"
-  },
-  {
-    "id": "15084875954",
-    "type": "DeleteEvent",
-    "actor": {
-      "id": 117957000,
-      "login": "charlie2233",
-      "display_login": "charlie2233",
-      "gravatar_id": "",
-      "url": "https://api.github.com/users/charlie2233",
-      "avatar_url": "https://avatars.githubusercontent.com/u/117957000?"
-    },
-    "repo": {
-      "id": 1140388078,
-      "name": "charlie2233/atrak-website",
-      "url": "https://api.github.com/repos/charlie2233/atrak-website"
-    },
-    "payload": {
-      "ref": "agent/accesscourt-project-ecosystem",
-      "ref_type": "branch",
-      "full_ref": "refs/heads/agent/accesscourt-project-ecosystem",
-      "pusher_type": "user"
-    },
-    "public": true,
-    "created_at": "2026-07-16T07:22:24Z"
   },
   {
     "id": "11861968635",
@@ -3337,7 +3487,8 @@
           "rocket": 0,
           "eyes": 0
         },
-        "performed_via_github_app": null
+        "performed_via_github_app": null,
+        "minimized": null
       }
     },
     "public": true,
