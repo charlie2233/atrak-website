@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Safe Traveling product support, safety boundaries, and contact form.">
+    <title>Safe Traveling Support | Atrak</title>
+    <link rel="canonical" href="https://atrak.dev/safe-traveling/support.html">
+    <meta property="og:title" content="Safe Traveling Support">
+    <meta property="og:description" content="Get help with Safe Traveling or report an app problem.">
+    <meta property="og:url" content="https://atrak.dev/safe-traveling/support.html">
+    <meta property="og:image" content="https://atrak.dev/assets/projects/safe-traveling-icon.svg">
+    <meta property="og:type" content="website">
+    <link rel="icon" type="image/png" href="../assets/logo.png?v=20260202">
+    <link rel="stylesheet" href="../styles.css?v=39">
+</head>
+<body>
+    <nav class="navbar">
+        <div class="nav-container">
+            <a class="logo" href="../index.html">
+                <span class="logo-icon"><img src="../assets/logo.png?v=20260202" alt="Atrak logo"></span>
+                <span class="logo-text">Atrak</span>
+            </a>
+            <ul class="nav-links">
+                <li><a href="../index.html#projects">Projects</a></li>
+                <li><a href="privacy.html">Privacy</a></li>
+                <li><a href="#contact" class="nav-cta">Contact Support</a></li>
+            </ul>
+            <button class="mobile-menu-btn" aria-label="Toggle menu"><span></span><span></span><span></span></button>
+        </div>
+    </nav>
+
+    <main>
+        <section class="page-hero">
+            <div class="container">
+                <a class="project-back-link" href="../index.html#projects">Back to Atrak projects</a>
+                <div class="project-header">
+                    <span class="section-tag">Safe Traveling</span>
+                    <h1 class="section-title">Product Support</h1>
+                    <p class="section-description">Help with the iOS app, Preview Data, accessibility, saved places, routes, and private Safety Notes.</p>
+                </div>
+
+                <div class="project-detail-grid">
+                    <article class="glass-card project-detail-card">
+                        <h3>Before You Send</h3>
+                        <p>Please include the app version, iOS version, affected screen, whether Preview Data was shown, and the shortest steps that reproduce the problem.</p>
+                        <p>Do not include passwords, API keys, Apple credentials, exact home addresses, live coordinates, names of private individuals, license plates, or other sensitive personal information.</p>
+                    </article>
+
+                    <article class="glass-card project-detail-card">
+                        <h3>Safety Boundary</h3>
+                        <p>Safe Traveling is not an emergency service and does not dispatch help. In immediate danger, contact the official emergency service for your confirmed region.</p>
+                        <p>Private Safety Notes stay on the device and are not sent to police, moderators, a community feed, or an alerts feed.</p>
+                    </article>
+                </div>
+
+                <section id="contact" class="contact">
+                    <div class="contact-content">
+                        <h2 class="contact-title">Contact Safe Traveling Support</h2>
+                        <p class="contact-description">Messages are delivered to the Atrak team through Formspree. A reply email is optional.</p>
+                        <div class="suggestion-box glass-card">
+                            <form class="suggestion-form" action="https://formspree.io/f/mbdzrwbo" method="POST">
+                                <input type="hidden" name="_subject" value="Safe Traveling support request">
+                                <label for="safe-traveling-email" class="suggestion-label">Reply email (optional)</label>
+                                <input id="safe-traveling-email" name="email" type="email" autocomplete="email" placeholder="you@example.com">
+                                <label for="safe-traveling-message" class="suggestion-label">Support message</label>
+                                <textarea id="safe-traveling-message" name="message" rows="7" maxlength="1600" required placeholder="Start with Safe Traveling, then describe the problem without private location or personal information."></textarea>
+                                <input type="text" name="_gotcha" class="suggestion-honeypot" tabindex="-1" autocomplete="off" aria-hidden="true">
+                                <button type="submit" class="btn btn-primary">Send support request</button>
+                                <p class="form-disclaimer">Form delivery is provided by Formspree. Its privacy practices apply to submitted messages.</p>
+                            </form>
+                        </div>
+                    </div>
+                </section>
+            </div>
+        </section>
+    </main>
+
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-bottom">
+                <p>&copy; 2026 Atrak. Safe Traveling is an Atrak project.</p>
+                <p><a href="privacy.html">Safe Traveling Privacy Policy</a> &middot; <a href="../privacy.html">Atrak website privacy</a></p>
+            </div>
+        </div>
+    </footer>
+    <script src="../script.js?v=25"></script>
+</body>
+</html>
