@@ -378,6 +378,68 @@ const pageSpecs = [
     }
   },
   {
+    name: 'hoopclips-browser-demo',
+    path: '/apps/hoopsclips/index.html',
+    selectors: [
+      '.nav-title .app-icon',
+      '#videoPlayer',
+      '.legal-footer a[href="privacy.html"]',
+      '.legal-footer a[href="terms.html"]',
+      '.legal-footer a[href="support.html"]'
+    ],
+    async waitForReady(page) {
+      await page.waitForFunction(() => (
+        document.querySelector('.nav-title .app-icon')?.getAttribute('src')?.includes('v=20260718')
+      ), null, { timeout: 5000 });
+    }
+  },
+  {
+    name: 'hoopclips-privacy-mobile',
+    path: '/apps/hoopsclips/privacy.html',
+    viewport: { width: 390, height: 844 },
+    selectors: [
+      'body.hoopclips-legal-page',
+      'h1',
+      '.project-icon-custom img',
+      'a[href="terms.html"]',
+      'a[href="support.html"]'
+    ],
+    async waitForReady(page) {
+      await page.waitForFunction(() => (
+        document.querySelector('h1')?.textContent?.trim() === 'Privacy Policy' &&
+        document.querySelector('.project-icon-custom img')?.getAttribute('src')?.includes('v=20260718')
+      ), null, { timeout: 5000 });
+    }
+  },
+  {
+    name: 'hoopclips-terms',
+    path: '/apps/hoopsclips/terms.html',
+    selectors: [
+      'body.hoopclips-legal-page',
+      'h1',
+      '.project-detail-grid',
+      'a[href="privacy.html"]',
+      'a[href="support.html"]'
+    ],
+    async waitForReady(page) {
+      await page.waitForFunction(() => document.querySelector('h1')?.textContent?.trim() === 'Terms of Use', null, { timeout: 5000 });
+    }
+  },
+  {
+    name: 'hoopclips-support',
+    path: '/apps/hoopsclips/support.html',
+    selectors: [
+      'body.hoopclips-legal-page',
+      'h1',
+      'a[href^="mailto:hello@atrak.dev"]',
+      'a[href="privacy.html"]',
+      'a[href="terms.html"]'
+    ],
+    async waitForReady(page) {
+      await page.waitForFunction(() => document.querySelector('h1')?.textContent?.trim() === 'Support', null, { timeout: 5000 });
+    }
+  },
+  {
     name: 'team-profile-charlie',
     path: '/team/profile.html?name=Charlie%20Han',
     selectors: [
