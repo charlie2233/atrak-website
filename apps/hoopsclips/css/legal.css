@@ -1,0 +1,33 @@
+.hoopclips-legal-page .project-detail-card {
+    text-align: left;
+}
+
+.hoopclips-legal-page .project-detail-card p + p,
+.hoopclips-legal-page .project-detail-card p + ul,
+.hoopclips-legal-page .project-detail-card ul + p {
+    margin-top: 0.85rem;
+}
+
+.hoopclips-legal-page .project-detail-card a {
+    color: var(--accent-primary);
+    overflow-wrap: anywhere;
+}
+
+.hoopclips-legal-page .project-detail-card a:hover,
+.hoopclips-legal-page .project-detail-card a:focus-visible {
+    text-decoration: underline;
+}
+
+.hoopclips-legal-page .project-icon-custom img {
+    object-fit: cover;
+}
+
+@media (max-width: 768px) {
+    .hoopclips-legal-page .project-header {
+        margin-bottom: 2rem;
+    }
+
+    .hoopclips-legal-page .project-detail-card {
+        padding: 1.25rem;
+    }
+}
