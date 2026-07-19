@@ -737,5 +737,228 @@
         "at": "2026-07-05T07:07:40Z"
       }
     ]
+  },
+  {
+    "weekStart": "2026-07-12",
+    "weekEnd": "2026-07-18",
+    "generatedAt": "2026-07-19T09:59:35.353Z",
+    "source": "github-weekly-automation",
+    "dateRange": "Jul 12 – 18",
+    "title": "Hoops Highlights App and Atrak Website moved the week forward.",
+    "highlights": [
+      "Hoops Highlights App led public activity with 52 commits across 40 pushes.",
+      "4 public repositories were active across 223 GitHub events.",
+      "No formal GitHub release was published during this edition."
+    ],
+    "shipped": [
+      "Polish AI Edit launch flow (#92)",
+      "Increase normal network upload lanes (#91)",
+      "Tighten upload progress visibility (#90)",
+      "Record installed device build 49 proof (#89)"
+    ],
+    "engineering": [
+      "67 pushes and 80 pull request updates were condensed into this edition.",
+      "Active stacks included Python, HTML, TypeScript.",
+      "The snapshot is stored permanently so the edition remains available after GitHub events expire."
+    ],
+    "fixes": [
+      "Fix build 52 archive metadata guard (#87)",
+      "refresh weekly cache and restore weekly log alias",
+      "clarify Fresno area expansion update",
+      "remove all calendar and schedule UI"
+    ],
+    "metrics": [
+      "Commits: 104",
+      "Active repos: 4",
+      "Pull requests: 80",
+      "Issues: 0",
+      "Releases: 0"
+    ],
+    "next": [
+      "Continue the Hoops Highlights App build and publish the next visible milestone.",
+      "Review the next automated edition after Sunday refresh."
+    ],
+    "stats": {
+      "commits": 104,
+      "activeRepositories": 4,
+      "pullRequests": 80,
+      "issues": 0,
+      "pushes": 67,
+      "releases": 0,
+      "events": 223
+    },
+    "repositories": [
+      {
+        "name": "Hoops Highlights App",
+        "fullName": "charlie2233/rork-hoopshighlights-ai_Final",
+        "url": "https://github.com/charlie2233/rork-hoopshighlights-ai_Final",
+        "language": "Python",
+        "commits": 52,
+        "pushes": 40,
+        "events": 176,
+        "pullRequests": 70,
+        "issues": 0,
+        "lastAt": "2026-07-18T23:16:29.000Z"
+      },
+      {
+        "name": "Atrak Website",
+        "fullName": "charlie2233/atrak-website",
+        "url": "https://github.com/charlie2233/atrak-website",
+        "language": "HTML",
+        "commits": 40,
+        "pushes": 13,
+        "events": 33,
+        "pullRequests": 10,
+        "issues": 0,
+        "lastAt": "2026-07-18T10:45:15.000Z"
+      },
+      {
+        "name": "GBC HuskiesWeb",
+        "fullName": "charlie2233/GBC_HuskiesWeb",
+        "url": "https://github.com/charlie2233/GBC_HuskiesWeb",
+        "language": "TypeScript",
+        "commits": 12,
+        "pushes": 12,
+        "events": 12,
+        "pullRequests": 0,
+        "issues": 0,
+        "lastAt": "2026-07-17T15:16:52.000Z"
+      },
+      {
+        "name": "Rork Guide Pup Vision Assistant",
+        "fullName": "charlie2233/rork-guide-pup--vision-assistant",
+        "url": "https://github.com/charlie2233/rork-guide-pup--vision-assistant",
+        "language": "TypeScript",
+        "commits": 0,
+        "pushes": 2,
+        "events": 2,
+        "pullRequests": 0,
+        "issues": 0,
+        "lastAt": "2026-07-18T00:27:29.000Z"
+      }
+    ],
+    "releases": [],
+    "commitMessages": [
+      {
+        "repo": "charlie2233/rork-hoopshighlights-ai_Final",
+        "text": "Polish AI Edit launch flow (#92)",
+        "url": "https://github.com/charlie2233/rork-hoopshighlights-ai_Final/commit/f52f443198638d79dce81e5a2d7e4aba117a68fa",
+        "at": "2026-07-18T23:16:28Z"
+      },
+      {
+        "repo": "charlie2233/rork-hoopshighlights-ai_Final",
+        "text": "Increase normal network upload lanes (#91)",
+        "url": "https://github.com/charlie2233/rork-hoopshighlights-ai_Final/commit/767e4debe2d5038071631996261a416b798da611",
+        "at": "2026-07-18T20:31:25Z"
+      },
+      {
+        "repo": "charlie2233/rork-hoopshighlights-ai_Final",
+        "text": "Tighten upload progress visibility (#90)",
+        "url": "https://github.com/charlie2233/rork-hoopshighlights-ai_Final/commit/7167a9f16550e00f86af181d935452399a7a8677",
+        "at": "2026-07-18T20:10:34Z"
+      },
+      {
+        "repo": "charlie2233/rork-hoopshighlights-ai_Final",
+        "text": "Record installed device build 49 proof (#89)",
+        "url": "https://github.com/charlie2233/rork-hoopshighlights-ai_Final/commit/0d601075ebc46094687d598d6c87d7e39ba024f1",
+        "at": "2026-07-18T19:39:23Z"
+      },
+      {
+        "repo": "charlie2233/rork-hoopshighlights-ai_Final",
+        "text": "Refresh build 52 launch proof docs (#88)",
+        "url": "https://github.com/charlie2233/rork-hoopshighlights-ai_Final/commit/227166011757c957d70597d0970f54ba3cd5d43c",
+        "at": "2026-07-18T19:22:48Z"
+      },
+      {
+        "repo": "charlie2233/rork-hoopshighlights-ai_Final",
+        "text": "Fix build 52 archive metadata guard (#87)",
+        "url": "https://github.com/charlie2233/rork-hoopshighlights-ai_Final/commit/f46705959eb1d792e93d03999eb43c828de114f0",
+        "at": "2026-07-18T18:42:54Z"
+      },
+      {
+        "repo": "charlie2233/rork-hoopshighlights-ai_Final",
+        "text": "Prepare build 52 TestFlight upload (#86)",
+        "url": "https://github.com/charlie2233/rork-hoopshighlights-ai_Final/commit/fdb482d334b0a063a508e3e52c843dfa32ecd906",
+        "at": "2026-07-18T18:15:54Z"
+      },
+      {
+        "repo": "charlie2233/rork-hoopshighlights-ai_Final",
+        "text": "Declutter upload pipeline status (#85)",
+        "url": "https://github.com/charlie2233/rork-hoopshighlights-ai_Final/commit/202b56c5d332529b7bae0006eb743f45bccd9b70",
+        "at": "2026-07-18T17:48:55Z"
+      },
+      {
+        "repo": "charlie2233/rork-hoopshighlights-ai_Final",
+        "text": "Gate readiness on installed TestFlight build (#84)",
+        "url": "https://github.com/charlie2233/rork-hoopshighlights-ai_Final/commit/adbb1605f4ab0bf077a0a2fe7f226c1f1834f409",
+        "at": "2026-07-18T16:51:36Z"
+      },
+      {
+        "repo": "charlie2233/rork-hoopshighlights-ai_Final",
+        "text": "Add build 51 device smoke preflight (#83)",
+        "url": "https://github.com/charlie2233/rork-hoopshighlights-ai_Final/commit/44f7e231b40cd0b5080e55af835caf465cc92cd7",
+        "at": "2026-07-18T16:24:57Z"
+      },
+      {
+        "repo": "charlie2233/rork-hoopshighlights-ai_Final",
+        "text": "Document build 51 TestFlight proof (#82)",
+        "url": "https://github.com/charlie2233/rork-hoopshighlights-ai_Final/commit/792c9e0c9e004d35b78cabede41c042695e2bf88",
+        "at": "2026-07-18T14:17:39Z"
+      },
+      {
+        "repo": "charlie2233/rork-hoopshighlights-ai_Final",
+        "text": "Prepare build 51 TestFlight upload (#81)",
+        "url": "https://github.com/charlie2233/rork-hoopshighlights-ai_Final/commit/60eda29b7989e97a93ebdf973c0d80446caa07bf",
+        "at": "2026-07-18T12:45:31Z"
+      },
+      {
+        "repo": "charlie2233/atrak-website",
+        "text": "Add canonical HoopClips logo and legal pages (#14)",
+        "url": "https://github.com/charlie2233/atrak-website/commit/6abfd005f918b17579477743d6baffaf53c96bca",
+        "at": "2026-07-18T10:45:14Z"
+      },
+      {
+        "repo": "charlie2233/atrak-website",
+        "text": "Add Safe Traveling legal and support pages",
+        "url": "https://github.com/charlie2233/atrak-website/commit/83c7636a1bd37b6dba291cc2683e542e059f474e",
+        "at": "2026-07-18T07:35:59Z"
+      },
+      {
+        "repo": "charlie2233/atrak-website",
+        "text": "refresh weekly cache and restore weekly log alias",
+        "url": "https://github.com/charlie2233/atrak-website/commit/1024bdb9ac49f4bfbf8b0bd812c507a403fdd60a",
+        "at": "2026-07-17T18:04:28Z"
+      },
+      {
+        "repo": "charlie2233/GBC_HuskiesWeb",
+        "text": "record corrected Fresno expansion deploy",
+        "url": "https://github.com/charlie2233/GBC_HuskiesWeb/commit/f060c72a62cf64c7603bf9ceb8ccf4e0fabdb65a",
+        "at": "2026-07-17T15:16:49Z"
+      },
+      {
+        "repo": "charlie2233/GBC_HuskiesWeb",
+        "text": "clarify Fresno area expansion update",
+        "url": "https://github.com/charlie2233/GBC_HuskiesWeb/commit/b2394975fb2877db0db1adf11faeee35882ebd7f",
+        "at": "2026-07-17T15:13:36Z"
+      },
+      {
+        "repo": "charlie2233/GBC_HuskiesWeb",
+        "text": "record Fresno announcement deployment",
+        "url": "https://github.com/charlie2233/GBC_HuskiesWeb/commit/12a068466309f17a1c1926b89d6afefe6c15f403",
+        "at": "2026-07-17T15:01:43Z"
+      },
+      {
+        "repo": "charlie2233/GBC_HuskiesWeb",
+        "text": "add tentative Fresno expansion update",
+        "url": "https://github.com/charlie2233/GBC_HuskiesWeb/commit/0c81e9fd8b95be3b7016216d94143ca249e994e0",
+        "at": "2026-07-17T14:57:51Z"
+      },
+      {
+        "repo": "charlie2233/GBC_HuskiesWeb",
+        "text": "record team card deployment",
+        "url": "https://github.com/charlie2233/GBC_HuskiesWeb/commit/37336682bac58fecdb4625e3ae007af956995d7c",
+        "at": "2026-07-17T03:13:44Z"
+      }
+    ]
   }
 ]
