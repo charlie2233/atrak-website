@@ -82,7 +82,7 @@ jobs:
           set -euo pipefail
           git config --local user.email "github-actions[bot]@users.noreply.github.com"
           git config --local user.name "github-actions[bot]"
-          git add data/weekly-history.json
+          git add data/weekly-history.json data/weekly-log.json
 
           if git diff --staged --quiet; then
             echo "Weekly edition is already current."
