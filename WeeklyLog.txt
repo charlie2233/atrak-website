@@ -727,10 +727,81 @@ You can honestly demo this to a coach and they'd actually use it.
 
 ---
 
+## Part 7 — July 2026 (GitHub-backed Updates)
+
+---
+
+## Week of Jul 5 – Jul 11
+
+### "Atrak Website + Hoops Highlights shipped in parallel"
+
+**Highlights**
+
+* Atrak Website and Hoops Highlights App led the public GitHub activity
+* Two repositories were active across 66 captured GitHub events
+* The site stored the edition permanently instead of relying on GitHub's expiring event window
+
+**Shipped**
+
+* Atrak project ecosystem and navigation updates
+* Hoops Highlights product and launch-flow improvements
+* Automated weekly editorial snapshot for Jul 5–11
+
+**Metrics**
+
+* Commits: 48
+* Active repos: 2
+* PR updates: 24
+* Issues: 1
+* Pushes: 20
+* Releases: 0
+
+---
+
+## Week of Jul 12 – Jul 18
+
+### "Launch proof, legal pages, and public-site milestones"
+
+**Highlights**
+
+* Hoops Highlights App led activity with 52 captured commits and 70 pull-request updates
+* Atrak Website shipped AccessCourt connections plus Safe Traveling and HoopClips legal/support pages
+* GBC HuskiesWeb recorded Fresno expansion, team-card, calendar cleanup, and championship updates
+
+**Shipped**
+
+* Hoops Highlights AI Edit launch polish, upload-lane tuning, progress visibility, and TestFlight proof documentation
+* Canonical HoopClips branding and legal pages on Atrak Website
+* Safe Traveling legal and support pages
+* GBC HuskiesWeb public milestones and deployment records
+
+**Engineering**
+
+* 67 pushes and 80 pull-request updates condensed into one durable edition
+* Four active repositories across Python, HTML, and TypeScript stacks
+* Automated cache and weekly-log renewal fixes kept the public briefing current
+
+**Metrics**
+
+* Commits: 104
+* Active repos: 4
+* PR updates: 80
+* Issues: 0
+* Pushes: 67
+* Releases: 0
+* GitHub events: 223
+
+**Next**
+
+* Continue product launch proof without conflating source changes with store/device completion
+* Publish the next completed Sunday → Saturday edition after GitHub refresh
+
+---
+
 # 📊 Summary
 
-**Total Coverage:** August 31, 2024 – April 19, 2026
-**Total Weeks:** 17 documented (22 total in coverage range; Dec Weeks 14-18 missing)
+**Total Coverage:** August 31, 2024 – July 18, 2026
+**Total Weeks:** 19 documented (Dec Weeks 14-18 remain undocumented)
 **Format:** Sunday → Saturday (PT)
 
 **Major Milestones:**
@@ -739,3 +810,5 @@ You can honestly demo this to a coach and they'd actually use it.
 - Week 9-13 (Nov): Playback Phase A & stabilization
 - Week 14-18 (Dec): *Not yet documented*
 - Week 19-21 (Jan): Analysis & intelligence features
+- April: GitHub cache and project-hub reliability
+- July: Multi-repo launch, legal, and public-site delivery
