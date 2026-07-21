@@ -1,5 +1,296 @@
 [
   {
+    "type": "PushEvent",
+    "created_at": "2026-07-17T15:16:51Z",
+    "repo": {
+      "name": "charlie2233/GBC_HuskiesWeb"
+    },
+    "payload": {
+      "ref": "refs/heads/main",
+      "before": "",
+      "head": "f060c72a62cf64c7603bf9ceb8ccf4e0fabdb65a",
+      "distinct_size": 12,
+      "commits": [
+        {
+          "sha": "f060c72a62cf64c7603bf9ceb8ccf4e0fabdb65a",
+          "message": "docs: record corrected Fresno expansion deploy",
+          "url": "https://github.com/charlie2233/GBC_HuskiesWeb/commit/f060c72a62cf64c7603bf9ceb8ccf4e0fabdb65a"
+        },
+        {
+          "sha": "b2394975fb2877db0db1adf11faeee35882ebd7f",
+          "message": "fix: clarify Fresno area expansion update",
+          "url": "https://github.com/charlie2233/GBC_HuskiesWeb/commit/b2394975fb2877db0db1adf11faeee35882ebd7f"
+        },
+        {
+          "sha": "12a068466309f17a1c1926b89d6afefe6c15f403",
+          "message": "docs: record Fresno announcement deployment",
+          "url": "https://github.com/charlie2233/GBC_HuskiesWeb/commit/12a068466309f17a1c1926b89d6afefe6c15f403"
+        },
+        {
+          "sha": "0c81e9fd8b95be3b7016216d94143ca249e994e0",
+          "message": "feat: add tentative Fresno expansion update",
+          "url": "https://github.com/charlie2233/GBC_HuskiesWeb/commit/0c81e9fd8b95be3b7016216d94143ca249e994e0"
+        },
+        {
+          "sha": "37336682bac58fecdb4625e3ae007af956995d7c",
+          "message": "docs: record team card deployment",
+          "url": "https://github.com/charlie2233/GBC_HuskiesWeb/commit/37336682bac58fecdb4625e3ae007af956995d7c"
+        },
+        {
+          "sha": "928152e47e204613b31d50f4d041e81c99a5f0c5",
+          "message": "feat: add homepage team opportunities card",
+          "url": "https://github.com/charlie2233/GBC_HuskiesWeb/commit/928152e47e204613b31d50f4d041e81c99a5f0c5"
+        },
+        {
+          "sha": "25b2900b0ad05068903ecde700c62c208c9c27e9",
+          "message": "docs: record calendar-free deployment",
+          "url": "https://github.com/charlie2233/GBC_HuskiesWeb/commit/25b2900b0ad05068903ecde700c62c208c9c27e9"
+        },
+        {
+          "sha": "8a10836c707e5ff5aeaea1cb94cae171c9a37f10",
+          "message": "fix: remove all calendar and schedule UI",
+          "url": "https://github.com/charlie2233/GBC_HuskiesWeb/commit/8a10836c707e5ff5aeaea1cb94cae171c9a37f10"
+        },
+        {
+          "sha": "ade7038b072856dddd576b4bc64d627dfb204aae",
+          "message": "docs: record homepage calendar deployment",
+          "url": "https://github.com/charlie2233/GBC_HuskiesWeb/commit/ade7038b072856dddd576b4bc64d627dfb204aae"
+        },
+        {
+          "sha": "03326521d3c878e63a017fcd8af6c33c28b44d49",
+          "message": "fix: remove homepage calendar overlay",
+          "url": "https://github.com/charlie2233/GBC_HuskiesWeb/commit/03326521d3c878e63a017fcd8af6c33c28b44d49"
+        },
+        {
+          "sha": "0857c23a82af3cce135fb1a6ad74e83cfb08a48c",
+          "message": "docs: record vegas championship deployment",
+          "url": "https://github.com/charlie2233/GBC_HuskiesWeb/commit/0857c23a82af3cce135fb1a6ad74e83cfb08a48c"
+        },
+        {
+          "sha": "0258676b333df330474c42bf230634cb2e6e11ca",
+          "message": "feat: celebrate vegas live s1 championship",
+          "url": "https://github.com/charlie2233/GBC_HuskiesWeb/commit/0258676b333df330474c42bf230634cb2e6e11ca"
+        }
+      ]
+    }
+  },
+  {
+    "id": "15482928289",
+    "type": "PushEvent",
+    "actor": {
+      "id": 117957000,
+      "login": "charlie2233",
+      "display_login": "charlie2233",
+      "gravatar_id": "",
+      "url": "https://api.github.com/users/charlie2233",
+      "avatar_url": "https://avatars.githubusercontent.com/u/117957000?"
+    },
+    "repo": {
+      "id": 1140388078,
+      "name": "charlie2233/atrak-website",
+      "url": "https://api.github.com/repos/charlie2233/atrak-website"
+    },
+    "payload": {
+      "repository_id": 1140388078,
+      "push_id": 37773872738,
+      "ref": "refs/heads/main",
+      "head": "4976c5646b3ac2073c5a343fc9891dda7c4c8f61",
+      "before": "e420f924f243b913bbc27671fa7aeb4675b720f1",
+      "distinct_size": 34,
+      "commits": [
+        {
+          "sha": "4976c5646b3ac2073c5a343fc9891dda7c4c8f61",
+          "message": "fix: repair weekly briefing link",
+          "url": "https://github.com/charlie2233/atrak-website/commit/4976c5646b3ac2073c5a343fc9891dda7c4c8f61"
+        },
+        {
+          "sha": "e420f924f243b913bbc27671fa7aeb4675b720f1",
+          "message": "chore: update weekly logs and July releases [skip ci]",
+          "url": "https://github.com/charlie2233/atrak-website/commit/e420f924f243b913bbc27671fa7aeb4675b720f1"
+        },
+        {
+          "sha": "ecefff74a06ec85cb814622812083395f90dede2",
+          "message": "chore: update GitHub data [skip ci]",
+          "url": "https://github.com/charlie2233/atrak-website/commit/ecefff74a06ec85cb814622812083395f90dede2"
+        },
+        {
+          "sha": "b8adb550dac6a29c0f9289df3bc709a0bf80466a",
+          "message": "chore: update GitHub data [skip ci]",
+          "url": "https://github.com/charlie2233/atrak-website/commit/b8adb550dac6a29c0f9289df3bc709a0bf80466a"
+        },
+        {
+          "sha": "2ca997dae4e696596a894382a2de1db43ac628f2",
+          "message": "chore: update GitHub data [skip ci]",
+          "url": "https://github.com/charlie2233/atrak-website/commit/2ca997dae4e696596a894382a2de1db43ac628f2"
+        },
+        {
+          "sha": "75a55edcc1c1e19cd96391689e92ec935214505a",
+          "message": "chore: update GitHub data [skip ci]",
+          "url": "https://github.com/charlie2233/atrak-website/commit/75a55edcc1c1e19cd96391689e92ec935214505a"
+        },
+        {
+          "sha": "5f4826d9c2169c4319bd5e37034fdbd65215ee43",
+          "message": "chore: update GitHub data [skip ci]",
+          "url": "https://github.com/charlie2233/atrak-website/commit/5f4826d9c2169c4319bd5e37034fdbd65215ee43"
+        },
+        {
+          "sha": "ec1f1dd9797d694a72a3b4dd0efa3d6e928d70b6",
+          "message": "chore: renew weekly log [skip ci]",
+          "url": "https://github.com/charlie2233/atrak-website/commit/ec1f1dd9797d694a72a3b4dd0efa3d6e928d70b6"
+        },
+        {
+          "sha": "53776a6f380bbe7af0bb60a18a7b3950292d8714",
+          "message": "chore: update GitHub data [skip ci]",
+          "url": "https://github.com/charlie2233/atrak-website/commit/53776a6f380bbe7af0bb60a18a7b3950292d8714"
+        },
+        {
+          "sha": "31a36bf5e166b9fc13362277cc28926e025d4460",
+          "message": "fix: stage weekly log in renewal workflow",
+          "url": "https://github.com/charlie2233/atrak-website/commit/31a36bf5e166b9fc13362277cc28926e025d4460"
+        },
+        {
+          "sha": "cc6d298955188392a630e022fb22f6e0790b5e29",
+          "message": "chore: refresh local weekly GitHub data",
+          "url": "https://github.com/charlie2233/atrak-website/commit/cc6d298955188392a630e022fb22f6e0790b5e29"
+        },
+        {
+          "sha": "0983456009ee0e73a91e73b9e59bdadea2ad6e07",
+          "message": "chore: update GitHub data [skip ci]",
+          "url": "https://github.com/charlie2233/atrak-website/commit/0983456009ee0e73a91e73b9e59bdadea2ad6e07"
+        },
+        {
+          "sha": "c57d59bdb40975be88659ea3bed84dbee2b7bc61",
+          "message": "chore: update GitHub data [skip ci]",
+          "url": "https://github.com/charlie2233/atrak-website/commit/c57d59bdb40975be88659ea3bed84dbee2b7bc61"
+        },
+        {
+          "sha": "fa872b039fd6d9ecc78e045b27df1db4dd45f639",
+          "message": "chore: update GitHub data [skip ci]",
+          "url": "https://github.com/charlie2233/atrak-website/commit/fa872b039fd6d9ecc78e045b27df1db4dd45f639"
+        },
+        {
+          "sha": "6abfd005f918b17579477743d6baffaf53c96bca",
+          "message": "Add canonical HoopClips logo and legal pages (#14)",
+          "url": "https://github.com/charlie2233/atrak-website/commit/6abfd005f918b17579477743d6baffaf53c96bca"
+        },
+        {
+          "sha": "c9bdb2ddf47bdfe895e69d18c54de71376205cd3",
+          "message": "chore: update GitHub data [skip ci]",
+          "url": "https://github.com/charlie2233/atrak-website/commit/c9bdb2ddf47bdfe895e69d18c54de71376205cd3"
+        },
+        {
+          "sha": "83c7636a1bd37b6dba291cc2683e542e059f474e",
+          "message": "Add Safe Traveling legal and support pages",
+          "url": "https://github.com/charlie2233/atrak-website/commit/83c7636a1bd37b6dba291cc2683e542e059f474e"
+        },
+        {
+          "sha": "3d3cee3268b6743e47ef41da532e51c200fa3f89",
+          "message": "chore: update GitHub data [skip ci]",
+          "url": "https://github.com/charlie2233/atrak-website/commit/3d3cee3268b6743e47ef41da532e51c200fa3f89"
+        },
+        {
+          "sha": "0a984b3d4dd3e502c4dad292afa06219100c67f0",
+          "message": "chore: update GitHub data [skip ci]",
+          "url": "https://github.com/charlie2233/atrak-website/commit/0a984b3d4dd3e502c4dad292afa06219100c67f0"
+        },
+        {
+          "sha": "1024bdb9ac49f4bfbf8b0bd812c507a403fdd60a",
+          "message": "fix: refresh weekly cache and restore weekly log alias",
+          "url": "https://github.com/charlie2233/atrak-website/commit/1024bdb9ac49f4bfbf8b0bd812c507a403fdd60a"
+        }
+      ]
+    },
+    "public": true,
+    "created_at": "2026-07-21T19:12:25Z"
+  },
+  {
+    "id": "15482591636",
+    "type": "PushEvent",
+    "actor": {
+      "id": 117957000,
+      "login": "charlie2233",
+      "display_login": "charlie2233",
+      "gravatar_id": "",
+      "url": "https://api.github.com/users/charlie2233",
+      "avatar_url": "https://avatars.githubusercontent.com/u/117957000?"
+    },
+    "repo": {
+      "id": 1140388078,
+      "name": "charlie2233/atrak-website",
+      "url": "https://api.github.com/repos/charlie2233/atrak-website"
+    },
+    "payload": {
+      "repository_id": 1140388078,
+      "push_id": 37773537178,
+      "ref": "refs/heads/main",
+      "head": "e420f924f243b913bbc27671fa7aeb4675b720f1",
+      "before": "ecefff74a06ec85cb814622812083395f90dede2"
+    },
+    "public": true,
+    "created_at": "2026-07-21T19:06:45Z"
+  },
+  {
+    "id": "15482582334",
+    "type": "CreateEvent",
+    "actor": {
+      "id": 117957000,
+      "login": "charlie2233",
+      "display_login": "charlie2233",
+      "gravatar_id": "",
+      "url": "https://api.github.com/users/charlie2233",
+      "avatar_url": "https://avatars.githubusercontent.com/u/117957000?"
+    },
+    "repo": {
+      "id": 1140388078,
+      "name": "charlie2233/atrak-website",
+      "url": "https://api.github.com/repos/charlie2233/atrak-website"
+    },
+    "payload": {
+      "ref": "agent/update-weekly-logs-20260721",
+      "ref_type": "branch",
+      "full_ref": "refs/heads/agent/update-weekly-logs-20260721",
+      "master_branch": "main",
+      "description": null,
+      "pusher_type": "user"
+    },
+    "public": true,
+    "created_at": "2026-07-21T19:06:36Z"
+  },
+  {
+    "id": "15482383672",
+    "type": "PushEvent",
+    "actor": {
+      "id": 117957000,
+      "login": "charlie2233",
+      "display_login": "charlie2233",
+      "gravatar_id": "",
+      "url": "https://api.github.com/users/charlie2233",
+      "avatar_url": "https://avatars.githubusercontent.com/u/117957000?"
+    },
+    "repo": {
+      "id": 1173003479,
+      "name": "charlie2233/lifepage",
+      "url": "https://api.github.com/repos/charlie2233/lifepage"
+    },
+    "payload": {
+      "repository_id": 1173003479,
+      "push_id": 37773330036,
+      "ref": "refs/heads/main",
+      "head": "d2002fe9857e1d032763b3417d6c2e45c48a41e8",
+      "before": "fbcfe9a3d866ef381572d5219e232e1119051321",
+      "distinct_size": 1,
+      "commits": [
+        {
+          "sha": "d2002fe9857e1d032763b3417d6c2e45c48a41e8",
+          "message": "fix: serve Pages crawl metadata",
+          "url": "https://github.com/charlie2233/lifepage/commit/d2002fe9857e1d032763b3417d6c2e45c48a41e8"
+        }
+      ]
+    },
+    "public": true,
+    "created_at": "2026-07-21T19:03:24Z"
+  },
+  {
     "id": "12061890401",
     "type": "PullRequestEvent",
     "actor": {
@@ -4201,6 +4492,31 @@
     "created_at": "2026-07-19T19:32:51Z"
   },
   {
+    "id": "15319393643",
+    "type": "DeleteEvent",
+    "actor": {
+      "id": 117957000,
+      "login": "charlie2233",
+      "display_login": "charlie2233",
+      "gravatar_id": "",
+      "url": "https://api.github.com/users/charlie2233",
+      "avatar_url": "https://avatars.githubusercontent.com/u/117957000?"
+    },
+    "repo": {
+      "id": 1166891851,
+      "name": "charlie2233/rork-hoopshighlights-ai_Final",
+      "url": "https://api.github.com/repos/charlie2233/rork-hoopshighlights-ai_Final"
+    },
+    "payload": {
+      "ref": "codex/ios-store-submission-readiness-20260719",
+      "ref_type": "branch",
+      "full_ref": "refs/heads/codex/ios-store-submission-readiness-20260719",
+      "pusher_type": "user"
+    },
+    "public": true,
+    "created_at": "2026-07-19T19:30:29Z"
+  },
+  {
     "id": "15319393343",
     "type": "PushEvent",
     "actor": {
@@ -4225,31 +4541,6 @@
     },
     "public": true,
     "created_at": "2026-07-19T19:30:28Z"
-  },
-  {
-    "id": "15319393643",
-    "type": "DeleteEvent",
-    "actor": {
-      "id": 117957000,
-      "login": "charlie2233",
-      "display_login": "charlie2233",
-      "gravatar_id": "",
-      "url": "https://api.github.com/users/charlie2233",
-      "avatar_url": "https://avatars.githubusercontent.com/u/117957000?"
-    },
-    "repo": {
-      "id": 1166891851,
-      "name": "charlie2233/rork-hoopshighlights-ai_Final",
-      "url": "https://api.github.com/repos/charlie2233/rork-hoopshighlights-ai_Final"
-    },
-    "payload": {
-      "ref": "codex/ios-store-submission-readiness-20260719",
-      "ref_type": "branch",
-      "full_ref": "refs/heads/codex/ios-store-submission-readiness-20260719",
-      "pusher_type": "user"
-    },
-    "public": true,
-    "created_at": "2026-07-19T19:30:29Z"
   },
   {
     "id": "11994991739",
@@ -4706,110 +4997,7 @@
       "push_id": 37584629928,
       "ref": "refs/heads/main",
       "head": "31a36bf5e166b9fc13362277cc28926e025d4460",
-      "before": "cc6d298955188392a630e022fb22f6e0790b5e29",
-      "distinct_size": 33,
-      "commits": [
-        {
-          "sha": "b8adb550dac6a29c0f9289df3bc709a0bf80466a",
-          "message": "chore: update GitHub data [skip ci]",
-          "url": "https://github.com/charlie2233/atrak-website/commit/b8adb550dac6a29c0f9289df3bc709a0bf80466a"
-        },
-        {
-          "sha": "2ca997dae4e696596a894382a2de1db43ac628f2",
-          "message": "chore: update GitHub data [skip ci]",
-          "url": "https://github.com/charlie2233/atrak-website/commit/2ca997dae4e696596a894382a2de1db43ac628f2"
-        },
-        {
-          "sha": "75a55edcc1c1e19cd96391689e92ec935214505a",
-          "message": "chore: update GitHub data [skip ci]",
-          "url": "https://github.com/charlie2233/atrak-website/commit/75a55edcc1c1e19cd96391689e92ec935214505a"
-        },
-        {
-          "sha": "5f4826d9c2169c4319bd5e37034fdbd65215ee43",
-          "message": "chore: update GitHub data [skip ci]",
-          "url": "https://github.com/charlie2233/atrak-website/commit/5f4826d9c2169c4319bd5e37034fdbd65215ee43"
-        },
-        {
-          "sha": "ec1f1dd9797d694a72a3b4dd0efa3d6e928d70b6",
-          "message": "chore: renew weekly log [skip ci]",
-          "url": "https://github.com/charlie2233/atrak-website/commit/ec1f1dd9797d694a72a3b4dd0efa3d6e928d70b6"
-        },
-        {
-          "sha": "53776a6f380bbe7af0bb60a18a7b3950292d8714",
-          "message": "chore: update GitHub data [skip ci]",
-          "url": "https://github.com/charlie2233/atrak-website/commit/53776a6f380bbe7af0bb60a18a7b3950292d8714"
-        },
-        {
-          "sha": "31a36bf5e166b9fc13362277cc28926e025d4460",
-          "message": "fix: stage weekly log in renewal workflow",
-          "url": "https://github.com/charlie2233/atrak-website/commit/31a36bf5e166b9fc13362277cc28926e025d4460"
-        },
-        {
-          "sha": "cc6d298955188392a630e022fb22f6e0790b5e29",
-          "message": "chore: refresh local weekly GitHub data",
-          "url": "https://github.com/charlie2233/atrak-website/commit/cc6d298955188392a630e022fb22f6e0790b5e29"
-        },
-        {
-          "sha": "0983456009ee0e73a91e73b9e59bdadea2ad6e07",
-          "message": "chore: update GitHub data [skip ci]",
-          "url": "https://github.com/charlie2233/atrak-website/commit/0983456009ee0e73a91e73b9e59bdadea2ad6e07"
-        },
-        {
-          "sha": "c57d59bdb40975be88659ea3bed84dbee2b7bc61",
-          "message": "chore: update GitHub data [skip ci]",
-          "url": "https://github.com/charlie2233/atrak-website/commit/c57d59bdb40975be88659ea3bed84dbee2b7bc61"
-        },
-        {
-          "sha": "fa872b039fd6d9ecc78e045b27df1db4dd45f639",
-          "message": "chore: update GitHub data [skip ci]",
-          "url": "https://github.com/charlie2233/atrak-website/commit/fa872b039fd6d9ecc78e045b27df1db4dd45f639"
-        },
-        {
-          "sha": "6abfd005f918b17579477743d6baffaf53c96bca",
-          "message": "Add canonical HoopClips logo and legal pages (#14)",
-          "url": "https://github.com/charlie2233/atrak-website/commit/6abfd005f918b17579477743d6baffaf53c96bca"
-        },
-        {
-          "sha": "c9bdb2ddf47bdfe895e69d18c54de71376205cd3",
-          "message": "chore: update GitHub data [skip ci]",
-          "url": "https://github.com/charlie2233/atrak-website/commit/c9bdb2ddf47bdfe895e69d18c54de71376205cd3"
-        },
-        {
-          "sha": "83c7636a1bd37b6dba291cc2683e542e059f474e",
-          "message": "Add Safe Traveling legal and support pages",
-          "url": "https://github.com/charlie2233/atrak-website/commit/83c7636a1bd37b6dba291cc2683e542e059f474e"
-        },
-        {
-          "sha": "3d3cee3268b6743e47ef41da532e51c200fa3f89",
-          "message": "chore: update GitHub data [skip ci]",
-          "url": "https://github.com/charlie2233/atrak-website/commit/3d3cee3268b6743e47ef41da532e51c200fa3f89"
-        },
-        {
-          "sha": "0a984b3d4dd3e502c4dad292afa06219100c67f0",
-          "message": "chore: update GitHub data [skip ci]",
-          "url": "https://github.com/charlie2233/atrak-website/commit/0a984b3d4dd3e502c4dad292afa06219100c67f0"
-        },
-        {
-          "sha": "1024bdb9ac49f4bfbf8b0bd812c507a403fdd60a",
-          "message": "fix: refresh weekly cache and restore weekly log alias",
-          "url": "https://github.com/charlie2233/atrak-website/commit/1024bdb9ac49f4bfbf8b0bd812c507a403fdd60a"
-        },
-        {
-          "sha": "24e98dff35edc760e080491c1295e028bc520b22",
-          "message": "chore: update GitHub data [skip ci]",
-          "url": "https://github.com/charlie2233/atrak-website/commit/24e98dff35edc760e080491c1295e028bc520b22"
-        },
-        {
-          "sha": "334ee86c7e973b6652019cc85f5904408fd695ed",
-          "message": "chore: update GitHub data [skip ci]",
-          "url": "https://github.com/charlie2233/atrak-website/commit/334ee86c7e973b6652019cc85f5904408fd695ed"
-        },
-        {
-          "sha": "3bc68f22926935eb1243b005211b0c3d40757673",
-          "message": "chore: update GitHub data [skip ci]",
-          "url": "https://github.com/charlie2233/atrak-website/commit/3bc68f22926935eb1243b005211b0c3d40757673"
-        }
-      ]
+      "before": "cc6d298955188392a630e022fb22f6e0790b5e29"
     },
     "public": true,
     "created_at": "2026-07-19T09:59:05Z"
@@ -6638,31 +6826,6 @@
     "created_at": "2026-07-18T19:16:25Z"
   },
   {
-    "id": "15259454753",
-    "type": "DeleteEvent",
-    "actor": {
-      "id": 117957000,
-      "login": "charlie2233",
-      "display_login": "charlie2233",
-      "gravatar_id": "",
-      "url": "https://api.github.com/users/charlie2233",
-      "avatar_url": "https://avatars.githubusercontent.com/u/117957000?"
-    },
-    "repo": {
-      "id": 1166891851,
-      "name": "charlie2233/rork-hoopshighlights-ai_Final",
-      "url": "https://api.github.com/repos/charlie2233/rork-hoopshighlights-ai_Final"
-    },
-    "payload": {
-      "ref": "codex/build52-upload-metadata-guard-20260718",
-      "ref_type": "branch",
-      "full_ref": "refs/heads/codex/build52-upload-metadata-guard-20260718",
-      "pusher_type": "user"
-    },
-    "public": true,
-    "created_at": "2026-07-18T18:42:56Z"
-  },
-  {
     "id": "15259454559",
     "type": "PushEvent",
     "actor": {
@@ -6684,6 +6847,31 @@
       "ref": "refs/heads/main",
       "head": "f46705959eb1d792e93d03999eb43c828de114f0",
       "before": "fdb482d334b0a063a508e3e52c843dfa32ecd906"
+    },
+    "public": true,
+    "created_at": "2026-07-18T18:42:56Z"
+  },
+  {
+    "id": "15259454753",
+    "type": "DeleteEvent",
+    "actor": {
+      "id": 117957000,
+      "login": "charlie2233",
+      "display_login": "charlie2233",
+      "gravatar_id": "",
+      "url": "https://api.github.com/users/charlie2233",
+      "avatar_url": "https://avatars.githubusercontent.com/u/117957000?"
+    },
+    "repo": {
+      "id": 1166891851,
+      "name": "charlie2233/rork-hoopshighlights-ai_Final",
+      "url": "https://api.github.com/repos/charlie2233/rork-hoopshighlights-ai_Final"
+    },
+    "payload": {
+      "ref": "codex/build52-upload-metadata-guard-20260718",
+      "ref_type": "branch",
+      "full_ref": "refs/heads/codex/build52-upload-metadata-guard-20260718",
+      "pusher_type": "user"
     },
     "public": true,
     "created_at": "2026-07-18T18:42:56Z"
@@ -7952,31 +8140,6 @@
     "created_at": "2026-07-18T12:20:49Z"
   },
   {
-    "id": "15244275298",
-    "type": "DeleteEvent",
-    "actor": {
-      "id": 117957000,
-      "login": "charlie2233",
-      "display_login": "charlie2233",
-      "gravatar_id": "",
-      "url": "https://api.github.com/users/charlie2233",
-      "avatar_url": "https://avatars.githubusercontent.com/u/117957000?"
-    },
-    "repo": {
-      "id": 1166891851,
-      "name": "charlie2233/rork-hoopshighlights-ai_Final",
-      "url": "https://api.github.com/repos/charlie2233/rork-hoopshighlights-ai_Final"
-    },
-    "payload": {
-      "ref": "codex/ai-edit-selected-style-polish-20260718",
-      "ref_type": "branch",
-      "full_ref": "refs/heads/codex/ai-edit-selected-style-polish-20260718",
-      "pusher_type": "user"
-    },
-    "public": true,
-    "created_at": "2026-07-18T12:20:51Z"
-  },
-  {
     "id": "15244274964",
     "type": "PushEvent",
     "actor": {
@@ -8001,6 +8164,31 @@
     },
     "public": true,
     "created_at": "2026-07-18T12:20:50Z"
+  },
+  {
+    "id": "15244275298",
+    "type": "DeleteEvent",
+    "actor": {
+      "id": 117957000,
+      "login": "charlie2233",
+      "display_login": "charlie2233",
+      "gravatar_id": "",
+      "url": "https://api.github.com/users/charlie2233",
+      "avatar_url": "https://avatars.githubusercontent.com/u/117957000?"
+    },
+    "repo": {
+      "id": 1166891851,
+      "name": "charlie2233/rork-hoopshighlights-ai_Final",
+      "url": "https://api.github.com/repos/charlie2233/rork-hoopshighlights-ai_Final"
+    },
+    "payload": {
+      "ref": "codex/ai-edit-selected-style-polish-20260718",
+      "ref_type": "branch",
+      "full_ref": "refs/heads/codex/ai-edit-selected-style-polish-20260718",
+      "pusher_type": "user"
+    },
+    "public": true,
+    "created_at": "2026-07-18T12:20:51Z"
   },
   {
     "id": "11966113517",
@@ -8416,6 +8604,31 @@
     "created_at": "2026-07-18T10:45:53Z"
   },
   {
+    "id": "15240177456",
+    "type": "DeleteEvent",
+    "actor": {
+      "id": 117957000,
+      "login": "charlie2233",
+      "display_login": "charlie2233",
+      "gravatar_id": "",
+      "url": "https://api.github.com/users/charlie2233",
+      "avatar_url": "https://avatars.githubusercontent.com/u/117957000?"
+    },
+    "repo": {
+      "id": 1140388078,
+      "name": "charlie2233/atrak-website",
+      "url": "https://api.github.com/repos/charlie2233/atrak-website"
+    },
+    "payload": {
+      "ref": "codex/hoopclips-legal-logo-sync",
+      "ref_type": "branch",
+      "full_ref": "refs/heads/codex/hoopclips-legal-logo-sync",
+      "pusher_type": "user"
+    },
+    "public": true,
+    "created_at": "2026-07-18T10:45:15Z"
+  },
+  {
     "id": "15240177105",
     "type": "PushEvent",
     "actor": {
@@ -8437,31 +8650,6 @@
       "ref": "refs/heads/main",
       "head": "6abfd005f918b17579477743d6baffaf53c96bca",
       "before": "c9bdb2ddf47bdfe895e69d18c54de71376205cd3"
-    },
-    "public": true,
-    "created_at": "2026-07-18T10:45:15Z"
-  },
-  {
-    "id": "15240177456",
-    "type": "DeleteEvent",
-    "actor": {
-      "id": 117957000,
-      "login": "charlie2233",
-      "display_login": "charlie2233",
-      "gravatar_id": "",
-      "url": "https://api.github.com/users/charlie2233",
-      "avatar_url": "https://avatars.githubusercontent.com/u/117957000?"
-    },
-    "repo": {
-      "id": 1140388078,
-      "name": "charlie2233/atrak-website",
-      "url": "https://api.github.com/repos/charlie2233/atrak-website"
-    },
-    "payload": {
-      "ref": "codex/hoopclips-legal-logo-sync",
-      "ref_type": "branch",
-      "full_ref": "refs/heads/codex/hoopclips-legal-logo-sync",
-      "pusher_type": "user"
     },
     "public": true,
     "created_at": "2026-07-18T10:45:15Z"
@@ -9705,6 +9893,31 @@
     "created_at": "2026-07-17T20:32:52Z"
   },
   {
+    "id": "15207680336",
+    "type": "DeleteEvent",
+    "actor": {
+      "id": 117957000,
+      "login": "charlie2233",
+      "display_login": "charlie2233",
+      "gravatar_id": "",
+      "url": "https://api.github.com/users/charlie2233",
+      "avatar_url": "https://avatars.githubusercontent.com/u/117957000?"
+    },
+    "repo": {
+      "id": 1166891851,
+      "name": "charlie2233/rork-hoopshighlights-ai_Final",
+      "url": "https://api.github.com/repos/charlie2233/rork-hoopshighlights-ai_Final"
+    },
+    "payload": {
+      "ref": "codex/testflight-build48-20260717",
+      "ref_type": "branch",
+      "full_ref": "refs/heads/codex/testflight-build48-20260717",
+      "pusher_type": "user"
+    },
+    "public": true,
+    "created_at": "2026-07-17T20:32:53Z"
+  },
+  {
     "id": "15207679895",
     "type": "PushEvent",
     "actor": {
@@ -9726,31 +9939,6 @@
       "ref": "refs/heads/main",
       "head": "87688527d61c9e87c49a7ff322b4705e261afa43",
       "before": "dc6c3fc261445a881ad2895722855d42806a8424"
-    },
-    "public": true,
-    "created_at": "2026-07-17T20:32:53Z"
-  },
-  {
-    "id": "15207680336",
-    "type": "DeleteEvent",
-    "actor": {
-      "id": 117957000,
-      "login": "charlie2233",
-      "display_login": "charlie2233",
-      "gravatar_id": "",
-      "url": "https://api.github.com/users/charlie2233",
-      "avatar_url": "https://avatars.githubusercontent.com/u/117957000?"
-    },
-    "repo": {
-      "id": 1166891851,
-      "name": "charlie2233/rork-hoopshighlights-ai_Final",
-      "url": "https://api.github.com/repos/charlie2233/rork-hoopshighlights-ai_Final"
-    },
-    "payload": {
-      "ref": "codex/testflight-build48-20260717",
-      "ref_type": "branch",
-      "full_ref": "refs/heads/codex/testflight-build48-20260717",
-      "pusher_type": "user"
     },
     "public": true,
     "created_at": "2026-07-17T20:32:53Z"
@@ -10286,173 +10474,5 @@
     },
     "public": true,
     "created_at": "2026-07-17T18:45:55Z"
-  },
-  {
-    "id": "15202243808",
-    "type": "CreateEvent",
-    "actor": {
-      "id": 117957000,
-      "login": "charlie2233",
-      "display_login": "charlie2233",
-      "gravatar_id": "",
-      "url": "https://api.github.com/users/charlie2233",
-      "avatar_url": "https://avatars.githubusercontent.com/u/117957000?"
-    },
-    "repo": {
-      "id": 1166891851,
-      "name": "charlie2233/rork-hoopshighlights-ai_Final",
-      "url": "https://api.github.com/repos/charlie2233/rork-hoopshighlights-ai_Final"
-    },
-    "payload": {
-      "ref": "codex/app-enhancement-20260717",
-      "ref_type": "branch",
-      "full_ref": "refs/heads/codex/app-enhancement-20260717",
-      "master_branch": "main",
-      "description": "Created by Rork",
-      "pusher_type": "user"
-    },
-    "public": true,
-    "created_at": "2026-07-17T18:45:34Z"
-  },
-  {
-    "id": "15200058863",
-    "type": "PushEvent",
-    "actor": {
-      "id": 117957000,
-      "login": "charlie2233",
-      "display_login": "charlie2233",
-      "gravatar_id": "",
-      "url": "https://api.github.com/users/charlie2233",
-      "avatar_url": "https://avatars.githubusercontent.com/u/117957000?"
-    },
-    "repo": {
-      "id": 1140388078,
-      "name": "charlie2233/atrak-website",
-      "url": "https://api.github.com/repos/charlie2233/atrak-website"
-    },
-    "payload": {
-      "repository_id": 1140388078,
-      "push_id": 37490777089,
-      "ref": "refs/heads/main",
-      "head": "1024bdb9ac49f4bfbf8b0bd812c507a403fdd60a",
-      "before": "24e98dff35edc760e080491c1295e028bc520b22"
-    },
-    "public": true,
-    "created_at": "2026-07-17T18:04:39Z"
-  },
-  {
-    "id": "15190393646",
-    "type": "PushEvent",
-    "actor": {
-      "id": 117957000,
-      "login": "charlie2233",
-      "display_login": "charlie2233",
-      "gravatar_id": "",
-      "url": "https://api.github.com/users/charlie2233",
-      "avatar_url": "https://avatars.githubusercontent.com/u/117957000?"
-    },
-    "repo": {
-      "id": 1231252582,
-      "name": "charlie2233/GBC_HuskiesWeb",
-      "url": "https://api.github.com/repos/charlie2233/GBC_HuskiesWeb"
-    },
-    "payload": {
-      "repository_id": 1231252582,
-      "push_id": 37481070439,
-      "ref": "refs/heads/main",
-      "head": "f060c72a62cf64c7603bf9ceb8ccf4e0fabdb65a",
-      "before": "b2394975fb2877db0db1adf11faeee35882ebd7f",
-      "distinct_size": 12,
-      "commits": [
-        {
-          "sha": "f060c72a62cf64c7603bf9ceb8ccf4e0fabdb65a",
-          "message": "docs: record corrected Fresno expansion deploy",
-          "url": "https://github.com/charlie2233/GBC_HuskiesWeb/commit/f060c72a62cf64c7603bf9ceb8ccf4e0fabdb65a"
-        },
-        {
-          "sha": "b2394975fb2877db0db1adf11faeee35882ebd7f",
-          "message": "fix: clarify Fresno area expansion update",
-          "url": "https://github.com/charlie2233/GBC_HuskiesWeb/commit/b2394975fb2877db0db1adf11faeee35882ebd7f"
-        },
-        {
-          "sha": "12a068466309f17a1c1926b89d6afefe6c15f403",
-          "message": "docs: record Fresno announcement deployment",
-          "url": "https://github.com/charlie2233/GBC_HuskiesWeb/commit/12a068466309f17a1c1926b89d6afefe6c15f403"
-        },
-        {
-          "sha": "0c81e9fd8b95be3b7016216d94143ca249e994e0",
-          "message": "feat: add tentative Fresno expansion update",
-          "url": "https://github.com/charlie2233/GBC_HuskiesWeb/commit/0c81e9fd8b95be3b7016216d94143ca249e994e0"
-        },
-        {
-          "sha": "37336682bac58fecdb4625e3ae007af956995d7c",
-          "message": "docs: record team card deployment",
-          "url": "https://github.com/charlie2233/GBC_HuskiesWeb/commit/37336682bac58fecdb4625e3ae007af956995d7c"
-        },
-        {
-          "sha": "928152e47e204613b31d50f4d041e81c99a5f0c5",
-          "message": "feat: add homepage team opportunities card",
-          "url": "https://github.com/charlie2233/GBC_HuskiesWeb/commit/928152e47e204613b31d50f4d041e81c99a5f0c5"
-        },
-        {
-          "sha": "25b2900b0ad05068903ecde700c62c208c9c27e9",
-          "message": "docs: record calendar-free deployment",
-          "url": "https://github.com/charlie2233/GBC_HuskiesWeb/commit/25b2900b0ad05068903ecde700c62c208c9c27e9"
-        },
-        {
-          "sha": "8a10836c707e5ff5aeaea1cb94cae171c9a37f10",
-          "message": "fix: remove all calendar and schedule UI",
-          "url": "https://github.com/charlie2233/GBC_HuskiesWeb/commit/8a10836c707e5ff5aeaea1cb94cae171c9a37f10"
-        },
-        {
-          "sha": "ade7038b072856dddd576b4bc64d627dfb204aae",
-          "message": "docs: record homepage calendar deployment",
-          "url": "https://github.com/charlie2233/GBC_HuskiesWeb/commit/ade7038b072856dddd576b4bc64d627dfb204aae"
-        },
-        {
-          "sha": "03326521d3c878e63a017fcd8af6c33c28b44d49",
-          "message": "fix: remove homepage calendar overlay",
-          "url": "https://github.com/charlie2233/GBC_HuskiesWeb/commit/03326521d3c878e63a017fcd8af6c33c28b44d49"
-        },
-        {
-          "sha": "0857c23a82af3cce135fb1a6ad74e83cfb08a48c",
-          "message": "docs: record vegas championship deployment",
-          "url": "https://github.com/charlie2233/GBC_HuskiesWeb/commit/0857c23a82af3cce135fb1a6ad74e83cfb08a48c"
-        },
-        {
-          "sha": "0258676b333df330474c42bf230634cb2e6e11ca",
-          "message": "feat: celebrate vegas live s1 championship",
-          "url": "https://github.com/charlie2233/GBC_HuskiesWeb/commit/0258676b333df330474c42bf230634cb2e6e11ca"
-        }
-      ]
-    },
-    "public": true,
-    "created_at": "2026-07-17T15:16:52Z"
-  },
-  {
-    "id": "15190192483",
-    "type": "PushEvent",
-    "actor": {
-      "id": 117957000,
-      "login": "charlie2233",
-      "display_login": "charlie2233",
-      "gravatar_id": "",
-      "url": "https://api.github.com/users/charlie2233",
-      "avatar_url": "https://avatars.githubusercontent.com/u/117957000?"
-    },
-    "repo": {
-      "id": 1231252582,
-      "name": "charlie2233/GBC_HuskiesWeb",
-      "url": "https://api.github.com/repos/charlie2233/GBC_HuskiesWeb"
-    },
-    "payload": {
-      "repository_id": 1231252582,
-      "push_id": 37480867813,
-      "ref": "refs/heads/main",
-      "head": "b2394975fb2877db0db1adf11faeee35882ebd7f",
-      "before": "12a068466309f17a1c1926b89d6afefe6c15f403"
-    },
-    "public": true,
-    "created_at": "2026-07-17T15:13:38Z"
   }
 ]
