@@ -332,6 +332,11 @@
       "distinct_size": 34,
       "commits": [
         {
+          "sha": "8af0c3c2bd9d5060702a966f22fc9f816b21cf91",
+          "message": "chore: update GitHub data [skip ci]",
+          "url": "https://github.com/charlie2233/atrak-website/commit/8af0c3c2bd9d5060702a966f22fc9f816b21cf91"
+        },
+        {
           "sha": "f0ba076928bf5a2fd308aebbee5539ded976acc4",
           "message": "chore: update GitHub data [skip ci]",
           "url": "https://github.com/charlie2233/atrak-website/commit/f0ba076928bf5a2fd308aebbee5539ded976acc4"
@@ -425,11 +430,6 @@
           "sha": "83c7636a1bd37b6dba291cc2683e542e059f474e",
           "message": "Add Safe Traveling legal and support pages",
           "url": "https://github.com/charlie2233/atrak-website/commit/83c7636a1bd37b6dba291cc2683e542e059f474e"
-        },
-        {
-          "sha": "3d3cee3268b6743e47ef41da532e51c200fa3f89",
-          "message": "chore: update GitHub data [skip ci]",
-          "url": "https://github.com/charlie2233/atrak-website/commit/3d3cee3268b6743e47ef41da532e51c200fa3f89"
         }
       ]
     },
@@ -591,7 +591,7 @@
       "ref": "refs/heads/main",
       "head": "b769d65608006578f6056a7e114ee7ab473a2419",
       "before": "72701b2abfd229386cd9353e1056f45019a2c2e1",
-      "distinct_size": 81,
+      "distinct_size": 70,
       "commits": [
         {
           "sha": "b769d65608006578f6056a7e114ee7ab473a2419",
@@ -8270,6 +8270,31 @@
     "created_at": "2026-07-18T12:20:49Z"
   },
   {
+    "id": "15244275298",
+    "type": "DeleteEvent",
+    "actor": {
+      "id": 117957000,
+      "login": "charlie2233",
+      "display_login": "charlie2233",
+      "gravatar_id": "",
+      "url": "https://api.github.com/users/charlie2233",
+      "avatar_url": "https://avatars.githubusercontent.com/u/117957000?"
+    },
+    "repo": {
+      "id": 1166891851,
+      "name": "charlie2233/rork-hoopshighlights-ai_Final",
+      "url": "https://api.github.com/repos/charlie2233/rork-hoopshighlights-ai_Final"
+    },
+    "payload": {
+      "ref": "codex/ai-edit-selected-style-polish-20260718",
+      "ref_type": "branch",
+      "full_ref": "refs/heads/codex/ai-edit-selected-style-polish-20260718",
+      "pusher_type": "user"
+    },
+    "public": true,
+    "created_at": "2026-07-18T12:20:51Z"
+  },
+  {
     "id": "15244274964",
     "type": "PushEvent",
     "actor": {
@@ -8294,31 +8319,6 @@
     },
     "public": true,
     "created_at": "2026-07-18T12:20:50Z"
-  },
-  {
-    "id": "15244275298",
-    "type": "DeleteEvent",
-    "actor": {
-      "id": 117957000,
-      "login": "charlie2233",
-      "display_login": "charlie2233",
-      "gravatar_id": "",
-      "url": "https://api.github.com/users/charlie2233",
-      "avatar_url": "https://avatars.githubusercontent.com/u/117957000?"
-    },
-    "repo": {
-      "id": 1166891851,
-      "name": "charlie2233/rork-hoopshighlights-ai_Final",
-      "url": "https://api.github.com/repos/charlie2233/rork-hoopshighlights-ai_Final"
-    },
-    "payload": {
-      "ref": "codex/ai-edit-selected-style-polish-20260718",
-      "ref_type": "branch",
-      "full_ref": "refs/heads/codex/ai-edit-selected-style-polish-20260718",
-      "pusher_type": "user"
-    },
-    "public": true,
-    "created_at": "2026-07-18T12:20:51Z"
   },
   {
     "id": "11966113517",
@@ -8440,31 +8440,6 @@
     "created_at": "2026-07-18T11:24:41Z"
   },
   {
-    "id": "15241943517",
-    "type": "DeleteEvent",
-    "actor": {
-      "id": 117957000,
-      "login": "charlie2233",
-      "display_login": "charlie2233",
-      "gravatar_id": "",
-      "url": "https://api.github.com/users/charlie2233",
-      "avatar_url": "https://avatars.githubusercontent.com/u/117957000?"
-    },
-    "repo": {
-      "id": 1166891851,
-      "name": "charlie2233/rork-hoopshighlights-ai_Final",
-      "url": "https://api.github.com/repos/charlie2233/rork-hoopshighlights-ai_Final"
-    },
-    "payload": {
-      "ref": "codex/accuracy-gate-status-summary-20260718",
-      "ref_type": "branch",
-      "full_ref": "refs/heads/codex/accuracy-gate-status-summary-20260718",
-      "pusher_type": "user"
-    },
-    "public": true,
-    "created_at": "2026-07-18T11:24:42Z"
-  },
-  {
     "id": "15241943194",
     "type": "PushEvent",
     "actor": {
@@ -8486,6 +8461,31 @@
       "ref": "refs/heads/main",
       "head": "99efc137b61a36c3567438ffbe0ebf607a8debaf",
       "before": "efa18bc787f96663b2a4990df05880eead400d9c"
+    },
+    "public": true,
+    "created_at": "2026-07-18T11:24:42Z"
+  },
+  {
+    "id": "15241943517",
+    "type": "DeleteEvent",
+    "actor": {
+      "id": 117957000,
+      "login": "charlie2233",
+      "display_login": "charlie2233",
+      "gravatar_id": "",
+      "url": "https://api.github.com/users/charlie2233",
+      "avatar_url": "https://avatars.githubusercontent.com/u/117957000?"
+    },
+    "repo": {
+      "id": 1166891851,
+      "name": "charlie2233/rork-hoopshighlights-ai_Final",
+      "url": "https://api.github.com/repos/charlie2233/rork-hoopshighlights-ai_Final"
+    },
+    "payload": {
+      "ref": "codex/accuracy-gate-status-summary-20260718",
+      "ref_type": "branch",
+      "full_ref": "refs/heads/codex/accuracy-gate-status-summary-20260718",
+      "pusher_type": "user"
     },
     "public": true,
     "created_at": "2026-07-18T11:24:42Z"
