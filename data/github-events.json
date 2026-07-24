@@ -9,7 +9,7 @@
       "ref": "refs/heads/main",
       "before": "",
       "head": "f060c72a62cf64c7603bf9ceb8ccf4e0fabdb65a",
-      "distinct_size": 12,
+      "distinct_size": 10,
       "commits": [
         {
           "sha": "f060c72a62cf64c7603bf9ceb8ccf4e0fabdb65a",
@@ -60,16 +60,6 @@
           "sha": "03326521d3c878e63a017fcd8af6c33c28b44d49",
           "message": "fix: remove homepage calendar overlay",
           "url": "https://github.com/charlie2233/GBC_HuskiesWeb/commit/03326521d3c878e63a017fcd8af6c33c28b44d49"
-        },
-        {
-          "sha": "0857c23a82af3cce135fb1a6ad74e83cfb08a48c",
-          "message": "docs: record vegas championship deployment",
-          "url": "https://github.com/charlie2233/GBC_HuskiesWeb/commit/0857c23a82af3cce135fb1a6ad74e83cfb08a48c"
-        },
-        {
-          "sha": "0258676b333df330474c42bf230634cb2e6e11ca",
-          "message": "feat: celebrate vegas live s1 championship",
-          "url": "https://github.com/charlie2233/GBC_HuskiesWeb/commit/0258676b333df330474c42bf230634cb2e6e11ca"
         }
       ]
     }
@@ -96,8 +86,13 @@
       "ref": "refs/heads/main",
       "head": "3e9ec2031df81d5db7737a382bd815bddf53b61e",
       "before": "85ae35106687b74c8c843b7e7b679aa234e3585d",
-      "distinct_size": 29,
+      "distinct_size": 28,
       "commits": [
+        {
+          "sha": "a6fb3bd920401564466a76c3ffe8322ae178db04",
+          "message": "chore: update GitHub data [skip ci]",
+          "url": "https://github.com/charlie2233/atrak-website/commit/a6fb3bd920401564466a76c3ffe8322ae178db04"
+        },
         {
           "sha": "3e9ec2031df81d5db7737a382bd815bddf53b61e",
           "message": "chore: refresh weekly GitHub activity",
@@ -192,11 +187,6 @@
           "sha": "fa872b039fd6d9ecc78e045b27df1db4dd45f639",
           "message": "chore: update GitHub data [skip ci]",
           "url": "https://github.com/charlie2233/atrak-website/commit/fa872b039fd6d9ecc78e045b27df1db4dd45f639"
-        },
-        {
-          "sha": "6abfd005f918b17579477743d6baffaf53c96bca",
-          "message": "Add canonical HoopClips logo and legal pages (#14)",
-          "url": "https://github.com/charlie2233/atrak-website/commit/6abfd005f918b17579477743d6baffaf53c96bca"
         }
       ]
     },
@@ -4504,6 +4494,31 @@
     "created_at": "2026-07-19T19:47:01Z"
   },
   {
+    "id": "15320006859",
+    "type": "DeleteEvent",
+    "actor": {
+      "id": 117957000,
+      "login": "charlie2233",
+      "display_login": "charlie2233",
+      "gravatar_id": "",
+      "url": "https://api.github.com/users/charlie2233",
+      "avatar_url": "https://avatars.githubusercontent.com/u/117957000?"
+    },
+    "repo": {
+      "id": 1166891851,
+      "name": "charlie2233/rork-hoopshighlights-ai_Final",
+      "url": "https://api.github.com/repos/charlie2233/rork-hoopshighlights-ai_Final"
+    },
+    "payload": {
+      "ref": "codex/enhance-app-round3-20260719",
+      "ref_type": "branch",
+      "full_ref": "refs/heads/codex/enhance-app-round3-20260719",
+      "pusher_type": "user"
+    },
+    "public": true,
+    "created_at": "2026-07-19T19:46:36Z"
+  },
+  {
     "id": "15320006778",
     "type": "PushEvent",
     "actor": {
@@ -4525,31 +4540,6 @@
       "ref": "refs/heads/main",
       "head": "80d2405582042da44cfec92022ab3a33212851b6",
       "before": "409e5c0c5f9700c3c75006804e7d5bdbe163b797"
-    },
-    "public": true,
-    "created_at": "2026-07-19T19:46:36Z"
-  },
-  {
-    "id": "15320006859",
-    "type": "DeleteEvent",
-    "actor": {
-      "id": 117957000,
-      "login": "charlie2233",
-      "display_login": "charlie2233",
-      "gravatar_id": "",
-      "url": "https://api.github.com/users/charlie2233",
-      "avatar_url": "https://avatars.githubusercontent.com/u/117957000?"
-    },
-    "repo": {
-      "id": 1166891851,
-      "name": "charlie2233/rork-hoopshighlights-ai_Final",
-      "url": "https://api.github.com/repos/charlie2233/rork-hoopshighlights-ai_Final"
-    },
-    "payload": {
-      "ref": "codex/enhance-app-round3-20260719",
-      "ref_type": "branch",
-      "full_ref": "refs/heads/codex/enhance-app-round3-20260719",
-      "pusher_type": "user"
     },
     "public": true,
     "created_at": "2026-07-19T19:46:36Z"
@@ -5356,31 +5346,6 @@
     "created_at": "2026-07-19T06:25:47Z"
   },
   {
-    "id": "15276646225",
-    "type": "DeleteEvent",
-    "actor": {
-      "id": 117957000,
-      "login": "charlie2233",
-      "display_login": "charlie2233",
-      "gravatar_id": "",
-      "url": "https://api.github.com/users/charlie2233",
-      "avatar_url": "https://avatars.githubusercontent.com/u/117957000?"
-    },
-    "repo": {
-      "id": 1166891851,
-      "name": "charlie2233/rork-hoopshighlights-ai_Final",
-      "url": "https://api.github.com/repos/charlie2233/rork-hoopshighlights-ai_Final"
-    },
-    "payload": {
-      "ref": "codex/enhance-app-round-20260718",
-      "ref_type": "branch",
-      "full_ref": "refs/heads/codex/enhance-app-round-20260718",
-      "pusher_type": "user"
-    },
-    "public": true,
-    "created_at": "2026-07-19T04:04:03Z"
-  },
-  {
     "id": "15276645871",
     "type": "PushEvent",
     "actor": {
@@ -5402,6 +5367,31 @@
       "ref": "refs/heads/main",
       "head": "9b26a13dc27e1d849edebfbffc5b9b18606e172a",
       "before": "683223bc1575f6c3e397c428a19a71b08790916e"
+    },
+    "public": true,
+    "created_at": "2026-07-19T04:04:03Z"
+  },
+  {
+    "id": "15276646225",
+    "type": "DeleteEvent",
+    "actor": {
+      "id": 117957000,
+      "login": "charlie2233",
+      "display_login": "charlie2233",
+      "gravatar_id": "",
+      "url": "https://api.github.com/users/charlie2233",
+      "avatar_url": "https://avatars.githubusercontent.com/u/117957000?"
+    },
+    "repo": {
+      "id": 1166891851,
+      "name": "charlie2233/rork-hoopshighlights-ai_Final",
+      "url": "https://api.github.com/repos/charlie2233/rork-hoopshighlights-ai_Final"
+    },
+    "payload": {
+      "ref": "codex/enhance-app-round-20260718",
+      "ref_type": "branch",
+      "full_ref": "refs/heads/codex/enhance-app-round-20260718",
+      "pusher_type": "user"
     },
     "public": true,
     "created_at": "2026-07-19T04:04:03Z"
@@ -6374,6 +6364,31 @@
     "created_at": "2026-07-18T20:31:26Z"
   },
   {
+    "id": "15262899355",
+    "type": "DeleteEvent",
+    "actor": {
+      "id": 117957000,
+      "login": "charlie2233",
+      "display_login": "charlie2233",
+      "gravatar_id": "",
+      "url": "https://api.github.com/users/charlie2233",
+      "avatar_url": "https://avatars.githubusercontent.com/u/117957000?"
+    },
+    "repo": {
+      "id": 1166891851,
+      "name": "charlie2233/rork-hoopshighlights-ai_Final",
+      "url": "https://api.github.com/repos/charlie2233/rork-hoopshighlights-ai_Final"
+    },
+    "payload": {
+      "ref": "codex/upload-normal-network-six-lanes",
+      "ref_type": "branch",
+      "full_ref": "refs/heads/codex/upload-normal-network-six-lanes",
+      "pusher_type": "user"
+    },
+    "public": true,
+    "created_at": "2026-07-18T20:31:27Z"
+  },
+  {
     "id": "15262899251",
     "type": "PushEvent",
     "actor": {
@@ -6395,31 +6410,6 @@
       "ref": "refs/heads/main",
       "head": "767e4debe2d5038071631996261a416b798da611",
       "before": "7167a9f16550e00f86af181d935452399a7a8677"
-    },
-    "public": true,
-    "created_at": "2026-07-18T20:31:27Z"
-  },
-  {
-    "id": "15262899355",
-    "type": "DeleteEvent",
-    "actor": {
-      "id": 117957000,
-      "login": "charlie2233",
-      "display_login": "charlie2233",
-      "gravatar_id": "",
-      "url": "https://api.github.com/users/charlie2233",
-      "avatar_url": "https://avatars.githubusercontent.com/u/117957000?"
-    },
-    "repo": {
-      "id": 1166891851,
-      "name": "charlie2233/rork-hoopshighlights-ai_Final",
-      "url": "https://api.github.com/repos/charlie2233/rork-hoopshighlights-ai_Final"
-    },
-    "payload": {
-      "ref": "codex/upload-normal-network-six-lanes",
-      "ref_type": "branch",
-      "full_ref": "refs/heads/codex/upload-normal-network-six-lanes",
-      "pusher_type": "user"
     },
     "public": true,
     "created_at": "2026-07-18T20:31:27Z"
@@ -9905,6 +9895,31 @@
     "created_at": "2026-07-17T23:33:44Z"
   },
   {
+    "id": "15214922569",
+    "type": "DeleteEvent",
+    "actor": {
+      "id": 117957000,
+      "login": "charlie2233",
+      "display_login": "charlie2233",
+      "gravatar_id": "",
+      "url": "https://api.github.com/users/charlie2233",
+      "avatar_url": "https://avatars.githubusercontent.com/u/117957000?"
+    },
+    "repo": {
+      "id": 1166891851,
+      "name": "charlie2233/rork-hoopshighlights-ai_Final",
+      "url": "https://api.github.com/repos/charlie2233/rork-hoopshighlights-ai_Final"
+    },
+    "payload": {
+      "ref": "codex/post-build48-ux-audit-20260717",
+      "ref_type": "branch",
+      "full_ref": "refs/heads/codex/post-build48-ux-audit-20260717",
+      "pusher_type": "user"
+    },
+    "public": true,
+    "created_at": "2026-07-17T23:33:45Z"
+  },
+  {
     "id": "15214922486",
     "type": "PushEvent",
     "actor": {
@@ -9926,31 +9941,6 @@
       "ref": "refs/heads/main",
       "head": "9b185bbcd839f28caf955048a9f7d1fc2e72cdb5",
       "before": "87688527d61c9e87c49a7ff322b4705e261afa43"
-    },
-    "public": true,
-    "created_at": "2026-07-17T23:33:45Z"
-  },
-  {
-    "id": "15214922569",
-    "type": "DeleteEvent",
-    "actor": {
-      "id": 117957000,
-      "login": "charlie2233",
-      "display_login": "charlie2233",
-      "gravatar_id": "",
-      "url": "https://api.github.com/users/charlie2233",
-      "avatar_url": "https://avatars.githubusercontent.com/u/117957000?"
-    },
-    "repo": {
-      "id": 1166891851,
-      "name": "charlie2233/rork-hoopshighlights-ai_Final",
-      "url": "https://api.github.com/repos/charlie2233/rork-hoopshighlights-ai_Final"
-    },
-    "payload": {
-      "ref": "codex/post-build48-ux-audit-20260717",
-      "ref_type": "branch",
-      "full_ref": "refs/heads/codex/post-build48-ux-audit-20260717",
-      "pusher_type": "user"
     },
     "public": true,
     "created_at": "2026-07-17T23:33:45Z"
