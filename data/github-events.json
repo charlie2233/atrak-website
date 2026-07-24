@@ -9,7 +9,7 @@
       "ref": "refs/heads/main",
       "before": "",
       "head": "f060c72a62cf64c7603bf9ceb8ccf4e0fabdb65a",
-      "distinct_size": 10,
+      "distinct_size": 4,
       "commits": [
         {
           "sha": "f060c72a62cf64c7603bf9ceb8ccf4e0fabdb65a",
@@ -30,36 +30,6 @@
           "sha": "0c81e9fd8b95be3b7016216d94143ca249e994e0",
           "message": "feat: add tentative Fresno expansion update",
           "url": "https://github.com/charlie2233/GBC_HuskiesWeb/commit/0c81e9fd8b95be3b7016216d94143ca249e994e0"
-        },
-        {
-          "sha": "37336682bac58fecdb4625e3ae007af956995d7c",
-          "message": "docs: record team card deployment",
-          "url": "https://github.com/charlie2233/GBC_HuskiesWeb/commit/37336682bac58fecdb4625e3ae007af956995d7c"
-        },
-        {
-          "sha": "928152e47e204613b31d50f4d041e81c99a5f0c5",
-          "message": "feat: add homepage team opportunities card",
-          "url": "https://github.com/charlie2233/GBC_HuskiesWeb/commit/928152e47e204613b31d50f4d041e81c99a5f0c5"
-        },
-        {
-          "sha": "25b2900b0ad05068903ecde700c62c208c9c27e9",
-          "message": "docs: record calendar-free deployment",
-          "url": "https://github.com/charlie2233/GBC_HuskiesWeb/commit/25b2900b0ad05068903ecde700c62c208c9c27e9"
-        },
-        {
-          "sha": "8a10836c707e5ff5aeaea1cb94cae171c9a37f10",
-          "message": "fix: remove all calendar and schedule UI",
-          "url": "https://github.com/charlie2233/GBC_HuskiesWeb/commit/8a10836c707e5ff5aeaea1cb94cae171c9a37f10"
-        },
-        {
-          "sha": "ade7038b072856dddd576b4bc64d627dfb204aae",
-          "message": "docs: record homepage calendar deployment",
-          "url": "https://github.com/charlie2233/GBC_HuskiesWeb/commit/ade7038b072856dddd576b4bc64d627dfb204aae"
-        },
-        {
-          "sha": "03326521d3c878e63a017fcd8af6c33c28b44d49",
-          "message": "fix: remove homepage calendar overlay",
-          "url": "https://github.com/charlie2233/GBC_HuskiesWeb/commit/03326521d3c878e63a017fcd8af6c33c28b44d49"
         }
       ]
     }
@@ -86,8 +56,13 @@
       "ref": "refs/heads/main",
       "head": "3e9ec2031df81d5db7737a382bd815bddf53b61e",
       "before": "85ae35106687b74c8c843b7e7b679aa234e3585d",
-      "distinct_size": 28,
+      "distinct_size": 27,
       "commits": [
+        {
+          "sha": "09520562264c9c291d08f9d2702d66704a62c280",
+          "message": "chore: update GitHub data [skip ci]",
+          "url": "https://github.com/charlie2233/atrak-website/commit/09520562264c9c291d08f9d2702d66704a62c280"
+        },
         {
           "sha": "a6fb3bd920401564466a76c3ffe8322ae178db04",
           "message": "chore: update GitHub data [skip ci]",
@@ -182,11 +157,6 @@
           "sha": "c57d59bdb40975be88659ea3bed84dbee2b7bc61",
           "message": "chore: update GitHub data [skip ci]",
           "url": "https://github.com/charlie2233/atrak-website/commit/c57d59bdb40975be88659ea3bed84dbee2b7bc61"
-        },
-        {
-          "sha": "fa872b039fd6d9ecc78e045b27df1db4dd45f639",
-          "message": "chore: update GitHub data [skip ci]",
-          "url": "https://github.com/charlie2233/atrak-website/commit/fa872b039fd6d9ecc78e045b27df1db4dd45f639"
         }
       ]
     },
