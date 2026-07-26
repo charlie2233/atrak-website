@@ -2,7 +2,11 @@
 # Script to parse the weekly log text file and output structured JSON
 import re
 import json
+from datetime import date
 from pathlib import Path
+
+
+DATE_KEY_PATTERN = re.compile(r'[0-9]{4}-[0-9]{2}-[0-9]{2}')
 
 
 def parse_weekly_log(file_path):
@@ -73,29 +77,67 @@ def parse_weekly_log(file_path):
     return weeks_data
 
 
+def normalize_week_start(week_start):
+    """Return a canonical ISO date key, or None for an invalid generated key."""
+    if not isinstance(week_start, str):
+        return None
+
+    normalized_week_start = week_start.strip()
+    if not normalized_week_start or not DATE_KEY_PATTERN.fullmatch(normalized_week_start):
+        return None
+
+    try:
+        date.fromisoformat(normalized_week_start)
+    except ValueError:
+        return None
+
+    return normalized_week_start
+
+
 def load_generated_entries(file_paths):
-    """Load one preserved generated entry per week from existing output aliases."""
+    """Load canonical generated entries while tolerating a broken sibling alias."""
     entries_by_week_start = {}
+    unusable_aliases = []
+    found_existing_alias = False
+    found_usable_alias = False
 
     for file_path in file_paths:
         file_path = Path(file_path)
         if not file_path.exists():
             continue
 
-        existing_entries = json.loads(file_path.read_text(encoding='utf-8'))
+        found_existing_alias = True
+        try:
+            existing_entries = json.loads(file_path.read_text(encoding='utf-8'))
+        except (OSError, UnicodeDecodeError, json.JSONDecodeError):
+            unusable_aliases.append(f'{file_path}: malformed JSON')
+            continue
+
         if not isinstance(existing_entries, list):
-            raise ValueError(f"Expected a list of weekly entries in {file_path}")
+            unusable_aliases.append(f'{file_path}: expected a JSON list')
+            continue
+
+        found_usable_alias = True
 
         for entry in existing_entries:
             if not isinstance(entry, dict):
                 continue
-            week_start = entry.get('weekStart')
-            if not isinstance(week_start, str) or not week_start.strip():
+            week_start = normalize_week_start(entry.get('weekStart'))
+            if week_start is None:
                 continue
 
             # Prefer the primary history file when aliases disagree, while
             # retaining unique generated weeks present only in an alias.
-            entries_by_week_start.setdefault(week_start.strip(), entry)
+            normalized_entry = entry.copy()
+            normalized_entry['weekStart'] = week_start
+            entries_by_week_start.setdefault(week_start, normalized_entry)
+
+    if found_existing_alias and not found_usable_alias:
+        details = '; '.join(unusable_aliases)
+        raise ValueError(
+            'No usable weekly-entry list found in existing aliases: '
+            f'{details}'
+        )
 
     # Generated editions use ISO date keys, so lexical ordering is chronological.
     return [entries_by_week_start[week_start] for week_start in sorted(entries_by_week_start)]
@@ -126,3 +168,4 @@ if __name__ == '__main__':
         print(f"✅ Successfully parsed {len(data)} weeks to {output_path} and {compatibility_path}")
     except Exception as e:
         print(f"❌ Error: {e}")
+        raise SystemExit(1)
