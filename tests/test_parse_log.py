@@ -83,7 +83,7 @@ class RegenerateWeeklyLogTests(unittest.TestCase):
                 )
 
             self.assertIn(str(history_path), str(raised.exception))
-            self.assertIn(invalid_week_start, str(raised.exception))
+            self.assertIn(repr(invalid_week_start), str(raised.exception))
             self.assertEqual(history_path.read_text(encoding="utf-8"), history_before)
             self.assertEqual(
                 compatibility_path.read_text(encoding="utf-8"), compatibility_before
@@ -200,6 +200,9 @@ class RegenerateWeeklyLogTests(unittest.TestCase):
 
     def test_invalid_calendar_week_start_aborts_without_writing_aliases(self):
         self.assert_invalid_week_start_aborts_without_writes("2026-02-30")
+
+    def test_numeric_week_start_aborts_without_writing_aliases(self):
+        self.assert_invalid_week_start_aborts_without_writes(20260719)
 
     def test_normalizes_and_deduplicates_whitespace_conflicting_week_keys(self):
         with tempfile.TemporaryDirectory() as temporary_directory:
