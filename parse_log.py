@@ -78,18 +78,30 @@ def parse_weekly_log(file_path):
 
 
 def normalize_week_start(week_start):
-    """Return a canonical ISO date key, or None for an invalid generated key."""
-    if not isinstance(week_start, str):
+    """Return a canonical ISO date key or reject an invalid nonempty key."""
+    if week_start is None:
         return None
 
+    if not isinstance(week_start, str):
+        raise ValueError(
+            f'Invalid generated weekStart {week_start!r}; expected YYYY-MM-DD'
+        )
+
     normalized_week_start = week_start.strip()
-    if not normalized_week_start or not DATE_KEY_PATTERN.fullmatch(normalized_week_start):
+    if not normalized_week_start:
         return None
+
+    if not DATE_KEY_PATTERN.fullmatch(normalized_week_start):
+        raise ValueError(
+            f'Invalid generated weekStart {week_start!r}; expected YYYY-MM-DD'
+        )
 
     try:
         date.fromisoformat(normalized_week_start)
-    except ValueError:
-        return None
+    except ValueError as error:
+        raise ValueError(
+            f'Invalid generated weekStart {week_start!r}; expected YYYY-MM-DD'
+        ) from error
 
     return normalized_week_start
 
@@ -122,7 +134,11 @@ def load_generated_entries(file_paths):
         for entry in existing_entries:
             if not isinstance(entry, dict):
                 continue
-            week_start = normalize_week_start(entry.get('weekStart'))
+            try:
+                week_start = normalize_week_start(entry.get('weekStart'))
+            except ValueError as error:
+                raise ValueError(f'{file_path}: {error}') from error
+
             if week_start is None:
                 continue
 

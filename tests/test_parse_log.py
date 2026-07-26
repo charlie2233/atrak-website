@@ -61,6 +61,34 @@ def weekly_log_paths(root):
 
 
 class RegenerateWeeklyLogTests(unittest.TestCase):
+    def assert_invalid_week_start_aborts_without_writes(self, invalid_week_start):
+        with tempfile.TemporaryDirectory() as temporary_directory:
+            log_path, history_path, compatibility_path = weekly_log_paths(
+                Path(temporary_directory)
+            )
+            history_before = json.dumps([
+                generated_entry(invalid_week_start, "Invalid generated week")
+            ])
+            compatibility_before = json.dumps([
+                generated_entry("2026-07-12", "Valid sibling")
+            ])
+            history_path.write_text(history_before, encoding="utf-8")
+            compatibility_path.write_text(compatibility_before, encoding="utf-8")
+
+            with self.assertRaisesRegex(
+                ValueError, "Invalid generated weekStart.*expected YYYY-MM-DD"
+            ) as raised:
+                parse_log.regenerate_weekly_log(
+                    log_path, history_path, compatibility_path
+                )
+
+            self.assertIn(str(history_path), str(raised.exception))
+            self.assertIn(invalid_week_start, str(raised.exception))
+            self.assertEqual(history_path.read_text(encoding="utf-8"), history_before)
+            self.assertEqual(
+                compatibility_path.read_text(encoding="utf-8"), compatibility_before
+            )
+
     def test_rebuilds_legacy_entries_and_preserves_generated_alias_entries(self):
         with tempfile.TemporaryDirectory() as temporary_directory:
             root = Path(temporary_directory)
@@ -167,6 +195,12 @@ class RegenerateWeeklyLogTests(unittest.TestCase):
                 compatibility_path.read_text(encoding="utf-8"), compatibility_before
             )
 
+    def test_invalid_format_week_start_aborts_without_writing_aliases(self):
+        self.assert_invalid_week_start_aborts_without_writes("2026-7-19")
+
+    def test_invalid_calendar_week_start_aborts_without_writing_aliases(self):
+        self.assert_invalid_week_start_aborts_without_writes("2026-02-30")
+
     def test_normalizes_and_deduplicates_whitespace_conflicting_week_keys(self):
         with tempfile.TemporaryDirectory() as temporary_directory:
             log_path, history_path, compatibility_path = weekly_log_paths(
@@ -174,9 +208,7 @@ class RegenerateWeeklyLogTests(unittest.TestCase):
             )
             history_path.write_text(
                 json.dumps([
-                    generated_entry(" 2026-07-05 ", "History wins"),
-                    generated_entry("2026-7-19", "Invalid format"),
-                    generated_entry("2026-02-30", "Invalid date")
+                    generated_entry(" 2026-07-05 ", "History wins")
                 ]),
                 encoding="utf-8"
             )
