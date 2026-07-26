@@ -960,5 +960,240 @@
         "at": "2026-07-17T03:13:44Z"
       }
     ]
+  },
+  {
+    "weekStart": "2026-07-19",
+    "weekEnd": "2026-07-25",
+    "generatedAt": "2026-07-26T09:55:01.561Z",
+    "source": "github-weekly-automation",
+    "dateRange": "Jul 19 – 25",
+    "title": "Backchannel Agent Support and Hoops Highlights App moved the week forward.",
+    "highlights": [
+      "Backchannel Agent Support led public activity with 62 commits across 58 pushes.",
+      "5 public repositories were active across 208 GitHub events.",
+      "No formal GitHub release was published during this edition."
+    ],
+    "shipped": [
+      "validate public evidence ledgers",
+      "bind terminal receipt evidence",
+      "seal expired decision claims",
+      "fence durable provider dispatch"
+    ],
+    "engineering": [
+      "109 pushes and 54 pull request updates were condensed into this edition.",
+      "Active stacks included Python, HTML, TypeScript.",
+      "The snapshot is stored permanently so the edition remains available after GitHub events expire."
+    ],
+    "fixes": [
+      "validate public evidence ledgers",
+      "bind terminal receipt evidence",
+      "seal expired decision claims",
+      "fence durable provider dispatch"
+    ],
+    "metrics": [
+      "Commits: 123",
+      "Active repos: 5",
+      "Pull requests: 54",
+      "Issues: 0",
+      "Releases: 0"
+    ],
+    "next": [
+      "Continue the Backchannel Agent Support build and publish the next visible milestone.",
+      "Review the next automated edition after Sunday refresh."
+    ],
+    "stats": {
+      "commits": 123,
+      "activeRepositories": 5,
+      "pullRequests": 54,
+      "issues": 0,
+      "pushes": 109,
+      "releases": 0,
+      "events": 208
+    },
+    "repositories": [
+      {
+        "name": "Backchannel Agent Support",
+        "fullName": "charlie2233/backchannel-agent-support",
+        "url": "https://github.com/charlie2233/backchannel-agent-support",
+        "language": "Python",
+        "commits": 62,
+        "pushes": 58,
+        "events": 60,
+        "pullRequests": 0,
+        "issues": 0,
+        "lastAt": "2026-07-25T23:36:30.000Z"
+      },
+      {
+        "name": "Hoops Highlights App",
+        "fullName": "charlie2233/rork-hoopshighlights-ai_Final",
+        "url": "https://github.com/charlie2233/rork-hoopshighlights-ai_Final",
+        "language": "Python",
+        "commits": 37,
+        "pushes": 33,
+        "events": 129,
+        "pullRequests": 54,
+        "issues": 0,
+        "lastAt": "2026-07-24T22:33:12.000Z"
+      },
+      {
+        "name": "Atrak Website",
+        "fullName": "charlie2233/atrak-website",
+        "url": "https://github.com/charlie2233/atrak-website",
+        "language": "HTML",
+        "commits": 23,
+        "pushes": 6,
+        "events": 7,
+        "pullRequests": 0,
+        "issues": 0,
+        "lastAt": "2026-07-25T07:31:59.000Z"
+      },
+      {
+        "name": "Lifepage",
+        "fullName": "charlie2233/lifepage",
+        "url": "https://github.com/charlie2233/lifepage",
+        "language": "TypeScript",
+        "commits": 1,
+        "pushes": 2,
+        "events": 2,
+        "pullRequests": 0,
+        "issues": 0,
+        "lastAt": "2026-07-23T08:39:04.000Z"
+      },
+      {
+        "name": "Rork Guide Pup Vision Assistant",
+        "fullName": "charlie2233/rork-guide-pup--vision-assistant",
+        "url": "https://github.com/charlie2233/rork-guide-pup--vision-assistant",
+        "language": "TypeScript",
+        "commits": 0,
+        "pushes": 10,
+        "events": 10,
+        "pullRequests": 0,
+        "issues": 0,
+        "lastAt": "2026-07-25T06:11:49.000Z"
+      }
+    ],
+    "releases": [],
+    "commitMessages": [
+      {
+        "repo": "charlie2233/backchannel-agent-support",
+        "text": "validate public evidence ledgers",
+        "url": "https://github.com/charlie2233/backchannel-agent-support/commit/3257829e1ee7ce3360dcf7c54c2046e07b6e9f92",
+        "at": "2026-07-25T23:36:22Z"
+      },
+      {
+        "repo": "charlie2233/backchannel-agent-support",
+        "text": "bind terminal receipt evidence",
+        "url": "https://github.com/charlie2233/backchannel-agent-support/commit/96196205f6aa890bbe383a6133da629aca35dc25",
+        "at": "2026-07-25T17:54:06Z"
+      },
+      {
+        "repo": "charlie2233/backchannel-agent-support",
+        "text": "seal expired decision claims",
+        "url": "https://github.com/charlie2233/backchannel-agent-support/commit/fb6b1e45155a21b9c12ca1779ea4de31909a052d",
+        "at": "2026-07-25T14:59:03Z"
+      },
+      {
+        "repo": "charlie2233/backchannel-agent-support",
+        "text": "fence durable provider dispatch",
+        "url": "https://github.com/charlie2233/backchannel-agent-support/commit/bab9a88e1f3924a9822cf5d2966652e1d4a5552d",
+        "at": "2026-07-25T07:46:00Z"
+      },
+      {
+        "repo": "charlie2233/atrak-website",
+        "text": "refresh weekly GitHub activity",
+        "url": "https://github.com/charlie2233/atrak-website/commit/3cae34b1b21e488a556b3edee81fbb843809aac9",
+        "at": "2026-07-25T07:31:22Z"
+      },
+      {
+        "repo": "charlie2233/backchannel-agent-support",
+        "text": "bound creation capacity by opaque IP",
+        "url": "https://github.com/charlie2233/backchannel-agent-support/commit/ece2b628248e27d28c8e34840d2e1885b356c99c",
+        "at": "2026-07-25T06:49:44Z"
+      },
+      {
+        "repo": "charlie2233/backchannel-agent-support",
+        "text": "prohibit deployed demo reset",
+        "url": "https://github.com/charlie2233/backchannel-agent-support/commit/6d987175394f6d6c8e75e46e441c2c2e8786d4bf",
+        "at": "2026-07-25T05:56:15Z"
+      },
+      {
+        "repo": "charlie2233/backchannel-agent-support",
+        "text": "bound production HTTP admission",
+        "url": "https://github.com/charlie2233/backchannel-agent-support/commit/acfdbcd3539c581f5b30d9f9dfdedab880f948ed",
+        "at": "2026-07-25T05:44:37Z"
+      },
+      {
+        "repo": "charlie2233/backchannel-agent-support",
+        "text": "make release capture fail closed",
+        "url": "https://github.com/charlie2233/backchannel-agent-support/commit/fece4d5c26630f85e285e40ef72aa50d07bee48a",
+        "at": "2026-07-25T05:27:57Z"
+      },
+      {
+        "repo": "charlie2233/backchannel-agent-support",
+        "text": "bound recovery creation capacity",
+        "url": "https://github.com/charlie2233/backchannel-agent-support/commit/0fd2d7f89e8ba02b99e00a98d9f8e6f3f94db303",
+        "at": "2026-07-25T04:51:36Z"
+      },
+      {
+        "repo": "charlie2233/backchannel-agent-support",
+        "text": "make recovery creation retry-safe",
+        "url": "https://github.com/charlie2233/backchannel-agent-support/commit/b89fdb05672f3bb54176f04ad71292ffed8d78dd",
+        "at": "2026-07-25T03:12:04Z"
+      },
+      {
+        "repo": "charlie2233/backchannel-agent-support",
+        "text": "require committed readiness writes",
+        "url": "https://github.com/charlie2233/backchannel-agent-support/commit/30969548766fb28f530bb8e0e4764a39e5fcd3ab",
+        "at": "2026-07-25T01:02:52Z"
+      },
+      {
+        "repo": "charlie2233/backchannel-agent-support",
+        "text": "reject ineligible consent",
+        "url": "https://github.com/charlie2233/backchannel-agent-support/commit/21f7d6a562a2527a6e096abbc473d1b8bb42f95e",
+        "at": "2026-07-25T00:05:51Z"
+      },
+      {
+        "repo": "charlie2233/atrak-website",
+        "text": "refresh weekly GitHub activity",
+        "url": "https://github.com/charlie2233/atrak-website/commit/3e9ec2031df81d5db7737a382bd815bddf53b61e",
+        "at": "2026-07-23T08:32:09Z"
+      },
+      {
+        "repo": "charlie2233/atrak-website",
+        "text": "repair weekly briefing link",
+        "url": "https://github.com/charlie2233/atrak-website/commit/4976c5646b3ac2073c5a343fc9891dda7c4c8f61",
+        "at": "2026-07-21T19:11:55Z"
+      },
+      {
+        "repo": "charlie2233/atrak-website",
+        "text": "update weekly logs and July releases [skip ci]",
+        "url": "https://github.com/charlie2233/atrak-website/commit/e420f924f243b913bbc27671fa7aeb4675b720f1",
+        "at": "2026-07-21T19:06:25Z"
+      },
+      {
+        "repo": "charlie2233/lifepage",
+        "text": "serve Pages crawl metadata",
+        "url": "https://github.com/charlie2233/lifepage/commit/d2002fe9857e1d032763b3417d6c2e45c48a41e8",
+        "at": "2026-07-21T19:02:55Z"
+      },
+      {
+        "repo": "charlie2233/rork-hoopshighlights-ai_Final",
+        "text": "Guard TestFlight build reference consistency",
+        "url": "https://github.com/charlie2233/rork-hoopshighlights-ai_Final/commit/f1318cab6a407cc552b1d978b59278452b275063",
+        "at": "2026-07-21T04:17:54Z"
+      },
+      {
+        "repo": "charlie2233/rork-hoopshighlights-ai_Final",
+        "text": "Refresh App Store build references",
+        "url": "https://github.com/charlie2233/rork-hoopshighlights-ai_Final/commit/491dc49027518c2b9b4a7a29a4803a3e233bfa16",
+        "at": "2026-07-21T04:14:47Z"
+      },
+      {
+        "repo": "charlie2233/rork-hoopshighlights-ai_Final",
+        "text": "Align launch checks with TestFlight build 57",
+        "url": "https://github.com/charlie2233/rork-hoopshighlights-ai_Final/commit/fb20adc79cdb6a983668941cba1635d6cc473cea",
+        "at": "2026-07-20T22:16:23Z"
+      }
+    ]
   }
 ]
