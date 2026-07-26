@@ -73,6 +73,46 @@ def parse_weekly_log(file_path):
     return weeks_data
 
 
+def load_generated_entries(file_paths):
+    """Load one preserved generated entry per week from existing output aliases."""
+    entries_by_week_start = {}
+
+    for file_path in file_paths:
+        file_path = Path(file_path)
+        if not file_path.exists():
+            continue
+
+        existing_entries = json.loads(file_path.read_text(encoding='utf-8'))
+        if not isinstance(existing_entries, list):
+            raise ValueError(f"Expected a list of weekly entries in {file_path}")
+
+        for entry in existing_entries:
+            if not isinstance(entry, dict):
+                continue
+            week_start = entry.get('weekStart')
+            if not isinstance(week_start, str) or not week_start.strip():
+                continue
+
+            # Prefer the primary history file when aliases disagree, while
+            # retaining unique generated weeks present only in an alias.
+            entries_by_week_start.setdefault(week_start.strip(), entry)
+
+    # Generated editions use ISO date keys, so lexical ordering is chronological.
+    return [entries_by_week_start[week_start] for week_start in sorted(entries_by_week_start)]
+
+
+def regenerate_weekly_log(log_path, output_path, compatibility_path):
+    """Rebuild legacy entries and retain generated weekly editions."""
+    legacy_entries = parse_weekly_log(log_path)
+    generated_entries = load_generated_entries((output_path, compatibility_path))
+    entries = legacy_entries + generated_entries
+    payload = json.dumps(entries, indent=2, ensure_ascii=False) + '\n'
+
+    Path(output_path).write_text(payload, encoding='utf-8')
+    Path(compatibility_path).write_text(payload, encoding='utf-8')
+    return entries
+
+
 # Run parser and write output JSON
 if __name__ == '__main__':
     try:
@@ -82,10 +122,7 @@ if __name__ == '__main__':
         output_path = script_dir / 'data' / 'weekly-history.json'
         compatibility_path = script_dir / 'data' / 'weekly-log.json'
         
-        data = parse_weekly_log(log_path)
-        payload = json.dumps(data, indent=2)
-        output_path.write_text(payload, encoding='utf-8')
-        compatibility_path.write_text(payload, encoding='utf-8')
+        data = regenerate_weekly_log(log_path, output_path, compatibility_path)
         print(f"✅ Successfully parsed {len(data)} weeks to {output_path} and {compatibility_path}")
     except Exception as e:
         print(f"❌ Error: {e}")

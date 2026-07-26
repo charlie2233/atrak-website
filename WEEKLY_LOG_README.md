@@ -26,7 +26,8 @@ Human-readable weekly development log organized chronologically.
 - **Next**: Upcoming priorities
 
 ### `data/weekly-history.json`
-Machine-readable JSON export of the weekly log, automatically generated from `WeeklyLog.txt`.
+Machine-readable JSON export of the weekly log. Running the parser rebuilds the
+legacy entries from `WeeklyLog.txt` and retains generated editions with `weekStart`.
 
 ### `data/weekly-log.json`
 Compatibility alias for the weekly history feed. It mirrors `data/weekly-history.json`
@@ -47,7 +48,8 @@ so existing monitors and older links do not 404.
 ```
 
 ### `parse_log.py`
-Python script that parses `WeeklyLog.txt` and generates `data/weekly-history.json`.
+Python script that parses `WeeklyLog.txt`, preserves generated `weekStart` editions,
+and writes matching `data/weekly-history.json` and `data/weekly-log.json` aliases.
 
 **Usage:**
 ```bash
