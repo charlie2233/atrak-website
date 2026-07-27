@@ -21,7 +21,8 @@ const SITE_BASE_URL = (() => {
     return '';
 })();
 
-const GITHUB_CACHE_VERSION = '20260611a';
+const GITHUB_CACHE_VERSION = '20260727a';
+const FRESH_GITHUB_CACHE_FETCH = { cache: 'no-store' };
 const withCacheVersion = (url) => `${url}${url.includes('?') ? '&' : '?'}v=${GITHUB_CACHE_VERSION}`;
 const CACHED_REPOS_BASE_PATH = SITE_BASE_URL ? `${SITE_BASE_URL}data/github-repos.json` : 'data/github-repos.json'; // Updated by GitHub Actions
 const CACHED_DATA_PATH = withCacheVersion(CACHED_REPOS_BASE_PATH);
@@ -64,7 +65,7 @@ let lastGitHubFetchSource = null; // 'cache' | 'api'
  */
 async function loadCachedData() {
     try {
-        const response = await fetch(CACHED_DATA_PATH);
+        const response = await fetch(CACHED_DATA_PATH, FRESH_GITHUB_CACHE_FETCH);
         if (response.ok) {
             const repos = await response.json();
             if (Array.isArray(repos) && repos.length > 0) {
@@ -80,7 +81,7 @@ async function loadCachedData() {
 
 async function loadCachedMeta() {
     try {
-        const response = await fetch(CACHED_META_PATH);
+        const response = await fetch(CACHED_META_PATH, FRESH_GITHUB_CACHE_FETCH);
         if (!response.ok) return null;
         const meta = await response.json();
         if (!meta || typeof meta !== 'object') return null;
@@ -93,7 +94,7 @@ async function loadCachedMeta() {
 
 async function loadCachedReleases() {
     try {
-        const response = await fetch(CACHED_RELEASES_PATH);
+        const response = await fetch(CACHED_RELEASES_PATH, FRESH_GITHUB_CACHE_FETCH);
         if (!response.ok) return null;
         const releases = await response.json();
         if (!Array.isArray(releases)) return null;

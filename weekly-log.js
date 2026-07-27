@@ -1,7 +1,8 @@
 (() => {
     'use strict';
 
-    const CACHE_VERSION = '20260714b';
+    const CACHE_VERSION = '20260727a';
+    const FRESH_DATA_FETCH = { cache: 'no-store' };
     const WEEK_MS = 7 * 24 * 60 * 60 * 1000;
     const BASE_URL = new URL('.', document.baseURI);
     const dataUrl = (path) => {
@@ -151,7 +152,7 @@
 
     const fetchJson = async (url, fallback) => {
         try {
-            const response = await fetch(url);
+            const response = await fetch(url, FRESH_DATA_FETCH);
             if (!response.ok) return fallback;
             return await response.json();
         } catch (_) {
@@ -161,7 +162,7 @@
 
     const fetchText = async (url) => {
         try {
-            const response = await fetch(url);
+            const response = await fetch(url, FRESH_DATA_FETCH);
             return response.ok ? await response.text() : '';
         } catch (_) {
             return '';

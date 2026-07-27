@@ -660,9 +660,11 @@ const renderImpactReveals = (root) => {
     }
 };
 
-const fetchJsonSafe = async (path) => {
+const FRESH_GITHUB_DATA_FETCH = { cache: 'no-store' };
+
+const fetchJsonSafe = async (path, options) => {
     try {
-        const response = await fetch(path);
+        const response = await fetch(path, options);
         if (!response.ok) return null;
         return await response.json();
     } catch (_) {
@@ -877,9 +879,9 @@ async function loadImpactAnalytics() {
             releaseHtml
         ] = await Promise.all([
             fetchJsonSafe('data/impact-analytics.json'),
-            fetchJsonSafe('data/github-meta.json'),
-            fetchJsonSafe('data/github-weekly.json'),
-            fetchJsonSafe('data/weekly-history.json'),
+            fetchJsonSafe('data/github-meta.json', FRESH_GITHUB_DATA_FETCH),
+            fetchJsonSafe('data/github-weekly.json', FRESH_GITHUB_DATA_FETCH),
+            fetchJsonSafe('data/weekly-history.json', FRESH_GITHUB_DATA_FETCH),
             fetchTextSafe('releases.html')
         ]);
 
