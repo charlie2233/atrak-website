@@ -964,14 +964,14 @@
   {
     "weekStart": "2026-07-19",
     "weekEnd": "2026-07-25",
-    "generatedAt": "2026-07-26T09:55:01.561Z",
+    "generatedAt": "2026-07-28T19:33:24.157Z",
     "source": "github-weekly-automation",
     "dateRange": "Jul 19 – 25",
     "title": "Backchannel Agent Support and Hoops Highlights App moved the week forward.",
     "highlights": [
       "Backchannel Agent Support led public activity with 62 commits across 58 pushes.",
       "5 public repositories were active across 208 GitHub events.",
-      "No formal GitHub release was published during this edition."
+      "1 release joined the public download feed."
     ],
     "shipped": [
       "validate public evidence ledgers",
@@ -995,7 +995,7 @@
       "Active repos: 5",
       "Pull requests: 54",
       "Issues: 0",
-      "Releases: 0"
+      "Releases: 1"
     ],
     "next": [
       "Continue the Backchannel Agent Support build and publish the next visible milestone.",
@@ -1007,7 +1007,7 @@
       "pullRequests": 54,
       "issues": 0,
       "pushes": 109,
-      "releases": 0,
+      "releases": 1,
       "events": 208
     },
     "repositories": [
@@ -1072,7 +1072,15 @@
         "lastAt": "2026-07-25T06:11:49.000Z"
       }
     ],
-    "releases": [],
+    "releases": [
+      {
+        "repo": "charlie2233/lifepage",
+        "name": "LifePage launch/readiness updates",
+        "tag": "2026.04-lifepage-sync",
+        "url": "https://atrak.dev/projects/lifepage.html",
+        "publishedAt": "2026-07-23T08:39:03Z"
+      }
+    ],
     "commitMessages": [
       {
         "repo": "charlie2233/backchannel-agent-support",

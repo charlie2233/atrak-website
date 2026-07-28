@@ -798,10 +798,57 @@ You can honestly demo this to a coach and they'd actually use it.
 
 ---
 
+## Week of Jul 19 – Jul 25
+
+### "Evidence hardening, TestFlight alignment, and LifePage readiness"
+
+**Highlights**
+
+* Backchannel Agent Support led public activity with 62 commits
+* Hoops Highlights App contributed 37 commits and seven pull-request updates
+* LifePage published its launch/readiness download entry
+
+**Shipped**
+
+* Public evidence-ledger validation and terminal receipt binding for Backchannel
+* Durable provider dispatch and decision-claim safeguards
+* HoopClips TestFlight build-reference consistency and launch-check alignment
+* LifePage crawl metadata and launch/readiness updates
+
+**Engineering**
+
+* 109 pushes and 54 pull-request updates condensed into one durable edition
+* Five active repositories across Python, HTML, and TypeScript stacks
+* GitHub API commit enrichment verified the completed Sunday → Saturday window
+
+**Fixes**
+
+* Sealed expired decision claims and bounded public HTTP admission
+* Made release capture fail closed
+* Repaired weekly briefing data and release-feed continuity
+
+**Metrics**
+
+* Commits: 123
+* Active repos: 5
+* PR updates: 54
+* Issues: 0
+* Pushes: 109
+* Releases: 1
+* GitHub events: 208
+
+**Next**
+
+* Continue Backchannel release-proof hardening
+* Keep HoopClips launch evidence aligned with the referenced TestFlight build
+* Publish the next completed Sunday → Saturday edition after GitHub refresh
+
+---
+
 # 📊 Summary
 
-**Total Coverage:** August 31, 2024 – July 18, 2026
-**Total Weeks:** 19 documented (Dec Weeks 14-18 remain undocumented)
+**Total Coverage:** August 31, 2024 – July 25, 2026
+**Total Weeks:** 20 documented (Dec Weeks 14-18 remain undocumented)
 **Format:** Sunday → Saturday (PT)
 
 **Major Milestones:**
