@@ -1,26 +1,12 @@
 [
   {
-    "repo": "charlie2233/lifepage",
-    "tag": "2026.04-lifepage-sync",
-    "name": "LifePage launch/readiness updates",
-    "url": "https://atrak.dev/projects/lifepage.html",
-    "published_at": "2026-07-23T08:39:03Z",
-    "prerelease": false,
-    "draft": false,
-    "source": "atrak-download",
-    "zipball_url": "https://github.com/charlie2233/lifepage/archive/refs/heads/main.zip",
-    "tarball_url": "https://github.com/charlie2233/lifepage/archive/refs/heads/main.tar.gz",
-    "assets": []
-  },
-  {
     "repo": "charlie2233/atrak-website",
-    "tag": "v2026.06.11",
     "name": "Atrak Website v2026.06.11",
+    "tag": "v2026.06.11",
     "url": "https://github.com/charlie2233/atrak-website/releases/tag/v2026.06.11",
     "published_at": "2026-06-11T22:24:25Z",
-    "prerelease": false,
     "draft": false,
-    "source": "github-release",
+    "prerelease": false,
     "zipball_url": "https://api.github.com/repos/charlie2233/atrak-website/zipball/v2026.06.11",
     "tarball_url": "https://api.github.com/repos/charlie2233/atrak-website/tarball/v2026.06.11",
     "assets": [
@@ -34,13 +20,12 @@
   },
   {
     "repo": "charlie2233/Basketball_action_recoginition_sever",
-    "tag": "hoops-clips-mac-v1.0",
     "name": "Hoops Clips Mac Installer v1.0",
+    "tag": "hoops-clips-mac-v1.0",
     "url": "https://github.com/charlie2233/Basketball_action_recoginition_sever/releases/tag/hoops-clips-mac-v1.0",
     "published_at": "2026-06-11T22:24:21Z",
-    "prerelease": false,
     "draft": false,
-    "source": "github-release",
+    "prerelease": false,
     "zipball_url": "https://api.github.com/repos/charlie2233/Basketball_action_recoginition_sever/zipball/hoops-clips-mac-v1.0",
     "tarball_url": "https://api.github.com/repos/charlie2233/Basketball_action_recoginition_sever/tarball/hoops-clips-mac-v1.0",
     "assets": [
@@ -54,13 +39,12 @@
   },
   {
     "repo": "charlie2233/formative-ai-exporter",
-    "tag": "v0.1.0",
     "name": "Practice Snapshot for Formative v0.1.0",
+    "tag": "v0.1.0",
     "url": "https://github.com/charlie2233/formative-ai-exporter/releases/tag/v0.1.0",
     "published_at": "2026-06-11T22:24:18Z",
-    "prerelease": false,
     "draft": false,
-    "source": "github-release",
+    "prerelease": false,
     "zipball_url": "https://api.github.com/repos/charlie2233/formative-ai-exporter/zipball/v0.1.0",
     "tarball_url": "https://api.github.com/repos/charlie2233/formative-ai-exporter/tarball/v0.1.0",
     "assets": [
@@ -74,13 +58,12 @@
   },
   {
     "repo": "charlie2233/coursebinder-ai-ready-google-classroom-exporter",
-    "tag": "v0.1.0",
     "name": "CourseBinder Classroom AI Exporter v0.1.0",
+    "tag": "v0.1.0",
     "url": "https://github.com/charlie2233/coursebinder-ai-ready-google-classroom-exporter/releases/tag/v0.1.0",
     "published_at": "2026-06-11T22:24:15Z",
-    "prerelease": false,
     "draft": false,
-    "source": "github-release",
+    "prerelease": false,
     "zipball_url": "https://api.github.com/repos/charlie2233/coursebinder-ai-ready-google-classroom-exporter/zipball/v0.1.0",
     "tarball_url": "https://api.github.com/repos/charlie2233/coursebinder-ai-ready-google-classroom-exporter/tarball/v0.1.0",
     "assets": [
@@ -93,27 +76,13 @@
     ]
   },
   {
-    "repo": "charlie2233/DestinnyBasketballPage",
-    "tag": "2026.04-site-refresh",
-    "name": "Destiny Basketball public site refresh",
-    "url": "https://atrak.dev/projects/destiny-basketball.html",
-    "published_at": "2026-04-23T19:57:12Z",
-    "prerelease": false,
-    "draft": false,
-    "source": "atrak-download",
-    "zipball_url": "https://github.com/charlie2233/DestinnyBasketballPage/archive/refs/heads/main.zip",
-    "tarball_url": "https://github.com/charlie2233/DestinnyBasketballPage/archive/refs/heads/main.tar.gz",
-    "assets": []
-  },
-  {
     "repo": "charlie2233/Basketball_action_recoginition_sever",
-    "tag": "checkpoint-13",
     "name": "Checkpoint 13",
+    "tag": "checkpoint-13",
     "url": "https://github.com/charlie2233/Basketball_action_recoginition_sever/releases/tag/checkpoint-13",
     "published_at": "2026-02-05T08:43:11Z",
-    "prerelease": false,
     "draft": false,
-    "source": "github-release",
+    "prerelease": false,
     "zipball_url": "https://api.github.com/repos/charlie2233/Basketball_action_recoginition_sever/zipball/checkpoint-13",
     "tarball_url": "https://api.github.com/repos/charlie2233/Basketball_action_recoginition_sever/tarball/checkpoint-13",
     "assets": [
