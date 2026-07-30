@@ -518,38 +518,101 @@
     ]
   },
   {
-    "dateRange": "Apr 20 – Apr 27",
-    "title": "Project hub refresh + education exporter drop",
+    "dateRange": "Jul 5 – Jul 11",
+    "title": "Atrak Website + Hoops Highlights shipped in parallel",
     "highlights": [
-      "Refreshed the project hub around current public GitHub data",
-      "Added CourseBinder Classroom AI Exporter and Practice Snapshot for Formative as first-class project cards",
-      "Rebuilt release/download cards so installable ZIPs are visible even before formal GitHub Releases exist"
+      "Atrak Website and Hoops Highlights App led the public GitHub activity",
+      "Two repositories were active across 66 captured GitHub events",
+      "The site stored the edition permanently instead of relying on GitHub's expiring event window"
     ],
     "shipped": [
-      "Live GitHub cache with 20 public repos, 3 stars, and 8 primary languages",
-      "Project slider ordering and repo links aligned with current renamed repos",
-      "Three new blog posts covering the GitHub refresh, education exporter drop, and April ship report"
+      "Atrak project ecosystem and navigation updates",
+      "Hoops Highlights product and launch-flow improvements",
+      "Automated weekly editorial snapshot for Jul 5–11"
+    ],
+    "engineering": [],
+    "fixes": [],
+    "metrics": [
+      "Commits: 48",
+      "Active repos: 2",
+      "PR updates: 24",
+      "Issues: 1",
+      "Pushes: 20",
+      "Releases: 0"
+    ],
+    "next": []
+  },
+  {
+    "dateRange": "Jul 12 – Jul 18",
+    "title": "Launch proof, legal pages, and public-site milestones",
+    "highlights": [
+      "Hoops Highlights App led activity with 52 captured commits and 70 pull-request updates",
+      "Atrak Website shipped AccessCourt connections plus Safe Traveling and HoopClips legal/support pages",
+      "GBC HuskiesWeb recorded Fresno expansion, team-card, calendar cleanup, and championship updates"
+    ],
+    "shipped": [
+      "Hoops Highlights AI Edit launch polish, upload-lane tuning, progress visibility, and TestFlight proof documentation",
+      "Canonical HoopClips branding and legal pages on Atrak Website",
+      "Safe Traveling legal and support pages",
+      "GBC HuskiesWeb public milestones and deployment records"
     ],
     "engineering": [
-      "Added a GitHub live refresh script for repos, events, releases, meta, and weekly stats",
-      "Enriched public push events with commit messages from the commits API",
-      "Expanded dynamic More Projects pages beyond the first six cached repos"
+      "67 pushes and 80 pull-request updates condensed into one durable edition",
+      "Four active repositories across Python, HTML, and TypeScript stacks",
+      "Automated cache and weekly-log renewal fixes kept the public briefing current"
     ],
-    "fixes": [
-      "Old LifePage repo links pointing to My_portforlio",
-      "Old Destiny repo links pointing to the pre-rename repo",
-      "Release feed empty state when there were downloadable project drops but no formal GitHub Releases"
-    ],
+    "fixes": [],
     "metrics": [
-      "Commits: 27",
-      "Active repos: 6",
-      "Repos tracked: 20",
-      "Release/download cards: 6"
+      "Commits: 104",
+      "Active repos: 4",
+      "PR updates: 80",
+      "Issues: 0",
+      "Pushes: 67",
+      "Releases: 0",
+      "GitHub events: 223"
     ],
     "next": [
-      "Publish real GitHub Releases for ZIP downloads",
-      "Add screenshots/videos to remaining GitHub archive project detail pages",
-      "Keep weekly news shorter while preserving shareable archive details"
+      "Continue product launch proof without conflating source changes with store/device completion",
+      "Publish the next completed Sunday → Saturday edition after GitHub refresh"
+    ]
+  },
+  {
+    "dateRange": "Jul 19 – Jul 25",
+    "title": "Evidence hardening, TestFlight alignment, and LifePage readiness",
+    "highlights": [
+      "Backchannel Agent Support led public activity with 62 commits",
+      "Hoops Highlights App contributed 37 commits and seven pull-request updates",
+      "LifePage published its launch/readiness download entry"
+    ],
+    "shipped": [
+      "Public evidence-ledger validation and terminal receipt binding for Backchannel",
+      "Durable provider dispatch and decision-claim safeguards",
+      "HoopClips TestFlight build-reference consistency and launch-check alignment",
+      "LifePage crawl metadata and launch/readiness updates"
+    ],
+    "engineering": [
+      "109 pushes and 54 pull-request updates condensed into one durable edition",
+      "Five active repositories across Python, HTML, and TypeScript stacks",
+      "GitHub API commit enrichment verified the completed Sunday → Saturday window"
+    ],
+    "fixes": [
+      "Sealed expired decision claims and bounded public HTTP admission",
+      "Made release capture fail closed",
+      "Repaired weekly briefing data and release-feed continuity"
+    ],
+    "metrics": [
+      "Commits: 123",
+      "Active repos: 5",
+      "PR updates: 54",
+      "Issues: 0",
+      "Pushes: 109",
+      "Releases: 1",
+      "GitHub events: 208"
+    ],
+    "next": [
+      "Continue Backchannel release-proof hardening",
+      "Keep HoopClips launch evidence aligned with the referenced TestFlight build",
+      "Publish the next completed Sunday → Saturday edition after GitHub refresh"
     ]
   },
   {
