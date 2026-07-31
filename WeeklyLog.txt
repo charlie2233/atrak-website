@@ -727,6 +727,49 @@ You can honestly demo this to a coach and they'd actually use it.
 
 ---
 
+## Week of Apr 20 – Apr 27
+
+### "Project hub refresh + education exporter drop"
+
+**Highlights**
+
+* Refreshed the project hub around current public GitHub data
+* Added CourseBinder Classroom AI Exporter and Practice Snapshot for Formative as first-class project cards
+* Rebuilt release/download cards so installable ZIPs are visible even before formal GitHub Releases exist
+
+**Shipped**
+
+* Live GitHub cache with 20 public repos, 3 stars, and 8 primary languages
+* Project slider ordering and repo links aligned with current renamed repos
+* Three new blog posts covering the GitHub refresh, education exporter drop, and April ship report
+
+**Engineering**
+
+* Added a GitHub live refresh script for repos, events, releases, meta, and weekly stats
+* Enriched public push events with commit messages from the commits API
+* Expanded dynamic More Projects pages beyond the first six cached repos
+
+**Fixes**
+
+* Old LifePage repo links pointing to My_portforlio
+* Old Destiny repo links pointing to the pre-rename repo
+* Release feed empty state when there were downloadable project drops but no formal GitHub Releases
+
+**Metrics**
+
+* Commits: 27
+* Active repos: 6
+* Repos tracked: 20
+* Release/download cards: 6
+
+**Next**
+
+* Publish real GitHub Releases for ZIP downloads
+* Add screenshots/videos to remaining GitHub archive project detail pages
+* Keep weekly news shorter while preserving shareable archive details
+
+---
+
 ## Part 7 — July 2026 (GitHub-backed Updates)
 
 ---
