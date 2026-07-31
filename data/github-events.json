@@ -1,5 +1,212 @@
 [
   {
+    "id": "16293905221",
+    "type": "PushEvent",
+    "actor": {
+      "id": 117957000,
+      "login": "charlie2233",
+      "display_login": "charlie2233",
+      "gravatar_id": "",
+      "url": "https://api.github.com/users/charlie2233",
+      "avatar_url": "https://avatars.githubusercontent.com/u/117957000?"
+    },
+    "repo": {
+      "id": 1306028280,
+      "name": "charlie2233/backchannel-agent-support",
+      "url": "https://api.github.com/repos/charlie2233/backchannel-agent-support"
+    },
+    "payload": {
+      "repository_id": 1306028280,
+      "push_id": 38599737513,
+      "ref": "refs/heads/codex/backchannel-v0.3",
+      "head": "b1fd528f459ebc8c7fd1544e0ca356326be7f3af",
+      "before": "1030d197ce2801be2abe17bea43522a97736adb8",
+      "distinct_size": 34,
+      "commits": [
+        {
+          "sha": "3a026e608d61210616a0eb730d2646daabd3b830",
+          "message": "build: pin CI toolchain and Python base",
+          "url": "https://github.com/charlie2233/backchannel-agent-support/commit/3a026e608d61210616a0eb730d2646daabd3b830"
+        },
+        {
+          "sha": "c309bcf26b6640e0532b03c7fd1311f24af7ca5d",
+          "message": "docs: record hardened container CI evidence",
+          "url": "https://github.com/charlie2233/backchannel-agent-support/commit/c309bcf26b6640e0532b03c7fd1311f24af7ca5d"
+        },
+        {
+          "sha": "9defc8fd533d47c50268a44b187b0fc6ca3959c0",
+          "message": "build: harden packaged container runtime",
+          "url": "https://github.com/charlie2233/backchannel-agent-support/commit/9defc8fd533d47c50268a44b187b0fc6ca3959c0"
+        },
+        {
+          "sha": "8c7e83012472b3454c0dd556ab9571532da348df",
+          "message": "build: minimize container build context",
+          "url": "https://github.com/charlie2233/backchannel-agent-support/commit/8c7e83012472b3454c0dd556ab9571532da348df"
+        },
+        {
+          "sha": "a347643884a44aae74dcfc6dab8c326acfe4c444",
+          "message": "docs: record pinned container CI evidence",
+          "url": "https://github.com/charlie2233/backchannel-agent-support/commit/a347643884a44aae74dcfc6dab8c326acfe4c444"
+        },
+        {
+          "sha": "250a70a08c95346bac409c98c198499d7395276b",
+          "message": "build: pin container base images",
+          "url": "https://github.com/charlie2233/backchannel-agent-support/commit/250a70a08c95346bac409c98c198499d7395276b"
+        },
+        {
+          "sha": "6abbbbdf994a7d1b2690a5f3c7383cdb34fa65db",
+          "message": "fix: enforce request host boundary",
+          "url": "https://github.com/charlie2233/backchannel-agent-support/commit/6abbbbdf994a7d1b2690a5f3c7383cdb34fa65db"
+        },
+        {
+          "sha": "b95a636803f7ead1a95153b8c05d56944cfc89e4",
+          "message": "docs: record static integrity CI evidence",
+          "url": "https://github.com/charlie2233/backchannel-agent-support/commit/b95a636803f7ead1a95153b8c05d56944cfc89e4"
+        },
+        {
+          "sha": "3c818e049bd8f5ad4c9f57da3e1b83e805d0bade",
+          "message": "fix: verify packaged static artifacts",
+          "url": "https://github.com/charlie2233/backchannel-agent-support/commit/3c818e049bd8f5ad4c9f57da3e1b83e805d0bade"
+        },
+        {
+          "sha": "dd94be48b7d3de07eb3feffe6c48917e94c7a9c0",
+          "message": "fix: finish reset owner event streams",
+          "url": "https://github.com/charlie2233/backchannel-agent-support/commit/dd94be48b7d3de07eb3feffe6c48917e94c7a9c0"
+        },
+        {
+          "sha": "e6da8a0fba2d1e2ce655c1eea0e5d0dcd32b09d8",
+          "message": "fix: bound session cookie name budget",
+          "url": "https://github.com/charlie2233/backchannel-agent-support/commit/e6da8a0fba2d1e2ce655c1eea0e5d0dcd32b09d8"
+        },
+        {
+          "sha": "9038a0a366102bb8406e94f41ce437b4b5374837",
+          "message": "fix: validate configured session cookie names",
+          "url": "https://github.com/charlie2233/backchannel-agent-support/commit/9038a0a366102bb8406e94f41ce437b4b5374837"
+        },
+        {
+          "sha": "576eae631044d6f8563799f551e9077477de1408",
+          "message": "fix: require clean local production shutdown",
+          "url": "https://github.com/charlie2233/backchannel-agent-support/commit/576eae631044d6f8563799f551e9077477de1408"
+        },
+        {
+          "sha": "ca6a8479e727efb7845073bd7325abe2f442af63",
+          "message": "fix: publish exact recovery error contracts",
+          "url": "https://github.com/charlie2233/backchannel-agent-support/commit/ca6a8479e727efb7845073bd7325abe2f442af63"
+        },
+        {
+          "sha": "82a03c74c0a6779bdb01e5a9a472aba75aa5658f",
+          "message": "fix: require clean container shutdown proof",
+          "url": "https://github.com/charlie2233/backchannel-agent-support/commit/82a03c74c0a6779bdb01e5a9a472aba75aa5658f"
+        },
+        {
+          "sha": "8f9efef041ca8d1dea2b9a44ee8324f5739b097c",
+          "message": "test: freeze terminal cleanup clock",
+          "url": "https://github.com/charlie2233/backchannel-agent-support/commit/8f9efef041ca8d1dea2b9a44ee8324f5739b097c"
+        },
+        {
+          "sha": "9686efb7be5fc9d590391618034325b0e6d2fa1a",
+          "message": "fix: bound event stream evidence sends",
+          "url": "https://github.com/charlie2233/backchannel-agent-support/commit/9686efb7be5fc9d590391618034325b0e6d2fa1a"
+        },
+        {
+          "sha": "9f5964796d429e2394e5f930324d4cdabe529e7d",
+          "message": "fix: bind event streams to session expiry",
+          "url": "https://github.com/charlie2233/backchannel-agent-support/commit/9f5964796d429e2394e5f930324d4cdabe529e7d"
+        },
+        {
+          "sha": "263e3d30ea7df07eed983282db81bc74a4025214",
+          "message": "fix: refresh authoritative decision conflicts",
+          "url": "https://github.com/charlie2233/backchannel-agent-support/commit/263e3d30ea7df07eed983282db81bc74a4025214"
+        },
+        {
+          "sha": "6d25ec9b0cc66142727ef4856d28533e92755249",
+          "message": "fix: bind duplicate proxy forwarding fields",
+          "url": "https://github.com/charlie2233/backchannel-agent-support/commit/6d25ec9b0cc66142727ef4856d28533e92755249"
+        }
+      ]
+    },
+    "public": true,
+    "created_at": "2026-07-31T07:57:13Z"
+  },
+  {
+    "id": "16293280295",
+    "type": "PushEvent",
+    "actor": {
+      "id": 117957000,
+      "login": "charlie2233",
+      "display_login": "charlie2233",
+      "gravatar_id": "",
+      "url": "https://api.github.com/users/charlie2233",
+      "avatar_url": "https://avatars.githubusercontent.com/u/117957000?"
+    },
+    "repo": {
+      "id": 1306028280,
+      "name": "charlie2233/backchannel-agent-support",
+      "url": "https://api.github.com/repos/charlie2233/backchannel-agent-support"
+    },
+    "payload": {
+      "repository_id": 1306028280,
+      "push_id": 38599633187,
+      "ref": "refs/heads/codex/backchannel-v0.3-completion",
+      "head": "3a026e608d61210616a0eb730d2646daabd3b830",
+      "before": "c309bcf26b6640e0532b03c7fd1311f24af7ca5d"
+    },
+    "public": true,
+    "created_at": "2026-07-31T07:56:05Z"
+  },
+  {
+    "id": "16291420784",
+    "type": "PushEvent",
+    "actor": {
+      "id": 117957000,
+      "login": "charlie2233",
+      "display_login": "charlie2233",
+      "gravatar_id": "",
+      "url": "https://api.github.com/users/charlie2233",
+      "avatar_url": "https://avatars.githubusercontent.com/u/117957000?"
+    },
+    "repo": {
+      "id": 1306028280,
+      "name": "charlie2233/backchannel-agent-support",
+      "url": "https://api.github.com/repos/charlie2233/backchannel-agent-support"
+    },
+    "payload": {
+      "repository_id": 1306028280,
+      "push_id": 38597848791,
+      "ref": "refs/heads/codex/backchannel-v0.3-completion",
+      "head": "c309bcf26b6640e0532b03c7fd1311f24af7ca5d",
+      "before": "9defc8fd533d47c50268a44b187b0fc6ca3959c0"
+    },
+    "public": true,
+    "created_at": "2026-07-31T07:36:33Z"
+  },
+  {
+    "id": "16290472643",
+    "type": "PushEvent",
+    "actor": {
+      "id": 117957000,
+      "login": "charlie2233",
+      "display_login": "charlie2233",
+      "gravatar_id": "",
+      "url": "https://api.github.com/users/charlie2233",
+      "avatar_url": "https://avatars.githubusercontent.com/u/117957000?"
+    },
+    "repo": {
+      "id": 1306028280,
+      "name": "charlie2233/backchannel-agent-support",
+      "url": "https://api.github.com/repos/charlie2233/backchannel-agent-support"
+    },
+    "payload": {
+      "repository_id": 1306028280,
+      "push_id": 38596896347,
+      "ref": "refs/heads/codex/backchannel-v0.3-completion",
+      "head": "9defc8fd533d47c50268a44b187b0fc6ca3959c0",
+      "before": "8c7e83012472b3454c0dd556ab9571532da348df"
+    },
+    "public": true,
+    "created_at": "2026-07-31T07:25:41Z"
+  },
+  {
     "id": "16290148149",
     "type": "PushEvent",
     "actor": {
@@ -23,6 +230,11 @@
       "before": "fee6e6460e976ca98dbb9f20fc07be0d7001def7",
       "distinct_size": 30,
       "commits": [
+        {
+          "sha": "8a1fb92dc4e2252dbf848e3c86cae16683a9b890",
+          "message": "chore: update GitHub data [skip ci]",
+          "url": "https://github.com/charlie2233/atrak-website/commit/8a1fb92dc4e2252dbf848e3c86cae16683a9b890"
+        },
         {
           "sha": "39b6ac8fd085fb41dc9f6d77fcd984d420266675",
           "message": "fix: restore weekly archive and refresh activity",
@@ -117,11 +329,6 @@
           "sha": "074cc0540d532e1dbaee2dd8e9f253314a16aae6",
           "message": "chore: refresh weekly GitHub activity",
           "url": "https://github.com/charlie2233/atrak-website/commit/074cc0540d532e1dbaee2dd8e9f253314a16aae6"
-        },
-        {
-          "sha": "fc159b9ecd8bca542ce3761f557b25fea7de4fb0",
-          "message": "test: cover numeric weekly alias keys",
-          "url": "https://github.com/charlie2233/atrak-website/commit/fc159b9ecd8bca542ce3761f557b25fea7de4fb0"
         }
       ]
     },
@@ -149,110 +356,7 @@
       "push_id": 38589075046,
       "ref": "refs/heads/codex/backchannel-v0.3",
       "head": "1030d197ce2801be2abe17bea43522a97736adb8",
-      "before": "a01f0a361f2c45f762496a0c6af298a4473fde96",
-      "distinct_size": 31,
-      "commits": [
-        {
-          "sha": "8c7e83012472b3454c0dd556ab9571532da348df",
-          "message": "build: minimize container build context",
-          "url": "https://github.com/charlie2233/backchannel-agent-support/commit/8c7e83012472b3454c0dd556ab9571532da348df"
-        },
-        {
-          "sha": "a347643884a44aae74dcfc6dab8c326acfe4c444",
-          "message": "docs: record pinned container CI evidence",
-          "url": "https://github.com/charlie2233/backchannel-agent-support/commit/a347643884a44aae74dcfc6dab8c326acfe4c444"
-        },
-        {
-          "sha": "250a70a08c95346bac409c98c198499d7395276b",
-          "message": "build: pin container base images",
-          "url": "https://github.com/charlie2233/backchannel-agent-support/commit/250a70a08c95346bac409c98c198499d7395276b"
-        },
-        {
-          "sha": "6abbbbdf994a7d1b2690a5f3c7383cdb34fa65db",
-          "message": "fix: enforce request host boundary",
-          "url": "https://github.com/charlie2233/backchannel-agent-support/commit/6abbbbdf994a7d1b2690a5f3c7383cdb34fa65db"
-        },
-        {
-          "sha": "b95a636803f7ead1a95153b8c05d56944cfc89e4",
-          "message": "docs: record static integrity CI evidence",
-          "url": "https://github.com/charlie2233/backchannel-agent-support/commit/b95a636803f7ead1a95153b8c05d56944cfc89e4"
-        },
-        {
-          "sha": "3c818e049bd8f5ad4c9f57da3e1b83e805d0bade",
-          "message": "fix: verify packaged static artifacts",
-          "url": "https://github.com/charlie2233/backchannel-agent-support/commit/3c818e049bd8f5ad4c9f57da3e1b83e805d0bade"
-        },
-        {
-          "sha": "dd94be48b7d3de07eb3feffe6c48917e94c7a9c0",
-          "message": "fix: finish reset owner event streams",
-          "url": "https://github.com/charlie2233/backchannel-agent-support/commit/dd94be48b7d3de07eb3feffe6c48917e94c7a9c0"
-        },
-        {
-          "sha": "e6da8a0fba2d1e2ce655c1eea0e5d0dcd32b09d8",
-          "message": "fix: bound session cookie name budget",
-          "url": "https://github.com/charlie2233/backchannel-agent-support/commit/e6da8a0fba2d1e2ce655c1eea0e5d0dcd32b09d8"
-        },
-        {
-          "sha": "9038a0a366102bb8406e94f41ce437b4b5374837",
-          "message": "fix: validate configured session cookie names",
-          "url": "https://github.com/charlie2233/backchannel-agent-support/commit/9038a0a366102bb8406e94f41ce437b4b5374837"
-        },
-        {
-          "sha": "576eae631044d6f8563799f551e9077477de1408",
-          "message": "fix: require clean local production shutdown",
-          "url": "https://github.com/charlie2233/backchannel-agent-support/commit/576eae631044d6f8563799f551e9077477de1408"
-        },
-        {
-          "sha": "ca6a8479e727efb7845073bd7325abe2f442af63",
-          "message": "fix: publish exact recovery error contracts",
-          "url": "https://github.com/charlie2233/backchannel-agent-support/commit/ca6a8479e727efb7845073bd7325abe2f442af63"
-        },
-        {
-          "sha": "82a03c74c0a6779bdb01e5a9a472aba75aa5658f",
-          "message": "fix: require clean container shutdown proof",
-          "url": "https://github.com/charlie2233/backchannel-agent-support/commit/82a03c74c0a6779bdb01e5a9a472aba75aa5658f"
-        },
-        {
-          "sha": "8f9efef041ca8d1dea2b9a44ee8324f5739b097c",
-          "message": "test: freeze terminal cleanup clock",
-          "url": "https://github.com/charlie2233/backchannel-agent-support/commit/8f9efef041ca8d1dea2b9a44ee8324f5739b097c"
-        },
-        {
-          "sha": "9686efb7be5fc9d590391618034325b0e6d2fa1a",
-          "message": "fix: bound event stream evidence sends",
-          "url": "https://github.com/charlie2233/backchannel-agent-support/commit/9686efb7be5fc9d590391618034325b0e6d2fa1a"
-        },
-        {
-          "sha": "9f5964796d429e2394e5f930324d4cdabe529e7d",
-          "message": "fix: bind event streams to session expiry",
-          "url": "https://github.com/charlie2233/backchannel-agent-support/commit/9f5964796d429e2394e5f930324d4cdabe529e7d"
-        },
-        {
-          "sha": "263e3d30ea7df07eed983282db81bc74a4025214",
-          "message": "fix: refresh authoritative decision conflicts",
-          "url": "https://github.com/charlie2233/backchannel-agent-support/commit/263e3d30ea7df07eed983282db81bc74a4025214"
-        },
-        {
-          "sha": "6d25ec9b0cc66142727ef4856d28533e92755249",
-          "message": "fix: bind duplicate proxy forwarding fields",
-          "url": "https://github.com/charlie2233/backchannel-agent-support/commit/6d25ec9b0cc66142727ef4856d28533e92755249"
-        },
-        {
-          "sha": "be08eab991a7c526998005dabae2eaa875f03c72",
-          "message": "fix: harden active hotel evidence lifecycle",
-          "url": "https://github.com/charlie2233/backchannel-agent-support/commit/be08eab991a7c526998005dabae2eaa875f03c72"
-        },
-        {
-          "sha": "89721e098b458ecbf6223b4de9946130e1b48676",
-          "message": "fix: make quota recovery restart durable",
-          "url": "https://github.com/charlie2233/backchannel-agent-support/commit/89721e098b458ecbf6223b4de9946130e1b48676"
-        },
-        {
-          "sha": "3257829e1ee7ce3360dcf7c54c2046e07b6e9f92",
-          "message": "fix: validate public evidence ledgers",
-          "url": "https://github.com/charlie2233/backchannel-agent-support/commit/3257829e1ee7ce3360dcf7c54c2046e07b6e9f92"
-        }
-      ]
+      "before": "a01f0a361f2c45f762496a0c6af298a4473fde96"
     },
     "public": true,
     "created_at": "2026-07-31T05:56:57Z"
@@ -5592,31 +5696,6 @@
     "created_at": "2026-07-19T22:21:36Z"
   },
   {
-    "id": "15325675659",
-    "type": "DeleteEvent",
-    "actor": {
-      "id": 117957000,
-      "login": "charlie2233",
-      "display_login": "charlie2233",
-      "gravatar_id": "",
-      "url": "https://api.github.com/users/charlie2233",
-      "avatar_url": "https://avatars.githubusercontent.com/u/117957000?"
-    },
-    "repo": {
-      "id": 1166891851,
-      "name": "charlie2233/rork-hoopshighlights-ai_Final",
-      "url": "https://api.github.com/repos/charlie2233/rork-hoopshighlights-ai_Final"
-    },
-    "payload": {
-      "ref": "codex/asset-upload-lease-renewal-20260719",
-      "ref_type": "branch",
-      "full_ref": "refs/heads/codex/asset-upload-lease-renewal-20260719",
-      "pusher_type": "user"
-    },
-    "public": true,
-    "created_at": "2026-07-19T22:21:38Z"
-  },
-  {
     "id": "15325675419",
     "type": "PushEvent",
     "actor": {
@@ -5638,6 +5717,31 @@
       "ref": "refs/heads/main",
       "head": "5ed46d26b023e40dde737fcd5597f61a40dcadf0",
       "before": "b0697e012dfb0561634efd5de33f476126246cfc"
+    },
+    "public": true,
+    "created_at": "2026-07-19T22:21:38Z"
+  },
+  {
+    "id": "15325675659",
+    "type": "DeleteEvent",
+    "actor": {
+      "id": 117957000,
+      "login": "charlie2233",
+      "display_login": "charlie2233",
+      "gravatar_id": "",
+      "url": "https://api.github.com/users/charlie2233",
+      "avatar_url": "https://avatars.githubusercontent.com/u/117957000?"
+    },
+    "repo": {
+      "id": 1166891851,
+      "name": "charlie2233/rork-hoopshighlights-ai_Final",
+      "url": "https://api.github.com/repos/charlie2233/rork-hoopshighlights-ai_Final"
+    },
+    "payload": {
+      "ref": "codex/asset-upload-lease-renewal-20260719",
+      "ref_type": "branch",
+      "full_ref": "refs/heads/codex/asset-upload-lease-renewal-20260719",
+      "pusher_type": "user"
     },
     "public": true,
     "created_at": "2026-07-19T22:21:38Z"
@@ -6228,32 +6332,6 @@
     "created_at": "2026-07-19T20:43:10Z"
   },
   {
-    "id": "15322133341",
-    "type": "PushEvent",
-    "actor": {
-      "id": 117957000,
-      "login": "charlie2233",
-      "display_login": "charlie2233",
-      "gravatar_id": "",
-      "url": "https://api.github.com/users/charlie2233",
-      "avatar_url": "https://avatars.githubusercontent.com/u/117957000?"
-    },
-    "repo": {
-      "id": 1166891851,
-      "name": "charlie2233/rork-hoopshighlights-ai_Final",
-      "url": "https://api.github.com/repos/charlie2233/rork-hoopshighlights-ai_Final"
-    },
-    "payload": {
-      "repository_id": 1166891851,
-      "push_id": 37613175840,
-      "ref": "refs/heads/main",
-      "head": "23b8fb9e121f862c591a95e5da092d3170ffd9d4",
-      "before": "467b42b2f4dbba6df784855d90ae78c27c3532cc"
-    },
-    "public": true,
-    "created_at": "2026-07-19T20:43:09Z"
-  },
-  {
     "id": "11996023175",
     "type": "PullRequestEvent",
     "actor": {
@@ -6300,33 +6378,6 @@
     "created_at": "2026-07-19T20:36:54Z"
   },
   {
-    "id": "15321886419",
-    "type": "CreateEvent",
-    "actor": {
-      "id": 117957000,
-      "login": "charlie2233",
-      "display_login": "charlie2233",
-      "gravatar_id": "",
-      "url": "https://api.github.com/users/charlie2233",
-      "avatar_url": "https://avatars.githubusercontent.com/u/117957000?"
-    },
-    "repo": {
-      "id": 1166891851,
-      "name": "charlie2233/rork-hoopshighlights-ai_Final",
-      "url": "https://api.github.com/repos/charlie2233/rork-hoopshighlights-ai_Final"
-    },
-    "payload": {
-      "ref": "codex/staging-upload-benchmark-20260719",
-      "ref_type": "branch",
-      "full_ref": "refs/heads/codex/staging-upload-benchmark-20260719",
-      "master_branch": "main",
-      "description": "Created by Rork",
-      "pusher_type": "user"
-    },
-    "public": true,
-    "created_at": "2026-07-19T20:36:35Z"
-  },
-  {
     "id": "11995915495",
     "type": "PullRequestEvent",
     "actor": {
@@ -6371,57 +6422,6 @@
     },
     "public": true,
     "created_at": "2026-07-19T20:29:50Z"
-  },
-  {
-    "id": "15321623482",
-    "type": "PushEvent",
-    "actor": {
-      "id": 117957000,
-      "login": "charlie2233",
-      "display_login": "charlie2233",
-      "gravatar_id": "",
-      "url": "https://api.github.com/users/charlie2233",
-      "avatar_url": "https://avatars.githubusercontent.com/u/117957000?"
-    },
-    "repo": {
-      "id": 1166891851,
-      "name": "charlie2233/rork-hoopshighlights-ai_Final",
-      "url": "https://api.github.com/repos/charlie2233/rork-hoopshighlights-ai_Final"
-    },
-    "payload": {
-      "repository_id": 1166891851,
-      "push_id": 37612665655,
-      "ref": "refs/heads/main",
-      "head": "467b42b2f4dbba6df784855d90ae78c27c3532cc",
-      "before": "3ffb3edc8a4a84cae72e609a67297d4306bfb549"
-    },
-    "public": true,
-    "created_at": "2026-07-19T20:29:51Z"
-  },
-  {
-    "id": "15321623848",
-    "type": "DeleteEvent",
-    "actor": {
-      "id": 117957000,
-      "login": "charlie2233",
-      "display_login": "charlie2233",
-      "gravatar_id": "",
-      "url": "https://api.github.com/users/charlie2233",
-      "avatar_url": "https://avatars.githubusercontent.com/u/117957000?"
-    },
-    "repo": {
-      "id": 1166891851,
-      "name": "charlie2233/rork-hoopshighlights-ai_Final",
-      "url": "https://api.github.com/repos/charlie2233/rork-hoopshighlights-ai_Final"
-    },
-    "payload": {
-      "ref": "codex/ios-store-submission-readiness-20260719",
-      "ref_type": "branch",
-      "full_ref": "refs/heads/codex/ios-store-submission-readiness-20260719",
-      "pusher_type": "user"
-    },
-    "public": true,
-    "created_at": "2026-07-19T20:29:51Z"
   },
   {
     "id": "11995787036",
