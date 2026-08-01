@@ -131,6 +131,14 @@ const pageSpecs = [
           /idea → repo → first pixel on screen/i.test(report?.textContent || '')
         );
       }, null, { timeout: 5000 });
+      await page.evaluate(() => window.AtrakWeeklyLog?.goToWeek('2026-01-04'));
+      await page.waitForFunction(() => {
+        const report = document.querySelector('#weekly-content .wl-report');
+        return (
+          window.location.hash === '#week=2026-01-04' &&
+          /back from break — tighten everything/i.test(report?.textContent || '')
+        );
+      }, null, { timeout: 5000 });
       await page.evaluate(() => window.AtrakWeeklyLog?.goToWeek('2026-04-19'));
       await page.waitForFunction(() => {
         const report = document.querySelector('#weekly-content .wl-report');
