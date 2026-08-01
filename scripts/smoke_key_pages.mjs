@@ -123,6 +123,14 @@ const pageSpecs = [
           !/checking data freshness/i.test(freshness.textContent || '')
         );
       }, null, { timeout: 15000 });
+      await page.evaluate(() => window.AtrakWeeklyLog?.goToWeek('2025-08-31'));
+      await page.waitForFunction(() => {
+        const report = document.querySelector('#weekly-content .wl-report');
+        return (
+          window.location.hash === '#week=2025-08-31' &&
+          /idea → repo → first pixel on screen/i.test(report?.textContent || '')
+        );
+      }, null, { timeout: 5000 });
       await page.evaluate(() => window.AtrakWeeklyLog?.goToWeek('2026-04-19'));
       await page.waitForFunction(() => {
         const report = document.querySelector('#weekly-content .wl-report');

@@ -105,6 +105,18 @@
         return result;
     };
 
+    const initialLegacyYear = (firstMonthDay, historyAnchor) => {
+        const validAnchor = historyAnchor instanceof Date && !Number.isNaN(historyAnchor.getTime())
+            ? historyAnchor
+            : null;
+        let year = validAnchor ? validAnchor.getFullYear() : new Date().getFullYear();
+        if (!firstMonthDay) return year;
+        const firstCandidate = new Date(year, firstMonthDay.month, firstMonthDay.day);
+        const comparisonDate = validAnchor || new Date(Date.now() + (30 * 24 * 60 * 60 * 1000));
+        if (firstCandidate.getTime() > comparisonDate.getTime()) year -= 1;
+        return year;
+    };
+
     const weekKey = (value) => {
         const date = startOfWeek(value);
         if (!date) return '';
@@ -319,7 +331,7 @@
         return weeks;
     };
 
-    const parseArchive = (text) => {
+    const parseArchive = (text, historyAnchor = null) => {
         const source = String(text || '');
         if (!source.trim()) return [];
         const projectMatch = source.match(/^#\s+(.+)$/m);
@@ -369,12 +381,8 @@
             return match ? { month: monthIndex(match[1]), day: Number(match[2]) } : null;
         };
 
-        let year = new Date().getFullYear();
         const first = parsed.length ? firstMonthDay(parsed[0].range) : null;
-        if (first) {
-            const firstCandidate = new Date(year, first.month, first.day);
-            if (firstCandidate.getTime() > Date.now() + (30 * 24 * 60 * 60 * 1000)) year -= 1;
-        }
+        let year = initialLegacyYear(first, historyAnchor);
         let previousMonth = first ? first.month : -1;
 
         return parsed.map((entry, index) => {
@@ -396,7 +404,12 @@
         return Number.isNaN(date.getTime()) ? null : date;
     };
 
-    const parseHistory = (history) => {
+    const earliestGeneratedWeekStart = (history) => (Array.isArray(history) ? history : [])
+        .map((entry) => parseLocalDateKey(entry && entry.weekStart))
+        .filter(Boolean)
+        .sort((first, second) => first - second)[0] || null;
+
+    const parseHistory = (history, historyAnchor = null) => {
         const entries = Array.isArray(history) ? history.filter((entry) => entry && typeof entry === 'object') : [];
         const monthIndex = (name) => {
             const date = new Date(`${name} 1, 2000`);
@@ -408,11 +421,7 @@
         };
         const firstLegacy = entries.find((entry) => !entry.weekStart && firstMonthDay(entry.dateRange));
         const first = firstLegacy ? firstMonthDay(firstLegacy.dateRange) : null;
-        let year = new Date().getFullYear();
-        if (first) {
-            const candidate = new Date(year, first.month, first.day);
-            if (candidate.getTime() > Date.now() + (30 * 24 * 60 * 60 * 1000)) year -= 1;
-        }
+        let year = initialLegacyYear(first, historyAnchor);
         let previousMonth = first ? first.month : -1;
 
         return entries.map((entry) => {
@@ -1269,9 +1278,10 @@
         ]);
         state.releases = normalizeReleases(releasesRaw);
         state.meta = meta && typeof meta === 'object' ? meta : null;
+        const historyAnchor = earliestGeneratedWeekStart(history);
         const weeks = buildGitHubWeeks(events, state.releases, repos);
-        mergeHistoryWeeks(weeks, parseHistory(history));
-        mergeArchiveWeeks(weeks, parseArchive(archiveText));
+        mergeHistoryWeeks(weeks, parseHistory(history, historyAnchor));
+        mergeArchiveWeeks(weeks, parseArchive(archiveText, historyAnchor));
         mergeEditorialWeeks(weeks, parseEditorial(editorial));
         attachWeeklyStats(weeks, weeklyStats);
         state.weeks = Array.from(weeks.values())
