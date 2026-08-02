@@ -1301,5 +1301,240 @@
         "at": "2026-07-20T22:16:23Z"
       }
     ]
+  },
+  {
+    "weekStart": "2026-07-26",
+    "weekEnd": "2026-08-01",
+    "generatedAt": "2026-08-02T09:54:35.440Z",
+    "source": "github-weekly-automation",
+    "dateRange": "Jul 26 – Aug 1",
+    "title": "Ygf Bowl To Build and Atrak Website moved the week forward.",
+    "highlights": [
+      "Ygf Bowl To Build led public activity with 52 commits across 3 pushes.",
+      "5 public repositories were active across 68 GitHub events.",
+      "No formal GitHub release was published during this edition."
+    ],
+    "shipped": [
+      "record production rollout evidence",
+      "keep Chinese hero title together on phones",
+      "merge OAuth wallets and enforce shared provider cap",
+      "cover weekly archive year rollover"
+    ],
+    "engineering": [
+      "67 pushes and 0 pull request updates were condensed into this edition.",
+      "Active stacks included TypeScript, HTML, Python.",
+      "The snapshot is stored permanently so the edition remains available after GitHub events expire."
+    ],
+    "fixes": [
+      "keep Chinese hero title together on phones",
+      "stabilize weekly archive dates",
+      "clarify OAuth conflicts and key refresh",
+      "repair production agent settlement"
+    ],
+    "metrics": [
+      "Commits: 109",
+      "Active repos: 5",
+      "Pull requests: 0",
+      "Issues: 0",
+      "Releases: 0"
+    ],
+    "next": [
+      "Continue the Ygf Bowl To Build build and publish the next visible milestone.",
+      "Review the next automated edition after Sunday refresh."
+    ],
+    "stats": {
+      "commits": 109,
+      "activeRepositories": 5,
+      "pullRequests": 0,
+      "issues": 0,
+      "pushes": 67,
+      "releases": 0,
+      "events": 68
+    },
+    "repositories": [
+      {
+        "name": "Ygf Bowl To Build",
+        "fullName": "charlie2233/ygf-bowl-to-build",
+        "url": "https://github.com/charlie2233/ygf-bowl-to-build",
+        "language": "TypeScript",
+        "commits": 52,
+        "pushes": 3,
+        "events": 4,
+        "pullRequests": 0,
+        "issues": 0,
+        "lastAt": "2026-08-01T22:52:16.000Z"
+      },
+      {
+        "name": "Atrak Website",
+        "fullName": "charlie2233/atrak-website",
+        "url": "https://github.com/charlie2233/atrak-website",
+        "language": "HTML",
+        "commits": 34,
+        "pushes": 9,
+        "events": 9,
+        "pullRequests": 0,
+        "issues": 0,
+        "lastAt": "2026-08-01T07:16:25.000Z"
+      },
+      {
+        "name": "Backchannel Agent Support",
+        "fullName": "charlie2233/backchannel-agent-support",
+        "url": "https://github.com/charlie2233/backchannel-agent-support",
+        "language": "Python",
+        "commits": 22,
+        "pushes": 51,
+        "events": 51,
+        "pullRequests": 0,
+        "issues": 0,
+        "lastAt": "2026-07-31T07:57:13.000Z"
+      },
+      {
+        "name": "Lifepage",
+        "fullName": "charlie2233/lifepage",
+        "url": "https://github.com/charlie2233/lifepage",
+        "language": "TypeScript",
+        "commits": 1,
+        "pushes": 1,
+        "events": 1,
+        "pullRequests": 0,
+        "issues": 0,
+        "lastAt": "2026-07-30T18:57:07.000Z"
+      },
+      {
+        "name": "Rork Guide Pup Vision Assistant",
+        "fullName": "charlie2233/rork-guide-pup--vision-assistant",
+        "url": "https://github.com/charlie2233/rork-guide-pup--vision-assistant",
+        "language": "TypeScript",
+        "commits": 0,
+        "pushes": 3,
+        "events": 3,
+        "pullRequests": 0,
+        "issues": 0,
+        "lastAt": "2026-07-30T00:41:18.000Z"
+      }
+    ],
+    "releases": [],
+    "commitMessages": [
+      {
+        "repo": "charlie2233/ygf-bowl-to-build",
+        "text": "record production rollout evidence",
+        "url": "https://github.com/charlie2233/ygf-bowl-to-build/commit/96d25fac5fd0a5aaa187b6b0a9f226aeafde79c4",
+        "at": "2026-08-01T22:52:14Z"
+      },
+      {
+        "repo": "charlie2233/ygf-bowl-to-build",
+        "text": "keep Chinese hero title together on phones",
+        "url": "https://github.com/charlie2233/ygf-bowl-to-build/commit/318756d36ef04a37c2dc10e9420275c7544717f3",
+        "at": "2026-08-01T22:48:09Z"
+      },
+      {
+        "repo": "charlie2233/ygf-bowl-to-build",
+        "text": "merge OAuth wallets and enforce shared provider cap",
+        "url": "https://github.com/charlie2233/ygf-bowl-to-build/commit/14cd67be613ed62879679a164457a572f2c9f9fa",
+        "at": "2026-08-01T22:39:49Z"
+      },
+      {
+        "repo": "charlie2233/atrak-website",
+        "text": "cover weekly archive year rollover",
+        "url": "https://github.com/charlie2233/atrak-website/commit/685788d192388d1bbdc34384875e5a1b7fe00a82",
+        "at": "2026-08-01T07:15:41Z"
+      },
+      {
+        "repo": "charlie2233/atrak-website",
+        "text": "stabilize weekly archive dates",
+        "url": "https://github.com/charlie2233/atrak-website/commit/df57faa282fba1fa499338d13036e593a87221e9",
+        "at": "2026-08-01T07:13:21Z"
+      },
+      {
+        "repo": "charlie2233/ygf-bowl-to-build",
+        "text": "add GPT-5.6 agent model selector",
+        "url": "https://github.com/charlie2233/ygf-bowl-to-build/commit/757ad60360d1f8556e7df0590438e289620606b5",
+        "at": "2026-08-01T05:05:30Z"
+      },
+      {
+        "repo": "charlie2233/ygf-bowl-to-build",
+        "text": "clarify OAuth conflicts and key refresh",
+        "url": "https://github.com/charlie2233/ygf-bowl-to-build/commit/551c31e69ad1232d691ac7c10c20ba9238e9cc2c",
+        "at": "2026-08-01T01:01:46Z"
+      },
+      {
+        "repo": "charlie2233/ygf-bowl-to-build",
+        "text": "harden Apple OAuth operations",
+        "url": "https://github.com/charlie2233/ygf-bowl-to-build/commit/cb29c8ba91e0c04dde7be979342edf4b776694f1",
+        "at": "2026-07-31T23:05:16Z"
+      },
+      {
+        "repo": "charlie2233/ygf-bowl-to-build",
+        "text": "repair production agent settlement",
+        "url": "https://github.com/charlie2233/ygf-bowl-to-build/commit/ac48385c3723d9622061ab731c46d7aea191980d",
+        "at": "2026-07-31T10:35:52Z"
+      },
+      {
+        "repo": "charlie2233/ygf-bowl-to-build",
+        "text": "record production Google OAuth",
+        "url": "https://github.com/charlie2233/ygf-bowl-to-build/commit/693c28e934a6ed7fe6f7b677e37772c179015e07",
+        "at": "2026-07-31T08:08:27Z"
+      },
+      {
+        "repo": "charlie2233/backchannel-agent-support",
+        "text": "pin CI toolchain and Python base",
+        "url": "https://github.com/charlie2233/backchannel-agent-support/commit/3a026e608d61210616a0eb730d2646daabd3b830",
+        "at": "2026-07-31T07:56:03Z"
+      },
+      {
+        "repo": "charlie2233/backchannel-agent-support",
+        "text": "record hardened container CI evidence",
+        "url": "https://github.com/charlie2233/backchannel-agent-support/commit/c309bcf26b6640e0532b03c7fd1311f24af7ca5d",
+        "at": "2026-07-31T07:36:31Z"
+      },
+      {
+        "repo": "charlie2233/backchannel-agent-support",
+        "text": "harden packaged container runtime",
+        "url": "https://github.com/charlie2233/backchannel-agent-support/commit/9defc8fd533d47c50268a44b187b0fc6ca3959c0",
+        "at": "2026-07-31T07:25:32Z"
+      },
+      {
+        "repo": "charlie2233/atrak-website",
+        "text": "restore weekly archive and refresh activity",
+        "url": "https://github.com/charlie2233/atrak-website/commit/39b6ac8fd085fb41dc9f6d77fcd984d420266675",
+        "at": "2026-07-31T07:22:37Z"
+      },
+      {
+        "repo": "charlie2233/backchannel-agent-support",
+        "text": "minimize container build context",
+        "url": "https://github.com/charlie2233/backchannel-agent-support/commit/8c7e83012472b3454c0dd556ab9571532da348df",
+        "at": "2026-07-31T05:36:41Z"
+      },
+      {
+        "repo": "charlie2233/backchannel-agent-support",
+        "text": "record pinned container CI evidence",
+        "url": "https://github.com/charlie2233/backchannel-agent-support/commit/a347643884a44aae74dcfc6dab8c326acfe4c444",
+        "at": "2026-07-31T05:04:16Z"
+      },
+      {
+        "repo": "charlie2233/backchannel-agent-support",
+        "text": "pin container base images",
+        "url": "https://github.com/charlie2233/backchannel-agent-support/commit/250a70a08c95346bac409c98c198499d7395276b",
+        "at": "2026-07-31T04:51:28Z"
+      },
+      {
+        "repo": "charlie2233/backchannel-agent-support",
+        "text": "enforce request host boundary",
+        "url": "https://github.com/charlie2233/backchannel-agent-support/commit/6abbbbdf994a7d1b2690a5f3c7383cdb34fa65db",
+        "at": "2026-07-31T04:33:54Z"
+      },
+      {
+        "repo": "charlie2233/backchannel-agent-support",
+        "text": "record static integrity CI evidence",
+        "url": "https://github.com/charlie2233/backchannel-agent-support/commit/b95a636803f7ead1a95153b8c05d56944cfc89e4",
+        "at": "2026-07-31T04:05:55Z"
+      },
+      {
+        "repo": "charlie2233/backchannel-agent-support",
+        "text": "verify packaged static artifacts",
+        "url": "https://github.com/charlie2233/backchannel-agent-support/commit/3c818e049bd8f5ad4c9f57da3e1b83e805d0bade",
+        "at": "2026-07-31T03:58:55Z"
+      }
+    ]
   }
 ]
