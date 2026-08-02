@@ -1,16 +1,43 @@
 [
   {
+    "id": "16429329613",
     "type": "PushEvent",
-    "created_at": "2026-08-01T05:05:40Z",
+    "actor": {
+      "id": 117957000,
+      "login": "charlie2233",
+      "display_login": "charlie2233",
+      "gravatar_id": "",
+      "url": "https://api.github.com/users/charlie2233",
+      "avatar_url": "https://avatars.githubusercontent.com/u/117957000?"
+    },
     "repo": {
-      "name": "charlie2233/ygf-bowl-to-build"
+      "id": 1313443669,
+      "name": "charlie2233/ygf-bowl-to-build",
+      "url": "https://api.github.com/repos/charlie2233/ygf-bowl-to-build"
     },
     "payload": {
+      "repository_id": 1313443669,
+      "push_id": 38736556765,
       "ref": "refs/heads/codex/ygf-bowl-to-build-beta",
-      "before": "",
-      "head": "757ad60360d1f8556e7df0590438e289620606b5",
-      "distinct_size": 49,
+      "head": "96d25fac5fd0a5aaa187b6b0a9f226aeafde79c4",
+      "before": "318756d36ef04a37c2dc10e9420275c7544717f3",
+      "distinct_size": 52,
       "commits": [
+        {
+          "sha": "96d25fac5fd0a5aaa187b6b0a9f226aeafde79c4",
+          "message": "docs: record production rollout evidence",
+          "url": "https://github.com/charlie2233/ygf-bowl-to-build/commit/96d25fac5fd0a5aaa187b6b0a9f226aeafde79c4"
+        },
+        {
+          "sha": "318756d36ef04a37c2dc10e9420275c7544717f3",
+          "message": "fix: keep Chinese hero title together on phones",
+          "url": "https://github.com/charlie2233/ygf-bowl-to-build/commit/318756d36ef04a37c2dc10e9420275c7544717f3"
+        },
+        {
+          "sha": "14cd67be613ed62879679a164457a572f2c9f9fa",
+          "message": "feat: merge OAuth wallets and enforce shared provider cap",
+          "url": "https://github.com/charlie2233/ygf-bowl-to-build/commit/14cd67be613ed62879679a164457a572f2c9f9fa"
+        },
         {
           "sha": "757ad60360d1f8556e7df0590438e289620606b5",
           "message": "feat: add GPT-5.6 agent model selector",
@@ -95,24 +122,63 @@
           "sha": "17eea7686975bcb84c23444f3e952d6d2356ba37",
           "message": "fix: prioritize homepage hero actions",
           "url": "https://github.com/charlie2233/ygf-bowl-to-build/commit/17eea7686975bcb84c23444f3e952d6d2356ba37"
-        },
-        {
-          "sha": "ca99c99fdf19f05b1c28fdb7976a152262377277",
-          "message": "fix: center homepage phone on mobile",
-          "url": "https://github.com/charlie2233/ygf-bowl-to-build/commit/ca99c99fdf19f05b1c28fdb7976a152262377277"
-        },
-        {
-          "sha": "ac5a2a4c5d50621eca48042509ce877dbae88bf2",
-          "message": "chore: pin production Supabase auth config",
-          "url": "https://github.com/charlie2233/ygf-bowl-to-build/commit/ac5a2a4c5d50621eca48042509ce877dbae88bf2"
-        },
-        {
-          "sha": "fa59a793ef5d18dc72d4d758fe91dcc57c6c6ccb",
-          "message": "fix: harden Supabase helper grants",
-          "url": "https://github.com/charlie2233/ygf-bowl-to-build/commit/fa59a793ef5d18dc72d4d758fe91dcc57c6c6ccb"
         }
       ]
-    }
+    },
+    "public": true,
+    "created_at": "2026-08-01T22:52:16Z"
+  },
+  {
+    "id": "16429206860",
+    "type": "PushEvent",
+    "actor": {
+      "id": 117957000,
+      "login": "charlie2233",
+      "display_login": "charlie2233",
+      "gravatar_id": "",
+      "url": "https://api.github.com/users/charlie2233",
+      "avatar_url": "https://avatars.githubusercontent.com/u/117957000?"
+    },
+    "repo": {
+      "id": 1313443669,
+      "name": "charlie2233/ygf-bowl-to-build",
+      "url": "https://api.github.com/repos/charlie2233/ygf-bowl-to-build"
+    },
+    "payload": {
+      "repository_id": 1313443669,
+      "push_id": 38736432658,
+      "ref": "refs/heads/codex/ygf-bowl-to-build-beta",
+      "head": "318756d36ef04a37c2dc10e9420275c7544717f3",
+      "before": "14cd67be613ed62879679a164457a572f2c9f9fa"
+    },
+    "public": true,
+    "created_at": "2026-08-01T22:48:11Z"
+  },
+  {
+    "id": "16428949976",
+    "type": "PushEvent",
+    "actor": {
+      "id": 117957000,
+      "login": "charlie2233",
+      "display_login": "charlie2233",
+      "gravatar_id": "",
+      "url": "https://api.github.com/users/charlie2233",
+      "avatar_url": "https://avatars.githubusercontent.com/u/117957000?"
+    },
+    "repo": {
+      "id": 1313443669,
+      "name": "charlie2233/ygf-bowl-to-build",
+      "url": "https://api.github.com/repos/charlie2233/ygf-bowl-to-build"
+    },
+    "payload": {
+      "repository_id": 1313443669,
+      "push_id": 38736172913,
+      "ref": "refs/heads/codex/ygf-bowl-to-build-beta",
+      "head": "14cd67be613ed62879679a164457a572f2c9f9fa",
+      "before": "757ad60360d1f8556e7df0590438e289620606b5"
+    },
+    "public": true,
+    "created_at": "2026-08-01T22:39:55Z"
   },
   {
     "id": "12624616739",
@@ -156,8 +222,13 @@
       "ref": "refs/heads/main",
       "head": "685788d192388d1bbdc34384875e5a1b7fe00a82",
       "before": "e541443f3b50671b53a60963fcddb66f15bc267c",
-      "distinct_size": 33,
+      "distinct_size": 34,
       "commits": [
+        {
+          "sha": "51233069c64602d68ba504453df7bd5efcf76773",
+          "message": "chore: update GitHub data [skip ci]",
+          "url": "https://github.com/charlie2233/atrak-website/commit/51233069c64602d68ba504453df7bd5efcf76773"
+        },
         {
           "sha": "5108eb02d6bbbaa9baaddeb730dddf285f3bd269",
           "message": "chore: update GitHub data [skip ci]",
@@ -252,11 +323,6 @@
           "sha": "41eac63ebb0d00a037f67a18894468fb1ac5c5bb",
           "message": "chore: update GitHub data [skip ci]",
           "url": "https://github.com/charlie2233/atrak-website/commit/41eac63ebb0d00a037f67a18894468fb1ac5c5bb"
-        },
-        {
-          "sha": "2fc19eab314e78c384427a62daf57c9f5c6ca56c",
-          "message": "chore: update GitHub data [skip ci]",
-          "url": "https://github.com/charlie2233/atrak-website/commit/2fc19eab314e78c384427a62daf57c9f5c6ca56c"
         }
       ]
     },
@@ -311,7 +377,7 @@
       "ref": "refs/heads/codex/backchannel-v0.3",
       "head": "b1fd528f459ebc8c7fd1544e0ca356326be7f3af",
       "before": "1030d197ce2801be2abe17bea43522a97736adb8",
-      "distinct_size": 25,
+      "distinct_size": 22,
       "commits": [
         {
           "sha": "3a026e608d61210616a0eb730d2646daabd3b830",
@@ -5883,31 +5949,6 @@
     "created_at": "2026-07-19T22:21:36Z"
   },
   {
-    "id": "15325675659",
-    "type": "DeleteEvent",
-    "actor": {
-      "id": 117957000,
-      "login": "charlie2233",
-      "display_login": "charlie2233",
-      "gravatar_id": "",
-      "url": "https://api.github.com/users/charlie2233",
-      "avatar_url": "https://avatars.githubusercontent.com/u/117957000?"
-    },
-    "repo": {
-      "id": 1166891851,
-      "name": "charlie2233/rork-hoopshighlights-ai_Final",
-      "url": "https://api.github.com/repos/charlie2233/rork-hoopshighlights-ai_Final"
-    },
-    "payload": {
-      "ref": "codex/asset-upload-lease-renewal-20260719",
-      "ref_type": "branch",
-      "full_ref": "refs/heads/codex/asset-upload-lease-renewal-20260719",
-      "pusher_type": "user"
-    },
-    "public": true,
-    "created_at": "2026-07-19T22:21:38Z"
-  },
-  {
     "id": "15325675419",
     "type": "PushEvent",
     "actor": {
@@ -5929,6 +5970,31 @@
       "ref": "refs/heads/main",
       "head": "5ed46d26b023e40dde737fcd5597f61a40dcadf0",
       "before": "b0697e012dfb0561634efd5de33f476126246cfc"
+    },
+    "public": true,
+    "created_at": "2026-07-19T22:21:38Z"
+  },
+  {
+    "id": "15325675659",
+    "type": "DeleteEvent",
+    "actor": {
+      "id": 117957000,
+      "login": "charlie2233",
+      "display_login": "charlie2233",
+      "gravatar_id": "",
+      "url": "https://api.github.com/users/charlie2233",
+      "avatar_url": "https://avatars.githubusercontent.com/u/117957000?"
+    },
+    "repo": {
+      "id": 1166891851,
+      "name": "charlie2233/rork-hoopshighlights-ai_Final",
+      "url": "https://api.github.com/repos/charlie2233/rork-hoopshighlights-ai_Final"
+    },
+    "payload": {
+      "ref": "codex/asset-upload-lease-renewal-20260719",
+      "ref_type": "branch",
+      "full_ref": "refs/heads/codex/asset-upload-lease-renewal-20260719",
+      "pusher_type": "user"
     },
     "public": true,
     "created_at": "2026-07-19T22:21:38Z"
@@ -6150,59 +6216,6 @@
     },
     "public": true,
     "created_at": "2026-07-19T21:40:54Z"
-  },
-  {
-    "id": "15324030353",
-    "type": "CreateEvent",
-    "actor": {
-      "id": 117957000,
-      "login": "charlie2233",
-      "display_login": "charlie2233",
-      "gravatar_id": "",
-      "url": "https://api.github.com/users/charlie2233",
-      "avatar_url": "https://avatars.githubusercontent.com/u/117957000?"
-    },
-    "repo": {
-      "id": 1306028280,
-      "name": "charlie2233/backchannel-agent-support",
-      "url": "https://api.github.com/repos/charlie2233/backchannel-agent-support"
-    },
-    "payload": {
-      "ref": "codex/backchannel-v0.3-completion",
-      "ref_type": "branch",
-      "full_ref": "refs/heads/codex/backchannel-v0.3-completion",
-      "master_branch": "codex/backchannel-v0.3-completion",
-      "description": "A truthful operational recovery console for consent-bound agent recovery.",
-      "pusher_type": "user"
-    },
-    "public": true,
-    "created_at": "2026-07-19T21:35:04Z"
-  },
-  {
-    "id": "15324013775",
-    "type": "PushEvent",
-    "actor": {
-      "id": 117957000,
-      "login": "charlie2233",
-      "display_login": "charlie2233",
-      "gravatar_id": "",
-      "url": "https://api.github.com/users/charlie2233",
-      "avatar_url": "https://avatars.githubusercontent.com/u/117957000?"
-    },
-    "repo": {
-      "id": 1166891851,
-      "name": "charlie2233/rork-hoopshighlights-ai_Final",
-      "url": "https://api.github.com/repos/charlie2233/rork-hoopshighlights-ai_Final"
-    },
-    "payload": {
-      "repository_id": 1166891851,
-      "push_id": 37615063485,
-      "ref": "refs/heads/codex/ios-store-connect-live-readiness-20260719",
-      "head": "0ac74e78e041c4d5f929eca3bc796bc6ebb9f9de",
-      "before": "bee8b0777f74dc254671ae00544279121f4ab935"
-    },
-    "public": true,
-    "created_at": "2026-07-19T21:34:35Z"
   },
   {
     "id": "11996390234",
@@ -10711,51 +10724,5 @@
     },
     "public": true,
     "created_at": "2026-07-15T19:37:08Z"
-  },
-  {
-    "id": "11840074529",
-    "type": "PullRequestEvent",
-    "actor": {
-      "id": 117957000,
-      "login": "charlie2233",
-      "display_login": "charlie2233",
-      "gravatar_id": "",
-      "url": "https://api.github.com/users/charlie2233",
-      "avatar_url": "https://avatars.githubusercontent.com/u/117957000?"
-    },
-    "repo": {
-      "id": 1166891851,
-      "name": "charlie2233/rork-hoopshighlights-ai_Final",
-      "url": "https://api.github.com/repos/charlie2233/rork-hoopshighlights-ai_Final"
-    },
-    "payload": {
-      "action": "opened",
-      "number": 63,
-      "pull_request": {
-        "url": "https://api.github.com/repos/charlie2233/rork-hoopshighlights-ai_Final/pulls/63",
-        "id": 4063177376,
-        "number": 63,
-        "head": {
-          "ref": "codex/build46-status-proof-20260715",
-          "sha": "7c96e3b477ffed9688d910c4093d257a5a15b059",
-          "repo": {
-            "id": 1166891851,
-            "url": "https://api.github.com/repos/charlie2233/rork-hoopshighlights-ai_Final",
-            "name": "rork-hoopshighlights-ai_Final"
-          }
-        },
-        "base": {
-          "ref": "main",
-          "sha": "22e24d35b32e784b0d6f9e290504118e965fa105",
-          "repo": {
-            "id": 1166891851,
-            "url": "https://api.github.com/repos/charlie2233/rork-hoopshighlights-ai_Final",
-            "name": "rork-hoopshighlights-ai_Final"
-          }
-        }
-      }
-    },
-    "public": true,
-    "created_at": "2026-07-15T19:29:02Z"
   }
 ]
