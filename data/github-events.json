@@ -1,5 +1,188 @@
 [
   {
+    "id": "16541016708",
+    "type": "PushEvent",
+    "actor": {
+      "id": 117957000,
+      "login": "charlie2233",
+      "display_login": "charlie2233",
+      "gravatar_id": "",
+      "url": "https://api.github.com/users/charlie2233",
+      "avatar_url": "https://avatars.githubusercontent.com/u/117957000?"
+    },
+    "repo": {
+      "id": 1140388078,
+      "name": "charlie2233/atrak-website",
+      "url": "https://api.github.com/repos/charlie2233/atrak-website"
+    },
+    "payload": {
+      "repository_id": 1140388078,
+      "push_id": 38851401569,
+      "ref": "refs/heads/main",
+      "head": "2ea1547db25262f808195316cdab16d3b4e6135f",
+      "before": "7315aa63ee1ed12f684f138dbaa9d284aecfe516",
+      "distinct_size": 25,
+      "commits": [
+        {
+          "sha": "2ea1547db25262f808195316cdab16d3b4e6135f",
+          "message": "chore: refresh local weekly activity",
+          "url": "https://github.com/charlie2233/atrak-website/commit/2ea1547db25262f808195316cdab16d3b4e6135f"
+        },
+        {
+          "sha": "7315aa63ee1ed12f684f138dbaa9d284aecfe516",
+          "message": "chore: update GitHub data [skip ci]",
+          "url": "https://github.com/charlie2233/atrak-website/commit/7315aa63ee1ed12f684f138dbaa9d284aecfe516"
+        },
+        {
+          "sha": "5a36bb1237aebdade8784dc53449b7e2b8504900",
+          "message": "chore: update GitHub data [skip ci]",
+          "url": "https://github.com/charlie2233/atrak-website/commit/5a36bb1237aebdade8784dc53449b7e2b8504900"
+        },
+        {
+          "sha": "a07e18c65170d614f72d948cd42201952aa7f44d",
+          "message": "chore: renew weekly log [skip ci]",
+          "url": "https://github.com/charlie2233/atrak-website/commit/a07e18c65170d614f72d948cd42201952aa7f44d"
+        },
+        {
+          "sha": "957e7c38215797777c031d7a02f34d98de239a4a",
+          "message": "chore: update GitHub data [skip ci]",
+          "url": "https://github.com/charlie2233/atrak-website/commit/957e7c38215797777c031d7a02f34d98de239a4a"
+        },
+        {
+          "sha": "51233069c64602d68ba504453df7bd5efcf76773",
+          "message": "chore: update GitHub data [skip ci]",
+          "url": "https://github.com/charlie2233/atrak-website/commit/51233069c64602d68ba504453df7bd5efcf76773"
+        },
+        {
+          "sha": "5108eb02d6bbbaa9baaddeb730dddf285f3bd269",
+          "message": "chore: update GitHub data [skip ci]",
+          "url": "https://github.com/charlie2233/atrak-website/commit/5108eb02d6bbbaa9baaddeb730dddf285f3bd269"
+        },
+        {
+          "sha": "685788d192388d1bbdc34384875e5a1b7fe00a82",
+          "message": "test: cover weekly archive year rollover",
+          "url": "https://github.com/charlie2233/atrak-website/commit/685788d192388d1bbdc34384875e5a1b7fe00a82"
+        },
+        {
+          "sha": "e541443f3b50671b53a60963fcddb66f15bc267c",
+          "message": "chore: update GitHub data [skip ci]",
+          "url": "https://github.com/charlie2233/atrak-website/commit/e541443f3b50671b53a60963fcddb66f15bc267c"
+        },
+        {
+          "sha": "df57faa282fba1fa499338d13036e593a87221e9",
+          "message": "fix: stabilize weekly archive dates",
+          "url": "https://github.com/charlie2233/atrak-website/commit/df57faa282fba1fa499338d13036e593a87221e9"
+        },
+        {
+          "sha": "a535c3788e971b8ca8d3c067de7cf56e97afb01c",
+          "message": "chore: update GitHub data [skip ci]",
+          "url": "https://github.com/charlie2233/atrak-website/commit/a535c3788e971b8ca8d3c067de7cf56e97afb01c"
+        },
+        {
+          "sha": "302a14bedf51fdca84d060a457faa2629884866a",
+          "message": "chore: update GitHub data [skip ci]",
+          "url": "https://github.com/charlie2233/atrak-website/commit/302a14bedf51fdca84d060a457faa2629884866a"
+        },
+        {
+          "sha": "8a1fb92dc4e2252dbf848e3c86cae16683a9b890",
+          "message": "chore: update GitHub data [skip ci]",
+          "url": "https://github.com/charlie2233/atrak-website/commit/8a1fb92dc4e2252dbf848e3c86cae16683a9b890"
+        },
+        {
+          "sha": "39b6ac8fd085fb41dc9f6d77fcd984d420266675",
+          "message": "fix: restore weekly archive and refresh activity",
+          "url": "https://github.com/charlie2233/atrak-website/commit/39b6ac8fd085fb41dc9f6d77fcd984d420266675"
+        },
+        {
+          "sha": "fee6e6460e976ca98dbb9f20fc07be0d7001def7",
+          "message": "chore: update GitHub data [skip ci]",
+          "url": "https://github.com/charlie2233/atrak-website/commit/fee6e6460e976ca98dbb9f20fc07be0d7001def7"
+        },
+        {
+          "sha": "501f7c90b86ac698b82c6476d8df0018477ccb45",
+          "message": "chore: update GitHub data [skip ci]",
+          "url": "https://github.com/charlie2233/atrak-website/commit/501f7c90b86ac698b82c6476d8df0018477ccb45"
+        },
+        {
+          "sha": "f0c63b409527732725dd8c99a3051c493fbe24d1",
+          "message": "chore: refresh published GitHub activity data",
+          "url": "https://github.com/charlie2233/atrak-website/commit/f0c63b409527732725dd8c99a3051c493fbe24d1"
+        },
+        {
+          "sha": "16d6e6ede7f7af71d96d5bdba1945efb28ef0e59",
+          "message": "chore: update GitHub data [skip ci]",
+          "url": "https://github.com/charlie2233/atrak-website/commit/16d6e6ede7f7af71d96d5bdba1945efb28ef0e59"
+        },
+        {
+          "sha": "770f0530b264f78dabab355995f71cf97dc9cc21",
+          "message": "chore: update GitHub data [skip ci]",
+          "url": "https://github.com/charlie2233/atrak-website/commit/770f0530b264f78dabab355995f71cf97dc9cc21"
+        },
+        {
+          "sha": "ad3193a06e99920cd4bae3e4ba65d724536003d2",
+          "message": "chore: update GitHub data [skip ci]",
+          "url": "https://github.com/charlie2233/atrak-website/commit/ad3193a06e99920cd4bae3e4ba65d724536003d2"
+        }
+      ]
+    },
+    "public": true,
+    "created_at": "2026-08-03T07:15:02Z"
+  },
+  {
+    "id": "16528151684",
+    "type": "PushEvent",
+    "actor": {
+      "id": 117957000,
+      "login": "charlie2233",
+      "display_login": "charlie2233",
+      "gravatar_id": "",
+      "url": "https://api.github.com/users/charlie2233",
+      "avatar_url": "https://avatars.githubusercontent.com/u/117957000?"
+    },
+    "repo": {
+      "id": 1101568155,
+      "name": "charlie2233/rork-guide-pup--vision-assistant",
+      "url": "https://api.github.com/repos/charlie2233/rork-guide-pup--vision-assistant"
+    },
+    "payload": {
+      "repository_id": 1101568155,
+      "push_id": 38838209145,
+      "ref": "refs/heads/codex/guidepup-credentialed-launch",
+      "head": "ad93c9d9462bf4eaba27de4f24def22c6d34cc09",
+      "before": "9f941493dec91afb2601d90568f90de76d7d13bf",
+      "distinct_size": 0,
+      "commits": []
+    },
+    "public": true,
+    "created_at": "2026-08-03T04:53:46Z"
+  },
+  {
+    "id": "16524783336",
+    "type": "PushEvent",
+    "actor": {
+      "id": 117957000,
+      "login": "charlie2233",
+      "display_login": "charlie2233",
+      "gravatar_id": "",
+      "url": "https://api.github.com/users/charlie2233",
+      "avatar_url": "https://avatars.githubusercontent.com/u/117957000?"
+    },
+    "repo": {
+      "id": 1101568155,
+      "name": "charlie2233/rork-guide-pup--vision-assistant",
+      "url": "https://api.github.com/repos/charlie2233/rork-guide-pup--vision-assistant"
+    },
+    "payload": {
+      "repository_id": 1101568155,
+      "push_id": 38834746581,
+      "ref": "refs/heads/codex/guidepup-credentialed-launch",
+      "head": "9f941493dec91afb2601d90568f90de76d7d13bf",
+      "before": "064cf7fb4fc8a2652e0e7258b86704cd5ea8ccaf"
+    },
+    "public": true,
+    "created_at": "2026-08-03T04:09:18Z"
+  },
+  {
     "id": "16429329613",
     "type": "PushEvent",
     "actor": {
@@ -21,7 +204,7 @@
       "ref": "refs/heads/codex/ygf-bowl-to-build-beta",
       "head": "96d25fac5fd0a5aaa187b6b0a9f226aeafde79c4",
       "before": "318756d36ef04a37c2dc10e9420275c7544717f3",
-      "distinct_size": 52,
+      "distinct_size": 45,
       "commits": [
         {
           "sha": "96d25fac5fd0a5aaa187b6b0a9f226aeafde79c4",
@@ -221,110 +404,7 @@
       "push_id": 38688882188,
       "ref": "refs/heads/main",
       "head": "685788d192388d1bbdc34384875e5a1b7fe00a82",
-      "before": "e541443f3b50671b53a60963fcddb66f15bc267c",
-      "distinct_size": 27,
-      "commits": [
-        {
-          "sha": "5a36bb1237aebdade8784dc53449b7e2b8504900",
-          "message": "chore: update GitHub data [skip ci]",
-          "url": "https://github.com/charlie2233/atrak-website/commit/5a36bb1237aebdade8784dc53449b7e2b8504900"
-        },
-        {
-          "sha": "a07e18c65170d614f72d948cd42201952aa7f44d",
-          "message": "chore: renew weekly log [skip ci]",
-          "url": "https://github.com/charlie2233/atrak-website/commit/a07e18c65170d614f72d948cd42201952aa7f44d"
-        },
-        {
-          "sha": "957e7c38215797777c031d7a02f34d98de239a4a",
-          "message": "chore: update GitHub data [skip ci]",
-          "url": "https://github.com/charlie2233/atrak-website/commit/957e7c38215797777c031d7a02f34d98de239a4a"
-        },
-        {
-          "sha": "51233069c64602d68ba504453df7bd5efcf76773",
-          "message": "chore: update GitHub data [skip ci]",
-          "url": "https://github.com/charlie2233/atrak-website/commit/51233069c64602d68ba504453df7bd5efcf76773"
-        },
-        {
-          "sha": "5108eb02d6bbbaa9baaddeb730dddf285f3bd269",
-          "message": "chore: update GitHub data [skip ci]",
-          "url": "https://github.com/charlie2233/atrak-website/commit/5108eb02d6bbbaa9baaddeb730dddf285f3bd269"
-        },
-        {
-          "sha": "685788d192388d1bbdc34384875e5a1b7fe00a82",
-          "message": "test: cover weekly archive year rollover",
-          "url": "https://github.com/charlie2233/atrak-website/commit/685788d192388d1bbdc34384875e5a1b7fe00a82"
-        },
-        {
-          "sha": "e541443f3b50671b53a60963fcddb66f15bc267c",
-          "message": "chore: update GitHub data [skip ci]",
-          "url": "https://github.com/charlie2233/atrak-website/commit/e541443f3b50671b53a60963fcddb66f15bc267c"
-        },
-        {
-          "sha": "df57faa282fba1fa499338d13036e593a87221e9",
-          "message": "fix: stabilize weekly archive dates",
-          "url": "https://github.com/charlie2233/atrak-website/commit/df57faa282fba1fa499338d13036e593a87221e9"
-        },
-        {
-          "sha": "a535c3788e971b8ca8d3c067de7cf56e97afb01c",
-          "message": "chore: update GitHub data [skip ci]",
-          "url": "https://github.com/charlie2233/atrak-website/commit/a535c3788e971b8ca8d3c067de7cf56e97afb01c"
-        },
-        {
-          "sha": "302a14bedf51fdca84d060a457faa2629884866a",
-          "message": "chore: update GitHub data [skip ci]",
-          "url": "https://github.com/charlie2233/atrak-website/commit/302a14bedf51fdca84d060a457faa2629884866a"
-        },
-        {
-          "sha": "8a1fb92dc4e2252dbf848e3c86cae16683a9b890",
-          "message": "chore: update GitHub data [skip ci]",
-          "url": "https://github.com/charlie2233/atrak-website/commit/8a1fb92dc4e2252dbf848e3c86cae16683a9b890"
-        },
-        {
-          "sha": "39b6ac8fd085fb41dc9f6d77fcd984d420266675",
-          "message": "fix: restore weekly archive and refresh activity",
-          "url": "https://github.com/charlie2233/atrak-website/commit/39b6ac8fd085fb41dc9f6d77fcd984d420266675"
-        },
-        {
-          "sha": "fee6e6460e976ca98dbb9f20fc07be0d7001def7",
-          "message": "chore: update GitHub data [skip ci]",
-          "url": "https://github.com/charlie2233/atrak-website/commit/fee6e6460e976ca98dbb9f20fc07be0d7001def7"
-        },
-        {
-          "sha": "501f7c90b86ac698b82c6476d8df0018477ccb45",
-          "message": "chore: update GitHub data [skip ci]",
-          "url": "https://github.com/charlie2233/atrak-website/commit/501f7c90b86ac698b82c6476d8df0018477ccb45"
-        },
-        {
-          "sha": "f0c63b409527732725dd8c99a3051c493fbe24d1",
-          "message": "chore: refresh published GitHub activity data",
-          "url": "https://github.com/charlie2233/atrak-website/commit/f0c63b409527732725dd8c99a3051c493fbe24d1"
-        },
-        {
-          "sha": "16d6e6ede7f7af71d96d5bdba1945efb28ef0e59",
-          "message": "chore: update GitHub data [skip ci]",
-          "url": "https://github.com/charlie2233/atrak-website/commit/16d6e6ede7f7af71d96d5bdba1945efb28ef0e59"
-        },
-        {
-          "sha": "770f0530b264f78dabab355995f71cf97dc9cc21",
-          "message": "chore: update GitHub data [skip ci]",
-          "url": "https://github.com/charlie2233/atrak-website/commit/770f0530b264f78dabab355995f71cf97dc9cc21"
-        },
-        {
-          "sha": "ad3193a06e99920cd4bae3e4ba65d724536003d2",
-          "message": "chore: update GitHub data [skip ci]",
-          "url": "https://github.com/charlie2233/atrak-website/commit/ad3193a06e99920cd4bae3e4ba65d724536003d2"
-        },
-        {
-          "sha": "cc1f5eca852116834f51343b550183bbe25cbb53",
-          "message": "chore: update GitHub data [skip ci]",
-          "url": "https://github.com/charlie2233/atrak-website/commit/cc1f5eca852116834f51343b550183bbe25cbb53"
-        },
-        {
-          "sha": "a4ef235e35faa61fc70ee9e486e492742fc34466",
-          "message": "chore: update weekly logs and releases [skip ci]",
-          "url": "https://github.com/charlie2233/atrak-website/commit/a4ef235e35faa61fc70ee9e486e492742fc34466"
-        }
-      ]
+      "before": "e541443f3b50671b53a60963fcddb66f15bc267c"
     },
     "public": true,
     "created_at": "2026-08-01T07:16:25Z"
@@ -1465,9 +1545,7 @@
       "push_id": 38475528977,
       "ref": "refs/heads/codex/guidepup-credentialed-launch",
       "head": "064cf7fb4fc8a2652e0e7258b86704cd5ea8ccaf",
-      "before": "14747bbe49148abff26049edaa5ef334162e678b",
-      "distinct_size": 0,
-      "commits": []
+      "before": "14747bbe49148abff26049edaa5ef334162e678b"
     },
     "public": true,
     "created_at": "2026-07-30T00:41:18Z"
@@ -5939,6 +6017,31 @@
     "created_at": "2026-07-19T22:21:36Z"
   },
   {
+    "id": "15325675659",
+    "type": "DeleteEvent",
+    "actor": {
+      "id": 117957000,
+      "login": "charlie2233",
+      "display_login": "charlie2233",
+      "gravatar_id": "",
+      "url": "https://api.github.com/users/charlie2233",
+      "avatar_url": "https://avatars.githubusercontent.com/u/117957000?"
+    },
+    "repo": {
+      "id": 1166891851,
+      "name": "charlie2233/rork-hoopshighlights-ai_Final",
+      "url": "https://api.github.com/repos/charlie2233/rork-hoopshighlights-ai_Final"
+    },
+    "payload": {
+      "ref": "codex/asset-upload-lease-renewal-20260719",
+      "ref_type": "branch",
+      "full_ref": "refs/heads/codex/asset-upload-lease-renewal-20260719",
+      "pusher_type": "user"
+    },
+    "public": true,
+    "created_at": "2026-07-19T22:21:38Z"
+  },
+  {
     "id": "15325675419",
     "type": "PushEvent",
     "actor": {
@@ -5960,31 +6063,6 @@
       "ref": "refs/heads/main",
       "head": "5ed46d26b023e40dde737fcd5597f61a40dcadf0",
       "before": "b0697e012dfb0561634efd5de33f476126246cfc"
-    },
-    "public": true,
-    "created_at": "2026-07-19T22:21:38Z"
-  },
-  {
-    "id": "15325675659",
-    "type": "DeleteEvent",
-    "actor": {
-      "id": 117957000,
-      "login": "charlie2233",
-      "display_login": "charlie2233",
-      "gravatar_id": "",
-      "url": "https://api.github.com/users/charlie2233",
-      "avatar_url": "https://avatars.githubusercontent.com/u/117957000?"
-    },
-    "repo": {
-      "id": 1166891851,
-      "name": "charlie2233/rork-hoopshighlights-ai_Final",
-      "url": "https://api.github.com/repos/charlie2233/rork-hoopshighlights-ai_Final"
-    },
-    "payload": {
-      "ref": "codex/asset-upload-lease-renewal-20260719",
-      "ref_type": "branch",
-      "full_ref": "refs/heads/codex/asset-upload-lease-renewal-20260719",
-      "pusher_type": "user"
     },
     "public": true,
     "created_at": "2026-07-19T22:21:38Z"
@@ -6036,33 +6114,6 @@
     "created_at": "2026-07-19T22:17:09Z"
   },
   {
-    "id": "15325508469",
-    "type": "CreateEvent",
-    "actor": {
-      "id": 117957000,
-      "login": "charlie2233",
-      "display_login": "charlie2233",
-      "gravatar_id": "",
-      "url": "https://api.github.com/users/charlie2233",
-      "avatar_url": "https://avatars.githubusercontent.com/u/117957000?"
-    },
-    "repo": {
-      "id": 1166891851,
-      "name": "charlie2233/rork-hoopshighlights-ai_Final",
-      "url": "https://api.github.com/repos/charlie2233/rork-hoopshighlights-ai_Final"
-    },
-    "payload": {
-      "ref": "codex/ios-store-shared-accuracy-refresh-20260719",
-      "ref_type": "branch",
-      "full_ref": "refs/heads/codex/ios-store-shared-accuracy-refresh-20260719",
-      "master_branch": "main",
-      "description": "Created by Rork",
-      "pusher_type": "user"
-    },
-    "public": true,
-    "created_at": "2026-07-19T22:16:52Z"
-  },
-  {
     "id": "11997461980",
     "type": "PullRequestEvent",
     "actor": {
@@ -6107,59 +6158,6 @@
     },
     "public": true,
     "created_at": "2026-07-19T22:15:20Z"
-  },
-  {
-    "id": "15325443794",
-    "type": "CreateEvent",
-    "actor": {
-      "id": 117957000,
-      "login": "charlie2233",
-      "display_login": "charlie2233",
-      "gravatar_id": "",
-      "url": "https://api.github.com/users/charlie2233",
-      "avatar_url": "https://avatars.githubusercontent.com/u/117957000?"
-    },
-    "repo": {
-      "id": 1166891851,
-      "name": "charlie2233/rork-hoopshighlights-ai_Final",
-      "url": "https://api.github.com/repos/charlie2233/rork-hoopshighlights-ai_Final"
-    },
-    "payload": {
-      "ref": "codex/asset-upload-lease-renewal-20260719",
-      "ref_type": "branch",
-      "full_ref": "refs/heads/codex/asset-upload-lease-renewal-20260719",
-      "master_branch": "main",
-      "description": "Created by Rork",
-      "pusher_type": "user"
-    },
-    "public": true,
-    "created_at": "2026-07-19T22:15:00Z"
-  },
-  {
-    "id": "15324235919",
-    "type": "PushEvent",
-    "actor": {
-      "id": 117957000,
-      "login": "charlie2233",
-      "display_login": "charlie2233",
-      "gravatar_id": "",
-      "url": "https://api.github.com/users/charlie2233",
-      "avatar_url": "https://avatars.githubusercontent.com/u/117957000?"
-    },
-    "repo": {
-      "id": 1166891851,
-      "name": "charlie2233/rork-hoopshighlights-ai_Final",
-      "url": "https://api.github.com/repos/charlie2233/rork-hoopshighlights-ai_Final"
-    },
-    "payload": {
-      "repository_id": 1166891851,
-      "push_id": 37615286380,
-      "ref": "refs/heads/main",
-      "head": "b0697e012dfb0561634efd5de33f476126246cfc",
-      "before": "ac58252c76f40f28f5da1a553dd496f8f4796dee"
-    },
-    "public": true,
-    "created_at": "2026-07-19T21:40:55Z"
   },
   {
     "id": "11996963528",
