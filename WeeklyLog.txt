@@ -888,10 +888,57 @@ You can honestly demo this to a coach and they'd actually use it.
 
 ---
 
+## Week of Jul 26 – Aug 1
+
+### "Production rollout evidence, shared account limits, and archive stability"
+
+**Highlights**
+
+* YGF Bowl to Build led public activity with 52 verified commits
+* Atrak Website contributed 34 commits, including weekly archive date and year-rollover fixes
+* Backchannel Agent Support added 22 commits focused on packaged runtime and CI integrity
+
+**Shipped**
+
+* YGF production rollout evidence and mobile Chinese-title refinement
+* Shared OAuth wallet merging with the provider-wide account cap enforced
+* Atrak weekly archive stability across date boundaries and year rollover
+* Backchannel container runtime, build-context, and static-artifact hardening
+
+**Engineering**
+
+* 67 pushes across five active public repositories were condensed into one durable edition
+* GitHub API commit enrichment verified 109 commits across TypeScript, HTML, and Python stacks
+* LifePage's launch/readiness download remained available in the refreshed release feed
+
+**Fixes**
+
+* Kept the Chinese hero title together on phone layouts
+* Stabilized weekly archive dates and year rollover
+* Repaired production agent settlement and clarified OAuth conflict recovery
+
+**Metrics**
+
+* Commits: 109
+* Active repos: 5
+* PR updates: 0
+* Issues: 0
+* Pushes: 67
+* Releases/downloads: 1
+* GitHub events: 68
+
+**Next**
+
+* Continue verifying YGF production behavior against the shared account cap
+* Keep the weekly archive synchronized with completed Sunday → Saturday editions
+* Publish canonical GitHub Releases for the next downloadable milestone
+
+---
+
 # 📊 Summary
 
-**Total Coverage:** August 31, 2024 – July 25, 2026
-**Total Weeks:** 20 documented (Dec Weeks 14-18 remain undocumented)
+**Total Coverage:** August 31, 2024 – August 1, 2026
+**Total Weeks:** 21 documented (Dec Weeks 14-18 remain undocumented)
 **Format:** Sunday → Saturday (PT)
 
 **Major Milestones:**

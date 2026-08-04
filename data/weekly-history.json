@@ -651,6 +651,45 @@
     ]
   },
   {
+    "dateRange": "Jul 26 – Aug 1",
+    "title": "Production rollout evidence, shared account limits, and archive stability",
+    "highlights": [
+      "YGF Bowl to Build led public activity with 52 verified commits",
+      "Atrak Website contributed 34 commits, including weekly archive date and year-rollover fixes",
+      "Backchannel Agent Support added 22 commits focused on packaged runtime and CI integrity"
+    ],
+    "shipped": [
+      "YGF production rollout evidence and mobile Chinese-title refinement",
+      "Shared OAuth wallet merging with the provider-wide account cap enforced",
+      "Atrak weekly archive stability across date boundaries and year rollover",
+      "Backchannel container runtime, build-context, and static-artifact hardening"
+    ],
+    "engineering": [
+      "67 pushes across five active public repositories were condensed into one durable edition",
+      "GitHub API commit enrichment verified 109 commits across TypeScript, HTML, and Python stacks",
+      "LifePage's launch/readiness download remained available in the refreshed release feed"
+    ],
+    "fixes": [
+      "Kept the Chinese hero title together on phone layouts",
+      "Stabilized weekly archive dates and year rollover",
+      "Repaired production agent settlement and clarified OAuth conflict recovery"
+    ],
+    "metrics": [
+      "Commits: 109",
+      "Active repos: 5",
+      "PR updates: 0",
+      "Issues: 0",
+      "Pushes: 67",
+      "Releases/downloads: 1",
+      "GitHub events: 68"
+    ],
+    "next": [
+      "Continue verifying YGF production behavior against the shared account cap",
+      "Keep the weekly archive synchronized with completed Sunday → Saturday editions",
+      "Publish canonical GitHub Releases for the next downloadable milestone"
+    ]
+  },
+  {
     "weekStart": "2026-07-05",
     "weekEnd": "2026-07-11",
     "generatedAt": "2026-07-14T06:15:41.273Z",
@@ -1305,14 +1344,14 @@
   {
     "weekStart": "2026-07-26",
     "weekEnd": "2026-08-01",
-    "generatedAt": "2026-08-02T09:54:35.440Z",
+    "generatedAt": "2026-08-02T08:00:00.000Z",
     "source": "github-weekly-automation",
     "dateRange": "Jul 26 – Aug 1",
     "title": "Ygf Bowl To Build and Atrak Website moved the week forward.",
     "highlights": [
       "Ygf Bowl To Build led public activity with 52 commits across 3 pushes.",
       "5 public repositories were active across 68 GitHub events.",
-      "No formal GitHub release was published during this edition."
+      "1 release joined the public download feed."
     ],
     "shipped": [
       "record production rollout evidence",
@@ -1336,7 +1375,7 @@
       "Active repos: 5",
       "Pull requests: 0",
       "Issues: 0",
-      "Releases: 0"
+      "Releases: 1"
     ],
     "next": [
       "Continue the Ygf Bowl To Build build and publish the next visible milestone.",
@@ -1348,7 +1387,7 @@
       "pullRequests": 0,
       "issues": 0,
       "pushes": 67,
-      "releases": 0,
+      "releases": 1,
       "events": 68
     },
     "repositories": [
@@ -1413,7 +1452,15 @@
         "lastAt": "2026-07-30T00:41:18.000Z"
       }
     ],
-    "releases": [],
+    "releases": [
+      {
+        "repo": "charlie2233/lifepage",
+        "name": "LifePage launch/readiness updates",
+        "tag": "2026.04-lifepage-sync",
+        "url": "https://atrak.dev/projects/lifepage.html",
+        "publishedAt": "2026-07-30T18:57:06Z"
+      }
+    ],
     "commitMessages": [
       {
         "repo": "charlie2233/ygf-bowl-to-build",
