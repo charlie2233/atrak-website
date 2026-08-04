@@ -290,19 +290,20 @@ function weeklyStats(events, now) {
   };
 }
 
-function weeklyStatsForWrite(events, now) {
+export function weeklyStatsForWrite(events, now, existingWeeklyStats = readJson(paths.weekly)) {
   const liveWeeklyStats = weeklyStats(events, now);
-  const existingWeeklyStats = readJson(paths.weekly);
 
-  if (
-    existingWeeklyStats?.source === "local-git-refresh" &&
-    Number(existingWeeklyStats.totalCommitContributions || 0) >=
-      Number(liveWeeklyStats.totalCommitContributions || 0)
-  ) {
+  if (existingWeeklyStats?.source === "local-git-refresh") {
     return existingWeeklyStats;
   }
 
-  return liveWeeklyStats;
+  return { ...liveWeeklyStats, source: "github-live-cache" };
+}
+
+export function sortEventsNewestFirst(events) {
+  return events.sort((a, b) => (
+    Date.parse(b?.created_at || "") - Date.parse(a?.created_at || "")
+  ));
 }
 
 function main() {
@@ -373,6 +374,7 @@ function main() {
       });
     }
   }
+  sortEventsNewestFirst(events);
 
   const releases = [];
   for (const repo of repos.filter((repo) => !repo.fork && !repo.archived)) {
@@ -408,4 +410,6 @@ function main() {
   fs.writeFileSync(paths.lastUpdated, `${now.toISOString().replace(/\.\d{3}Z$/, "Z")}\n`, "utf8");
 }
 
-main();
+if (path.resolve(process.argv[1] || "") === path.resolve(new URL(import.meta.url).pathname)) {
+  main();
+}

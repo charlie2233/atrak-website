@@ -123,6 +123,44 @@ class RegenerateWeeklyLogTests(unittest.TestCase):
             )
             self.assertEqual(output[-3:], [july_fifth, july_twelfth, july_nineteenth])
 
+    def test_generated_entry_replaces_matching_annotated_text_week(self):
+        with tempfile.TemporaryDirectory() as temporary_directory:
+            root = Path(temporary_directory)
+            log_path, history_path, compatibility_path = weekly_log_paths(root)
+            log_path.write_text(
+                LEGACY_LOG + """
+
+---
+
+## Week of Jul 26 – Aug 1
+<!-- week-start: 2026-07-26 -->
+
+### "Manually authored edition"
+
+**Highlights**
+
+* This presentation copy must not duplicate the canonical snapshot
+""",
+                encoding="utf-8"
+            )
+            canonical = generated_entry("2026-07-26", "Canonical API snapshot")
+            history_path.write_text(json.dumps([canonical]), encoding="utf-8")
+            compatibility_path.write_text(json.dumps([canonical]), encoding="utf-8")
+
+            entries = parse_log.regenerate_weekly_log(
+                log_path, history_path, compatibility_path
+            )
+
+            matching_entries = [
+                entry for entry in entries
+                if entry.get("weekStart") == "2026-07-26"
+            ]
+            self.assertEqual(matching_entries, [canonical])
+            self.assertNotIn(
+                "Manually authored edition",
+                history_path.read_text(encoding="utf-8")
+            )
+
     def test_preserves_valid_sibling_when_history_alias_is_malformed(self):
         with tempfile.TemporaryDirectory() as temporary_directory:
             log_path, history_path, compatibility_path = weekly_log_paths(

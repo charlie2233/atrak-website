@@ -1,14 +1,129 @@
 [
   {
     "type": "PushEvent",
-    "created_at": "2026-08-04T06:27:31Z",
+    "created_at": "2026-08-04T14:54:03Z",
+    "repo": {
+      "name": "charlie2233/gpt-game-arena"
+    },
+    "payload": {
+      "ref": "refs/heads/main",
+      "before": "1f7aedd197debfa42b04fe7d67f12b3b89949f49",
+      "head": "063ef1db33b14de5397976e0f506fb14ae6bdcd4",
+      "distinct_size": 49,
+      "commits": [
+        {
+          "sha": "063ef1db33b14de5397976e0f506fb14ae6bdcd4",
+          "message": "fix: speed up and confirm GPT turns",
+          "url": "https://github.com/charlie2233/gpt-game-arena/commit/063ef1db33b14de5397976e0f506fb14ae6bdcd4"
+        },
+        {
+          "sha": "1f7aedd197debfa42b04fe7d67f12b3b89949f49",
+          "message": "fix: fit game boards to chat viewport",
+          "url": "https://github.com/charlie2233/gpt-game-arena/commit/1f7aedd197debfa42b04fe7d67f12b3b89949f49"
+        },
+        {
+          "sha": "9569a7429acca48eec3e9c8d73c9f85d4d5ac485",
+          "message": "fix: recover hosted games across delays and restarts",
+          "url": "https://github.com/charlie2233/gpt-game-arena/commit/9569a7429acca48eec3e9c8d73c9f85d4d5ac485"
+        },
+        {
+          "sha": "ca765e1cbe232f2ef89a29aa606a47cd244e31c2",
+          "message": "fix: place Go stones on intersections",
+          "url": "https://github.com/charlie2233/gpt-game-arena/commit/ca765e1cbe232f2ef89a29aa606a47cd244e31c2"
+        },
+        {
+          "sha": "bf8e13bd0e31c99e2274282e56bacb1beff28834",
+          "message": "docs: update final verification count",
+          "url": "https://github.com/charlie2233/gpt-game-arena/commit/bf8e13bd0e31c99e2274282e56bacb1beff28834"
+        },
+        {
+          "sha": "11fe11596e74010447c188d16e2ac31f668ad83d",
+          "message": "fix: enforce exact game move contracts",
+          "url": "https://github.com/charlie2233/gpt-game-arena/commit/11fe11596e74010447c188d16e2ac31f668ad83d"
+        },
+        {
+          "sha": "e8eec296535aebda75807ed7d625707adaa1e1a5",
+          "message": "docs: record expanded game verification",
+          "url": "https://github.com/charlie2233/gpt-game-arena/commit/e8eec296535aebda75807ed7d625707adaa1e1a5"
+        },
+        {
+          "sha": "a8e177bff14a6c321d5def9b5fb6f10e524774ea",
+          "message": "fix: stabilize connect four row tracks",
+          "url": "https://github.com/charlie2233/gpt-game-arena/commit/a8e177bff14a6c321d5def9b5fb6f10e524774ea"
+        },
+        {
+          "sha": "4c901a59028003128a0d07a5ddc7e074349e694d",
+          "message": "docs: correct player color defaults",
+          "url": "https://github.com/charlie2233/gpt-game-arena/commit/4c901a59028003128a0d07a5ddc7e074349e694d"
+        },
+        {
+          "sha": "a63b61779d8b2c1efcca4d90d5621dda2efb0cbf",
+          "message": "docs: document expanded game arena",
+          "url": "https://github.com/charlie2233/gpt-game-arena/commit/a63b61779d8b2c1efcca4d90d5621dda2efb0cbf"
+        },
+        {
+          "sha": "de9bc9d25dbf16b991952a65a70f4a38580879dc",
+          "message": "fix: continue consecutive GPT turns",
+          "url": "https://github.com/charlie2233/gpt-game-arena/commit/de9bc9d25dbf16b991952a65a70f4a38580879dc"
+        },
+        {
+          "sha": "f4645c141226aa32100cbfb860e663dc742d78b3",
+          "message": "fix: restore connect four cell styling",
+          "url": "https://github.com/charlie2233/gpt-game-arena/commit/f4645c141226aa32100cbfb860e663dc742d78b3"
+        },
+        {
+          "sha": "8cc64d66e0ae522f366e64db99bed60a47a61f38",
+          "message": "test: use reachable frontend game snapshots",
+          "url": "https://github.com/charlie2233/gpt-game-arena/commit/8cc64d66e0ae522f366e64db99bed60a47a61f38"
+        },
+        {
+          "sha": "baab9b04403797c784af97ebd24b8a6b48b04728",
+          "message": "fix: harden arena board accessibility",
+          "url": "https://github.com/charlie2233/gpt-game-arena/commit/baab9b04403797c784af97ebd24b8a6b48b04728"
+        },
+        {
+          "sha": "6cac26dee5cb9f07c823f095bd274324de9c500b",
+          "message": "fix: tighten arena game contracts",
+          "url": "https://github.com/charlie2233/gpt-game-arena/commit/6cac26dee5cb9f07c823f095bd274324de9c500b"
+        },
+        {
+          "sha": "e21917645fe5d1bfa1913d88b0ad9ea4cb5eb0ce",
+          "message": "test: cover new arena games",
+          "url": "https://github.com/charlie2233/gpt-game-arena/commit/e21917645fe5d1bfa1913d88b0ad9ea4cb5eb0ce"
+        },
+        {
+          "sha": "911a49eeeea5687c43419a100887daa2d2a535c8",
+          "message": "feat: add three games to the arena widget",
+          "url": "https://github.com/charlie2233/gpt-game-arena/commit/911a49eeeea5687c43419a100887daa2d2a535c8"
+        },
+        {
+          "sha": "32f76ae7fee1caaeb6c250e5ffbce31caf8cd0b2",
+          "message": "fix: tighten reversi snapshots",
+          "url": "https://github.com/charlie2233/gpt-game-arena/commit/32f76ae7fee1caaeb6c250e5ffbce31caf8cd0b2"
+        },
+        {
+          "sha": "32fba693f24cb144d6a1b8cecc6a8cbe85c1ac4c",
+          "message": "test: cover reversi edge cases",
+          "url": "https://github.com/charlie2233/gpt-game-arena/commit/32fba693f24cb144d6a1b8cecc6a8cbe85c1ac4c"
+        },
+        {
+          "sha": "70d2ac7a8b6058141b721e99ab68f4a2e07ff3bb",
+          "message": "feat: add reversi game engine",
+          "url": "https://github.com/charlie2233/gpt-game-arena/commit/70d2ac7a8b6058141b721e99ab68f4a2e07ff3bb"
+        }
+      ]
+    }
+  },
+  {
+    "type": "PushEvent",
+    "created_at": "2026-08-04T14:39:00Z",
     "repo": {
       "name": "charlie2233/ygf-bowl-to-build"
     },
     "payload": {
       "ref": "refs/heads/codex/ygf-bowl-to-build-beta",
-      "before": "96d25fac5fd0a5aaa187b6b0a9f226aeafde79c4",
-      "head": "365a08fbdb6150283a897107fa4686e59ec86f01",
+      "before": "365a08fbdb6150283a897107fa4686e59ec86f01",
+      "head": "30788d139c4d2bfca009b305bf3e82beed4c338b",
       "distinct_size": 35,
       "commits": [
         {
@@ -116,6 +231,20 @@
   },
   {
     "type": "PushEvent",
+    "created_at": "2026-08-04T06:27:31Z",
+    "repo": {
+      "name": "charlie2233/ygf-bowl-to-build"
+    },
+    "payload": {
+      "ref": "refs/heads/codex/ygf-bowl-to-build-beta",
+      "before": "96d25fac5fd0a5aaa187b6b0a9f226aeafde79c4",
+      "head": "365a08fbdb6150283a897107fa4686e59ec86f01",
+      "distinct_size": 0,
+      "commits": []
+    }
+  },
+  {
+    "type": "PushEvent",
     "created_at": "2026-08-04T06:11:02Z",
     "repo": {
       "name": "charlie2233/gpt-game-arena"
@@ -124,109 +253,8 @@
       "ref": "refs/heads/main",
       "before": "9569a7429acca48eec3e9c8d73c9f85d4d5ac485",
       "head": "1f7aedd197debfa42b04fe7d67f12b3b89949f49",
-      "distinct_size": 49,
-      "commits": [
-        {
-          "sha": "063ef1db33b14de5397976e0f506fb14ae6bdcd4",
-          "message": "fix: speed up and confirm GPT turns",
-          "url": "https://github.com/charlie2233/gpt-game-arena/commit/063ef1db33b14de5397976e0f506fb14ae6bdcd4"
-        },
-        {
-          "sha": "1f7aedd197debfa42b04fe7d67f12b3b89949f49",
-          "message": "fix: fit game boards to chat viewport",
-          "url": "https://github.com/charlie2233/gpt-game-arena/commit/1f7aedd197debfa42b04fe7d67f12b3b89949f49"
-        },
-        {
-          "sha": "9569a7429acca48eec3e9c8d73c9f85d4d5ac485",
-          "message": "fix: recover hosted games across delays and restarts",
-          "url": "https://github.com/charlie2233/gpt-game-arena/commit/9569a7429acca48eec3e9c8d73c9f85d4d5ac485"
-        },
-        {
-          "sha": "ca765e1cbe232f2ef89a29aa606a47cd244e31c2",
-          "message": "fix: place Go stones on intersections",
-          "url": "https://github.com/charlie2233/gpt-game-arena/commit/ca765e1cbe232f2ef89a29aa606a47cd244e31c2"
-        },
-        {
-          "sha": "bf8e13bd0e31c99e2274282e56bacb1beff28834",
-          "message": "docs: update final verification count",
-          "url": "https://github.com/charlie2233/gpt-game-arena/commit/bf8e13bd0e31c99e2274282e56bacb1beff28834"
-        },
-        {
-          "sha": "11fe11596e74010447c188d16e2ac31f668ad83d",
-          "message": "fix: enforce exact game move contracts",
-          "url": "https://github.com/charlie2233/gpt-game-arena/commit/11fe11596e74010447c188d16e2ac31f668ad83d"
-        },
-        {
-          "sha": "e8eec296535aebda75807ed7d625707adaa1e1a5",
-          "message": "docs: record expanded game verification",
-          "url": "https://github.com/charlie2233/gpt-game-arena/commit/e8eec296535aebda75807ed7d625707adaa1e1a5"
-        },
-        {
-          "sha": "a8e177bff14a6c321d5def9b5fb6f10e524774ea",
-          "message": "fix: stabilize connect four row tracks",
-          "url": "https://github.com/charlie2233/gpt-game-arena/commit/a8e177bff14a6c321d5def9b5fb6f10e524774ea"
-        },
-        {
-          "sha": "4c901a59028003128a0d07a5ddc7e074349e694d",
-          "message": "docs: correct player color defaults",
-          "url": "https://github.com/charlie2233/gpt-game-arena/commit/4c901a59028003128a0d07a5ddc7e074349e694d"
-        },
-        {
-          "sha": "a63b61779d8b2c1efcca4d90d5621dda2efb0cbf",
-          "message": "docs: document expanded game arena",
-          "url": "https://github.com/charlie2233/gpt-game-arena/commit/a63b61779d8b2c1efcca4d90d5621dda2efb0cbf"
-        },
-        {
-          "sha": "de9bc9d25dbf16b991952a65a70f4a38580879dc",
-          "message": "fix: continue consecutive GPT turns",
-          "url": "https://github.com/charlie2233/gpt-game-arena/commit/de9bc9d25dbf16b991952a65a70f4a38580879dc"
-        },
-        {
-          "sha": "f4645c141226aa32100cbfb860e663dc742d78b3",
-          "message": "fix: restore connect four cell styling",
-          "url": "https://github.com/charlie2233/gpt-game-arena/commit/f4645c141226aa32100cbfb860e663dc742d78b3"
-        },
-        {
-          "sha": "8cc64d66e0ae522f366e64db99bed60a47a61f38",
-          "message": "test: use reachable frontend game snapshots",
-          "url": "https://github.com/charlie2233/gpt-game-arena/commit/8cc64d66e0ae522f366e64db99bed60a47a61f38"
-        },
-        {
-          "sha": "baab9b04403797c784af97ebd24b8a6b48b04728",
-          "message": "fix: harden arena board accessibility",
-          "url": "https://github.com/charlie2233/gpt-game-arena/commit/baab9b04403797c784af97ebd24b8a6b48b04728"
-        },
-        {
-          "sha": "6cac26dee5cb9f07c823f095bd274324de9c500b",
-          "message": "fix: tighten arena game contracts",
-          "url": "https://github.com/charlie2233/gpt-game-arena/commit/6cac26dee5cb9f07c823f095bd274324de9c500b"
-        },
-        {
-          "sha": "e21917645fe5d1bfa1913d88b0ad9ea4cb5eb0ce",
-          "message": "test: cover new arena games",
-          "url": "https://github.com/charlie2233/gpt-game-arena/commit/e21917645fe5d1bfa1913d88b0ad9ea4cb5eb0ce"
-        },
-        {
-          "sha": "911a49eeeea5687c43419a100887daa2d2a535c8",
-          "message": "feat: add three games to the arena widget",
-          "url": "https://github.com/charlie2233/gpt-game-arena/commit/911a49eeeea5687c43419a100887daa2d2a535c8"
-        },
-        {
-          "sha": "32f76ae7fee1caaeb6c250e5ffbce31caf8cd0b2",
-          "message": "fix: tighten reversi snapshots",
-          "url": "https://github.com/charlie2233/gpt-game-arena/commit/32f76ae7fee1caaeb6c250e5ffbce31caf8cd0b2"
-        },
-        {
-          "sha": "32fba693f24cb144d6a1b8cecc6a8cbe85c1ac4c",
-          "message": "test: cover reversi edge cases",
-          "url": "https://github.com/charlie2233/gpt-game-arena/commit/32fba693f24cb144d6a1b8cecc6a8cbe85c1ac4c"
-        },
-        {
-          "sha": "70d2ac7a8b6058141b721e99ab68f4a2e07ff3bb",
-          "message": "feat: add reversi game engine",
-          "url": "https://github.com/charlie2233/gpt-game-arena/commit/70d2ac7a8b6058141b721e99ab68f4a2e07ff3bb"
-        }
-      ]
+      "distinct_size": 0,
+      "commits": []
     }
   },
   {
@@ -482,14 +510,6 @@
       "distinct_size": 0,
       "commits": []
     }
-  },
-  {
-    "type": "PublicEvent",
-    "created_at": "2026-07-27T05:17:54Z",
-    "repo": {
-      "name": "charlie2233/ygf-bowl-to-build"
-    },
-    "payload": {}
   },
   {
     "type": "PushEvent",
@@ -1317,6 +1337,14 @@
     }
   },
   {
+    "type": "PublicEvent",
+    "created_at": "2026-07-27T05:17:54Z",
+    "repo": {
+      "name": "charlie2233/ygf-bowl-to-build"
+    },
+    "payload": {}
+  },
+  {
     "type": "PushEvent",
     "created_at": "2026-07-26T20:59:11Z",
     "repo": {
@@ -1760,34 +1788,6 @@
       "ref": "refs/heads/codex/guidepup-credentialed-launch",
       "before": "9e722b47def8607d038c5a70e6416a9e88086553",
       "head": "0baa02af0e1061e3af2f2d4b2c4d7228063509f6",
-      "distinct_size": 0,
-      "commits": []
-    }
-  },
-  {
-    "type": "PushEvent",
-    "created_at": "2026-07-25T04:54:08Z",
-    "repo": {
-      "name": "charlie2233/rork-guide-pup--vision-assistant"
-    },
-    "payload": {
-      "ref": "refs/heads/codex/guidepup-credentialed-launch",
-      "before": "e0f58ff4f9d3a0d14bc1701859de9af2b5d4d772",
-      "head": "9e722b47def8607d038c5a70e6416a9e88086553",
-      "distinct_size": 0,
-      "commits": []
-    }
-  },
-  {
-    "type": "PushEvent",
-    "created_at": "2026-07-25T04:51:45Z",
-    "repo": {
-      "name": "charlie2233/backchannel-agent-support"
-    },
-    "payload": {
-      "ref": "refs/heads/codex/backchannel-v0.3-completion",
-      "before": "b89fdb05672f3bb54176f04ad71292ffed8d78dd",
-      "head": "0fd2d7f89e8ba02b99e00a98d9f8e6f3f94db303",
       "distinct_size": 0,
       "commits": []
     }

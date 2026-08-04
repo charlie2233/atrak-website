@@ -39,6 +39,14 @@ def parse_weekly_log(file_path):
         if not title_match:
             continue  # Skip if no week header found
         date_range = title_match.group(1).strip()
+        week_start_match = re.search(
+            r'<!--\s*week-start:\s*([^\s]+)\s*-->', raw, re.IGNORECASE
+        )
+        week_start = (
+            normalize_week_start(week_start_match.group(1))
+            if week_start_match
+            else None
+        )
         
         # Parse the theme from the markdown heading line (e.g., '### 🎬 "..."')
         theme = "Weekly Update"
@@ -73,6 +81,8 @@ def parse_weekly_log(file_path):
             "metrics": sections.get('metrics', []),
             "next": sections.get('next', [])
         }
+        if week_start is not None:
+            week_obj["weekStart"] = week_start
         weeks_data.append(week_obj)
     return weeks_data
 
@@ -163,7 +173,13 @@ def regenerate_weekly_log(log_path, output_path, compatibility_path):
     """Rebuild legacy entries and retain generated weekly editions."""
     legacy_entries = parse_weekly_log(log_path)
     generated_entries = load_generated_entries((output_path, compatibility_path))
-    entries = legacy_entries + generated_entries
+    generated_week_starts = {
+        entry['weekStart'] for entry in generated_entries if entry.get('weekStart')
+    }
+    entries = [
+        entry for entry in legacy_entries
+        if entry.get('weekStart') not in generated_week_starts
+    ] + generated_entries
     payload = json.dumps(entries, indent=2, ensure_ascii=False) + '\n'
 
     Path(output_path).write_text(payload, encoding='utf-8')

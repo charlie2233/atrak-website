@@ -889,6 +889,7 @@ You can honestly demo this to a coach and they'd actually use it.
 ---
 
 ## Week of Jul 26 – Aug 1
+<!-- week-start: 2026-07-26 -->
 
 ### "Production rollout evidence, shared account limits, and archive stability"
 
