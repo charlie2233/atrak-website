@@ -1308,39 +1308,41 @@
     "generatedAt": "2026-08-02T08:00:00.000Z",
     "source": "github-weekly-automation",
     "dateRange": "Jul 26 – Aug 1",
-    "title": "Ygf Bowl To Build and Atrak Website moved the week forward.",
+    "title": "Production rollout evidence, shared account limits, and archive stability",
     "highlights": [
-      "Ygf Bowl To Build led public activity with 52 commits across 3 pushes.",
-      "5 public repositories were active across 68 GitHub events.",
-      "1 release joined the public download feed."
+      "YGF Bowl to Build led public activity with 52 verified commits",
+      "Atrak Website contributed 34 commits, including weekly archive date and year-rollover fixes",
+      "Backchannel Agent Support added 22 commits focused on packaged runtime and CI integrity"
     ],
     "shipped": [
-      "record production rollout evidence",
-      "keep Chinese hero title together on phones",
-      "merge OAuth wallets and enforce shared provider cap",
-      "cover weekly archive year rollover"
+      "YGF production rollout evidence and mobile Chinese-title refinement",
+      "Shared OAuth wallet merging with the provider-wide account cap enforced",
+      "Atrak weekly archive stability across date boundaries and year rollover",
+      "Backchannel container runtime, build-context, and static-artifact hardening"
     ],
     "engineering": [
-      "67 pushes and 0 pull request updates were condensed into this edition.",
-      "Active stacks included TypeScript, HTML, Python.",
-      "The snapshot is stored permanently so the edition remains available after GitHub events expire."
+      "67 pushes across five active public repositories were condensed into one durable edition",
+      "GitHub API commit enrichment verified 109 commits across TypeScript, HTML, and Python stacks",
+      "LifePage's launch/readiness download remained available in the refreshed release feed"
     ],
     "fixes": [
-      "keep Chinese hero title together on phones",
-      "stabilize weekly archive dates",
-      "clarify OAuth conflicts and key refresh",
-      "repair production agent settlement"
+      "Kept the Chinese hero title together on phone layouts",
+      "Stabilized weekly archive dates and year rollover",
+      "Repaired production agent settlement and clarified OAuth conflict recovery"
     ],
     "metrics": [
       "Commits: 109",
       "Active repos: 5",
-      "Pull requests: 0",
+      "PR updates: 0",
       "Issues: 0",
-      "Releases: 1"
+      "Pushes: 67",
+      "Releases/downloads: 1",
+      "GitHub events: 68"
     ],
     "next": [
-      "Continue the Ygf Bowl To Build build and publish the next visible milestone.",
-      "Review the next automated edition after Sunday refresh."
+      "Continue verifying YGF production behavior against the shared account cap",
+      "Keep the weekly archive synchronized with completed Sunday → Saturday editions",
+      "Publish canonical GitHub Releases for the next downloadable milestone"
     ],
     "stats": {
       "commits": 109,

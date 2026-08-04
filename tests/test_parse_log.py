@@ -123,7 +123,7 @@ class RegenerateWeeklyLogTests(unittest.TestCase):
             )
             self.assertEqual(output[-3:], [july_fifth, july_twelfth, july_nineteenth])
 
-    def test_generated_entry_replaces_matching_annotated_text_week(self):
+    def test_curated_text_replaces_presentation_fields_and_keeps_generated_evidence(self):
         with tempfile.TemporaryDirectory() as temporary_directory:
             root = Path(temporary_directory)
             log_path, history_path, compatibility_path = weekly_log_paths(root)
@@ -144,6 +144,8 @@ class RegenerateWeeklyLogTests(unittest.TestCase):
                 encoding="utf-8"
             )
             canonical = generated_entry("2026-07-26", "Canonical API snapshot")
+            canonical["stats"] = {"commits": 109}
+            canonical["repositories"] = [{"fullName": "charlie2233/example"}]
             history_path.write_text(json.dumps([canonical]), encoding="utf-8")
             compatibility_path.write_text(json.dumps([canonical]), encoding="utf-8")
 
@@ -155,10 +157,17 @@ class RegenerateWeeklyLogTests(unittest.TestCase):
                 entry for entry in entries
                 if entry.get("weekStart") == "2026-07-26"
             ]
-            self.assertEqual(matching_entries, [canonical])
-            self.assertNotIn(
-                "Manually authored edition",
-                history_path.read_text(encoding="utf-8")
+            self.assertEqual(len(matching_entries), 1)
+            merged = matching_entries[0]
+            self.assertEqual(merged["title"], "Manually authored edition")
+            self.assertEqual(
+                merged["highlights"],
+                ["This presentation copy must not duplicate the canonical snapshot"]
+            )
+            self.assertEqual(merged["source"], "github-weekly-automation")
+            self.assertEqual(merged["stats"], {"commits": 109})
+            self.assertEqual(
+                merged["repositories"], [{"fullName": "charlie2233/example"}]
             )
 
     def test_preserves_valid_sibling_when_history_alias_is_malformed(self):

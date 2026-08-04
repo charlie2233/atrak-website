@@ -173,13 +173,31 @@ def regenerate_weekly_log(log_path, output_path, compatibility_path):
     """Rebuild legacy entries and retain generated weekly editions."""
     legacy_entries = parse_weekly_log(log_path)
     generated_entries = load_generated_entries((output_path, compatibility_path))
+    annotated_legacy_by_week_start = {
+        entry['weekStart']: entry
+        for entry in legacy_entries
+        if entry.get('weekStart')
+    }
+    merged_generated_entries = []
+    for generated_entry in generated_entries:
+        curated_entry = annotated_legacy_by_week_start.get(
+            generated_entry.get('weekStart')
+        )
+        merged_generated_entries.append(
+            {**generated_entry, **curated_entry}
+            if curated_entry is not None
+            else generated_entry
+        )
+
     generated_week_starts = {
-        entry['weekStart'] for entry in generated_entries if entry.get('weekStart')
+        entry['weekStart']
+        for entry in merged_generated_entries
+        if entry.get('weekStart')
     }
     entries = [
         entry for entry in legacy_entries
         if entry.get('weekStart') not in generated_week_starts
-    ] + generated_entries
+    ] + merged_generated_entries
     payload = json.dumps(entries, indent=2, ensure_ascii=False) + '\n'
 
     Path(output_path).write_text(payload, encoding='utf-8')
