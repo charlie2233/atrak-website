@@ -24,6 +24,11 @@
       "distinct_size": 28,
       "commits": [
         {
+          "sha": "577f6ebd46342fd1efe7e360f5b217159cc42756",
+          "message": "chore: update GitHub data [skip ci]",
+          "url": "https://github.com/charlie2233/atrak-website/commit/577f6ebd46342fd1efe7e360f5b217159cc42756"
+        },
+        {
           "sha": "dae99860be268fcfaacec37a11e46f2494bd9b37",
           "message": "chore: update GitHub data [skip ci]",
           "url": "https://github.com/charlie2233/atrak-website/commit/dae99860be268fcfaacec37a11e46f2494bd9b37"
@@ -117,11 +122,6 @@
           "sha": "302a14bedf51fdca84d060a457faa2629884866a",
           "message": "chore: update GitHub data [skip ci]",
           "url": "https://github.com/charlie2233/atrak-website/commit/302a14bedf51fdca84d060a457faa2629884866a"
-        },
-        {
-          "sha": "8a1fb92dc4e2252dbf848e3c86cae16683a9b890",
-          "message": "chore: update GitHub data [skip ci]",
-          "url": "https://github.com/charlie2233/atrak-website/commit/8a1fb92dc4e2252dbf848e3c86cae16683a9b890"
         }
       ]
     },
@@ -150,7 +150,7 @@
       "ref": "refs/heads/codex/ygf-bowl-to-build-beta",
       "head": "30788d139c4d2bfca009b305bf3e82beed4c338b",
       "before": "365a08fbdb6150283a897107fa4686e59ec86f01",
-      "distinct_size": 30,
+      "distinct_size": 17,
       "commits": [
         {
           "sha": "30788d139c4d2bfca009b305bf3e82beed4c338b",
@@ -236,21 +236,6 @@
           "sha": "6c6be6ed244ebbd428519d78709fe7646929794f",
           "message": "fix: repair production admin batch creation",
           "url": "https://github.com/charlie2233/ygf-bowl-to-build/commit/6c6be6ed244ebbd428519d78709fe7646929794f"
-        },
-        {
-          "sha": "9968eea2edc1e6a9d4cb22d11d48ff8eb3864097",
-          "message": "docs: record cinematic hero release proof",
-          "url": "https://github.com/charlie2233/ygf-bowl-to-build/commit/9968eea2edc1e6a9d4cb22d11d48ff8eb3864097"
-        },
-        {
-          "sha": "a782560380579378e087f8d1b5f200e2c2d18909",
-          "message": "feat: add cinematic homepage video",
-          "url": "https://github.com/charlie2233/ygf-bowl-to-build/commit/a782560380579378e087f8d1b5f200e2c2d18909"
-        },
-        {
-          "sha": "e1e4b23dcba318cd31aed0dec7d5bf99ea02e91a",
-          "message": "feat: add production safety controls and maintenance",
-          "url": "https://github.com/charlie2233/ygf-bowl-to-build/commit/e1e4b23dcba318cd31aed0dec7d5bf99ea02e91a"
         }
       ]
     },
