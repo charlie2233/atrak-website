@@ -1,6 +1,6 @@
 [
   {
-    "id": "16858538112",
+    "id": "16886114200",
     "type": "PushEvent",
     "actor": {
       "id": 117957000,
@@ -17,12 +17,17 @@
     },
     "payload": {
       "repository_id": 1322073520,
-      "push_id": 39172585865,
+      "push_id": 39200363383,
       "ref": "refs/heads/main",
-      "head": "3e83a9d5cdd757f86b7d9ebbee0b6d6576059389",
-      "before": "063ef1db33b14de5397976e0f506fb14ae6bdcd4",
-      "distinct_size": 50,
+      "head": "533eae42a8ca353598b1e35ae90aa1ef46a68700",
+      "before": "3e83a9d5cdd757f86b7d9ebbee0b6d6576059389",
+      "distinct_size": 51,
       "commits": [
+        {
+          "sha": "533eae42a8ca353598b1e35ae90aa1ef46a68700",
+          "message": "feat: add game-aware AI search",
+          "url": "https://github.com/charlie2233/gpt-game-arena/commit/533eae42a8ca353598b1e35ae90aa1ef46a68700"
+        },
         {
           "sha": "3e83a9d5cdd757f86b7d9ebbee0b6d6576059389",
           "message": "feat: add authoritative end game flow",
@@ -117,13 +122,34 @@
           "sha": "32f76ae7fee1caaeb6c250e5ffbce31caf8cd0b2",
           "message": "fix: tighten reversi snapshots",
           "url": "https://github.com/charlie2233/gpt-game-arena/commit/32f76ae7fee1caaeb6c250e5ffbce31caf8cd0b2"
-        },
-        {
-          "sha": "32fba693f24cb144d6a1b8cecc6a8cbe85c1ac4c",
-          "message": "test: cover reversi edge cases",
-          "url": "https://github.com/charlie2233/gpt-game-arena/commit/32fba693f24cb144d6a1b8cecc6a8cbe85c1ac4c"
         }
       ]
+    },
+    "public": true,
+    "created_at": "2026-08-06T06:12:52Z"
+  },
+  {
+    "id": "16858538112",
+    "type": "PushEvent",
+    "actor": {
+      "id": 117957000,
+      "login": "charlie2233",
+      "display_login": "charlie2233",
+      "gravatar_id": "",
+      "url": "https://api.github.com/users/charlie2233",
+      "avatar_url": "https://avatars.githubusercontent.com/u/117957000?"
+    },
+    "repo": {
+      "id": 1322073520,
+      "name": "charlie2233/gpt-game-arena",
+      "url": "https://api.github.com/repos/charlie2233/gpt-game-arena"
+    },
+    "payload": {
+      "repository_id": 1322073520,
+      "push_id": 39172585865,
+      "ref": "refs/heads/main",
+      "head": "3e83a9d5cdd757f86b7d9ebbee0b6d6576059389",
+      "before": "063ef1db33b14de5397976e0f506fb14ae6bdcd4"
     },
     "public": true,
     "created_at": "2026-08-05T23:14:34Z"
@@ -150,8 +176,18 @@
       "ref": "refs/heads/main",
       "head": "229aa179a16dfae66223c71b8fb87c005284385c",
       "before": "8ee1fcb6c897b83862f7f29145d555643d813335",
-      "distinct_size": 28,
+      "distinct_size": 29,
       "commits": [
+        {
+          "sha": "4ec1a290fcab969d8555ecc57f13dfa59d56f905",
+          "message": "fix: refresh weekly data and archive editor dates",
+          "url": "https://github.com/charlie2233/atrak-website/commit/4ec1a290fcab969d8555ecc57f13dfa59d56f905"
+        },
+        {
+          "sha": "2e2d1a7d63bd4313a223cd012c33331339e79817",
+          "message": "chore: update GitHub data [skip ci]",
+          "url": "https://github.com/charlie2233/atrak-website/commit/2e2d1a7d63bd4313a223cd012c33331339e79817"
+        },
         {
           "sha": "d0e3fee04c05049ae278e87edbd97d9bd205f8e1",
           "message": "chore: update GitHub data [skip ci]",
@@ -241,16 +277,6 @@
           "sha": "e541443f3b50671b53a60963fcddb66f15bc267c",
           "message": "chore: update GitHub data [skip ci]",
           "url": "https://github.com/charlie2233/atrak-website/commit/e541443f3b50671b53a60963fcddb66f15bc267c"
-        },
-        {
-          "sha": "df57faa282fba1fa499338d13036e593a87221e9",
-          "message": "fix: stabilize weekly archive dates",
-          "url": "https://github.com/charlie2233/atrak-website/commit/df57faa282fba1fa499338d13036e593a87221e9"
-        },
-        {
-          "sha": "a535c3788e971b8ca8d3c067de7cf56e97afb01c",
-          "message": "chore: update GitHub data [skip ci]",
-          "url": "https://github.com/charlie2233/atrak-website/commit/a535c3788e971b8ca8d3c067de7cf56e97afb01c"
         }
       ]
     },
@@ -279,7 +305,7 @@
       "ref": "refs/heads/codex/ygf-bowl-to-build-beta",
       "head": "30788d139c4d2bfca009b305bf3e82beed4c338b",
       "before": "365a08fbdb6150283a897107fa4686e59ec86f01",
-      "distinct_size": 16,
+      "distinct_size": 13,
       "commits": [
         {
           "sha": "30788d139c4d2bfca009b305bf3e82beed4c338b",
@@ -345,21 +371,6 @@
           "sha": "73180ef82d9b9e9e7e29e122bee9c8d100c9ff61",
           "message": "docs: record production Turnstile rollout",
           "url": "https://github.com/charlie2233/ygf-bowl-to-build/commit/73180ef82d9b9e9e7e29e122bee9c8d100c9ff61"
-        },
-        {
-          "sha": "33e916bd7561b6662a53f4827d7f0412ecd6c0cb",
-          "message": "feat: harden redemption admission",
-          "url": "https://github.com/charlie2233/ygf-bowl-to-build/commit/33e916bd7561b6662a53f4827d7f0412ecd6c0cb"
-        },
-        {
-          "sha": "5a11fff8eeef495820f90dd5fdf17da3674ae4ce",
-          "message": "fix: gate OAuth and stabilize locale switching",
-          "url": "https://github.com/charlie2233/ygf-bowl-to-build/commit/5a11fff8eeef495820f90dd5fdf17da3674ae4ce"
-        },
-        {
-          "sha": "8ce79c410c1fd116fe205577fda4e31ca5efd0d4",
-          "message": "feat: secure redemption retries and refresh campaign hero",
-          "url": "https://github.com/charlie2233/ygf-bowl-to-build/commit/8ce79c410c1fd116fe205577fda4e31ca5efd0d4"
         }
       ]
     },
@@ -6044,33 +6055,6 @@
     },
     "public": true,
     "created_at": "2026-07-20T00:52:08Z"
-  },
-  {
-    "id": "15330334009",
-    "type": "CreateEvent",
-    "actor": {
-      "id": 117957000,
-      "login": "charlie2233",
-      "display_login": "charlie2233",
-      "gravatar_id": "",
-      "url": "https://api.github.com/users/charlie2233",
-      "avatar_url": "https://avatars.githubusercontent.com/u/117957000?"
-    },
-    "repo": {
-      "id": 1166891851,
-      "name": "charlie2233/rork-hoopshighlights-ai_Final",
-      "url": "https://api.github.com/repos/charlie2233/rork-hoopshighlights-ai_Final"
-    },
-    "payload": {
-      "ref": "codex/selected-team-accuracy-proof-20260719",
-      "ref_type": "branch",
-      "full_ref": "refs/heads/codex/selected-team-accuracy-proof-20260719",
-      "master_branch": "main",
-      "description": "Created by Rork",
-      "pusher_type": "user"
-    },
-    "public": true,
-    "created_at": "2026-07-20T00:51:09Z"
   },
   {
     "id": "11998205443",
