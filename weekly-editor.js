@@ -290,10 +290,15 @@
         };
         const firstLegacy = entries.find((entry) => !entry?.weekStart && firstMonthDay(entry?.dateRange));
         const first = firstLegacy ? firstMonthDay(firstLegacy.dateRange) : null;
-        let year = new Date().getFullYear();
+        const historyAnchor = entries
+            .map((entry) => dateFromKey(entry?.weekStart))
+            .filter(Boolean)
+            .sort((firstDate, secondDate) => firstDate - secondDate)[0] || null;
+        let year = historyAnchor ? historyAnchor.getFullYear() : new Date().getFullYear();
         if (first) {
             const candidate = new Date(year, first.month, first.day);
-            if (candidate.getTime() > Date.now() + (30 * 24 * 60 * 60 * 1000)) year -= 1;
+            const comparisonDate = historyAnchor || new Date(Date.now() + (30 * 24 * 60 * 60 * 1000));
+            if (candidate.getTime() > comparisonDate.getTime()) year -= 1;
         }
         let previousMonth = first ? first.month : -1;
 
