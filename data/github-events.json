@@ -1,6 +1,111 @@
 [
   {
-    "id": "17034757063",
+    "id": "17090503727",
+    "type": "PushEvent",
+    "actor": {
+      "id": 117957000,
+      "login": "charlie2233",
+      "display_login": "charlie2233",
+      "gravatar_id": "",
+      "url": "https://api.github.com/users/charlie2233",
+      "avatar_url": "https://avatars.githubusercontent.com/u/117957000?"
+    },
+    "repo": {
+      "id": 1313443669,
+      "name": "charlie2233/ygf-bowl-to-build",
+      "url": "https://api.github.com/repos/charlie2233/ygf-bowl-to-build"
+    },
+    "payload": {
+      "repository_id": 1313443669,
+      "push_id": 39407803771,
+      "ref": "refs/heads/codex/ygf-bowl-to-build-beta",
+      "head": "30a593b297db27f6afb840567763c24bb0fc79d3",
+      "before": "1afc82a13a95b72f37e29e1d389456403f70eb12",
+      "distinct_size": 10,
+      "commits": [
+        {
+          "sha": "30a593b297db27f6afb840567763c24bb0fc79d3",
+          "message": "feat: add localized YGF review form",
+          "url": "https://github.com/charlie2233/ygf-bowl-to-build/commit/30a593b297db27f6afb840567763c24bb0fc79d3"
+        },
+        {
+          "sha": "1afc82a13a95b72f37e29e1d389456403f70eb12",
+          "message": "docs: record safe 500-code production refresh",
+          "url": "https://github.com/charlie2233/ygf-bowl-to-build/commit/1afc82a13a95b72f37e29e1d389456403f70eb12"
+        },
+        {
+          "sha": "30788d139c4d2bfca009b305bf3e82beed4c338b",
+          "message": "fix: patch Next PostCSS dependency",
+          "url": "https://github.com/charlie2233/ygf-bowl-to-build/commit/30788d139c4d2bfca009b305bf3e82beed4c338b"
+        },
+        {
+          "sha": "710636ba30de7fb0e8df09bbf6dd888a38a00ad6",
+          "message": "test: allow demo setup cold compiles",
+          "url": "https://github.com/charlie2233/ygf-bowl-to-build/commit/710636ba30de7fb0e8df09bbf6dd888a38a00ad6"
+        },
+        {
+          "sha": "365a08fbdb6150283a897107fa4686e59ec86f01",
+          "message": "fix: polish mobile three-step journey",
+          "url": "https://github.com/charlie2233/ygf-bowl-to-build/commit/365a08fbdb6150283a897107fa4686e59ec86f01"
+        },
+        {
+          "sha": "96d25fac5fd0a5aaa187b6b0a9f226aeafde79c4",
+          "message": "docs: record production rollout evidence",
+          "url": "https://github.com/charlie2233/ygf-bowl-to-build/commit/96d25fac5fd0a5aaa187b6b0a9f226aeafde79c4"
+        },
+        {
+          "sha": "318756d36ef04a37c2dc10e9420275c7544717f3",
+          "message": "fix: keep Chinese hero title together on phones",
+          "url": "https://github.com/charlie2233/ygf-bowl-to-build/commit/318756d36ef04a37c2dc10e9420275c7544717f3"
+        },
+        {
+          "sha": "14cd67be613ed62879679a164457a572f2c9f9fa",
+          "message": "feat: merge OAuth wallets and enforce shared provider cap",
+          "url": "https://github.com/charlie2233/ygf-bowl-to-build/commit/14cd67be613ed62879679a164457a572f2c9f9fa"
+        },
+        {
+          "sha": "757ad60360d1f8556e7df0590438e289620606b5",
+          "message": "feat: add GPT-5.6 agent model selector",
+          "url": "https://github.com/charlie2233/ygf-bowl-to-build/commit/757ad60360d1f8556e7df0590438e289620606b5"
+        },
+        {
+          "sha": "551c31e69ad1232d691ac7c10c20ba9238e9cc2c",
+          "message": "fix: clarify OAuth conflicts and key refresh",
+          "url": "https://github.com/charlie2233/ygf-bowl-to-build/commit/551c31e69ad1232d691ac7c10c20ba9238e9cc2c"
+        }
+      ]
+    },
+    "public": true,
+    "created_at": "2026-08-07T22:52:10Z"
+  },
+  {
+    "id": "17089789859",
+    "type": "PushEvent",
+    "actor": {
+      "id": 117957000,
+      "login": "charlie2233",
+      "display_login": "charlie2233",
+      "gravatar_id": "",
+      "url": "https://api.github.com/users/charlie2233",
+      "avatar_url": "https://avatars.githubusercontent.com/u/117957000?"
+    },
+    "repo": {
+      "id": 1313443669,
+      "name": "charlie2233/ygf-bowl-to-build",
+      "url": "https://api.github.com/repos/charlie2233/ygf-bowl-to-build"
+    },
+    "payload": {
+      "repository_id": 1313443669,
+      "push_id": 39407152331,
+      "ref": "refs/heads/codex/ygf-bowl-to-build-beta",
+      "head": "1afc82a13a95b72f37e29e1d389456403f70eb12",
+      "before": "30788d139c4d2bfca009b305bf3e82beed4c338b"
+    },
+    "public": true,
+    "created_at": "2026-08-07T22:35:55Z"
+  },
+  {
+    "id": "17062812306",
     "type": "PushEvent",
     "actor": {
       "id": 117957000,
@@ -17,12 +122,47 @@
     },
     "payload": {
       "repository_id": 1322073520,
-      "push_id": 39349470496,
+      "push_id": 39375966525,
       "ref": "refs/heads/main",
-      "head": "9d2733a8a66f7dab05932b64428ff0c02d7be983",
-      "before": "c7eb5ff622ce24524c153aacf71ef2533b2ca829",
-      "distinct_size": 75,
+      "head": "dfd0f82229c2e3e15a916196fc7c1a63f8ff0cf5",
+      "before": "d2b5affec5410548b904f3837b0af8bd7d089c11",
+      "distinct_size": 82,
       "commits": [
+        {
+          "sha": "1cb5c40aa3456d0852178cbbc92eed001083365f",
+          "message": "fix(release): close audit and privacy gaps",
+          "url": "https://github.com/charlie2233/turnplay-arena/commit/1cb5c40aa3456d0852178cbbc92eed001083365f"
+        },
+        {
+          "sha": "dfd0f82229c2e3e15a916196fc7c1a63f8ff0cf5",
+          "message": "feat(release): add restart acceptance proof",
+          "url": "https://github.com/charlie2233/turnplay-arena/commit/dfd0f82229c2e3e15a916196fc7c1a63f8ff0cf5"
+        },
+        {
+          "sha": "d2b5affec5410548b904f3837b0af8bd7d089c11",
+          "message": "test(release): add durable browser acceptance gate",
+          "url": "https://github.com/charlie2233/turnplay-arena/commit/d2b5affec5410548b904f3837b0af8bd7d089c11"
+        },
+        {
+          "sha": "f7cc5efdfa3043c5491c9dc9efb94df3934b79f9",
+          "message": "chore(release): publish widget resource v21",
+          "url": "https://github.com/charlie2233/turnplay-arena/commit/f7cc5efdfa3043c5491c9dc9efb94df3934b79f9"
+        },
+        {
+          "sha": "e68e2ee11ff9b467b4093c1c4fcdb30ae5d36902",
+          "message": "fix(web): align widget setter contract",
+          "url": "https://github.com/charlie2233/turnplay-arena/commit/e68e2ee11ff9b467b4093c1c4fcdb30ae5d36902"
+        },
+        {
+          "sha": "0318debd413d4e19c40a3410debe2ea3b01ea4b6",
+          "message": "fix(web): isolate lifecycle state updates",
+          "url": "https://github.com/charlie2233/turnplay-arena/commit/0318debd413d4e19c40a3410debe2ea3b01ea4b6"
+        },
+        {
+          "sha": "a6754c82ae3d0fb16f8b0d6df963bf49faaac279",
+          "message": "fix(web): restore games from authoritative pointers",
+          "url": "https://github.com/charlie2233/turnplay-arena/commit/a6754c82ae3d0fb16f8b0d6df963bf49faaac279"
+        },
         {
           "sha": "9d2733a8a66f7dab05932b64428ff0c02d7be983",
           "message": "Record side and retry release validation",
@@ -87,43 +227,86 @@
           "sha": "b0de8ca03d698f982bb040435a656ade32b8b505",
           "message": "Harden embedded GPT recovery",
           "url": "https://github.com/charlie2233/turnplay-arena/commit/b0de8ca03d698f982bb040435a656ade32b8b505"
-        },
-        {
-          "sha": "fe24e0add4ac5a8c14e07a486bb8ff32c219acd3",
-          "message": "Require exact pending end notifications",
-          "url": "https://github.com/charlie2233/turnplay-arena/commit/fe24e0add4ac5a8c14e07a486bb8ff32c219acd3"
-        },
-        {
-          "sha": "187a42223aaaf358f86a55caee93638deb13f285",
-          "message": "Guard pending embedded GPT receipts",
-          "url": "https://github.com/charlie2233/turnplay-arena/commit/187a42223aaaf358f86a55caee93638deb13f285"
-        },
-        {
-          "sha": "1552abcb0898faae64aa5e7896e902e75dac5427",
-          "message": "Use direct confirmed embedded GPT turns",
-          "url": "https://github.com/charlie2233/turnplay-arena/commit/1552abcb0898faae64aa5e7896e902e75dac5427"
-        },
-        {
-          "sha": "9f9aade087be1d8cfc6bb17432a3690ce28d9b6f",
-          "message": "docs: record public site verification",
-          "url": "https://github.com/charlie2233/turnplay-arena/commit/9f9aade087be1d8cfc6bb17432a3690ce28d9b6f"
-        },
-        {
-          "sha": "20090001c4cb51f158333ea00d58be23e5a8e536",
-          "message": "feat: prepare Turnplay Arena public beta",
-          "url": "https://github.com/charlie2233/turnplay-arena/commit/20090001c4cb51f158333ea00d58be23e5a8e536"
-        },
-        {
-          "sha": "1d539d65f102492581743d3d087b2d9e138fa037",
-          "message": "feat: harden resets and production submission",
-          "url": "https://github.com/charlie2233/turnplay-arena/commit/1d539d65f102492581743d3d087b2d9e138fa037"
-        },
-        {
-          "sha": "a1cc6f1b6a94eb210a6b415800b8cf6951518420",
-          "message": "fix: migrate legacy saved games safely",
-          "url": "https://github.com/charlie2233/turnplay-arena/commit/a1cc6f1b6a94eb210a6b415800b8cf6951518420"
         }
       ]
+    },
+    "public": true,
+    "created_at": "2026-08-07T14:33:30Z"
+  },
+  {
+    "id": "17062737965",
+    "type": "PushEvent",
+    "actor": {
+      "id": 117957000,
+      "login": "charlie2233",
+      "display_login": "charlie2233",
+      "gravatar_id": "",
+      "url": "https://api.github.com/users/charlie2233",
+      "avatar_url": "https://avatars.githubusercontent.com/u/117957000?"
+    },
+    "repo": {
+      "id": 1322073520,
+      "name": "charlie2233/turnplay-arena",
+      "url": "https://api.github.com/repos/charlie2233/turnplay-arena"
+    },
+    "payload": {
+      "repository_id": 1322073520,
+      "push_id": 39379343973,
+      "ref": "refs/heads/main",
+      "head": "1cb5c40aa3456d0852178cbbc92eed001083365f",
+      "before": "dfd0f82229c2e3e15a916196fc7c1a63f8ff0cf5"
+    },
+    "public": true,
+    "created_at": "2026-08-07T15:05:38Z"
+  },
+  {
+    "id": "17050026606",
+    "type": "PushEvent",
+    "actor": {
+      "id": 117957000,
+      "login": "charlie2233",
+      "display_login": "charlie2233",
+      "gravatar_id": "",
+      "url": "https://api.github.com/users/charlie2233",
+      "avatar_url": "https://avatars.githubusercontent.com/u/117957000?"
+    },
+    "repo": {
+      "id": 1322073520,
+      "name": "charlie2233/turnplay-arena",
+      "url": "https://api.github.com/repos/charlie2233/turnplay-arena"
+    },
+    "payload": {
+      "repository_id": 1322073520,
+      "push_id": 39365602533,
+      "ref": "refs/heads/main",
+      "head": "d2b5affec5410548b904f3837b0af8bd7d089c11",
+      "before": "9d2733a8a66f7dab05932b64428ff0c02d7be983"
+    },
+    "public": true,
+    "created_at": "2026-08-07T13:01:32Z"
+  },
+  {
+    "id": "17034757063",
+    "type": "PushEvent",
+    "actor": {
+      "id": 117957000,
+      "login": "charlie2233",
+      "display_login": "charlie2233",
+      "gravatar_id": "",
+      "url": "https://api.github.com/users/charlie2233",
+      "avatar_url": "https://avatars.githubusercontent.com/u/117957000?"
+    },
+    "repo": {
+      "id": 1322073520,
+      "name": "charlie2233/turnplay-arena",
+      "url": "https://api.github.com/repos/charlie2233/turnplay-arena"
+    },
+    "payload": {
+      "repository_id": 1322073520,
+      "push_id": 39349470496,
+      "ref": "refs/heads/main",
+      "head": "9d2733a8a66f7dab05932b64428ff0c02d7be983",
+      "before": "c7eb5ff622ce24524c153aacf71ef2533b2ca829"
     },
     "public": true,
     "created_at": "2026-08-07T10:26:38Z"
@@ -283,6 +466,11 @@
       "distinct_size": 27,
       "commits": [
         {
+          "sha": "082f1b14aa60f37658d8d3cf92b16de37c1465dd",
+          "message": "chore: update GitHub data [skip ci]",
+          "url": "https://github.com/charlie2233/atrak-website/commit/082f1b14aa60f37658d8d3cf92b16de37c1465dd"
+        },
+        {
           "sha": "b23bad8eaa5edbc718e284ba5ddaf597434bf14f",
           "message": "chore(data): refresh local weekly aggregate",
           "url": "https://github.com/charlie2233/atrak-website/commit/b23bad8eaa5edbc718e284ba5ddaf597434bf14f"
@@ -376,11 +564,6 @@
           "sha": "a07e18c65170d614f72d948cd42201952aa7f44d",
           "message": "chore: renew weekly log [skip ci]",
           "url": "https://github.com/charlie2233/atrak-website/commit/a07e18c65170d614f72d948cd42201952aa7f44d"
-        },
-        {
-          "sha": "957e7c38215797777c031d7a02f34d98de239a4a",
-          "message": "chore: update GitHub data [skip ci]",
-          "url": "https://github.com/charlie2233/atrak-website/commit/957e7c38215797777c031d7a02f34d98de239a4a"
         }
       ]
     },
@@ -668,55 +851,7 @@
       "push_id": 39012521010,
       "ref": "refs/heads/codex/ygf-bowl-to-build-beta",
       "head": "30788d139c4d2bfca009b305bf3e82beed4c338b",
-      "before": "365a08fbdb6150283a897107fa4686e59ec86f01",
-      "distinct_size": 9,
-      "commits": [
-        {
-          "sha": "30788d139c4d2bfca009b305bf3e82beed4c338b",
-          "message": "fix: patch Next PostCSS dependency",
-          "url": "https://github.com/charlie2233/ygf-bowl-to-build/commit/30788d139c4d2bfca009b305bf3e82beed4c338b"
-        },
-        {
-          "sha": "710636ba30de7fb0e8df09bbf6dd888a38a00ad6",
-          "message": "test: allow demo setup cold compiles",
-          "url": "https://github.com/charlie2233/ygf-bowl-to-build/commit/710636ba30de7fb0e8df09bbf6dd888a38a00ad6"
-        },
-        {
-          "sha": "365a08fbdb6150283a897107fa4686e59ec86f01",
-          "message": "fix: polish mobile three-step journey",
-          "url": "https://github.com/charlie2233/ygf-bowl-to-build/commit/365a08fbdb6150283a897107fa4686e59ec86f01"
-        },
-        {
-          "sha": "96d25fac5fd0a5aaa187b6b0a9f226aeafde79c4",
-          "message": "docs: record production rollout evidence",
-          "url": "https://github.com/charlie2233/ygf-bowl-to-build/commit/96d25fac5fd0a5aaa187b6b0a9f226aeafde79c4"
-        },
-        {
-          "sha": "318756d36ef04a37c2dc10e9420275c7544717f3",
-          "message": "fix: keep Chinese hero title together on phones",
-          "url": "https://github.com/charlie2233/ygf-bowl-to-build/commit/318756d36ef04a37c2dc10e9420275c7544717f3"
-        },
-        {
-          "sha": "14cd67be613ed62879679a164457a572f2c9f9fa",
-          "message": "feat: merge OAuth wallets and enforce shared provider cap",
-          "url": "https://github.com/charlie2233/ygf-bowl-to-build/commit/14cd67be613ed62879679a164457a572f2c9f9fa"
-        },
-        {
-          "sha": "757ad60360d1f8556e7df0590438e289620606b5",
-          "message": "feat: add GPT-5.6 agent model selector",
-          "url": "https://github.com/charlie2233/ygf-bowl-to-build/commit/757ad60360d1f8556e7df0590438e289620606b5"
-        },
-        {
-          "sha": "551c31e69ad1232d691ac7c10c20ba9238e9cc2c",
-          "message": "fix: clarify OAuth conflicts and key refresh",
-          "url": "https://github.com/charlie2233/ygf-bowl-to-build/commit/551c31e69ad1232d691ac7c10c20ba9238e9cc2c"
-        },
-        {
-          "sha": "cb29c8ba91e0c04dde7be979342edf4b776694f1",
-          "message": "feat: harden Apple OAuth operations",
-          "url": "https://github.com/charlie2233/ygf-bowl-to-build/commit/cb29c8ba91e0c04dde7be979342edf4b776694f1"
-        }
-      ]
+      "before": "365a08fbdb6150283a897107fa4686e59ec86f01"
     },
     "public": true,
     "created_at": "2026-08-04T14:39:00Z"
@@ -5616,32 +5751,6 @@
     "created_at": "2026-07-20T06:06:10Z"
   },
   {
-    "id": "15342308959",
-    "type": "PushEvent",
-    "actor": {
-      "id": 117957000,
-      "login": "charlie2233",
-      "display_login": "charlie2233",
-      "gravatar_id": "",
-      "url": "https://api.github.com/users/charlie2233",
-      "avatar_url": "https://avatars.githubusercontent.com/u/117957000?"
-    },
-    "repo": {
-      "id": 1306028280,
-      "name": "charlie2233/backchannel-agent-support",
-      "url": "https://api.github.com/repos/charlie2233/backchannel-agent-support"
-    },
-    "payload": {
-      "repository_id": 1306028280,
-      "push_id": 37633373964,
-      "ref": "refs/heads/codex/backchannel-v0.3-completion",
-      "head": "eb919badbf3d9c49ffba1374ad030d2f2c030e5a",
-      "before": "3b048f30733467fa71c4f295b73e4a105c190ed9"
-    },
-    "public": true,
-    "created_at": "2026-07-20T05:53:29Z"
-  },
-  {
     "id": "12004834762",
     "type": "PullRequestEvent",
     "actor": {
@@ -5686,32 +5795,6 @@
     },
     "public": true,
     "created_at": "2026-07-20T05:19:34Z"
-  },
-  {
-    "id": "15340828727",
-    "type": "PushEvent",
-    "actor": {
-      "id": 117957000,
-      "login": "charlie2233",
-      "display_login": "charlie2233",
-      "gravatar_id": "",
-      "url": "https://api.github.com/users/charlie2233",
-      "avatar_url": "https://avatars.githubusercontent.com/u/117957000?"
-    },
-    "repo": {
-      "id": 1166891851,
-      "name": "charlie2233/rork-hoopshighlights-ai_Final",
-      "url": "https://api.github.com/repos/charlie2233/rork-hoopshighlights-ai_Final"
-    },
-    "payload": {
-      "repository_id": 1166891851,
-      "push_id": 37631892738,
-      "ref": "refs/heads/main",
-      "head": "a8d35d38fff635b58f5c2fc93515ec5c8a1e5a34",
-      "before": "701624eb9fed343c43720d060a78e9fcada7df80"
-    },
-    "public": true,
-    "created_at": "2026-07-20T05:19:35Z"
   },
   {
     "id": "12004464796",
@@ -5760,59 +5843,6 @@
     "created_at": "2026-07-20T05:05:12Z"
   },
   {
-    "id": "15340076358",
-    "type": "CreateEvent",
-    "actor": {
-      "id": 117957000,
-      "login": "charlie2233",
-      "display_login": "charlie2233",
-      "gravatar_id": "",
-      "url": "https://api.github.com/users/charlie2233",
-      "avatar_url": "https://avatars.githubusercontent.com/u/117957000?"
-    },
-    "repo": {
-      "id": 1166891851,
-      "name": "charlie2233/rork-hoopshighlights-ai_Final",
-      "url": "https://api.github.com/repos/charlie2233/rork-hoopshighlights-ai_Final"
-    },
-    "payload": {
-      "ref": "codex/build56-testflight-proof-20260720",
-      "ref_type": "branch",
-      "full_ref": "refs/heads/codex/build56-testflight-proof-20260720",
-      "master_branch": "main",
-      "description": "Created by Rork",
-      "pusher_type": "user"
-    },
-    "public": true,
-    "created_at": "2026-07-20T05:02:10Z"
-  },
-  {
-    "id": "15339298728",
-    "type": "PushEvent",
-    "actor": {
-      "id": 117957000,
-      "login": "charlie2233",
-      "display_login": "charlie2233",
-      "gravatar_id": "",
-      "url": "https://api.github.com/users/charlie2233",
-      "avatar_url": "https://avatars.githubusercontent.com/u/117957000?"
-    },
-    "repo": {
-      "id": 1101568155,
-      "name": "charlie2233/rork-guide-pup--vision-assistant",
-      "url": "https://api.github.com/repos/charlie2233/rork-guide-pup--vision-assistant"
-    },
-    "payload": {
-      "repository_id": 1101568155,
-      "push_id": 37630361707,
-      "ref": "refs/heads/codex/guidepup-credentialed-launch",
-      "head": "a0a467e8d932b974d2291ca1bd4de1ee7625d0b5",
-      "before": "8387fb926d08ec74de20015a0df4b29183b52483"
-    },
-    "public": true,
-    "created_at": "2026-07-20T04:44:13Z"
-  },
-  {
     "id": "12003038531",
     "type": "PullRequestEvent",
     "actor": {
@@ -5857,32 +5887,6 @@
     },
     "public": true,
     "created_at": "2026-07-20T04:04:58Z"
-  },
-  {
-    "id": "15337634799",
-    "type": "PushEvent",
-    "actor": {
-      "id": 117957000,
-      "login": "charlie2233",
-      "display_login": "charlie2233",
-      "gravatar_id": "",
-      "url": "https://api.github.com/users/charlie2233",
-      "avatar_url": "https://avatars.githubusercontent.com/u/117957000?"
-    },
-    "repo": {
-      "id": 1166891851,
-      "name": "charlie2233/rork-hoopshighlights-ai_Final",
-      "url": "https://api.github.com/repos/charlie2233/rork-hoopshighlights-ai_Final"
-    },
-    "payload": {
-      "repository_id": 1166891851,
-      "push_id": 37628696524,
-      "ref": "refs/heads/main",
-      "head": "701624eb9fed343c43720d060a78e9fcada7df80",
-      "before": "b1a655eab95e67cb80d18bb3ba8c6be727910dcb"
-    },
-    "public": true,
-    "created_at": "2026-07-20T04:04:59Z"
   },
   {
     "id": "12002840751",
