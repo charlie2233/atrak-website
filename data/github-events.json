@@ -24,6 +24,11 @@
       "distinct_size": 25,
       "commits": [
         {
+          "sha": "9979383e37a1eb333899320532da25cc4060d008",
+          "message": "chore: update GitHub data [skip ci]",
+          "url": "https://github.com/charlie2233/atrak-website/commit/9979383e37a1eb333899320532da25cc4060d008"
+        },
+        {
           "sha": "1d7acbdd1dda61617c29d8f3c431cec5be839310",
           "message": "chore: renew weekly log [skip ci]",
           "url": "https://github.com/charlie2233/atrak-website/commit/1d7acbdd1dda61617c29d8f3c431cec5be839310"
@@ -117,11 +122,6 @@
           "sha": "a5d9cffcd9ad48e9d684deecaf90b2f31c0f4b75",
           "message": "chore: publish Jul 26 weekly edition",
           "url": "https://github.com/charlie2233/atrak-website/commit/a5d9cffcd9ad48e9d684deecaf90b2f31c0f4b75"
-        },
-        {
-          "sha": "8ee1fcb6c897b83862f7f29145d555643d813335",
-          "message": "chore: update GitHub data [skip ci]",
-          "url": "https://github.com/charlie2233/atrak-website/commit/8ee1fcb6c897b83862f7f29145d555643d813335"
         }
       ]
     },
@@ -5766,33 +5766,6 @@
     "created_at": "2026-07-20T07:39:52Z"
   },
   {
-    "id": "15348581805",
-    "type": "CreateEvent",
-    "actor": {
-      "id": 117957000,
-      "login": "charlie2233",
-      "display_login": "charlie2233",
-      "gravatar_id": "",
-      "url": "https://api.github.com/users/charlie2233",
-      "avatar_url": "https://avatars.githubusercontent.com/u/117957000?"
-    },
-    "repo": {
-      "id": 1166891851,
-      "name": "charlie2233/rork-hoopshighlights-ai_Final",
-      "url": "https://api.github.com/repos/charlie2233/rork-hoopshighlights-ai_Final"
-    },
-    "payload": {
-      "ref": "codex/build57-upload-proof-20260720",
-      "ref_type": "branch",
-      "full_ref": "refs/heads/codex/build57-upload-proof-20260720",
-      "master_branch": "main",
-      "description": "Created by Rork",
-      "pusher_type": "user"
-    },
-    "public": true,
-    "created_at": "2026-07-20T07:39:03Z"
-  },
-  {
     "id": "12007521835",
     "type": "PullRequestEvent",
     "actor": {
@@ -10345,5 +10318,51 @@
     },
     "public": true,
     "created_at": "2026-07-16T17:06:29Z"
+  },
+  {
+    "id": "11889162564",
+    "type": "PullRequestEvent",
+    "actor": {
+      "id": 117957000,
+      "login": "charlie2233",
+      "display_login": "charlie2233",
+      "gravatar_id": "",
+      "url": "https://api.github.com/users/charlie2233",
+      "avatar_url": "https://avatars.githubusercontent.com/u/117957000?"
+    },
+    "repo": {
+      "id": 1140388078,
+      "name": "charlie2233/atrak-website",
+      "url": "https://api.github.com/repos/charlie2233/atrak-website"
+    },
+    "payload": {
+      "action": "opened",
+      "number": 13,
+      "pull_request": {
+        "url": "https://api.github.com/repos/charlie2233/atrak-website/pulls/13",
+        "id": 4070559066,
+        "number": 13,
+        "head": {
+          "ref": "agent/accesscourt-phone-readiness",
+          "sha": "23fcc3966ba3fa93e51f91291ef962afe8fd4434",
+          "repo": {
+            "id": 1140388078,
+            "url": "https://api.github.com/repos/charlie2233/atrak-website",
+            "name": "atrak-website"
+          }
+        },
+        "base": {
+          "ref": "main",
+          "sha": "541304dffb9645918be844c0c57b057d1f9f74cd",
+          "repo": {
+            "id": 1140388078,
+            "url": "https://api.github.com/repos/charlie2233/atrak-website",
+            "name": "atrak-website"
+          }
+        }
+      }
+    },
+    "public": true,
+    "created_at": "2026-07-16T17:06:03Z"
   }
 ]
