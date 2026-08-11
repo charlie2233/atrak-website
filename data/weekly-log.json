@@ -1552,40 +1552,42 @@
     "weekEnd": "2026-08-08",
     "generatedAt": "2026-08-09T09:26:39.405Z",
     "source": "github-weekly-automation",
-    "dateRange": "Aug 2 – 8",
-    "title": "Turnplay Arena and Atrak Website moved the week forward.",
+    "dateRange": "Aug 2 – Aug 8",
+    "title": "Game-platform hardening, secure redemption cards, and durable weekly proof",
     "highlights": [
-      "Turnplay Arena led public activity with 85 commits across 26 pushes.",
-      "4 public repositories were active across 44 GitHub events.",
-      "No formal GitHub release was published during this edition."
+      "Turnplay Arena led public activity with 85 verified commits across 26 pushes",
+      "Atrak Website contributed 24 commits, including weekly-data and public-site maintenance",
+      "YGF Bowl to Build added 11 commits for bilingual redemption cards and a secure Avery-label workflow"
     ],
     "shipped": [
-      "record stable production facts",
-      "harden Render client identity",
-      "trust Render proxy hop",
-      "harden redemption card print layout"
+      "Stable production facts, durable browser acceptance gates, and restart proof for Turnplay Arena",
+      "Render client-identity and trusted-proxy hardening for the game service",
+      "Bilingual YGF redemption-card design using approved bowl imagery and localized review flow",
+      "Private-code-safe Avery 5260 label production workflow and print-layout hardening"
     ],
     "engineering": [
-      "43 pushes and 0 pull request updates were condensed into this edition.",
-      "Active stacks included TypeScript, HTML.",
-      "The snapshot is stored permanently so the edition remains available after GitHub events expire."
+      "GitHub API commit enrichment verified 120 commits across four active repositories",
+      "43 pushes and 44 captured GitHub events were condensed into one permanent edition",
+      "TypeScript and HTML projects dominated the completed Sunday → Saturday window"
     ],
     "fixes": [
-      "harden Render client identity",
-      "trust Render proxy hop",
-      "harden redemption card print layout",
-      "close audit and privacy gaps"
+      "Closed Turnplay audit and privacy gaps and restored games from authoritative pointers",
+      "Aligned widget state contracts and isolated lifecycle updates",
+      "Hardened redemption-card print layout before physical production"
     ],
     "metrics": [
       "Commits: 120",
       "Active repos: 4",
-      "Pull requests: 0",
+      "PR updates: 0",
       "Issues: 0",
-      "Releases: 0"
+      "Pushes: 43",
+      "Releases: 0",
+      "GitHub events: 44"
     ],
     "next": [
-      "Continue the Turnplay Arena build and publish the next visible milestone.",
-      "Review the next automated edition after Sunday refresh."
+      "Keep Turnplay production proof tied to authoritative game receipts",
+      "Complete YGF print QA before any vendor order or payment",
+      "Publish the next completed Sunday → Saturday edition after GitHub refresh"
     ],
     "stats": {
       "commits": 120,

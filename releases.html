@@ -88,6 +88,7 @@
 	                        <h2 class="release-toc-title">Jump to a month</h2>
 	                    </div>
 	                    <div class="release-toc-links">
+	                        <a href="#aug-2026">August 2026</a>
 	                        <a href="#jul-2026">July 2026</a>
 	                        <a href="#apr-2026">April 2026</a>
 	                        <a href="#jan-2026">January 2026</a>
@@ -95,6 +96,64 @@
 	                        <a href="#nov-2025">November 2025</a>
 	                    </div>
 	                </nav>
+
+	                <!-- August 2026 -->
+	                <article class="release-post glass-card" id="aug-2026">
+	                    <header class="release-header">
+	                        <time class="release-date">August 2026</time>
+	                        <span class="release-version">v2.5</span>
+	                    </header>
+
+	                    <div class="release-body">
+	                        <section class="release-section shipped">
+	                            <h3>🚀 What Shipped</h3>
+	                            <ul class="release-list">
+	                                <li><strong>Turnplay Production Hardening</strong> — Recorded stable production facts, added durable browser and restart acceptance gates, and tightened authoritative game-state restoration across 85 verified commits.</li>
+	                                <li><strong>Render Security Boundaries</strong> — Hardened client identity, trusted-proxy handling, audit coverage, and privacy safeguards for the game service.</li>
+	                                <li><strong>YGF Redemption Cards</strong> — Shipped bilingual card copy, approved bowl imagery, localized review flow, and print-layout refinements.</li>
+	                                <li><strong>Secure Label Production</strong> — Added a private-code-safe Avery 5260 workflow so public print proofs remain free of live redemption codes.</li>
+	                                <li><strong>Weekly Evidence Archive</strong> — Published the completed Aug 2–8 edition from GitHub API-enriched commit history.</li>
+	                            </ul>
+	                        </section>
+
+	                        <section class="release-section broke">
+	                            <h3>💥 What Broke</h3>
+	                            <ul class="release-list">
+	                                <li><strong>Game-State Reliability</strong> — Lifecycle and widget-setter paths could drift from authoritative pointers; the August work isolated updates and restored state from durable references.</li>
+	                                <li><strong>Proxy Identity Assumptions</strong> — Render traffic needed an explicit trusted-hop boundary before client identity could be relied on.</li>
+	                                <li><strong>Print Safety</strong> — Redemption-card production needed stricter layout checks and separation between public proofs and private codes.</li>
+	                            </ul>
+	                        </section>
+
+	                        <section class="release-section next">
+	                            <h3>🔮 What's Next</h3>
+	                            <ul class="release-list">
+	                                <li>Keep Turnplay production claims tied to authoritative receipts and acceptance evidence.</li>
+	                                <li>Complete YGF print QA before any vendor order or payment.</li>
+	                                <li>Continue publishing completed Sunday–Saturday editions from verified GitHub data.</li>
+	                            </ul>
+	                        </section>
+
+	                        <section class="release-section stats">
+	                            <h3>📊 By the Numbers</h3>
+	                            <div class="release-stats">
+	                                <div class="stat-item"><span class="stat-value">120</span><span class="stat-label">Commits (Aug 2–8)</span></div>
+	                                <div class="stat-item"><span class="stat-value">4</span><span class="stat-label">Active Repos</span></div>
+	                                <div class="stat-item"><span class="stat-value">43</span><span class="stat-label">Pushes</span></div>
+	                                <div class="stat-item"><span class="stat-value">44</span><span class="stat-label">GitHub Events</span></div>
+	                            </div>
+	                        </section>
+	                    </div>
+
+	                    <footer class="release-footer">
+	                        <div class="release-projects">
+	                            <strong>Related:</strong>
+	                            <a href="https://github.com/charlie2233/turnplay-arena">Turnplay Arena</a>
+	                            <a href="https://github.com/charlie2233/ygf-bowl-to-build">YGF Bowl to Build</a>
+	                            <a href="index.html#updates">Weekly Briefing</a>
+	                        </div>
+	                    </footer>
+	                </article>
 	
 	                <!-- July 2026 -->
 	                <article class="release-post glass-card" id="jul-2026">

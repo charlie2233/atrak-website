@@ -936,10 +936,62 @@ You can honestly demo this to a coach and they'd actually use it.
 
 ---
 
+## Part 8 — August 2026 (GitHub-backed Updates)
+
+---
+
+## Week of Aug 2 – Aug 8
+<!-- week-start: 2026-08-02 -->
+
+### "Game-platform hardening, secure redemption cards, and durable weekly proof"
+
+**Highlights**
+
+* Turnplay Arena led public activity with 85 verified commits across 26 pushes
+* Atrak Website contributed 24 commits, including weekly-data and public-site maintenance
+* YGF Bowl to Build added 11 commits for bilingual redemption cards and a secure Avery-label workflow
+
+**Shipped**
+
+* Stable production facts, durable browser acceptance gates, and restart proof for Turnplay Arena
+* Render client-identity and trusted-proxy hardening for the game service
+* Bilingual YGF redemption-card design using approved bowl imagery and localized review flow
+* Private-code-safe Avery 5260 label production workflow and print-layout hardening
+
+**Engineering**
+
+* GitHub API commit enrichment verified 120 commits across four active repositories
+* 43 pushes and 44 captured GitHub events were condensed into one permanent edition
+* TypeScript and HTML projects dominated the completed Sunday → Saturday window
+
+**Fixes**
+
+* Closed Turnplay audit and privacy gaps and restored games from authoritative pointers
+* Aligned widget state contracts and isolated lifecycle updates
+* Hardened redemption-card print layout before physical production
+
+**Metrics**
+
+* Commits: 120
+* Active repos: 4
+* PR updates: 0
+* Issues: 0
+* Pushes: 43
+* Releases: 0
+* GitHub events: 44
+
+**Next**
+
+* Keep Turnplay production proof tied to authoritative game receipts
+* Complete YGF print QA before any vendor order or payment
+* Publish the next completed Sunday → Saturday edition after GitHub refresh
+
+---
+
 # 📊 Summary
 
-**Total Coverage:** August 31, 2024 – August 1, 2026
-**Total Weeks:** 21 documented (Dec Weeks 14-18 remain undocumented)
+**Total Coverage:** August 31, 2024 – August 8, 2026
+**Total Weeks:** 22 documented (Dec Weeks 14-18 remain undocumented)
 **Format:** Sunday → Saturday (PT)
 
 **Major Milestones:**
@@ -950,3 +1002,4 @@ You can honestly demo this to a coach and they'd actually use it.
 - Week 19-21 (Jan): Analysis & intelligence features
 - April: GitHub cache and project-hub reliability
 - July: Multi-repo launch, legal, and public-site delivery
+- August: Game-platform hardening and secure bilingual redemption-card production
