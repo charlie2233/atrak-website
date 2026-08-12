@@ -1,5 +1,39 @@
 [
   {
+    "id": "17457965125",
+    "type": "PushEvent",
+    "actor": {
+      "id": 117957000,
+      "login": "charlie2233",
+      "display_login": "charlie2233",
+      "gravatar_id": "",
+      "url": "https://api.github.com/users/charlie2233",
+      "avatar_url": "https://avatars.githubusercontent.com/u/117957000?"
+    },
+    "repo": {
+      "id": 1173003479,
+      "name": "charlie2233/lifepage",
+      "url": "https://api.github.com/repos/charlie2233/lifepage"
+    },
+    "payload": {
+      "repository_id": 1173003479,
+      "push_id": 39777281871,
+      "ref": "refs/heads/main",
+      "head": "706986377c0f6c2932ff5fc66713ddca62178133",
+      "before": "bd6b72a85373cb81af42dce94c8bb4e9e4b1948d",
+      "distinct_size": 1,
+      "commits": [
+        {
+          "sha": "706986377c0f6c2932ff5fc66713ddca62178133",
+          "message": "fix: add canonical URL to Pages fallback",
+          "url": "https://github.com/charlie2233/lifepage/commit/706986377c0f6c2932ff5fc66713ddca62178133"
+        }
+      ]
+    },
+    "public": true,
+    "created_at": "2026-08-12T07:09:49Z"
+  },
+  {
     "id": "17430748828",
     "type": "PushEvent",
     "actor": {
@@ -23,6 +57,11 @@
       "before": "e09e335d0255607ba8b5d909dbe6223df1288aab",
       "distinct_size": 22,
       "commits": [
+        {
+          "sha": "db4ddcdf82395a502fe36ef4d5be69c6b291a126",
+          "message": "chore: update GitHub data [skip ci]",
+          "url": "https://github.com/charlie2233/atrak-website/commit/db4ddcdf82395a502fe36ef4d5be69c6b291a126"
+        },
         {
           "sha": "c843841011c306fc2aade6b13e7fca1067501a69",
           "message": "chore: update weekly logs and August releases [skip ci]",
@@ -117,11 +156,6 @@
           "sha": "4ec1a290fcab969d8555ecc57f13dfa59d56f905",
           "message": "fix: refresh weekly data and archive editor dates",
           "url": "https://github.com/charlie2233/atrak-website/commit/4ec1a290fcab969d8555ecc57f13dfa59d56f905"
-        },
-        {
-          "sha": "2e2d1a7d63bd4313a223cd012c33331339e79817",
-          "message": "chore: update GitHub data [skip ci]",
-          "url": "https://github.com/charlie2233/atrak-website/commit/2e2d1a7d63bd4313a223cd012c33331339e79817"
         }
       ]
     },
@@ -5241,32 +5275,6 @@
     },
     "public": true,
     "created_at": "2026-07-20T21:34:46Z"
-  },
-  {
-    "id": "15400787947",
-    "type": "PushEvent",
-    "actor": {
-      "id": 117957000,
-      "login": "charlie2233",
-      "display_login": "charlie2233",
-      "gravatar_id": "",
-      "url": "https://api.github.com/users/charlie2233",
-      "avatar_url": "https://avatars.githubusercontent.com/u/117957000?"
-    },
-    "repo": {
-      "id": 1101568155,
-      "name": "charlie2233/rork-guide-pup--vision-assistant",
-      "url": "https://api.github.com/repos/charlie2233/rork-guide-pup--vision-assistant"
-    },
-    "payload": {
-      "repository_id": 1101568155,
-      "push_id": 37691813794,
-      "ref": "refs/heads/codex/guidepup-credentialed-launch",
-      "head": "3cc852c9febba554124c549f2257596bc3906add",
-      "before": "da95d8e4029da673ab59db0cb5217ee1ced46c29"
-    },
-    "public": true,
-    "created_at": "2026-07-20T21:02:48Z"
   },
   {
     "id": "12040787008",
