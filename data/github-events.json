@@ -55,8 +55,13 @@
       "ref": "refs/heads/main",
       "head": "c843841011c306fc2aade6b13e7fca1067501a69",
       "before": "e09e335d0255607ba8b5d909dbe6223df1288aab",
-      "distinct_size": 20,
+      "distinct_size": 18,
       "commits": [
+        {
+          "sha": "58992714606cdf10f092bcf7565111ebff5b816e",
+          "message": "chore: update GitHub data [skip ci]",
+          "url": "https://github.com/charlie2233/atrak-website/commit/58992714606cdf10f092bcf7565111ebff5b816e"
+        },
         {
           "sha": "a84503b0b0abfe905613cb47d6d2560ff06278d4",
           "message": "chore: update GitHub data [skip ci]",
@@ -141,21 +146,6 @@
           "sha": "1d835dfd84c093f0b6da8ca4d89ae5facadfde60",
           "message": "chore: update GitHub data [skip ci]",
           "url": "https://github.com/charlie2233/atrak-website/commit/1d835dfd84c093f0b6da8ca4d89ae5facadfde60"
-        },
-        {
-          "sha": "082f1b14aa60f37658d8d3cf92b16de37c1465dd",
-          "message": "chore: update GitHub data [skip ci]",
-          "url": "https://github.com/charlie2233/atrak-website/commit/082f1b14aa60f37658d8d3cf92b16de37c1465dd"
-        },
-        {
-          "sha": "b23bad8eaa5edbc718e284ba5ddaf597434bf14f",
-          "message": "chore(data): refresh local weekly aggregate",
-          "url": "https://github.com/charlie2233/atrak-website/commit/b23bad8eaa5edbc718e284ba5ddaf597434bf14f"
-        },
-        {
-          "sha": "071528337ef275d09a565139ac83606017655328",
-          "message": "chore: update GitHub data [skip ci]",
-          "url": "https://github.com/charlie2233/atrak-website/commit/071528337ef275d09a565139ac83606017655328"
         }
       ]
     },
@@ -263,7 +253,7 @@
       "ref": "refs/heads/main",
       "head": "6d74c41126e0cf846f17b77ccc92cdfdbd55c6db",
       "before": "9983037c1a4d76dde6e33d9bca0a365f8d3519f7",
-      "distinct_size": 33,
+      "distinct_size": 6,
       "commits": [
         {
           "sha": "6d74c41126e0cf846f17b77ccc92cdfdbd55c6db",
@@ -294,76 +284,6 @@
           "sha": "d2b5affec5410548b904f3837b0af8bd7d089c11",
           "message": "test(release): add durable browser acceptance gate",
           "url": "https://github.com/charlie2233/turnplay-arena/commit/d2b5affec5410548b904f3837b0af8bd7d089c11"
-        },
-        {
-          "sha": "f7cc5efdfa3043c5491c9dc9efb94df3934b79f9",
-          "message": "chore(release): publish widget resource v21",
-          "url": "https://github.com/charlie2233/turnplay-arena/commit/f7cc5efdfa3043c5491c9dc9efb94df3934b79f9"
-        },
-        {
-          "sha": "e68e2ee11ff9b467b4093c1c4fcdb30ae5d36902",
-          "message": "fix(web): align widget setter contract",
-          "url": "https://github.com/charlie2233/turnplay-arena/commit/e68e2ee11ff9b467b4093c1c4fcdb30ae5d36902"
-        },
-        {
-          "sha": "0318debd413d4e19c40a3410debe2ea3b01ea4b6",
-          "message": "fix(web): isolate lifecycle state updates",
-          "url": "https://github.com/charlie2233/turnplay-arena/commit/0318debd413d4e19c40a3410debe2ea3b01ea4b6"
-        },
-        {
-          "sha": "a6754c82ae3d0fb16f8b0d6df963bf49faaac279",
-          "message": "fix(web): restore games from authoritative pointers",
-          "url": "https://github.com/charlie2233/turnplay-arena/commit/a6754c82ae3d0fb16f8b0d6df963bf49faaac279"
-        },
-        {
-          "sha": "9d2733a8a66f7dab05932b64428ff0c02d7be983",
-          "message": "Record side and retry release validation",
-          "url": "https://github.com/charlie2233/turnplay-arena/commit/9d2733a8a66f7dab05932b64428ff0c02d7be983"
-        },
-        {
-          "sha": "45679ddf4d4e9a79f888acbef9155ca0543c0be9",
-          "message": "Fix compact board and retry layouts",
-          "url": "https://github.com/charlie2233/turnplay-arena/commit/45679ddf4d4e9a79f888acbef9155ca0543c0be9"
-        },
-        {
-          "sha": "23625548fa61a45e51c99e72df35bd33194a75f5",
-          "message": "Fix narrow tablet picker overflow",
-          "url": "https://github.com/charlie2233/turnplay-arena/commit/23625548fa61a45e51c99e72df35bd33194a75f5"
-        },
-        {
-          "sha": "294b76453e84eecf1d0643ac60e19065a406909a",
-          "message": "Add player side selection and terminal retry",
-          "url": "https://github.com/charlie2233/turnplay-arena/commit/294b76453e84eecf1d0643ac60e19065a406909a"
-        },
-        {
-          "sha": "c7eb5ff622ce24524c153aacf71ef2533b2ca829",
-          "message": "Require creation workflows to start cleanly",
-          "url": "https://github.com/charlie2233/turnplay-arena/commit/c7eb5ff622ce24524c153aacf71ef2533b2ca829"
-        },
-        {
-          "sha": "e365d106f1987479b3757cfd609294aa4ddb3d32",
-          "message": "Harden submission workflow validation",
-          "url": "https://github.com/charlie2233/turnplay-arena/commit/e365d106f1987479b3757cfd609294aa4ddb3d32"
-        },
-        {
-          "sha": "3ba6d48f8e22dc7f953d6a604af7c43f1a94a449",
-          "message": "Enforce single render per created game",
-          "url": "https://github.com/charlie2233/turnplay-arena/commit/3ba6d48f8e22dc7f953d6a604af7c43f1a94a449"
-        },
-        {
-          "sha": "023b7b7f02fee7234b102348c5c3781002a642a1",
-          "message": "Clarify game creation render workflow",
-          "url": "https://github.com/charlie2233/turnplay-arena/commit/023b7b7f02fee7234b102348c5c3781002a642a1"
-        },
-        {
-          "sha": "e34010abae2dc85867cc42d23f798152133b4a65",
-          "message": "Supersede stale actions with notifications",
-          "url": "https://github.com/charlie2233/turnplay-arena/commit/e34010abae2dc85867cc42d23f798152133b4a65"
-        },
-        {
-          "sha": "4858c8915bdab8b640b8984bca08329a23efbda0",
-          "message": "Harden exact GPT move receipts",
-          "url": "https://github.com/charlie2233/turnplay-arena/commit/4858c8915bdab8b640b8984bca08329a23efbda0"
         }
       ]
     },
