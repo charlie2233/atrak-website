@@ -21,8 +21,13 @@
       "ref": "refs/heads/main",
       "head": "1f075616707c3193ce99f9755fce72e7205612fd",
       "before": "42268e2a8c14da518199d8f65f32330c23b2878c",
-      "distinct_size": 20,
+      "distinct_size": 21,
       "commits": [
+        {
+          "sha": "d8e12d8e810c5024318b448f01c6f50027e35e5e",
+          "message": "chore: update GitHub data [skip ci]",
+          "url": "https://github.com/charlie2233/atrak-website/commit/d8e12d8e810c5024318b448f01c6f50027e35e5e"
+        },
         {
           "sha": "1f075616707c3193ce99f9755fce72e7205612fd",
           "message": "fix: restore project analytics weekly cache",
@@ -117,11 +122,6 @@
           "sha": "7fd9b6d117526818e58575825ee98acad424510f",
           "message": "chore: update GitHub data [skip ci]",
           "url": "https://github.com/charlie2233/atrak-website/commit/7fd9b6d117526818e58575825ee98acad424510f"
-        },
-        {
-          "sha": "43aff01d67fcfb9c8ce39b51fa97da067d0c6387",
-          "message": "chore: update GitHub data [skip ci]",
-          "url": "https://github.com/charlie2233/atrak-website/commit/43aff01d67fcfb9c8ce39b51fa97da067d0c6387"
         }
       ]
     },
@@ -411,17 +411,12 @@
       "ref": "refs/heads/codex/ygf-bowl-to-build-beta",
       "head": "8097bcd55e9af1ce38465cf921333ff75cc86a84",
       "before": "d6dc18748d99a7480eecb85058cc6b51b8ab552c",
-      "distinct_size": 2,
+      "distinct_size": 1,
       "commits": [
         {
           "sha": "8097bcd55e9af1ce38465cf921333ff75cc86a84",
           "message": "fix: harden redemption card print layout",
           "url": "https://github.com/charlie2233/ygf-bowl-to-build/commit/8097bcd55e9af1ce38465cf921333ff75cc86a84"
-        },
-        {
-          "sha": "d6dc18748d99a7480eecb85058cc6b51b8ab552c",
-          "message": "feat: add secure Avery 5260 label workflow",
-          "url": "https://github.com/charlie2233/ygf-bowl-to-build/commit/d6dc18748d99a7480eecb85058cc6b51b8ab552c"
         }
       ]
     },
