@@ -29,6 +29,7 @@ const CACHED_DATA_PATH = withCacheVersion(CACHED_REPOS_BASE_PATH);
 const CACHED_EVENTS_PATH = withCacheVersion(SITE_BASE_URL ? `${SITE_BASE_URL}data/github-events.json` : 'data/github-events.json'); // Updated by GitHub Actions
 const CACHED_META_PATH = withCacheVersion(SITE_BASE_URL ? `${SITE_BASE_URL}data/github-meta.json` : 'data/github-meta.json'); // Updated by GitHub Actions
 const CACHED_RELEASES_PATH = withCacheVersion(SITE_BASE_URL ? `${SITE_BASE_URL}data/github-releases.json` : 'data/github-releases.json'); // Updated by GitHub Actions
+const CACHED_WEEKLY_PATH = withCacheVersion(SITE_BASE_URL ? `${SITE_BASE_URL}data/github-weekly.json` : 'data/github-weekly.json'); // Updated by GitHub Actions
 const IS_LOCAL_PREVIEW = ['localhost', '127.0.0.1'].includes(window.location.hostname);
 const PROJECTS_PER_SLIDER_PAGE = 6;
 
@@ -104,6 +105,19 @@ async function loadCachedReleases() {
     }
 }
 
+async function loadCachedWeeklyStats() {
+    try {
+        const response = await fetch(CACHED_WEEKLY_PATH, FRESH_GITHUB_CACHE_FETCH);
+        if (!response.ok) return null;
+        const stats = await response.json();
+        if (!stats || typeof stats !== 'object') return null;
+        if (typeof stats.updatedAt !== 'string') return null;
+        return stats;
+    } catch (e) {
+        return null;
+    }
+}
+
 function setMoreProjectsMeta(message) {
     const metaEl = document.getElementById('more-projects-meta');
     if (metaEl) {
@@ -129,6 +143,20 @@ function getGitHubCacheSourceText(meta) {
     if (source === 'github-live-cache') return 'GitHub live cache';
     if (source === 'github-actions-cache') return 'GitHub Actions cache';
     return 'GitHub cache';
+}
+
+function getWeeklyStatsSource(stats) {
+    if (!stats || typeof stats !== 'object') return 'unknown';
+    return String(stats.source || '').trim().toLowerCase();
+}
+
+function getWeeklyStatsSourceText(stats) {
+    const source = getWeeklyStatsSource(stats);
+    if (source === 'local-git-refresh') return 'Local checked-out repos';
+    if (source === 'github-graphql') return 'GitHub contribution graph';
+    if (source === 'github-public-events') return 'Public GitHub fallback';
+    if (source === 'github-live-cache') return 'GitHub live cache';
+    return 'Weekly cache';
 }
 
 function escapeHtml(value) {
