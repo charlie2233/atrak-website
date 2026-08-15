@@ -1,40 +1,6 @@
 [
   {
-    "id": "17457965125",
-    "type": "PushEvent",
-    "actor": {
-      "id": 117957000,
-      "login": "charlie2233",
-      "display_login": "charlie2233",
-      "gravatar_id": "",
-      "url": "https://api.github.com/users/charlie2233",
-      "avatar_url": "https://avatars.githubusercontent.com/u/117957000?"
-    },
-    "repo": {
-      "id": 1173003479,
-      "name": "charlie2233/lifepage",
-      "url": "https://api.github.com/repos/charlie2233/lifepage"
-    },
-    "payload": {
-      "repository_id": 1173003479,
-      "push_id": 39777281871,
-      "ref": "refs/heads/main",
-      "head": "706986377c0f6c2932ff5fc66713ddca62178133",
-      "before": "bd6b72a85373cb81af42dce94c8bb4e9e4b1948d",
-      "distinct_size": 1,
-      "commits": [
-        {
-          "sha": "706986377c0f6c2932ff5fc66713ddca62178133",
-          "message": "fix: add canonical URL to Pages fallback",
-          "url": "https://github.com/charlie2233/lifepage/commit/706986377c0f6c2932ff5fc66713ddca62178133"
-        }
-      ]
-    },
-    "public": true,
-    "created_at": "2026-08-12T07:09:49Z"
-  },
-  {
-    "id": "17430748828",
+    "id": "17720639863",
     "type": "PushEvent",
     "actor": {
       "id": 117957000,
@@ -51,12 +17,27 @@
     },
     "payload": {
       "repository_id": 1140388078,
-      "push_id": 39748979775,
+      "push_id": 40044499476,
       "ref": "refs/heads/main",
-      "head": "c843841011c306fc2aade6b13e7fca1067501a69",
-      "before": "e09e335d0255607ba8b5d909dbe6223df1288aab",
-      "distinct_size": 19,
+      "head": "1f075616707c3193ce99f9755fce72e7205612fd",
+      "before": "42268e2a8c14da518199d8f65f32330c23b2878c",
+      "distinct_size": 20,
       "commits": [
+        {
+          "sha": "1f075616707c3193ce99f9755fce72e7205612fd",
+          "message": "fix: restore project analytics weekly cache",
+          "url": "https://github.com/charlie2233/atrak-website/commit/1f075616707c3193ce99f9755fce72e7205612fd"
+        },
+        {
+          "sha": "42268e2a8c14da518199d8f65f32330c23b2878c",
+          "message": "chore(data): refresh local weekly aggregate",
+          "url": "https://github.com/charlie2233/atrak-website/commit/42268e2a8c14da518199d8f65f32330c23b2878c"
+        },
+        {
+          "sha": "e467c9a239981abf106af6f60fb0d77daa589dee",
+          "message": "chore: update GitHub data [skip ci]",
+          "url": "https://github.com/charlie2233/atrak-website/commit/e467c9a239981abf106af6f60fb0d77daa589dee"
+        },
         {
           "sha": "5e621f660cc1459f397d904009306f04adacf091",
           "message": "chore: update GitHub data [skip ci]",
@@ -141,18 +122,94 @@
           "sha": "43aff01d67fcfb9c8ce39b51fa97da067d0c6387",
           "message": "chore: update GitHub data [skip ci]",
           "url": "https://github.com/charlie2233/atrak-website/commit/43aff01d67fcfb9c8ce39b51fa97da067d0c6387"
-        },
-        {
-          "sha": "e025a076618788f3dac54d99a1de22e4f95e0575",
-          "message": "chore(data): refresh local weekly aggregate",
-          "url": "https://github.com/charlie2233/atrak-website/commit/e025a076618788f3dac54d99a1de22e4f95e0575"
-        },
-        {
-          "sha": "1d835dfd84c093f0b6da8ca4d89ae5facadfde60",
-          "message": "chore: update GitHub data [skip ci]",
-          "url": "https://github.com/charlie2233/atrak-website/commit/1d835dfd84c093f0b6da8ca4d89ae5facadfde60"
         }
       ]
+    },
+    "public": true,
+    "created_at": "2026-08-15T07:40:04Z"
+  },
+  {
+    "id": "17719468075",
+    "type": "PushEvent",
+    "actor": {
+      "id": 117957000,
+      "login": "charlie2233",
+      "display_login": "charlie2233",
+      "gravatar_id": "",
+      "url": "https://api.github.com/users/charlie2233",
+      "avatar_url": "https://avatars.githubusercontent.com/u/117957000?"
+    },
+    "repo": {
+      "id": 1140388078,
+      "name": "charlie2233/atrak-website",
+      "url": "https://api.github.com/repos/charlie2233/atrak-website"
+    },
+    "payload": {
+      "repository_id": 1140388078,
+      "push_id": 40043326779,
+      "ref": "refs/heads/main",
+      "head": "42268e2a8c14da518199d8f65f32330c23b2878c",
+      "before": "e467c9a239981abf106af6f60fb0d77daa589dee"
+    },
+    "public": true,
+    "created_at": "2026-08-15T07:22:18Z"
+  },
+  {
+    "id": "17457965125",
+    "type": "PushEvent",
+    "actor": {
+      "id": 117957000,
+      "login": "charlie2233",
+      "display_login": "charlie2233",
+      "gravatar_id": "",
+      "url": "https://api.github.com/users/charlie2233",
+      "avatar_url": "https://avatars.githubusercontent.com/u/117957000?"
+    },
+    "repo": {
+      "id": 1173003479,
+      "name": "charlie2233/lifepage",
+      "url": "https://api.github.com/repos/charlie2233/lifepage"
+    },
+    "payload": {
+      "repository_id": 1173003479,
+      "push_id": 39777281871,
+      "ref": "refs/heads/main",
+      "head": "706986377c0f6c2932ff5fc66713ddca62178133",
+      "before": "bd6b72a85373cb81af42dce94c8bb4e9e4b1948d",
+      "distinct_size": 1,
+      "commits": [
+        {
+          "sha": "706986377c0f6c2932ff5fc66713ddca62178133",
+          "message": "fix: add canonical URL to Pages fallback",
+          "url": "https://github.com/charlie2233/lifepage/commit/706986377c0f6c2932ff5fc66713ddca62178133"
+        }
+      ]
+    },
+    "public": true,
+    "created_at": "2026-08-12T07:09:49Z"
+  },
+  {
+    "id": "17430748828",
+    "type": "PushEvent",
+    "actor": {
+      "id": 117957000,
+      "login": "charlie2233",
+      "display_login": "charlie2233",
+      "gravatar_id": "",
+      "url": "https://api.github.com/users/charlie2233",
+      "avatar_url": "https://avatars.githubusercontent.com/u/117957000?"
+    },
+    "repo": {
+      "id": 1140388078,
+      "name": "charlie2233/atrak-website",
+      "url": "https://api.github.com/repos/charlie2233/atrak-website"
+    },
+    "payload": {
+      "repository_id": 1140388078,
+      "push_id": 39748979775,
+      "ref": "refs/heads/main",
+      "head": "c843841011c306fc2aade6b13e7fca1067501a69",
+      "before": "e09e335d0255607ba8b5d909dbe6223df1288aab"
     },
     "public": true,
     "created_at": "2026-08-11T22:02:38Z"
@@ -354,7 +411,7 @@
       "ref": "refs/heads/codex/ygf-bowl-to-build-beta",
       "head": "8097bcd55e9af1ce38465cf921333ff75cc86a84",
       "before": "d6dc18748d99a7480eecb85058cc6b51b8ab552c",
-      "distinct_size": 6,
+      "distinct_size": 2,
       "commits": [
         {
           "sha": "8097bcd55e9af1ce38465cf921333ff75cc86a84",
@@ -365,26 +422,6 @@
           "sha": "d6dc18748d99a7480eecb85058cc6b51b8ab552c",
           "message": "feat: add secure Avery 5260 label workflow",
           "url": "https://github.com/charlie2233/ygf-bowl-to-build/commit/d6dc18748d99a7480eecb85058cc6b51b8ab552c"
-        },
-        {
-          "sha": "91ecde131772de97353188d0d3537a3347ff8c6a",
-          "message": "design: add bilingual card copy and YGF logo",
-          "url": "https://github.com/charlie2233/ygf-bowl-to-build/commit/91ecde131772de97353188d0d3537a3347ff8c6a"
-        },
-        {
-          "sha": "708da2102dd0daec30358c48a4410b4c511c649a",
-          "message": "design: use existing YGF bowl photo on card",
-          "url": "https://github.com/charlie2233/ygf-bowl-to-build/commit/708da2102dd0daec30358c48a4410b4c511c649a"
-        },
-        {
-          "sha": "525b00644a99de6e9ee2630a9be41892f0bf22af",
-          "message": "design: feature cooked bowl on redemption card",
-          "url": "https://github.com/charlie2233/ygf-bowl-to-build/commit/525b00644a99de6e9ee2630a9be41892f0bf22af"
-        },
-        {
-          "sha": "2f608791ddb139d7e6701a1489b11e24ff808fad",
-          "message": "feat: add static redemption card print design",
-          "url": "https://github.com/charlie2233/ygf-bowl-to-build/commit/2f608791ddb139d7e6701a1489b11e24ff808fad"
         }
       ]
     },
@@ -10244,97 +10281,5 @@
     },
     "public": true,
     "created_at": "2026-07-16T07:21:52Z"
-  },
-  {
-    "id": "11860873719",
-    "type": "PullRequestEvent",
-    "actor": {
-      "id": 117957000,
-      "login": "charlie2233",
-      "display_login": "charlie2233",
-      "gravatar_id": "",
-      "url": "https://api.github.com/users/charlie2233",
-      "avatar_url": "https://avatars.githubusercontent.com/u/117957000?"
-    },
-    "repo": {
-      "id": 1140388078,
-      "name": "charlie2233/atrak-website",
-      "url": "https://api.github.com/repos/charlie2233/atrak-website"
-    },
-    "payload": {
-      "action": "merged",
-      "number": 11,
-      "pull_request": {
-        "url": "https://api.github.com/repos/charlie2233/atrak-website/pulls/11",
-        "id": 4066445065,
-        "number": 11,
-        "head": {
-          "ref": "agent/accesscourt-reciprocal-domain",
-          "sha": "75b0ea38e3ee46e4df3f33ff162eeed7ef8a4881",
-          "repo": {
-            "id": 1140388078,
-            "url": "https://api.github.com/repos/charlie2233/atrak-website",
-            "name": "atrak-website"
-          }
-        },
-        "base": {
-          "ref": "main",
-          "sha": "79ead1ea8df7713b65212a52f4e7df05f61142e2",
-          "repo": {
-            "id": 1140388078,
-            "url": "https://api.github.com/repos/charlie2233/atrak-website",
-            "name": "atrak-website"
-          }
-        }
-      }
-    },
-    "public": true,
-    "created_at": "2026-07-16T06:53:57Z"
-  },
-  {
-    "id": "11860856855",
-    "type": "PullRequestEvent",
-    "actor": {
-      "id": 117957000,
-      "login": "charlie2233",
-      "display_login": "charlie2233",
-      "gravatar_id": "",
-      "url": "https://api.github.com/users/charlie2233",
-      "avatar_url": "https://avatars.githubusercontent.com/u/117957000?"
-    },
-    "repo": {
-      "id": 1140388078,
-      "name": "charlie2233/atrak-website",
-      "url": "https://api.github.com/repos/charlie2233/atrak-website"
-    },
-    "payload": {
-      "action": "opened",
-      "number": 11,
-      "pull_request": {
-        "url": "https://api.github.com/repos/charlie2233/atrak-website/pulls/11",
-        "id": 4066445065,
-        "number": 11,
-        "head": {
-          "ref": "agent/accesscourt-reciprocal-domain",
-          "sha": "75b0ea38e3ee46e4df3f33ff162eeed7ef8a4881",
-          "repo": {
-            "id": 1140388078,
-            "url": "https://api.github.com/repos/charlie2233/atrak-website",
-            "name": "atrak-website"
-          }
-        },
-        "base": {
-          "ref": "main",
-          "sha": "79ead1ea8df7713b65212a52f4e7df05f61142e2",
-          "repo": {
-            "id": 1140388078,
-            "url": "https://api.github.com/repos/charlie2233/atrak-website",
-            "name": "atrak-website"
-          }
-        }
-      }
-    },
-    "public": true,
-    "created_at": "2026-07-16T06:53:32Z"
   }
 ]
