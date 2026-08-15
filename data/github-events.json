@@ -55,8 +55,13 @@
       "ref": "refs/heads/main",
       "head": "c843841011c306fc2aade6b13e7fca1067501a69",
       "before": "e09e335d0255607ba8b5d909dbe6223df1288aab",
-      "distinct_size": 18,
+      "distinct_size": 19,
       "commits": [
+        {
+          "sha": "5e621f660cc1459f397d904009306f04adacf091",
+          "message": "chore: update GitHub data [skip ci]",
+          "url": "https://github.com/charlie2233/atrak-website/commit/5e621f660cc1459f397d904009306f04adacf091"
+        },
         {
           "sha": "58992714606cdf10f092bcf7565111ebff5b816e",
           "message": "chore: update GitHub data [skip ci]",
@@ -253,7 +258,7 @@
       "ref": "refs/heads/main",
       "head": "6d74c41126e0cf846f17b77ccc92cdfdbd55c6db",
       "before": "9983037c1a4d76dde6e33d9bca0a365f8d3519f7",
-      "distinct_size": 6,
+      "distinct_size": 3,
       "commits": [
         {
           "sha": "6d74c41126e0cf846f17b77ccc92cdfdbd55c6db",
@@ -269,21 +274,6 @@
           "sha": "2f5e805058007bca61d917d819e59658a8e47b6b",
           "message": "fix(deploy): trust Render proxy hop",
           "url": "https://github.com/charlie2233/turnplay-arena/commit/2f5e805058007bca61d917d819e59658a8e47b6b"
-        },
-        {
-          "sha": "1cb5c40aa3456d0852178cbbc92eed001083365f",
-          "message": "fix(release): close audit and privacy gaps",
-          "url": "https://github.com/charlie2233/turnplay-arena/commit/1cb5c40aa3456d0852178cbbc92eed001083365f"
-        },
-        {
-          "sha": "dfd0f82229c2e3e15a916196fc7c1a63f8ff0cf5",
-          "message": "feat(release): add restart acceptance proof",
-          "url": "https://github.com/charlie2233/turnplay-arena/commit/dfd0f82229c2e3e15a916196fc7c1a63f8ff0cf5"
-        },
-        {
-          "sha": "d2b5affec5410548b904f3837b0af8bd7d089c11",
-          "message": "test(release): add durable browser acceptance gate",
-          "url": "https://github.com/charlie2233/turnplay-arena/commit/d2b5affec5410548b904f3837b0af8bd7d089c11"
         }
       ]
     },
@@ -364,7 +354,7 @@
       "ref": "refs/heads/codex/ygf-bowl-to-build-beta",
       "head": "8097bcd55e9af1ce38465cf921333ff75cc86a84",
       "before": "d6dc18748d99a7480eecb85058cc6b51b8ab552c",
-      "distinct_size": 8,
+      "distinct_size": 6,
       "commits": [
         {
           "sha": "8097bcd55e9af1ce38465cf921333ff75cc86a84",
@@ -395,16 +385,6 @@
           "sha": "2f608791ddb139d7e6701a1489b11e24ff808fad",
           "message": "feat: add static redemption card print design",
           "url": "https://github.com/charlie2233/ygf-bowl-to-build/commit/2f608791ddb139d7e6701a1489b11e24ff808fad"
-        },
-        {
-          "sha": "30a593b297db27f6afb840567763c24bb0fc79d3",
-          "message": "feat: add localized YGF review form",
-          "url": "https://github.com/charlie2233/ygf-bowl-to-build/commit/30a593b297db27f6afb840567763c24bb0fc79d3"
-        },
-        {
-          "sha": "1afc82a13a95b72f37e29e1d389456403f70eb12",
-          "message": "docs: record safe 500-code production refresh",
-          "url": "https://github.com/charlie2233/ygf-bowl-to-build/commit/1afc82a13a95b72f37e29e1d389456403f70eb12"
         }
       ]
     },
