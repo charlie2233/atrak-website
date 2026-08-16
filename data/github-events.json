@@ -1,6 +1,6 @@
 [
   {
-    "id": "17720639863",
+    "id": "17804990070",
     "type": "PushEvent",
     "actor": {
       "id": 117957000,
@@ -17,12 +17,27 @@
     },
     "payload": {
       "repository_id": 1140388078,
-      "push_id": 40044499476,
+      "push_id": 40129049792,
       "ref": "refs/heads/main",
-      "head": "1f075616707c3193ce99f9755fce72e7205612fd",
-      "before": "42268e2a8c14da518199d8f65f32330c23b2878c",
+      "head": "70ed34b5861b158790a93896c23a8a85e0cfa03a",
+      "before": "a20ad08f012bef88c1bc83b389771e69304bcda0",
       "distinct_size": 21,
       "commits": [
+        {
+          "sha": "8a9df27ae33e08836b49bebd082ab0cac9b451f8",
+          "message": "chore: renew weekly log [skip ci]",
+          "url": "https://github.com/charlie2233/atrak-website/commit/8a9df27ae33e08836b49bebd082ab0cac9b451f8"
+        },
+        {
+          "sha": "70ed34b5861b158790a93896c23a8a85e0cfa03a",
+          "message": "chore(data): refresh local weekly aggregate",
+          "url": "https://github.com/charlie2233/atrak-website/commit/70ed34b5861b158790a93896c23a8a85e0cfa03a"
+        },
+        {
+          "sha": "a20ad08f012bef88c1bc83b389771e69304bcda0",
+          "message": "chore: update GitHub data [skip ci]",
+          "url": "https://github.com/charlie2233/atrak-website/commit/a20ad08f012bef88c1bc83b389771e69304bcda0"
+        },
         {
           "sha": "c08a9b55f66b752298635eb76a5e9a92bfb1bc8c",
           "message": "chore: update GitHub data [skip ci]",
@@ -107,23 +122,34 @@
           "sha": "804b405bb151989957516fca0918eb06580dc942",
           "message": "chore: update GitHub data [skip ci]",
           "url": "https://github.com/charlie2233/atrak-website/commit/804b405bb151989957516fca0918eb06580dc942"
-        },
-        {
-          "sha": "9979383e37a1eb333899320532da25cc4060d008",
-          "message": "chore: update GitHub data [skip ci]",
-          "url": "https://github.com/charlie2233/atrak-website/commit/9979383e37a1eb333899320532da25cc4060d008"
-        },
-        {
-          "sha": "1d7acbdd1dda61617c29d8f3c431cec5be839310",
-          "message": "chore: renew weekly log [skip ci]",
-          "url": "https://github.com/charlie2233/atrak-website/commit/1d7acbdd1dda61617c29d8f3c431cec5be839310"
-        },
-        {
-          "sha": "34cd5fc2f5cf5d301dbc350c08375b83addfc0ee",
-          "message": "chore(data): refresh local weekly aggregate",
-          "url": "https://github.com/charlie2233/atrak-website/commit/34cd5fc2f5cf5d301dbc350c08375b83addfc0ee"
         }
       ]
+    },
+    "public": true,
+    "created_at": "2026-08-16T07:19:31Z"
+  },
+  {
+    "id": "17720639863",
+    "type": "PushEvent",
+    "actor": {
+      "id": 117957000,
+      "login": "charlie2233",
+      "display_login": "charlie2233",
+      "gravatar_id": "",
+      "url": "https://api.github.com/users/charlie2233",
+      "avatar_url": "https://avatars.githubusercontent.com/u/117957000?"
+    },
+    "repo": {
+      "id": 1140388078,
+      "name": "charlie2233/atrak-website",
+      "url": "https://api.github.com/repos/charlie2233/atrak-website"
+    },
+    "payload": {
+      "repository_id": 1140388078,
+      "push_id": 40044499476,
+      "ref": "refs/heads/main",
+      "head": "1f075616707c3193ce99f9755fce72e7205612fd",
+      "before": "42268e2a8c14da518199d8f65f32330c23b2878c"
     },
     "public": true,
     "created_at": "2026-08-15T07:40:04Z"
@@ -5155,32 +5181,6 @@
     },
     "public": true,
     "created_at": "2026-07-20T21:35:40Z"
-  },
-  {
-    "id": "15402400180",
-    "type": "PushEvent",
-    "actor": {
-      "id": 117957000,
-      "login": "charlie2233",
-      "display_login": "charlie2233",
-      "gravatar_id": "",
-      "url": "https://api.github.com/users/charlie2233",
-      "avatar_url": "https://avatars.githubusercontent.com/u/117957000?"
-    },
-    "repo": {
-      "id": 1306028280,
-      "name": "charlie2233/backchannel-agent-support",
-      "url": "https://api.github.com/repos/charlie2233/backchannel-agent-support"
-    },
-    "payload": {
-      "repository_id": 1306028280,
-      "push_id": 37693422633,
-      "ref": "refs/heads/codex/backchannel-v0.3",
-      "head": "7ab8b2a66437fe981f392a70118725967c3e5acf",
-      "before": "1e05ef0ac981c0bb55e8bba6ebd04d46bd30be89"
-    },
-    "public": true,
-    "created_at": "2026-07-20T21:34:46Z"
   },
   {
     "id": "12040787008",
