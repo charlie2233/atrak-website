@@ -1771,5 +1771,118 @@
         "at": "2026-08-07T10:26:07Z"
       }
     ]
+  },
+  {
+    "weekStart": "2026-08-09",
+    "weekEnd": "2026-08-15",
+    "generatedAt": "2026-08-16T09:24:27.926Z",
+    "source": "github-weekly-automation",
+    "dateRange": "Aug 9 – 15",
+    "title": "Atrak Website and Lifepage moved the week forward.",
+    "highlights": [
+      "Atrak Website led public activity with 21 commits across 5 pushes.",
+      "2 public repositories were active across 7 GitHub events.",
+      "No formal GitHub release was published during this edition."
+    ],
+    "shipped": [
+      "restore project analytics weekly cache",
+      "refresh local weekly aggregate",
+      "add canonical URL to Pages fallback",
+      "update weekly logs and August releases [skip ci]"
+    ],
+    "engineering": [
+      "6 pushes and 0 pull request updates were condensed into this edition.",
+      "Active stacks included HTML, TypeScript.",
+      "The snapshot is stored permanently so the edition remains available after GitHub events expire."
+    ],
+    "fixes": [
+      "restore project analytics weekly cache",
+      "add canonical URL to Pages fallback"
+    ],
+    "metrics": [
+      "Commits: 22",
+      "Active repos: 2",
+      "Pull requests: 0",
+      "Issues: 0",
+      "Releases: 0"
+    ],
+    "next": [
+      "Continue the Atrak Website build and publish the next visible milestone.",
+      "Review the next automated edition after Sunday refresh."
+    ],
+    "stats": {
+      "commits": 22,
+      "activeRepositories": 2,
+      "pullRequests": 0,
+      "issues": 0,
+      "pushes": 6,
+      "releases": 0,
+      "events": 7
+    },
+    "repositories": [
+      {
+        "name": "Atrak Website",
+        "fullName": "charlie2233/atrak-website",
+        "url": "https://github.com/charlie2233/atrak-website",
+        "language": "HTML",
+        "commits": 21,
+        "pushes": 5,
+        "events": 6,
+        "pullRequests": 0,
+        "issues": 0,
+        "lastAt": "2026-08-15T07:40:04.000Z"
+      },
+      {
+        "name": "Lifepage",
+        "fullName": "charlie2233/lifepage",
+        "url": "https://github.com/charlie2233/lifepage",
+        "language": "TypeScript",
+        "commits": 1,
+        "pushes": 1,
+        "events": 1,
+        "pullRequests": 0,
+        "issues": 0,
+        "lastAt": "2026-08-12T07:09:49.000Z"
+      }
+    ],
+    "releases": [],
+    "commitMessages": [
+      {
+        "repo": "charlie2233/atrak-website",
+        "text": "restore project analytics weekly cache",
+        "url": "https://github.com/charlie2233/atrak-website/commit/1f075616707c3193ce99f9755fce72e7205612fd",
+        "at": "2026-08-15T07:39:56Z"
+      },
+      {
+        "repo": "charlie2233/atrak-website",
+        "text": "refresh local weekly aggregate",
+        "url": "https://github.com/charlie2233/atrak-website/commit/42268e2a8c14da518199d8f65f32330c23b2878c",
+        "at": "2026-08-15T07:22:10Z"
+      },
+      {
+        "repo": "charlie2233/lifepage",
+        "text": "add canonical URL to Pages fallback",
+        "url": "https://github.com/charlie2233/lifepage/commit/706986377c0f6c2932ff5fc66713ddca62178133",
+        "at": "2026-08-12T07:09:36Z"
+      },
+      {
+        "repo": "charlie2233/atrak-website",
+        "text": "update weekly logs and August releases [skip ci]",
+        "url": "https://github.com/charlie2233/atrak-website/commit/c843841011c306fc2aade6b13e7fca1067501a69",
+        "at": "2026-08-11T22:02:24Z"
+      },
+      {
+        "repo": "charlie2233/atrak-website",
+        "text": "refresh local weekly aggregate",
+        "url": "https://github.com/charlie2233/atrak-website/commit/0f28d57bf9483dca85fd4c56ced4c99c5fcc985f",
+        "at": "2026-08-10T07:11:08Z"
+      },
+      {
+        "repo": "charlie2233/atrak-website",
+        "text": "refresh local weekly aggregate",
+        "url": "https://github.com/charlie2233/atrak-website/commit/34cd5fc2f5cf5d301dbc350c08375b83addfc0ee",
+        "at": "2026-08-09T08:42:52Z"
+      }
+    ]
   }
 ]
