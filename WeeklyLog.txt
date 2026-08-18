@@ -988,10 +988,57 @@ You can honestly demo this to a coach and they'd actually use it.
 
 ---
 
+## Week of Aug 9 – Aug 15
+<!-- week-start: 2026-08-09 -->
+
+### "Weekly analytics recovery and LifePage canonical readiness"
+
+**Highlights**
+
+* Atrak Website led public activity with 21 verified commits across five pushes
+* LifePage added its canonical Pages fallback and refreshed launch/readiness download
+* Two public repositories produced 22 commits across seven captured GitHub events
+
+**Shipped**
+
+* Restored Atrak's project analytics weekly cache after automated refresh drift
+* Refreshed the local checked-out-repository aggregate with its explicit provenance intact
+* Added the canonical URL to LifePage's GitHub Pages fallback
+* Published the LifePage launch/readiness entry in the public download feed
+
+**Engineering**
+
+* GitHub API commit enrichment verified the completed Sunday → Saturday window
+* Six pushes across HTML and TypeScript projects were condensed into one durable edition
+* The generated archive retains source links and commit timestamps after GitHub events expire
+
+**Fixes**
+
+* Recovered project analytics data without overwriting the local weekly aggregate
+* Removed canonical ambiguity from the LifePage fallback route
+
+**Metrics**
+
+* Commits: 22
+* Active repos: 2
+* PR updates: 0
+* Issues: 0
+* Pushes: 6
+* Releases/downloads: 1
+* GitHub events: 7
+
+**Next**
+
+* Keep Atrak's local weekly provenance protected through automated refreshes
+* Verify LifePage's canonical signal in the deployed Pages site
+* Publish the next completed Sunday → Saturday edition after GitHub refresh
+
+---
+
 # 📊 Summary
 
-**Total Coverage:** August 31, 2024 – August 8, 2026
-**Total Weeks:** 22 documented (Dec Weeks 14-18 remain undocumented)
+**Total Coverage:** August 31, 2024 – August 15, 2026
+**Total Weeks:** 27 documented (Dec Weeks 14-18 remain undocumented)
 **Format:** Sunday → Saturday (PT)
 
 **Major Milestones:**
@@ -1002,4 +1049,4 @@ You can honestly demo this to a coach and they'd actually use it.
 - Week 19-21 (Jan): Analysis & intelligence features
 - April: GitHub cache and project-hub reliability
 - July: Multi-repo launch, legal, and public-site delivery
-- August: Game-platform hardening and secure bilingual redemption-card production
+- August: Game-platform hardening, secure redemption cards, analytics recovery, and canonical-site readiness
