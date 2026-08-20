@@ -1,33 +1,6 @@
 [
   {
-    "id": "18066231488",
-    "type": "CreateEvent",
-    "actor": {
-      "id": 117957000,
-      "login": "charlie2233",
-      "display_login": "charlie2233",
-      "gravatar_id": "",
-      "url": "https://api.github.com/users/charlie2233",
-      "avatar_url": "https://avatars.githubusercontent.com/u/117957000?"
-    },
-    "repo": {
-      "id": 1140388078,
-      "name": "charlie2233/atrak-website",
-      "url": "https://api.github.com/repos/charlie2233/atrak-website"
-    },
-    "payload": {
-      "ref": "agent/update-weekly-logs-20260818",
-      "ref_type": "branch",
-      "full_ref": "refs/heads/agent/update-weekly-logs-20260818",
-      "master_branch": "main",
-      "description": null,
-      "pusher_type": "user"
-    },
-    "public": true,
-    "created_at": "2026-08-18T16:00:33Z"
-  },
-  {
-    "id": "18062834609",
+    "id": "18252998963",
     "type": "PushEvent",
     "actor": {
       "id": 117957000,
@@ -44,12 +17,22 @@
     },
     "payload": {
       "repository_id": 1140388078,
-      "push_id": 40386807585,
+      "push_id": 40578193462,
       "ref": "refs/heads/main",
-      "head": "fccdd7f3b531be30d208c042ca6b70907b41ad97",
-      "before": "025e277b5d85b0b43ad3bf65a7503e1ea228a6ce",
-      "distinct_size": 21,
+      "head": "a8dd04603ab22d6d184246aa1b58c97af5d2808b",
+      "before": "bccc37bd41466ac15456bec355ad5ac198526b9b",
+      "distinct_size": 22,
       "commits": [
+        {
+          "sha": "a8dd04603ab22d6d184246aa1b58c97af5d2808b",
+          "message": "chore: refresh local weekly data [skip ci]",
+          "url": "https://github.com/charlie2233/atrak-website/commit/a8dd04603ab22d6d184246aa1b58c97af5d2808b"
+        },
+        {
+          "sha": "bccc37bd41466ac15456bec355ad5ac198526b9b",
+          "message": "chore: update GitHub data [skip ci]",
+          "url": "https://github.com/charlie2233/atrak-website/commit/bccc37bd41466ac15456bec355ad5ac198526b9b"
+        },
         {
           "sha": "c948af174966559ac21a6ed62b3f533d663c0185",
           "message": "chore: update GitHub data [skip ci]",
@@ -139,18 +122,61 @@
           "sha": "5e621f660cc1459f397d904009306f04adacf091",
           "message": "chore: update GitHub data [skip ci]",
           "url": "https://github.com/charlie2233/atrak-website/commit/5e621f660cc1459f397d904009306f04adacf091"
-        },
-        {
-          "sha": "58992714606cdf10f092bcf7565111ebff5b816e",
-          "message": "chore: update GitHub data [skip ci]",
-          "url": "https://github.com/charlie2233/atrak-website/commit/58992714606cdf10f092bcf7565111ebff5b816e"
-        },
-        {
-          "sha": "a84503b0b0abfe905613cb47d6d2560ff06278d4",
-          "message": "chore: update GitHub data [skip ci]",
-          "url": "https://github.com/charlie2233/atrak-website/commit/a84503b0b0abfe905613cb47d6d2560ff06278d4"
         }
       ]
+    },
+    "public": true,
+    "created_at": "2026-08-20T07:29:24Z"
+  },
+  {
+    "id": "18066231488",
+    "type": "CreateEvent",
+    "actor": {
+      "id": 117957000,
+      "login": "charlie2233",
+      "display_login": "charlie2233",
+      "gravatar_id": "",
+      "url": "https://api.github.com/users/charlie2233",
+      "avatar_url": "https://avatars.githubusercontent.com/u/117957000?"
+    },
+    "repo": {
+      "id": 1140388078,
+      "name": "charlie2233/atrak-website",
+      "url": "https://api.github.com/repos/charlie2233/atrak-website"
+    },
+    "payload": {
+      "ref": "agent/update-weekly-logs-20260818",
+      "ref_type": "branch",
+      "full_ref": "refs/heads/agent/update-weekly-logs-20260818",
+      "master_branch": "main",
+      "description": null,
+      "pusher_type": "user"
+    },
+    "public": true,
+    "created_at": "2026-08-18T16:00:33Z"
+  },
+  {
+    "id": "18062834609",
+    "type": "PushEvent",
+    "actor": {
+      "id": 117957000,
+      "login": "charlie2233",
+      "display_login": "charlie2233",
+      "gravatar_id": "",
+      "url": "https://api.github.com/users/charlie2233",
+      "avatar_url": "https://avatars.githubusercontent.com/u/117957000?"
+    },
+    "repo": {
+      "id": 1140388078,
+      "name": "charlie2233/atrak-website",
+      "url": "https://api.github.com/repos/charlie2233/atrak-website"
+    },
+    "payload": {
+      "repository_id": 1140388078,
+      "push_id": 40386807585,
+      "ref": "refs/heads/main",
+      "head": "fccdd7f3b531be30d208c042ca6b70907b41ad97",
+      "before": "025e277b5d85b0b43ad3bf65a7503e1ea228a6ce"
     },
     "public": true,
     "created_at": "2026-08-18T16:00:35Z"
@@ -4638,674 +4664,5 @@
     },
     "public": true,
     "created_at": "2026-07-21T05:36:54Z"
-  },
-  {
-    "id": "15421842246",
-    "type": "PushEvent",
-    "actor": {
-      "id": 117957000,
-      "login": "charlie2233",
-      "display_login": "charlie2233",
-      "gravatar_id": "",
-      "url": "https://api.github.com/users/charlie2233",
-      "avatar_url": "https://avatars.githubusercontent.com/u/117957000?"
-    },
-    "repo": {
-      "id": 1306028280,
-      "name": "charlie2233/backchannel-agent-support",
-      "url": "https://api.github.com/repos/charlie2233/backchannel-agent-support"
-    },
-    "payload": {
-      "repository_id": 1306028280,
-      "push_id": 37712821036,
-      "ref": "refs/heads/codex/backchannel-v0.3-completion",
-      "head": "f22ecaf65523edc80464f80764287e8a50005b79",
-      "before": "2f410243fe47a64565956362cd2a3a626b3dcd2d"
-    },
-    "public": true,
-    "created_at": "2026-07-21T05:05:11Z"
-  },
-  {
-    "id": "15419441420",
-    "type": "PushEvent",
-    "actor": {
-      "id": 117957000,
-      "login": "charlie2233",
-      "display_login": "charlie2233",
-      "gravatar_id": "",
-      "url": "https://api.github.com/users/charlie2233",
-      "avatar_url": "https://avatars.githubusercontent.com/u/117957000?"
-    },
-    "repo": {
-      "id": 1166891851,
-      "name": "charlie2233/rork-hoopshighlights-ai_Final",
-      "url": "https://api.github.com/repos/charlie2233/rork-hoopshighlights-ai_Final"
-    },
-    "payload": {
-      "repository_id": 1166891851,
-      "push_id": 37710419009,
-      "ref": "refs/heads/codex/build57-launch-truth-20260720",
-      "head": "f1318cab6a407cc552b1d978b59278452b275063",
-      "before": "491dc49027518c2b9b4a7a29a4803a3e233bfa16"
-    },
-    "public": true,
-    "created_at": "2026-07-21T04:18:13Z"
-  },
-  {
-    "id": "15419276638",
-    "type": "PushEvent",
-    "actor": {
-      "id": 117957000,
-      "login": "charlie2233",
-      "display_login": "charlie2233",
-      "gravatar_id": "",
-      "url": "https://api.github.com/users/charlie2233",
-      "avatar_url": "https://avatars.githubusercontent.com/u/117957000?"
-    },
-    "repo": {
-      "id": 1166891851,
-      "name": "charlie2233/rork-hoopshighlights-ai_Final",
-      "url": "https://api.github.com/repos/charlie2233/rork-hoopshighlights-ai_Final"
-    },
-    "payload": {
-      "repository_id": 1166891851,
-      "push_id": 37710254315,
-      "ref": "refs/heads/codex/build57-launch-truth-20260720",
-      "head": "491dc49027518c2b9b4a7a29a4803a3e233bfa16",
-      "before": "fb20adc79cdb6a983668941cba1635d6cc473cea"
-    },
-    "public": true,
-    "created_at": "2026-07-21T04:15:00Z"
-  },
-  {
-    "id": "15416672899",
-    "type": "PushEvent",
-    "actor": {
-      "id": 117957000,
-      "login": "charlie2233",
-      "display_login": "charlie2233",
-      "gravatar_id": "",
-      "url": "https://api.github.com/users/charlie2233",
-      "avatar_url": "https://avatars.githubusercontent.com/u/117957000?"
-    },
-    "repo": {
-      "id": 1306028280,
-      "name": "charlie2233/backchannel-agent-support",
-      "url": "https://api.github.com/repos/charlie2233/backchannel-agent-support"
-    },
-    "payload": {
-      "repository_id": 1306028280,
-      "push_id": 37707650693,
-      "ref": "refs/heads/codex/backchannel-v0.3-completion",
-      "head": "2f410243fe47a64565956362cd2a3a626b3dcd2d",
-      "before": "aef84a831b161bc0911d1d3e593149562528cd3c"
-    },
-    "public": true,
-    "created_at": "2026-07-21T03:22:16Z"
-  },
-  {
-    "id": "15415973634",
-    "type": "PushEvent",
-    "actor": {
-      "id": 117957000,
-      "login": "charlie2233",
-      "display_login": "charlie2233",
-      "gravatar_id": "",
-      "url": "https://api.github.com/users/charlie2233",
-      "avatar_url": "https://avatars.githubusercontent.com/u/117957000?"
-    },
-    "repo": {
-      "id": 1306028280,
-      "name": "charlie2233/backchannel-agent-support",
-      "url": "https://api.github.com/repos/charlie2233/backchannel-agent-support"
-    },
-    "payload": {
-      "repository_id": 1306028280,
-      "push_id": 37706951155,
-      "ref": "refs/heads/codex/backchannel-v0.3-completion",
-      "head": "aef84a831b161bc0911d1d3e593149562528cd3c",
-      "before": "e720f20502d7bff001912614b4a93f2f10462e7f"
-    },
-    "public": true,
-    "created_at": "2026-07-21T03:07:07Z"
-  },
-  {
-    "id": "15415478481",
-    "type": "PushEvent",
-    "actor": {
-      "id": 117957000,
-      "login": "charlie2233",
-      "display_login": "charlie2233",
-      "gravatar_id": "",
-      "url": "https://api.github.com/users/charlie2233",
-      "avatar_url": "https://avatars.githubusercontent.com/u/117957000?"
-    },
-    "repo": {
-      "id": 1306028280,
-      "name": "charlie2233/backchannel-agent-support",
-      "url": "https://api.github.com/repos/charlie2233/backchannel-agent-support"
-    },
-    "payload": {
-      "repository_id": 1306028280,
-      "push_id": 37706455798,
-      "ref": "refs/heads/codex/backchannel-v0.3-completion",
-      "head": "e720f20502d7bff001912614b4a93f2f10462e7f",
-      "before": "3b7c93392791929fa5b487f83cc0bdd5bec97077"
-    },
-    "public": true,
-    "created_at": "2026-07-21T02:56:59Z"
-  },
-  {
-    "id": "15414289513",
-    "type": "PushEvent",
-    "actor": {
-      "id": 117957000,
-      "login": "charlie2233",
-      "display_login": "charlie2233",
-      "gravatar_id": "",
-      "url": "https://api.github.com/users/charlie2233",
-      "avatar_url": "https://avatars.githubusercontent.com/u/117957000?"
-    },
-    "repo": {
-      "id": 1306028280,
-      "name": "charlie2233/backchannel-agent-support",
-      "url": "https://api.github.com/repos/charlie2233/backchannel-agent-support"
-    },
-    "payload": {
-      "repository_id": 1306028280,
-      "push_id": 37705268236,
-      "ref": "refs/heads/codex/backchannel-v0.3-completion",
-      "head": "3b7c93392791929fa5b487f83cc0bdd5bec97077",
-      "before": "605c527c7ea16d8997e0f87b8f936f0f2489af89"
-    },
-    "public": true,
-    "created_at": "2026-07-21T02:29:11Z"
-  },
-  {
-    "id": "15413350874",
-    "type": "PushEvent",
-    "actor": {
-      "id": 117957000,
-      "login": "charlie2233",
-      "display_login": "charlie2233",
-      "gravatar_id": "",
-      "url": "https://api.github.com/users/charlie2233",
-      "avatar_url": "https://avatars.githubusercontent.com/u/117957000?"
-    },
-    "repo": {
-      "id": 1306028280,
-      "name": "charlie2233/backchannel-agent-support",
-      "url": "https://api.github.com/repos/charlie2233/backchannel-agent-support"
-    },
-    "payload": {
-      "repository_id": 1306028280,
-      "push_id": 37704330177,
-      "ref": "refs/heads/codex/backchannel-v0.3-completion",
-      "head": "605c527c7ea16d8997e0f87b8f936f0f2489af89",
-      "before": "b9ab343a714a444fc3103370f0fd2a3508ca10fa"
-    },
-    "public": true,
-    "created_at": "2026-07-21T02:04:29Z"
-  },
-  {
-    "id": "15412701762",
-    "type": "PushEvent",
-    "actor": {
-      "id": 117957000,
-      "login": "charlie2233",
-      "display_login": "charlie2233",
-      "gravatar_id": "",
-      "url": "https://api.github.com/users/charlie2233",
-      "avatar_url": "https://avatars.githubusercontent.com/u/117957000?"
-    },
-    "repo": {
-      "id": 1306028280,
-      "name": "charlie2233/backchannel-agent-support",
-      "url": "https://api.github.com/repos/charlie2233/backchannel-agent-support"
-    },
-    "payload": {
-      "repository_id": 1306028280,
-      "push_id": 37703681529,
-      "ref": "refs/heads/codex/backchannel-v0.3-completion",
-      "head": "b9ab343a714a444fc3103370f0fd2a3508ca10fa",
-      "before": "4c62fe9fb797883ab5670f72bd8cca88042dfca6"
-    },
-    "public": true,
-    "created_at": "2026-07-21T01:48:10Z"
-  },
-  {
-    "id": "15410441450",
-    "type": "PushEvent",
-    "actor": {
-      "id": 117957000,
-      "login": "charlie2233",
-      "display_login": "charlie2233",
-      "gravatar_id": "",
-      "url": "https://api.github.com/users/charlie2233",
-      "avatar_url": "https://avatars.githubusercontent.com/u/117957000?"
-    },
-    "repo": {
-      "id": 1306028280,
-      "name": "charlie2233/backchannel-agent-support",
-      "url": "https://api.github.com/repos/charlie2233/backchannel-agent-support"
-    },
-    "payload": {
-      "repository_id": 1306028280,
-      "push_id": 37701424156,
-      "ref": "refs/heads/codex/backchannel-v0.3-completion",
-      "head": "4c62fe9fb797883ab5670f72bd8cca88042dfca6",
-      "before": "02291a3eb496017bf3944b8dfc3d7c02e07f845a"
-    },
-    "public": true,
-    "created_at": "2026-07-21T00:48:47Z"
-  },
-  {
-    "id": "15410149824",
-    "type": "PushEvent",
-    "actor": {
-      "id": 117957000,
-      "login": "charlie2233",
-      "display_login": "charlie2233",
-      "gravatar_id": "",
-      "url": "https://api.github.com/users/charlie2233",
-      "avatar_url": "https://avatars.githubusercontent.com/u/117957000?"
-    },
-    "repo": {
-      "id": 1306028280,
-      "name": "charlie2233/backchannel-agent-support",
-      "url": "https://api.github.com/repos/charlie2233/backchannel-agent-support"
-    },
-    "payload": {
-      "repository_id": 1306028280,
-      "push_id": 37701133854,
-      "ref": "refs/heads/codex/backchannel-v0.3-completion",
-      "head": "02291a3eb496017bf3944b8dfc3d7c02e07f845a",
-      "before": "feee157a03d9894f9a944a4eb56410a7b8055316"
-    },
-    "public": true,
-    "created_at": "2026-07-21T00:40:53Z"
-  },
-  {
-    "id": "15407877861",
-    "type": "PushEvent",
-    "actor": {
-      "id": 117957000,
-      "login": "charlie2233",
-      "display_login": "charlie2233",
-      "gravatar_id": "",
-      "url": "https://api.github.com/users/charlie2233",
-      "avatar_url": "https://avatars.githubusercontent.com/u/117957000?"
-    },
-    "repo": {
-      "id": 1306028280,
-      "name": "charlie2233/backchannel-agent-support",
-      "url": "https://api.github.com/repos/charlie2233/backchannel-agent-support"
-    },
-    "payload": {
-      "repository_id": 1306028280,
-      "push_id": 37698871147,
-      "ref": "refs/heads/codex/backchannel-v0.3-completion",
-      "head": "feee157a03d9894f9a944a4eb56410a7b8055316",
-      "before": "28af50dd6328115e57673b0a87e6d8bc3cf0d4b6"
-    },
-    "public": true,
-    "created_at": "2026-07-20T23:41:38Z"
-  },
-  {
-    "id": "15407405697",
-    "type": "PushEvent",
-    "actor": {
-      "id": 117957000,
-      "login": "charlie2233",
-      "display_login": "charlie2233",
-      "gravatar_id": "",
-      "url": "https://api.github.com/users/charlie2233",
-      "avatar_url": "https://avatars.githubusercontent.com/u/117957000?"
-    },
-    "repo": {
-      "id": 1306028280,
-      "name": "charlie2233/backchannel-agent-support",
-      "url": "https://api.github.com/repos/charlie2233/backchannel-agent-support"
-    },
-    "payload": {
-      "repository_id": 1306028280,
-      "push_id": 37698402060,
-      "ref": "refs/heads/codex/backchannel-v0.3-completion",
-      "head": "28af50dd6328115e57673b0a87e6d8bc3cf0d4b6",
-      "before": "b7666aef83c7939a1f0e755f9cbc1ef7303c947e"
-    },
-    "public": true,
-    "created_at": "2026-07-20T23:29:35Z"
-  },
-  {
-    "id": "12047025885",
-    "type": "PullRequestEvent",
-    "actor": {
-      "id": 117957000,
-      "login": "charlie2233",
-      "display_login": "charlie2233",
-      "gravatar_id": "",
-      "url": "https://api.github.com/users/charlie2233",
-      "avatar_url": "https://avatars.githubusercontent.com/u/117957000?"
-    },
-    "repo": {
-      "id": 1166891851,
-      "name": "charlie2233/rork-hoopshighlights-ai_Final",
-      "url": "https://api.github.com/repos/charlie2233/rork-hoopshighlights-ai_Final"
-    },
-    "payload": {
-      "action": "merged",
-      "number": 118,
-      "pull_request": {
-        "url": "https://api.github.com/repos/charlie2233/rork-hoopshighlights-ai_Final/pulls/118",
-        "id": 4094764652,
-        "number": 118,
-        "head": {
-          "ref": "codex/upload-stall-live-20260720",
-          "sha": "135b8a60f2ecdfd6c92f1d92a4eea0724e84c189",
-          "repo": {
-            "id": 1166891851,
-            "url": "https://api.github.com/repos/charlie2233/rork-hoopshighlights-ai_Final",
-            "name": "rork-hoopshighlights-ai_Final"
-          }
-        },
-        "base": {
-          "ref": "main",
-          "sha": "b7e318a41e4639bee0a0a0f7d22919639800a1e9",
-          "repo": {
-            "id": 1166891851,
-            "url": "https://api.github.com/repos/charlie2233/rork-hoopshighlights-ai_Final",
-            "name": "rork-hoopshighlights-ai_Final"
-          }
-        }
-      }
-    },
-    "public": true,
-    "created_at": "2026-07-20T21:46:05Z"
-  },
-  {
-    "id": "12046675600",
-    "type": "PullRequestEvent",
-    "actor": {
-      "id": 117957000,
-      "login": "charlie2233",
-      "display_login": "charlie2233",
-      "gravatar_id": "",
-      "url": "https://api.github.com/users/charlie2233",
-      "avatar_url": "https://avatars.githubusercontent.com/u/117957000?"
-    },
-    "repo": {
-      "id": 1166891851,
-      "name": "charlie2233/rork-hoopshighlights-ai_Final",
-      "url": "https://api.github.com/repos/charlie2233/rork-hoopshighlights-ai_Final"
-    },
-    "payload": {
-      "action": "opened",
-      "number": 118,
-      "pull_request": {
-        "url": "https://api.github.com/repos/charlie2233/rork-hoopshighlights-ai_Final/pulls/118",
-        "id": 4094764652,
-        "number": 118,
-        "head": {
-          "ref": "codex/upload-stall-live-20260720",
-          "sha": "135b8a60f2ecdfd6c92f1d92a4eea0724e84c189",
-          "repo": {
-            "id": 1166891851,
-            "url": "https://api.github.com/repos/charlie2233/rork-hoopshighlights-ai_Final",
-            "name": "rork-hoopshighlights-ai_Final"
-          }
-        },
-        "base": {
-          "ref": "main",
-          "sha": "b7e318a41e4639bee0a0a0f7d22919639800a1e9",
-          "repo": {
-            "id": 1166891851,
-            "url": "https://api.github.com/repos/charlie2233/rork-hoopshighlights-ai_Final",
-            "name": "rork-hoopshighlights-ai_Final"
-          }
-        }
-      }
-    },
-    "public": true,
-    "created_at": "2026-07-20T21:36:16Z"
-  },
-  {
-    "id": "12040787008",
-    "type": "PullRequestEvent",
-    "actor": {
-      "id": 117957000,
-      "login": "charlie2233",
-      "display_login": "charlie2233",
-      "gravatar_id": "",
-      "url": "https://api.github.com/users/charlie2233",
-      "avatar_url": "https://avatars.githubusercontent.com/u/117957000?"
-    },
-    "repo": {
-      "id": 1166891851,
-      "name": "charlie2233/rork-hoopshighlights-ai_Final",
-      "url": "https://api.github.com/repos/charlie2233/rork-hoopshighlights-ai_Final"
-    },
-    "payload": {
-      "action": "merged",
-      "number": 117,
-      "pull_request": {
-        "url": "https://api.github.com/repos/charlie2233/rork-hoopshighlights-ai_Final/pulls/117",
-        "id": 4092109325,
-        "number": 117,
-        "head": {
-          "ref": "codex/team-scan-attribution-batching-20260720",
-          "sha": "610bdacd621bffd4cd1067e5ecc403a40d85f7fd",
-          "repo": {
-            "id": 1166891851,
-            "url": "https://api.github.com/repos/charlie2233/rork-hoopshighlights-ai_Final",
-            "name": "rork-hoopshighlights-ai_Final"
-          }
-        },
-        "base": {
-          "ref": "main",
-          "sha": "b9f5f35f143175bdbc621c2e394a6fd8be0bda79",
-          "repo": {
-            "id": 1166891851,
-            "url": "https://api.github.com/repos/charlie2233/rork-hoopshighlights-ai_Final",
-            "name": "rork-hoopshighlights-ai_Final"
-          }
-        }
-      }
-    },
-    "public": true,
-    "created_at": "2026-07-20T19:16:10Z"
-  },
-  {
-    "id": "12039512471",
-    "type": "PullRequestReviewCommentEvent",
-    "actor": {
-      "id": 117957000,
-      "login": "charlie2233",
-      "display_login": "charlie2233",
-      "gravatar_id": "",
-      "url": "https://api.github.com/users/charlie2233",
-      "avatar_url": "https://avatars.githubusercontent.com/u/117957000?"
-    },
-    "repo": {
-      "id": 1166891851,
-      "name": "charlie2233/rork-hoopshighlights-ai_Final",
-      "url": "https://api.github.com/repos/charlie2233/rork-hoopshighlights-ai_Final"
-    },
-    "payload": {
-      "action": "created",
-      "comment": {
-        "url": "https://api.github.com/repos/charlie2233/rork-hoopshighlights-ai_Final/pulls/comments/3616740410",
-        "pull_request_review_id": 4737964412,
-        "id": 3616740410,
-        "node_id": "PRRC_kwDORY1bS87XkxQ6",
-        "diff_hunk": "@@ -57,50 +66,390 @@ class QuickScanFrame:\n     clip_ref: Optional[str] = None\n \n \n+@dataclass(frozen=True)\n+class TeamQuickScanReport:\n+    used: bool = False\n+    requested_candidates: int = 0\n+    returned_attributions: int = 0\n+    explicit_unknown_attributions: int = 0\n+    missing_attributions: int = 0\n+    completed_batches: int = 0\n+    failed_batches: int = 0\n+    budget_exhausted: bool = False\n+\n+\n+@dataclass\n+class _QuickScanBudget:\n+    deadline: float\n+    configured_timeout_seconds: float\n+    request_count: int = 0\n+    reserved_output_tokens: int = 0\n+    exhausted: bool = False\n+\n+    @classmethod\n+    def from_settings(cls, settings: Settings) -> \"_QuickScanBudget\":\n+        configured_timeout = max(0.25, float(getattr(settings, \"team_quick_scan_timeout_seconds\", 180.0)))\n+        return cls(\n+            deadline=monotonic() + configured_timeout,\n+            configured_timeout_seconds=configured_timeout,\n+        )\n+\n+    def reserve_request(self, settings: Settings, candidate_count: int) -> Optional[tuple[int, float]]:\n+        remaining_seconds = self.deadline - monotonic()\n+        output_tokens = _quick_scan_batch_output_tokens(settings, candidate_count)\n+        if (\n+            remaining_seconds <= 0.25\n+            or self.request_count >= TEAM_QUICK_SCAN_MAX_REQUESTS\n+            or self.reserved_output_tokens + output_tokens > TEAM_QUICK_SCAN_MAX_TOTAL_OUTPUT_TOKENS\n+        ):\n+            self.exhausted = True\n+            return None\n+\n+        timeout_seconds = min(\n+            self.configured_timeout_seconds,\n+            TEAM_QUICK_SCAN_MAX_REQUEST_TIMEOUT_SECONDS,\n+            remaining_seconds,\n+        )\n+        if (\n+            self.configured_timeout_seconds <= TEAM_QUICK_SCAN_MAX_REQUEST_TIMEOUT_SECONDS\n+            and remaining_seconds >= self.configured_timeout_seconds - 0.1\n+        ):\n+            timeout_seconds = self.configured_timeout_seconds\n+        self.request_count += 1\n+        self.reserved_output_tokens += output_tokens\n+        return output_tokens, max(timeout_seconds, 0.25)\n+\n+\n+@dataclass(frozen=True)\n+class _QuickScanBatchResult:\n+    requested_refs: tuple[str, ...]\n+    output: Optional[dict[str, Any]] = None\n+    teams: tuple[TeamOption, ...] = ()\n+    attribution_items: tuple[dict[str, Any], ...] = ()\n+    attempted: bool = False\n+    failed: bool = False\n+\n+\n def apply_team_quick_scan(\n     source_path: Path,\n     duration_seconds: float,\n     clips: Sequence[CloudClip],\n     settings: Settings,\n     response_client: Optional[ResponseClient] = None,\n ) -> tuple[list[CloudClip], list[TeamOption], bool]:\n+    scanned, teams, report = apply_team_quick_scan_with_report(\n+        source_path,\n+        duration_seconds,\n+        clips,\n+        settings,\n+        response_client=response_client,\n+    )\n+    return scanned, teams, report.used\n+\n+\n+def apply_team_quick_scan_with_report(\n+    source_path: Path,\n+    duration_seconds: float,\n+    clips: Sequence[CloudClip],\n+    settings: Settings,\n+    response_client: Optional[ResponseClient] = None,\n+) -> tuple[list[CloudClip], list[TeamOption], TeamQuickScanReport]:\n     if not getattr(settings, \"team_quick_scan_enabled\", False):\n-        return list(clips), [], False\n+        return list(clips), [], TeamQuickScanReport()\n     api_key = getattr(settings, \"team_quick_scan_api_key\", None)\n     if not api_key:\n-        return list(clips), [], False\n+        return list(clips), [], TeamQuickScanReport()\n     if not source_path.is_file():\n-        return list(clips), [], False\n+        return list(clips), [], TeamQuickScanReport()\n+\n+    candidate_limit = _max_quick_scan_candidate_clips(settings, len(clips))\n+    candidate_items = [(f\"clip_{index}\", clip) for index, clip in enumerate(clips[:candidate_limit])]\n+    candidate_by_ref = dict(candidate_items)\n+    candidate_refs = [clip_ref for clip_ref, _clip in candidate_items]\n+    labels_by_clip_ref = {clip_ref: clip.label for clip_ref, clip in candidate_items}\n+    client = response_client or _default_responses_client\n+    budget = _QuickScanBudget.from_settings(settings)\n+    context_frames = _extract_quick_scan_context_frames(\n+        source_path,\n+        duration_seconds,\n+        settings,\n+        deadline=budget.deadline,\n+    )\n+\n+    if not candidate_items:\n+        if not context_frames:\n+            return list(clips), [], TeamQuickScanReport()\n+        prescan_result = _request_quick_scan_batch(\n+            duration_seconds=duration_seconds,\n+            candidate_items=[],\n+            frames=context_frames,\n+            settings=settings,\n+            api_key=api_key,\n+            response_client=client,\n+            budget=budget,\n+        )\n+        teams = list(prescan_result.teams)\n+        report = TeamQuickScanReport(\n+            used=bool(teams),\n+            completed_batches=int(prescan_result.attempted and not prescan_result.failed),\n+            failed_batches=int(prescan_result.failed),\n+            budget_exhausted=budget.exhausted,\n+        )\n+        return list(clips), teams, report\n+\n+    batch_results: list[_QuickScanBatchResult] = []\n+    all_frames_by_ref: dict[str, list[QuickScanFrame]] = {}\n+\n+    def scan_refs(clip_refs: Sequence[str]) -> None:\n+        if not clip_refs or budget.exhausted:\n+            return\n+        items = [(clip_ref, candidate_by_ref[clip_ref]) for clip_ref in clip_refs]\n+        candidate_frames = _extract_quick_scan_candidate_frames(\n+            source_path,\n+            duration_seconds,\n+            items,\n+            len(candidate_items),\n+            settings,\n+            deadline=budget.deadline,\n+        )\n+        for frame in candidate_frames:\n+            if frame.clip_ref is not None:\n+                all_frames_by_ref.setdefault(frame.clip_ref, []).append(frame)\n+        for bounded_refs in _payload_bounded_candidate_ref_batches(clip_refs, context_frames, candidate_frames):\n+            frames = [*context_frames, *_frames_for_candidate_refs(candidate_frames, bounded_refs)]\n+            if not frames:\n+                continue\n+            batch_results.append(\n+                _request_quick_scan_batch(\n+                    duration_seconds=duration_seconds,\n+                    candidate_items=[(clip_ref, candidate_by_ref[clip_ref]) for clip_ref in bounded_refs],\n+                    frames=frames,\n+                    settings=settings,\n+                    api_key=api_key,\n+                    response_client=client,\n+                    budget=budget,\n+                )\n+            )\n \n-    frames = _extract_quick_scan_frames(source_path, duration_seconds, clips, settings)\n-    if not frames:\n-        return list(clips), [], False\n+    for batch_refs in _candidate_ref_batches(candidate_refs):\n+        scan_refs(batch_refs)\n+\n+    for _ in range(TEAM_QUICK_SCAN_MISSING_ATTRIBUTION_RETRY_PASSES):\n+        returned_refs = {\n+            item[\"clipRef\"]\n+            for result in batch_results\n+            for item in result.attribution_items\n+        }\n+        missing_refs = [clip_ref for clip_ref in candidate_refs if clip_ref not in returned_refs]\n+        if not missing_refs or budget.exhausted:\n+            break\n+        for batch_refs in _candidate_ref_batches(missing_refs, batch_size=TEAM_QUICK_SCAN_RETRY_BATCH_SIZE):\n+            scan_refs(batch_refs)\n \n-    payload = _build_openai_payload(duration_seconds, clips, frames, settings)\n+    teams: list[TeamOption] = []\n+    for result in batch_results:\n+        teams = _merge_team_options(teams, result.teams)\n+\n+    evidence_frames = [frame for frames in all_frames_by_ref.values() for frame in frames]\n+    evidence_frame_refs = _evidence_frame_refs_by_clip(evidence_frames)\n+    evidence_frame_roles = _evidence_frame_roles_by_clip(evidence_frames)\n+    attributions: dict[str, ClipTeamAttribution] = {}\n+    for result in batch_results:\n+        if result.output is None or not result.attribution_items:\n+            continue\n+        sanitized_output = dict(result.output)\n+        sanitized_output[\"clipAttributions\"] = list(result.attribution_items)\n+        _, batch_attributions = _parse_quick_scan_output(\n+            sanitized_output,\n+            settings,\n+            evidence_frame_refs,\n+            evidence_frame_roles,\n+            labels_by_clip_ref,\n+            detected_teams=teams,\n+        )\n+        for clip_ref, attribution in batch_attributions.items():\n+            attributions.setdefault(clip_ref, attribution)\n+\n+    scanned: list[CloudClip] = []\n+    for index, clip in enumerate(clips):\n+        attribution = attributions.get(f\"clip_{index}\")\n+        scanned.append(clip.model_copy(update={\"teamAttribution\": attribution}) if attribution is not None else clip)\n+    explicit_unknown_attributions = sum(\n+        1\n+        for attribution in attributions.values()\n+        if attribution.teamId is None and attribution.label is None and attribution.colorLabel is None\n+    )\n+    report = TeamQuickScanReport(\n+        used=bool(teams or attributions),\n+        requested_candidates=len(candidate_refs),\n+        returned_attributions=len(attributions),\n+        explicit_unknown_attributions=explicit_unknown_attributions,\n+        missing_attributions=max(0, len(candidate_refs) - len(attributions)),\n+        completed_batches=sum(1 for result in batch_results if result.attempted and not result.failed),\n+        failed_batches=sum(1 for result in batch_results if result.failed),\n+        budget_exhausted=budget.exhausted,\n+    )\n+    return scanned, teams, report\n+\n+\n+def _request_quick_scan_batch(\n+    *,\n+    duration_seconds: float,\n+    candidate_items: Sequence[tuple[str, CloudClip]],\n+    frames: Sequence[QuickScanFrame],\n+    settings: Settings,\n+    api_key: str,\n+    response_client: ResponseClient,\n+    budget: _QuickScanBudget,\n+) -> _QuickScanBatchResult:\n+    clip_refs = [clip_ref for clip_ref, _clip in candidate_items]\n+    allowed_refs = set(clip_refs)\n+    reservation = budget.reserve_request(settings, len(clip_refs))\n+    if reservation is None:\n+        return _QuickScanBatchResult(requested_refs=tuple(clip_refs))\n+    output_tokens, timeout_seconds = reservation\n     try:\n-        client = response_client or _default_responses_client\n-        response_payload = client(\n+        payload = _build_openai_payload(\n+            duration_seconds,\n+            [clip for _clip_ref, clip in candidate_items],\n+            frames,\n+            settings,\n+            clip_refs=clip_refs,\n+            max_output_tokens=output_tokens,\n+        )\n+        response_payload = response_client(\n             payload,\n             api_key,\n             getattr(settings, \"team_quick_scan_endpoint\", \"https://api.openai.com/v1/responses\"),\n-            float(getattr(settings, \"team_quick_scan_timeout_seconds\", 24.0)),\n+            timeout_seconds,\n         )\n         output = json.loads(_extract_output_text(response_payload))\n+        if not isinstance(output, dict):\n+            raise ValueError(\"Team quick scan output must be an object\")\n     except (HTTPError, URLError, OSError, TimeoutError, ValueError, json.JSONDecodeError):\n-        return list(clips), [], False\n+        return _QuickScanBatchResult(\n+            requested_refs=tuple(clip_refs),\n+            attempted=True,\n+            failed=True,\n+        )\n \n-    teams, attributions = _parse_quick_scan_output(\n-        output,\n-        settings,\n-        _evidence_frame_refs_by_clip(frames),\n-        _evidence_frame_roles_by_clip(frames),\n-        {f\"clip_{index}\": clip.label for index, clip in enumerate(clips)},\n+    teams = _parse_team_options(output, settings)\n+    attribution_items = _valid_batch_attribution_items(output, allowed_refs)\n+    return _QuickScanBatchResult(\n+        requested_refs=tuple(clip_refs),\n+        output=output,\n+        teams=tuple(teams),\n+        attribution_items=tuple(attribution_items),\n+        attempted=True,\n     )\n-    scanned: list[CloudClip] = []\n-    for index, clip in enumerate(clips):\n-        attribution = attributions.get(f\"clip_{index}\")\n-        scanned.append(clip.model_copy(update={\"teamAttribution\": attribution}) if attribution is not None else clip)\n-    return scanned, teams, bool(teams or attributions)\n+\n+\n+def _candidate_ref_batches(\n+    clip_refs: Sequence[str],\n+    *,\n+    batch_size: int = TEAM_QUICK_SCAN_CANDIDATE_BATCH_SIZE,\n+) -> list[list[str]]:\n+    batch_size = max(1, min(int(batch_size), TEAM_QUICK_SCAN_CANDIDATE_BATCH_SIZE))\n+    return [\n+        list(clip_refs[index:index + batch_size])\n+        for index in range(0, len(clip_refs), batch_size)\n+    ]\n+\n+\n+def _payload_bounded_candidate_ref_batches(\n+    clip_refs: Sequence[str],\n+    context_frames: Sequence[QuickScanFrame],\n+    candidate_frames: Sequence[QuickScanFrame],\n+) -> list[list[str]]:\n+    frames_by_ref: dict[str, list[QuickScanFrame]] = {}\n+    for frame in candidate_frames:\n+        if frame.clip_ref is not None:\n+            frames_by_ref.setdefault(frame.clip_ref, []).append(frame)\n+    context_bytes = sum(_frame_payload_bytes(frame) for frame in context_frames)\n+    batches: list[list[str]] = []\n+    current_refs: list[str] = []\n+    current_frame_count = 0\n+    current_bytes = context_bytes\n+    for clip_ref in clip_refs:\n+        ref_frames = frames_by_ref.get(clip_ref, [])\n+        ref_frame_count = len(ref_frames)\n+        ref_bytes = sum(_frame_payload_bytes(frame) for frame in ref_frames)\n+        exceeds_limit = bool(current_refs) and (\n+            len(current_refs) >= TEAM_QUICK_SCAN_CANDIDATE_BATCH_SIZE\n+            or current_frame_count + ref_frame_count > TEAM_QUICK_SCAN_MAX_BATCH_CANDIDATE_FRAMES\n+            or current_bytes + ref_bytes > TEAM_QUICK_SCAN_MAX_BATCH_IMAGE_BYTES",
-        "path": "ios/backend/app/team_quick_scan.py",
-        "commit_id": "610bdacd621bffd4cd1067e5ecc403a40d85f7fd",
-        "original_commit_id": "15032f6429fb15f1e81f690f670f39407b79e65e",
-        "user": {
-          "login": "charlie2233",
-          "id": 117957000,
-          "node_id": "U_kgDOBwfhiA",
-          "avatar_url": "https://avatars.githubusercontent.com/u/117957000?v=4",
-          "gravatar_id": "",
-          "url": "https://api.github.com/users/charlie2233",
-          "html_url": "https://github.com/charlie2233",
-          "followers_url": "https://api.github.com/users/charlie2233/followers",
-          "following_url": "https://api.github.com/users/charlie2233/following{/other_user}",
-          "gists_url": "https://api.github.com/users/charlie2233/gists{/gist_id}",
-          "starred_url": "https://api.github.com/users/charlie2233/starred{/owner}{/repo}",
-          "subscriptions_url": "https://api.github.com/users/charlie2233/subscriptions",
-          "organizations_url": "https://api.github.com/users/charlie2233/orgs",
-          "repos_url": "https://api.github.com/users/charlie2233/repos",
-          "events_url": "https://api.github.com/users/charlie2233/events{/privacy}",
-          "received_events_url": "https://api.github.com/users/charlie2233/received_events",
-          "type": "User",
-          "user_view_type": "public",
-          "site_admin": false
-        },
-        "body": "Fixed in 610bdacd. Actual request-frame selection now trims the largest context frames first until the encoded payload is within the 24 MiB ceiling, preserving candidate evidence under the configured bounds. Evidence validation now records only candidate frames actually sent. Added a focused regression test; 50/50 team-scan and 86/86 pipeline-quality tests pass.",
-        "created_at": "2026-07-20T18:47:30Z",
-        "updated_at": "2026-07-20T18:47:30Z",
-        "html_url": "https://github.com/charlie2233/rork-hoopshighlights-ai_Final/pull/117#discussion_r3616740410",
-        "pull_request_url": "https://api.github.com/repos/charlie2233/rork-hoopshighlights-ai_Final/pulls/117",
-        "_links": {
-          "self": {
-            "href": "https://api.github.com/repos/charlie2233/rork-hoopshighlights-ai_Final/pulls/comments/3616740410"
-          },
-          "html": {
-            "href": "https://github.com/charlie2233/rork-hoopshighlights-ai_Final/pull/117#discussion_r3616740410"
-          },
-          "pull_request": {
-            "href": "https://api.github.com/repos/charlie2233/rork-hoopshighlights-ai_Final/pulls/117"
-          }
-        },
-        "reactions": {
-          "url": "https://api.github.com/repos/charlie2233/rork-hoopshighlights-ai_Final/pulls/comments/3616740410/reactions",
-          "total_count": 0,
-          "+1": 0,
-          "-1": 0,
-          "laugh": 0,
-          "hooray": 0,
-          "confused": 0,
-          "heart": 0,
-          "rocket": 0,
-          "eyes": 0
-        },
-        "in_reply_to_id": 3615308132,
-        "original_position": 360,
-        "position": 364,
-        "subject_type": "line"
-      },
-      "pull_request": {
-        "url": "https://api.github.com/repos/charlie2233/rork-hoopshighlights-ai_Final/pulls/117",
-        "id": 4092109325,
-        "number": 117,
-        "head": {
-          "ref": "codex/team-scan-attribution-batching-20260720",
-          "sha": "610bdacd621bffd4cd1067e5ecc403a40d85f7fd",
-          "repo": {
-            "id": 1166891851,
-            "url": "https://api.github.com/repos/charlie2233/rork-hoopshighlights-ai_Final",
-            "name": "rork-hoopshighlights-ai_Final"
-          }
-        },
-        "base": {
-          "ref": "main",
-          "sha": "b9f5f35f143175bdbc621c2e394a6fd8be0bda79",
-          "repo": {
-            "id": 1166891851,
-            "url": "https://api.github.com/repos/charlie2233/rork-hoopshighlights-ai_Final",
-            "name": "rork-hoopshighlights-ai_Final"
-          }
-        }
-      }
-    },
-    "public": true,
-    "created_at": "2026-07-20T18:47:30Z"
-  },
-  {
-    "id": "12039512386",
-    "type": "PullRequestReviewEvent",
-    "actor": {
-      "id": 117957000,
-      "login": "charlie2233",
-      "display_login": "charlie2233",
-      "gravatar_id": "",
-      "url": "https://api.github.com/users/charlie2233",
-      "avatar_url": "https://avatars.githubusercontent.com/u/117957000?"
-    },
-    "repo": {
-      "id": 1166891851,
-      "name": "charlie2233/rork-hoopshighlights-ai_Final",
-      "url": "https://api.github.com/repos/charlie2233/rork-hoopshighlights-ai_Final"
-    },
-    "payload": {
-      "review": {
-        "id": 4737964412,
-        "node_id": "PRR_kwDORY1bS88AAAABGmeZfA",
-        "user": {
-          "login": "charlie2233",
-          "id": 117957000,
-          "node_id": "U_kgDOBwfhiA",
-          "avatar_url": "https://avatars.githubusercontent.com/u/117957000?v=4",
-          "gravatar_id": "",
-          "url": "https://api.github.com/users/charlie2233",
-          "html_url": "https://github.com/charlie2233",
-          "followers_url": "https://api.github.com/users/charlie2233/followers",
-          "following_url": "https://api.github.com/users/charlie2233/following{/other_user}",
-          "gists_url": "https://api.github.com/users/charlie2233/gists{/gist_id}",
-          "starred_url": "https://api.github.com/users/charlie2233/starred{/owner}{/repo}",
-          "subscriptions_url": "https://api.github.com/users/charlie2233/subscriptions",
-          "organizations_url": "https://api.github.com/users/charlie2233/orgs",
-          "repos_url": "https://api.github.com/users/charlie2233/repos",
-          "events_url": "https://api.github.com/users/charlie2233/events{/privacy}",
-          "received_events_url": "https://api.github.com/users/charlie2233/received_events",
-          "type": "User",
-          "user_view_type": "public",
-          "site_admin": false
-        },
-        "body": null,
-        "commit_id": "610bdacd621bffd4cd1067e5ecc403a40d85f7fd",
-        "state": "commented",
-        "html_url": "https://github.com/charlie2233/rork-hoopshighlights-ai_Final/pull/117#pullrequestreview-4737964412",
-        "pull_request_url": "https://api.github.com/repos/charlie2233/rork-hoopshighlights-ai_Final/pulls/117",
-        "_links": {
-          "html": {
-            "href": "https://github.com/charlie2233/rork-hoopshighlights-ai_Final/pull/117#pullrequestreview-4737964412"
-          },
-          "pull_request": {
-            "href": "https://api.github.com/repos/charlie2233/rork-hoopshighlights-ai_Final/pulls/117"
-          }
-        },
-        "submitted_at": "2026-07-20T18:47:30Z",
-        "updated_at": "2026-07-20T18:47:30Z"
-      },
-      "pull_request": {
-        "url": "https://api.github.com/repos/charlie2233/rork-hoopshighlights-ai_Final/pulls/117",
-        "id": 4092109325,
-        "number": 117,
-        "head": {
-          "ref": "codex/team-scan-attribution-batching-20260720",
-          "sha": "610bdacd621bffd4cd1067e5ecc403a40d85f7fd",
-          "repo": {
-            "id": 1166891851,
-            "url": "https://api.github.com/repos/charlie2233/rork-hoopshighlights-ai_Final",
-            "name": "rork-hoopshighlights-ai_Final"
-          }
-        },
-        "base": {
-          "ref": "main",
-          "sha": "b9f5f35f143175bdbc621c2e394a6fd8be0bda79",
-          "repo": {
-            "id": 1166891851,
-            "url": "https://api.github.com/repos/charlie2233/rork-hoopshighlights-ai_Final",
-            "name": "rork-hoopshighlights-ai_Final"
-          }
-        }
-      },
-      "action": "created"
-    },
-    "public": true,
-    "created_at": "2026-07-20T18:47:30Z"
   }
 ]
