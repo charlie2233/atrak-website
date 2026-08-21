@@ -24,6 +24,11 @@
       "distinct_size": 22,
       "commits": [
         {
+          "sha": "13d98c1998a2eb0abfb347a3dd8d9e50c62ea55b",
+          "message": "chore: update GitHub data [skip ci]",
+          "url": "https://github.com/charlie2233/atrak-website/commit/13d98c1998a2eb0abfb347a3dd8d9e50c62ea55b"
+        },
+        {
           "sha": "a8dd04603ab22d6d184246aa1b58c97af5d2808b",
           "message": "chore: refresh local weekly data [skip ci]",
           "url": "https://github.com/charlie2233/atrak-website/commit/a8dd04603ab22d6d184246aa1b58c97af5d2808b"
@@ -117,11 +122,6 @@
           "sha": "e467c9a239981abf106af6f60fb0d77daa589dee",
           "message": "chore: update GitHub data [skip ci]",
           "url": "https://github.com/charlie2233/atrak-website/commit/e467c9a239981abf106af6f60fb0d77daa589dee"
-        },
-        {
-          "sha": "5e621f660cc1459f397d904009306f04adacf091",
-          "message": "chore: update GitHub data [skip ci]",
-          "url": "https://github.com/charlie2233/atrak-website/commit/5e621f660cc1459f397d904009306f04adacf091"
         }
       ]
     },
@@ -4468,201 +4468,5 @@
     },
     "public": true,
     "created_at": "2026-07-21T19:03:24Z"
-  },
-  {
-    "id": "12061890401",
-    "type": "PullRequestEvent",
-    "actor": {
-      "id": 117957000,
-      "login": "charlie2233",
-      "display_login": "charlie2233",
-      "gravatar_id": "",
-      "url": "https://api.github.com/users/charlie2233",
-      "avatar_url": "https://avatars.githubusercontent.com/u/117957000?"
-    },
-    "repo": {
-      "id": 1166891851,
-      "name": "charlie2233/rork-hoopshighlights-ai_Final",
-      "url": "https://api.github.com/repos/charlie2233/rork-hoopshighlights-ai_Final"
-    },
-    "payload": {
-      "action": "merged",
-      "number": 119,
-      "pull_request": {
-        "url": "https://api.github.com/repos/charlie2233/rork-hoopshighlights-ai_Final/pulls/119",
-        "id": 4097033132,
-        "number": 119,
-        "head": {
-          "ref": "codex/build57-launch-truth-20260720",
-          "sha": "f1318cab6a407cc552b1d978b59278452b275063",
-          "repo": {
-            "id": 1166891851,
-            "url": "https://api.github.com/repos/charlie2233/rork-hoopshighlights-ai_Final",
-            "name": "rork-hoopshighlights-ai_Final"
-          }
-        },
-        "base": {
-          "ref": "main",
-          "sha": "72701b2abfd229386cd9353e1056f45019a2c2e1",
-          "repo": {
-            "id": 1166891851,
-            "url": "https://api.github.com/repos/charlie2233/rork-hoopshighlights-ai_Final",
-            "name": "rork-hoopshighlights-ai_Final"
-          }
-        }
-      }
-    },
-    "public": true,
-    "created_at": "2026-07-21T06:19:38Z"
-  },
-  {
-    "id": "15426234654",
-    "type": "PushEvent",
-    "actor": {
-      "id": 117957000,
-      "login": "charlie2233",
-      "display_login": "charlie2233",
-      "gravatar_id": "",
-      "url": "https://api.github.com/users/charlie2233",
-      "avatar_url": "https://avatars.githubusercontent.com/u/117957000?"
-    },
-    "repo": {
-      "id": 1166891851,
-      "name": "charlie2233/rork-hoopshighlights-ai_Final",
-      "url": "https://api.github.com/repos/charlie2233/rork-hoopshighlights-ai_Final"
-    },
-    "payload": {
-      "repository_id": 1166891851,
-      "push_id": 37717216535,
-      "ref": "refs/heads/main",
-      "head": "b769d65608006578f6056a7e114ee7ab473a2419",
-      "before": "72701b2abfd229386cd9353e1056f45019a2c2e1"
-    },
-    "public": true,
-    "created_at": "2026-07-21T06:19:39Z"
-  },
-  {
-    "id": "15426031426",
-    "type": "PushEvent",
-    "actor": {
-      "id": 117957000,
-      "login": "charlie2233",
-      "display_login": "charlie2233",
-      "gravatar_id": "",
-      "url": "https://api.github.com/users/charlie2233",
-      "avatar_url": "https://avatars.githubusercontent.com/u/117957000?"
-    },
-    "repo": {
-      "id": 1306028280,
-      "name": "charlie2233/backchannel-agent-support",
-      "url": "https://api.github.com/repos/charlie2233/backchannel-agent-support"
-    },
-    "payload": {
-      "repository_id": 1306028280,
-      "push_id": 37717013356,
-      "ref": "refs/heads/codex/backchannel-v0.3-completion",
-      "head": "21851d8b35f43eef5addff66de64b331f1f84bd5",
-      "before": "5d14e3340cc7df6b7423c964fd7e3bb490af54f2"
-    },
-    "public": true,
-    "created_at": "2026-07-21T06:16:27Z"
-  },
-  {
-    "id": "12061604877",
-    "type": "PullRequestEvent",
-    "actor": {
-      "id": 117957000,
-      "login": "charlie2233",
-      "display_login": "charlie2233",
-      "gravatar_id": "",
-      "url": "https://api.github.com/users/charlie2233",
-      "avatar_url": "https://avatars.githubusercontent.com/u/117957000?"
-    },
-    "repo": {
-      "id": 1166891851,
-      "name": "charlie2233/rork-hoopshighlights-ai_Final",
-      "url": "https://api.github.com/repos/charlie2233/rork-hoopshighlights-ai_Final"
-    },
-    "payload": {
-      "action": "opened",
-      "number": 119,
-      "pull_request": {
-        "url": "https://api.github.com/repos/charlie2233/rork-hoopshighlights-ai_Final/pulls/119",
-        "id": 4097033132,
-        "number": 119,
-        "head": {
-          "ref": "codex/build57-launch-truth-20260720",
-          "sha": "f1318cab6a407cc552b1d978b59278452b275063",
-          "repo": {
-            "id": 1166891851,
-            "url": "https://api.github.com/repos/charlie2233/rork-hoopshighlights-ai_Final",
-            "name": "rork-hoopshighlights-ai_Final"
-          }
-        },
-        "base": {
-          "ref": "main",
-          "sha": "72701b2abfd229386cd9353e1056f45019a2c2e1",
-          "repo": {
-            "id": 1166891851,
-            "url": "https://api.github.com/repos/charlie2233/rork-hoopshighlights-ai_Final",
-            "name": "rork-hoopshighlights-ai_Final"
-          }
-        }
-      }
-    },
-    "public": true,
-    "created_at": "2026-07-21T06:11:21Z"
-  },
-  {
-    "id": "15425242907",
-    "type": "PushEvent",
-    "actor": {
-      "id": 117957000,
-      "login": "charlie2233",
-      "display_login": "charlie2233",
-      "gravatar_id": "",
-      "url": "https://api.github.com/users/charlie2233",
-      "avatar_url": "https://avatars.githubusercontent.com/u/117957000?"
-    },
-    "repo": {
-      "id": 1306028280,
-      "name": "charlie2233/backchannel-agent-support",
-      "url": "https://api.github.com/repos/charlie2233/backchannel-agent-support"
-    },
-    "payload": {
-      "repository_id": 1306028280,
-      "push_id": 37716224338,
-      "ref": "refs/heads/codex/backchannel-v0.3",
-      "head": "6cda24b96aae07732e75850be973e4fad8765a77",
-      "before": "43e61266e0c18fab188410a05cfe7e66e5b7488c"
-    },
-    "public": true,
-    "created_at": "2026-07-21T06:03:56Z"
-  },
-  {
-    "id": "15423615440",
-    "type": "PushEvent",
-    "actor": {
-      "id": 117957000,
-      "login": "charlie2233",
-      "display_login": "charlie2233",
-      "gravatar_id": "",
-      "url": "https://api.github.com/users/charlie2233",
-      "avatar_url": "https://avatars.githubusercontent.com/u/117957000?"
-    },
-    "repo": {
-      "id": 1306028280,
-      "name": "charlie2233/backchannel-agent-support",
-      "url": "https://api.github.com/repos/charlie2233/backchannel-agent-support"
-    },
-    "payload": {
-      "repository_id": 1306028280,
-      "push_id": 37714595493,
-      "ref": "refs/heads/codex/backchannel-v0.3-completion",
-      "head": "5d14e3340cc7df6b7423c964fd7e3bb490af54f2",
-      "before": "f22ecaf65523edc80464f80764287e8a50005b79"
-    },
-    "public": true,
-    "created_at": "2026-07-21T05:36:54Z"
   }
 ]
