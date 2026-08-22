@@ -1,5 +1,78 @@
 [
   {
+    "id": "13682938145",
+    "type": "PullRequestEvent",
+    "actor": {
+      "id": 117957000,
+      "login": "charlie2233",
+      "display_login": "charlie2233",
+      "gravatar_id": "",
+      "url": "https://api.github.com/users/charlie2233",
+      "avatar_url": "https://avatars.githubusercontent.com/u/117957000?"
+    },
+    "repo": {
+      "id": 1140388078,
+      "name": "charlie2233/atrak-website",
+      "url": "https://api.github.com/repos/charlie2233/atrak-website"
+    },
+    "payload": {
+      "action": "opened",
+      "number": 15,
+      "pull_request": {
+        "url": "https://api.github.com/repos/charlie2233/atrak-website/pulls/15",
+        "id": 4337289678,
+        "number": 15,
+        "head": {
+          "ref": "codex/check-atrak-weekly-20260822",
+          "sha": "9f590fa33e680a935a7586ae0aa98c54f798e237",
+          "repo": {
+            "id": 1140388078,
+            "url": "https://api.github.com/repos/charlie2233/atrak-website",
+            "name": "atrak-website"
+          }
+        },
+        "base": {
+          "ref": "main",
+          "sha": "e56bc29f0b7102e4e1c074d8b65cdd56001e4310",
+          "repo": {
+            "id": 1140388078,
+            "url": "https://api.github.com/repos/charlie2233/atrak-website",
+            "name": "atrak-website"
+          }
+        }
+      }
+    },
+    "public": true,
+    "created_at": "2026-08-22T07:08:00Z"
+  },
+  {
+    "id": "18481625127",
+    "type": "CreateEvent",
+    "actor": {
+      "id": 117957000,
+      "login": "charlie2233",
+      "display_login": "charlie2233",
+      "gravatar_id": "",
+      "url": "https://api.github.com/users/charlie2233",
+      "avatar_url": "https://avatars.githubusercontent.com/u/117957000?"
+    },
+    "repo": {
+      "id": 1140388078,
+      "name": "charlie2233/atrak-website",
+      "url": "https://api.github.com/repos/charlie2233/atrak-website"
+    },
+    "payload": {
+      "ref": "codex/check-atrak-weekly-20260822",
+      "ref_type": "branch",
+      "full_ref": "refs/heads/codex/check-atrak-weekly-20260822",
+      "master_branch": "main",
+      "description": null,
+      "pusher_type": "user"
+    },
+    "public": true,
+    "created_at": "2026-08-22T07:07:58Z"
+  },
+  {
     "id": "18252998963",
     "type": "PushEvent",
     "actor": {
@@ -21,8 +94,13 @@
       "ref": "refs/heads/main",
       "head": "a8dd04603ab22d6d184246aa1b58c97af5d2808b",
       "before": "bccc37bd41466ac15456bec355ad5ac198526b9b",
-      "distinct_size": 22,
+      "distinct_size": 18,
       "commits": [
+        {
+          "sha": "e56bc29f0b7102e4e1c074d8b65cdd56001e4310",
+          "message": "chore: update GitHub data [skip ci]",
+          "url": "https://github.com/charlie2233/atrak-website/commit/e56bc29f0b7102e4e1c074d8b65cdd56001e4310"
+        },
         {
           "sha": "b46bb25e6e84127fbd9bdd32b91ce2a5e2422ee6",
           "message": "chore: update GitHub data [skip ci]",
@@ -107,21 +185,6 @@
           "sha": "a20ad08f012bef88c1bc83b389771e69304bcda0",
           "message": "chore: update GitHub data [skip ci]",
           "url": "https://github.com/charlie2233/atrak-website/commit/a20ad08f012bef88c1bc83b389771e69304bcda0"
-        },
-        {
-          "sha": "c08a9b55f66b752298635eb76a5e9a92bfb1bc8c",
-          "message": "chore: update GitHub data [skip ci]",
-          "url": "https://github.com/charlie2233/atrak-website/commit/c08a9b55f66b752298635eb76a5e9a92bfb1bc8c"
-        },
-        {
-          "sha": "d8e12d8e810c5024318b448f01c6f50027e35e5e",
-          "message": "chore: update GitHub data [skip ci]",
-          "url": "https://github.com/charlie2233/atrak-website/commit/d8e12d8e810c5024318b448f01c6f50027e35e5e"
-        },
-        {
-          "sha": "1f075616707c3193ce99f9755fce72e7205612fd",
-          "message": "fix: restore project analytics weekly cache",
-          "url": "https://github.com/charlie2233/atrak-website/commit/1f075616707c3193ce99f9755fce72e7205612fd"
         }
       ]
     },
