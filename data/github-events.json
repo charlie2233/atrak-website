@@ -94,8 +94,13 @@
       "ref": "refs/heads/main",
       "head": "a8dd04603ab22d6d184246aa1b58c97af5d2808b",
       "before": "bccc37bd41466ac15456bec355ad5ac198526b9b",
-      "distinct_size": 18,
+      "distinct_size": 19,
       "commits": [
+        {
+          "sha": "a810d5370d3553ae96f57da546c1840f5120f90c",
+          "message": "chore: update GitHub data [skip ci]",
+          "url": "https://github.com/charlie2233/atrak-website/commit/a810d5370d3553ae96f57da546c1840f5120f90c"
+        },
         {
           "sha": "e56bc29f0b7102e4e1c074d8b65cdd56001e4310",
           "message": "chore: update GitHub data [skip ci]",
@@ -4244,57 +4249,5 @@
     },
     "public": true,
     "created_at": "2026-07-24T22:33:12Z"
-  },
-  {
-    "id": "15613747367",
-    "type": "PushEvent",
-    "actor": {
-      "id": 117957000,
-      "login": "charlie2233",
-      "display_login": "charlie2233",
-      "gravatar_id": "",
-      "url": "https://api.github.com/users/charlie2233",
-      "avatar_url": "https://avatars.githubusercontent.com/u/117957000?"
-    },
-    "repo": {
-      "id": 1140388078,
-      "name": "charlie2233/atrak-website",
-      "url": "https://api.github.com/repos/charlie2233/atrak-website"
-    },
-    "payload": {
-      "repository_id": 1140388078,
-      "push_id": 37906475064,
-      "ref": "refs/heads/main",
-      "head": "3e9ec2031df81d5db7737a382bd815bddf53b61e",
-      "before": "85ae35106687b74c8c843b7e7b679aa234e3585d"
-    },
-    "public": true,
-    "created_at": "2026-07-23T09:06:51Z"
-  },
-  {
-    "id": "15609643436",
-    "type": "PushEvent",
-    "actor": {
-      "id": 117957000,
-      "login": "charlie2233",
-      "display_login": "charlie2233",
-      "gravatar_id": "",
-      "url": "https://api.github.com/users/charlie2233",
-      "avatar_url": "https://avatars.githubusercontent.com/u/117957000?"
-    },
-    "repo": {
-      "id": 1173003479,
-      "name": "charlie2233/lifepage",
-      "url": "https://api.github.com/repos/charlie2233/lifepage"
-    },
-    "payload": {
-      "repository_id": 1173003479,
-      "push_id": 37903465031,
-      "ref": "refs/heads/codex/post-launch-sprint-1",
-      "head": "9a72979e1d0bc52e9185135348fbe5814307f9c8",
-      "before": "55b5b1b1038d3efe6d40b2b536f67912309fad0a"
-    },
-    "public": true,
-    "created_at": "2026-07-23T08:39:04Z"
   }
 ]
