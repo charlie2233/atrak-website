@@ -1895,5 +1895,91 @@
         "at": "2026-08-09T08:42:52Z"
       }
     ]
+  },
+  {
+    "weekStart": "2026-08-16",
+    "weekEnd": "2026-08-22",
+    "generatedAt": "2026-08-23T09:24:40.282Z",
+    "source": "github-weekly-automation",
+    "dateRange": "Aug 16 – 22",
+    "title": "Atrak Website carried the build week.",
+    "highlights": [
+      "Atrak Website led public activity with 19 commits across 4 pushes.",
+      "1 public repository was active across 7 GitHub events.",
+      "No formal GitHub release was published during this edition."
+    ],
+    "shipped": [
+      "refresh local weekly data [skip ci]",
+      "update weekly logs and August releases [skip ci]",
+      "refresh local weekly data [skip ci]",
+      "refresh local weekly aggregate"
+    ],
+    "engineering": [
+      "4 pushes and 1 pull request updates were condensed into this edition.",
+      "Active stacks included HTML.",
+      "The snapshot is stored permanently so the edition remains available after GitHub events expire."
+    ],
+    "fixes": [],
+    "metrics": [
+      "Commits: 19",
+      "Active repos: 1",
+      "Pull requests: 1",
+      "Issues: 0",
+      "Releases: 0"
+    ],
+    "next": [
+      "Continue the Atrak Website build and publish the next visible milestone.",
+      "Review the next automated edition after Sunday refresh."
+    ],
+    "stats": {
+      "commits": 19,
+      "activeRepositories": 1,
+      "pullRequests": 1,
+      "issues": 0,
+      "pushes": 4,
+      "releases": 0,
+      "events": 7
+    },
+    "repositories": [
+      {
+        "name": "Atrak Website",
+        "fullName": "charlie2233/atrak-website",
+        "url": "https://github.com/charlie2233/atrak-website",
+        "language": "HTML",
+        "commits": 19,
+        "pushes": 4,
+        "events": 7,
+        "pullRequests": 1,
+        "issues": 0,
+        "lastAt": "2026-08-22T07:08:00.000Z"
+      }
+    ],
+    "releases": [],
+    "commitMessages": [
+      {
+        "repo": "charlie2233/atrak-website",
+        "text": "refresh local weekly data [skip ci]",
+        "url": "https://github.com/charlie2233/atrak-website/commit/a8dd04603ab22d6d184246aa1b58c97af5d2808b",
+        "at": "2026-08-20T07:29:07Z"
+      },
+      {
+        "repo": "charlie2233/atrak-website",
+        "text": "update weekly logs and August releases [skip ci]",
+        "url": "https://github.com/charlie2233/atrak-website/commit/fccdd7f3b531be30d208c042ca6b70907b41ad97",
+        "at": "2026-08-18T16:00:29Z"
+      },
+      {
+        "repo": "charlie2233/atrak-website",
+        "text": "refresh local weekly data [skip ci]",
+        "url": "https://github.com/charlie2233/atrak-website/commit/169aea067e7e22958855db6785d66ce40dd2aabb",
+        "at": "2026-08-18T07:06:55Z"
+      },
+      {
+        "repo": "charlie2233/atrak-website",
+        "text": "refresh local weekly aggregate",
+        "url": "https://github.com/charlie2233/atrak-website/commit/70ed34b5861b158790a93896c23a8a85e0cfa03a",
+        "at": "2026-08-16T07:19:29Z"
+      }
+    ]
   }
 ]
