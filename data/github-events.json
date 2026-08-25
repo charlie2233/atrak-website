@@ -1,6 +1,6 @@
 [
   {
-    "id": "18766921231",
+    "id": "18784755126",
     "type": "PushEvent",
     "actor": {
       "id": 117957000,
@@ -17,10 +17,10 @@
     },
     "payload": {
       "repository_id": 1231252582,
-      "push_id": 41101199078,
+      "push_id": 41104916459,
       "ref": "refs/heads/main",
-      "head": "44f67cb22dc6200808bc81cd2ad8c4d9fbeba69e",
-      "before": "f060c72a62cf64c7603bf9ceb8ccf4e0fabdb65a",
+      "head": "dfa05a88d8c40599644ac94b316502c373ca1e2f",
+      "before": "81967d35b7813319a75b116b0accb5c95d5dbc06",
       "distinct_size": 4,
       "commits": [
         {
@@ -44,6 +44,84 @@
           "url": "https://github.com/charlie2233/GBC_HuskiesWeb/commit/44f67cb22dc6200808bc81cd2ad8c4d9fbeba69e"
         }
       ]
+    },
+    "public": true,
+    "created_at": "2026-08-24T23:30:20Z"
+  },
+  {
+    "id": "18781056907",
+    "type": "PushEvent",
+    "actor": {
+      "id": 117957000,
+      "login": "charlie2233",
+      "display_login": "charlie2233",
+      "gravatar_id": "",
+      "url": "https://api.github.com/users/charlie2233",
+      "avatar_url": "https://avatars.githubusercontent.com/u/117957000?"
+    },
+    "repo": {
+      "id": 1231252582,
+      "name": "charlie2233/GBC_HuskiesWeb",
+      "url": "https://api.github.com/repos/charlie2233/GBC_HuskiesWeb"
+    },
+    "payload": {
+      "repository_id": 1231252582,
+      "push_id": 41102776133,
+      "ref": "refs/heads/main",
+      "head": "81967d35b7813319a75b116b0accb5c95d5dbc06",
+      "before": "ca91d9bd2135aaf812ec6d17e532ec66b1331f02"
+    },
+    "public": true,
+    "created_at": "2026-08-24T22:57:24Z"
+  },
+  {
+    "id": "18780188432",
+    "type": "PushEvent",
+    "actor": {
+      "id": 117957000,
+      "login": "charlie2233",
+      "display_login": "charlie2233",
+      "gravatar_id": "",
+      "url": "https://api.github.com/users/charlie2233",
+      "avatar_url": "https://avatars.githubusercontent.com/u/117957000?"
+    },
+    "repo": {
+      "id": 1231252582,
+      "name": "charlie2233/GBC_HuskiesWeb",
+      "url": "https://api.github.com/repos/charlie2233/GBC_HuskiesWeb"
+    },
+    "payload": {
+      "repository_id": 1231252582,
+      "push_id": 41101778558,
+      "ref": "refs/heads/main",
+      "head": "ca91d9bd2135aaf812ec6d17e532ec66b1331f02",
+      "before": "44f67cb22dc6200808bc81cd2ad8c4d9fbeba69e"
+    },
+    "public": true,
+    "created_at": "2026-08-24T22:42:12Z"
+  },
+  {
+    "id": "18766921231",
+    "type": "PushEvent",
+    "actor": {
+      "id": 117957000,
+      "login": "charlie2233",
+      "display_login": "charlie2233",
+      "gravatar_id": "",
+      "url": "https://api.github.com/users/charlie2233",
+      "avatar_url": "https://avatars.githubusercontent.com/u/117957000?"
+    },
+    "repo": {
+      "id": 1231252582,
+      "name": "charlie2233/GBC_HuskiesWeb",
+      "url": "https://api.github.com/repos/charlie2233/GBC_HuskiesWeb"
+    },
+    "payload": {
+      "repository_id": 1231252582,
+      "push_id": 41101199078,
+      "ref": "refs/heads/main",
+      "head": "44f67cb22dc6200808bc81cd2ad8c4d9fbeba69e",
+      "before": "f060c72a62cf64c7603bf9ceb8ccf4e0fabdb65a"
     },
     "public": true,
     "created_at": "2026-08-24T22:33:52Z"
@@ -70,8 +148,13 @@
       "ref": "refs/heads/main",
       "head": "78ba75c2846f3c0447db3573c8e67c5adfb1294e",
       "before": "22978a3b000451ae124c0f4e80d5d87802187547",
-      "distinct_size": 18,
+      "distinct_size": 17,
       "commits": [
+        {
+          "sha": "6aaa0acd68cf3b915ca1d92df333736d3ba87fd4",
+          "message": "chore: update GitHub data [skip ci]",
+          "url": "https://github.com/charlie2233/atrak-website/commit/6aaa0acd68cf3b915ca1d92df333736d3ba87fd4"
+        },
         {
           "sha": "741dc4e6df3e266d350ac4bfb648f319dd2c9499",
           "message": "chore: update GitHub data [skip ci]",
@@ -151,16 +234,6 @@
           "sha": "fccdd7f3b531be30d208c042ca6b70907b41ad97",
           "message": "chore: update weekly logs and August releases [skip ci]",
           "url": "https://github.com/charlie2233/atrak-website/commit/fccdd7f3b531be30d208c042ca6b70907b41ad97"
-        },
-        {
-          "sha": "025e277b5d85b0b43ad3bf65a7503e1ea228a6ce",
-          "message": "chore: update GitHub data [skip ci]",
-          "url": "https://github.com/charlie2233/atrak-website/commit/025e277b5d85b0b43ad3bf65a7503e1ea228a6ce"
-        },
-        {
-          "sha": "169aea067e7e22958855db6785d66ce40dd2aabb",
-          "message": "chore: refresh local weekly data [skip ci]",
-          "url": "https://github.com/charlie2233/atrak-website/commit/169aea067e7e22958855db6785d66ce40dd2aabb"
         }
       ]
     },
@@ -3382,213 +3455,5 @@
     },
     "public": true,
     "created_at": "2026-07-26T08:40:13Z"
-  },
-  {
-    "id": "15824610544",
-    "type": "PushEvent",
-    "actor": {
-      "id": 117957000,
-      "login": "charlie2233",
-      "display_login": "charlie2233",
-      "gravatar_id": "",
-      "url": "https://api.github.com/users/charlie2233",
-      "avatar_url": "https://avatars.githubusercontent.com/u/117957000?"
-    },
-    "repo": {
-      "id": 1306028280,
-      "name": "charlie2233/backchannel-agent-support",
-      "url": "https://api.github.com/repos/charlie2233/backchannel-agent-support"
-    },
-    "payload": {
-      "repository_id": 1306028280,
-      "push_id": 38121899072,
-      "ref": "refs/heads/codex/backchannel-v0.3-completion",
-      "head": "89721e098b458ecbf6223b4de9946130e1b48676",
-      "before": "3257829e1ee7ce3360dcf7c54c2046e07b6e9f92"
-    },
-    "public": true,
-    "created_at": "2026-07-26T04:33:14Z"
-  },
-  {
-    "id": "15818471677",
-    "type": "PushEvent",
-    "actor": {
-      "id": 117957000,
-      "login": "charlie2233",
-      "display_login": "charlie2233",
-      "gravatar_id": "",
-      "url": "https://api.github.com/users/charlie2233",
-      "avatar_url": "https://avatars.githubusercontent.com/u/117957000?"
-    },
-    "repo": {
-      "id": 1306028280,
-      "name": "charlie2233/backchannel-agent-support",
-      "url": "https://api.github.com/repos/charlie2233/backchannel-agent-support"
-    },
-    "payload": {
-      "repository_id": 1306028280,
-      "push_id": 38115663718,
-      "ref": "refs/heads/codex/backchannel-v0.3",
-      "head": "0a171b276d79804342f79c52dc1b1d785446493a",
-      "before": "117e4ebe40efea36f89bbb737143de9c918f938f"
-    },
-    "public": true,
-    "created_at": "2026-07-26T01:35:13Z"
-  },
-  {
-    "id": "15818048994",
-    "type": "PushEvent",
-    "actor": {
-      "id": 117957000,
-      "login": "charlie2233",
-      "display_login": "charlie2233",
-      "gravatar_id": "",
-      "url": "https://api.github.com/users/charlie2233",
-      "avatar_url": "https://avatars.githubusercontent.com/u/117957000?"
-    },
-    "repo": {
-      "id": 1306028280,
-      "name": "charlie2233/backchannel-agent-support",
-      "url": "https://api.github.com/repos/charlie2233/backchannel-agent-support"
-    },
-    "payload": {
-      "repository_id": 1306028280,
-      "push_id": 38115236735,
-      "ref": "refs/heads/codex/backchannel-v0.3",
-      "head": "117e4ebe40efea36f89bbb737143de9c918f938f",
-      "before": "12e8353cac148ce8e66d82265d2735df56c32231"
-    },
-    "public": true,
-    "created_at": "2026-07-26T01:20:58Z"
-  },
-  {
-    "id": "15814902587",
-    "type": "PushEvent",
-    "actor": {
-      "id": 117957000,
-      "login": "charlie2233",
-      "display_login": "charlie2233",
-      "gravatar_id": "",
-      "url": "https://api.github.com/users/charlie2233",
-      "avatar_url": "https://avatars.githubusercontent.com/u/117957000?"
-    },
-    "repo": {
-      "id": 1306028280,
-      "name": "charlie2233/backchannel-agent-support",
-      "url": "https://api.github.com/repos/charlie2233/backchannel-agent-support"
-    },
-    "payload": {
-      "repository_id": 1306028280,
-      "push_id": 38112054475,
-      "ref": "refs/heads/codex/backchannel-v0.3-completion",
-      "head": "3257829e1ee7ce3360dcf7c54c2046e07b6e9f92",
-      "before": "96196205f6aa890bbe383a6133da629aca35dc25"
-    },
-    "public": true,
-    "created_at": "2026-07-25T23:36:30Z"
-  },
-  {
-    "id": "15810883909",
-    "type": "PushEvent",
-    "actor": {
-      "id": 117957000,
-      "login": "charlie2233",
-      "display_login": "charlie2233",
-      "gravatar_id": "",
-      "url": "https://api.github.com/users/charlie2233",
-      "avatar_url": "https://avatars.githubusercontent.com/u/117957000?"
-    },
-    "repo": {
-      "id": 1306028280,
-      "name": "charlie2233/backchannel-agent-support",
-      "url": "https://api.github.com/repos/charlie2233/backchannel-agent-support"
-    },
-    "payload": {
-      "repository_id": 1306028280,
-      "push_id": 38107992393,
-      "ref": "refs/heads/codex/backchannel-v0.3",
-      "head": "12e8353cac148ce8e66d82265d2735df56c32231",
-      "before": "1289b773abe92bb2f5842f77e3c7f50c432352f4"
-    },
-    "public": true,
-    "created_at": "2026-07-25T21:34:45Z"
-  },
-  {
-    "id": "15809775517",
-    "type": "PushEvent",
-    "actor": {
-      "id": 117957000,
-      "login": "charlie2233",
-      "display_login": "charlie2233",
-      "gravatar_id": "",
-      "url": "https://api.github.com/users/charlie2233",
-      "avatar_url": "https://avatars.githubusercontent.com/u/117957000?"
-    },
-    "repo": {
-      "id": 1306028280,
-      "name": "charlie2233/backchannel-agent-support",
-      "url": "https://api.github.com/repos/charlie2233/backchannel-agent-support"
-    },
-    "payload": {
-      "repository_id": 1306028280,
-      "push_id": 38106871663,
-      "ref": "refs/heads/codex/backchannel-v0.3",
-      "head": "1289b773abe92bb2f5842f77e3c7f50c432352f4",
-      "before": "ddd1e964523343e2deed97835b6d0835c6a599b6"
-    },
-    "public": true,
-    "created_at": "2026-07-25T21:02:26Z"
-  },
-  {
-    "id": "15802604649",
-    "type": "PushEvent",
-    "actor": {
-      "id": 117957000,
-      "login": "charlie2233",
-      "display_login": "charlie2233",
-      "gravatar_id": "",
-      "url": "https://api.github.com/users/charlie2233",
-      "avatar_url": "https://avatars.githubusercontent.com/u/117957000?"
-    },
-    "repo": {
-      "id": 1306028280,
-      "name": "charlie2233/backchannel-agent-support",
-      "url": "https://api.github.com/repos/charlie2233/backchannel-agent-support"
-    },
-    "payload": {
-      "repository_id": 1306028280,
-      "push_id": 38099614416,
-      "ref": "refs/heads/codex/backchannel-v0.3-completion",
-      "head": "96196205f6aa890bbe383a6133da629aca35dc25",
-      "before": "fb6b1e45155a21b9c12ca1779ea4de31909a052d"
-    },
-    "public": true,
-    "created_at": "2026-07-25T17:54:47Z"
-  },
-  {
-    "id": "15801437299",
-    "type": "PushEvent",
-    "actor": {
-      "id": 117957000,
-      "login": "charlie2233",
-      "display_login": "charlie2233",
-      "gravatar_id": "",
-      "url": "https://api.github.com/users/charlie2233",
-      "avatar_url": "https://avatars.githubusercontent.com/u/117957000?"
-    },
-    "repo": {
-      "id": 1306028280,
-      "name": "charlie2233/backchannel-agent-support",
-      "url": "https://api.github.com/repos/charlie2233/backchannel-agent-support"
-    },
-    "payload": {
-      "repository_id": 1306028280,
-      "push_id": 38098434353,
-      "ref": "refs/heads/codex/backchannel-v0.3",
-      "head": "ddd1e964523343e2deed97835b6d0835c6a599b6",
-      "before": "576ba5e3dfd3d13b9f797c1c516c2352c4e40688"
-    },
-    "public": true,
-    "created_at": "2026-07-25T17:27:22Z"
   }
 ]
