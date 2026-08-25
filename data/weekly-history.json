@@ -1901,35 +1901,40 @@
     "weekEnd": "2026-08-22",
     "generatedAt": "2026-08-23T09:24:40.282Z",
     "source": "github-weekly-automation",
-    "dateRange": "Aug 16 – 22",
-    "title": "Atrak Website carried the build week.",
+    "dateRange": "Aug 16 – Aug 22",
+    "title": "Weekly publishing reliability and GitHub data continuity",
     "highlights": [
-      "Atrak Website led public activity with 19 commits across 4 pushes.",
-      "1 public repository was active across 7 GitHub events.",
-      "No formal GitHub release was published during this edition."
+      "Atrak Website carried the completed week with 19 verified commits across four pushes",
+      "One pull-request update and seven GitHub events captured the public maintenance cycle",
+      "The weekly archive, August release notes, and local aggregate stayed synchronized through automated refreshes"
     ],
     "shipped": [
-      "refresh local weekly data [skip ci]",
-      "update weekly logs and August releases [skip ci]",
-      "refresh local weekly data [skip ci]",
-      "refresh local weekly aggregate"
+      "Published the Aug 9–15 weekly archive and expanded the August 2026 release record",
+      "Renewed the Aug 16–22 machine-readable edition from GitHub API-enriched history",
+      "Refreshed the local checked-out-repository aggregate while retaining explicit local-source provenance"
     ],
     "engineering": [
-      "4 pushes and 1 pull request updates were condensed into this edition.",
-      "Active stacks included HTML.",
-      "The snapshot is stored permanently so the edition remains available after GitHub events expire."
+      "GitHub API commit enrichment verified the completed Sunday → Saturday window",
+      "Four pushes and one pull-request update were condensed into one permanent edition",
+      "The archive aliases preserve source links and commit timestamps after GitHub events expire"
     ],
-    "fixes": [],
+    "fixes": [
+      "Kept automated GitHub cache updates and the curated weekly archive aligned",
+      "Preserved the fuller verified event and repository caches when a direct refresh returned a narrower snapshot"
+    ],
     "metrics": [
       "Commits: 19",
       "Active repos: 1",
-      "Pull requests: 1",
+      "PR updates: 1",
       "Issues: 0",
-      "Releases: 0"
+      "Pushes: 4",
+      "Releases: 0",
+      "GitHub events: 7"
     ],
     "next": [
-      "Continue the Atrak Website build and publish the next visible milestone.",
-      "Review the next automated edition after Sunday refresh."
+      "Keep local weekly provenance protected through automated refreshes",
+      "Continue publishing completed Sunday → Saturday editions from verified GitHub history",
+      "Prepare the September release record after the next monthly boundary"
     ],
     "stats": {
       "commits": 19,

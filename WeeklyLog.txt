@@ -1035,10 +1035,56 @@ You can honestly demo this to a coach and they'd actually use it.
 
 ---
 
+## Week of Aug 16 – Aug 22
+<!-- week-start: 2026-08-16 -->
+
+### "Weekly publishing reliability and GitHub data continuity"
+
+**Highlights**
+
+* Atrak Website carried the completed week with 19 verified commits across four pushes
+* One pull-request update and seven GitHub events captured the public maintenance cycle
+* The weekly archive, August release notes, and local aggregate stayed synchronized through automated refreshes
+
+**Shipped**
+
+* Published the Aug 9–15 weekly archive and expanded the August 2026 release record
+* Renewed the Aug 16–22 machine-readable edition from GitHub API-enriched history
+* Refreshed the local checked-out-repository aggregate while retaining explicit local-source provenance
+
+**Engineering**
+
+* GitHub API commit enrichment verified the completed Sunday → Saturday window
+* Four pushes and one pull-request update were condensed into one permanent edition
+* The archive aliases preserve source links and commit timestamps after GitHub events expire
+
+**Fixes**
+
+* Kept automated GitHub cache updates and the curated weekly archive aligned
+* Preserved the fuller verified event and repository caches when a direct refresh returned a narrower snapshot
+
+**Metrics**
+
+* Commits: 19
+* Active repos: 1
+* PR updates: 1
+* Issues: 0
+* Pushes: 4
+* Releases: 0
+* GitHub events: 7
+
+**Next**
+
+* Keep local weekly provenance protected through automated refreshes
+* Continue publishing completed Sunday → Saturday editions from verified GitHub history
+* Prepare the September release record after the next monthly boundary
+
+---
+
 # 📊 Summary
 
-**Total Coverage:** August 31, 2024 – August 15, 2026
-**Total Weeks:** 27 documented (Dec Weeks 14-18 remain undocumented)
+**Total Coverage:** August 31, 2024 – August 22, 2026
+**Total Weeks:** 28 documented (Dec Weeks 14-18 remain undocumented)
 **Format:** Sunday → Saturday (PT)
 
 **Major Milestones:**
