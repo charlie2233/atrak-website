@@ -21,8 +21,18 @@
       "ref": "refs/heads/main",
       "head": "26ac69ace45fcd30d1844d836c9c79ebb28a7126",
       "before": "b3f004c0c9afd7ab9d71fa3ad60980184d10bfd7",
-      "distinct_size": 17,
+      "distinct_size": 19,
       "commits": [
+        {
+          "sha": "58cf1078f6f433b8538e804394e4c48a7e36f8fe",
+          "message": "fix: add AccessCourt to legal page navigation",
+          "url": "https://github.com/charlie2233/atrak-website/commit/58cf1078f6f433b8538e804394e4c48a7e36f8fe"
+        },
+        {
+          "sha": "4459622112b4eb901eb944cbd6dfb9ad7d538807",
+          "message": "chore: update GitHub data [skip ci]",
+          "url": "https://github.com/charlie2233/atrak-website/commit/4459622112b4eb901eb944cbd6dfb9ad7d538807"
+        },
         {
           "sha": "b8ef2d2d97966ad136daf0c4aa93f91232e17868",
           "message": "chore: update GitHub data [skip ci]",
