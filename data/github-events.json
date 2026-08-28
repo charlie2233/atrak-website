@@ -1,6 +1,6 @@
 [
   {
-    "id": "18879151059",
+    "id": "19137902015",
     "type": "PushEvent",
     "actor": {
       "id": 117957000,
@@ -17,12 +17,17 @@
     },
     "payload": {
       "repository_id": 1140388078,
-      "push_id": 41190476318,
+      "push_id": 41376046648,
       "ref": "refs/heads/main",
-      "head": "26ac69ace45fcd30d1844d836c9c79ebb28a7126",
-      "before": "b3f004c0c9afd7ab9d71fa3ad60980184d10bfd7",
+      "head": "b459af69463e7e0b6426b0fcc9c80fe356d528f3",
+      "before": "611d7b94649df81712097211df47fa38cfc252b1",
       "distinct_size": 19,
       "commits": [
+        {
+          "sha": "7f9bc0484390c28251d51e44a2b61ed8b1307087",
+          "message": "chore: update GitHub data [skip ci]",
+          "url": "https://github.com/charlie2233/atrak-website/commit/7f9bc0484390c28251d51e44a2b61ed8b1307087"
+        },
         {
           "sha": "58cf1078f6f433b8538e804394e4c48a7e36f8fe",
           "message": "fix: add AccessCourt to legal page navigation",
@@ -112,13 +117,60 @@
           "sha": "b46bb25e6e84127fbd9bdd32b91ce2a5e2422ee6",
           "message": "chore: update GitHub data [skip ci]",
           "url": "https://github.com/charlie2233/atrak-website/commit/b46bb25e6e84127fbd9bdd32b91ce2a5e2422ee6"
-        },
-        {
-          "sha": "8102b45e8b6aaaa327bbb2811653b1c4388d909f",
-          "message": "chore: update GitHub data [skip ci]",
-          "url": "https://github.com/charlie2233/atrak-website/commit/8102b45e8b6aaaa327bbb2811653b1c4388d909f"
         }
       ]
+    },
+    "public": true,
+    "created_at": "2026-08-27T00:21:09Z"
+  },
+  {
+    "id": "19091841933",
+    "type": "PushEvent",
+    "actor": {
+      "id": 117957000,
+      "login": "charlie2233",
+      "display_login": "charlie2233",
+      "gravatar_id": "",
+      "url": "https://api.github.com/users/charlie2233",
+      "avatar_url": "https://avatars.githubusercontent.com/u/117957000?"
+    },
+    "repo": {
+      "id": 1140388078,
+      "name": "charlie2233/atrak-website",
+      "url": "https://api.github.com/repos/charlie2233/atrak-website"
+    },
+    "payload": {
+      "repository_id": 1140388078,
+      "push_id": 41480771363,
+      "ref": "refs/heads/main",
+      "head": "58cf1078f6f433b8538e804394e4c48a7e36f8fe",
+      "before": "4459622112b4eb901eb944cbd6dfb9ad7d538807"
+    },
+    "public": true,
+    "created_at": "2026-08-27T17:30:19Z"
+  },
+  {
+    "id": "18879151059",
+    "type": "PushEvent",
+    "actor": {
+      "id": 117957000,
+      "login": "charlie2233",
+      "display_login": "charlie2233",
+      "gravatar_id": "",
+      "url": "https://api.github.com/users/charlie2233",
+      "avatar_url": "https://avatars.githubusercontent.com/u/117957000?"
+    },
+    "repo": {
+      "id": 1140388078,
+      "name": "charlie2233/atrak-website",
+      "url": "https://api.github.com/repos/charlie2233/atrak-website"
+    },
+    "payload": {
+      "repository_id": 1140388078,
+      "push_id": 41190476318,
+      "ref": "refs/heads/main",
+      "head": "26ac69ace45fcd30d1844d836c9c79ebb28a7126",
+      "before": "b3f004c0c9afd7ab9d71fa3ad60980184d10bfd7"
     },
     "public": true,
     "created_at": "2026-08-25T15:02:49Z"
@@ -3206,31 +3258,5 @@
     },
     "public": true,
     "created_at": "2026-07-29T23:19:56Z"
-  },
-  {
-    "id": "16058127889",
-    "type": "PushEvent",
-    "actor": {
-      "id": 117957000,
-      "login": "charlie2233",
-      "display_login": "charlie2233",
-      "gravatar_id": "",
-      "url": "https://api.github.com/users/charlie2233",
-      "avatar_url": "https://avatars.githubusercontent.com/u/117957000?"
-    },
-    "repo": {
-      "id": 1140388078,
-      "name": "charlie2233/atrak-website",
-      "url": "https://api.github.com/repos/charlie2233/atrak-website"
-    },
-    "payload": {
-      "repository_id": 1140388078,
-      "push_id": 38362298042,
-      "ref": "refs/heads/main",
-      "head": "a4ef235e35faa61fc70ee9e486e492742fc34466",
-      "before": "7e7749dd4c1d55ba1b34b83864c0fdcc85ac5c42"
-    },
-    "public": true,
-    "created_at": "2026-07-28T19:34:03Z"
   }
 ]
