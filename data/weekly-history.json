@@ -1986,5 +1986,142 @@
         "at": "2026-08-16T07:19:29Z"
       }
     ]
+  },
+  {
+    "weekStart": "2026-08-23",
+    "weekEnd": "2026-08-29",
+    "generatedAt": "2026-08-30T09:23:57.990Z",
+    "source": "github-weekly-automation",
+    "dateRange": "Aug 23 – 29",
+    "title": "Atrak Website and GBC HuskiesWeb moved the week forward.",
+    "highlights": [
+      "Atrak Website led public activity with 22 commits across 5 pushes.",
+      "2 public repositories were active across 10 GitHub events.",
+      "No formal GitHub release was published during this edition."
+    ],
+    "shipped": [
+      "refresh local weekly GitHub data [skip ci]",
+      "refresh local weekly GitHub data",
+      "add AccessCourt to legal page navigation",
+      "refresh local weekly GitHub data [skip ci]"
+    ],
+    "engineering": [
+      "9 pushes and 0 pull request updates were condensed into this edition.",
+      "Active stacks included HTML, TypeScript.",
+      "The snapshot is stored permanently so the edition remains available after GitHub events expire."
+    ],
+    "fixes": [
+      "add AccessCourt to legal page navigation",
+      "list current 13U to 15U teams"
+    ],
+    "metrics": [
+      "Commits: 26",
+      "Active repos: 2",
+      "Pull requests: 0",
+      "Issues: 0",
+      "Releases: 0"
+    ],
+    "next": [
+      "Continue the Atrak Website build and publish the next visible milestone.",
+      "Review the next automated edition after Sunday refresh."
+    ],
+    "stats": {
+      "commits": 26,
+      "activeRepositories": 2,
+      "pullRequests": 0,
+      "issues": 0,
+      "pushes": 9,
+      "releases": 0,
+      "events": 10
+    },
+    "repositories": [
+      {
+        "name": "Atrak Website",
+        "fullName": "charlie2233/atrak-website",
+        "url": "https://github.com/charlie2233/atrak-website",
+        "language": "HTML",
+        "commits": 22,
+        "pushes": 5,
+        "events": 6,
+        "pullRequests": 0,
+        "issues": 0,
+        "lastAt": "2026-08-28T07:09:48.000Z"
+      },
+      {
+        "name": "GBC HuskiesWeb",
+        "fullName": "charlie2233/GBC_HuskiesWeb",
+        "url": "https://github.com/charlie2233/GBC_HuskiesWeb",
+        "language": "TypeScript",
+        "commits": 4,
+        "pushes": 4,
+        "events": 4,
+        "pullRequests": 0,
+        "issues": 0,
+        "lastAt": "2026-08-24T23:30:20.000Z"
+      }
+    ],
+    "releases": [],
+    "commitMessages": [
+      {
+        "repo": "charlie2233/atrak-website",
+        "text": "refresh local weekly GitHub data [skip ci]",
+        "url": "https://github.com/charlie2233/atrak-website/commit/85ee09a41c3ae6b380993afffe60b938b66e5859",
+        "at": "2026-08-29T23:58:31Z"
+      },
+      {
+        "repo": "charlie2233/atrak-website",
+        "text": "refresh local weekly GitHub data",
+        "url": "https://github.com/charlie2233/atrak-website/commit/6338aa34a6aabcadab47c0f02c9647e133c26a6f",
+        "at": "2026-08-28T07:09:42Z"
+      },
+      {
+        "repo": "charlie2233/atrak-website",
+        "text": "add AccessCourt to legal page navigation",
+        "url": "https://github.com/charlie2233/atrak-website/commit/58cf1078f6f433b8538e804394e4c48a7e36f8fe",
+        "at": "2026-08-27T17:30:05Z"
+      },
+      {
+        "repo": "charlie2233/atrak-website",
+        "text": "refresh local weekly GitHub data [skip ci]",
+        "url": "https://github.com/charlie2233/atrak-website/commit/b459af69463e7e0b6426b0fcc9c80fe356d528f3",
+        "at": "2026-08-27T00:21:07Z"
+      },
+      {
+        "repo": "charlie2233/atrak-website",
+        "text": "update weekly logs and August releases [skip ci]",
+        "url": "https://github.com/charlie2233/atrak-website/commit/26ac69ace45fcd30d1844d836c9c79ebb28a7126",
+        "at": "2026-08-25T15:02:44Z"
+      },
+      {
+        "repo": "charlie2233/GBC_HuskiesWeb",
+        "text": "eagerly load hero media",
+        "url": "https://github.com/charlie2233/GBC_HuskiesWeb/commit/dfa05a88d8c40599644ac94b316502c373ca1e2f",
+        "at": "2026-08-24T23:30:13Z"
+      },
+      {
+        "repo": "charlie2233/GBC_HuskiesWeb",
+        "text": "improve family contact experience",
+        "url": "https://github.com/charlie2233/GBC_HuskiesWeb/commit/81967d35b7813319a75b116b0accb5c95d5dbc06",
+        "at": "2026-08-24T22:57:19Z"
+      },
+      {
+        "repo": "charlie2233/GBC_HuskiesWeb",
+        "text": "list current 13U to 15U teams",
+        "url": "https://github.com/charlie2233/GBC_HuskiesWeb/commit/ca91d9bd2135aaf812ec6d17e532ec66b1331f02",
+        "at": "2026-08-24T22:42:06Z"
+      },
+      {
+        "repo": "charlie2233/GBC_HuskiesWeb",
+        "text": "auto-sync GoFundMe tracker",
+        "url": "https://github.com/charlie2233/GBC_HuskiesWeb/commit/44f67cb22dc6200808bc81cd2ad8c4d9fbeba69e",
+        "at": "2026-08-24T22:33:46Z"
+      },
+      {
+        "repo": "charlie2233/atrak-website",
+        "text": "refresh local weekly data [skip ci]",
+        "url": "https://github.com/charlie2233/atrak-website/commit/78ba75c2846f3c0447db3573c8e67c5adfb1294e",
+        "at": "2026-08-23T07:05:06Z"
+      }
+    ]
   }
 ]
