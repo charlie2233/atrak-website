@@ -44,6 +44,11 @@
       "distinct_size": 20,
       "commits": [
         {
+          "sha": "a7c5364ec05fe55f15a0fdae9380a07991c6b1f8",
+          "message": "chore: update GitHub data [skip ci]",
+          "url": "https://github.com/charlie2233/atrak-website/commit/a7c5364ec05fe55f15a0fdae9380a07991c6b1f8"
+        },
+        {
           "sha": "412effff0ff143e858d65faa1b457738427bd0dc",
           "message": "chore: update GitHub data [skip ci]",
           "url": "https://github.com/charlie2233/atrak-website/commit/412effff0ff143e858d65faa1b457738427bd0dc"
@@ -137,11 +142,6 @@
           "sha": "b3f004c0c9afd7ab9d71fa3ad60980184d10bfd7",
           "message": "chore: update GitHub data [skip ci]",
           "url": "https://github.com/charlie2233/atrak-website/commit/b3f004c0c9afd7ab9d71fa3ad60980184d10bfd7"
-        },
-        {
-          "sha": "6aaa0acd68cf3b915ca1d92df333736d3ba87fd4",
-          "message": "chore: update GitHub data [skip ci]",
-          "url": "https://github.com/charlie2233/atrak-website/commit/6aaa0acd68cf3b915ca1d92df333736d3ba87fd4"
         }
       ]
     },
@@ -361,30 +361,7 @@
       "push_id": 41104916459,
       "ref": "refs/heads/main",
       "head": "dfa05a88d8c40599644ac94b316502c373ca1e2f",
-      "before": "81967d35b7813319a75b116b0accb5c95d5dbc06",
-      "distinct_size": 4,
-      "commits": [
-        {
-          "sha": "dfa05a88d8c40599644ac94b316502c373ca1e2f",
-          "message": "perf: eagerly load hero media",
-          "url": "https://github.com/charlie2233/GBC_HuskiesWeb/commit/dfa05a88d8c40599644ac94b316502c373ca1e2f"
-        },
-        {
-          "sha": "81967d35b7813319a75b116b0accb5c95d5dbc06",
-          "message": "feat: improve family contact experience",
-          "url": "https://github.com/charlie2233/GBC_HuskiesWeb/commit/81967d35b7813319a75b116b0accb5c95d5dbc06"
-        },
-        {
-          "sha": "ca91d9bd2135aaf812ec6d17e532ec66b1331f02",
-          "message": "fix: list current 13U to 15U teams",
-          "url": "https://github.com/charlie2233/GBC_HuskiesWeb/commit/ca91d9bd2135aaf812ec6d17e532ec66b1331f02"
-        },
-        {
-          "sha": "44f67cb22dc6200808bc81cd2ad8c4d9fbeba69e",
-          "message": "feat: auto-sync GoFundMe tracker",
-          "url": "https://github.com/charlie2233/GBC_HuskiesWeb/commit/44f67cb22dc6200808bc81cd2ad8c4d9fbeba69e"
-        }
-      ]
+      "before": "81967d35b7813319a75b116b0accb5c95d5dbc06"
     },
     "public": true,
     "created_at": "2026-08-24T23:30:20Z"
@@ -2102,77 +2079,5 @@
     },
     "public": true,
     "created_at": "2026-08-01T22:39:55Z"
-  },
-  {
-    "id": "12624616739",
-    "type": "PublicEvent",
-    "actor": {
-      "id": 117957000,
-      "login": "charlie2233",
-      "display_login": "charlie2233",
-      "gravatar_id": "",
-      "url": "https://api.github.com/users/charlie2233",
-      "avatar_url": "https://avatars.githubusercontent.com/u/117957000?"
-    },
-    "repo": {
-      "id": 1313443669,
-      "name": "charlie2233/ygf-bowl-to-build",
-      "url": "https://api.github.com/repos/charlie2233/ygf-bowl-to-build"
-    },
-    "payload": {},
-    "public": true,
-    "created_at": "2026-07-27T05:17:54Z"
-  },
-  {
-    "id": "16382145976",
-    "type": "PushEvent",
-    "actor": {
-      "id": 117957000,
-      "login": "charlie2233",
-      "display_login": "charlie2233",
-      "gravatar_id": "",
-      "url": "https://api.github.com/users/charlie2233",
-      "avatar_url": "https://avatars.githubusercontent.com/u/117957000?"
-    },
-    "repo": {
-      "id": 1140388078,
-      "name": "charlie2233/atrak-website",
-      "url": "https://api.github.com/repos/charlie2233/atrak-website"
-    },
-    "payload": {
-      "repository_id": 1140388078,
-      "push_id": 38688882188,
-      "ref": "refs/heads/main",
-      "head": "685788d192388d1bbdc34384875e5a1b7fe00a82",
-      "before": "e541443f3b50671b53a60963fcddb66f15bc267c"
-    },
-    "public": true,
-    "created_at": "2026-08-01T07:16:25Z"
-  },
-  {
-    "id": "16381983324",
-    "type": "PushEvent",
-    "actor": {
-      "id": 117957000,
-      "login": "charlie2233",
-      "display_login": "charlie2233",
-      "gravatar_id": "",
-      "url": "https://api.github.com/users/charlie2233",
-      "avatar_url": "https://avatars.githubusercontent.com/u/117957000?"
-    },
-    "repo": {
-      "id": 1140388078,
-      "name": "charlie2233/atrak-website",
-      "url": "https://api.github.com/repos/charlie2233/atrak-website"
-    },
-    "payload": {
-      "repository_id": 1140388078,
-      "push_id": 38688718648,
-      "ref": "refs/heads/main",
-      "head": "df57faa282fba1fa499338d13036e593a87221e9",
-      "before": "a535c3788e971b8ca8d3c067de7cf56e97afb01c"
-    },
-    "public": true,
-    "created_at": "2026-08-01T07:14:05Z"
   }
 ]
