@@ -1990,49 +1990,52 @@
   {
     "weekStart": "2026-08-23",
     "weekEnd": "2026-08-29",
-    "generatedAt": "2026-08-30T09:23:57.990Z",
+    "generatedAt": "2026-09-01T15:07:47.379Z",
     "source": "github-weekly-automation",
-    "dateRange": "Aug 23 – 29",
-    "title": "Atrak Website and GBC HuskiesWeb moved the week forward.",
+    "dateRange": "Aug 23 – Aug 29",
+    "title": "AccessCourt navigation and GBC family experience upgrades",
     "highlights": [
-      "Atrak Website led public activity with 22 commits across 5 pushes.",
-      "2 public repositories were active across 10 GitHub events.",
-      "No formal GitHub release was published during this edition."
+      "Atrak Website recorded 22 verified commits across six pushes",
+      "GBC HuskiesWeb added four commits spanning performance, family contact, team listings, and fundraiser automation",
+      "Two public repositories produced 26 commits across 11 captured GitHub events"
     ],
     "shipped": [
-      "refresh local weekly GitHub data [skip ci]",
-      "refresh local weekly GitHub data",
-      "add AccessCourt to legal page navigation",
-      "refresh local weekly GitHub data [skip ci]"
+      "Added AccessCourt to the legal-page navigation so the impact project stays reachable across Atrak",
+      "Improved the GBC HuskiesWeb family contact experience and corrected the current 13U–15U team list",
+      "Added automatic GoFundMe tracker synchronization and eagerly loaded hero media",
+      "Kept Atrak's GitHub data and local weekly aggregate current through the completed window"
     ],
     "engineering": [
-      "9 pushes and 0 pull request updates were condensed into this edition.",
-      "Active stacks included HTML, TypeScript.",
-      "The snapshot is stored permanently so the edition remains available after GitHub events expire."
+      "Public GitHub commit enrichment verified the completed Sunday → Saturday window",
+      "Ten pushes across HTML and TypeScript projects were condensed into one durable edition",
+      "The archive keeps source links and commit timestamps after GitHub events expire"
     ],
     "fixes": [
-      "add AccessCourt to legal page navigation",
-      "list current 13U to 15U teams"
+      "Restored AccessCourt visibility in legal-page navigation",
+      "Corrected the GBC HuskiesWeb team listing and reduced hero-media loading delay"
     ],
     "metrics": [
       "Commits: 26",
       "Active repos: 2",
-      "Pull requests: 0",
+      "PR updates: 0",
       "Issues: 0",
-      "Releases: 0"
+      "Pushes: 10",
+      "Releases: 0",
+      "GitHub events: 11"
     ],
     "next": [
-      "Continue the Atrak Website build and publish the next visible milestone.",
-      "Review the next automated edition after Sunday refresh."
+      "Keep AccessCourt links consistent across Atrak's shared navigation",
+      "Continue measuring GBC HuskiesWeb mobile and hero-media performance",
+      "Start the September release record with the next completed edition"
     ],
     "stats": {
       "commits": 26,
       "activeRepositories": 2,
       "pullRequests": 0,
       "issues": 0,
-      "pushes": 9,
+      "pushes": 10,
       "releases": 0,
-      "events": 10
+      "events": 11
     },
     "repositories": [
       {
@@ -2041,11 +2044,11 @@
         "url": "https://github.com/charlie2233/atrak-website",
         "language": "HTML",
         "commits": 22,
-        "pushes": 5,
-        "events": 6,
+        "pushes": 6,
+        "events": 7,
         "pullRequests": 0,
         "issues": 0,
-        "lastAt": "2026-08-28T07:09:48.000Z"
+        "lastAt": "2026-08-29T23:58:35.000Z"
       },
       {
         "name": "GBC HuskiesWeb",

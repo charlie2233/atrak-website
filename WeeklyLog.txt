@@ -1081,10 +1081,57 @@ You can honestly demo this to a coach and they'd actually use it.
 
 ---
 
+## Week of Aug 23 – Aug 29
+<!-- week-start: 2026-08-23 -->
+
+### "AccessCourt navigation and GBC family experience upgrades"
+
+**Highlights**
+
+* Atrak Website recorded 22 verified commits across six pushes
+* GBC HuskiesWeb added four commits spanning performance, family contact, team listings, and fundraiser automation
+* Two public repositories produced 26 commits across 11 captured GitHub events
+
+**Shipped**
+
+* Added AccessCourt to the legal-page navigation so the impact project stays reachable across Atrak
+* Improved the GBC HuskiesWeb family contact experience and corrected the current 13U–15U team list
+* Added automatic GoFundMe tracker synchronization and eagerly loaded hero media
+* Kept Atrak's GitHub data and local weekly aggregate current through the completed window
+
+**Engineering**
+
+* Public GitHub commit enrichment verified the completed Sunday → Saturday window
+* Ten pushes across HTML and TypeScript projects were condensed into one durable edition
+* The archive keeps source links and commit timestamps after GitHub events expire
+
+**Fixes**
+
+* Restored AccessCourt visibility in legal-page navigation
+* Corrected the GBC HuskiesWeb team listing and reduced hero-media loading delay
+
+**Metrics**
+
+* Commits: 26
+* Active repos: 2
+* PR updates: 0
+* Issues: 0
+* Pushes: 10
+* Releases: 0
+* GitHub events: 11
+
+**Next**
+
+* Keep AccessCourt links consistent across Atrak's shared navigation
+* Continue measuring GBC HuskiesWeb mobile and hero-media performance
+* Start the September release record with the next completed edition
+
+---
+
 # 📊 Summary
 
-**Total Coverage:** August 31, 2024 – August 22, 2026
-**Total Weeks:** 28 documented (Dec Weeks 14-18 remain undocumented)
+**Total Coverage:** August 31, 2024 – August 29, 2026
+**Total Weeks:** 29 documented (Dec Weeks 14-18 remain undocumented)
 **Format:** Sunday → Saturday (PT)
 
 **Major Milestones:**
