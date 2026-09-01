@@ -44,6 +44,11 @@
       "distinct_size": 20,
       "commits": [
         {
+          "sha": "ffdde3a21d6cec15d9cb27b7847d0376a749ad05",
+          "message": "chore: update GitHub data [skip ci]",
+          "url": "https://github.com/charlie2233/atrak-website/commit/ffdde3a21d6cec15d9cb27b7847d0376a749ad05"
+        },
+        {
           "sha": "a7c5364ec05fe55f15a0fdae9380a07991c6b1f8",
           "message": "chore: update GitHub data [skip ci]",
           "url": "https://github.com/charlie2233/atrak-website/commit/a7c5364ec05fe55f15a0fdae9380a07991c6b1f8"
@@ -137,11 +142,6 @@
           "sha": "26ac69ace45fcd30d1844d836c9c79ebb28a7126",
           "message": "chore: update weekly logs and August releases [skip ci]",
           "url": "https://github.com/charlie2233/atrak-website/commit/26ac69ace45fcd30d1844d836c9c79ebb28a7126"
-        },
-        {
-          "sha": "b3f004c0c9afd7ab9d71fa3ad60980184d10bfd7",
-          "message": "chore: update GitHub data [skip ci]",
-          "url": "https://github.com/charlie2233/atrak-website/commit/b3f004c0c9afd7ab9d71fa3ad60980184d10bfd7"
         }
       ]
     },
@@ -2001,83 +2001,5 @@
     },
     "public": true,
     "created_at": "2026-08-03T04:09:18Z"
-  },
-  {
-    "id": "16429329613",
-    "type": "PushEvent",
-    "actor": {
-      "id": 117957000,
-      "login": "charlie2233",
-      "display_login": "charlie2233",
-      "gravatar_id": "",
-      "url": "https://api.github.com/users/charlie2233",
-      "avatar_url": "https://avatars.githubusercontent.com/u/117957000?"
-    },
-    "repo": {
-      "id": 1313443669,
-      "name": "charlie2233/ygf-bowl-to-build",
-      "url": "https://api.github.com/repos/charlie2233/ygf-bowl-to-build"
-    },
-    "payload": {
-      "repository_id": 1313443669,
-      "push_id": 38736556765,
-      "ref": "refs/heads/codex/ygf-bowl-to-build-beta",
-      "head": "96d25fac5fd0a5aaa187b6b0a9f226aeafde79c4",
-      "before": "318756d36ef04a37c2dc10e9420275c7544717f3"
-    },
-    "public": true,
-    "created_at": "2026-08-01T22:52:16Z"
-  },
-  {
-    "id": "16429206860",
-    "type": "PushEvent",
-    "actor": {
-      "id": 117957000,
-      "login": "charlie2233",
-      "display_login": "charlie2233",
-      "gravatar_id": "",
-      "url": "https://api.github.com/users/charlie2233",
-      "avatar_url": "https://avatars.githubusercontent.com/u/117957000?"
-    },
-    "repo": {
-      "id": 1313443669,
-      "name": "charlie2233/ygf-bowl-to-build",
-      "url": "https://api.github.com/repos/charlie2233/ygf-bowl-to-build"
-    },
-    "payload": {
-      "repository_id": 1313443669,
-      "push_id": 38736432658,
-      "ref": "refs/heads/codex/ygf-bowl-to-build-beta",
-      "head": "318756d36ef04a37c2dc10e9420275c7544717f3",
-      "before": "14cd67be613ed62879679a164457a572f2c9f9fa"
-    },
-    "public": true,
-    "created_at": "2026-08-01T22:48:11Z"
-  },
-  {
-    "id": "16428949976",
-    "type": "PushEvent",
-    "actor": {
-      "id": 117957000,
-      "login": "charlie2233",
-      "display_login": "charlie2233",
-      "gravatar_id": "",
-      "url": "https://api.github.com/users/charlie2233",
-      "avatar_url": "https://avatars.githubusercontent.com/u/117957000?"
-    },
-    "repo": {
-      "id": 1313443669,
-      "name": "charlie2233/ygf-bowl-to-build",
-      "url": "https://api.github.com/repos/charlie2233/ygf-bowl-to-build"
-    },
-    "payload": {
-      "repository_id": 1313443669,
-      "push_id": 38736172913,
-      "ref": "refs/heads/codex/ygf-bowl-to-build-beta",
-      "head": "14cd67be613ed62879679a164457a572f2c9f9fa",
-      "before": "757ad60360d1f8556e7df0590438e289620606b5"
-    },
-    "public": true,
-    "created_at": "2026-08-01T22:39:55Z"
   }
 ]
