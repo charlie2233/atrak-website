@@ -44,6 +44,11 @@
       "distinct_size": 20,
       "commits": [
         {
+          "sha": "3a3e6f1a86b4f363b7cdc756ec3cb0aa35922f09",
+          "message": "chore: update GitHub data [skip ci]",
+          "url": "https://github.com/charlie2233/atrak-website/commit/3a3e6f1a86b4f363b7cdc756ec3cb0aa35922f09"
+        },
+        {
           "sha": "90537ae7de11ea0f9251cb0887bfaaf527c5922b",
           "message": "chore: update weekly logs and August releases [skip ci]",
           "url": "https://github.com/charlie2233/atrak-website/commit/90537ae7de11ea0f9251cb0887bfaaf527c5922b"
@@ -137,11 +142,6 @@
           "sha": "b459af69463e7e0b6426b0fcc9c80fe356d528f3",
           "message": "chore: refresh local weekly GitHub data [skip ci]",
           "url": "https://github.com/charlie2233/atrak-website/commit/b459af69463e7e0b6426b0fcc9c80fe356d528f3"
-        },
-        {
-          "sha": "611d7b94649df81712097211df47fa38cfc252b1",
-          "message": "chore: update GitHub data [skip ci]",
-          "url": "https://github.com/charlie2233/atrak-website/commit/611d7b94649df81712097211df47fa38cfc252b1"
         }
       ]
     },
@@ -1949,57 +1949,5 @@
     },
     "public": true,
     "created_at": "2026-08-03T07:15:02Z"
-  },
-  {
-    "id": "16528151684",
-    "type": "PushEvent",
-    "actor": {
-      "id": 117957000,
-      "login": "charlie2233",
-      "display_login": "charlie2233",
-      "gravatar_id": "",
-      "url": "https://api.github.com/users/charlie2233",
-      "avatar_url": "https://avatars.githubusercontent.com/u/117957000?"
-    },
-    "repo": {
-      "id": 1101568155,
-      "name": "charlie2233/rork-guide-pup--vision-assistant",
-      "url": "https://api.github.com/repos/charlie2233/rork-guide-pup--vision-assistant"
-    },
-    "payload": {
-      "repository_id": 1101568155,
-      "push_id": 38838209145,
-      "ref": "refs/heads/codex/guidepup-credentialed-launch",
-      "head": "ad93c9d9462bf4eaba27de4f24def22c6d34cc09",
-      "before": "9f941493dec91afb2601d90568f90de76d7d13bf"
-    },
-    "public": true,
-    "created_at": "2026-08-03T04:53:46Z"
-  },
-  {
-    "id": "16524783336",
-    "type": "PushEvent",
-    "actor": {
-      "id": 117957000,
-      "login": "charlie2233",
-      "display_login": "charlie2233",
-      "gravatar_id": "",
-      "url": "https://api.github.com/users/charlie2233",
-      "avatar_url": "https://avatars.githubusercontent.com/u/117957000?"
-    },
-    "repo": {
-      "id": 1101568155,
-      "name": "charlie2233/rork-guide-pup--vision-assistant",
-      "url": "https://api.github.com/repos/charlie2233/rork-guide-pup--vision-assistant"
-    },
-    "payload": {
-      "repository_id": 1101568155,
-      "push_id": 38834746581,
-      "ref": "refs/heads/codex/guidepup-credentialed-launch",
-      "head": "9f941493dec91afb2601d90568f90de76d7d13bf",
-      "before": "064cf7fb4fc8a2652e0e7258b86704cd5ea8ccaf"
-    },
-    "public": true,
-    "created_at": "2026-08-03T04:09:18Z"
   }
 ]
