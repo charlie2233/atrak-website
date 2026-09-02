@@ -44,6 +44,16 @@
       "distinct_size": 20,
       "commits": [
         {
+          "sha": "90537ae7de11ea0f9251cb0887bfaaf527c5922b",
+          "message": "chore: update weekly logs and August releases [skip ci]",
+          "url": "https://github.com/charlie2233/atrak-website/commit/90537ae7de11ea0f9251cb0887bfaaf527c5922b"
+        },
+        {
+          "sha": "57c54cd1d1b0fa126cae4c7c555e3bc205c33f80",
+          "message": "chore: update GitHub data [skip ci]",
+          "url": "https://github.com/charlie2233/atrak-website/commit/57c54cd1d1b0fa126cae4c7c555e3bc205c33f80"
+        },
+        {
           "sha": "ffdde3a21d6cec15d9cb27b7847d0376a749ad05",
           "message": "chore: update GitHub data [skip ci]",
           "url": "https://github.com/charlie2233/atrak-website/commit/ffdde3a21d6cec15d9cb27b7847d0376a749ad05"
@@ -132,16 +142,6 @@
           "sha": "611d7b94649df81712097211df47fa38cfc252b1",
           "message": "chore: update GitHub data [skip ci]",
           "url": "https://github.com/charlie2233/atrak-website/commit/611d7b94649df81712097211df47fa38cfc252b1"
-        },
-        {
-          "sha": "c4218549aec3003a87a261a30d36b0b35bf7490b",
-          "message": "chore: update GitHub data [skip ci]",
-          "url": "https://github.com/charlie2233/atrak-website/commit/c4218549aec3003a87a261a30d36b0b35bf7490b"
-        },
-        {
-          "sha": "26ac69ace45fcd30d1844d836c9c79ebb28a7126",
-          "message": "chore: update weekly logs and August releases [skip ci]",
-          "url": "https://github.com/charlie2233/atrak-website/commit/26ac69ace45fcd30d1844d836c9c79ebb28a7126"
         }
       ]
     },
