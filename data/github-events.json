@@ -44,6 +44,11 @@
       "distinct_size": 20,
       "commits": [
         {
+          "sha": "051ebf049abf2afd10a67deadfb3a063a5c380d3",
+          "message": "chore: update GitHub data [skip ci]",
+          "url": "https://github.com/charlie2233/atrak-website/commit/051ebf049abf2afd10a67deadfb3a063a5c380d3"
+        },
+        {
           "sha": "eaa88b58e9a187494cee93cbc37e021ed182baab",
           "message": "chore: update GitHub data [skip ci]",
           "url": "https://github.com/charlie2233/atrak-website/commit/eaa88b58e9a187494cee93cbc37e021ed182baab"
@@ -137,11 +142,6 @@
           "sha": "4459622112b4eb901eb944cbd6dfb9ad7d538807",
           "message": "chore: update GitHub data [skip ci]",
           "url": "https://github.com/charlie2233/atrak-website/commit/4459622112b4eb901eb944cbd6dfb9ad7d538807"
-        },
-        {
-          "sha": "b8ef2d2d97966ad136daf0c4aa93f91232e17868",
-          "message": "chore: update GitHub data [skip ci]",
-          "url": "https://github.com/charlie2233/atrak-website/commit/b8ef2d2d97966ad136daf0c4aa93f91232e17868"
         }
       ]
     },
@@ -1818,136 +1818,5 @@
     },
     "public": true,
     "created_at": "2026-08-04T06:11:02Z"
-  },
-  {
-    "id": "16631137969",
-    "type": "PushEvent",
-    "actor": {
-      "id": 117957000,
-      "login": "charlie2233",
-      "display_login": "charlie2233",
-      "gravatar_id": "",
-      "url": "https://api.github.com/users/charlie2233",
-      "avatar_url": "https://avatars.githubusercontent.com/u/117957000?"
-    },
-    "repo": {
-      "id": 1322073520,
-      "name": "charlie2233/turnplay-arena",
-      "url": "https://api.github.com/repos/charlie2233/turnplay-arena"
-    },
-    "payload": {
-      "repository_id": 1322073520,
-      "push_id": 38942742200,
-      "ref": "refs/heads/main",
-      "head": "9569a7429acca48eec3e9c8d73c9f85d4d5ac485",
-      "before": "ca765e1cbe232f2ef89a29aa606a47cd244e31c2"
-    },
-    "public": true,
-    "created_at": "2026-08-04T02:13:04Z"
-  },
-  {
-    "id": "16620078194",
-    "type": "PushEvent",
-    "actor": {
-      "id": 117957000,
-      "login": "charlie2233",
-      "display_login": "charlie2233",
-      "gravatar_id": "",
-      "url": "https://api.github.com/users/charlie2233",
-      "avatar_url": "https://avatars.githubusercontent.com/u/117957000?"
-    },
-    "repo": {
-      "id": 1322073520,
-      "name": "charlie2233/turnplay-arena",
-      "url": "https://api.github.com/repos/charlie2233/turnplay-arena"
-    },
-    "payload": {
-      "repository_id": 1322073520,
-      "push_id": 38931532279,
-      "ref": "refs/heads/main",
-      "head": "ca765e1cbe232f2ef89a29aa606a47cd244e31c2",
-      "before": "bf8e13bd0e31c99e2274282e56bacb1beff28834"
-    },
-    "public": true,
-    "created_at": "2026-08-03T22:36:14Z"
-  },
-  {
-    "id": "16613308223",
-    "type": "PushEvent",
-    "actor": {
-      "id": 117957000,
-      "login": "charlie2233",
-      "display_login": "charlie2233",
-      "gravatar_id": "",
-      "url": "https://api.github.com/users/charlie2233",
-      "avatar_url": "https://avatars.githubusercontent.com/u/117957000?"
-    },
-    "repo": {
-      "id": 1322073520,
-      "name": "charlie2233/turnplay-arena",
-      "url": "https://api.github.com/repos/charlie2233/turnplay-arena"
-    },
-    "payload": {
-      "repository_id": 1322073520,
-      "push_id": 38924250904,
-      "ref": "refs/heads/main",
-      "head": "bf8e13bd0e31c99e2274282e56bacb1beff28834",
-      "before": "560338fbe2037a05a3014b81eef89086c93c0056"
-    },
-    "public": true,
-    "created_at": "2026-08-03T20:41:02Z"
-  },
-  {
-    "id": "16612854691",
-    "type": "PushEvent",
-    "actor": {
-      "id": 117957000,
-      "login": "charlie2233",
-      "display_login": "charlie2233",
-      "gravatar_id": "",
-      "url": "https://api.github.com/users/charlie2233",
-      "avatar_url": "https://avatars.githubusercontent.com/u/117957000?"
-    },
-    "repo": {
-      "id": 1322073520,
-      "name": "charlie2233/turnplay-arena",
-      "url": "https://api.github.com/repos/charlie2233/turnplay-arena"
-    },
-    "payload": {
-      "repository_id": 1322073520,
-      "push_id": 38924250904,
-      "ref": "refs/heads/main",
-      "head": "bf8e13bd0e31c99e2274282e56bacb1beff28834",
-      "before": "560338fbe2037a05a3014b81eef89086c93c0056"
-    },
-    "public": true,
-    "created_at": "2026-08-03T20:41:02Z"
-  },
-  {
-    "id": "16600802975",
-    "type": "CreateEvent",
-    "actor": {
-      "id": 117957000,
-      "login": "charlie2233",
-      "display_login": "charlie2233",
-      "gravatar_id": "",
-      "url": "https://api.github.com/users/charlie2233",
-      "avatar_url": "https://avatars.githubusercontent.com/u/117957000?"
-    },
-    "repo": {
-      "id": 1322073520,
-      "name": "charlie2233/turnplay-arena",
-      "url": "https://api.github.com/repos/charlie2233/turnplay-arena"
-    },
-    "payload": {
-      "ref": "main",
-      "ref_type": "branch",
-      "full_ref": "refs/heads/main",
-      "master_branch": "main",
-      "description": "Play Chess, Go, strategy games, pool, and basketball with an AI opponent in ChatGPT.",
-      "pusher_type": "user"
-    },
-    "public": true,
-    "created_at": "2026-08-03T17:35:06Z"
   }
 ]
