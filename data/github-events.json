@@ -41,8 +41,13 @@
       "ref": "refs/heads/main",
       "head": "90537ae7de11ea0f9251cb0887bfaaf527c5922b",
       "before": "57c54cd1d1b0fa126cae4c7c555e3bc205c33f80",
-      "distinct_size": 20,
+      "distinct_size": 18,
       "commits": [
+        {
+          "sha": "0ec4e734733b82f8ea86bc281473c285ae397bef",
+          "message": "chore: update GitHub data [skip ci]",
+          "url": "https://github.com/charlie2233/atrak-website/commit/0ec4e734733b82f8ea86bc281473c285ae397bef"
+        },
         {
           "sha": "051ebf049abf2afd10a67deadfb3a063a5c380d3",
           "message": "chore: update GitHub data [skip ci]",
@@ -127,21 +132,6 @@
           "sha": "96246056e029ced59b3a2a4864942821e1c8b288",
           "message": "chore: update GitHub data [skip ci]",
           "url": "https://github.com/charlie2233/atrak-website/commit/96246056e029ced59b3a2a4864942821e1c8b288"
-        },
-        {
-          "sha": "7f9bc0484390c28251d51e44a2b61ed8b1307087",
-          "message": "chore: update GitHub data [skip ci]",
-          "url": "https://github.com/charlie2233/atrak-website/commit/7f9bc0484390c28251d51e44a2b61ed8b1307087"
-        },
-        {
-          "sha": "58cf1078f6f433b8538e804394e4c48a7e36f8fe",
-          "message": "fix: add AccessCourt to legal page navigation",
-          "url": "https://github.com/charlie2233/atrak-website/commit/58cf1078f6f433b8538e804394e4c48a7e36f8fe"
-        },
-        {
-          "sha": "4459622112b4eb901eb944cbd6dfb9ad7d538807",
-          "message": "chore: update GitHub data [skip ci]",
-          "url": "https://github.com/charlie2233/atrak-website/commit/4459622112b4eb901eb944cbd6dfb9ad7d538807"
         }
       ]
     },
@@ -1688,135 +1678,5 @@
     },
     "public": true,
     "created_at": "2026-08-05T23:14:34Z"
-  },
-  {
-    "id": "16707150376",
-    "type": "PushEvent",
-    "actor": {
-      "id": 117957000,
-      "login": "charlie2233",
-      "display_login": "charlie2233",
-      "gravatar_id": "",
-      "url": "https://api.github.com/users/charlie2233",
-      "avatar_url": "https://avatars.githubusercontent.com/u/117957000?"
-    },
-    "repo": {
-      "id": 1140388078,
-      "name": "charlie2233/atrak-website",
-      "url": "https://api.github.com/repos/charlie2233/atrak-website"
-    },
-    "payload": {
-      "repository_id": 1140388078,
-      "push_id": 39019972556,
-      "ref": "refs/heads/main",
-      "head": "229aa179a16dfae66223c71b8fb87c005284385c",
-      "before": "8ee1fcb6c897b83862f7f29145d555643d813335"
-    },
-    "public": true,
-    "created_at": "2026-08-04T15:54:39Z"
-  },
-  {
-    "id": "16703280984",
-    "type": "PushEvent",
-    "actor": {
-      "id": 117957000,
-      "login": "charlie2233",
-      "display_login": "charlie2233",
-      "gravatar_id": "",
-      "url": "https://api.github.com/users/charlie2233",
-      "avatar_url": "https://avatars.githubusercontent.com/u/117957000?"
-    },
-    "repo": {
-      "id": 1313443669,
-      "name": "charlie2233/ygf-bowl-to-build",
-      "url": "https://api.github.com/repos/charlie2233/ygf-bowl-to-build"
-    },
-    "payload": {
-      "repository_id": 1313443669,
-      "push_id": 39012521010,
-      "ref": "refs/heads/codex/ygf-bowl-to-build-beta",
-      "head": "30788d139c4d2bfca009b305bf3e82beed4c338b",
-      "before": "365a08fbdb6150283a897107fa4686e59ec86f01"
-    },
-    "public": true,
-    "created_at": "2026-08-04T14:39:00Z"
-  },
-  {
-    "id": "16700637937",
-    "type": "PushEvent",
-    "actor": {
-      "id": 117957000,
-      "login": "charlie2233",
-      "display_login": "charlie2233",
-      "gravatar_id": "",
-      "url": "https://api.github.com/users/charlie2233",
-      "avatar_url": "https://avatars.githubusercontent.com/u/117957000?"
-    },
-    "repo": {
-      "id": 1322073520,
-      "name": "charlie2233/turnplay-arena",
-      "url": "https://api.github.com/repos/charlie2233/turnplay-arena"
-    },
-    "payload": {
-      "repository_id": 1322073520,
-      "push_id": 39013993199,
-      "ref": "refs/heads/main",
-      "head": "063ef1db33b14de5397976e0f506fb14ae6bdcd4",
-      "before": "1f7aedd197debfa42b04fe7d67f12b3b89949f49"
-    },
-    "public": true,
-    "created_at": "2026-08-04T14:54:03Z"
-  },
-  {
-    "id": "16650880791",
-    "type": "PushEvent",
-    "actor": {
-      "id": 117957000,
-      "login": "charlie2233",
-      "display_login": "charlie2233",
-      "gravatar_id": "",
-      "url": "https://api.github.com/users/charlie2233",
-      "avatar_url": "https://avatars.githubusercontent.com/u/117957000?"
-    },
-    "repo": {
-      "id": 1313443669,
-      "name": "charlie2233/ygf-bowl-to-build",
-      "url": "https://api.github.com/repos/charlie2233/ygf-bowl-to-build"
-    },
-    "payload": {
-      "repository_id": 1313443669,
-      "push_id": 38962689819,
-      "ref": "refs/heads/codex/ygf-bowl-to-build-beta",
-      "head": "365a08fbdb6150283a897107fa4686e59ec86f01",
-      "before": "96d25fac5fd0a5aaa187b6b0a9f226aeafde79c4"
-    },
-    "public": true,
-    "created_at": "2026-08-04T06:27:31Z"
-  },
-  {
-    "id": "16649335906",
-    "type": "PushEvent",
-    "actor": {
-      "id": 117957000,
-      "login": "charlie2233",
-      "display_login": "charlie2233",
-      "gravatar_id": "",
-      "url": "https://api.github.com/users/charlie2233",
-      "avatar_url": "https://avatars.githubusercontent.com/u/117957000?"
-    },
-    "repo": {
-      "id": 1322073520,
-      "name": "charlie2233/turnplay-arena",
-      "url": "https://api.github.com/repos/charlie2233/turnplay-arena"
-    },
-    "payload": {
-      "repository_id": 1322073520,
-      "push_id": 38961096646,
-      "ref": "refs/heads/main",
-      "head": "1f7aedd197debfa42b04fe7d67f12b3b89949f49",
-      "before": "9569a7429acca48eec3e9c8d73c9f85d4d5ac485"
-    },
-    "public": true,
-    "created_at": "2026-08-04T06:11:02Z"
   }
 ]
