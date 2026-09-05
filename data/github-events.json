@@ -41,8 +41,13 @@
       "ref": "refs/heads/main",
       "head": "90537ae7de11ea0f9251cb0887bfaaf527c5922b",
       "before": "57c54cd1d1b0fa126cae4c7c555e3bc205c33f80",
-      "distinct_size": 16,
+      "distinct_size": 17,
       "commits": [
+        {
+          "sha": "c2f9e3318ad4ee98b82078c2f1895b68ccae6449",
+          "message": "chore: update GitHub data [skip ci]",
+          "url": "https://github.com/charlie2233/atrak-website/commit/c2f9e3318ad4ee98b82078c2f1895b68ccae6449"
+        },
         {
           "sha": "c8ddf659fd31d94c047b9f30282caef9b4a915ba",
           "message": "chore: update GitHub data [skip ci]",
@@ -1642,31 +1647,5 @@
     },
     "public": true,
     "created_at": "2026-08-06T06:12:52Z"
-  },
-  {
-    "id": "16858538112",
-    "type": "PushEvent",
-    "actor": {
-      "id": 117957000,
-      "login": "charlie2233",
-      "display_login": "charlie2233",
-      "gravatar_id": "",
-      "url": "https://api.github.com/users/charlie2233",
-      "avatar_url": "https://avatars.githubusercontent.com/u/117957000?"
-    },
-    "repo": {
-      "id": 1322073520,
-      "name": "charlie2233/turnplay-arena",
-      "url": "https://api.github.com/repos/charlie2233/turnplay-arena"
-    },
-    "payload": {
-      "repository_id": 1322073520,
-      "push_id": 39172585865,
-      "ref": "refs/heads/main",
-      "head": "3e83a9d5cdd757f86b7d9ebbee0b6d6576059389",
-      "before": "063ef1db33b14de5397976e0f506fb14ae6bdcd4"
-    },
-    "public": true,
-    "created_at": "2026-08-05T23:14:34Z"
   }
 ]
