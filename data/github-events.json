@@ -1,25 +1,5 @@
 [
   {
-    "type": "PushEvent",
-    "created_at": "2026-08-30T04:06:31Z",
-    "repo": {
-      "name": "charlie2233/HoopClips-Windows-Downloads"
-    },
-    "payload": {
-      "ref": "refs/heads/main",
-      "before": "",
-      "head": "b2e2a177cfffafad894e523b372c9fb23d216982",
-      "distinct_size": 1,
-      "commits": [
-        {
-          "sha": "b2e2a177cfffafad894e523b372c9fb23d216982",
-          "message": "docs: add public Windows beta download",
-          "url": "https://github.com/charlie2233/HoopClips-Windows-Downloads/commit/b2e2a177cfffafad894e523b372c9fb23d216982"
-        }
-      ]
-    }
-  },
-  {
     "id": "19767844368",
     "type": "PushEvent",
     "actor": {
@@ -41,8 +21,18 @@
       "ref": "refs/heads/main",
       "head": "90537ae7de11ea0f9251cb0887bfaaf527c5922b",
       "before": "57c54cd1d1b0fa126cae4c7c555e3bc205c33f80",
-      "distinct_size": 15,
+      "distinct_size": 16,
       "commits": [
+        {
+          "sha": "8d94f4b9f27c5f2d2da3eab02a94a0e1337575fc",
+          "message": "chore: renew weekly log [skip ci]",
+          "url": "https://github.com/charlie2233/atrak-website/commit/8d94f4b9f27c5f2d2da3eab02a94a0e1337575fc"
+        },
+        {
+          "sha": "02c2331b8c35091754dc5d2f2dc84f8f565f3382",
+          "message": "chore: update GitHub data [skip ci]",
+          "url": "https://github.com/charlie2233/atrak-website/commit/02c2331b8c35091754dc5d2f2dc84f8f565f3382"
+        },
         {
           "sha": "934c6321b0cd07cfe0fa8b2537c882d5b1cf9e1b",
           "message": "chore: update GitHub data [skip ci]",
@@ -112,11 +102,6 @@
           "sha": "5c6a7ccf114a886e9eda02fe8bd59816ce9d3aae",
           "message": "chore: update GitHub data [skip ci]",
           "url": "https://github.com/charlie2233/atrak-website/commit/5c6a7ccf114a886e9eda02fe8bd59816ce9d3aae"
-        },
-        {
-          "sha": "fcb856d3fef9a5b6926dcb95dad7bc1415cc9d96",
-          "message": "chore: renew weekly log [skip ci]",
-          "url": "https://github.com/charlie2233/atrak-website/commit/fcb856d3fef9a5b6926dcb95dad7bc1415cc9d96"
         }
       ]
     },
@@ -1447,135 +1432,5 @@
     },
     "public": true,
     "created_at": "2026-08-07T06:07:36Z"
-  },
-  {
-    "id": "16989566227",
-    "type": "PushEvent",
-    "actor": {
-      "id": 117957000,
-      "login": "charlie2233",
-      "display_login": "charlie2233",
-      "gravatar_id": "",
-      "url": "https://api.github.com/users/charlie2233",
-      "avatar_url": "https://avatars.githubusercontent.com/u/117957000?"
-    },
-    "repo": {
-      "id": 1322073520,
-      "name": "charlie2233/turnplay-arena",
-      "url": "https://api.github.com/repos/charlie2233/turnplay-arena"
-    },
-    "payload": {
-      "repository_id": 1322073520,
-      "push_id": 39305443208,
-      "ref": "refs/heads/main",
-      "head": "a1cc6f1b6a94eb210a6b415800b8cf6951518420",
-      "before": "41ca28bee259cfd972b8b3f321e5dab7e62847db"
-    },
-    "public": true,
-    "created_at": "2026-08-07T03:33:41Z"
-  },
-  {
-    "id": "16986026173",
-    "type": "PushEvent",
-    "actor": {
-      "id": 117957000,
-      "login": "charlie2233",
-      "display_login": "charlie2233",
-      "gravatar_id": "",
-      "url": "https://api.github.com/users/charlie2233",
-      "avatar_url": "https://avatars.githubusercontent.com/u/117957000?"
-    },
-    "repo": {
-      "id": 1322073520,
-      "name": "charlie2233/turnplay-arena",
-      "url": "https://api.github.com/repos/charlie2233/turnplay-arena"
-    },
-    "payload": {
-      "repository_id": 1322073520,
-      "push_id": 39301831288,
-      "ref": "refs/heads/main",
-      "head": "41ca28bee259cfd972b8b3f321e5dab7e62847db",
-      "before": "eb5b92c48ad5f7b9a76afd0ec0a25debd84e495c"
-    },
-    "public": true,
-    "created_at": "2026-08-07T02:36:19Z"
-  },
-  {
-    "id": "16983802582",
-    "type": "PushEvent",
-    "actor": {
-      "id": 117957000,
-      "login": "charlie2233",
-      "display_login": "charlie2233",
-      "gravatar_id": "",
-      "url": "https://api.github.com/users/charlie2233",
-      "avatar_url": "https://avatars.githubusercontent.com/u/117957000?"
-    },
-    "repo": {
-      "id": 1322073520,
-      "name": "charlie2233/turnplay-arena",
-      "url": "https://api.github.com/repos/charlie2233/turnplay-arena"
-    },
-    "payload": {
-      "repository_id": 1322073520,
-      "push_id": 39299591015,
-      "ref": "refs/heads/main",
-      "head": "eb5b92c48ad5f7b9a76afd0ec0a25debd84e495c",
-      "before": "f3f1f9cc871341faf87660f46e46fb97474fa40c"
-    },
-    "public": true,
-    "created_at": "2026-08-07T01:55:20Z"
-  },
-  {
-    "id": "16979323554",
-    "type": "PushEvent",
-    "actor": {
-      "id": 117957000,
-      "login": "charlie2233",
-      "display_login": "charlie2233",
-      "gravatar_id": "",
-      "url": "https://api.github.com/users/charlie2233",
-      "avatar_url": "https://avatars.githubusercontent.com/u/117957000?"
-    },
-    "repo": {
-      "id": 1322073520,
-      "name": "charlie2233/turnplay-arena",
-      "url": "https://api.github.com/repos/charlie2233/turnplay-arena"
-    },
-    "payload": {
-      "repository_id": 1322073520,
-      "push_id": 39295073745,
-      "ref": "refs/heads/main",
-      "head": "f3f1f9cc871341faf87660f46e46fb97474fa40c",
-      "before": "1fb0a3a90e3e936584666961598dc1d3c221b6c8"
-    },
-    "public": true,
-    "created_at": "2026-08-07T00:30:53Z"
-  },
-  {
-    "id": "16976924745",
-    "type": "PushEvent",
-    "actor": {
-      "id": 117957000,
-      "login": "charlie2233",
-      "display_login": "charlie2233",
-      "gravatar_id": "",
-      "url": "https://api.github.com/users/charlie2233",
-      "avatar_url": "https://avatars.githubusercontent.com/u/117957000?"
-    },
-    "repo": {
-      "id": 1322073520,
-      "name": "charlie2233/turnplay-arena",
-      "url": "https://api.github.com/repos/charlie2233/turnplay-arena"
-    },
-    "payload": {
-      "repository_id": 1322073520,
-      "push_id": 39292730316,
-      "ref": "refs/heads/main",
-      "head": "1fb0a3a90e3e936584666961598dc1d3c221b6c8",
-      "before": "533eae42a8ca353598b1e35ae90aa1ef46a68700"
-    },
-    "public": true,
-    "created_at": "2026-08-06T23:48:38Z"
   }
 ]
