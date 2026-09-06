@@ -2126,5 +2126,110 @@
         "at": "2026-08-23T07:05:06Z"
       }
     ]
+  },
+  {
+    "weekStart": "2026-08-30",
+    "weekEnd": "2026-09-05",
+    "generatedAt": "2026-09-06T09:23:26.826Z",
+    "source": "github-weekly-automation",
+    "dateRange": "Aug 30 – Sep 5",
+    "title": "Atrak Website and HoopClips Windows Downloads moved the week forward.",
+    "highlights": [
+      "Atrak Website led public activity with 16 commits across 1 push.",
+      "3 public repositories were active across 4 GitHub events.",
+      "No formal GitHub release was published during this edition."
+    ],
+    "shipped": [
+      "update weekly logs and August releases [skip ci]",
+      "add public Windows beta download",
+      "limit Team Destiny Pages artifact"
+    ],
+    "engineering": [
+      "3 pushes and 0 pull request updates were condensed into this edition.",
+      "Active stacks included HTML, CSS.",
+      "The snapshot is stored permanently so the edition remains available after GitHub events expire."
+    ],
+    "fixes": [
+      "limit Team Destiny Pages artifact"
+    ],
+    "metrics": [
+      "Commits: 18",
+      "Active repos: 3",
+      "Pull requests: 0",
+      "Issues: 0",
+      "Releases: 0"
+    ],
+    "next": [
+      "Continue the Atrak Website build and publish the next visible milestone.",
+      "Review the next automated edition after Sunday refresh."
+    ],
+    "stats": {
+      "commits": 18,
+      "activeRepositories": 3,
+      "pullRequests": 0,
+      "issues": 0,
+      "pushes": 3,
+      "releases": 0,
+      "events": 4
+    },
+    "repositories": [
+      {
+        "name": "Atrak Website",
+        "fullName": "charlie2233/atrak-website",
+        "url": "https://github.com/charlie2233/atrak-website",
+        "language": "HTML",
+        "commits": 16,
+        "pushes": 1,
+        "events": 1,
+        "pullRequests": 0,
+        "issues": 0,
+        "lastAt": "2026-09-01T15:10:03.000Z"
+      },
+      {
+        "name": "HoopClips Windows Downloads",
+        "fullName": "charlie2233/HoopClips-Windows-Downloads",
+        "url": "https://github.com/charlie2233/HoopClips-Windows-Downloads",
+        "language": "",
+        "commits": 1,
+        "pushes": 1,
+        "events": 2,
+        "pullRequests": 0,
+        "issues": 0,
+        "lastAt": "2026-08-30T04:06:32.000Z"
+      },
+      {
+        "name": "DestinnyBasketballPage",
+        "fullName": "charlie2233/DestinnyBasketballPage",
+        "url": "https://github.com/charlie2233/DestinnyBasketballPage",
+        "language": "CSS",
+        "commits": 1,
+        "pushes": 1,
+        "events": 1,
+        "pullRequests": 0,
+        "issues": 0,
+        "lastAt": "2026-08-30T00:09:59.000Z"
+      }
+    ],
+    "releases": [],
+    "commitMessages": [
+      {
+        "repo": "charlie2233/atrak-website",
+        "text": "update weekly logs and August releases [skip ci]",
+        "url": "https://github.com/charlie2233/atrak-website/commit/90537ae7de11ea0f9251cb0887bfaaf527c5922b",
+        "at": "2026-09-01T15:09:57Z"
+      },
+      {
+        "repo": "charlie2233/HoopClips-Windows-Downloads",
+        "text": "add public Windows beta download",
+        "url": "https://github.com/charlie2233/HoopClips-Windows-Downloads/commit/b2e2a177cfffafad894e523b372c9fb23d216982",
+        "at": "2026-08-30T04:06:26Z"
+      },
+      {
+        "repo": "charlie2233/DestinnyBasketballPage",
+        "text": "limit Team Destiny Pages artifact",
+        "url": "https://github.com/charlie2233/DestinnyBasketballPage/commit/9abf38b2896d718a1e9695642d40c8833667e3c5",
+        "at": "2026-08-30T00:09:54Z"
+      }
+    ]
   }
 ]
