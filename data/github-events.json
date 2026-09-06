@@ -41,8 +41,13 @@
       "ref": "refs/heads/main",
       "head": "90537ae7de11ea0f9251cb0887bfaaf527c5922b",
       "before": "57c54cd1d1b0fa126cae4c7c555e3bc205c33f80",
-      "distinct_size": 17,
+      "distinct_size": 15,
       "commits": [
+        {
+          "sha": "934c6321b0cd07cfe0fa8b2537c882d5b1cf9e1b",
+          "message": "chore: update GitHub data [skip ci]",
+          "url": "https://github.com/charlie2233/atrak-website/commit/934c6321b0cd07cfe0fa8b2537c882d5b1cf9e1b"
+        },
         {
           "sha": "c2f9e3318ad4ee98b82078c2f1895b68ccae6449",
           "message": "chore: update GitHub data [skip ci]",
@@ -112,21 +117,6 @@
           "sha": "fcb856d3fef9a5b6926dcb95dad7bc1415cc9d96",
           "message": "chore: renew weekly log [skip ci]",
           "url": "https://github.com/charlie2233/atrak-website/commit/fcb856d3fef9a5b6926dcb95dad7bc1415cc9d96"
-        },
-        {
-          "sha": "c178dbd17a37490f9b29bae52761b26adf97f28f",
-          "message": "chore: update GitHub data [skip ci]",
-          "url": "https://github.com/charlie2233/atrak-website/commit/c178dbd17a37490f9b29bae52761b26adf97f28f"
-        },
-        {
-          "sha": "85ee09a41c3ae6b380993afffe60b938b66e5859",
-          "message": "chore: refresh local weekly GitHub data [skip ci]",
-          "url": "https://github.com/charlie2233/atrak-website/commit/85ee09a41c3ae6b380993afffe60b938b66e5859"
-        },
-        {
-          "sha": "afb2ecf2726aae5d7251adf74d1ea479aafce62f",
-          "message": "chore: update GitHub data [skip ci]",
-          "url": "https://github.com/charlie2233/atrak-website/commit/afb2ecf2726aae5d7251adf74d1ea479aafce62f"
         }
       ]
     },
@@ -207,15 +197,7 @@
       "push_id": 41763440837,
       "ref": "refs/heads/main",
       "head": "9abf38b2896d718a1e9695642d40c8833667e3c5",
-      "before": "3b847ae18f1d197d68be546e285759b281f6ce9a",
-      "distinct_size": 1,
-      "commits": [
-        {
-          "sha": "9abf38b2896d718a1e9695642d40c8833667e3c5",
-          "message": "fix: limit Team Destiny Pages artifact",
-          "url": "https://github.com/charlie2233/DestinnyBasketballPage/commit/9abf38b2896d718a1e9695642d40c8833667e3c5"
-        }
-      ]
+      "before": "3b847ae18f1d197d68be546e285759b281f6ce9a"
     },
     "public": true,
     "created_at": "2026-08-30T00:09:59Z"
@@ -1595,57 +1577,5 @@
     },
     "public": true,
     "created_at": "2026-08-06T23:48:38Z"
-  },
-  {
-    "id": "16912930976",
-    "type": "PushEvent",
-    "actor": {
-      "id": 117957000,
-      "login": "charlie2233",
-      "display_login": "charlie2233",
-      "gravatar_id": "",
-      "url": "https://api.github.com/users/charlie2233",
-      "avatar_url": "https://avatars.githubusercontent.com/u/117957000?"
-    },
-    "repo": {
-      "id": 1140388078,
-      "name": "charlie2233/atrak-website",
-      "url": "https://api.github.com/repos/charlie2233/atrak-website"
-    },
-    "payload": {
-      "repository_id": 1140388078,
-      "push_id": 39226603938,
-      "ref": "refs/heads/main",
-      "head": "4ec1a290fcab969d8555ecc57f13dfa59d56f905",
-      "before": "2e2d1a7d63bd4313a223cd012c33331339e79817"
-    },
-    "public": true,
-    "created_at": "2026-08-06T10:28:51Z"
-  },
-  {
-    "id": "16886114200",
-    "type": "PushEvent",
-    "actor": {
-      "id": 117957000,
-      "login": "charlie2233",
-      "display_login": "charlie2233",
-      "gravatar_id": "",
-      "url": "https://api.github.com/users/charlie2233",
-      "avatar_url": "https://avatars.githubusercontent.com/u/117957000?"
-    },
-    "repo": {
-      "id": 1322073520,
-      "name": "charlie2233/turnplay-arena",
-      "url": "https://api.github.com/repos/charlie2233/turnplay-arena"
-    },
-    "payload": {
-      "repository_id": 1322073520,
-      "push_id": 39200363383,
-      "ref": "refs/heads/main",
-      "head": "533eae42a8ca353598b1e35ae90aa1ef46a68700",
-      "before": "3e83a9d5cdd757f86b7d9ebbee0b6d6576059389"
-    },
-    "public": true,
-    "created_at": "2026-08-06T06:12:52Z"
   }
 ]
