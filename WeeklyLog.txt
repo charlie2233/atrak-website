@@ -1128,10 +1128,55 @@ You can honestly demo this to a coach and they'd actually use it.
 
 ---
 
+## Week of Aug 30 – Sep 5
+<!-- week-start: 2026-08-30 -->
+
+### "Windows beta download documentation and Team Destiny deployment maintenance"
+
+**Highlights**
+
+* Atrak Website recorded 16 verified commits, including the previous weekly publication and automated data refreshes
+* HoopClips Windows Downloads added public Windows beta download documentation
+* Team Destiny limited its GitHub Pages artifact
+
+**Shipped**
+
+* Published the Aug 23–29 archive and updated August release notes
+* Added public Windows beta download documentation to HoopClips Windows Downloads
+* Limited the Team Destiny Pages deployment artifact
+
+**Engineering**
+
+* Public GitHub commit APIs independently confirmed 18 commits across three repositories
+* This edition follows the existing generator's UTC window: Aug 30 00:00 through Sep 6 00:00, end exclusive
+* Push, PR, issue, and event counts describe the captured GitHub Actions snapshot
+
+**Fixes**
+
+* Limited the Team Destiny Pages artifact to control deployment contents
+
+**Metrics**
+
+* Commits: 18
+* Active repos: 3
+* PR updates: 0
+* Issues: 0
+* Pushes: 3
+* Releases: 0
+* GitHub events: 4
+
+**Next**
+
+* Keep Windows beta download documentation current
+* Verify Team Destiny deployment contents after future updates
+* Continue publishing completed editions from verified GitHub history
+
+---
+
 # 📊 Summary
 
-**Total Coverage:** August 31, 2024 – August 29, 2026
-**Total Weeks:** 29 documented (Dec Weeks 14-18 remain undocumented)
+**Total Coverage:** August 31, 2024 – September 5, 2026
+**Total Weeks:** 30 documented (Dec Weeks 14-18 remain undocumented)
 **Format:** Sunday → Saturday (PT)
 
 **Major Milestones:**

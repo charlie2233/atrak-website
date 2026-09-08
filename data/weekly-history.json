@@ -2133,35 +2133,38 @@
     "generatedAt": "2026-09-06T09:23:26.826Z",
     "source": "github-weekly-automation",
     "dateRange": "Aug 30 – Sep 5",
-    "title": "Atrak Website and HoopClips Windows Downloads moved the week forward.",
+    "title": "Windows beta download documentation and Team Destiny deployment maintenance",
     "highlights": [
-      "Atrak Website led public activity with 16 commits across 1 push.",
-      "3 public repositories were active across 4 GitHub events.",
-      "No formal GitHub release was published during this edition."
+      "Atrak Website recorded 16 verified commits, including the previous weekly publication and automated data refreshes",
+      "HoopClips Windows Downloads added public Windows beta download documentation",
+      "Team Destiny limited its GitHub Pages artifact"
     ],
     "shipped": [
-      "update weekly logs and August releases [skip ci]",
-      "add public Windows beta download",
-      "limit Team Destiny Pages artifact"
+      "Published the Aug 23–29 archive and updated August release notes",
+      "Added public Windows beta download documentation to HoopClips Windows Downloads",
+      "Limited the Team Destiny Pages deployment artifact"
     ],
     "engineering": [
-      "3 pushes and 0 pull request updates were condensed into this edition.",
-      "Active stacks included HTML, CSS.",
-      "The snapshot is stored permanently so the edition remains available after GitHub events expire."
+      "Public GitHub commit APIs independently confirmed 18 commits across three repositories",
+      "This edition follows the existing generator's UTC window: Aug 30 00:00 through Sep 6 00:00, end exclusive",
+      "Push, PR, issue, and event counts describe the captured GitHub Actions snapshot"
     ],
     "fixes": [
-      "limit Team Destiny Pages artifact"
+      "Limited the Team Destiny Pages artifact to control deployment contents"
     ],
     "metrics": [
       "Commits: 18",
       "Active repos: 3",
-      "Pull requests: 0",
+      "PR updates: 0",
       "Issues: 0",
-      "Releases: 0"
+      "Pushes: 3",
+      "Releases: 0",
+      "GitHub events: 4"
     ],
     "next": [
-      "Continue the Atrak Website build and publish the next visible milestone.",
-      "Review the next automated edition after Sunday refresh."
+      "Keep Windows beta download documentation current",
+      "Verify Team Destiny deployment contents after future updates",
+      "Continue publishing completed editions from verified GitHub history"
     ],
     "stats": {
       "commits": 18,
