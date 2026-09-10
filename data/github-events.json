@@ -1,5 +1,44 @@
 [
   {
+    "id": "20658816804",
+    "type": "PushEvent",
+    "actor": {
+      "id": 117957000,
+      "login": "charlie2233",
+      "display_login": "charlie2233",
+      "gravatar_id": "",
+      "url": "https://api.github.com/users/charlie2233",
+      "avatar_url": "https://avatars.githubusercontent.com/u/117957000?"
+    },
+    "repo": {
+      "id": 1231252582,
+      "name": "charlie2233/GBC_HuskiesWeb",
+      "url": "https://api.github.com/repos/charlie2233/GBC_HuskiesWeb"
+    },
+    "payload": {
+      "repository_id": 1231252582,
+      "push_id": 43159346627,
+      "ref": "refs/heads/main",
+      "head": "4449e5435e593b6439fe91f0998ac2ad0be2aff0",
+      "before": "4462837a9b71257262d90e350969e8e2339d1087",
+      "distinct_size": 2,
+      "commits": [
+        {
+          "sha": "4449e5435e593b6439fe91f0998ac2ad0be2aff0",
+          "message": "Improve family and sponsor inquiry flow",
+          "url": "https://github.com/charlie2233/GBC_HuskiesWeb/commit/4449e5435e593b6439fe91f0998ac2ad0be2aff0"
+        },
+        {
+          "sha": "4462837a9b71257262d90e350969e8e2339d1087",
+          "message": "Update program flyer details and refresh family navigation\n\nExpand to 8U-16U in Orange County and Fresno County, include development pathways, refresh fundraiser copy, and improve mobile navigation and FAQ search.",
+          "url": "https://github.com/charlie2233/GBC_HuskiesWeb/commit/4462837a9b71257262d90e350969e8e2339d1087"
+        }
+      ]
+    },
+    "public": true,
+    "created_at": "2026-09-10T03:09:43Z"
+  },
+  {
     "id": "20627427746",
     "type": "PushEvent",
     "actor": {
@@ -23,6 +62,11 @@
       "before": "b6f342fcc2b9d53d634a4c2f2ea920bbd255e797",
       "distinct_size": 16,
       "commits": [
+        {
+          "sha": "e1747b5c66ac66ed8bfc4040dfb03047825afb81",
+          "message": "chore: update GitHub data [skip ci]",
+          "url": "https://github.com/charlie2233/atrak-website/commit/e1747b5c66ac66ed8bfc4040dfb03047825afb81"
+        },
         {
           "sha": "2dda2fc5afb1edb1fcc1d6c97b7c0bac911077f6",
           "message": "chore: update GitHub data [skip ci]",
@@ -97,11 +141,6 @@
           "sha": "0ec4e734733b82f8ea86bc281473c285ae397bef",
           "message": "chore: update GitHub data [skip ci]",
           "url": "https://github.com/charlie2233/atrak-website/commit/0ec4e734733b82f8ea86bc281473c285ae397bef"
-        },
-        {
-          "sha": "051ebf049abf2afd10a67deadfb3a063a5c380d3",
-          "message": "chore: update GitHub data [skip ci]",
-          "url": "https://github.com/charlie2233/atrak-website/commit/051ebf049abf2afd10a67deadfb3a063a5c380d3"
         }
       ]
     },
