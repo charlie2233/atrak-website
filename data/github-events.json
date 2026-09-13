@@ -89,6 +89,11 @@
       "distinct_size": 16,
       "commits": [
         {
+          "sha": "9e1bf4a38ac0021ef7e906254a5be6ac23d276b9",
+          "message": "chore: update GitHub data [skip ci]",
+          "url": "https://github.com/charlie2233/atrak-website/commit/9e1bf4a38ac0021ef7e906254a5be6ac23d276b9"
+        },
+        {
           "sha": "ea2018e88151d910795a8f6c750cf914dbdfcae6",
           "message": "chore: update GitHub data [skip ci]",
           "url": "https://github.com/charlie2233/atrak-website/commit/ea2018e88151d910795a8f6c750cf914dbdfcae6"
@@ -162,11 +167,6 @@
           "sha": "02c2331b8c35091754dc5d2f2dc84f8f565f3382",
           "message": "chore: update GitHub data [skip ci]",
           "url": "https://github.com/charlie2233/atrak-website/commit/02c2331b8c35091754dc5d2f2dc84f8f565f3382"
-        },
-        {
-          "sha": "934c6321b0cd07cfe0fa8b2537c882d5b1cf9e1b",
-          "message": "chore: update GitHub data [skip ci]",
-          "url": "https://github.com/charlie2233/atrak-website/commit/934c6321b0cd07cfe0fa8b2537c882d5b1cf9e1b"
         }
       ]
     },
