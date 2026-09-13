@@ -2234,5 +2234,96 @@
         "at": "2026-08-30T00:09:54Z"
       }
     ]
+  },
+  {
+    "weekStart": "2026-09-06",
+    "weekEnd": "2026-09-12",
+    "generatedAt": "2026-09-13T09:49:55.377Z",
+    "source": "github-weekly-automation",
+    "dateRange": "Sep 6 – 12",
+    "title": "Atrak Website and GBC HuskiesWeb moved the week forward.",
+    "highlights": [
+      "Atrak Website led public activity with 16 commits across 1 push.",
+      "2 public repositories were active across 3 GitHub events.",
+      "No formal GitHub release was published during this edition."
+    ],
+    "shipped": [
+      "Improve family and sponsor inquiry flow",
+      "Update program flyer details and refresh family navigation",
+      "update weekly logs and September releases [skip ci]"
+    ],
+    "engineering": [
+      "3 pushes and 0 pull request updates were condensed into this edition.",
+      "Active stacks included HTML, TypeScript.",
+      "The snapshot is stored permanently so the edition remains available after GitHub events expire."
+    ],
+    "fixes": [],
+    "metrics": [
+      "Commits: 18",
+      "Active repos: 2",
+      "Pull requests: 0",
+      "Issues: 0",
+      "Releases: 0"
+    ],
+    "next": [
+      "Continue the Atrak Website build and publish the next visible milestone.",
+      "Review the next automated edition after Sunday refresh."
+    ],
+    "stats": {
+      "commits": 18,
+      "activeRepositories": 2,
+      "pullRequests": 0,
+      "issues": 0,
+      "pushes": 3,
+      "releases": 0,
+      "events": 3
+    },
+    "repositories": [
+      {
+        "name": "Atrak Website",
+        "fullName": "charlie2233/atrak-website",
+        "url": "https://github.com/charlie2233/atrak-website",
+        "language": "HTML",
+        "commits": 16,
+        "pushes": 1,
+        "events": 1,
+        "pullRequests": 0,
+        "issues": 0,
+        "lastAt": "2026-09-08T15:06:17.000Z"
+      },
+      {
+        "name": "GBC HuskiesWeb",
+        "fullName": "charlie2233/GBC_HuskiesWeb",
+        "url": "https://github.com/charlie2233/GBC_HuskiesWeb",
+        "language": "TypeScript",
+        "commits": 2,
+        "pushes": 2,
+        "events": 2,
+        "pullRequests": 0,
+        "issues": 0,
+        "lastAt": "2026-09-10T03:09:43.000Z"
+      }
+    ],
+    "releases": [],
+    "commitMessages": [
+      {
+        "repo": "charlie2233/GBC_HuskiesWeb",
+        "text": "Improve family and sponsor inquiry flow",
+        "url": "https://github.com/charlie2233/GBC_HuskiesWeb/commit/4449e5435e593b6439fe91f0998ac2ad0be2aff0",
+        "at": "2026-09-10T03:09:36Z"
+      },
+      {
+        "repo": "charlie2233/GBC_HuskiesWeb",
+        "text": "Update program flyer details and refresh family navigation",
+        "url": "https://github.com/charlie2233/GBC_HuskiesWeb/commit/4462837a9b71257262d90e350969e8e2339d1087",
+        "at": "2026-09-10T01:37:48Z"
+      },
+      {
+        "repo": "charlie2233/atrak-website",
+        "text": "update weekly logs and September releases [skip ci]",
+        "url": "https://github.com/charlie2233/atrak-website/commit/8817d39f153e7cd951b7ae58176e244bae37f7a6",
+        "at": "2026-09-08T15:06:08Z"
+      }
+    ]
   }
 ]
