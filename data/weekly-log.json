@@ -2240,34 +2240,38 @@
     "weekEnd": "2026-09-12",
     "generatedAt": "2026-09-13T09:49:55.377Z",
     "source": "github-weekly-automation",
-    "dateRange": "Sep 6 – 12",
-    "title": "Atrak Website and GBC HuskiesWeb moved the week forward.",
+    "dateRange": "Sep 6 – Sep 12",
+    "title": "GBC family navigation and sponsor inquiry improvements",
     "highlights": [
-      "Atrak Website led public activity with 16 commits across 1 push.",
-      "2 public repositories were active across 3 GitHub events.",
-      "No formal GitHub release was published during this edition."
+      "GBC HuskiesWeb improved the family and sponsor inquiry flow and refreshed family navigation",
+      "Atrak Website recorded 16 verified commits, including the previous weekly publication and automated data refreshes",
+      "Two public repositories recorded 18 commits in the completed edition"
     ],
     "shipped": [
-      "Improve family and sponsor inquiry flow",
-      "Update program flyer details and refresh family navigation",
-      "update weekly logs and September releases [skip ci]"
+      "Added program-prefilled inquiries and conditional player fields for GBC family, sponsorship, and general questions",
+      "Updated GBC program details for ages 8U–16U in Orange County and Fresno County, with beginner and advanced pathways",
+      "Added a mobile modal menu, separate call/text actions, and duplicate-submit prevention",
+      "Published the Aug 30–Sep 5 archive and September development notes"
     ],
     "engineering": [
-      "3 pushes and 0 pull request updates were condensed into this edition.",
-      "Active stacks included HTML, TypeScript.",
-      "The snapshot is stored permanently so the edition remains available after GitHub events expire."
+      "Public GitHub commit APIs independently confirmed 18 commits across two repositories",
+      "This edition follows the existing generator's UTC window: Sep 6 00:00 through Sep 13 00:00, end exclusive",
+      "Push, PR, issue, and event counts describe the captured GitHub Actions snapshot",
+      "The archive retains commit links and timestamps as durable evidence"
     ],
     "fixes": [],
     "metrics": [
       "Commits: 18",
       "Active repos: 2",
-      "Pull requests: 0",
+      "PR updates: 0",
       "Issues: 0",
-      "Releases: 0"
+      "Pushes: 3",
+      "Releases: 0",
+      "GitHub events: 3"
     ],
     "next": [
-      "Continue the Atrak Website build and publish the next visible milestone.",
-      "Review the next automated edition after Sunday refresh."
+      "Keep GBC program details and family inquiry paths current",
+      "Continue publishing completed editions from verified GitHub history"
     ],
     "stats": {
       "commits": 18,

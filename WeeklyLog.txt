@@ -1173,10 +1173,52 @@ You can honestly demo this to a coach and they'd actually use it.
 
 ---
 
+## Week of Sep 6 – Sep 12
+<!-- week-start: 2026-09-06 -->
+
+### "GBC family navigation and sponsor inquiry improvements"
+
+**Highlights**
+
+* GBC HuskiesWeb improved the family and sponsor inquiry flow and refreshed family navigation
+* Atrak Website recorded 16 verified commits, including the previous weekly publication and automated data refreshes
+* Two public repositories recorded 18 commits in the completed edition
+
+**Shipped**
+
+* Added program-prefilled inquiries and conditional player fields for GBC family, sponsorship, and general questions
+* Updated GBC program details for ages 8U–16U in Orange County and Fresno County, with beginner and advanced pathways
+* Added a mobile modal menu, separate call/text actions, and duplicate-submit prevention
+* Published the Aug 30–Sep 5 archive and September development notes
+
+**Engineering**
+
+* Public GitHub commit APIs independently confirmed 18 commits across two repositories
+* This edition follows the existing generator's UTC window: Sep 6 00:00 through Sep 13 00:00, end exclusive
+* Push, PR, issue, and event counts describe the captured GitHub Actions snapshot
+* The archive retains commit links and timestamps as durable evidence
+
+**Metrics**
+
+* Commits: 18
+* Active repos: 2
+* PR updates: 0
+* Issues: 0
+* Pushes: 3
+* Releases: 0
+* GitHub events: 3
+
+**Next**
+
+* Keep GBC program details and family inquiry paths current
+* Continue publishing completed editions from verified GitHub history
+
+---
+
 # 📊 Summary
 
-**Total Coverage:** August 31, 2024 – September 5, 2026
-**Total Weeks:** 30 documented (Dec Weeks 14-18 remain undocumented)
+**Total Coverage:** August 31, 2024 – September 12, 2026
+**Total Weeks:** 31 documented (Dec Weeks 14-18 remain undocumented)
 **Format:** Sunday → Saturday (PT)
 
 **Major Milestones:**
