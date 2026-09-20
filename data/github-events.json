@@ -60,8 +60,13 @@
       "ref": "refs/heads/main",
       "head": "b23dcf115a181a58102fab83177bb16240762cfe",
       "before": "827e31489a9c359337d0743044978d8e26ed7595",
-      "distinct_size": 20,
+      "distinct_size": 21,
       "commits": [
+        {
+          "sha": "d6f7b9c515964bb73285846ba0eea9c0bcb5ca76",
+          "message": "chore: update GitHub data [skip ci]",
+          "url": "https://github.com/charlie2233/atrak-website/commit/d6f7b9c515964bb73285846ba0eea9c0bcb5ca76"
+        },
         {
           "sha": "1f6049689ed7d91827abc3fd7e6e965eae8a5b7e",
           "message": "chore: update GitHub data [skip ci]",
@@ -156,11 +161,6 @@
           "sha": "58b621d9abbffdb6cadafd85b82428f49490864f",
           "message": "chore: renew weekly log [skip ci]",
           "url": "https://github.com/charlie2233/atrak-website/commit/58b621d9abbffdb6cadafd85b82428f49490864f"
-        },
-        {
-          "sha": "93af91c469427873e09c87a0108a360590e9c2f4",
-          "message": "chore: update GitHub data [skip ci]",
-          "url": "https://github.com/charlie2233/atrak-website/commit/93af91c469427873e09c87a0108a360590e9c2f4"
         }
       ]
     },
@@ -683,31 +683,5 @@
     },
     "public": true,
     "created_at": "2026-08-22T07:07:58Z"
-  },
-  {
-    "id": "18252998963",
-    "type": "PushEvent",
-    "actor": {
-      "id": 117957000,
-      "login": "charlie2233",
-      "display_login": "charlie2233",
-      "gravatar_id": "",
-      "url": "https://api.github.com/users/charlie2233",
-      "avatar_url": "https://avatars.githubusercontent.com/u/117957000?"
-    },
-    "repo": {
-      "id": 1140388078,
-      "name": "charlie2233/atrak-website",
-      "url": "https://api.github.com/repos/charlie2233/atrak-website"
-    },
-    "payload": {
-      "repository_id": 1140388078,
-      "push_id": 40578193462,
-      "ref": "refs/heads/main",
-      "head": "a8dd04603ab22d6d184246aa1b58c97af5d2808b",
-      "before": "bccc37bd41466ac15456bec355ad5ac198526b9b"
-    },
-    "public": true,
-    "created_at": "2026-08-20T07:29:24Z"
   }
 ]
