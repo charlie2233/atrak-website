@@ -2333,40 +2333,40 @@
   {
     "weekStart": "2026-09-13",
     "weekEnd": "2026-09-19",
-    "generatedAt": "2026-09-20T09:24:23.140Z",
+    "generatedAt": "2026-09-22T15:02:48.844Z",
     "source": "github-weekly-automation",
-    "dateRange": "Sep 13 – 19",
-    "title": "Atrak Website and Turnplay Arena moved the week forward.",
+    "dateRange": "Sep 13 – Sep 19",
+    "title": "Turnplay opponent clarity and runtime maintenance",
     "highlights": [
-      "Atrak Website led public activity with 21 commits across 1 push.",
-      "2 public repositories were active across 2 GitHub events.",
-      "No formal GitHub release was published during this edition."
+      "Turnplay Arena clarified how its automatic opponent works and patched runtime dependencies",
+      "Atrak Website recorded 21 verified commits for weekly publication and GitHub data maintenance",
+      "Two public repositories recorded 23 commits in the completed edition"
     ],
     "shipped": [
-      "label automatic opponent accurately in v22",
-      "patch runtime dependencies and align release copy",
-      "update weekly logs and September releases [skip ci]",
-      "refresh local weekly GitHub data [skip ci]"
+      "Updated Turnplay's v22 widget and public copy to identify the local difficulty-aware automatic opponent accurately",
+      "Added a live-preview link and clarified that public ChatGPT listing still requires review",
+      "Patched Turnplay runtime dependencies and aligned release documentation",
+      "Published the Sep 6–12 weekly archive and September development notes"
     ],
     "engineering": [
-      "2 pushes and 0 pull request updates were condensed into this edition.",
-      "Active stacks included HTML, TypeScript.",
-      "The snapshot is stored permanently so the edition remains available after GitHub events expire."
+      "GitHub commit API enrichment confirmed 23 commits across two public repositories",
+      "This edition follows the generator's UTC window: Sep 13 00:00 through Sep 20 00:00, end exclusive",
+      "Push, PR, issue, and event counts describe the captured GitHub Actions snapshot",
+      "Live release feeds were checked; no formal GitHub release was published in this edition"
     ],
-    "fixes": [
-      "label automatic opponent accurately in v22",
-      "patch runtime dependencies and align release copy"
-    ],
+    "fixes": [],
     "metrics": [
       "Commits: 23",
       "Active repos: 2",
-      "Pull requests: 0",
+      "PR updates: 0",
       "Issues: 0",
-      "Releases: 0"
+      "Pushes: 2",
+      "Releases: 0",
+      "GitHub events: 2"
     ],
     "next": [
-      "Continue the Atrak Website build and publish the next visible milestone.",
-      "Review the next automated edition after Sunday refresh."
+      "Keep Turnplay opponent descriptions and public availability claims aligned with implementation",
+      "Continue publishing completed editions from verified GitHub history"
     ],
     "stats": {
       "commits": 23,

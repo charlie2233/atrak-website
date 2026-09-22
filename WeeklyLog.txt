@@ -1215,11 +1215,53 @@ You can honestly demo this to a coach and they'd actually use it.
 
 ---
 
+## Week of Sep 13 – Sep 19
+<!-- week-start: 2026-09-13 -->
+
+### "Turnplay opponent clarity and runtime maintenance"
+
+**Highlights**
+
+* Turnplay Arena clarified how its automatic opponent works and patched runtime dependencies
+* Atrak Website recorded 21 verified commits for weekly publication and GitHub data maintenance
+* Two public repositories recorded 23 commits in the completed edition
+
+**Shipped**
+
+* Updated Turnplay's v22 widget and public copy to identify the local difficulty-aware automatic opponent accurately
+* Added a live-preview link and clarified that public ChatGPT listing still requires review
+* Patched Turnplay runtime dependencies and aligned release documentation
+* Published the Sep 6–12 weekly archive and September development notes
+
+**Engineering**
+
+* GitHub commit API enrichment confirmed 23 commits across two public repositories
+* This edition follows the generator's UTC window: Sep 13 00:00 through Sep 20 00:00, end exclusive
+* Push, PR, issue, and event counts describe the captured GitHub Actions snapshot
+* Live release feeds were checked; no formal GitHub release was published in this edition
+
+**Metrics**
+
+* Commits: 23
+* Active repos: 2
+* PR updates: 0
+* Issues: 0
+* Pushes: 2
+* Releases: 0
+* GitHub events: 2
+
+**Next**
+
+* Keep Turnplay opponent descriptions and public availability claims aligned with implementation
+* Continue publishing completed editions from verified GitHub history
+
+---
+
 # 📊 Summary
 
-**Total Coverage:** August 31, 2024 – September 12, 2026
-**Total Weeks:** 31 documented (Dec Weeks 14-18 remain undocumented)
-**Format:** Sunday → Saturday (PT)
+**Total Coverage:** August 31, 2024 – September 19, 2026
+**Total Weeks:** 32 documented (Dec Weeks 14-18 remain undocumented)
+**Format:** Sunday → Saturday (legacy entries PT; recent GitHub editions UTC as noted)
 
 **Major Milestones:**
 - Week 1-4 (Sep): Drawing board foundations
