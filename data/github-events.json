@@ -1,45 +1,6 @@
 [
   {
-    "id": "21461018945",
-    "type": "PushEvent",
-    "actor": {
-      "id": 117957000,
-      "login": "charlie2233",
-      "display_login": "charlie2233",
-      "gravatar_id": "",
-      "url": "https://api.github.com/users/charlie2233",
-      "avatar_url": "https://avatars.githubusercontent.com/u/117957000?"
-    },
-    "repo": {
-      "id": 1322073520,
-      "name": "charlie2233/turnplay-arena",
-      "url": "https://api.github.com/repos/charlie2233/turnplay-arena"
-    },
-    "payload": {
-      "repository_id": 1322073520,
-      "push_id": 43808006997,
-      "ref": "refs/heads/main",
-      "head": "7c7e55a9a8ae5c48b4bee38e3d4ca1a98dcb6100",
-      "before": "6d74c41126e0cf846f17b77ccc92cdfdbd55c6db",
-      "distinct_size": 2,
-      "commits": [
-        {
-          "sha": "7c7e55a9a8ae5c48b4bee38e3d4ca1a98dcb6100",
-          "message": "fix(ui): label automatic opponent accurately in v22",
-          "url": "https://github.com/charlie2233/turnplay-arena/commit/7c7e55a9a8ae5c48b4bee38e3d4ca1a98dcb6100"
-        },
-        {
-          "sha": "f59ae2ee94963ae78ba0a4f782f4adab996c933c",
-          "message": "fix(release): patch runtime dependencies and align release copy",
-          "url": "https://github.com/charlie2233/turnplay-arena/commit/f59ae2ee94963ae78ba0a4f782f4adab996c933c"
-        }
-      ]
-    },
-    "public": true,
-    "created_at": "2026-09-17T02:16:44Z"
-  },
-  {
-    "id": "21235333961",
+    "id": "21859268947",
     "type": "PushEvent",
     "actor": {
       "id": 117957000,
@@ -56,12 +17,22 @@
     },
     "payload": {
       "repository_id": 1140388078,
-      "push_id": 43674825209,
+      "push_id": 44270854048,
       "ref": "refs/heads/main",
-      "head": "b23dcf115a181a58102fab83177bb16240762cfe",
-      "before": "827e31489a9c359337d0743044978d8e26ed7595",
-      "distinct_size": 20,
+      "head": "65bbf83b99a8995b37837f7b7ee260e0655cdbcf",
+      "before": "1308f8c474a095b0e192c360dbc562ca851a98da",
+      "distinct_size": 16,
       "commits": [
+        {
+          "sha": "65bbf83b99a8995b37837f7b7ee260e0655cdbcf",
+          "message": "chore: update weekly logs and September releases [skip ci]",
+          "url": "https://github.com/charlie2233/atrak-website/commit/65bbf83b99a8995b37837f7b7ee260e0655cdbcf"
+        },
+        {
+          "sha": "1308f8c474a095b0e192c360dbc562ca851a98da",
+          "message": "chore: update GitHub data [skip ci]",
+          "url": "https://github.com/charlie2233/atrak-website/commit/1308f8c474a095b0e192c360dbc562ca851a98da"
+        },
         {
           "sha": "ed1c5e36c369beb6ee3f2f3a07ff005ebf8d0957",
           "message": "chore: update GitHub data [skip ci]",
@@ -131,38 +102,73 @@
           "sha": "43e983eb722a8970fc04b8204e0f010239b7d5b6",
           "message": "chore: update GitHub data [skip ci]",
           "url": "https://github.com/charlie2233/atrak-website/commit/43e983eb722a8970fc04b8204e0f010239b7d5b6"
-        },
-        {
-          "sha": "b23dcf115a181a58102fab83177bb16240762cfe",
-          "message": "chore: update weekly logs and September releases [skip ci]",
-          "url": "https://github.com/charlie2233/atrak-website/commit/b23dcf115a181a58102fab83177bb16240762cfe"
-        },
-        {
-          "sha": "1274e2de75dac2f6b7ea66c099263e1d1984a259",
-          "message": "chore: refresh local weekly GitHub data [skip ci]",
-          "url": "https://github.com/charlie2233/atrak-website/commit/1274e2de75dac2f6b7ea66c099263e1d1984a259"
-        },
-        {
-          "sha": "9476e914b4fb3a79e1a160ce9494cfac867d1be0",
-          "message": "chore: refresh local weekly GitHub data [skip ci]",
-          "url": "https://github.com/charlie2233/atrak-website/commit/9476e914b4fb3a79e1a160ce9494cfac867d1be0"
-        },
-        {
-          "sha": "8f68f30462c5c263a616028f37d10a8a5a5af4c8",
-          "message": "chore: refresh local weekly GitHub data [skip ci]",
-          "url": "https://github.com/charlie2233/atrak-website/commit/8f68f30462c5c263a616028f37d10a8a5a5af4c8"
-        },
-        {
-          "sha": "7554e14a04df321858c50c4dba7be2081fb2895b",
-          "message": "chore: refresh local weekly GitHub data [skip ci]",
-          "url": "https://github.com/charlie2233/atrak-website/commit/7554e14a04df321858c50c4dba7be2081fb2895b"
-        },
-        {
-          "sha": "2753b5d49d45c926e0a672ff5ac5f19725d58ee7",
-          "message": "chore: refresh local weekly GitHub data [skip ci]",
-          "url": "https://github.com/charlie2233/atrak-website/commit/2753b5d49d45c926e0a672ff5ac5f19725d58ee7"
         }
       ]
+    },
+    "public": true,
+    "created_at": "2026-09-22T15:04:46Z"
+  },
+  {
+    "id": "21461018945",
+    "type": "PushEvent",
+    "actor": {
+      "id": 117957000,
+      "login": "charlie2233",
+      "display_login": "charlie2233",
+      "gravatar_id": "",
+      "url": "https://api.github.com/users/charlie2233",
+      "avatar_url": "https://avatars.githubusercontent.com/u/117957000?"
+    },
+    "repo": {
+      "id": 1322073520,
+      "name": "charlie2233/turnplay-arena",
+      "url": "https://api.github.com/repos/charlie2233/turnplay-arena"
+    },
+    "payload": {
+      "repository_id": 1322073520,
+      "push_id": 43808006997,
+      "ref": "refs/heads/main",
+      "head": "7c7e55a9a8ae5c48b4bee38e3d4ca1a98dcb6100",
+      "before": "6d74c41126e0cf846f17b77ccc92cdfdbd55c6db",
+      "distinct_size": 2,
+      "commits": [
+        {
+          "sha": "7c7e55a9a8ae5c48b4bee38e3d4ca1a98dcb6100",
+          "message": "fix(ui): label automatic opponent accurately in v22",
+          "url": "https://github.com/charlie2233/turnplay-arena/commit/7c7e55a9a8ae5c48b4bee38e3d4ca1a98dcb6100"
+        },
+        {
+          "sha": "f59ae2ee94963ae78ba0a4f782f4adab996c933c",
+          "message": "fix(release): patch runtime dependencies and align release copy",
+          "url": "https://github.com/charlie2233/turnplay-arena/commit/f59ae2ee94963ae78ba0a4f782f4adab996c933c"
+        }
+      ]
+    },
+    "public": true,
+    "created_at": "2026-09-17T02:16:44Z"
+  },
+  {
+    "id": "21235333961",
+    "type": "PushEvent",
+    "actor": {
+      "id": 117957000,
+      "login": "charlie2233",
+      "display_login": "charlie2233",
+      "gravatar_id": "",
+      "url": "https://api.github.com/users/charlie2233",
+      "avatar_url": "https://avatars.githubusercontent.com/u/117957000?"
+    },
+    "repo": {
+      "id": 1140388078,
+      "name": "charlie2233/atrak-website",
+      "url": "https://api.github.com/repos/charlie2233/atrak-website"
+    },
+    "payload": {
+      "repository_id": 1140388078,
+      "push_id": 43674825209,
+      "ref": "refs/heads/main",
+      "head": "b23dcf115a181a58102fab83177bb16240762cfe",
+      "before": "827e31489a9c359337d0743044978d8e26ed7595"
     },
     "public": true,
     "created_at": "2026-09-15T17:22:50Z"
@@ -584,31 +590,5 @@
     },
     "public": true,
     "created_at": "2026-08-24T22:33:52Z"
-  },
-  {
-    "id": "18586893980",
-    "type": "PushEvent",
-    "actor": {
-      "id": 117957000,
-      "login": "charlie2233",
-      "display_login": "charlie2233",
-      "gravatar_id": "",
-      "url": "https://api.github.com/users/charlie2233",
-      "avatar_url": "https://avatars.githubusercontent.com/u/117957000?"
-    },
-    "repo": {
-      "id": 1140388078,
-      "name": "charlie2233/atrak-website",
-      "url": "https://api.github.com/repos/charlie2233/atrak-website"
-    },
-    "payload": {
-      "repository_id": 1140388078,
-      "push_id": 40912509630,
-      "ref": "refs/heads/main",
-      "head": "78ba75c2846f3c0447db3573c8e67c5adfb1294e",
-      "before": "22978a3b000451ae124c0f4e80d5d87802187547"
-    },
-    "public": true,
-    "created_at": "2026-08-23T07:05:08Z"
   }
 ]
