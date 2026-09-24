@@ -21,8 +21,13 @@
       "ref": "refs/heads/main",
       "head": "65bbf83b99a8995b37837f7b7ee260e0655cdbcf",
       "before": "1308f8c474a095b0e192c360dbc562ca851a98da",
-      "distinct_size": 15,
+      "distinct_size": 16,
       "commits": [
+        {
+          "sha": "038de3903040be3507ceef3776b7f36576269e37",
+          "message": "chore: update GitHub data [skip ci]",
+          "url": "https://github.com/charlie2233/atrak-website/commit/038de3903040be3507ceef3776b7f36576269e37"
+        },
         {
           "sha": "4227f4282561609a1a05ff890b59337ef69b6f58",
           "message": "chore: update GitHub data [skip ci]",
@@ -124,20 +129,7 @@
       "push_id": 43808006997,
       "ref": "refs/heads/main",
       "head": "7c7e55a9a8ae5c48b4bee38e3d4ca1a98dcb6100",
-      "before": "6d74c41126e0cf846f17b77ccc92cdfdbd55c6db",
-      "distinct_size": 2,
-      "commits": [
-        {
-          "sha": "7c7e55a9a8ae5c48b4bee38e3d4ca1a98dcb6100",
-          "message": "fix(ui): label automatic opponent accurately in v22",
-          "url": "https://github.com/charlie2233/turnplay-arena/commit/7c7e55a9a8ae5c48b4bee38e3d4ca1a98dcb6100"
-        },
-        {
-          "sha": "f59ae2ee94963ae78ba0a4f782f4adab996c933c",
-          "message": "fix(release): patch runtime dependencies and align release copy",
-          "url": "https://github.com/charlie2233/turnplay-arena/commit/f59ae2ee94963ae78ba0a4f782f4adab996c933c"
-        }
-      ]
+      "before": "6d74c41126e0cf846f17b77ccc92cdfdbd55c6db"
     },
     "public": true,
     "created_at": "2026-09-17T02:16:44Z"
@@ -481,109 +473,5 @@
     },
     "public": true,
     "created_at": "2026-08-25T15:02:47Z"
-  },
-  {
-    "id": "18784755126",
-    "type": "PushEvent",
-    "actor": {
-      "id": 117957000,
-      "login": "charlie2233",
-      "display_login": "charlie2233",
-      "gravatar_id": "",
-      "url": "https://api.github.com/users/charlie2233",
-      "avatar_url": "https://avatars.githubusercontent.com/u/117957000?"
-    },
-    "repo": {
-      "id": 1231252582,
-      "name": "charlie2233/GBC_HuskiesWeb",
-      "url": "https://api.github.com/repos/charlie2233/GBC_HuskiesWeb"
-    },
-    "payload": {
-      "repository_id": 1231252582,
-      "push_id": 41104916459,
-      "ref": "refs/heads/main",
-      "head": "dfa05a88d8c40599644ac94b316502c373ca1e2f",
-      "before": "81967d35b7813319a75b116b0accb5c95d5dbc06"
-    },
-    "public": true,
-    "created_at": "2026-08-24T23:30:20Z"
-  },
-  {
-    "id": "18781056907",
-    "type": "PushEvent",
-    "actor": {
-      "id": 117957000,
-      "login": "charlie2233",
-      "display_login": "charlie2233",
-      "gravatar_id": "",
-      "url": "https://api.github.com/users/charlie2233",
-      "avatar_url": "https://avatars.githubusercontent.com/u/117957000?"
-    },
-    "repo": {
-      "id": 1231252582,
-      "name": "charlie2233/GBC_HuskiesWeb",
-      "url": "https://api.github.com/repos/charlie2233/GBC_HuskiesWeb"
-    },
-    "payload": {
-      "repository_id": 1231252582,
-      "push_id": 41102776133,
-      "ref": "refs/heads/main",
-      "head": "81967d35b7813319a75b116b0accb5c95d5dbc06",
-      "before": "ca91d9bd2135aaf812ec6d17e532ec66b1331f02"
-    },
-    "public": true,
-    "created_at": "2026-08-24T22:57:24Z"
-  },
-  {
-    "id": "18780188432",
-    "type": "PushEvent",
-    "actor": {
-      "id": 117957000,
-      "login": "charlie2233",
-      "display_login": "charlie2233",
-      "gravatar_id": "",
-      "url": "https://api.github.com/users/charlie2233",
-      "avatar_url": "https://avatars.githubusercontent.com/u/117957000?"
-    },
-    "repo": {
-      "id": 1231252582,
-      "name": "charlie2233/GBC_HuskiesWeb",
-      "url": "https://api.github.com/repos/charlie2233/GBC_HuskiesWeb"
-    },
-    "payload": {
-      "repository_id": 1231252582,
-      "push_id": 41101778558,
-      "ref": "refs/heads/main",
-      "head": "ca91d9bd2135aaf812ec6d17e532ec66b1331f02",
-      "before": "44f67cb22dc6200808bc81cd2ad8c4d9fbeba69e"
-    },
-    "public": true,
-    "created_at": "2026-08-24T22:42:12Z"
-  },
-  {
-    "id": "18766921231",
-    "type": "PushEvent",
-    "actor": {
-      "id": 117957000,
-      "login": "charlie2233",
-      "display_login": "charlie2233",
-      "gravatar_id": "",
-      "url": "https://api.github.com/users/charlie2233",
-      "avatar_url": "https://avatars.githubusercontent.com/u/117957000?"
-    },
-    "repo": {
-      "id": 1231252582,
-      "name": "charlie2233/GBC_HuskiesWeb",
-      "url": "https://api.github.com/repos/charlie2233/GBC_HuskiesWeb"
-    },
-    "payload": {
-      "repository_id": 1231252582,
-      "push_id": 41101199078,
-      "ref": "refs/heads/main",
-      "head": "44f67cb22dc6200808bc81cd2ad8c4d9fbeba69e",
-      "before": "f060c72a62cf64c7603bf9ceb8ccf4e0fabdb65a"
-    },
-    "public": true,
-    "created_at": "2026-08-24T22:33:52Z"
   }
 ]
