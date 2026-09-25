@@ -21,8 +21,13 @@
       "ref": "refs/heads/main",
       "head": "65bbf83b99a8995b37837f7b7ee260e0655cdbcf",
       "before": "1308f8c474a095b0e192c360dbc562ca851a98da",
-      "distinct_size": 16,
+      "distinct_size": 15,
       "commits": [
+        {
+          "sha": "68ae77e486a7e98495dd89adee75c4663aeaa4f4",
+          "message": "chore: update GitHub data [skip ci]",
+          "url": "https://github.com/charlie2233/atrak-website/commit/68ae77e486a7e98495dd89adee75c4663aeaa4f4"
+        },
         {
           "sha": "038de3903040be3507ceef3776b7f36576269e37",
           "message": "chore: update GitHub data [skip ci]",
@@ -92,16 +97,6 @@
           "sha": "79aba4b517c83eb1e678e8fd81c6da001f7a62d5",
           "message": "chore: update GitHub data [skip ci]",
           "url": "https://github.com/charlie2233/atrak-website/commit/79aba4b517c83eb1e678e8fd81c6da001f7a62d5"
-        },
-        {
-          "sha": "6a148462f6c0301a306a0e2b9818c16fa4f65999",
-          "message": "chore: update GitHub data [skip ci]",
-          "url": "https://github.com/charlie2233/atrak-website/commit/6a148462f6c0301a306a0e2b9818c16fa4f65999"
-        },
-        {
-          "sha": "904650acfa57bae084dd71e23fdc0d364fb95e99",
-          "message": "chore: update GitHub data [skip ci]",
-          "url": "https://github.com/charlie2233/atrak-website/commit/904650acfa57bae084dd71e23fdc0d364fb95e99"
         }
       ]
     },
@@ -446,32 +441,5 @@
     },
     "public": true,
     "created_at": "2026-08-25T15:02:49Z"
-  },
-  {
-    "id": "18851395581",
-    "type": "CreateEvent",
-    "actor": {
-      "id": 117957000,
-      "login": "charlie2233",
-      "display_login": "charlie2233",
-      "gravatar_id": "",
-      "url": "https://api.github.com/users/charlie2233",
-      "avatar_url": "https://avatars.githubusercontent.com/u/117957000?"
-    },
-    "repo": {
-      "id": 1140388078,
-      "name": "charlie2233/atrak-website",
-      "url": "https://api.github.com/repos/charlie2233/atrak-website"
-    },
-    "payload": {
-      "ref": "agent/update-weekly-logs-20260825",
-      "ref_type": "branch",
-      "full_ref": "refs/heads/agent/update-weekly-logs-20260825",
-      "master_branch": "main",
-      "description": null,
-      "pusher_type": "user"
-    },
-    "public": true,
-    "created_at": "2026-08-25T15:02:47Z"
   }
 ]
