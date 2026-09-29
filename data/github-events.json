@@ -24,6 +24,11 @@
       "distinct_size": 15,
       "commits": [
         {
+          "sha": "e4261a166b2e1eba17b92e0a5b289aa6aa04fb2e",
+          "message": "chore: update GitHub data [skip ci]",
+          "url": "https://github.com/charlie2233/atrak-website/commit/e4261a166b2e1eba17b92e0a5b289aa6aa04fb2e"
+        },
+        {
           "sha": "9dbdcf8266e2b92c29e4751fb446973ec8d764b2",
           "message": "chore: update GitHub data [skip ci]",
           "url": "https://github.com/charlie2233/atrak-website/commit/9dbdcf8266e2b92c29e4751fb446973ec8d764b2"
@@ -92,11 +97,6 @@
           "sha": "65bbf83b99a8995b37837f7b7ee260e0655cdbcf",
           "message": "chore: update weekly logs and September releases [skip ci]",
           "url": "https://github.com/charlie2233/atrak-website/commit/65bbf83b99a8995b37837f7b7ee260e0655cdbcf"
-        },
-        {
-          "sha": "1308f8c474a095b0e192c360dbc562ca851a98da",
-          "message": "chore: update GitHub data [skip ci]",
-          "url": "https://github.com/charlie2233/atrak-website/commit/1308f8c474a095b0e192c360dbc562ca851a98da"
         }
       ]
     },
@@ -311,31 +311,5 @@
     },
     "public": true,
     "created_at": "2026-08-30T04:06:32Z"
-  },
-  {
-    "id": "19361749618",
-    "type": "PushEvent",
-    "actor": {
-      "id": 117957000,
-      "login": "charlie2233",
-      "display_login": "charlie2233",
-      "gravatar_id": "",
-      "url": "https://api.github.com/users/charlie2233",
-      "avatar_url": "https://avatars.githubusercontent.com/u/117957000?"
-    },
-    "repo": {
-      "id": 1179170513,
-      "name": "charlie2233/DestinnyBasketballPage",
-      "url": "https://api.github.com/repos/charlie2233/DestinnyBasketballPage"
-    },
-    "payload": {
-      "repository_id": 1179170513,
-      "push_id": 41763440837,
-      "ref": "refs/heads/main",
-      "head": "9abf38b2896d718a1e9695642d40c8833667e3c5",
-      "before": "3b847ae18f1d197d68be546e285759b281f6ce9a"
-    },
-    "public": true,
-    "created_at": "2026-08-30T00:09:59Z"
   }
 ]
