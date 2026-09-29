@@ -1257,10 +1257,50 @@ You can honestly demo this to a coach and they'd actually use it.
 
 ---
 
+## Week of Sep 20 – Sep 26
+<!-- week-start: 2026-09-20 -->
+
+### "Weekly publication stays current"
+
+**Highlights**
+
+* Atrak Website recorded 16 verified commits for its scheduled GitHub-data refreshes and weekly-publication maintenance
+* One public repository recorded one captured push/event in the completed UTC edition
+* No formal GitHub release was published during the week
+
+**Shipped**
+
+* Refreshed the public GitHub project data used by the site
+* Kept the weekly archive and release-note publication workflow current
+
+**Engineering**
+
+* GitHub commit API enrichment confirmed all 16 commits in the completed edition
+* This edition follows the generator's UTC window: Sep 20 00:00 through Sep 27 00:00, end exclusive
+* The verified commit stream consists of scheduled GitHub-data and weekly-log publication maintenance
+* Live release feeds were checked; no formal GitHub release was published in this edition
+
+**Metrics**
+
+* Commits: 16
+* Active repos: 1
+* PR updates: 0
+* Issues: 0
+* Pushes: 1
+* Releases: 0
+* GitHub events: 1
+
+**Next**
+
+* Continue keeping the public project cache and weekly archive current
+* Publish the next completed GitHub-backed edition after Sunday refresh
+
+---
+
 # 📊 Summary
 
-**Total Coverage:** August 31, 2024 – September 19, 2026
-**Total Weeks:** 32 documented (Dec Weeks 14-18 remain undocumented)
+**Total Coverage:** August 31, 2024 – September 26, 2026
+**Total Weeks:** 33 documented (Dec Weeks 14-18 remain undocumented)
 **Format:** Sunday → Saturday (legacy entries PT; recent GitHub editions UTC as noted)
 
 **Major Milestones:**

@@ -2460,32 +2460,36 @@
     "weekEnd": "2026-09-26",
     "generatedAt": "2026-09-27T09:26:12.444Z",
     "source": "github-weekly-automation",
-    "dateRange": "Sep 20 – 26",
-    "title": "Atrak Website carried the build week.",
+    "dateRange": "Sep 20 – Sep 26",
+    "title": "Weekly publication stays current",
     "highlights": [
-      "Atrak Website led public activity with 16 commits across 1 push.",
-      "1 public repository was active across 1 GitHub events.",
-      "No formal GitHub release was published during this edition."
+      "Atrak Website recorded 16 verified commits for its scheduled GitHub-data refreshes and weekly-publication maintenance",
+      "One public repository recorded one captured push/event in the completed UTC edition",
+      "No formal GitHub release was published during the week"
     ],
     "shipped": [
-      "update weekly logs and September releases [skip ci]"
+      "Refreshed the public GitHub project data used by the site",
+      "Kept the weekly archive and release-note publication workflow current"
     ],
     "engineering": [
-      "1 pushes and 0 pull request updates were condensed into this edition.",
-      "Active stacks included HTML.",
-      "The snapshot is stored permanently so the edition remains available after GitHub events expire."
+      "GitHub commit API enrichment confirmed all 16 commits in the completed edition",
+      "This edition follows the generator's UTC window: Sep 20 00:00 through Sep 27 00:00, end exclusive",
+      "The verified commit stream consists of scheduled GitHub-data and weekly-log publication maintenance",
+      "Live release feeds were checked; no formal GitHub release was published in this edition"
     ],
     "fixes": [],
     "metrics": [
       "Commits: 16",
       "Active repos: 1",
-      "Pull requests: 0",
+      "PR updates: 0",
       "Issues: 0",
-      "Releases: 0"
+      "Pushes: 1",
+      "Releases: 0",
+      "GitHub events: 1"
     ],
     "next": [
-      "Continue the Atrak Website build and publish the next visible milestone.",
-      "Review the next automated edition after Sunday refresh."
+      "Continue keeping the public project cache and weekly archive current",
+      "Publish the next completed GitHub-backed edition after Sunday refresh"
     ],
     "stats": {
       "commits": 16,
