@@ -1,5 +1,97 @@
 [
   {
+    "id": "16362850277",
+    "type": "PullRequestEvent",
+    "actor": {
+      "id": 117957000,
+      "login": "charlie2233",
+      "display_login": "charlie2233",
+      "gravatar_id": "",
+      "url": "https://api.github.com/users/charlie2233",
+      "avatar_url": "https://avatars.githubusercontent.com/u/117957000?"
+    },
+    "repo": {
+      "id": 1140388078,
+      "name": "charlie2233/atrak-website",
+      "url": "https://api.github.com/repos/charlie2233/atrak-website"
+    },
+    "payload": {
+      "action": "merged",
+      "number": 16,
+      "pull_request": {
+        "url": "https://api.github.com/repos/charlie2233/atrak-website/pulls/16",
+        "id": 4730599400,
+        "number": 16,
+        "head": {
+          "ref": "codex/safe-traveling-release3-pages",
+          "sha": "7ae48b84c8fbfecf9970843d7826e815bea5bf94",
+          "repo": {
+            "id": 1140388078,
+            "url": "https://api.github.com/repos/charlie2233/atrak-website",
+            "name": "atrak-website"
+          }
+        },
+        "base": {
+          "ref": "main",
+          "sha": "803d62c0ad7212545d1d7a690e1546a07106de1f",
+          "repo": {
+            "id": 1140388078,
+            "url": "https://api.github.com/repos/charlie2233/atrak-website",
+            "name": "atrak-website"
+          }
+        }
+      }
+    },
+    "public": true,
+    "created_at": "2026-10-03T23:41:02Z"
+  },
+  {
+    "id": "16362826919",
+    "type": "PullRequestEvent",
+    "actor": {
+      "id": 117957000,
+      "login": "charlie2233",
+      "display_login": "charlie2233",
+      "gravatar_id": "",
+      "url": "https://api.github.com/users/charlie2233",
+      "avatar_url": "https://avatars.githubusercontent.com/u/117957000?"
+    },
+    "repo": {
+      "id": 1140388078,
+      "name": "charlie2233/atrak-website",
+      "url": "https://api.github.com/repos/charlie2233/atrak-website"
+    },
+    "payload": {
+      "action": "opened",
+      "number": 16,
+      "pull_request": {
+        "url": "https://api.github.com/repos/charlie2233/atrak-website/pulls/16",
+        "id": 4730599400,
+        "number": 16,
+        "head": {
+          "ref": "codex/safe-traveling-release3-pages",
+          "sha": "7ae48b84c8fbfecf9970843d7826e815bea5bf94",
+          "repo": {
+            "id": 1140388078,
+            "url": "https://api.github.com/repos/charlie2233/atrak-website",
+            "name": "atrak-website"
+          }
+        },
+        "base": {
+          "ref": "main",
+          "sha": "803d62c0ad7212545d1d7a690e1546a07106de1f",
+          "repo": {
+            "id": 1140388078,
+            "url": "https://api.github.com/repos/charlie2233/atrak-website",
+            "name": "atrak-website"
+          }
+        }
+      }
+    },
+    "public": true,
+    "created_at": "2026-10-03T23:40:10Z"
+  },
+  {
     "id": "22612994733",
     "type": "CreateEvent",
     "actor": {
@@ -48,8 +140,18 @@
       "ref": "refs/heads/main",
       "head": "7ff51734cf3faa9cfba4ded089e1041e349b2432",
       "before": "33bc36d95b43f3121b25dbbb9e959d859c312f30",
-      "distinct_size": 15,
+      "distinct_size": 17,
       "commits": [
+        {
+          "sha": "38ff5d9481996296124144f05f027134f61b22d5",
+          "message": "Align Safe Traveling public pages with version 1.0 (#16)",
+          "url": "https://github.com/charlie2233/atrak-website/commit/38ff5d9481996296124144f05f027134f61b22d5"
+        },
+        {
+          "sha": "803d62c0ad7212545d1d7a690e1546a07106de1f",
+          "message": "chore: update GitHub data [skip ci]",
+          "url": "https://github.com/charlie2233/atrak-website/commit/803d62c0ad7212545d1d7a690e1546a07106de1f"
+        },
         {
           "sha": "c0c775ce806b7691284c553b9521672897be0865",
           "message": "chore: update GitHub data [skip ci]",
