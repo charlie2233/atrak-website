@@ -42,7 +42,7 @@
                     <div class="project-icon-custom"><img src="../../assets/hoops_ClipsIcon.png?v=20260718" alt="HoopClips app icon"></div>
                     <span class="section-tag">HoopClips</span>
                     <h1 class="section-title">Privacy Policy</h1>
-                    <p class="section-description">Effective July 18, 2026. This policy explains how the Atrak project team handles information across the HoopClips native apps, browser demo, and cloud services.</p>
+                    <p class="section-description">Effective October 4, 2026. This policy explains how the Atrak project team handles information across the HoopClips native apps, browser demo, and cloud services.</p>
                 </div>
 
                 <div class="project-detail-grid">
@@ -59,14 +59,14 @@
                             <li>Selected videos, file metadata, clip timestamps, team choices, edit instructions, captions, and generated outputs.</li>
                             <li>An app installation identifier, job identifiers, product interactions, render status, and diagnostic information needed to operate and secure the service.</li>
                             <li>Apple or Google sign-in details made available to the app, such as a provider identifier, display name, or email. The Mac app stores its sign-in profile locally.</li>
-                            <li>Purchase and entitlement status used to apply Free or Pro limits through Apple and RevenueCat.</li>
-                            <li>Optional feedback text and email address when you contact support.</li>
+                            <li>On clients that offer purchases, purchase and entitlement status used to apply Free or Pro limits through Apple and RevenueCat.</li>
+                            <li>Optional feedback text, feedback type, and email address when you contact support. Feedback sent from the Mac app also includes its app environment, version, and build number.</li>
                         </ul>
                     </article>
 
                     <article class="glass-card project-detail-card">
                         <h3>AI Editing</h3>
-                        <p>HoopClips may send selected candidate frames and compact edit context to an AI service to rank moments or produce a structured edit plan or revision. It does not send presigned storage credentials or raw render logs to the editing agent.</p>
+                        <p>HoopClips may send sampled video frames, selected candidate frames, and compact analysis or edit context to OpenAI. This supports detecting teams by visible jersey color during an initial team scan, identifying the team responsible for candidate moments, ranking moments, and producing a structured edit plan or revision. It does not send presigned storage credentials or raw render logs to the editing agent.</p>
                         <p>AI results can be incomplete or incorrect. Review clips and outputs before publishing, recruiting, coaching, or making decisions based on them.</p>
                     </article>
 
@@ -83,7 +83,7 @@
 
                     <article class="glass-card project-detail-card">
                         <h3>Service Providers</h3>
-                        <p>HoopClips uses service providers to deliver its features. Depending on configuration, these include Cloudflare for edge services and object storage, Google Cloud for processing, OpenAI for selected AI editing tasks, RevenueCat and Apple for purchases, Apple and Google for sign-in, Sentry for privacy-filtered diagnostics, and Formspree for feedback delivery.</p>
+                        <p>HoopClips uses service providers to deliver its features. Depending on configuration, these include Cloudflare for edge services and object storage, Google Cloud for processing, OpenAI for selected AI analysis and editing tasks, RevenueCat and Apple for purchases on clients that offer them, Apple and Google for sign-in, Sentry for privacy-filtered diagnostics, and Formspree for feedback delivery.</p>
                         <p>Those providers process information under their own terms and privacy practices. HoopClips limits each integration to the information needed for its role.</p>
                     </article>
 
@@ -98,9 +98,11 @@
                         <h3>Your Choices And Deletion Requests</h3>
                         <ul>
                             <li>You can delete local projects and downloaded exports from Settings. This does not immediately delete cloud artifacts.</li>
+                            <li>In the Mac app, open Settings &gt; Account and choose Delete Account &amp; Data. When deletion completes successfully, it removes the local account and project data and the cloud uploads, analysis jobs, edit plans, and rendered videos associated with this app installation. For Sign in with Apple, deletion also covers linked HoopClips installations and revokes the account's Apple authorization for HoopClips.</li>
                             <li>Canceling an upload before analysis completes removes the associated pending cloud job and objects when the request succeeds.</li>
                             <li>Signing out removes the local HoopClips session, but does not revoke Apple or Google authorization or remove records held by those providers.</li>
                         </ul>
+                        <p>The cloud services retain deletion markers, including a hash of the app installation identifier and a deletion timestamp, to prevent work already in progress from recreating deleted data. These markers remain separately from the deleted videos and edit records. Account deletion does not remove copies you exported or shared outside HoopClips.</p>
                         <p>To request access, correction, or deletion of identifiable cloud artifacts or a support message, email <a href="mailto:hello@atrak.dev?subject=HoopClips%20Privacy%20Request">hello@atrak.dev</a>. Include only the job or render identifier needed to locate the record. Do not email a video, password, API key, or signed download URL.</p>
                     </article>
 
