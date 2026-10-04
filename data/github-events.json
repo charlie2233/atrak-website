@@ -143,6 +143,11 @@
       "distinct_size": 17,
       "commits": [
         {
+          "sha": "d881a0349135550e8099ab65986abaa0d579ab55",
+          "message": "chore: update GitHub data [skip ci]",
+          "url": "https://github.com/charlie2233/atrak-website/commit/d881a0349135550e8099ab65986abaa0d579ab55"
+        },
+        {
           "sha": "38ff5d9481996296124144f05f027134f61b22d5",
           "message": "Align Safe Traveling public pages with version 1.0 (#16)",
           "url": "https://github.com/charlie2233/atrak-website/commit/38ff5d9481996296124144f05f027134f61b22d5"
@@ -221,11 +226,6 @@
           "sha": "aeb89ee4c669a93d02bbf71bbdecad6f2c30e5c4",
           "message": "chore: renew weekly log [skip ci]",
           "url": "https://github.com/charlie2233/atrak-website/commit/aeb89ee4c669a93d02bbf71bbdecad6f2c30e5c4"
-        },
-        {
-          "sha": "b2410e46e1a3a057fb598a95a2c31d4784ff807e",
-          "message": "chore: update GitHub data [skip ci]",
-          "url": "https://github.com/charlie2233/atrak-website/commit/b2410e46e1a3a057fb598a95a2c31d4784ff807e"
         }
       ]
     },
