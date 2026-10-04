@@ -24,6 +24,16 @@
       "distinct_size": 21,
       "commits": [
         {
+          "sha": "41f4c98a05c72420df4b05caa052ff94ae5cdcae",
+          "message": "chore: renew weekly log [skip ci]",
+          "url": "https://github.com/charlie2233/atrak-website/commit/41f4c98a05c72420df4b05caa052ff94ae5cdcae"
+        },
+        {
+          "sha": "4f969750d34c81f14be9be662a996f7b0605451e",
+          "message": "chore: update GitHub data [skip ci]",
+          "url": "https://github.com/charlie2233/atrak-website/commit/4f969750d34c81f14be9be662a996f7b0605451e"
+        },
+        {
           "sha": "de8fe3dcaef7d3622b5e4c2c00f45ddeb9c6f3a7",
           "message": "Use local publication date for HoopClips policy (#18)",
           "url": "https://github.com/charlie2233/atrak-website/commit/de8fe3dcaef7d3622b5e4c2c00f45ddeb9c6f3a7"
@@ -112,16 +122,6 @@
           "sha": "9dbdcf8266e2b92c29e4751fb446973ec8d764b2",
           "message": "chore: update GitHub data [skip ci]",
           "url": "https://github.com/charlie2233/atrak-website/commit/9dbdcf8266e2b92c29e4751fb446973ec8d764b2"
-        },
-        {
-          "sha": "fe73e3652e8f977af394fef1ed295a274d1c14c7",
-          "message": "chore: update GitHub data [skip ci]",
-          "url": "https://github.com/charlie2233/atrak-website/commit/fe73e3652e8f977af394fef1ed295a274d1c14c7"
-        },
-        {
-          "sha": "fba6deddd0336ee2ccacf9de67e73d7cf5f55b3c",
-          "message": "chore: update GitHub data [skip ci]",
-          "url": "https://github.com/charlie2233/atrak-website/commit/fba6deddd0336ee2ccacf9de67e73d7cf5f55b3c"
         }
       ]
     },
