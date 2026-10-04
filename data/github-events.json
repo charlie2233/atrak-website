@@ -1,52 +1,6 @@
 [
   {
-    "id": "16369502668",
-    "type": "PullRequestEvent",
-    "actor": {
-      "id": 117957000,
-      "login": "charlie2233",
-      "display_login": "charlie2233",
-      "gravatar_id": "",
-      "url": "https://api.github.com/users/charlie2233",
-      "avatar_url": "https://avatars.githubusercontent.com/u/117957000?"
-    },
-    "repo": {
-      "id": 1140388078,
-      "name": "charlie2233/atrak-website",
-      "url": "https://api.github.com/repos/charlie2233/atrak-website"
-    },
-    "payload": {
-      "action": "merged",
-      "number": 17,
-      "pull_request": {
-        "url": "https://api.github.com/repos/charlie2233/atrak-website/pulls/17",
-        "id": 4731676859,
-        "number": 17,
-        "head": {
-          "ref": "codex/hoopclips-reviewed-privacy",
-          "sha": "196169e33fa7d2c07d0c2d253d5371ee8c9a8822",
-          "repo": {
-            "id": 1140388078,
-            "url": "https://api.github.com/repos/charlie2233/atrak-website",
-            "name": "atrak-website"
-          }
-        },
-        "base": {
-          "ref": "main",
-          "sha": "e844aa0346e5d58e146bb485dd662c6c8e9ef557",
-          "repo": {
-            "id": 1140388078,
-            "url": "https://api.github.com/repos/charlie2233/atrak-website",
-            "name": "atrak-website"
-          }
-        }
-      }
-    },
-    "public": true,
-    "created_at": "2026-10-04T03:45:48Z"
-  },
-  {
-    "id": "22936274183",
+    "id": "22936430392",
     "type": "PushEvent",
     "actor": {
       "id": 117957000,
@@ -63,12 +17,22 @@
     },
     "payload": {
       "repository_id": 1140388078,
-      "push_id": 45388026616,
+      "push_id": 45388148883,
       "ref": "refs/heads/main",
-      "head": "680b79fd8edeba5752334f8c9a823ea3c1dd5cda",
-      "before": "e844aa0346e5d58e146bb485dd662c6c8e9ef557",
-      "distinct_size": 19,
+      "head": "de8fe3dcaef7d3622b5e4c2c00f45ddeb9c6f3a7",
+      "before": "d428c0d6555044be5fae47e5a81c1e9f48365bdd",
+      "distinct_size": 21,
       "commits": [
+        {
+          "sha": "de8fe3dcaef7d3622b5e4c2c00f45ddeb9c6f3a7",
+          "message": "Use local publication date for HoopClips policy (#18)",
+          "url": "https://github.com/charlie2233/atrak-website/commit/de8fe3dcaef7d3622b5e4c2c00f45ddeb9c6f3a7"
+        },
+        {
+          "sha": "d428c0d6555044be5fae47e5a81c1e9f48365bdd",
+          "message": "chore: update GitHub data [skip ci]",
+          "url": "https://github.com/charlie2233/atrak-website/commit/d428c0d6555044be5fae47e5a81c1e9f48365bdd"
+        },
         {
           "sha": "680b79fd8edeba5752334f8c9a823ea3c1dd5cda",
           "message": "Clarify HoopClips privacy disclosures (#17)",
@@ -158,13 +122,172 @@
           "sha": "fba6deddd0336ee2ccacf9de67e73d7cf5f55b3c",
           "message": "chore: update GitHub data [skip ci]",
           "url": "https://github.com/charlie2233/atrak-website/commit/fba6deddd0336ee2ccacf9de67e73d7cf5f55b3c"
-        },
-        {
-          "sha": "aeb89ee4c669a93d02bbf71bbdecad6f2c30e5c4",
-          "message": "chore: renew weekly log [skip ci]",
-          "url": "https://github.com/charlie2233/atrak-website/commit/aeb89ee4c669a93d02bbf71bbdecad6f2c30e5c4"
         }
       ]
+    },
+    "public": true,
+    "created_at": "2026-10-04T03:48:39Z"
+  },
+  {
+    "id": "16369578948",
+    "type": "PullRequestEvent",
+    "actor": {
+      "id": 117957000,
+      "login": "charlie2233",
+      "display_login": "charlie2233",
+      "gravatar_id": "",
+      "url": "https://api.github.com/users/charlie2233",
+      "avatar_url": "https://avatars.githubusercontent.com/u/117957000?"
+    },
+    "repo": {
+      "id": 1140388078,
+      "name": "charlie2233/atrak-website",
+      "url": "https://api.github.com/repos/charlie2233/atrak-website"
+    },
+    "payload": {
+      "action": "merged",
+      "number": 18,
+      "pull_request": {
+        "url": "https://api.github.com/repos/charlie2233/atrak-website/pulls/18",
+        "id": 4731693603,
+        "number": 18,
+        "head": {
+          "ref": "codex/hoopclips-privacy-publication-date",
+          "sha": "35b691e37dff085eafc82fa35eea217978050399",
+          "repo": {
+            "id": 1140388078,
+            "url": "https://api.github.com/repos/charlie2233/atrak-website",
+            "name": "atrak-website"
+          }
+        },
+        "base": {
+          "ref": "main",
+          "sha": "d428c0d6555044be5fae47e5a81c1e9f48365bdd",
+          "repo": {
+            "id": 1140388078,
+            "url": "https://api.github.com/repos/charlie2233/atrak-website",
+            "name": "atrak-website"
+          }
+        }
+      }
+    },
+    "public": true,
+    "created_at": "2026-10-04T03:48:38Z"
+  },
+  {
+    "id": "16369556355",
+    "type": "PullRequestEvent",
+    "actor": {
+      "id": 117957000,
+      "login": "charlie2233",
+      "display_login": "charlie2233",
+      "gravatar_id": "",
+      "url": "https://api.github.com/users/charlie2233",
+      "avatar_url": "https://avatars.githubusercontent.com/u/117957000?"
+    },
+    "repo": {
+      "id": 1140388078,
+      "name": "charlie2233/atrak-website",
+      "url": "https://api.github.com/repos/charlie2233/atrak-website"
+    },
+    "payload": {
+      "action": "opened",
+      "number": 18,
+      "pull_request": {
+        "url": "https://api.github.com/repos/charlie2233/atrak-website/pulls/18",
+        "id": 4731693603,
+        "number": 18,
+        "head": {
+          "ref": "codex/hoopclips-privacy-publication-date",
+          "sha": "35b691e37dff085eafc82fa35eea217978050399",
+          "repo": {
+            "id": 1140388078,
+            "url": "https://api.github.com/repos/charlie2233/atrak-website",
+            "name": "atrak-website"
+          }
+        },
+        "base": {
+          "ref": "main",
+          "sha": "d428c0d6555044be5fae47e5a81c1e9f48365bdd",
+          "repo": {
+            "id": 1140388078,
+            "url": "https://api.github.com/repos/charlie2233/atrak-website",
+            "name": "atrak-website"
+          }
+        }
+      }
+    },
+    "public": true,
+    "created_at": "2026-10-04T03:47:49Z"
+  },
+  {
+    "id": "16369502668",
+    "type": "PullRequestEvent",
+    "actor": {
+      "id": 117957000,
+      "login": "charlie2233",
+      "display_login": "charlie2233",
+      "gravatar_id": "",
+      "url": "https://api.github.com/users/charlie2233",
+      "avatar_url": "https://avatars.githubusercontent.com/u/117957000?"
+    },
+    "repo": {
+      "id": 1140388078,
+      "name": "charlie2233/atrak-website",
+      "url": "https://api.github.com/repos/charlie2233/atrak-website"
+    },
+    "payload": {
+      "action": "merged",
+      "number": 17,
+      "pull_request": {
+        "url": "https://api.github.com/repos/charlie2233/atrak-website/pulls/17",
+        "id": 4731676859,
+        "number": 17,
+        "head": {
+          "ref": "codex/hoopclips-reviewed-privacy",
+          "sha": "196169e33fa7d2c07d0c2d253d5371ee8c9a8822",
+          "repo": {
+            "id": 1140388078,
+            "url": "https://api.github.com/repos/charlie2233/atrak-website",
+            "name": "atrak-website"
+          }
+        },
+        "base": {
+          "ref": "main",
+          "sha": "e844aa0346e5d58e146bb485dd662c6c8e9ef557",
+          "repo": {
+            "id": 1140388078,
+            "url": "https://api.github.com/repos/charlie2233/atrak-website",
+            "name": "atrak-website"
+          }
+        }
+      }
+    },
+    "public": true,
+    "created_at": "2026-10-04T03:45:48Z"
+  },
+  {
+    "id": "22936274183",
+    "type": "PushEvent",
+    "actor": {
+      "id": 117957000,
+      "login": "charlie2233",
+      "display_login": "charlie2233",
+      "gravatar_id": "",
+      "url": "https://api.github.com/users/charlie2233",
+      "avatar_url": "https://avatars.githubusercontent.com/u/117957000?"
+    },
+    "repo": {
+      "id": 1140388078,
+      "name": "charlie2233/atrak-website",
+      "url": "https://api.github.com/repos/charlie2233/atrak-website"
+    },
+    "payload": {
+      "repository_id": 1140388078,
+      "push_id": 45388026616,
+      "ref": "refs/heads/main",
+      "head": "680b79fd8edeba5752334f8c9a823ea3c1dd5cda",
+      "before": "e844aa0346e5d58e146bb485dd662c6c8e9ef557"
     },
     "public": true,
     "created_at": "2026-10-04T03:45:49Z"
