@@ -2595,5 +2595,98 @@
         "at": "2026-09-29T15:03:02Z"
       }
     ]
+  },
+  {
+    "weekStart": "2026-10-04",
+    "weekEnd": "2026-10-10",
+    "generatedAt": "2026-10-06T15:04:12.064Z",
+    "source": "github-weekly-automation",
+    "dateRange": "Oct 4 – 10",
+    "title": "Atrak Website and Turnplay Arena moved the week forward.",
+    "highlights": [
+      "Atrak Website led public activity with 11 commits across 2 pushes.",
+      "2 public repositories were active across 12 GitHub events.",
+      "No formal GitHub release was published during this edition."
+    ],
+    "shipped": [
+      "exclude build tooling from production dependencies",
+      "Use local publication date for HoopClips policy (#18)",
+      "Clarify HoopClips privacy disclosures (#17)"
+    ],
+    "engineering": [
+      "3 pushes and 6 pull request updates were condensed into this edition.",
+      "Active stacks included HTML, TypeScript.",
+      "The snapshot is stored permanently so the edition remains available after GitHub events expire."
+    ],
+    "fixes": [
+      "exclude build tooling from production dependencies"
+    ],
+    "metrics": [
+      "Commits: 13",
+      "Active repos: 2",
+      "Pull requests: 6",
+      "Issues: 0",
+      "Releases: 0"
+    ],
+    "next": [
+      "Continue the Atrak Website build and publish the next visible milestone.",
+      "Review the next automated edition after Sunday refresh."
+    ],
+    "stats": {
+      "commits": 13,
+      "activeRepositories": 2,
+      "pullRequests": 6,
+      "issues": 0,
+      "pushes": 3,
+      "releases": 0,
+      "events": 12
+    },
+    "repositories": [
+      {
+        "name": "Atrak Website",
+        "fullName": "charlie2233/atrak-website",
+        "url": "https://github.com/charlie2233/atrak-website",
+        "language": "HTML",
+        "commits": 11,
+        "pushes": 2,
+        "events": 8,
+        "pullRequests": 4,
+        "issues": 0,
+        "lastAt": "2026-10-04T03:48:39.000Z"
+      },
+      {
+        "name": "Turnplay Arena",
+        "fullName": "charlie2233/turnplay-arena",
+        "url": "https://github.com/charlie2233/turnplay-arena",
+        "language": "TypeScript",
+        "commits": 2,
+        "pushes": 1,
+        "events": 4,
+        "pullRequests": 2,
+        "issues": 0,
+        "lastAt": "2026-10-05T02:18:18.000Z"
+      }
+    ],
+    "releases": [],
+    "commitMessages": [
+      {
+        "repo": "charlie2233/turnplay-arena",
+        "text": "exclude build tooling from production dependencies",
+        "url": "https://github.com/charlie2233/turnplay-arena/commit/b7754f1f53bac2cf12fc264e1eb193727f1f45a4",
+        "at": "2026-10-05T01:54:08Z"
+      },
+      {
+        "repo": "charlie2233/atrak-website",
+        "text": "Use local publication date for HoopClips policy (#18)",
+        "url": "https://github.com/charlie2233/atrak-website/commit/de8fe3dcaef7d3622b5e4c2c00f45ddeb9c6f3a7",
+        "at": "2026-10-04T03:48:38Z"
+      },
+      {
+        "repo": "charlie2233/atrak-website",
+        "text": "Clarify HoopClips privacy disclosures (#17)",
+        "url": "https://github.com/charlie2233/atrak-website/commit/680b79fd8edeba5752334f8c9a823ea3c1dd5cda",
+        "at": "2026-10-04T03:45:48Z"
+      }
+    ]
   }
 ]
