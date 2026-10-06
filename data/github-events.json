@@ -1,5 +1,134 @@
 [
   {
+    "id": "23069045657",
+    "type": "PushEvent",
+    "actor": {
+      "id": 117957000,
+      "login": "charlie2233",
+      "display_login": "charlie2233",
+      "gravatar_id": "",
+      "url": "https://api.github.com/users/charlie2233",
+      "avatar_url": "https://avatars.githubusercontent.com/u/117957000?"
+    },
+    "repo": {
+      "id": 1140388078,
+      "name": "charlie2233/atrak-website",
+      "url": "https://api.github.com/repos/charlie2233/atrak-website"
+    },
+    "payload": {
+      "repository_id": 1140388078,
+      "push_id": 45377195763,
+      "ref": "refs/heads/main",
+      "head": "38ff5d9481996296124144f05f027134f61b22d5",
+      "before": "803d62c0ad7212545d1d7a690e1546a07106de1f",
+      "distinct_size": 21,
+      "commits": [
+        {
+          "sha": "adbfab8e3c6481e1f0b5535fd26a96e6859c9a63",
+          "message": "chore: update GitHub data [skip ci]",
+          "url": "https://github.com/charlie2233/atrak-website/commit/adbfab8e3c6481e1f0b5535fd26a96e6859c9a63"
+        },
+        {
+          "sha": "ef94517e4576afb18b925457922334246cc7e8de",
+          "message": "chore: update GitHub data [skip ci]",
+          "url": "https://github.com/charlie2233/atrak-website/commit/ef94517e4576afb18b925457922334246cc7e8de"
+        },
+        {
+          "sha": "d2f178553b8c79a351732a4b14a49e5d84817f52",
+          "message": "chore: update GitHub data [skip ci]",
+          "url": "https://github.com/charlie2233/atrak-website/commit/d2f178553b8c79a351732a4b14a49e5d84817f52"
+        },
+        {
+          "sha": "41f4c98a05c72420df4b05caa052ff94ae5cdcae",
+          "message": "chore: renew weekly log [skip ci]",
+          "url": "https://github.com/charlie2233/atrak-website/commit/41f4c98a05c72420df4b05caa052ff94ae5cdcae"
+        },
+        {
+          "sha": "4f969750d34c81f14be9be662a996f7b0605451e",
+          "message": "chore: update GitHub data [skip ci]",
+          "url": "https://github.com/charlie2233/atrak-website/commit/4f969750d34c81f14be9be662a996f7b0605451e"
+        },
+        {
+          "sha": "de8fe3dcaef7d3622b5e4c2c00f45ddeb9c6f3a7",
+          "message": "Use local publication date for HoopClips policy (#18)",
+          "url": "https://github.com/charlie2233/atrak-website/commit/de8fe3dcaef7d3622b5e4c2c00f45ddeb9c6f3a7"
+        },
+        {
+          "sha": "d428c0d6555044be5fae47e5a81c1e9f48365bdd",
+          "message": "chore: update GitHub data [skip ci]",
+          "url": "https://github.com/charlie2233/atrak-website/commit/d428c0d6555044be5fae47e5a81c1e9f48365bdd"
+        },
+        {
+          "sha": "680b79fd8edeba5752334f8c9a823ea3c1dd5cda",
+          "message": "Clarify HoopClips privacy disclosures (#17)",
+          "url": "https://github.com/charlie2233/atrak-website/commit/680b79fd8edeba5752334f8c9a823ea3c1dd5cda"
+        },
+        {
+          "sha": "e844aa0346e5d58e146bb485dd662c6c8e9ef557",
+          "message": "chore: update GitHub data [skip ci]",
+          "url": "https://github.com/charlie2233/atrak-website/commit/e844aa0346e5d58e146bb485dd662c6c8e9ef557"
+        },
+        {
+          "sha": "d881a0349135550e8099ab65986abaa0d579ab55",
+          "message": "chore: update GitHub data [skip ci]",
+          "url": "https://github.com/charlie2233/atrak-website/commit/d881a0349135550e8099ab65986abaa0d579ab55"
+        },
+        {
+          "sha": "38ff5d9481996296124144f05f027134f61b22d5",
+          "message": "Align Safe Traveling public pages with version 1.0 (#16)",
+          "url": "https://github.com/charlie2233/atrak-website/commit/38ff5d9481996296124144f05f027134f61b22d5"
+        },
+        {
+          "sha": "803d62c0ad7212545d1d7a690e1546a07106de1f",
+          "message": "chore: update GitHub data [skip ci]",
+          "url": "https://github.com/charlie2233/atrak-website/commit/803d62c0ad7212545d1d7a690e1546a07106de1f"
+        },
+        {
+          "sha": "c0c775ce806b7691284c553b9521672897be0865",
+          "message": "chore: update GitHub data [skip ci]",
+          "url": "https://github.com/charlie2233/atrak-website/commit/c0c775ce806b7691284c553b9521672897be0865"
+        },
+        {
+          "sha": "b38e4c447e35ecf00905a097818597d2651084c5",
+          "message": "chore: update GitHub data [skip ci]",
+          "url": "https://github.com/charlie2233/atrak-website/commit/b38e4c447e35ecf00905a097818597d2651084c5"
+        },
+        {
+          "sha": "d5718a57c500822a4a97c488ab60b1cffc722f90",
+          "message": "chore: update GitHub data [skip ci]",
+          "url": "https://github.com/charlie2233/atrak-website/commit/d5718a57c500822a4a97c488ab60b1cffc722f90"
+        },
+        {
+          "sha": "a70f3294b32c913c2e5275dd80e04e5756dcf8cc",
+          "message": "chore: update GitHub data [skip ci]",
+          "url": "https://github.com/charlie2233/atrak-website/commit/a70f3294b32c913c2e5275dd80e04e5756dcf8cc"
+        },
+        {
+          "sha": "27bde7afa2c92b19a0bfc8fb850a3aa982b3620b",
+          "message": "chore: update GitHub data [skip ci]",
+          "url": "https://github.com/charlie2233/atrak-website/commit/27bde7afa2c92b19a0bfc8fb850a3aa982b3620b"
+        },
+        {
+          "sha": "5afe46f43e3f1ff91b9ecead848800c74834fd57",
+          "message": "chore: update GitHub data [skip ci]",
+          "url": "https://github.com/charlie2233/atrak-website/commit/5afe46f43e3f1ff91b9ecead848800c74834fd57"
+        },
+        {
+          "sha": "4edc2755d98dac690e4e2f271953e4e513339a68",
+          "message": "chore: update GitHub data [skip ci]",
+          "url": "https://github.com/charlie2233/atrak-website/commit/4edc2755d98dac690e4e2f271953e4e513339a68"
+        },
+        {
+          "sha": "7ff51734cf3faa9cfba4ded089e1041e349b2432",
+          "message": "chore: update weekly logs and September releases [skip ci]",
+          "url": "https://github.com/charlie2233/atrak-website/commit/7ff51734cf3faa9cfba4ded089e1041e349b2432"
+        }
+      ]
+    },
+    "public": true,
+    "created_at": "2026-10-03T23:41:03Z"
+  },
+  {
     "id": "23052644656",
     "type": "CreateEvent",
     "actor": {
@@ -232,110 +361,7 @@
       "push_id": 45388148883,
       "ref": "refs/heads/main",
       "head": "de8fe3dcaef7d3622b5e4c2c00f45ddeb9c6f3a7",
-      "before": "d428c0d6555044be5fae47e5a81c1e9f48365bdd",
-      "distinct_size": 22,
-      "commits": [
-        {
-          "sha": "ef94517e4576afb18b925457922334246cc7e8de",
-          "message": "chore: update GitHub data [skip ci]",
-          "url": "https://github.com/charlie2233/atrak-website/commit/ef94517e4576afb18b925457922334246cc7e8de"
-        },
-        {
-          "sha": "d2f178553b8c79a351732a4b14a49e5d84817f52",
-          "message": "chore: update GitHub data [skip ci]",
-          "url": "https://github.com/charlie2233/atrak-website/commit/d2f178553b8c79a351732a4b14a49e5d84817f52"
-        },
-        {
-          "sha": "41f4c98a05c72420df4b05caa052ff94ae5cdcae",
-          "message": "chore: renew weekly log [skip ci]",
-          "url": "https://github.com/charlie2233/atrak-website/commit/41f4c98a05c72420df4b05caa052ff94ae5cdcae"
-        },
-        {
-          "sha": "4f969750d34c81f14be9be662a996f7b0605451e",
-          "message": "chore: update GitHub data [skip ci]",
-          "url": "https://github.com/charlie2233/atrak-website/commit/4f969750d34c81f14be9be662a996f7b0605451e"
-        },
-        {
-          "sha": "de8fe3dcaef7d3622b5e4c2c00f45ddeb9c6f3a7",
-          "message": "Use local publication date for HoopClips policy (#18)",
-          "url": "https://github.com/charlie2233/atrak-website/commit/de8fe3dcaef7d3622b5e4c2c00f45ddeb9c6f3a7"
-        },
-        {
-          "sha": "d428c0d6555044be5fae47e5a81c1e9f48365bdd",
-          "message": "chore: update GitHub data [skip ci]",
-          "url": "https://github.com/charlie2233/atrak-website/commit/d428c0d6555044be5fae47e5a81c1e9f48365bdd"
-        },
-        {
-          "sha": "680b79fd8edeba5752334f8c9a823ea3c1dd5cda",
-          "message": "Clarify HoopClips privacy disclosures (#17)",
-          "url": "https://github.com/charlie2233/atrak-website/commit/680b79fd8edeba5752334f8c9a823ea3c1dd5cda"
-        },
-        {
-          "sha": "e844aa0346e5d58e146bb485dd662c6c8e9ef557",
-          "message": "chore: update GitHub data [skip ci]",
-          "url": "https://github.com/charlie2233/atrak-website/commit/e844aa0346e5d58e146bb485dd662c6c8e9ef557"
-        },
-        {
-          "sha": "d881a0349135550e8099ab65986abaa0d579ab55",
-          "message": "chore: update GitHub data [skip ci]",
-          "url": "https://github.com/charlie2233/atrak-website/commit/d881a0349135550e8099ab65986abaa0d579ab55"
-        },
-        {
-          "sha": "38ff5d9481996296124144f05f027134f61b22d5",
-          "message": "Align Safe Traveling public pages with version 1.0 (#16)",
-          "url": "https://github.com/charlie2233/atrak-website/commit/38ff5d9481996296124144f05f027134f61b22d5"
-        },
-        {
-          "sha": "803d62c0ad7212545d1d7a690e1546a07106de1f",
-          "message": "chore: update GitHub data [skip ci]",
-          "url": "https://github.com/charlie2233/atrak-website/commit/803d62c0ad7212545d1d7a690e1546a07106de1f"
-        },
-        {
-          "sha": "c0c775ce806b7691284c553b9521672897be0865",
-          "message": "chore: update GitHub data [skip ci]",
-          "url": "https://github.com/charlie2233/atrak-website/commit/c0c775ce806b7691284c553b9521672897be0865"
-        },
-        {
-          "sha": "b38e4c447e35ecf00905a097818597d2651084c5",
-          "message": "chore: update GitHub data [skip ci]",
-          "url": "https://github.com/charlie2233/atrak-website/commit/b38e4c447e35ecf00905a097818597d2651084c5"
-        },
-        {
-          "sha": "d5718a57c500822a4a97c488ab60b1cffc722f90",
-          "message": "chore: update GitHub data [skip ci]",
-          "url": "https://github.com/charlie2233/atrak-website/commit/d5718a57c500822a4a97c488ab60b1cffc722f90"
-        },
-        {
-          "sha": "a70f3294b32c913c2e5275dd80e04e5756dcf8cc",
-          "message": "chore: update GitHub data [skip ci]",
-          "url": "https://github.com/charlie2233/atrak-website/commit/a70f3294b32c913c2e5275dd80e04e5756dcf8cc"
-        },
-        {
-          "sha": "27bde7afa2c92b19a0bfc8fb850a3aa982b3620b",
-          "message": "chore: update GitHub data [skip ci]",
-          "url": "https://github.com/charlie2233/atrak-website/commit/27bde7afa2c92b19a0bfc8fb850a3aa982b3620b"
-        },
-        {
-          "sha": "5afe46f43e3f1ff91b9ecead848800c74834fd57",
-          "message": "chore: update GitHub data [skip ci]",
-          "url": "https://github.com/charlie2233/atrak-website/commit/5afe46f43e3f1ff91b9ecead848800c74834fd57"
-        },
-        {
-          "sha": "4edc2755d98dac690e4e2f271953e4e513339a68",
-          "message": "chore: update GitHub data [skip ci]",
-          "url": "https://github.com/charlie2233/atrak-website/commit/4edc2755d98dac690e4e2f271953e4e513339a68"
-        },
-        {
-          "sha": "7ff51734cf3faa9cfba4ded089e1041e349b2432",
-          "message": "chore: update weekly logs and September releases [skip ci]",
-          "url": "https://github.com/charlie2233/atrak-website/commit/7ff51734cf3faa9cfba4ded089e1041e349b2432"
-        },
-        {
-          "sha": "33bc36d95b43f3121b25dbbb9e959d859c312f30",
-          "message": "chore: update GitHub data [skip ci]",
-          "url": "https://github.com/charlie2233/atrak-website/commit/33bc36d95b43f3121b25dbbb9e959d859c312f30"
-        }
-      ]
+      "before": "d428c0d6555044be5fae47e5a81c1e9f48365bdd"
     },
     "public": true,
     "created_at": "2026-10-04T03:48:39Z"
