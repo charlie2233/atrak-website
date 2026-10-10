@@ -10,7 +10,7 @@ const source = site === 'atrak'
   ? 'const configuredFormEndpoints = {}; const showToast = () => {};\n' + rawScript.slice(rawScript.indexOf('// Determines the endpoint'), rawScript.indexOf('// One-pager print buttons'))
   : rawScript.slice(rawScript.indexOf('const waitlistForm ='));
 
-async function setup(t, {file = 'index.html', selector, local = false, query = ''} = {}) {
+async function setup(t, {file = 'index.html', selector, local = false, query = '', protectedForm = true, verified = true} = {}) {
   const dom = new JSDOM(fs.readFileSync(path.join(root, file), 'utf8'), {
     url: `https://${local ? 'localhost' : `${site}.example`}/${file}${query}`, runScripts: 'outside-only'
   });
@@ -32,6 +32,18 @@ async function setup(t, {file = 'index.html', selector, local = false, query = '
   await new Promise(resolve => w.addEventListener('load', resolve, {once: true}));
   w.eval(source);
   const form = w.document.querySelector(selector || (site === 'atrak' ? '#join-form' : '.waitlist-form'));
+  let resets = 0;
+  if (protectedForm) {
+    form.dataset.turnstileSitekey = 'public-key-fixture';
+    w.formTurnstile = {
+      validate: () => verified,
+      reset: () => { resets++; }
+    };
+    if (verified) {
+      const token = w.document.createElement('input');
+      token.type='hidden';token.name='cf-turnstile-response';token.value='mock-token';form.append(token);
+    }
+  }
   const field = name => form.elements.namedItem(name);
   const fill = () => {
     if (field('name')) field('name').value = 'Local QA';
@@ -47,7 +59,7 @@ async function setup(t, {file = 'index.html', selector, local = false, query = '
   const settle = () => new Promise(resolve => setImmediate(resolve));
   return {w,form,field,fill,submit,settle,calls,opened,
     button: form.querySelector('button[type=submit]'),
-    status: form.querySelector('.form-status'),
+    status: form.querySelector('.form-status'), resets: () => resets,
     respond: fn => {respond = fn;}, expire: () => timeout(), cleared: () => timerCleared};
 }
 
@@ -158,3 +170,47 @@ if (site === 'atrak') {
     assert.equal(x.form.querySelector('[data-form-thanks]').hidden,true);assert.equal(x.calls.length,0);
   });
 }
+
+for (const missingHelper of [false,true]) {
+  test(`configured protection blocks unverified sends (missing helper: ${missingHelper})`,async t=>{
+    const x=await setup(t,{protectedForm:true,verified:false});
+    if(missingHelper) delete x.w.formTurnstile;
+    x.submit(); await x.settle(); assert.equal(x.calls.length,0);
+    assert.match(x.status.textContent,/spam check/);assert.match(x.field('message').value,/local test/);
+  });
+}
+for(const outcome of ['success','rejected','network']) {
+  test(`verified token is forwarded and reset after ${outcome}`,async t=>{
+    const x=await setup(t,{protectedForm:true,verified:true});
+    x.respond(async()=>{
+      if(outcome==='network') throw new Error('network');
+      return {ok:outcome==='success',status:outcome==='success'?200:400,json:async()=>({error:'Invalid CAPTCHA'})};
+    });
+    x.submit();await x.settle();assert.equal(x.calls.length,1);
+    assert.equal(x.calls[0].fields['cf-turnstile-response'],'mock-token');
+    assert.equal(x.resets(),1);
+    if(outcome!=='success') assert.match(x.field('message').value,/local test/);
+  });
+}
+
+test('every public form has the correct production widget and helper', () => {
+  const pages = ['index.html', 'join.html', 'security.html', 'press-kit.html'];
+  const expectedKey = '0x4AAAAAAFTZXFn4g2nxivZR';
+  let formCount = 0;
+  for (const file of pages) {
+    const html = fs.readFileSync(path.join(root, file), 'utf8');
+    const dom = new JSDOM(html);
+    const forms = [...dom.window.document.querySelectorAll('form[action^="https://formspree.io/f/"]')];
+    formCount += forms.length;
+    for (const form of forms) {
+      assert.equal(form.dataset.turnstileSitekey, expectedKey, file);
+      assert.ok(form.querySelector('input[name="_gotcha"]'), file);
+      assert.ok(form.querySelector('noscript'), file);
+    }
+    const scripts = [...dom.window.document.querySelectorAll('script[src]')].map(s => s.getAttribute('src').split('?')[0]);
+    assert.ok(scripts.includes('turnstile.js'));
+    assert.ok(scripts.indexOf('turnstile.js') < scripts.indexOf('script.js'));
+    dom.window.close();
+  }
+  assert.equal(formCount, 5);
+});

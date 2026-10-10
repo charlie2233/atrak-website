@@ -1408,6 +1408,11 @@ const wireAsyncForm = (form, options) => {
             return;
         }
 
+        if (form.dataset.turnstileSitekey?.trim() && !window.formTurnstile?.validate(form)) {
+            setStatus('Please complete the spam check before sending. Your message is still here.', 'is-error');
+            return;
+        }
+
         if (form.action !== endpoint) form.action = endpoint;
 
         const originalButtonText = submitButton ? submitButton.textContent : '';
@@ -1465,6 +1470,7 @@ const wireAsyncForm = (form, options) => {
             showToast(errorMessage, 'error');
         } finally {
             clearTimeout(timeout);
+            window.formTurnstile?.reset(form);
             submitting = false;
             if (submitButton) {
                 submitButton.disabled = false;

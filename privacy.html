@@ -85,8 +85,14 @@
                     <div class="glass-card project-detail-card">
                         <h3>Where Submissions Go</h3>
                         <p>
-                            Form submissions are sent through a third-party form provider (configured in <code>config.js</code>)
+                            Form submissions are sent through Formspree
                             and delivered to our team inbox. We don’t publish your submissions.
+                        </p>
+                        <p>
+                            Forms use Cloudflare Turnstile to check for spam. Cloudflare processes technical
+                            request and browser information for this check under its
+                            <a href="https://www.cloudflare.com/privacypolicy/">Privacy Policy</a>.
+                            The resulting verification token is sent with your form details to Formspree.
                         </p>
                         <p>We do not sell your information.</p>
                     </div>

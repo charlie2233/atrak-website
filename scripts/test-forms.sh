@@ -5,4 +5,4 @@ TASK_TEST_RUNNER="$TASK_REPO_ROOT/scripts/.form-test-runner"
 if [[ ! -d "$TASK_TEST_RUNNER/node_modules/jsdom" ]]; then
   npm install --prefix "$TASK_TEST_RUNNER" --no-save --ignore-scripts --package-lock=false jsdom@26.1.0
 fi
-NODE_PATH="$TASK_TEST_RUNNER/node_modules" node --test "$TASK_REPO_ROOT/scripts/test-forms.cjs"
+NODE_PATH="$TASK_TEST_RUNNER/node_modules" node --test "$TASK_REPO_ROOT/scripts/test-forms.cjs" "$TASK_REPO_ROOT/scripts/test-turnstile.cjs"

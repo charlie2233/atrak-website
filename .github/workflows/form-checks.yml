@@ -2,9 +2,9 @@ name: Form regression checks
 on:
   push:
     branches: [main]
-    paths: ['*.html', 'script.js', 'scripts/test-forms.*', '.github/workflows/form-checks.yml']
+    paths: ['*.html', 'script.js', 'turnstile.js', 'scripts/test-forms.*', 'scripts/test-turnstile.cjs', '.github/workflows/form-checks.yml']
   pull_request:
-    paths: ['*.html', 'script.js', 'scripts/test-forms.*', '.github/workflows/form-checks.yml']
+    paths: ['*.html', 'script.js', 'turnstile.js', 'scripts/test-forms.*', 'scripts/test-turnstile.cjs', '.github/workflows/form-checks.yml']
 permissions:
   contents: read
 jobs:

@@ -21,7 +21,7 @@
 
     <link rel="icon" type="image/png" href="assets/logo.png?v=20260202">
     <link rel="apple-touch-icon" sizes="180x180" href="assets/logo.png?v=20260202">
-    <link rel="stylesheet" href="styles.css?v=38">
+    <link rel="stylesheet" href="styles.css?v=49">
 </head>
 <body>
     <nav class="navbar">
@@ -240,7 +240,7 @@
                         </div>
                     </div>
                     <div class="suggestion-box">
-                        <form id="sponsor-form" class="suggestion-form" action="https://formspree.io/f/mvzqdnov" method="POST" data-endpoint-key="sponsor">
+                        <form id="sponsor-form" class="suggestion-form" action="https://formspree.io/f/mvzqdnov" method="POST" data-turnstile-sitekey="0x4AAAAAAFTZXFn4g2nxivZR" data-endpoint-key="sponsor">
                             <div class="form-grid">
                                 <div class="form-field">
                                     <label for="sponsor-name" class="suggestion-label">Name</label>
@@ -273,6 +273,7 @@
 
                             <input type="hidden" name="_subject" value="Atrak Sponsorship Inquiry">
                             <input type="text" name="_gotcha" class="suggestion-honeypot" tabindex="-1" autocomplete="off" aria-hidden="true">
+                            <noscript><p>Spam protection requires JavaScript. Please enable it before sending this form.</p></noscript>
                             <button type="submit" class="btn btn-primary">Send Partnership Request</button>
                             <p id="sponsor-status" class="form-status" role="status" aria-live="polite" aria-atomic="true"></p>
                             <p class="form-disclaimer">We will respond within 3-5 business days.</p>
@@ -328,7 +329,8 @@
     </footer>
 
     <script src="config.js?v=21"></script>
-    <script src="script.js?v=48"></script>
+    <script src="turnstile.js?v=1"></script>
+    <script src="script.js?v=49"></script>
     <script src="last-updated.js?v=2"></script>
 </body>
 </html>

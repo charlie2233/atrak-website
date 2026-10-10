@@ -31,7 +31,7 @@
     <link rel="apple-touch-icon" sizes="152x152" href="assets/logo.png?v=20260202">
     <link rel="apple-touch-icon" sizes="120x120" href="assets/logo.png?v=20260202">
     <link rel="apple-touch-icon" sizes="76x76" href="assets/logo.png?v=20260202">
-    <link rel="stylesheet" href="styles.css?v=48">
+    <link rel="stylesheet" href="styles.css?v=49">
     <link rel="stylesheet" href="weekly-log.css?v=9">
     
     <!-- Structured Data -->
@@ -1369,7 +1369,7 @@
 
                 <div class="contact-tab-content active" id="contact-suggestion-panel" role="tabpanel" aria-labelledby="contact-suggestion-tab" data-tab="suggestion">
                     <div class="suggestion-box glass-card reveal">
-                    <form id="suggestion-form" class="suggestion-form" action="https://formspree.io/f/mvzqdnov" method="POST" data-endpoint-key="suggestion">
+                    <form id="suggestion-form" class="suggestion-form" action="https://formspree.io/f/mvzqdnov" method="POST" data-turnstile-sitekey="0x4AAAAAAFTZXFn4g2nxivZR" data-endpoint-key="suggestion">
                         <label for="suggestion-message" class="suggestion-label">Your message</label>
                         <textarea id="suggestion-message" minlength="10" name="message" rows="6" maxlength="1200" required placeholder="Write your suggestion..." aria-describedby="suggestion-message-error suggestion-message-count"></textarea>
                         <div class="form-meta">
@@ -1377,6 +1377,7 @@
                         </div>
                         <p id="suggestion-message-error" class="form-error" role="alert" aria-live="assertive"></p>
                         <input type="text" name="_gotcha" class="suggestion-honeypot" tabindex="-1" autocomplete="off" aria-hidden="true">
+                        <noscript><p>Spam protection requires JavaScript. Please enable it before sending this form.</p></noscript>
                         <button type="submit" class="btn btn-primary">Send anonymously</button>
                         <p id="suggestion-status" class="form-status" role="status" aria-live="polite" aria-atomic="true"></p>
                         <p class="form-disclaimer">No contact info collected.</p>
@@ -1393,7 +1394,7 @@
 
                 <div class="contact-tab-content" id="contact-apply-panel" role="tabpanel" aria-labelledby="contact-apply-tab" data-tab="apply">
                     <div class="suggestion-box glass-card reveal">
-                        <form id="join-form" class="suggestion-form" action="https://formspree.io/f/mvzqdnov" method="POST" data-endpoint-key="join">
+                        <form id="join-form" class="suggestion-form" action="https://formspree.io/f/mvzqdnov" method="POST" data-turnstile-sitekey="0x4AAAAAAFTZXFn4g2nxivZR" data-endpoint-key="join">
                             <div class="form-grid">
                                 <div class="form-field">
                                     <label for="join-name" class="suggestion-label">Name</label>
@@ -1458,6 +1459,7 @@
                             </div>
 
                             <input type="text" name="_gotcha" class="suggestion-honeypot" tabindex="-1" autocomplete="off" aria-hidden="true">
+                            <noscript><p>Spam protection requires JavaScript. Please enable it before sending this form.</p></noscript>
                             <button type="submit" class="btn btn-primary">Send</button>
                             <p id="join-status" class="form-status" role="status" aria-live="polite" aria-atomic="true"></p>
                             <p class="form-disclaimer">We'll only use your email to reply to your inquiry or application.</p>
@@ -1535,7 +1537,8 @@
 
     <script src="config.js?v=21"></script>
     <script src="weekly-log.js?v=10"></script>
-    <script src="script.js?v=48"></script>
+    <script src="turnstile.js?v=1"></script>
+    <script src="script.js?v=49"></script>
     <script src="three-hero.js?v=8"></script>
     <script src="last-updated.js?v=2"></script>
 </body>

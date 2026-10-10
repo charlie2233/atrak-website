@@ -12282,3 +12282,8 @@ body.section-orbit-visible .section-orbit-nav {
         background: radial-gradient(520px circle at 50% 18%, rgba(20, 241, 255, 0.035), transparent 64%);
     }
 }
+
+.form-verification { margin: 1rem 0; min-width: 0; }
+.form-verification-status { font-size: 0.875rem; line-height: 1.5; margin: 0.5rem 0; }
+.form-verification-retry { font: inherit; padding: 0.625rem 0.875rem; cursor: pointer; }
+.form-verification-retry[hidden] { display: none; }
