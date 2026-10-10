@@ -21,8 +21,18 @@
       "ref": "refs/heads/main",
       "head": "3cd946bda80148a84e5bfbd43701ba7854b6220c",
       "before": "bb26a245ee8708dd32d8ae57879d08ff2e9eab51",
-      "distinct_size": 23,
+      "distinct_size": 25,
       "commits": [
+        {
+          "sha": "e7d3efd7be7c97064704e1adc6b6e5b130c9d230",
+          "message": "Integrate accessible Turnstile widgets across public forms",
+          "url": "https://github.com/charlie2233/atrak-website/commit/e7d3efd7be7c97064704e1adc6b6e5b130c9d230"
+        },
+        {
+          "sha": "ceb8354747a262696860403cd264e0f1de2e8c4d",
+          "message": "chore: update GitHub data [skip ci]",
+          "url": "https://github.com/charlie2233/atrak-website/commit/ceb8354747a262696860403cd264e0f1de2e8c4d"
+        },
         {
           "sha": "3cd946bda80148a84e5bfbd43701ba7854b6220c",
           "message": "Harden form submission recovery and keep access requests private",
@@ -112,16 +122,6 @@
           "sha": "de8fe3dcaef7d3622b5e4c2c00f45ddeb9c6f3a7",
           "message": "Use local publication date for HoopClips policy (#18)",
           "url": "https://github.com/charlie2233/atrak-website/commit/de8fe3dcaef7d3622b5e4c2c00f45ddeb9c6f3a7"
-        },
-        {
-          "sha": "d428c0d6555044be5fae47e5a81c1e9f48365bdd",
-          "message": "chore: update GitHub data [skip ci]",
-          "url": "https://github.com/charlie2233/atrak-website/commit/d428c0d6555044be5fae47e5a81c1e9f48365bdd"
-        },
-        {
-          "sha": "680b79fd8edeba5752334f8c9a823ea3c1dd5cda",
-          "message": "Clarify HoopClips privacy disclosures (#17)",
-          "url": "https://github.com/charlie2233/atrak-website/commit/680b79fd8edeba5752334f8c9a823ea3c1dd5cda"
         }
       ]
     },
