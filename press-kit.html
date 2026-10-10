@@ -240,7 +240,7 @@
                         </div>
                     </div>
                     <div class="suggestion-box">
-                        <form id="sponsor-form" class="suggestion-form" action="https://formspree.io/f/mvzqdnov" method="POST" data-endpoint-key="sponsor" novalidate>
+                        <form id="sponsor-form" class="suggestion-form" action="https://formspree.io/f/mvzqdnov" method="POST" data-endpoint-key="sponsor">
                             <div class="form-grid">
                                 <div class="form-field">
                                     <label for="sponsor-name" class="suggestion-label">Name</label>
@@ -266,7 +266,7 @@
                             </select>
 
                             <label for="sponsor-message" class="suggestion-label">Message</label>
-                            <textarea id="sponsor-message" name="message" rows="6" maxlength="1600" required placeholder="Share goals, timeline, or budget range."></textarea>
+                            <textarea id="sponsor-message" minlength="20" name="message" rows="6" maxlength="1600" required placeholder="Share goals, timeline, or budget range."></textarea>
                             <div class="form-meta">
                                 <span class="form-count" data-char-count="sponsor-message">0/1600</span>
                             </div>
@@ -274,7 +274,7 @@
                             <input type="hidden" name="_subject" value="Atrak Sponsorship Inquiry">
                             <input type="text" name="_gotcha" class="suggestion-honeypot" tabindex="-1" autocomplete="off" aria-hidden="true">
                             <button type="submit" class="btn btn-primary">Send Partnership Request</button>
-                            <p id="sponsor-status" class="form-status" role="status" aria-live="polite"></p>
+                            <p id="sponsor-status" class="form-status" role="status" aria-live="polite" aria-atomic="true"></p>
                             <p class="form-disclaimer">We will respond within 3-5 business days.</p>
                         </form>
                     </div>
@@ -328,7 +328,7 @@
     </footer>
 
     <script src="config.js?v=21"></script>
-    <script src="script.js?v=25"></script>
+    <script src="script.js?v=48"></script>
     <script src="last-updated.js?v=2"></script>
 </body>
 </html>

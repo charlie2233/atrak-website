@@ -1,0 +1,18 @@
+name: Form regression checks
+on:
+  push:
+    branches: [main]
+    paths: ['*.html', 'script.js', 'scripts/test-forms.*', '.github/workflows/form-checks.yml']
+  pull_request:
+    paths: ['*.html', 'script.js', 'scripts/test-forms.*', '.github/workflows/form-checks.yml']
+permissions:
+  contents: read
+jobs:
+  forms:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v4
+        with:
+          node-version: 22
+      - run: bash scripts/test-forms.sh

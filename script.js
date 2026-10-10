@@ -1315,6 +1315,7 @@ const wireAsyncForm = (form, options) => {
     const minMessageLength = Number.isFinite(options.minMessageLength) ? options.minMessageLength : 10;
     const successMessage = options.successMessage || 'Sent.';
     const updateCharCounts = setupCharCounters(form);
+    let submitting = false;
 
     const setStatus = (message, state) => setFormStatus(statusEl, message, state);
 
@@ -1341,6 +1342,7 @@ const wireAsyncForm = (form, options) => {
 
     form.addEventListener('submit', async (e) => {
         e.preventDefault();
+        if (submitting) return;
 
         // Clear previous errors
         form.querySelectorAll('.form-error').forEach(el => el.textContent = '');
@@ -1396,9 +1398,7 @@ const wireAsyncForm = (form, options) => {
 
         const honeypot = form.querySelector('input[name="_gotcha"]');
         if (honeypot && honeypot.value) {
-            form.reset();
-            updateCharCounts();
-            setStatus(successMessage, 'is-success');
+            setStatus('Unable to send. Please reload the page and enter the visible fields only.', 'is-error');
             return;
         }
 
@@ -1411,6 +1411,9 @@ const wireAsyncForm = (form, options) => {
         if (form.action !== endpoint) form.action = endpoint;
 
         const originalButtonText = submitButton ? submitButton.textContent : '';
+        submitting = true;
+        const controller = new AbortController();
+        const timeout = setTimeout(() => controller.abort(), 20000);
         if (submitButton) {
             submitButton.disabled = true;
             submitButton.textContent = 'Sending…';
@@ -1422,7 +1425,8 @@ const wireAsyncForm = (form, options) => {
             const response = await fetch(endpoint, {
                 method: 'POST',
                 body: new FormData(form),
-                headers: { Accept: 'application/json' }
+                headers: { Accept: 'application/json' },
+                signal: controller.signal
             });
 
             if (response.ok) {
@@ -1449,33 +1453,19 @@ const wireAsyncForm = (form, options) => {
             } catch (_) {
                 // ignore JSON parsing errors
             }
+            if (response.status === 429) {
+                errorMessage = 'Too many requests. Please wait a few minutes before trying again. Your message is still here.';
+            }
 
             setStatus(errorMessage, 'is-error');
             showToast(errorMessage, 'error');
         } catch (error) {
-            const errorMessageText = error && typeof error.message === 'string' ? error.message : '';
-            const errorMessage = errorMessageText.includes('Failed to fetch') || errorMessageText.includes('network')
-                ? 'Network error. Please check your connection and try again.'
-                : 'Network error. Please try again.';
+            const errorMessage = 'Delivery could not be confirmed. Your message is still here. Please check your connection and wait before trying Send again to avoid a duplicate.';
             setStatus(errorMessage, 'is-error');
             showToast(errorMessage, 'error');
-            
-            // Add retry button
-            if (submitButton) {
-                const retryBtn = document.createElement('button');
-                retryBtn.type = 'button';
-                retryBtn.className = 'btn btn-secondary btn-sm';
-                retryBtn.textContent = 'Retry';
-                retryBtn.style.marginTop = '8px';
-                retryBtn.addEventListener('click', () => {
-                    retryBtn.remove();
-                    form.dispatchEvent(new Event('submit', { cancelable: true, bubbles: true }));
-                });
-                if (statusEl && statusEl.parentNode) {
-                    statusEl.parentNode.insertBefore(retryBtn, statusEl.nextSibling);
-                }
-            }
         } finally {
+            clearTimeout(timeout);
+            submitting = false;
             if (submitButton) {
                 submitButton.disabled = false;
                 submitButton.textContent = originalButtonText;
@@ -1522,59 +1512,12 @@ function initRepoRequestHandler() {
         }
     });
     
-    // Handle form submission for repo access requests
-    const joinForm = document.getElementById('join-form');
-    if (joinForm) {
-        // Intercept form submission to create GitHub issue
-        const originalSubmit = joinForm.onsubmit;
-        joinForm.addEventListener('submit', async (e) => {
-            if (repoCheckbox.checked) {
-                const repoName = document.getElementById('join-repo-name')?.value.trim();
-                const repoReason = document.getElementById('join-repo-reason')?.value.trim();
-                const name = document.getElementById('join-name')?.value.trim();
-                const email = document.getElementById('join-email')?.value.trim();
-                const message = document.getElementById('join-message')?.value.trim();
-                const interest = document.getElementById('join-interest')?.value;
-                
-                if (!repoName) {
-                    e.preventDefault();
-                    const errorEl = document.getElementById('join-repo-name-error');
-                    if (errorEl) errorEl.textContent = 'Repository name is required.';
-                    showToast('Please provide a repository name.', 'error');
-                    return;
-                }
-                
-                // Create GitHub issue URL
-                const repoOwner = 'charlie2233';
-                const issueTitle = encodeURIComponent(`Repository Access Request: ${repoName}`);
-                const issueBody = encodeURIComponent(`## Repository Access Request
-
-**Requested Repository:** \`${repoName}\`
-
-**Requester Information:**
-- Name: ${name}
-- Email: ${email}
-- Interest: ${interest || 'Not specified'}
-
-**Reason for Access:**
-${repoReason || 'No reason provided.'}
-
-**Additional Message:**
-${message || 'No additional message.'}
-
----
-*This request was submitted via the Atrak website contact form.*`);
-
-                const githubIssueUrl = `https://github.com/${repoOwner}/${repoName}/issues/new?title=${issueTitle}&body=${issueBody}`;
-                
-                // Open GitHub issue creation in new tab
-                window.open(githubIssueUrl, '_blank', 'noopener,noreferrer');
-                
-                // Show info message
-                showToast('Opening GitHub issue page. Please complete the issue submission there. Your contact form will also be sent.', 'info', 8000);
-            }
-        });
-    }
+    // Keep access requests in the contact form. Never place contact details in a
+    // public GitHub issue URL or open another service as a submission side effect.
+    document.getElementById('join-form')?.addEventListener('reset', () => {
+        repoFields.style.display = 'none';
+        document.getElementById('join-repo-name')?.removeAttribute('required');
+    });
 }
 
 // Initialize repo request handler when DOM is ready

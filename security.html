@@ -100,7 +100,7 @@
                 </div>
 
                 <div class="suggestion-box glass-card">
-                    <form id="security-form" class="suggestion-form" action="https://formspree.io/f/mvzqdnov" method="POST" data-endpoint-key="security" novalidate>
+                    <form id="security-form" class="suggestion-form" action="https://formspree.io/f/mvzqdnov" method="POST" data-endpoint-key="security">
                         <div class="form-grid">
                             <div class="form-field">
                                 <label for="security-severity" class="suggestion-label">Severity</label>
@@ -131,7 +131,7 @@
                         <input id="security-link" name="link" type="url" inputmode="url" autocomplete="off" placeholder="Repo URL or page URL">
 
                         <label for="security-message" class="suggestion-label">Report details</label>
-                        <textarea id="security-message" name="message" rows="8" maxlength="2400" required placeholder="Describe the issue, steps to reproduce, and impact."></textarea>
+                        <textarea id="security-message" minlength="30" name="message" rows="8" maxlength="2400" required placeholder="Describe the issue, steps to reproduce, and impact."></textarea>
                         <div class="form-meta">
                             <span class="form-count" data-char-count="security-message">0/2400</span>
                         </div>
@@ -141,7 +141,7 @@
 
                         <input type="text" name="_gotcha" class="suggestion-honeypot" tabindex="-1" autocomplete="off" aria-hidden="true">
                         <button type="submit" class="btn btn-primary">Report security issue</button>
-                        <p id="security-status" class="form-status" role="status" aria-live="polite"></p>
+                        <p id="security-status" class="form-status" role="status" aria-live="polite" aria-atomic="true"></p>
                         <p class="form-disclaimer">Leave contact email blank to stay anonymous.</p>
                     </form>
                 </div>
@@ -192,7 +192,7 @@
     </footer>
 
     <script src="config.js?v=21"></script>
-    <script src="script.js?v=25"></script>
+    <script src="script.js?v=48"></script>
     <script src="last-updated.js?v=2"></script>
 </body>
 </html>

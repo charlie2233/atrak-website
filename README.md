@@ -252,3 +252,9 @@ Contributions are welcome! Feel free to open issues or submit pull requests.
 **Built with ❤️ by the Atrak Team**
 
 *atrak.dev*
+
+## Form protection
+
+See [FORM_PROTECTION.md](FORM_PROTECTION.md) for the current safeguards, offline
+regression checks, and the approval-gated Formspree/Turnstile activation plan.
+Run `bash scripts/test-forms.sh` before publishing form changes.

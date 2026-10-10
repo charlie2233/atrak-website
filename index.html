@@ -1369,16 +1369,16 @@
 
                 <div class="contact-tab-content active" id="contact-suggestion-panel" role="tabpanel" aria-labelledby="contact-suggestion-tab" data-tab="suggestion">
                     <div class="suggestion-box glass-card reveal">
-                    <form id="suggestion-form" class="suggestion-form" action="https://formspree.io/f/mvzqdnov" method="POST" data-endpoint-key="suggestion" novalidate>
+                    <form id="suggestion-form" class="suggestion-form" action="https://formspree.io/f/mvzqdnov" method="POST" data-endpoint-key="suggestion">
                         <label for="suggestion-message" class="suggestion-label">Your message</label>
-                        <textarea id="suggestion-message" name="message" rows="6" maxlength="1200" required placeholder="Write your suggestion..." aria-describedby="suggestion-message-error suggestion-message-count"></textarea>
+                        <textarea id="suggestion-message" minlength="10" name="message" rows="6" maxlength="1200" required placeholder="Write your suggestion..." aria-describedby="suggestion-message-error suggestion-message-count"></textarea>
                         <div class="form-meta">
                             <span class="form-count" id="suggestion-message-count" data-char-count="suggestion-message" aria-live="polite">0/1200</span>
                         </div>
                         <p id="suggestion-message-error" class="form-error" role="alert" aria-live="assertive"></p>
                         <input type="text" name="_gotcha" class="suggestion-honeypot" tabindex="-1" autocomplete="off" aria-hidden="true">
                         <button type="submit" class="btn btn-primary">Send anonymously</button>
-                        <p id="suggestion-status" class="form-status" role="status" aria-live="polite"></p>
+                        <p id="suggestion-status" class="form-status" role="status" aria-live="polite" aria-atomic="true"></p>
                         <p class="form-disclaimer">No contact info collected.</p>
                         <div style="margin-top: 16px; padding-top: 16px; border-top: 1px solid var(--border-color);">
                             <p style="margin: 0 0 12px 0; font-size: 14px; color: var(--text-secondary);">Need UI/UX, a website, or an app built? Or want to apply to the team?</p>
@@ -1393,16 +1393,16 @@
 
                 <div class="contact-tab-content" id="contact-apply-panel" role="tabpanel" aria-labelledby="contact-apply-tab" data-tab="apply">
                     <div class="suggestion-box glass-card reveal">
-                        <form id="join-form" class="suggestion-form" action="https://formspree.io/f/mvzqdnov" method="POST" data-endpoint-key="join" novalidate>
+                        <form id="join-form" class="suggestion-form" action="https://formspree.io/f/mvzqdnov" method="POST" data-endpoint-key="join">
                             <div class="form-grid">
                                 <div class="form-field">
                                     <label for="join-name" class="suggestion-label">Name</label>
-                                    <input id="join-name" name="name" type="text" autocomplete="name" required placeholder="Your name" aria-describedby="join-name-error">
+                                    <input id="join-name" name="name" type="text" maxlength="120" autocomplete="name" required placeholder="Your name" aria-describedby="join-name-error">
                                     <p id="join-name-error" class="form-error" role="alert" aria-live="assertive"></p>
                                 </div>
                                 <div class="form-field">
                                     <label for="join-email" class="suggestion-label">Email</label>
-                                    <input id="join-email" name="email" type="email" autocomplete="email" required placeholder="you@example.com" aria-describedby="join-email-error">
+                                    <input id="join-email" name="email" type="email" maxlength="254" autocomplete="email" required placeholder="you@example.com" aria-describedby="join-email-error">
                                     <p id="join-email-error" class="form-error" role="alert" aria-live="assertive"></p>
                                 </div>
                             </div>
@@ -1418,8 +1418,19 @@
                             </select>
                             <p id="join-interest-error" class="form-error" role="alert" aria-live="assertive"></p>
 
+                            <label for="join-referral" class="suggestion-label">How did you hear about us? (optional)</label>
+                            <select id="join-referral" name="referral_source">
+                                <option value="">Prefer not to say</option>
+                                <option>Search engine</option>
+                                <option>GitHub</option>
+                                <option>Social media</option>
+                                <option>Friend or teammate</option>
+                                <option>School or event</option>
+                                <option>Other</option>
+                            </select>
+
                             <label for="join-message" class="suggestion-label">Message</label>
-                            <textarea id="join-message" name="message" rows="7" maxlength="1600" required placeholder="Tell us about your project or what you want to work on. Include scope, goals, timeline, and any links that would help." aria-describedby="join-message-error join-message-count"></textarea>
+                            <textarea id="join-message" minlength="20" name="message" rows="7" maxlength="1600" required placeholder="Tell us about your project or what you want to work on. Include scope, goals, timeline, and any links that would help." aria-describedby="join-message-error join-message-count"></textarea>
                             <div class="form-meta">
                                 <span class="form-count" id="join-message-count" data-char-count="join-message" aria-live="polite">0/1600</span>
                             </div>
@@ -1430,12 +1441,12 @@
                                     <input type="checkbox" id="join-repo-request" name="repo_request" value="yes">
                                     <span>Request Repository Access</span>
                                 </label>
-                                <p class="form-hint">Check this if you're requesting access to a private repository (like Ten Seconds VIP Manager)</p>
+                                <p class="form-hint">We’ll review your repository access request privately and reply by email.</p>
                             </div>
 
                             <div id="repo-request-fields" class="repo-request-fields" style="display: none;">
                                 <label for="join-repo-name" class="suggestion-label">Repository Name</label>
-                                <input id="join-repo-name" name="repo_name" type="text" placeholder="e.g., rork-ten-seconds-vip-manager" aria-describedby="join-repo-name-error">
+                                <input id="join-repo-name" name="repo_name" type="text" maxlength="100" placeholder="e.g., rork-ten-seconds-vip-manager" aria-describedby="join-repo-name-error">
                                 <p id="join-repo-name-error" class="form-error" role="alert" aria-live="assertive"></p>
                                 
                                 <label for="join-repo-reason" class="suggestion-label">Reason for Access</label>
@@ -1448,7 +1459,7 @@
 
                             <input type="text" name="_gotcha" class="suggestion-honeypot" tabindex="-1" autocomplete="off" aria-hidden="true">
                             <button type="submit" class="btn btn-primary">Send</button>
-                            <p id="join-status" class="form-status" role="status" aria-live="polite"></p>
+                            <p id="join-status" class="form-status" role="status" aria-live="polite" aria-atomic="true"></p>
                             <p class="form-disclaimer">We'll only use your email to reply to your inquiry or application.</p>
                             <p class="form-powered-by" style="margin-top: 16px; text-align: center; font-size: 12px; color: var(--text-tertiary);">
                                 Powered by <a href="https://formspree.io" target="_blank" rel="noopener noreferrer" style="color: var(--accent-primary); text-decoration: none;">Formspree</a>
@@ -1524,7 +1535,7 @@
 
     <script src="config.js?v=21"></script>
     <script src="weekly-log.js?v=10"></script>
-    <script src="script.js?v=47"></script>
+    <script src="script.js?v=48"></script>
     <script src="three-hero.js?v=8"></script>
     <script src="last-updated.js?v=2"></script>
 </body>

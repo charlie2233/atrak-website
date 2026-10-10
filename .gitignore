@@ -23,3 +23,6 @@ dist/
 build/
 
 # Note: data/*.json files ARE committed (updated by GitHub Actions)
+
+# Isolated DOM test dependencies
+scripts/.form-test-runner/
