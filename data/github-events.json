@@ -21,8 +21,13 @@
       "ref": "refs/heads/main",
       "head": "1a3c124a319ec0ae79695be9f20fe43b01589f8e",
       "before": "342dc008912f4f613553787248a0a8ae04a088ec",
-      "distinct_size": 21,
+      "distinct_size": 22,
       "commits": [
+        {
+          "sha": "d0c037b408e6bea789199b890b6fd9f1078b349a",
+          "message": "chore: update GitHub data [skip ci]",
+          "url": "https://github.com/charlie2233/atrak-website/commit/d0c037b408e6bea789199b890b6fd9f1078b349a"
+        },
         {
           "sha": "f6bfaf7734e3f5370fa50055c773e66eee5efe6b",
           "message": "chore: update GitHub data [skip ci]",
@@ -117,11 +122,6 @@
           "sha": "d881a0349135550e8099ab65986abaa0d579ab55",
           "message": "chore: update GitHub data [skip ci]",
           "url": "https://github.com/charlie2233/atrak-website/commit/d881a0349135550e8099ab65986abaa0d579ab55"
-        },
-        {
-          "sha": "38ff5d9481996296124144f05f027134f61b22d5",
-          "message": "Align Safe Traveling public pages with version 1.0 (#16)",
-          "url": "https://github.com/charlie2233/atrak-website/commit/38ff5d9481996296124144f05f027134f61b22d5"
         }
       ]
     },
@@ -903,31 +903,5 @@
     },
     "public": true,
     "created_at": "2026-09-10T03:09:43Z"
-  },
-  {
-    "id": "20627427746",
-    "type": "PushEvent",
-    "actor": {
-      "id": 117957000,
-      "login": "charlie2233",
-      "display_login": "charlie2233",
-      "gravatar_id": "",
-      "url": "https://api.github.com/users/charlie2233",
-      "avatar_url": "https://avatars.githubusercontent.com/u/117957000?"
-    },
-    "repo": {
-      "id": 1140388078,
-      "name": "charlie2233/atrak-website",
-      "url": "https://api.github.com/repos/charlie2233/atrak-website"
-    },
-    "payload": {
-      "repository_id": 1140388078,
-      "push_id": 42948275987,
-      "ref": "refs/heads/main",
-      "head": "8817d39f153e7cd951b7ae58176e244bae37f7a6",
-      "before": "b6f342fcc2b9d53d634a4c2f2ea920bbd255e797"
-    },
-    "public": true,
-    "created_at": "2026-09-08T15:06:17Z"
   }
 ]
