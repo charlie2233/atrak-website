@@ -2599,22 +2599,23 @@
   {
     "weekStart": "2026-10-04",
     "weekEnd": "2026-10-10",
-    "generatedAt": "2026-10-06T15:04:12.064Z",
+    "generatedAt": "2026-10-11T09:27:58.310Z",
     "source": "github-weekly-automation",
     "dateRange": "Oct 4 – 10",
     "title": "Atrak Website and Turnplay Arena moved the week forward.",
     "highlights": [
-      "Atrak Website led public activity with 11 commits across 2 pushes.",
-      "2 public repositories were active across 12 GitHub events.",
+      "Atrak Website led public activity with 24 commits across 4 pushes.",
+      "2 public repositories were active across 14 GitHub events.",
       "No formal GitHub release was published during this edition."
     ],
     "shipped": [
-      "exclude build tooling from production dependencies",
-      "Use local publication date for HoopClips policy (#18)",
-      "Clarify HoopClips privacy disclosures (#17)"
+      "Integrate accessible Turnstile widgets across public forms",
+      "Harden form submission recovery and keep access requests private",
+      "refresh October weekly GitHub data [skip ci]",
+      "exclude build tooling from production dependencies"
     ],
     "engineering": [
-      "3 pushes and 6 pull request updates were condensed into this edition.",
+      "5 pushes and 6 pull request updates were condensed into this edition.",
       "Active stacks included HTML, TypeScript.",
       "The snapshot is stored permanently so the edition remains available after GitHub events expire."
     ],
@@ -2622,7 +2623,7 @@
       "exclude build tooling from production dependencies"
     ],
     "metrics": [
-      "Commits: 13",
+      "Commits: 26",
       "Active repos: 2",
       "Pull requests: 6",
       "Issues: 0",
@@ -2633,13 +2634,13 @@
       "Review the next automated edition after Sunday refresh."
     ],
     "stats": {
-      "commits": 13,
+      "commits": 26,
       "activeRepositories": 2,
       "pullRequests": 6,
       "issues": 0,
-      "pushes": 3,
+      "pushes": 5,
       "releases": 0,
-      "events": 12
+      "events": 14
     },
     "repositories": [
       {
@@ -2647,12 +2648,12 @@
         "fullName": "charlie2233/atrak-website",
         "url": "https://github.com/charlie2233/atrak-website",
         "language": "HTML",
-        "commits": 11,
-        "pushes": 2,
-        "events": 8,
+        "commits": 24,
+        "pushes": 4,
+        "events": 10,
         "pullRequests": 4,
         "issues": 0,
-        "lastAt": "2026-10-04T03:48:39.000Z"
+        "lastAt": "2026-10-10T21:09:38.000Z"
       },
       {
         "name": "Turnplay Arena",
@@ -2669,6 +2670,24 @@
     ],
     "releases": [],
     "commitMessages": [
+      {
+        "repo": "charlie2233/atrak-website",
+        "text": "Integrate accessible Turnstile widgets across public forms",
+        "url": "https://github.com/charlie2233/atrak-website/commit/e7d3efd7be7c97064704e1adc6b6e5b130c9d230",
+        "at": "2026-10-10T21:54:45Z"
+      },
+      {
+        "repo": "charlie2233/atrak-website",
+        "text": "Harden form submission recovery and keep access requests private",
+        "url": "https://github.com/charlie2233/atrak-website/commit/3cd946bda80148a84e5bfbd43701ba7854b6220c",
+        "at": "2026-10-10T21:09:24Z"
+      },
+      {
+        "repo": "charlie2233/atrak-website",
+        "text": "refresh October weekly GitHub data [skip ci]",
+        "url": "https://github.com/charlie2233/atrak-website/commit/1a3c124a319ec0ae79695be9f20fe43b01589f8e",
+        "at": "2026-10-06T15:05:08Z"
+      },
       {
         "repo": "charlie2233/turnplay-arena",
         "text": "exclude build tooling from production dependencies",
