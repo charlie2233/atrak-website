@@ -24,6 +24,11 @@
       "distinct_size": 19,
       "commits": [
         {
+          "sha": "728b4d41a96e59d6d759eda21c1badec7f71ff87",
+          "message": "chore: update GitHub data [skip ci]",
+          "url": "https://github.com/charlie2233/atrak-website/commit/728b4d41a96e59d6d759eda21c1badec7f71ff87"
+        },
+        {
           "sha": "f0cdcae9d556b8dd96c3f44f5ab1e55bcc07d1a7",
           "message": "chore: update GitHub data [skip ci]",
           "url": "https://github.com/charlie2233/atrak-website/commit/f0cdcae9d556b8dd96c3f44f5ab1e55bcc07d1a7"
@@ -112,11 +117,6 @@
           "sha": "1778ff9c0b5f2b72ff840839a9481a07f94de339",
           "message": "chore: update GitHub data [skip ci]",
           "url": "https://github.com/charlie2233/atrak-website/commit/1778ff9c0b5f2b72ff840839a9481a07f94de339"
-        },
-        {
-          "sha": "adbfab8e3c6481e1f0b5535fd26a96e6859c9a63",
-          "message": "chore: update GitHub data [skip ci]",
-          "url": "https://github.com/charlie2233/atrak-website/commit/adbfab8e3c6481e1f0b5535fd26a96e6859c9a63"
         }
       ]
     },
@@ -276,20 +276,7 @@
       "push_id": 45460255849,
       "ref": "refs/heads/main",
       "head": "6b26fc255c53e75c9ca29c696dedb19cfddad627",
-      "before": "7c7e55a9a8ae5c48b4bee38e3d4ca1a98dcb6100",
-      "distinct_size": 2,
-      "commits": [
-        {
-          "sha": "6b26fc255c53e75c9ca29c696dedb19cfddad627",
-          "message": "Merge pull request #1 from charlie2233/codex/turnplay-publication-readiness-20261005\n\nFix production dependencies for Turnplay publication",
-          "url": "https://github.com/charlie2233/turnplay-arena/commit/6b26fc255c53e75c9ca29c696dedb19cfddad627"
-        },
-        {
-          "sha": "b7754f1f53bac2cf12fc264e1eb193727f1f45a4",
-          "message": "fix(release): exclude build tooling from production dependencies",
-          "url": "https://github.com/charlie2233/turnplay-arena/commit/b7754f1f53bac2cf12fc264e1eb193727f1f45a4"
-        }
-      ]
+      "before": "7c7e55a9a8ae5c48b4bee38e3d4ca1a98dcb6100"
     },
     "public": true,
     "created_at": "2026-10-05T02:18:18Z"
