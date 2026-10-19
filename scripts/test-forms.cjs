@@ -97,6 +97,95 @@ test('blank optional referral is accepted', async t => {
   assert.equal(x.calls.length,1); assert.equal(x.calls[0].fields.referral_source,'');
 });
 
+for (const [file, selector] of [
+  ['index.html', '#join-form'],
+  ['index.html', '#suggestion-form'],
+  ['join.html', '#join-form'],
+  ['security.html', '#security-form'],
+  ['press-kit.html', '#sponsor-form']
+]) {
+  test(`${file} ${selector}: a confirmed send preserves newer edits without sending them`, async t => {
+    const x = await setup(t, {file, selector});
+    let release;
+    x.respond(() => new Promise(resolve => { release = resolve; }));
+    const sentMessage = x.field('message').value;
+    x.submit();
+    const newerMessage = 'This newer draft was written while the earlier request was pending.';
+    x.field('message').value = newerMessage;
+    x.field('message').dispatchEvent(new x.w.Event('input', {bubbles: true}));
+    x.submit();
+    assert.equal(x.calls.length, 1);
+    assert.equal(x.calls[0].fields.message, sentMessage);
+    release({ok: true, status: 200});
+    await x.settle();
+    assert.equal(x.field('message').value, newerMessage);
+    assert.match(x.status.textContent, /earlier message was sent/i);
+    assert.match(x.status.textContent, /have not been sent/i);
+    assert.equal(x.status.getAttribute('role'), 'status');
+    assert.equal(x.button.disabled, false);
+    assert.equal(x.form.hasAttribute('aria-busy'), false);
+    assert.equal(x.resets(), 1);
+    assert.equal(x.calls.length, 1);
+    const counter = x.form.querySelector(`[data-char-count="${x.field('message').id}"]`);
+    if (counter) assert.ok(counter.textContent.startsWith(`${newerMessage.length}/`));
+    x.respond(async () => ({ok: true, status: 200}));
+    x.submit();
+    await x.settle();
+    assert.equal(x.calls.length, 2);
+    assert.equal(x.calls[1].fields.message, newerMessage);
+    assert.equal(x.field('message').value, '');
+  });
+}
+
+test('a contact-only change while sending is retained even without an input event', async t => {
+  const x = await setup(t);
+  let release;
+  x.respond(() => new Promise(resolve => { release = resolve; }));
+  x.submit();
+  x.field('email').value = 'new-draft@example.invalid';
+  release({ok: true, status: 200});
+  await x.settle();
+  assert.equal(x.calls[0].fields.email, 'qa@example.invalid');
+  assert.equal(x.field('email').value, 'new-draft@example.invalid');
+  assert.match(x.field('message').value, /local test/);
+  assert.match(x.status.textContent, /have not been sent/i);
+});
+
+test('new repository-request selections remain intact after the earlier send succeeds', async t => {
+  const x = await setup(t);
+  let release;
+  x.respond(() => new Promise(resolve => { release = resolve; }));
+  x.submit();
+  x.field('repo_request').checked = true;
+  x.field('repo_request').dispatchEvent(new x.w.Event('change', {bubbles: true}));
+  x.field('repo_name').value = 'new-repository-request';
+  x.field('referral_source').selectedIndex = 1;
+  release({ok: true, status: 200});
+  await x.settle();
+  assert.equal(x.calls[0].fields.repo_request, undefined);
+  assert.equal(x.calls[0].fields.referral_source, '');
+  assert.equal(x.field('repo_request').checked, true);
+  assert.equal(x.field('repo_name').value, 'new-repository-request');
+  assert.equal(x.field('repo_name').required, true);
+  assert.notEqual(x.field('referral_source').value, '');
+  assert.match(x.status.textContent, /have not been sent/i);
+});
+
+test('a refreshed challenge token alone still clears the successfully sent draft', async t => {
+  const x = await setup(t);
+  let release;
+  x.respond(() => new Promise(resolve => { release = resolve; }));
+  x.submit();
+  x.field('cf-turnstile-response').value = 'refreshed-mock-token';
+  release({ok: true, status: 200});
+  await x.settle();
+  assert.equal(x.calls[0].fields['cf-turnstile-response'], 'mock-token');
+  assert.equal(x.field('message').value, '');
+  assert.equal(x.field('email').value, '');
+  assert.doesNotMatch(x.status.textContent, /have not been sent/i);
+  assert.equal(x.resets(), 1);
+});
+
 for (const status of [400,429,500]) {
   test(`HTTP ${status} preserves input, unlocks form and never claims success`, async t => {
     const x=await setup(t);

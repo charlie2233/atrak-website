@@ -1427,23 +1427,37 @@ const wireAsyncForm = (form, options) => {
         setStatus('Sending…', 'is-pending');
 
         try {
+            const submittedData = new FormData(form);
+            // Challenge refreshes are not edits to the visitor's draft.
+            const draftEntries = data => [...data].filter(([name]) => name !== 'cf-turnstile-response');
+            const submittedEntries = draftEntries(submittedData);
             const response = await fetch(endpoint, {
                 method: 'POST',
-                body: new FormData(form),
+                body: submittedData,
                 headers: { Accept: 'application/json' },
                 signal: controller.signal
             });
 
             if (response.ok) {
-                form.reset();
+                const currentEntries = draftEntries(new FormData(form));
+                const draftChanged = currentEntries.length !== submittedEntries.length
+                    || currentEntries.some(([name, value], index) => (
+                        name !== submittedEntries[index][0] || value !== submittedEntries[index][1]
+                    ));
+                // A successful response confirms only the snapshot sent above.
+                // Keep any later edits available for an explicit subsequent send.
+                if (!draftChanged) form.reset();
                 updateCharCounts();
                 // Clear all errors
                 form.querySelectorAll('.form-error').forEach(el => el.textContent = '');
                 form.querySelectorAll('input, textarea, select').forEach(field => {
                     field.setAttribute('aria-invalid', 'false');
                 });
-                setStatus(successMessage, 'is-success');
-                showToast(successMessage, 'success');
+                const confirmation = draftChanged
+                    ? 'Your earlier message was sent. Changes made while sending are still here and have not been sent.'
+                    : successMessage;
+                setStatus(confirmation, 'is-success');
+                showToast(confirmation, 'success');
                 return;
             }
 
