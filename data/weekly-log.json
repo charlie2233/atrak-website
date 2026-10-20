@@ -2713,32 +2713,36 @@
     "weekEnd": "2026-10-17",
     "generatedAt": "2026-10-18T09:24:37.485Z",
     "source": "github-weekly-automation",
-    "dateRange": "Oct 11 – 17",
-    "title": "Atrak Website carried the build week.",
+    "dateRange": "Oct 11 – Oct 17",
+    "title": "Atrak Website carried the build week",
     "highlights": [
-      "Atrak Website led public activity with 16 commits across 1 push.",
-      "1 public repository was active across 2 GitHub events.",
-      "No formal GitHub release was published during this edition."
+      "Atrak Website led public activity with 16 GitHub API-verified commits across one captured push",
+      "One public repository was active across two captured GitHub events",
+      "No formal GitHub release was published during this UTC edition"
     ],
     "shipped": [
-      "refresh live GitHub data [skip ci]"
+      "Refreshed the site's live GitHub-data cache from the public project feed",
+      "Preserved the completed week's commit evidence in the machine-readable weekly archive"
     ],
     "engineering": [
-      "1 pushes and 0 pull request updates were condensed into this edition.",
-      "Active stacks included HTML.",
-      "The snapshot is stored permanently so the edition remains available after GitHub events expire."
+      "GitHub commit API enrichment confirmed all 16 commits for `charlie2233/atrak-website`",
+      "This edition follows the generator's UTC window: Oct 11 00:00 through Oct 18 00:00, end exclusive",
+      "The verified commit stream consists of public GitHub-data maintenance; it is recorded as publication maintenance rather than product feature work",
+      "Live release feeds were checked; no formal GitHub release was published in this edition"
     ],
     "fixes": [],
     "metrics": [
       "Commits: 16",
       "Active repos: 1",
-      "Pull requests: 0",
+      "PR updates: 0",
       "Issues: 0",
-      "Releases: 0"
+      "Pushes: 1",
+      "Releases: 0",
+      "GitHub events: 2"
     ],
     "next": [
-      "Continue the Atrak Website build and publish the next visible milestone.",
-      "Review the next automated edition after Sunday refresh."
+      "Continue the Atrak Website build and publish the next visible milestone",
+      "Review the next automated edition after Sunday refresh"
     ],
     "stats": {
       "commits": 16,
