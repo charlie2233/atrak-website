@@ -1,5 +1,316 @@
 [
   {
+    "id": "24692440527",
+    "type": "PushEvent",
+    "actor": {
+      "id": 117957000,
+      "login": "charlie2233",
+      "display_login": "charlie2233",
+      "gravatar_id": "",
+      "url": "https://api.github.com/users/charlie2233",
+      "avatar_url": "https://avatars.githubusercontent.com/u/117957000?"
+    },
+    "repo": {
+      "id": 1427809505,
+      "name": "charlie2233/wharton-buy-rule-cpp",
+      "url": "https://api.github.com/repos/charlie2233/wharton-buy-rule-cpp"
+    },
+    "payload": {
+      "repository_id": 1427809505,
+      "push_id": 47227586874,
+      "ref": "refs/heads/main",
+      "head": "1a33fb5d3d3338746d7067cb18318c55e6faae94",
+      "before": "59dc1b40ccb777b15254174b2b9266f36f559714",
+      "distinct_size": 55,
+      "commits": [
+        {
+          "sha": "549b3b291c3addcdafba4042b139a644a0bfac00",
+          "message": "Publish verified Alphabet sign-evidence scoring scenarios",
+          "url": "https://github.com/charlie2233/wharton-buy-rule-cpp/commit/549b3b291c3addcdafba4042b139a644a0bfac00"
+        },
+        {
+          "sha": "50726e86181cab2238388f4940640d082d87f249",
+          "message": "Publish user-approved reverse DCF diagnostics for six companies",
+          "url": "https://github.com/charlie2233/wharton-buy-rule-cpp/commit/50726e86181cab2238388f4940640d082d87f249"
+        },
+        {
+          "sha": "1bc1b1e4fb111904a58a84f9091812374f8b7e5a",
+          "message": "Support audited positive EBITDA sign without inventing an amount",
+          "url": "https://github.com/charlie2233/wharton-buy-rule-cpp/commit/1bc1b1e4fb111904a58a84f9091812374f8b7e5a"
+        },
+        {
+          "sha": "c6c5851f0760a8f04cc9ae31219f84b550cc13c6",
+          "message": "Publish user-approved Energy model inputs and checks",
+          "url": "https://github.com/charlie2233/wharton-buy-rule-cpp/commit/c6c5851f0760a8f04cc9ae31219f84b550cc13c6"
+        },
+        {
+          "sha": "1a33fb5d3d3338746d7067cb18318c55e6faae94",
+          "message": "Validate SEC periods, balance dates, scope and latest evidence",
+          "url": "https://github.com/charlie2233/wharton-buy-rule-cpp/commit/1a33fb5d3d3338746d7067cb18318c55e6faae94"
+        },
+        {
+          "sha": "59dc1b40ccb777b15254174b2b9266f36f559714",
+          "message": "Add independently verified EV-only Energy scenarios, not equity scores",
+          "url": "https://github.com/charlie2233/wharton-buy-rule-cpp/commit/59dc1b40ccb777b15254174b2b9266f36f559714"
+        },
+        {
+          "sha": "ccf312a1c6486564eb79041d1061f54453672413",
+          "message": "Document verified screening results and unresolved input boundaries",
+          "url": "https://github.com/charlie2233/wharton-buy-rule-cpp/commit/ccf312a1c6486564eb79041d1061f54453672413"
+        },
+        {
+          "sha": "14be8aeb40f033c2bed71f6d4a98b75c31733f81",
+          "message": "Add source-backed Energy FY2026 forecast variants, not completed scores",
+          "url": "https://github.com/charlie2233/wharton-buy-rule-cpp/commit/14be8aeb40f033c2bed71f6d4a98b75c31733f81"
+        },
+        {
+          "sha": "26cf1c769698a8990d78bac38762fd8ec20d5f30",
+          "message": "Use consistent line endings in derived score summaries",
+          "url": "https://github.com/charlie2233/wharton-buy-rule-cpp/commit/26cf1c769698a8990d78bac38762fd8ec20d5f30"
+        },
+        {
+          "sha": "bff634875969d3236e5131fcf6ecbe741c4a57fc",
+          "message": "Add field-level source and assumption crosswalk for six-company scenarios",
+          "url": "https://github.com/charlie2233/wharton-buy-rule-cpp/commit/bff634875969d3236e5131fcf6ecbe741c4a57fc"
+        },
+        {
+          "sha": "13721b00fed3964c66c5672fe8882d7fc831d2c7",
+          "message": "Publish actual Mac six-company main and sensitivity scoring runs",
+          "url": "https://github.com/charlie2233/wharton-buy-rule-cpp/commit/13721b00fed3964c66c5672fe8882d7fc831d2c7"
+        },
+        {
+          "sha": "46c446b7fa1d77a781c67e35cc3d7dbedcf6f640",
+          "message": "Add review dataset withholding unresolved META intrinsic value",
+          "url": "https://github.com/charlie2233/wharton-buy-rule-cpp/commit/46c446b7fa1d77a781c67e35cc3d7dbedcf6f640"
+        },
+        {
+          "sha": "3862e598aed9444ab986dac22db9dc2d95a4a1aa",
+          "message": "Add explicit normalized six-company scoring scenario with missing values preserved",
+          "url": "https://github.com/charlie2233/wharton-buy-rule-cpp/commit/3862e598aed9444ab986dac22db9dc2d95a4a1aa"
+        },
+        {
+          "sha": "efbc4eab4437b0cfbdc5648d65de58dd698d5319",
+          "message": "Verify six literal-terminal DCF scenarios with actual Mac C++ runs",
+          "url": "https://github.com/charlie2233/wharton-buy-rule-cpp/commit/efbc4eab4437b0cfbdc5648d65de58dd698d5319"
+        },
+        {
+          "sha": "a3b9b651bd71cad67353d0cae88f9cb3f73988b1",
+          "message": "Add clearly labeled six-company illustrative DCF review inputs and verification",
+          "url": "https://github.com/charlie2233/wharton-buy-rule-cpp/commit/a3b9b651bd71cad67353d0cae88f9cb3f73988b1"
+        },
+        {
+          "sha": "3a14867b090d7c509154125469313a03fae4869f",
+          "message": "Add audited SEC cache and normalization adapter with offline fixture checks",
+          "url": "https://github.com/charlie2233/wharton-buy-rule-cpp/commit/3a14867b090d7c509154125469313a03fae4869f"
+        },
+        {
+          "sha": "2b591dfbf7555e2e17e3b9c80397c6e2ce114690",
+          "message": "Add reusable dated DCF engine and verified three-company scenarios",
+          "url": "https://github.com/charlie2233/wharton-buy-rule-cpp/commit/2b591dfbf7555e2e17e3b9c80397c6e2ce114690"
+        },
+        {
+          "sha": "5377baf28d38290c3c97941a49881d9f75f704e3",
+          "message": "Apply current review policy and publish all three company scores",
+          "url": "https://github.com/charlie2233/wharton-buy-rule-cpp/commit/5377baf28d38290c3c97941a49881d9f75f704e3"
+        },
+        {
+          "sha": "17969d4d83b67287f2db2b300ab4ab1ca9e37d72",
+          "message": "Document peer DCF assumptions and source limitations",
+          "url": "https://github.com/charlie2233/wharton-buy-rule-cpp/commit/17969d4d83b67287f2db2b300ab4ab1ca9e37d72"
+        },
+        {
+          "sha": "4e33f84773f172b84d6ce34d4794c72e21307cf0",
+          "message": "Document peer DCF assumptions and source limitations",
+          "url": "https://github.com/charlie2233/wharton-buy-rule-cpp/commit/4e33f84773f172b84d6ce34d4794c72e21307cf0"
+        }
+      ]
+    },
+    "public": true,
+    "created_at": "2026-10-21T07:16:31Z"
+  },
+  {
+    "id": "24692406492",
+    "type": "PushEvent",
+    "actor": {
+      "id": 117957000,
+      "login": "charlie2233",
+      "display_login": "charlie2233",
+      "gravatar_id": "",
+      "url": "https://api.github.com/users/charlie2233",
+      "avatar_url": "https://avatars.githubusercontent.com/u/117957000?"
+    },
+    "repo": {
+      "id": 1427809505,
+      "name": "charlie2233/wharton-buy-rule-cpp",
+      "url": "https://api.github.com/repos/charlie2233/wharton-buy-rule-cpp"
+    },
+    "payload": {
+      "repository_id": 1427809505,
+      "push_id": 47227538794,
+      "ref": "refs/heads/main",
+      "head": "59dc1b40ccb777b15254174b2b9266f36f559714",
+      "before": "ccf312a1c6486564eb79041d1061f54453672413"
+    },
+    "public": true,
+    "created_at": "2026-10-21T07:15:58Z"
+  },
+  {
+    "id": "24690887844",
+    "type": "PushEvent",
+    "actor": {
+      "id": 117957000,
+      "login": "charlie2233",
+      "display_login": "charlie2233",
+      "gravatar_id": "",
+      "url": "https://api.github.com/users/charlie2233",
+      "avatar_url": "https://avatars.githubusercontent.com/u/117957000?"
+    },
+    "repo": {
+      "id": 1427809505,
+      "name": "charlie2233/wharton-buy-rule-cpp",
+      "url": "https://api.github.com/repos/charlie2233/wharton-buy-rule-cpp"
+    },
+    "payload": {
+      "repository_id": 1427809505,
+      "push_id": 47225449017,
+      "ref": "refs/heads/main",
+      "head": "efbc4eab4437b0cfbdc5648d65de58dd698d5319",
+      "before": "a3b9b651bd71cad67353d0cae88f9cb3f73988b1"
+    },
+    "public": true,
+    "created_at": "2026-10-21T06:52:27Z"
+  },
+  {
+    "id": "24688161370",
+    "type": "PushEvent",
+    "actor": {
+      "id": 117957000,
+      "login": "charlie2233",
+      "display_login": "charlie2233",
+      "gravatar_id": "",
+      "url": "https://api.github.com/users/charlie2233",
+      "avatar_url": "https://avatars.githubusercontent.com/u/117957000?"
+    },
+    "repo": {
+      "id": 1427809505,
+      "name": "charlie2233/wharton-buy-rule-cpp",
+      "url": "https://api.github.com/repos/charlie2233/wharton-buy-rule-cpp"
+    },
+    "payload": {
+      "repository_id": 1427809505,
+      "push_id": 47221958744,
+      "ref": "refs/heads/main",
+      "head": "17969d4d83b67287f2db2b300ab4ab1ca9e37d72",
+      "before": "4e33f84773f172b84d6ce34d4794c72e21307cf0"
+    },
+    "public": true,
+    "created_at": "2026-10-21T06:08:52Z"
+  },
+  {
+    "id": "24688064151",
+    "type": "PushEvent",
+    "actor": {
+      "id": 117957000,
+      "login": "charlie2233",
+      "display_login": "charlie2233",
+      "gravatar_id": "",
+      "url": "https://api.github.com/users/charlie2233",
+      "avatar_url": "https://avatars.githubusercontent.com/u/117957000?"
+    },
+    "repo": {
+      "id": 1427809505,
+      "name": "charlie2233/wharton-buy-rule-cpp",
+      "url": "https://api.github.com/repos/charlie2233/wharton-buy-rule-cpp"
+    },
+    "payload": {
+      "repository_id": 1427809505,
+      "push_id": 47221834585,
+      "ref": "refs/heads/main",
+      "head": "a0c2c742c43a0363c1c370869b9b6e65521db9ab",
+      "before": "38ad3e624abab9ecf474ad2e503cb67dc3b7ed55"
+    },
+    "public": true,
+    "created_at": "2026-10-21T06:07:17Z"
+  },
+  {
+    "id": "24686737145",
+    "type": "PushEvent",
+    "actor": {
+      "id": 117957000,
+      "login": "charlie2233",
+      "display_login": "charlie2233",
+      "gravatar_id": "",
+      "url": "https://api.github.com/users/charlie2233",
+      "avatar_url": "https://avatars.githubusercontent.com/u/117957000?"
+    },
+    "repo": {
+      "id": 1427809505,
+      "name": "charlie2233/wharton-buy-rule-cpp",
+      "url": "https://api.github.com/repos/charlie2233/wharton-buy-rule-cpp"
+    },
+    "payload": {
+      "repository_id": 1427809505,
+      "push_id": 47220180065,
+      "ref": "refs/heads/main",
+      "head": "afefe80d4897c1e218f7b66260e84c43bd1b17b1",
+      "before": "88ec7e939918bdc882099782b27ff22d0b0d370c"
+    },
+    "public": true,
+    "created_at": "2026-10-21T05:45:28Z"
+  },
+  {
+    "id": "24686204821",
+    "type": "PushEvent",
+    "actor": {
+      "id": 117957000,
+      "login": "charlie2233",
+      "display_login": "charlie2233",
+      "gravatar_id": "",
+      "url": "https://api.github.com/users/charlie2233",
+      "avatar_url": "https://avatars.githubusercontent.com/u/117957000?"
+    },
+    "repo": {
+      "id": 1427809505,
+      "name": "charlie2233/wharton-buy-rule-cpp",
+      "url": "https://api.github.com/repos/charlie2233/wharton-buy-rule-cpp"
+    },
+    "payload": {
+      "repository_id": 1427809505,
+      "push_id": 47219557465,
+      "ref": "refs/heads/main",
+      "head": "2b36c4fc6a5ff864fff7e6373c42837d23e70488",
+      "before": "3b230333df5b2dd15ba0ed2381d3a86a34af573a"
+    },
+    "public": true,
+    "created_at": "2026-10-21T05:36:45Z"
+  },
+  {
+    "id": "24685142187",
+    "type": "PushEvent",
+    "actor": {
+      "id": 117957000,
+      "login": "charlie2233",
+      "display_login": "charlie2233",
+      "gravatar_id": "",
+      "url": "https://api.github.com/users/charlie2233",
+      "avatar_url": "https://avatars.githubusercontent.com/u/117957000?"
+    },
+    "repo": {
+      "id": 1427809505,
+      "name": "charlie2233/wharton-buy-rule-cpp",
+      "url": "https://api.github.com/repos/charlie2233/wharton-buy-rule-cpp"
+    },
+    "payload": {
+      "repository_id": 1427809505,
+      "push_id": 47218289811,
+      "ref": "refs/heads/main",
+      "head": "b9f4212bf5dbc768d203aa49416f9414bb9e4910",
+      "before": "dd72de6e9bb5d0c63798d67f5c9ddad6274e25bb"
+    },
+    "public": true,
+    "created_at": "2026-10-21T05:19:10Z"
+  },
+  {
     "id": "24637992048",
     "type": "PushEvent",
     "actor": {
@@ -21,8 +332,13 @@
       "ref": "refs/heads/main",
       "head": "cd1d04b7b9ae7ce58b97148333c25db3bf1202c9",
       "before": "1d775f64a841014f7a230ea411c5753aa30c7602",
-      "distinct_size": 16,
+      "distinct_size": 17,
       "commits": [
+        {
+          "sha": "8dc8e987826c2a04d9f4b0c2402e57a5332d6fe3",
+          "message": "chore: update GitHub data [skip ci]",
+          "url": "https://github.com/charlie2233/atrak-website/commit/8dc8e987826c2a04d9f4b0c2402e57a5332d6fe3"
+        },
         {
           "sha": "cd1d04b7b9ae7ce58b97148333c25db3bf1202c9",
           "message": "docs: record Oct 11 weekly edition [skip ci]",
