@@ -1,16 +1,21 @@
 [
   {
     "type": "PushEvent",
-    "created_at": "2026-10-29T00:27:32Z",
+    "created_at": "2026-10-29T12:11:10Z",
     "repo": {
       "name": "charlie2233/atrak-website"
     },
     "payload": {
       "ref": "refs/heads/main",
       "before": "",
-      "head": "24944fac12f80a44e973584b248acca8c9ff88bd",
+      "head": "b12bf422f71b2fb44a647e094bd71f298a43d618",
       "distinct_size": 15,
       "commits": [
+        {
+          "sha": "b12bf422f71b2fb44a647e094bd71f298a43d618",
+          "message": "chore: update GitHub data [skip ci]",
+          "url": "https://github.com/charlie2233/atrak-website/commit/b12bf422f71b2fb44a647e094bd71f298a43d618"
+        },
         {
           "sha": "24944fac12f80a44e973584b248acca8c9ff88bd",
           "message": "chore: update GitHub data [skip ci]",
@@ -80,11 +85,6 @@
           "sha": "558622defb3c0deaa52bca40de9f1d78adb81024",
           "message": "chore: update GitHub data [skip ci]",
           "url": "https://github.com/charlie2233/atrak-website/commit/558622defb3c0deaa52bca40de9f1d78adb81024"
-        },
-        {
-          "sha": "811da035d7d3c8cebd3d671f2f08229c689d6b44",
-          "message": "chore: update GitHub data [skip ci]",
-          "url": "https://github.com/charlie2233/atrak-website/commit/811da035d7d3c8cebd3d671f2f08229c689d6b44"
         }
       ]
     }
@@ -878,31 +878,5 @@
     },
     "public": true,
     "created_at": "2026-09-29T15:03:04Z"
-  },
-  {
-    "id": "22491758595",
-    "type": "PushEvent",
-    "actor": {
-      "id": 117957000,
-      "login": "charlie2233",
-      "display_login": "charlie2233",
-      "gravatar_id": "",
-      "url": "https://api.github.com/users/charlie2233",
-      "avatar_url": "https://avatars.githubusercontent.com/u/117957000?"
-    },
-    "repo": {
-      "id": 1140388078,
-      "name": "charlie2233/atrak-website",
-      "url": "https://api.github.com/repos/charlie2233/atrak-website"
-    },
-    "payload": {
-      "repository_id": 1140388078,
-      "push_id": 44935101540,
-      "ref": "refs/heads/main",
-      "head": "7ff51734cf3faa9cfba4ded089e1041e349b2432",
-      "before": "33bc36d95b43f3121b25dbbb9e959d859c312f30"
-    },
-    "public": true,
-    "created_at": "2026-09-29T15:03:08Z"
   }
 ]
