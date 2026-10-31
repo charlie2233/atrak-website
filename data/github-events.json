@@ -1,16 +1,21 @@
 [
   {
     "type": "PushEvent",
-    "created_at": "2026-10-30T12:11:12Z",
+    "created_at": "2026-10-31T00:23:12Z",
     "repo": {
       "name": "charlie2233/atrak-website"
     },
     "payload": {
       "ref": "refs/heads/main",
       "before": "",
-      "head": "3f741c0af1d99fbaa29a327b2659987eaebbd98e",
+      "head": "9ea693873efaee26b3db4742c0343c3c3097a0be",
       "distinct_size": 15,
       "commits": [
+        {
+          "sha": "9ea693873efaee26b3db4742c0343c3c3097a0be",
+          "message": "chore: update GitHub data [skip ci]",
+          "url": "https://github.com/charlie2233/atrak-website/commit/9ea693873efaee26b3db4742c0343c3c3097a0be"
+        },
         {
           "sha": "3f741c0af1d99fbaa29a327b2659987eaebbd98e",
           "message": "chore: update GitHub data [skip ci]",
@@ -80,11 +85,6 @@
           "sha": "8c4840dcf96596c00f28b3425a62f80a6a9919a4",
           "message": "chore: update GitHub data [skip ci]",
           "url": "https://github.com/charlie2233/atrak-website/commit/8c4840dcf96596c00f28b3425a62f80a6a9919a4"
-        },
-        {
-          "sha": "a5dfc3844320fc89c8fdab95756d5ac96d46e5fc",
-          "message": "chore: update GitHub data [skip ci]",
-          "url": "https://github.com/charlie2233/atrak-website/commit/a5dfc3844320fc89c8fdab95756d5ac96d46e5fc"
         }
       ]
     }
@@ -851,32 +851,5 @@
     },
     "public": true,
     "created_at": "2026-10-03T23:40:10Z"
-  },
-  {
-    "id": "22612994733",
-    "type": "CreateEvent",
-    "actor": {
-      "id": 117957000,
-      "login": "charlie2233",
-      "display_login": "charlie2233",
-      "gravatar_id": "",
-      "url": "https://api.github.com/users/charlie2233",
-      "avatar_url": "https://avatars.githubusercontent.com/u/117957000?"
-    },
-    "repo": {
-      "id": 1140388078,
-      "name": "charlie2233/atrak-website",
-      "url": "https://api.github.com/repos/charlie2233/atrak-website"
-    },
-    "payload": {
-      "ref": "automation/weekly-20260929",
-      "ref_type": "branch",
-      "full_ref": "refs/heads/automation/weekly-20260929",
-      "master_branch": "main",
-      "description": null,
-      "pusher_type": "user"
-    },
-    "public": true,
-    "created_at": "2026-09-29T15:03:04Z"
   }
 ]
