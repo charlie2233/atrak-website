@@ -2782,21 +2782,20 @@
     "weekEnd": "2026-10-24",
     "generatedAt": "2026-10-25T09:24:51.279Z",
     "source": "github-weekly-automation",
-    "dateRange": "Oct 18 – 24",
+    "dateRange": "Oct 18 – Oct 24",
     "title": "Atrak Website carried the build week.",
     "highlights": [
-      "Atrak Website led public activity with 17 commits across 2 pushes.",
-      "1 public repository was active across 2 GitHub events.",
-      "No formal GitHub release was published during this edition."
+      "Atrak Website led public activity with 17 commits across 2 pushes",
+      "One public repository was active across 2 captured GitHub events",
+      "No formal GitHub release was published during this completed UTC edition"
     ],
     "shipped": [
-      "record Oct 11 weekly edition [skip ci]",
-      "refresh live GitHub data [skip ci]"
+      "Recorded the Oct 11 weekly edition in the public archive",
+      "Refreshed the site’s live GitHub project data"
     ],
     "engineering": [
-      "2 pushes and 0 pull request updates were condensed into this edition.",
-      "Active stacks included HTML.",
-      "The snapshot is stored permanently so the edition remains available after GitHub events expire."
+      "GitHub activity was captured from the verified Oct 18 00:00 through Oct 25 00:00 UTC window",
+      "The completed edition is retained in the machine-readable archive after GitHub event retention expires"
     ],
     "fixes": [],
     "metrics": [
@@ -2804,11 +2803,13 @@
       "Active repos: 1",
       "Pull requests: 0",
       "Issues: 0",
-      "Releases: 0"
+      "Pushes: 2",
+      "Releases: 0",
+      "GitHub events: 2"
     ],
     "next": [
-      "Continue the Atrak Website build and publish the next visible milestone.",
-      "Review the next automated edition after Sunday refresh."
+      "Continue the Atrak Website build and publish the next visible milestone",
+      "Review the next automated edition after Sunday refresh"
     ],
     "stats": {
       "commits": 17,
@@ -2854,20 +2855,19 @@
     "weekEnd": "2026-10-31",
     "generatedAt": "2026-11-01T09:17:37.323Z",
     "source": "github-weekly-automation",
-    "dateRange": "Oct 25 – 31",
+    "dateRange": "Oct 25 – Oct 31",
     "title": "Atrak Website carried the build week.",
     "highlights": [
-      "Atrak Website led public activity with 15 commits across 1 push.",
-      "1 public repository was active across 1 GitHub events.",
-      "No formal GitHub release was published during this edition."
+      "Atrak Website led public activity with 15 commits across 1 push",
+      "One public repository was active across 1 captured GitHub event",
+      "No formal GitHub release was published during this completed UTC edition"
     ],
     "shipped": [
-      "Public project activity was captured and archived."
+      "Captured and archived public project activity from the verified GitHub snapshot"
     ],
     "engineering": [
-      "1 pushes and 0 pull request updates were condensed into this edition.",
-      "Active stacks included HTML.",
-      "The snapshot is stored permanently so the edition remains available after GitHub events expire."
+      "GitHub activity was captured from the verified Oct 25 00:00 through Nov 1 00:00 UTC window",
+      "The completed edition is retained in the machine-readable archive after GitHub event retention expires"
     ],
     "fixes": [],
     "metrics": [
@@ -2875,11 +2875,13 @@
       "Active repos: 1",
       "Pull requests: 0",
       "Issues: 0",
-      "Releases: 0"
+      "Pushes: 1",
+      "Releases: 0",
+      "GitHub events: 1"
     ],
     "next": [
-      "Continue the Atrak Website build and publish the next visible milestone.",
-      "Review the next automated edition after Sunday refresh."
+      "Continue the Atrak Website build and publish the next visible milestone",
+      "Review the next automated edition after Sunday refresh"
     ],
     "stats": {
       "commits": 15,

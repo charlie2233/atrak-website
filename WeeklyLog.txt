@@ -1337,10 +1337,85 @@ You can honestly demo this to a coach and they'd actually use it.
 
 ---
 
+## Week of Oct 18 – Oct 24
+<!-- week-start: 2026-10-18 -->
+
+### "Atrak Website carried the build week."
+
+**Highlights**
+
+* Atrak Website led public activity with 17 commits across 2 pushes
+* One public repository was active across 2 captured GitHub events
+* No formal GitHub release was published during this completed UTC edition
+
+**Shipped**
+
+* Recorded the Oct 11 weekly edition in the public archive
+* Refreshed the site’s live GitHub project data
+
+**Engineering**
+
+* GitHub activity was captured from the verified Oct 18 00:00 through Oct 25 00:00 UTC window
+* The completed edition is retained in the machine-readable archive after GitHub event retention expires
+
+**Metrics**
+
+* Commits: 17
+* Active repos: 1
+* Pull requests: 0
+* Issues: 0
+* Pushes: 2
+* Releases: 0
+* GitHub events: 2
+
+**Next**
+
+* Continue the Atrak Website build and publish the next visible milestone
+* Review the next automated edition after Sunday refresh
+
+---
+
+## Week of Oct 25 – Oct 31
+<!-- week-start: 2026-10-25 -->
+
+### "Atrak Website carried the build week."
+
+**Highlights**
+
+* Atrak Website led public activity with 15 commits across 1 push
+* One public repository was active across 1 captured GitHub event
+* No formal GitHub release was published during this completed UTC edition
+
+**Shipped**
+
+* Captured and archived public project activity from the verified GitHub snapshot
+
+**Engineering**
+
+* GitHub activity was captured from the verified Oct 25 00:00 through Nov 1 00:00 UTC window
+* The completed edition is retained in the machine-readable archive after GitHub event retention expires
+
+**Metrics**
+
+* Commits: 15
+* Active repos: 1
+* Pull requests: 0
+* Issues: 0
+* Pushes: 1
+* Releases: 0
+* GitHub events: 1
+
+**Next**
+
+* Continue the Atrak Website build and publish the next visible milestone
+* Review the next automated edition after Sunday refresh
+
+---
+
 # 📊 Summary
 
-**Total Coverage:** August 31, 2024 – October 17, 2026
-**Total Weeks:** 34 documented (Dec Weeks 14-18 remain undocumented)
+**Total Coverage:** August 31, 2024 – October 31, 2026
+**Total Weeks:** 36 documented (Dec Weeks 14-18 remain undocumented)
 **Format:** Sunday → Saturday (legacy entries PT; recent GitHub editions UTC as noted)
 
 **Major Milestones:**

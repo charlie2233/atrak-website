@@ -1,16 +1,21 @@
 [
   {
     "type": "PushEvent",
-    "created_at": "2026-11-03T00:23:11Z",
+    "created_at": "2026-11-03T12:09:07Z",
     "repo": {
       "name": "charlie2233/atrak-website"
     },
     "payload": {
       "ref": "refs/heads/main",
       "before": "",
-      "head": "d94b0e8f4ff69a121f464efabd017002429a81f8",
+      "head": "749857e8da2482858b619dba8c47814a3297e5d7",
       "distinct_size": 15,
       "commits": [
+        {
+          "sha": "749857e8da2482858b619dba8c47814a3297e5d7",
+          "message": "chore: update GitHub data [skip ci]",
+          "url": "https://github.com/charlie2233/atrak-website/commit/749857e8da2482858b619dba8c47814a3297e5d7"
+        },
         {
           "sha": "d94b0e8f4ff69a121f464efabd017002429a81f8",
           "message": "chore: update GitHub data [skip ci]",
@@ -80,707 +85,805 @@
           "sha": "3b32a7179ffcbc40250a41d40f6af71609faaedd",
           "message": "chore: update GitHub data [skip ci]",
           "url": "https://github.com/charlie2233/atrak-website/commit/3b32a7179ffcbc40250a41d40f6af71609faaedd"
-        },
-        {
-          "sha": "89f4ab8519150ca2d46b4097fc8b4122e06e4859",
-          "message": "chore: update GitHub data [skip ci]",
-          "url": "https://github.com/charlie2233/atrak-website/commit/89f4ab8519150ca2d46b4097fc8b4122e06e4859"
         }
       ]
     }
   },
   {
-    "id": "18926124337",
     "type": "IssueCommentEvent",
-    "actor": {
-      "id": 117957000,
-      "login": "charlie2233",
-      "display_login": "charlie2233",
-      "gravatar_id": "",
-      "url": "https://api.github.com/users/charlie2233",
-      "avatar_url": "https://avatars.githubusercontent.com/u/117957000?"
-    },
+    "created_at": "2026-11-02T20:06:48Z",
     "repo": {
-      "id": 965415649,
-      "name": "openai/codex",
-      "url": "https://api.github.com/repos/openai/codex"
+      "name": "openai/codex"
+    },
+    "payload": {}
+  },
+  {
+    "type": "PushEvent",
+    "created_at": "2026-10-21T07:32:51Z",
+    "repo": {
+      "name": "charlie2233/buy-rule"
     },
     "payload": {
-      "action": "created",
-      "issue": {
-        "url": "https://api.github.com/repos/openai/codex/issues/58530",
-        "repository_url": "https://api.github.com/repos/openai/codex",
-        "labels_url": "https://api.github.com/repos/openai/codex/issues/58530/labels{/name}",
-        "comments_url": "https://api.github.com/repos/openai/codex/issues/58530/comments",
-        "events_url": "https://api.github.com/repos/openai/codex/issues/58530/events",
-        "html_url": "https://github.com/openai/codex/issues/58530",
-        "id": 6133716000,
-        "node_id": "I_kwDOOYsS4c8AAAABbZkUIA",
-        "number": 58530,
-        "title": "Please preserve separate ChatGPT and Codex usage allowances on Plus (feedback on reported shared limits)",
-        "user": {
-          "login": "HoshizoraArchive",
-          "id": 284069263,
-          "node_id": "U_kgDOEO6Njw",
-          "avatar_url": "https://avatars.githubusercontent.com/u/284069263?v=4",
-          "gravatar_id": "",
-          "url": "https://api.github.com/users/HoshizoraArchive",
-          "html_url": "https://github.com/HoshizoraArchive",
-          "followers_url": "https://api.github.com/users/HoshizoraArchive/followers",
-          "following_url": "https://api.github.com/users/HoshizoraArchive/following{/other_user}",
-          "gists_url": "https://api.github.com/users/HoshizoraArchive/gists{/gist_id}",
-          "starred_url": "https://api.github.com/users/HoshizoraArchive/starred{/owner}{/repo}",
-          "subscriptions_url": "https://api.github.com/users/HoshizoraArchive/subscriptions",
-          "organizations_url": "https://api.github.com/users/HoshizoraArchive/orgs",
-          "repos_url": "https://api.github.com/users/HoshizoraArchive/repos",
-          "events_url": "https://api.github.com/users/HoshizoraArchive/events{/privacy}",
-          "received_events_url": "https://api.github.com/users/HoshizoraArchive/received_events",
-          "type": "User",
-          "user_view_type": "public",
-          "site_admin": false
-        },
-        "labels": [
-          {
-            "id": 8448146923,
-            "node_id": "LA_kwDOOYsS4c8AAAAB94x96w",
-            "url": "https://api.github.com/repos/openai/codex/labels/enhancement",
-            "name": "enhancement",
-            "color": "a2eeef",
-            "default": true,
-            "description": "New feature or request",
-            "archived_at": null,
-            "archived_by": null
-          },
-          {
-            "id": 9412827246,
-            "node_id": "LA_kwDOOYsS4c8AAAACMQxYbg",
-            "url": "https://api.github.com/repos/openai/codex/labels/rate-limits",
-            "name": "rate-limits",
-            "color": "866ba7",
-            "default": false,
-            "description": "Issues related to rate limits, quotas, and token usage reporting",
-            "archived_at": null,
-            "archived_by": null
-          }
-        ],
-        "state": "open",
-        "locked": false,
-        "assignees": [],
-        "milestone": null,
-        "comments": 26,
-        "created_at": "2026-10-31T10:17:51Z",
-        "updated_at": "2026-11-02T20:06:48Z",
-        "closed_at": null,
-        "assignee": null,
-        "issue_field_values": [],
-        "type": null,
-        "active_lock_reason": null,
-        "sub_issues_summary": {
-          "total": 0,
-          "completed": 0,
-          "percent_completed": 0
-        },
-        "issue_dependencies_summary": {
-          "blocked_by": 0,
-          "total_blocked_by": 0,
-          "blocking": 0,
-          "total_blocking": 0
-        },
-        "body": "## Please keep the path from a first idea to a first income open \u2014 preserve independent ChatGPT High and Codex/Work allowances\n\n**To OpenAI: Please reconsider the December 2026 shared usage allowance for Plus, Pro, and Business.** This issue is about more than a quota. It is about whether the future OpenAI has described remains accessible to an individual who is still trying to build it.\n\n### Why I am writing: I believed the future OpenAI described\n\n**I am one of the people Sam Altman spoke about when he described what AI could make possible for people with ideas.**\n\nI am not a funded startup or an established business. I am an individual creative building projects and a multi-role AI team, hoping to earn my **first business income** using AI. I am not asking to be carried indefinitely. I want to get started on Plus, create something that earns revenue, and then pay for Pro, APIs, or higher-tier services as my work grows.\n\nIn [June 2026, *Built to benefit everyone: our plan*](https://openai.com/index/built-to-benefit-everyone-our-plan/), **Sam Altman and Jakub Pachocki set out the goal to \u201cGive everyone on Earth a personal AGI.\u201d** At [Stripe Sessions 2026](https://stripe.com/sessions/2026/a-conversation-with-sam-altman), Altman spoke enthusiastically of the **\u201crevenge of the idea guys\u201d**: people with ideas gaining the power to create with AI, even without traditional technical resources. [An April 2026 OpenAI Forum conversation](https://forum.openai.com/public/videos/event-replay-sam-altman-on-building-the-future-of-ai-2026-04-06) also addressed the importance of AI benefiting working people and people without great wealth.\n\n**I took that vision seriously.** I believed OpenAI was trying to put useful intelligence into the hands of ordinary people, not just organizations that could already afford entire technical teams. That belief helped make ChatGPT a service I chose to pay for and build around.\n\nThis is why the [announced December 2026 shared ChatGPT/Codex usage allowance](https://help.openai.com/en/articles/20001625-understanding-chatgpt-and-codex-usage-limits) worries me. If a long Codex/Work session uses up my ability to continue reasoning in ChatGPT High, I lose the very part of the process that lets me make decisions about what I am building. Unlimited Instant chat is valuable, but it does not replace High reasoning for these tasks.\n\n**If dependable access to deep reasoning becomes realistic only after someone can already afford a far more expensive tier, what happens to the people OpenAI encouraged to start?**\n\nI do not interpret the vision of personal AGI as a promise of *unlimited free compute*. I do not demand the newest model for every task. A reasonable independent High-reasoning allowance on capable older Sol models would already make a real difference.\n\n**Please do not make people succeed *before* they can reliably use the AI they need to begin. Let us grow with OpenAI.**\n\n### The request, in three decisions\n\n1. **Protect deep reasoning as an independent part of the workflow.** Keep ChatGPT High and Codex/Work allowances independent, or guarantee a separate minimum High-reasoning allocation that Codex cannot exhaust. Allowing capable earlier-generation Sol models at High effort to use a separate reasonable allowance would be a practical compromise.\n2. **Show the numbers before rollout.** Publish before/after usable quotas, model-specific token weighting, reset schedules, and examples of users who rely heavily on *both* High chat and Codex. The [official policy](https://help.openai.com/en/articles/20001625-understanding-chatgpt-and-codex-usage-limits) says most users should not wait for resets more often, but provides no figures to verify this for mixed heavy workflows.\n3. **Evaluate long-term customer value, not only short-term compute savings.** A Plus subscriber may be a future Pro subscriber, API developer, startup founder, or Business customer. A restrictive change may cause departures instead of upgrades.\n\n### 1. Reasoning and execution are one workflow\n\nI rely on **ChatGPT High to research, design, and make decisions**, followed by **Codex/Work to implement, test, and verify**. These are complementary stages. If a coding session exhausts my ability to reason about its results, the complete workflow breaks. Unlimited Instant chat does not replace High reasoning.\n\nClayton Christensen and coauthors' [*Competing Against Luck* (Jobs to Be Done)](https://www.christenseninstitute.org/book/competing-against-luck/) explains why companies should evaluate the *job customers need to complete*, rather than features in isolation. Please judge this policy by whether people can still complete their full **think \u2192 build \u2192 verify** workflow.\n\n### 2. Consumers build OpenAI's future market\n\n**Please do not measure individual subscribers solely by their immediate subscription margin.** Their experience spreads AI awareness among people who have never used it. Some bring AI into the workplace, build API-powered products, and eventually become higher-tier or enterprise customers.\n\nThis is consistent with OpenAI's own account of its growth. In [*The Work Now Within Reach* (September 2026)](https://openai.com/index/the-work-now-within-reach/), CFO Sarah Friar describes personal ChatGPT familiarity carrying into workplace adoption and developers extending OpenAI's reach. Her [January 2026 business-model essay](https://openai.com/index/a-business-that-scales-with-the-value-of-intelligence/) likewise explains how personal adoption leads into workplace subscriptions and API usage.\n\n**Protecting affordable individual access is not just a consumer subsidy; it can be a customer-acquisition and ecosystem-growth strategy.** Please measure lost future subscriptions, API adoption, referrals, and retention alongside inference savings. I am proposing that these effects be studied, not claiming a particular conversion or churn rate.\n\n### 3. Monetize institutional value without making individual builders bear the burden\n\nOpenAI has other meaningful ways to grow revenue:\n\n- [Enterprise already represented **over 40% of revenue** in April 2026](https://openai.com/index/next-phase-of-enterprise-ai/).\n- [ChatGPT Ads reached a **$1 billion annualized revenue run rate** in August 2026](https://openai.com/index/expanding-access-to-ai-with-chatgpt-ads/). That is a revenue *run rate*, not profit or proof that ads alone cover all costs.\n- [OpenAI for Government](https://openai.com/global-affairs/introducing-openai-for-government/) demonstrates an additional market for specialized, appropriately priced institutional deployments.\n\n**Please prioritize the growth of enterprise, API, appropriate public-sector contracts, and advertising-supported free access instead of placing disproportionate new monetization pressure on individual subscribers who are still learning and building.** The goal is a sustainable mix of revenue streams\u2014not a claim that one stream can fund everything.\n\nIn [*Built to benefit everyone*](https://openai.com/index/built-to-benefit-everyone-our-plan/), Sam Altman and Jakub Pachocki emphasize broad, affordable AI access and the opportunity to start small businesses. **Do not make it harder to earn a first income with AI by making capable reasoning inaccessible before someone has the means to pay for Pro.**\n\n### 4. Price predictability is part of product reliability\n\nI understand that advanced inference has a cost. **But customers can value a predictable fixed subscription more than a low headline price with uncertain overage bills.**\n\nAnja Lambrecht and Bernd Skiera's peer-reviewed study, [\u201cPaying Too Much and Being Happy about It\u201d (2006)](https://doi.org/10.1509/jmkr.43.2.212), found that some consumers prefer flat-rate tariffs even when metered alternatives could cost less. The research is not AI-specific, but its findings about budget certainty are relevant to test. [*Monetizing Innovation*](https://www.wiley.com/en-gb/monetizing-innovation-how-smart-companies-design-the-product-around-the-price-p-9781119240860) by Madhavan Ramanujam and Georg Tacke emphasizes pricing around different customer needs; Frederick Reichheld's [work on customer defections](https://hbr.org/1996/03/learning-from-customer-defections) shows why lost customer relationships warrant management attention.\n\n**My first choice is to retain independent allowances at existing subscription prices.** If more revenue is essential, I would rather *consider an optional transparent fixed-fee plan/add-on with protected High-reasoning capacity* than have unpredictable credit top-ups become the only way to finish work. I am **not** requesting a mandatory price increase.\n\n### 5. Practical requests before December\n\n- **Preferred:** Preserve separate advanced-ChatGPT and Codex/Work allowances and reset schedules.\n- **Compromise:** Protect a reasonable independent High allowance for capable older Sol models; or guarantee a High-chat reserve that Codex cannot consume.\n- **Transparent pricing:** Publish model weighting, included capacity, and before/after examples for light, typical, and mixed heavy users; offer an optional fixed-cost protected-capacity choice.\n- **Measure the real trade-off:** Track churn, willingness to pay, lost Pro upgrades, API adoption and longer-term customer value\u2014not just compute savings.\n- **Related usability request:** Consider [#41361](https://github.com/openai/codex/issues/41361): let informed users opt out of the five-hour Codex cap **without increasing their weekly allowance**.\n\n### The person behind this request\n\nI am sharing this because **I want to stay with OpenAI**, recommend its products, and build a business using them. But if my everyday High-reasoning work starts competing directly with long agent runs for one exhausted quota, I may have to consider another provider rather than upgrading. I cannot speak for every subscriber; that is exactly why I ask OpenAI to study the impact before making the change.\n\n**The future OpenAI described gave ordinary people a reason to try. I am trying. Please keep a credible, affordable path from a first idea to a first product, a first income, and eventually a business that can pay OpenAI more.**\n\nThank you for listening to this request from a paying Plus customer.\n\n---\n\n### Related independent community petitions\n\nOther subscribers commenting on this issue have also shared these **independently organized Change.org petitions** asking OpenAI to keep advanced ChatGPT reasoning and Codex allowances separate:\n\n- [Keep ChatGPT High Reasoning and Codex Quotas Separate \u2014 December 2026](https://www.change.org/p/keep-chatgpt-high-reasoning-and-codex-quotas-separate-december-2026) \u2014 shared in [this comment](https://github.com/openai/codex/issues/58530#issuecomment-6571936904).\n- [OpenAI: Keep ChatGPT and Codex Usage Limits Separate!](https://www.change.org/KeepChatGPTAndCodexSeparate) \u2014 shared in [this comment](https://github.com/openai/codex/issues/58530#issuecomment-6574426802).\n\nThese petitions are **community initiatives, not official OpenAI campaigns**. I am linking them so reviewers can see related concerns and additional subscriber perspectives.",
-        "reactions": {
-          "url": "https://api.github.com/repos/openai/codex/issues/58530/reactions",
-          "total_count": 31,
-          "+1": 30,
-          "-1": 0,
-          "laugh": 0,
-          "hooray": 0,
-          "confused": 0,
-          "heart": 1,
-          "rocket": 0,
-          "eyes": 0
-        },
-        "timeline_url": "https://api.github.com/repos/openai/codex/issues/58530/timeline",
-        "performed_via_github_app": {
-          "id": 1144995,
-          "client_id": "Iv23liVemv8A9if9v0F2",
-          "slug": "chatgpt-codex-connector",
-          "node_id": "A_kwHOAOQ6Gs4AEXij",
-          "owner": {
-            "login": "openai",
-            "id": 14957082,
-            "node_id": "MDEyOk9yZ2FuaXphdGlvbjE0OTU3MDgy",
-            "avatar_url": "https://avatars.githubusercontent.com/u/14957082?v=4",
-            "gravatar_id": "",
-            "url": "https://api.github.com/users/openai",
-            "html_url": "https://github.com/openai",
-            "followers_url": "https://api.github.com/users/openai/followers",
-            "following_url": "https://api.github.com/users/openai/following{/other_user}",
-            "gists_url": "https://api.github.com/users/openai/gists{/gist_id}",
-            "starred_url": "https://api.github.com/users/openai/starred{/owner}{/repo}",
-            "subscriptions_url": "https://api.github.com/users/openai/subscriptions",
-            "organizations_url": "https://api.github.com/users/openai/orgs",
-            "repos_url": "https://api.github.com/users/openai/repos",
-            "events_url": "https://api.github.com/users/openai/events{/privacy}",
-            "received_events_url": "https://api.github.com/users/openai/received_events",
-            "type": "Organization",
-            "user_view_type": "public",
-            "site_admin": false
-          },
-          "name": "ChatGPT Codex Connector",
-          "description": "Bring ChatGPT and Codex to your GitHub repositories.",
-          "external_url": "https://www.chatgpt.com",
-          "html_url": "https://github.com/apps/chatgpt-codex-connector",
-          "created_at": "2025-02-14T01:37:05Z",
-          "updated_at": "2026-09-23T18:52:59Z",
-          "permissions": {
-            "actions": "write",
-            "checks": "read",
-            "contents": "write",
-            "emails": "read",
-            "issues": "write",
-            "metadata": "read",
-            "pull_requests": "write",
-            "statuses": "read",
-            "workflows": "write"
-          },
-          "events": [
-            "check_run",
-            "check_suite",
-            "commit_comment",
-            "issues",
-            "issue_comment",
-            "pull_request",
-            "pull_request_review",
-            "pull_request_review_comment",
-            "pull_request_review_thread",
-            "repository",
-            "status",
-            "sub_issues"
-          ]
-        },
-        "state_reason": null,
-        "pinned_comment": null
-      },
-      "comment": {
-        "url": "https://api.github.com/repos/openai/codex/issues/comments/6587245588",
-        "html_url": "https://github.com/openai/codex/issues/58530#issuecomment-6587245588",
-        "issue_url": "https://api.github.com/repos/openai/codex/issues/58530",
-        "id": 6587245588,
-        "node_id": "IC_kwDOOYsS4c8AAAABiKFkFA",
-        "user": {
-          "login": "charlie2233",
-          "id": 117957000,
-          "node_id": "U_kgDOBwfhiA",
-          "avatar_url": "https://avatars.githubusercontent.com/u/117957000?v=4",
-          "gravatar_id": "",
-          "url": "https://api.github.com/users/charlie2233",
-          "html_url": "https://github.com/charlie2233",
-          "followers_url": "https://api.github.com/users/charlie2233/followers",
-          "following_url": "https://api.github.com/users/charlie2233/following{/other_user}",
-          "gists_url": "https://api.github.com/users/charlie2233/gists{/gist_id}",
-          "starred_url": "https://api.github.com/users/charlie2233/starred{/owner}{/repo}",
-          "subscriptions_url": "https://api.github.com/users/charlie2233/subscriptions",
-          "organizations_url": "https://api.github.com/users/charlie2233/orgs",
-          "repos_url": "https://api.github.com/users/charlie2233/repos",
-          "events_url": "https://api.github.com/users/charlie2233/events{/privacy}",
-          "received_events_url": "https://api.github.com/users/charlie2233/received_events",
-          "type": "User",
-          "user_view_type": "public",
-          "site_admin": false
-        },
-        "created_at": "2026-11-02T20:06:48Z",
-        "updated_at": "2026-11-02T20:06:48Z",
-        "body": "I support this request as a paying ChatGPT Pro subscriber. I use ChatGPT's advanced reasoning for research, learning, and planning software projects, while Codex is essential for implementing and testing them. These are distinct, complementary workflows. Sharing one allowance would force users to choose between thinking deeply and coding.\n\nMy Codex weekly allowance was exhausted in a week when my Profile showed roughly 1.1B tokens of activity. I understand that this total isn't necessarily the actual quota, which makes clear, model-weighted usage accounting and a transparent before/after comparison all the more important.\n\nPlease keep ChatGPT High reasoning and Codex allowances independent. At minimum, provide a guaranteed High-reasoning reserve Codex cannot exhaust, explain exactly how shared usage will be counted, and avoid reducing practical access for existing Pro subscribers at the same price.",
-        "pin": null,
-        "reactions": {
-          "url": "https://api.github.com/repos/openai/codex/issues/comments/6587245588/reactions",
-          "total_count": 2,
-          "+1": 2,
-          "-1": 0,
-          "laugh": 0,
-          "hooray": 0,
-          "confused": 0,
-          "heart": 0,
-          "rocket": 0,
-          "eyes": 0
-        },
-        "performed_via_github_app": {
-          "id": 1144995,
-          "client_id": "Iv23liVemv8A9if9v0F2",
-          "slug": "chatgpt-codex-connector",
-          "node_id": "A_kwHOAOQ6Gs4AEXij",
-          "owner": {
-            "login": "openai",
-            "id": 14957082,
-            "node_id": "MDEyOk9yZ2FuaXphdGlvbjE0OTU3MDgy",
-            "avatar_url": "https://avatars.githubusercontent.com/u/14957082?v=4",
-            "gravatar_id": "",
-            "url": "https://api.github.com/users/openai",
-            "html_url": "https://github.com/openai",
-            "followers_url": "https://api.github.com/users/openai/followers",
-            "following_url": "https://api.github.com/users/openai/following{/other_user}",
-            "gists_url": "https://api.github.com/users/openai/gists{/gist_id}",
-            "starred_url": "https://api.github.com/users/openai/starred{/owner}{/repo}",
-            "subscriptions_url": "https://api.github.com/users/openai/subscriptions",
-            "organizations_url": "https://api.github.com/users/openai/orgs",
-            "repos_url": "https://api.github.com/users/openai/repos",
-            "events_url": "https://api.github.com/users/openai/events{/privacy}",
-            "received_events_url": "https://api.github.com/users/openai/received_events",
-            "type": "Organization",
-            "user_view_type": "public",
-            "site_admin": false
-          },
-          "name": "ChatGPT Codex Connector",
-          "description": "Bring ChatGPT and Codex to your GitHub repositories.",
-          "external_url": "https://www.chatgpt.com",
-          "html_url": "https://github.com/apps/chatgpt-codex-connector",
-          "created_at": "2025-02-14T01:37:05Z",
-          "updated_at": "2026-09-23T18:52:59Z",
-          "permissions": {
-            "actions": "write",
-            "checks": "read",
-            "contents": "write",
-            "emails": "read",
-            "issues": "write",
-            "metadata": "read",
-            "pull_requests": "write",
-            "statuses": "read",
-            "workflows": "write"
-          },
-          "events": [
-            "check_run",
-            "check_suite",
-            "commit_comment",
-            "issues",
-            "issue_comment",
-            "pull_request",
-            "pull_request_review",
-            "pull_request_review_comment",
-            "pull_request_review_thread",
-            "repository",
-            "status",
-            "sub_issues"
-          ]
-        },
-        "minimized": null
-      }
-    },
-    "public": true,
-    "created_at": "2026-11-02T20:06:48Z",
-    "org": {
-      "id": 14957082,
-      "login": "openai",
-      "gravatar_id": "",
-      "url": "https://api.github.com/orgs/openai",
-      "avatar_url": "https://avatars.githubusercontent.com/u/14957082?"
+      "ref": "refs/heads/main",
+      "before": "50726e86181cab2238388f4940640d082d87f249",
+      "head": "549b3b291c3addcdafba4042b139a644a0bfac00",
+      "distinct_size": 0,
+      "commits": []
     }
   },
   {
-    "id": "24716015874",
     "type": "PushEvent",
-    "actor": {
-      "id": 117957000,
-      "login": "charlie2233",
-      "display_login": "charlie2233",
-      "gravatar_id": "",
-      "url": "https://api.github.com/users/charlie2233",
-      "avatar_url": "https://avatars.githubusercontent.com/u/117957000?"
-    },
+    "created_at": "2026-10-21T07:31:14Z",
     "repo": {
-      "id": 1140388078,
-      "name": "charlie2233/atrak-website",
-      "url": "https://api.github.com/repos/charlie2233/atrak-website"
+      "name": "charlie2233/buy-rule"
     },
     "payload": {
-      "repository_id": 1140388078,
-      "push_id": 47156844646,
       "ref": "refs/heads/main",
-      "head": "1d775f64a841014f7a230ea411c5753aa30c7602",
-      "before": "8ca3a9481e9b79f9328a2ea4697d5c76bd66f1dd"
-    },
-    "public": true,
-    "created_at": "2026-10-20T16:49:53Z"
+      "before": "1bc1b1e4fb111904a58a84f9091812374f8b7e5a",
+      "head": "50726e86181cab2238388f4940640d082d87f249",
+      "distinct_size": 0,
+      "commits": []
+    }
   },
   {
-    "id": "24637992048",
     "type": "PushEvent",
-    "actor": {
-      "id": 117957000,
-      "login": "charlie2233",
-      "display_login": "charlie2233",
-      "gravatar_id": "",
-      "url": "https://api.github.com/users/charlie2233",
-      "avatar_url": "https://avatars.githubusercontent.com/u/117957000?"
-    },
+    "created_at": "2026-10-21T07:24:23Z",
     "repo": {
-      "id": 1140388078,
-      "name": "charlie2233/atrak-website",
-      "url": "https://api.github.com/repos/charlie2233/atrak-website"
+      "name": "charlie2233/buy-rule"
     },
     "payload": {
-      "repository_id": 1140388078,
-      "push_id": 47157043075,
       "ref": "refs/heads/main",
-      "head": "cd1d04b7b9ae7ce58b97148333c25db3bf1202c9",
-      "before": "1d775f64a841014f7a230ea411c5753aa30c7602"
-    },
-    "public": true,
-    "created_at": "2026-10-20T16:51:51Z"
+      "before": "c6c5851f0760a8f04cc9ae31219f84b550cc13c6",
+      "head": "1bc1b1e4fb111904a58a84f9091812374f8b7e5a",
+      "distinct_size": 0,
+      "commits": []
+    }
   },
   {
-    "id": "24063408149",
+    "type": "PushEvent",
+    "created_at": "2026-10-21T07:18:54Z",
+    "repo": {
+      "name": "charlie2233/buy-rule"
+    },
+    "payload": {
+      "ref": "refs/heads/main",
+      "before": "1a33fb5d3d3338746d7067cb18318c55e6faae94",
+      "head": "c6c5851f0760a8f04cc9ae31219f84b550cc13c6",
+      "distinct_size": 0,
+      "commits": []
+    }
+  },
+  {
+    "type": "PushEvent",
+    "created_at": "2026-10-21T07:16:31Z",
+    "repo": {
+      "name": "charlie2233/buy-rule"
+    },
+    "payload": {
+      "ref": "refs/heads/main",
+      "before": "59dc1b40ccb777b15254174b2b9266f36f559714",
+      "head": "1a33fb5d3d3338746d7067cb18318c55e6faae94",
+      "distinct_size": 0,
+      "commits": []
+    }
+  },
+  {
+    "type": "PushEvent",
+    "created_at": "2026-10-21T07:15:58Z",
+    "repo": {
+      "name": "charlie2233/buy-rule"
+    },
+    "payload": {
+      "ref": "refs/heads/main",
+      "before": "ccf312a1c6486564eb79041d1061f54453672413",
+      "head": "59dc1b40ccb777b15254174b2b9266f36f559714",
+      "distinct_size": 0,
+      "commits": []
+    }
+  },
+  {
+    "type": "PushEvent",
+    "created_at": "2026-10-21T07:00:56Z",
+    "repo": {
+      "name": "charlie2233/buy-rule"
+    },
+    "payload": {
+      "ref": "refs/heads/main",
+      "before": "26cf1c769698a8990d78bac38762fd8ec20d5f30",
+      "head": "14be8aeb40f033c2bed71f6d4a98b75c31733f81",
+      "distinct_size": 0,
+      "commits": []
+    }
+  },
+  {
+    "type": "PushEvent",
+    "created_at": "2026-10-21T06:58:17Z",
+    "repo": {
+      "name": "charlie2233/buy-rule"
+    },
+    "payload": {
+      "ref": "refs/heads/main",
+      "before": "bff634875969d3236e5131fcf6ecbe741c4a57fc",
+      "head": "26cf1c769698a8990d78bac38762fd8ec20d5f30",
+      "distinct_size": 0,
+      "commits": []
+    }
+  },
+  {
+    "type": "PushEvent",
+    "created_at": "2026-10-21T06:57:51Z",
+    "repo": {
+      "name": "charlie2233/buy-rule"
+    },
+    "payload": {
+      "ref": "refs/heads/main",
+      "before": "13721b00fed3964c66c5672fe8882d7fc831d2c7",
+      "head": "bff634875969d3236e5131fcf6ecbe741c4a57fc",
+      "distinct_size": 0,
+      "commits": []
+    }
+  },
+  {
+    "type": "PushEvent",
+    "created_at": "2026-10-21T06:57:46Z",
+    "repo": {
+      "name": "charlie2233/buy-rule"
+    },
+    "payload": {
+      "ref": "refs/heads/main",
+      "before": "46c446b7fa1d77a781c67e35cc3d7dbedcf6f640",
+      "head": "13721b00fed3964c66c5672fe8882d7fc831d2c7",
+      "distinct_size": 0,
+      "commits": []
+    }
+  },
+  {
+    "type": "PushEvent",
+    "created_at": "2026-10-21T06:54:57Z",
+    "repo": {
+      "name": "charlie2233/buy-rule"
+    },
+    "payload": {
+      "ref": "refs/heads/main",
+      "before": "3862e598aed9444ab986dac22db9dc2d95a4a1aa",
+      "head": "46c446b7fa1d77a781c67e35cc3d7dbedcf6f640",
+      "distinct_size": 0,
+      "commits": []
+    }
+  },
+  {
+    "type": "PushEvent",
+    "created_at": "2026-10-21T06:52:57Z",
+    "repo": {
+      "name": "charlie2233/buy-rule"
+    },
+    "payload": {
+      "ref": "refs/heads/main",
+      "before": "efbc4eab4437b0cfbdc5648d65de58dd698d5319",
+      "head": "3862e598aed9444ab986dac22db9dc2d95a4a1aa",
+      "distinct_size": 0,
+      "commits": []
+    }
+  },
+  {
+    "type": "PushEvent",
+    "created_at": "2026-10-21T06:52:27Z",
+    "repo": {
+      "name": "charlie2233/buy-rule"
+    },
+    "payload": {
+      "ref": "refs/heads/main",
+      "before": "a3b9b651bd71cad67353d0cae88f9cb3f73988b1",
+      "head": "efbc4eab4437b0cfbdc5648d65de58dd698d5319",
+      "distinct_size": 0,
+      "commits": []
+    }
+  },
+  {
+    "type": "PushEvent",
+    "created_at": "2026-10-21T06:48:39Z",
+    "repo": {
+      "name": "charlie2233/buy-rule"
+    },
+    "payload": {
+      "ref": "refs/heads/main",
+      "before": "3a14867b090d7c509154125469313a03fae4869f",
+      "head": "a3b9b651bd71cad67353d0cae88f9cb3f73988b1",
+      "distinct_size": 0,
+      "commits": []
+    }
+  },
+  {
+    "type": "PushEvent",
+    "created_at": "2026-10-21T06:48:13Z",
+    "repo": {
+      "name": "charlie2233/buy-rule"
+    },
+    "payload": {
+      "ref": "refs/heads/main",
+      "before": "2b591dfbf7555e2e17e3b9c80397c6e2ce114690",
+      "head": "3a14867b090d7c509154125469313a03fae4869f",
+      "distinct_size": 0,
+      "commits": []
+    }
+  },
+  {
+    "type": "PushEvent",
+    "created_at": "2026-10-21T06:15:20Z",
+    "repo": {
+      "name": "charlie2233/buy-rule"
+    },
+    "payload": {
+      "ref": "refs/heads/main",
+      "before": "17969d4d83b67287f2db2b300ab4ab1ca9e37d72",
+      "head": "5377baf28d38290c3c97941a49881d9f75f704e3",
+      "distinct_size": 0,
+      "commits": []
+    }
+  },
+  {
+    "type": "PushEvent",
+    "created_at": "2026-10-21T06:08:52Z",
+    "repo": {
+      "name": "charlie2233/buy-rule"
+    },
+    "payload": {
+      "ref": "refs/heads/main",
+      "before": "4e33f84773f172b84d6ce34d4794c72e21307cf0",
+      "head": "17969d4d83b67287f2db2b300ab4ab1ca9e37d72",
+      "distinct_size": 0,
+      "commits": []
+    }
+  },
+  {
+    "type": "PushEvent",
+    "created_at": "2026-10-21T06:07:44Z",
+    "repo": {
+      "name": "charlie2233/buy-rule"
+    },
+    "payload": {
+      "ref": "refs/heads/main",
+      "before": "e691d77e310118a9b0f73cd940e2afbc5d2ed9a9",
+      "head": "6d00e3efa91d85213ec9948fbffc6d77f131a6d3",
+      "distinct_size": 0,
+      "commits": []
+    }
+  },
+  {
+    "type": "PushEvent",
+    "created_at": "2026-10-21T06:07:37Z",
+    "repo": {
+      "name": "charlie2233/buy-rule"
+    },
+    "payload": {
+      "ref": "refs/heads/main",
+      "before": "e67b48c6dcdb0d342ff54644ab75e21190f3f1af",
+      "head": "e691d77e310118a9b0f73cd940e2afbc5d2ed9a9",
+      "distinct_size": 0,
+      "commits": []
+    }
+  },
+  {
+    "type": "PushEvent",
+    "created_at": "2026-10-21T06:07:30Z",
+    "repo": {
+      "name": "charlie2233/buy-rule"
+    },
+    "payload": {
+      "ref": "refs/heads/main",
+      "before": "026814f36a93136ab9660934741df0b5eee78d85",
+      "head": "e67b48c6dcdb0d342ff54644ab75e21190f3f1af",
+      "distinct_size": 0,
+      "commits": []
+    }
+  },
+  {
+    "type": "PushEvent",
+    "created_at": "2026-10-21T06:07:26Z",
+    "repo": {
+      "name": "charlie2233/buy-rule"
+    },
+    "payload": {
+      "ref": "refs/heads/main",
+      "before": "e7f1e0bebf476338653da1749d293e1d93e5cba2",
+      "head": "026814f36a93136ab9660934741df0b5eee78d85",
+      "distinct_size": 0,
+      "commits": []
+    }
+  },
+  {
+    "type": "PushEvent",
+    "created_at": "2026-10-21T06:07:21Z",
+    "repo": {
+      "name": "charlie2233/buy-rule"
+    },
+    "payload": {
+      "ref": "refs/heads/main",
+      "before": "a0c2c742c43a0363c1c370869b9b6e65521db9ab",
+      "head": "e7f1e0bebf476338653da1749d293e1d93e5cba2",
+      "distinct_size": 0,
+      "commits": []
+    }
+  },
+  {
+    "type": "PushEvent",
+    "created_at": "2026-10-21T06:07:17Z",
+    "repo": {
+      "name": "charlie2233/buy-rule"
+    },
+    "payload": {
+      "ref": "refs/heads/main",
+      "before": "38ad3e624abab9ecf474ad2e503cb67dc3b7ed55",
+      "head": "a0c2c742c43a0363c1c370869b9b6e65521db9ab",
+      "distinct_size": 0,
+      "commits": []
+    }
+  },
+  {
+    "type": "PushEvent",
+    "created_at": "2026-10-21T06:03:26Z",
+    "repo": {
+      "name": "charlie2233/buy-rule"
+    },
+    "payload": {
+      "ref": "refs/heads/main",
+      "before": "3f951003e7764561602dc96ffe96e1471bc92d52",
+      "head": "38ad3e624abab9ecf474ad2e503cb67dc3b7ed55",
+      "distinct_size": 0,
+      "commits": []
+    }
+  },
+  {
+    "type": "PushEvent",
+    "created_at": "2026-10-21T05:50:45Z",
+    "repo": {
+      "name": "charlie2233/buy-rule"
+    },
+    "payload": {
+      "ref": "refs/heads/main",
+      "before": "afefe80d4897c1e218f7b66260e84c43bd1b17b1",
+      "head": "3f951003e7764561602dc96ffe96e1471bc92d52",
+      "distinct_size": 0,
+      "commits": []
+    }
+  },
+  {
+    "type": "PushEvent",
+    "created_at": "2026-10-21T05:45:28Z",
+    "repo": {
+      "name": "charlie2233/buy-rule"
+    },
+    "payload": {
+      "ref": "refs/heads/main",
+      "before": "88ec7e939918bdc882099782b27ff22d0b0d370c",
+      "head": "afefe80d4897c1e218f7b66260e84c43bd1b17b1",
+      "distinct_size": 0,
+      "commits": []
+    }
+  },
+  {
+    "type": "PushEvent",
+    "created_at": "2026-10-21T05:40:29Z",
+    "repo": {
+      "name": "charlie2233/buy-rule"
+    },
+    "payload": {
+      "ref": "refs/heads/main",
+      "before": "29c9c48d580bcdcf41435f0ddb47028bb7a845a9",
+      "head": "f0e9f3f22361f27111651951eafccf1564cef778",
+      "distinct_size": 0,
+      "commits": []
+    }
+  },
+  {
+    "type": "PushEvent",
+    "created_at": "2026-10-21T05:40:25Z",
+    "repo": {
+      "name": "charlie2233/buy-rule"
+    },
+    "payload": {
+      "ref": "refs/heads/main",
+      "before": "1b48d0090f72ea41fedeac87d8b1bf98df1e7d2c",
+      "head": "29c9c48d580bcdcf41435f0ddb47028bb7a845a9",
+      "distinct_size": 0,
+      "commits": []
+    }
+  },
+  {
+    "type": "PushEvent",
+    "created_at": "2026-10-21T05:40:21Z",
+    "repo": {
+      "name": "charlie2233/buy-rule"
+    },
+    "payload": {
+      "ref": "refs/heads/main",
+      "before": "df0d303adadd9160fa6404336611c5ddfcd56791",
+      "head": "1b48d0090f72ea41fedeac87d8b1bf98df1e7d2c",
+      "distinct_size": 0,
+      "commits": []
+    }
+  },
+  {
+    "type": "PushEvent",
+    "created_at": "2026-10-21T05:36:58Z",
+    "repo": {
+      "name": "charlie2233/buy-rule"
+    },
+    "payload": {
+      "ref": "refs/heads/main",
+      "before": "032f2b275d984bd5664f90f9a9e35d4d630f975c",
+      "head": "df0d303adadd9160fa6404336611c5ddfcd56791",
+      "distinct_size": 0,
+      "commits": []
+    }
+  },
+  {
+    "type": "PushEvent",
+    "created_at": "2026-10-21T05:36:52Z",
+    "repo": {
+      "name": "charlie2233/buy-rule"
+    },
+    "payload": {
+      "ref": "refs/heads/main",
+      "before": "2b36c4fc6a5ff864fff7e6373c42837d23e70488",
+      "head": "032f2b275d984bd5664f90f9a9e35d4d630f975c",
+      "distinct_size": 0,
+      "commits": []
+    }
+  },
+  {
+    "type": "PushEvent",
+    "created_at": "2026-10-21T05:36:45Z",
+    "repo": {
+      "name": "charlie2233/buy-rule"
+    },
+    "payload": {
+      "ref": "refs/heads/main",
+      "before": "3b230333df5b2dd15ba0ed2381d3a86a34af573a",
+      "head": "2b36c4fc6a5ff864fff7e6373c42837d23e70488",
+      "distinct_size": 0,
+      "commits": []
+    }
+  },
+  {
+    "type": "PushEvent",
+    "created_at": "2026-10-21T05:36:33Z",
+    "repo": {
+      "name": "charlie2233/buy-rule"
+    },
+    "payload": {
+      "ref": "refs/heads/main",
+      "before": "81d97006dc034bf72491d4698ff8a15cc7d94690",
+      "head": "3b230333df5b2dd15ba0ed2381d3a86a34af573a",
+      "distinct_size": 0,
+      "commits": []
+    }
+  },
+  {
+    "type": "PushEvent",
+    "created_at": "2026-10-21T05:19:21Z",
+    "repo": {
+      "name": "charlie2233/buy-rule"
+    },
+    "payload": {
+      "ref": "refs/heads/main",
+      "before": "b289c65f70366c83c2221710b134423e2e9e85e8",
+      "head": "2a3833f14a8cdd24ed37b1fdf6c71811177772cd",
+      "distinct_size": 0,
+      "commits": []
+    }
+  },
+  {
+    "type": "PushEvent",
+    "created_at": "2026-10-21T05:19:10Z",
+    "repo": {
+      "name": "charlie2233/buy-rule"
+    },
+    "payload": {
+      "ref": "refs/heads/main",
+      "before": "dd72de6e9bb5d0c63798d67f5c9ddad6274e25bb",
+      "head": "b9f4212bf5dbc768d203aa49416f9414bb9e4910",
+      "distinct_size": 0,
+      "commits": []
+    }
+  },
+  {
+    "type": "PushEvent",
+    "created_at": "2026-10-21T05:10:42Z",
+    "repo": {
+      "name": "charlie2233/buy-rule"
+    },
+    "payload": {
+      "ref": "refs/heads/main",
+      "before": "5cc3a9d41a7811c6d10acd9628d4f6d2f34f2bad",
+      "head": "f1a124a6465840ac54ce96849710a34be9917521",
+      "distinct_size": 0,
+      "commits": []
+    }
+  },
+  {
+    "type": "PushEvent",
+    "created_at": "2026-10-21T05:10:38Z",
+    "repo": {
+      "name": "charlie2233/buy-rule"
+    },
+    "payload": {
+      "ref": "refs/heads/main",
+      "before": "46d19fbc58eb07905ce5c8593c2c0c49663451e8",
+      "head": "5cc3a9d41a7811c6d10acd9628d4f6d2f34f2bad",
+      "distinct_size": 0,
+      "commits": []
+    }
+  },
+  {
+    "type": "PushEvent",
+    "created_at": "2026-10-21T05:10:28Z",
+    "repo": {
+      "name": "charlie2233/buy-rule"
+    },
+    "payload": {
+      "ref": "refs/heads/main",
+      "before": "53d35e64713e9999538a836ddf8136757b0da7f0",
+      "head": "f9b89cf87adadf1e1d9a53b0db53797be695eef9",
+      "distinct_size": 0,
+      "commits": []
+    }
+  },
+  {
+    "type": "PushEvent",
+    "created_at": "2026-10-21T05:10:24Z",
+    "repo": {
+      "name": "charlie2233/buy-rule"
+    },
+    "payload": {
+      "ref": "refs/heads/main",
+      "before": "c7032535ecb4b3621208a3d1aba3ceba21754af1",
+      "head": "53d35e64713e9999538a836ddf8136757b0da7f0",
+      "distinct_size": 0,
+      "commits": []
+    }
+  },
+  {
+    "type": "PushEvent",
+    "created_at": "2026-10-21T05:10:06Z",
+    "repo": {
+      "name": "charlie2233/buy-rule"
+    },
+    "payload": {
+      "ref": "refs/heads/main",
+      "before": "185e368dcff809bfe401fd512623167efa27d928",
+      "head": "33bd98179cf4149920a3ef514c33a54f7d2ffca9",
+      "distinct_size": 0,
+      "commits": []
+    }
+  },
+  {
+    "type": "PushEvent",
+    "created_at": "2026-10-21T05:10:02Z",
+    "repo": {
+      "name": "charlie2233/buy-rule"
+    },
+    "payload": {
+      "ref": "refs/heads/main",
+      "before": "fad5f1614b1ac4df74540a8e9c9b2f4f0b4a7571",
+      "head": "185e368dcff809bfe401fd512623167efa27d928",
+      "distinct_size": 0,
+      "commits": []
+    }
+  },
+  {
+    "type": "PushEvent",
+    "created_at": "2026-10-21T04:42:06Z",
+    "repo": {
+      "name": "charlie2233/buy-rule"
+    },
+    "payload": {
+      "ref": "refs/heads/main",
+      "before": "1b3b694703a450b3f6f23544d25efa60eebd369f",
+      "head": "ddb1c91560cc568856d9b74ae2e52429be22fe34",
+      "distinct_size": 0,
+      "commits": []
+    }
+  },
+  {
     "type": "CreateEvent",
-    "actor": {
-      "id": 117957000,
-      "login": "charlie2233",
-      "display_login": "charlie2233",
-      "gravatar_id": "",
-      "url": "https://api.github.com/users/charlie2233",
-      "avatar_url": "https://avatars.githubusercontent.com/u/117957000?"
-    },
+    "created_at": "2026-10-21T03:00:02Z",
     "repo": {
-      "id": 1140388078,
-      "name": "charlie2233/atrak-website",
-      "url": "https://api.github.com/repos/charlie2233/atrak-website"
+      "name": "charlie2233/buy-rule"
+    },
+    "payload": {
+      "ref": "main",
+      "ref_type": "branch",
+      "description": "Auditable local Wharton Buy Rule C++ scoring with NVIDIA sample CSVs and documentation",
+      "master_branch": "main"
+    }
+  },
+  {
+    "type": "PushEvent",
+    "created_at": "2026-10-20T16:51:51Z",
+    "repo": {
+      "name": "charlie2233/atrak-website"
+    },
+    "payload": {
+      "ref": "refs/heads/main",
+      "before": "1d775f64a841014f7a230ea411c5753aa30c7602",
+      "head": "cd1d04b7b9ae7ce58b97148333c25db3bf1202c9",
+      "distinct_size": 0,
+      "commits": []
+    }
+  },
+  {
+    "type": "PushEvent",
+    "created_at": "2026-10-20T16:49:53Z",
+    "repo": {
+      "name": "charlie2233/atrak-website"
+    },
+    "payload": {
+      "ref": "refs/heads/main",
+      "before": "8ca3a9481e9b79f9328a2ea4697d5c76bd66f1dd",
+      "head": "1d775f64a841014f7a230ea411c5753aa30c7602",
+      "distinct_size": 0,
+      "commits": []
+    }
+  },
+  {
+    "type": "PushEvent",
+    "created_at": "2026-10-13T15:06:17Z",
+    "repo": {
+      "name": "charlie2233/atrak-website"
+    },
+    "payload": {
+      "ref": "refs/heads/main",
+      "before": "8ad1116973de1b04abd51061dc2735c5322ab1af",
+      "head": "92fe250f726c64d263b576317f12979e6299aca0",
+      "distinct_size": 0,
+      "commits": []
+    }
+  },
+  {
+    "type": "CreateEvent",
+    "created_at": "2026-10-13T15:05:40Z",
+    "repo": {
+      "name": "charlie2233/atrak-website"
     },
     "payload": {
       "ref": "automation/update-weekly-logs-20261013",
       "ref_type": "branch",
-      "full_ref": "refs/heads/automation/update-weekly-logs-20261013",
-      "master_branch": "main",
       "description": null,
-      "pusher_type": "user"
-    },
-    "public": true,
-    "created_at": "2026-10-13T15:05:40Z"
+      "master_branch": "main"
+    }
   },
   {
-    "id": "23884819039",
     "type": "PushEvent",
-    "actor": {
-      "id": 117957000,
-      "login": "charlie2233",
-      "display_login": "charlie2233",
-      "gravatar_id": "",
-      "url": "https://api.github.com/users/charlie2233",
-      "avatar_url": "https://avatars.githubusercontent.com/u/117957000?"
-    },
+    "created_at": "2026-10-10T21:55:02Z",
     "repo": {
-      "id": 1140388078,
-      "name": "charlie2233/atrak-website",
-      "url": "https://api.github.com/repos/charlie2233/atrak-website"
+      "name": "charlie2233/atrak-website"
     },
     "payload": {
-      "repository_id": 1140388078,
-      "push_id": 46360051995,
       "ref": "refs/heads/main",
-      "head": "92fe250f726c64d263b576317f12979e6299aca0",
-      "before": "8ad1116973de1b04abd51061dc2735c5322ab1af"
-    },
-    "public": true,
-    "created_at": "2026-10-13T15:06:17Z"
-  },
-  {
-    "id": "23645793095",
-    "type": "PushEvent",
-    "actor": {
-      "id": 117957000,
-      "login": "charlie2233",
-      "display_login": "charlie2233",
-      "gravatar_id": "",
-      "url": "https://api.github.com/users/charlie2233",
-      "avatar_url": "https://avatars.githubusercontent.com/u/117957000?"
-    },
-    "repo": {
-      "id": 1140388078,
-      "name": "charlie2233/atrak-website",
-      "url": "https://api.github.com/repos/charlie2233/atrak-website"
-    },
-    "payload": {
-      "repository_id": 1140388078,
-      "push_id": 46089283682,
-      "ref": "refs/heads/main",
+      "before": "ceb8354747a262696860403cd264e0f1de2e8c4d",
       "head": "e7d3efd7be7c97064704e1adc6b6e5b130c9d230",
-      "before": "ceb8354747a262696860403cd264e0f1de2e8c4d"
-    },
-    "public": true,
-    "created_at": "2026-10-10T21:55:02Z"
+      "distinct_size": 0,
+      "commits": []
+    }
   },
   {
-    "id": "23624608504",
     "type": "PushEvent",
-    "actor": {
-      "id": 117957000,
-      "login": "charlie2233",
-      "display_login": "charlie2233",
-      "gravatar_id": "",
-      "url": "https://api.github.com/users/charlie2233",
-      "avatar_url": "https://avatars.githubusercontent.com/u/117957000?"
-    },
+    "created_at": "2026-10-10T21:09:38Z",
     "repo": {
-      "id": 1140388078,
-      "name": "charlie2233/atrak-website",
-      "url": "https://api.github.com/repos/charlie2233/atrak-website"
+      "name": "charlie2233/atrak-website"
     },
     "payload": {
-      "repository_id": 1140388078,
-      "push_id": 46086754881,
       "ref": "refs/heads/main",
+      "before": "bb26a245ee8708dd32d8ae57879d08ff2e9eab51",
       "head": "3cd946bda80148a84e5bfbd43701ba7854b6220c",
-      "before": "bb26a245ee8708dd32d8ae57879d08ff2e9eab51"
-    },
-    "public": true,
-    "created_at": "2026-10-10T21:09:38Z"
+      "distinct_size": 0,
+      "commits": []
+    }
   },
   {
-    "id": "23174845625",
     "type": "PushEvent",
-    "actor": {
-      "id": 117957000,
-      "login": "charlie2233",
-      "display_login": "charlie2233",
-      "gravatar_id": "",
-      "url": "https://api.github.com/users/charlie2233",
-      "avatar_url": "https://avatars.githubusercontent.com/u/117957000?"
-    },
+    "created_at": "2026-10-06T15:05:12Z",
     "repo": {
-      "id": 1140388078,
-      "name": "charlie2233/atrak-website",
-      "url": "https://api.github.com/repos/charlie2233/atrak-website"
+      "name": "charlie2233/atrak-website"
     },
     "payload": {
-      "repository_id": 1140388078,
-      "push_id": 45631134848,
       "ref": "refs/heads/main",
+      "before": "342dc008912f4f613553787248a0a8ae04a088ec",
       "head": "1a3c124a319ec0ae79695be9f20fe43b01589f8e",
-      "before": "342dc008912f4f613553787248a0a8ae04a088ec"
-    },
-    "public": true,
-    "created_at": "2026-10-06T15:05:12Z"
+      "distinct_size": 0,
+      "commits": []
+    }
   },
   {
-    "id": "23069045657",
     "type": "PushEvent",
-    "actor": {
-      "id": 117957000,
-      "login": "charlie2233",
-      "display_login": "charlie2233",
-      "gravatar_id": "",
-      "url": "https://api.github.com/users/charlie2233",
-      "avatar_url": "https://avatars.githubusercontent.com/u/117957000?"
-    },
+    "created_at": "2026-10-05T02:18:18Z",
     "repo": {
-      "id": 1140388078,
-      "name": "charlie2233/atrak-website",
-      "url": "https://api.github.com/repos/charlie2233/atrak-website"
+      "name": "charlie2233/turnplay-arena"
     },
     "payload": {
-      "repository_id": 1140388078,
-      "push_id": 45377195763,
       "ref": "refs/heads/main",
-      "head": "38ff5d9481996296124144f05f027134f61b22d5",
-      "before": "803d62c0ad7212545d1d7a690e1546a07106de1f"
-    },
-    "public": true,
-    "created_at": "2026-10-03T23:41:03Z"
-  },
-  {
-    "id": "23052644656",
-    "type": "CreateEvent",
-    "actor": {
-      "id": 117957000,
-      "login": "charlie2233",
-      "display_login": "charlie2233",
-      "gravatar_id": "",
-      "url": "https://api.github.com/users/charlie2233",
-      "avatar_url": "https://avatars.githubusercontent.com/u/117957000?"
-    },
-    "repo": {
-      "id": 1140388078,
-      "name": "charlie2233/atrak-website",
-      "url": "https://api.github.com/repos/charlie2233/atrak-website"
-    },
-    "payload": {
-      "ref": "codex/safe-traveling-release3-pages",
-      "ref_type": "branch",
-      "full_ref": "refs/heads/codex/safe-traveling-release3-pages",
-      "master_branch": "main",
-      "description": null,
-      "pusher_type": "user"
-    },
-    "public": true,
-    "created_at": "2026-10-03T23:39:34Z"
-  },
-  {
-    "id": "23044586582",
-    "type": "CreateEvent",
-    "actor": {
-      "id": 117957000,
-      "login": "charlie2233",
-      "display_login": "charlie2233",
-      "gravatar_id": "",
-      "url": "https://api.github.com/users/charlie2233",
-      "avatar_url": "https://avatars.githubusercontent.com/u/117957000?"
-    },
-    "repo": {
-      "id": 1140388078,
-      "name": "charlie2233/atrak-website",
-      "url": "https://api.github.com/repos/charlie2233/atrak-website"
-    },
-    "payload": {
-      "ref": "codex/hoopclips-privacy-publication-date",
-      "ref_type": "branch",
-      "full_ref": "refs/heads/codex/hoopclips-privacy-publication-date",
-      "master_branch": "main",
-      "description": null,
-      "pusher_type": "user"
-    },
-    "public": true,
-    "created_at": "2026-10-04T03:47:48Z"
-  },
-  {
-    "id": "23029476356",
-    "type": "PushEvent",
-    "actor": {
-      "id": 117957000,
-      "login": "charlie2233",
-      "display_login": "charlie2233",
-      "gravatar_id": "",
-      "url": "https://api.github.com/users/charlie2233",
-      "avatar_url": "https://avatars.githubusercontent.com/u/117957000?"
-    },
-    "repo": {
-      "id": 1322073520,
-      "name": "charlie2233/turnplay-arena",
-      "url": "https://api.github.com/repos/charlie2233/turnplay-arena"
-    },
-    "payload": {
-      "repository_id": 1322073520,
-      "push_id": 45460255849,
-      "ref": "refs/heads/main",
+      "before": "7c7e55a9a8ae5c48b4bee38e3d4ca1a98dcb6100",
       "head": "6b26fc255c53e75c9ca29c696dedb19cfddad627",
-      "before": "7c7e55a9a8ae5c48b4bee38e3d4ca1a98dcb6100"
-    },
-    "public": true,
-    "created_at": "2026-10-05T02:18:18Z"
+      "distinct_size": 0,
+      "commits": []
+    }
   },
   {
-    "id": "16414594710",
     "type": "PullRequestEvent",
-    "actor": {
-      "id": 117957000,
-      "login": "charlie2233",
-      "display_login": "charlie2233",
-      "gravatar_id": "",
-      "url": "https://api.github.com/users/charlie2233",
-      "avatar_url": "https://avatars.githubusercontent.com/u/117957000?"
-    },
+    "created_at": "2026-10-05T02:18:17Z",
     "repo": {
-      "id": 1322073520,
-      "name": "charlie2233/turnplay-arena",
-      "url": "https://api.github.com/repos/charlie2233/turnplay-arena"
+      "name": "charlie2233/turnplay-arena"
     },
     "payload": {
       "action": "merged",
       "number": 1,
-      "pull_request": {
-        "url": "https://api.github.com/repos/charlie2233/turnplay-arena/pulls/1",
-        "id": 4739257759,
-        "number": 1,
-        "head": {
-          "ref": "codex/turnplay-publication-readiness-20261005",
-          "sha": "b7754f1f53bac2cf12fc264e1eb193727f1f45a4",
-          "repo": {
-            "id": 1322073520,
-            "url": "https://api.github.com/repos/charlie2233/turnplay-arena",
-            "name": "turnplay-arena"
-          }
-        },
-        "base": {
-          "ref": "main",
-          "sha": "7c7e55a9a8ae5c48b4bee38e3d4ca1a98dcb6100",
-          "repo": {
-            "id": 1322073520,
-            "url": "https://api.github.com/repos/charlie2233/turnplay-arena",
-            "name": "turnplay-arena"
-          }
-        }
-      }
-    },
-    "public": true,
-    "created_at": "2026-10-05T02:18:17Z"
+      "pull_request": {}
+    }
   },
   {
-    "id": "16413666260",
     "type": "PullRequestEvent",
-    "actor": {
-      "id": 117957000,
-      "login": "charlie2233",
-      "display_login": "charlie2233",
-      "gravatar_id": "",
-      "url": "https://api.github.com/users/charlie2233",
-      "avatar_url": "https://avatars.githubusercontent.com/u/117957000?"
-    },
+    "created_at": "2026-10-05T01:54:27Z",
     "repo": {
-      "id": 1322073520,
-      "name": "charlie2233/turnplay-arena",
-      "url": "https://api.github.com/repos/charlie2233/turnplay-arena"
+      "name": "charlie2233/turnplay-arena"
     },
     "payload": {
       "action": "opened",
       "number": 1,
-      "pull_request": {
-        "url": "https://api.github.com/repos/charlie2233/turnplay-arena/pulls/1",
-        "id": 4739257759,
-        "number": 1,
-        "head": {
-          "ref": "codex/turnplay-publication-readiness-20261005",
-          "sha": "b7754f1f53bac2cf12fc264e1eb193727f1f45a4",
-          "repo": {
-            "id": 1322073520,
-            "url": "https://api.github.com/repos/charlie2233/turnplay-arena",
-            "name": "turnplay-arena"
-          }
-        },
-        "base": {
-          "ref": "main",
-          "sha": "7c7e55a9a8ae5c48b4bee38e3d4ca1a98dcb6100",
-          "repo": {
-            "id": 1322073520,
-            "url": "https://api.github.com/repos/charlie2233/turnplay-arena",
-            "name": "turnplay-arena"
-          }
-        }
-      }
-    },
-    "public": true,
-    "created_at": "2026-10-05T01:54:27Z"
+      "pull_request": {}
+    }
   },
   {
-    "id": "23016902173",
     "type": "CreateEvent",
-    "actor": {
-      "id": 117957000,
-      "login": "charlie2233",
-      "display_login": "charlie2233",
-      "gravatar_id": "",
-      "url": "https://api.github.com/users/charlie2233",
-      "avatar_url": "https://avatars.githubusercontent.com/u/117957000?"
-    },
+    "created_at": "2026-10-05T01:54:15Z",
     "repo": {
-      "id": 1322073520,
-      "name": "charlie2233/turnplay-arena",
-      "url": "https://api.github.com/repos/charlie2233/turnplay-arena"
+      "name": "charlie2233/turnplay-arena"
     },
     "payload": {
       "ref": "codex/turnplay-publication-readiness-20261005",
       "ref_type": "branch",
-      "full_ref": "refs/heads/codex/turnplay-publication-readiness-20261005",
-      "master_branch": "main",
       "description": "Play Chess, Go, strategy games, pool, and basketball with an AI opponent in ChatGPT.",
-      "pusher_type": "user"
+      "master_branch": "main"
+    }
+  },
+  {
+    "type": "CreateEvent",
+    "created_at": "2026-10-04T03:47:48Z",
+    "repo": {
+      "name": "charlie2233/atrak-website"
     },
-    "public": true,
-    "created_at": "2026-10-05T01:54:15Z"
+    "payload": {
+      "ref": "codex/hoopclips-privacy-publication-date",
+      "ref_type": "branch",
+      "description": null,
+      "master_branch": "main"
+    }
+  },
+  {
+    "type": "PushEvent",
+    "created_at": "2026-10-03T23:41:03Z",
+    "repo": {
+      "name": "charlie2233/atrak-website"
+    },
+    "payload": {
+      "ref": "refs/heads/main",
+      "before": "803d62c0ad7212545d1d7a690e1546a07106de1f",
+      "head": "38ff5d9481996296124144f05f027134f61b22d5",
+      "distinct_size": 0,
+      "commits": []
+    }
+  },
+  {
+    "type": "CreateEvent",
+    "created_at": "2026-10-03T23:39:34Z",
+    "repo": {
+      "name": "charlie2233/atrak-website"
+    },
+    "payload": {
+      "ref": "codex/safe-traveling-release3-pages",
+      "ref_type": "branch",
+      "description": null,
+      "master_branch": "main"
+    }
   }
 ]
