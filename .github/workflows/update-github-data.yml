@@ -129,7 +129,7 @@ jobs:
               if owner and owner.lower() != "charlie2233":
                   continue
               key = full_name.lower()
-              if not key or key in seen:
+              if not key or key in seen or repo.get("private") or repo.get("visibility", "public") != "public":
                   continue
               seen.add(key)
               repos.append(repo)
@@ -179,6 +179,15 @@ jobs:
               except Exception:
                   pass
 
+          public_repos = {
+              repo["full_name"].lower()
+              for repo in json.loads(Path("data/github-repos.json").read_text(encoding="utf-8"))
+          }
+          events = [
+              event for event in events
+              if not (name := ((event.get("repo") or {}).get("name") or "").lower()).startswith("charlie2233/")
+              or name in public_repos
+          ]
           Path("data/github-events.json").write_text(json.dumps(events, indent=2) + "\n", encoding="utf-8")
           PY
 
@@ -431,7 +440,7 @@ jobs:
               if not isinstance(rels, list):
                   continue
               for rel in rels:
-                  if not isinstance(rel, dict):
+                  if not isinstance(rel, dict) or rel.get("draft"):
                       continue
                   assets = []
                   for asset in rel.get("assets") or []:

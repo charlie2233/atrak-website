@@ -316,8 +316,12 @@ function main() {
     .sort((a, b) => Date.parse(b.pushed_at || b.updated_at || "") - Date.parse(a.pushed_at || a.updated_at || ""));
 
   const repoMap = new Map(repos.map((repo) => [repo.name, repo]));
+  const publicRepoNames = new Set(repos.map((repo) => repo.full_name.toLowerCase()));
   const rawEvents = gh(`users/${OWNER}/events/public?per_page=100`);
-  const events = rawEvents.map(slimEvent);
+  const events = rawEvents.filter((event) => {
+    const fullName = String(event.repo?.name || "").toLowerCase();
+    return !fullName.startsWith(`${OWNER.toLowerCase()}/`) || publicRepoNames.has(fullName);
+  }).map(slimEvent);
 
   const recentCommitSummaries = new Map();
   for (const repo of repos.filter((repo) => !repo.fork && !repo.archived)) {
@@ -380,7 +384,9 @@ function main() {
   for (const repo of repos.filter((repo) => !repo.fork && !repo.archived)) {
     try {
       const repoReleases = gh(`repos/${OWNER}/${repo.name}/releases?per_page=20`);
-      releases.push(...repoReleases.map((release) => normalizeRelease(repo.name, release)));
+      releases.push(...repoReleases
+        .filter((release) => !release.draft)
+        .map((release) => normalizeRelease(repo.name, release)));
     } catch {
       // Repos without releases or inaccessible release metadata simply skip.
     }

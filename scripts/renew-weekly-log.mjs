@@ -7,6 +7,7 @@ import { fileURLToPath } from 'node:url';
 
 const repoRoot = path.resolve(path.dirname(fileURLToPath(import.meta.url)), '..');
 const dataDir = path.join(repoRoot, 'data');
+const owner = 'charlie2233';
 const dayMs = 24 * 60 * 60 * 1000;
 
 function parseArgs(values) {
@@ -104,11 +105,18 @@ function normalizeCommitUrl(value, fullName, sha) {
 
 function fetchCommits(fullName, start, endExclusive) {
     if (!/^[A-Za-z0-9_.-]+\/[A-Za-z0-9_.-]+$/.test(fullName)) return [];
-    const endpoint = `repos/${fullName}/commits?since=${encodeURIComponent(start.toISOString())}&until=${encodeURIComponent(endExclusive.toISOString())}&per_page=100`;
+    const query = new URLSearchParams({
+        since: start.toISOString(),
+        until: new Date(endExclusive.getTime() - 1000).toISOString(),
+        per_page: '100'
+    });
+    if (!fullName.toLowerCase().startsWith(`${owner}/`)) query.set('author', owner);
+    const endpoint = `repos/${fullName}/commits?${query}`;
     try {
         const output = execFileSync('gh', ['api', '--paginate', '--slurp', endpoint], {
             cwd: repoRoot,
             encoding: 'utf8',
+            maxBuffer: 16 * 1024 * 1024,
             stdio: ['ignore', 'pipe', 'pipe']
         });
         const pages = JSON.parse(output);
@@ -120,7 +128,7 @@ function fetchCommits(fullName, start, endExclusive) {
 }
 
 function createActivity(fullName, repoLookup) {
-    const repo = repoLookup.get(fullName) || {};
+    const repo = repoLookup.get(fullName.toLowerCase()) || {};
     return {
         fullName,
         name: displayRepoName(fullName),
@@ -154,7 +162,10 @@ function addCommit(activity, commit, fallbackDate) {
 function buildEntry({ events, releases, repos, start, now, useGithubApi }) {
     const endExclusive = new Date(start.getTime() + (7 * dayMs));
     const end = new Date(endExclusive.getTime() - dayMs);
-    const repoLookup = new Map((Array.isArray(repos) ? repos : []).map((repo) => [repo.full_name, repo]));
+    const publicRepos = (Array.isArray(repos) ? repos : []).filter((repo) =>
+        repo?.full_name && !repo.private && (!repo.visibility || repo.visibility === 'public')
+    );
+    const repoLookup = new Map(publicRepos.map((repo) => [repo.full_name.toLowerCase(), repo]));
     const activity = new Map();
     const getActivity = (fullName) => {
         if (!fullName) return null;
@@ -163,6 +174,8 @@ function buildEntry({ events, releases, repos, start, now, useGithubApi }) {
     };
 
     const weeklyEvents = (Array.isArray(events) ? events : []).filter((event) => {
+        const fullName = String(event?.repo?.name || '').toLowerCase();
+        if (fullName.startsWith(`${owner}/`) && !repoLookup.has(fullName)) return false;
         const createdAt = new Date(event?.created_at);
         return !Number.isNaN(createdAt.getTime()) && createdAt >= start && createdAt < endExclusive;
     });
@@ -188,22 +201,27 @@ function buildEntry({ events, releases, repos, start, now, useGithubApi }) {
         }
     });
 
-    (Array.isArray(repos) ? repos : []).forEach((repo) => {
+    publicRepos.forEach((repo) => {
         const pushedAt = new Date(repo?.pushed_at || '');
-        if (!Number.isNaN(pushedAt.getTime()) && pushedAt >= start && pushedAt < endExclusive && repo?.full_name) {
-            getActivity(repo.full_name);
-        }
+        if (pushedAt >= start && pushedAt < endExclusive) getActivity(repo.full_name);
     });
 
     if (useGithubApi) {
         const enrichmentFailures = [];
-        activity.forEach((repoActivity) => {
-            const commits = fetchCommits(repoActivity.fullName, start, endExclusive);
+        const candidates = new Set(activity.keys());
+        publicRepos.forEach((repo) => {
+            if (new Date(repo.pushed_at) >= start && new Date(repo.created_at) < endExclusive) {
+                candidates.add(repo.full_name);
+            }
+        });
+        candidates.forEach((fullName) => {
+            const commits = fetchCommits(fullName, start, endExclusive);
             if (commits === null) {
-                enrichmentFailures.push(repoActivity.fullName);
+                enrichmentFailures.push(fullName);
                 return;
             }
             if (!commits.length) return;
+            const repoActivity = getActivity(fullName);
             repoActivity.commits.clear();
             commits.forEach((commit) => addCommit(repoActivity, commit, commit?.commit?.committer?.date));
             repoActivity.maxDistinctCommits = commits.length;
@@ -236,6 +254,7 @@ function buildEntry({ events, releases, repos, start, now, useGithubApi }) {
     ));
 
     const weeklyReleases = (Array.isArray(releases) ? releases : []).filter((release) => {
+        if (release?.draft) return false;
         const publishedAt = new Date(release?.published_at || release?.created_at || '');
         return !Number.isNaN(publishedAt.getTime()) && publishedAt >= start && publishedAt < endExclusive;
     }).map((release) => ({
