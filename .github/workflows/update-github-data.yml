@@ -423,7 +423,7 @@ jobs:
           # Fetch recent releases across repos (for the website "Latest releases" UI)
           candidates = [
               r for r in repos
-              if isinstance(r, dict) and r.get("full_name") and not r.get("fork")
+              if isinstance(r, dict) and r.get("full_name") and not r.get("fork") and not r.get("archived")
           ]
           candidates.sort(key=lambda r: r.get("pushed_at") or "", reverse=True)
 
@@ -433,7 +433,7 @@ jobs:
               if not full_name:
                   continue
               try:
-                  rels = fetch_json(f"{api_base}/repos/{full_name}/releases?per_page=5")
+                  rels = fetch_json(f"{api_base}/repos/{full_name}/releases?per_page=20")
               except Exception as e:
                   print(f"Failed to fetch releases for {full_name}: {e}")
                   continue
@@ -457,13 +457,44 @@ jobs:
                       "name": rel.get("name") or "",
                       "tag": rel.get("tag_name") or "",
                       "url": rel.get("html_url") or "",
-                      "published_at": rel.get("published_at") or "",
+                      "published_at": rel.get("published_at") or rel.get("created_at"),
+                      "source": "github-release",
                       "draft": bool(rel.get("draft")),
                       "prerelease": bool(rel.get("prerelease")),
                       "zipball_url": rel.get("zipball_url") or "",
                       "tarball_url": rel.get("tarball_url") or "",
                       "assets": assets,
                   })
+
+          # Site downloads use public repository metadata and their own provenance.
+          public_repos = {repo["full_name"]: repo for repo in repos}
+          project_downloads = (
+              ("lifepage", "2026.04-lifepage-sync", "LifePage launch/readiness updates", "lifepage.html"),
+              ("DestinnyBasketballPage", "2026.04-site-refresh", "Destiny Basketball public site refresh", "destiny-basketball.html"),
+          )
+          for name, tag, title, page in project_downloads:
+              full_name = f"charlie2233/{name}"
+              repo = public_repos.get(full_name)
+              if not repo:
+                  continue
+              published_at = repo.get("pushed_at") or repo.get("updated_at")
+              if not published_at:
+                  continue
+              branch = repo.get("default_branch") or "main"
+              archive_url = f"https://github.com/{full_name}/archive/refs/heads/{branch}"
+              releases.append({
+                  "repo": full_name,
+                  "tag": tag,
+                  "name": title,
+                  "url": f"https://atrak.dev/projects/{page}",
+                  "published_at": published_at,
+                  "prerelease": False,
+                  "draft": False,
+                  "source": "atrak-download",
+                  "zipball_url": f"{archive_url}.zip",
+                  "tarball_url": f"{archive_url}.tar.gz",
+                  "assets": [],
+              })
 
           releases.sort(key=lambda r: r.get("published_at") or "", reverse=True)
           Path("data/github-releases.json").write_text(json.dumps(releases, indent=2) + "\n", encoding="utf-8")
