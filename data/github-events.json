@@ -51,6 +51,11 @@
       "distinct_size": 14,
       "commits": [
         {
+          "sha": "9d13c827fb4e1d3108a0f40d0c702176acf1b732",
+          "message": "chore: update GitHub data [skip ci]",
+          "url": "https://github.com/charlie2233/atrak-website/commit/9d13c827fb4e1d3108a0f40d0c702176acf1b732"
+        },
+        {
           "sha": "e2864e52b10a3e79ad430568412c7e44bf355a90",
           "message": "chore: update GitHub data [skip ci]",
           "url": "https://github.com/charlie2233/atrak-website/commit/e2864e52b10a3e79ad430568412c7e44bf355a90"
@@ -114,11 +119,6 @@
           "sha": "365ffcc693f2787e907921e8ea969b3b2e934f52",
           "message": "chore: update GitHub data [skip ci]",
           "url": "https://github.com/charlie2233/atrak-website/commit/365ffcc693f2787e907921e8ea969b3b2e934f52"
-        },
-        {
-          "sha": "8e8d7a646fbbab536888937e713a014ae60cb6d7",
-          "message": "chore: update GitHub data [skip ci]",
-          "url": "https://github.com/charlie2233/atrak-website/commit/8e8d7a646fbbab536888937e713a014ae60cb6d7"
         }
       ]
     },
@@ -489,32 +489,5 @@
     },
     "public": true,
     "created_at": "2026-10-20T16:51:51Z"
-  },
-  {
-    "id": "24063408149",
-    "type": "CreateEvent",
-    "actor": {
-      "id": 117957000,
-      "login": "charlie2233",
-      "display_login": "charlie2233",
-      "gravatar_id": "",
-      "url": "https://api.github.com/users/charlie2233",
-      "avatar_url": "https://avatars.githubusercontent.com/u/117957000?"
-    },
-    "repo": {
-      "id": 1140388078,
-      "name": "charlie2233/atrak-website",
-      "url": "https://api.github.com/repos/charlie2233/atrak-website"
-    },
-    "payload": {
-      "ref": "automation/update-weekly-logs-20261013",
-      "ref_type": "branch",
-      "full_ref": "refs/heads/automation/update-weekly-logs-20261013",
-      "master_branch": "main",
-      "description": null,
-      "pusher_type": "user"
-    },
-    "public": true,
-    "created_at": "2026-10-13T15:05:40Z"
   }
 ]
