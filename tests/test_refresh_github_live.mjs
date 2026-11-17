@@ -2,9 +2,20 @@ import assert from "node:assert/strict";
 import test from "node:test";
 
 import {
+  publishedReleases,
   sortEventsNewestFirst,
   weeklyStatsForWrite,
 } from "../scripts/refresh-github-live.mjs";
+
+test("draft releases are excluded from the public cache", () => {
+  const releases = publishedReleases([
+    { id: 1, draft: false },
+    { id: 2, draft: true },
+    { id: 3 },
+  ]);
+
+  assert.deepEqual(releases.map((release) => release.id), [1, 3]);
+});
 
 test("live refresh preserves authoritative local weekly stats", () => {
   const localStats = {

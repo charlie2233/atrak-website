@@ -128,6 +128,8 @@ jobs:
               full_name = repo.get("full_name") or ""
               if owner and owner.lower() != "charlie2233":
                   continue
+              if repo.get("private"):
+                  continue
               key = full_name.lower()
               if not key or key in seen:
                   continue
@@ -433,6 +435,10 @@ jobs:
               for rel in rels:
                   if not isinstance(rel, dict):
                       continue
+                  # A draft release is not public content and must never be
+                  # exposed through the site's public download cache.
+                  if rel.get("draft"):
+                      continue
                   assets = []
                   for asset in rel.get("assets") or []:
                       if not isinstance(asset, dict):
@@ -455,6 +461,31 @@ jobs:
                       "tarball_url": rel.get("tarball_url") or "",
                       "assets": assets,
                   })
+
+          # These site projects are public downloads, even though they do not
+          # use a formal GitHub Release. Keep them in the same cache as formal
+          # releases so scheduled and local refreshes produce equivalent feeds.
+          repos_by_name = {r.get("name"): r for r in repos if isinstance(r, dict)}
+          for name, tag, title, project in (
+              ("lifepage", "2026.04-lifepage-sync", "LifePage launch/readiness updates", "projects/lifepage.html"),
+              ("DestinnyBasketballPage", "2026.04-site-refresh", "Destiny Basketball public site refresh", "projects/destiny-basketball.html"),
+          ):
+              repo = repos_by_name.get(name) or {}
+              default_branch = repo.get("default_branch") or "main"
+              published_at = repo.get("pushed_at") or repo.get("updated_at") or meta["updatedAt"]
+              releases.append({
+                  "repo": f"charlie2233/{name}",
+                  "tag": tag,
+                  "name": title,
+                  "url": f"https://atrak.dev/{project}",
+                  "published_at": published_at,
+                  "draft": False,
+                  "prerelease": False,
+                  "source": "atrak-download",
+                  "zipball_url": f"https://github.com/charlie2233/{name}/archive/refs/heads/{default_branch}.zip",
+                  "tarball_url": f"https://github.com/charlie2233/{name}/archive/refs/heads/{default_branch}.tar.gz",
+                  "assets": [],
+              })
 
           releases.sort(key=lambda r: r.get("published_at") or "", reverse=True)
           Path("data/github-releases.json").write_text(json.dumps(releases, indent=2) + "\n", encoding="utf-8")

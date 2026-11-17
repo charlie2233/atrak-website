@@ -211,6 +211,10 @@ function normalizeRelease(repoName, release) {
   };
 }
 
+export function publishedReleases(releases) {
+  return (Array.isArray(releases) ? releases : []).filter((release) => !release?.draft);
+}
+
 function projectDrops(repoMap) {
   const dropSpecs = [
     {
@@ -380,7 +384,10 @@ function main() {
   for (const repo of repos.filter((repo) => !repo.fork && !repo.archived)) {
     try {
       const repoReleases = gh(`repos/${OWNER}/${repo.name}/releases?per_page=20`);
-      releases.push(...repoReleases.map((release) => normalizeRelease(repo.name, release)));
+      // Drafts are not publicly downloadable. Keep the cache aligned with the
+      // website's public-release UI instead of exposing unpublished metadata.
+      releases.push(...publishedReleases(repoReleases)
+        .map((release) => normalizeRelease(repo.name, release)));
     } catch {
       // Repos without releases or inaccessible release metadata simply skip.
     }
