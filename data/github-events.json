@@ -1,55 +1,21 @@
 [
   {
-    "id": "26884389417",
-    "type": "CreateEvent",
-    "actor": {
-      "id": 117957000,
-      "login": "charlie2233",
-      "display_login": "charlie2233",
-      "gravatar_id": "",
-      "url": "https://api.github.com/users/charlie2233",
-      "avatar_url": "https://avatars.githubusercontent.com/u/117957000?"
-    },
-    "repo": {
-      "id": 1140388078,
-      "name": "charlie2233/atrak-website",
-      "url": "https://api.github.com/repos/charlie2233/atrak-website"
-    },
-    "payload": {
-      "ref": "automation/weekly-20261110",
-      "ref_type": "branch",
-      "full_ref": "refs/heads/automation/weekly-20261110",
-      "master_branch": "main",
-      "description": null,
-      "pusher_type": "user"
-    },
-    "public": true,
-    "created_at": "2026-11-10T16:01:36Z"
-  },
-  {
-    "id": "26842851555",
     "type": "PushEvent",
-    "actor": {
-      "id": 117957000,
-      "login": "charlie2233",
-      "display_login": "charlie2233",
-      "gravatar_id": "",
-      "url": "https://api.github.com/users/charlie2233",
-      "avatar_url": "https://avatars.githubusercontent.com/u/117957000?"
-    },
+    "created_at": "2026-11-17T16:06:33Z",
     "repo": {
-      "id": 1140388078,
-      "name": "charlie2233/atrak-website",
-      "url": "https://api.github.com/repos/charlie2233/atrak-website"
+      "name": "charlie2233/atrak-website"
     },
     "payload": {
-      "repository_id": 1140388078,
-      "push_id": 49734817284,
-      "ref": "refs/heads/automation/weekly-20261110",
-      "head": "e4b0e8f48d3670f23f78b48976401e0626c83223",
-      "before": "3206135015ff78f379adc43ea3c067fd117a13c6",
+      "ref": "refs/heads/main",
+      "before": "",
+      "head": "6033ddc1cd8f723f84484bae7c990b801a848f70",
       "distinct_size": 14,
       "commits": [
+        {
+          "sha": "6033ddc1cd8f723f84484bae7c990b801a848f70",
+          "message": "chore: update GitHub data [skip ci]",
+          "url": "https://github.com/charlie2233/atrak-website/commit/6033ddc1cd8f723f84484bae7c990b801a848f70"
+        },
         {
           "sha": "2928e4137bb27b8b596f3b98fac3b194bea34d20",
           "message": "chore: update GitHub data [skip ci]",
@@ -114,13 +80,59 @@
           "sha": "650e1a3740142a774451f53121833138f394b141",
           "message": "chore: update GitHub data [skip ci]",
           "url": "https://github.com/charlie2233/atrak-website/commit/650e1a3740142a774451f53121833138f394b141"
-        },
-        {
-          "sha": "c9b09952f76a7411513fa4c0d6606046e0531e96",
-          "message": "chore: update GitHub data [skip ci]",
-          "url": "https://github.com/charlie2233/atrak-website/commit/c9b09952f76a7411513fa4c0d6606046e0531e96"
         }
       ]
+    }
+  },
+  {
+    "id": "26884389417",
+    "type": "CreateEvent",
+    "actor": {
+      "id": 117957000,
+      "login": "charlie2233",
+      "display_login": "charlie2233",
+      "gravatar_id": "",
+      "url": "https://api.github.com/users/charlie2233",
+      "avatar_url": "https://avatars.githubusercontent.com/u/117957000?"
+    },
+    "repo": {
+      "id": 1140388078,
+      "name": "charlie2233/atrak-website",
+      "url": "https://api.github.com/repos/charlie2233/atrak-website"
+    },
+    "payload": {
+      "ref": "automation/weekly-20261110",
+      "ref_type": "branch",
+      "full_ref": "refs/heads/automation/weekly-20261110",
+      "master_branch": "main",
+      "description": null,
+      "pusher_type": "user"
+    },
+    "public": true,
+    "created_at": "2026-11-10T16:01:36Z"
+  },
+  {
+    "id": "26842851555",
+    "type": "PushEvent",
+    "actor": {
+      "id": 117957000,
+      "login": "charlie2233",
+      "display_login": "charlie2233",
+      "gravatar_id": "",
+      "url": "https://api.github.com/users/charlie2233",
+      "avatar_url": "https://avatars.githubusercontent.com/u/117957000?"
+    },
+    "repo": {
+      "id": 1140388078,
+      "name": "charlie2233/atrak-website",
+      "url": "https://api.github.com/repos/charlie2233/atrak-website"
+    },
+    "payload": {
+      "repository_id": 1140388078,
+      "push_id": 49734817284,
+      "ref": "refs/heads/automation/weekly-20261110",
+      "head": "e4b0e8f48d3670f23f78b48976401e0626c83223",
+      "before": "3206135015ff78f379adc43ea3c067fd117a13c6"
     },
     "public": true,
     "created_at": "2026-11-10T16:03:36Z"
