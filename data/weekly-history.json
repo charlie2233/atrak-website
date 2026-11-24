@@ -2968,20 +2968,20 @@
   {
     "weekStart": "2026-11-15",
     "weekEnd": "2026-11-21",
-    "generatedAt": "2026-11-22T09:18:22.615Z",
+    "generatedAt": "2026-11-24T23:06:32.337Z",
     "source": "github-weekly-automation",
     "dateRange": "Nov 15 – 21",
     "title": "Atrak Website carried the build week.",
     "highlights": [
-      "Atrak Website led public activity with 15 commits across 1 push.",
-      "1 public repository was active across 2 GitHub events.",
+      "Atrak Website led public activity with 15 commits across 0 pushes.",
+      "1 public repository was active across 1 GitHub events.",
       "No formal GitHub release was published during this edition."
     ],
     "shipped": [
       "Public project activity was captured and archived."
     ],
     "engineering": [
-      "1 pushes and 0 pull request updates were condensed into this edition.",
+      "0 pushes and 0 pull request updates were condensed into this edition.",
       "Active stacks included HTML.",
       "The snapshot is stored permanently so the edition remains available after GitHub events expire."
     ],
@@ -3002,9 +3002,9 @@
       "activeRepositories": 1,
       "pullRequests": 0,
       "issues": 0,
-      "pushes": 1,
+      "pushes": 0,
       "releases": 0,
-      "events": 2
+      "events": 1
     },
     "repositories": [
       {
@@ -3013,11 +3013,11 @@
         "url": "https://github.com/charlie2233/atrak-website",
         "language": "HTML",
         "commits": 15,
-        "pushes": 1,
-        "events": 2,
+        "pushes": 0,
+        "events": 1,
         "pullRequests": 0,
         "issues": 0,
-        "lastAt": "2026-11-21T12:08:07.000Z"
+        "lastAt": "2026-11-17T16:06:33.000Z"
       }
     ],
     "releases": [],
